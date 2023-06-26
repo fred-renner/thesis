@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.2)  13 APR 2023 16:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.2)  14 APR 2023 10:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -864,29 +864,28 @@ Chapter 2.
 
 
 ]
-Overfull \hbox (66.7567pt too wide) detected at line 15
-[][]\OML/lmm/m/it/12 ^^[ \OT1/lmr/m/n/12 = [] [] [][] (2\OML/lmm/m/it/12 ^^Y\OT1/lmr/m/n/12 )[]\OML/lmm/m/it/12 ^^N[]\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 p[] \OT1/lmr/m/n/12 + \OML/lmm/m/it/12 p[] \OMS/lmsy/m/n/12 ^^@ \OML/lmm/m/it/12 p[] [] \OMS/lmsy/m/n/12 ^^@ \OML/lmm/m/it/12 p[]\OT1/lmr/m/n/12 ) \OMS/lmsy/m/n/12 ^^B [] \OT1/lmr/m/n/12 2\OML/lmm/m/it/12 ^^Y^^N\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 p[] \OMS/lmsy/m/n/12 ^^@ \OML/lmm/m/it/12 m[]c[]\OT1/lmr/m/n/12 )^^B(\OML/lmm/m/it/12 p[]\OT1/lmr/m/n/12 ))[]\OML/lmm/m/it/12 :
- []
+Underfull \vbox (badness 4899) has occurred while \output is active []
 
-) [3]
+ [3]) [4]
 \openout2 = `chapters/experiment.aux'.
 
  (/lustre/fs22/group/atlas/freder/hh/thesis/chapters/experiment.tex
 Chapter 3.
-) [4
-
-
-
-] (/lustre/fs22/group/atlas/freder/hh/thesis/main.bbl) [5
+) [5
 
 
 
 ] [6
 
+
+] (/lustre/fs22/group/atlas/freder/hh/thesis/main.bbl) [7
+
+] [8
+
 ]
 \openout2 = `chapters/selbststaendig.aux'.
 
- (/lustre/fs22/group/atlas/freder/hh/thesis/chapters/selbststaendig.tex) [7
+ (/lustre/fs22/group/atlas/freder/hh/thesis/chapters/selbststaendig.tex) [9
 
 ]
 
@@ -899,7 +898,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 162.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 162.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 162.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 4ABEDEA4D60D6A1AECFF391078B7412D;440.
+(rerunfilecheck)             Checksum: 1A2D3A0BD29A8D9B6BF65AA9A04C7BA7;574.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -907,18 +906,18 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 162.
  ) 
 Here is how much of TeX's memory you used:
- 17036 strings out of 480875
- 309086 string characters out of 5897282
- 645257 words of memory out of 5000000
- 32164 multiletter control sequences out of 15000+600000
- 617109 words of font info for 128 fonts, out of 8000000 for 9000
+ 17049 strings out of 480875
+ 309230 string characters out of 5897282
+ 648346 words of memory out of 5000000
+ 32167 multiletter control sequences out of 15000+600000
+ 617378 words of font info for 131 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 51i,11n,47p,1060b,845s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 51i,15n,47p,1060b,845s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/cvmfs/sft.cern.ch/lcg/external/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/cvmfs/sft.cern.ch/lcg/external/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/cvmfs/sft.cern.ch/lcg/external/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/cvmfs/sft.cern.ch/lcg/external/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/cvmfs/sft.cern.ch/lcg/external/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/cvmfs/sft.cern.ch/lcg/external/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</cvmfs/sft.cern.ch/lcg/external/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></cvmfs/sft.cern.ch/lcg/external/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></cvmfs/sft.cern.ch/lcg/external/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></cvmfs/sft.cern.ch/lcg/external/texlive/2020/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></cvmfs/sft.cern.ch/lcg/external/texlive/2020/texmf-dist/fonts/type1/public/lm/lmex10.pfb></cvmfs/sft.cern.ch/lcg/external/texlive/2020/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></cvmfs/sft.cern.ch/lcg/external/texlive/2020/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></cvmfs/sft.cern.ch/lcg/external/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr12.pfb></cvmfs/sft.cern.ch/lcg/external/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr17.pfb></cvmfs/sft.cern.ch/lcg/external/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr6.pfb></cvmfs/sft.cern.ch/lcg/external/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr8.pfb></cvmfs/sft.cern.ch/lcg/external/texlive/2020/texmf-dist/fonts/type1/public/lm/lmri12.pfb></cvmfs/sft.cern.ch/lcg/external/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></cvmfs/sft.cern.ch/lcg/external/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></cvmfs/sft.cern.ch/lcg/external/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb>
-Output written on /lustre/fs22/group/atlas/freder/hh/thesis/main.pdf (16 pages, 231160 bytes).
+Output written on /lustre/fs22/group/atlas/freder/hh/thesis/main.pdf (18 pages, 234086 bytes).
 PDF statistics:
- 185 PDF objects out of 1000 (max. 8388607)
- 150 compressed objects within 2 object streams
- 22 named destinations out of 1000 (max. 500000)
- 29241 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 207 PDF objects out of 1000 (max. 8388607)
+ 170 compressed objects within 2 object streams
+ 26 named destinations out of 1000 (max. 500000)
+ 29257 words of extra memory for PDF output out of 29859 (max. 10000000)
 

@@ -1,37 +1,30 @@
 \chapter{Theory}
 
-Where to start? Sometimes it semms like that particle physics is bringing it all together, as it tries to give a comprehensive picture of the world by describing the structure of matter from quantum mechanics to cosmology. So I would say to start shallow (since we are experimentalists) at the very beginning, and then dive a bit deeper into Standard Model to have a plausible thread how the need and the development of the Higgs mechanism came about. The first section is based on \citet{zee2010quantum} and intended to make the calculation of cross sections plausible.
+Where to start? Sometimes it semms like that particle physics is bringing it all together, as it tries to give a comprehensive picture of the world by describing the structure of matter from quantum mechanics to cosmology. So I would say to start shallow (since we are experimentalists) at the very beginning, and then dive a bit deeper into Standard Model to have a plausible thread how the need and the development of the Higgs mechanism came about. The following is mainly based on \citep{zee2010quantum,griffiths2020introduction} and intended to make the calculation of cross sections plausible.
 
-\section{The field theory idea for the experimental particle physicist}
+\section{Feynman rules from field theory}\label{sec:field_theory}
 The fact that elementary particles can seemingly be born out of nothing and die again led to the development of their currently most successful description through quantum field theories. Heuristically it can be understood by the uncertainty principle, which states that energy can vary greatly on short time scales, and by special relativity, which allows the property energy to be converted into the property mass. This marriage between quantum mechanics and special relativity is what drove the development of quantum field theory. 
 
-To make a field one equips the room with a quantity that depends on the position so e.g. $\phi(\bm{x},t)$. A Lagrangian $L(\phi(\bm{x},t))$ then governs the dynamics, like excitations or interactions of this field, which can represented for example the birth and death of particles or interactions by the exchange of a particle between them. By use of the path integral formulation it basically boils down to integrals of the form $\int D\phi e^{i\int d^4x L(\phi(\bm{x},t))}$. Where $\int D\phi$ is the sum over all possible paths/ways a particle could take. Through back and forth expansions of the $e$ functions the integral can be solved and the result is a probability - the amplitude of e.g. an interaction between two particles, like scattering, usually depicted in the form of Feynman Diagrams. As this follows a pattern the formalism can be contracted into the infamous Feynman rules. 
+\red{can be deduced through perturbation theory, just on term, The conventional strategy is perturbation theory with the
+free fields as starting point, treating the interaction as a small perturbation}
 
-Probing elementary particle interactions are accessible via bound states, decays and scattering. The first can be studied within classical quantum mechanics whereas the latter uses the preceding. Since this work deals with a collider experiment the tool at hand is the cross section $\sigma$. It is a measure of how possible an interaction is when shooting something at each other. Calculating reaction rates in quantum mechanics is done by Fermi's golden rule. Here the relativistic version for a scattering process like $1+2 \rightarrow 3+4+\dots+n$ is given (see \citep{griffiths2020introduction})
-\begin{equation}
-    \sigma=\frac{S\hbar^2}{4\sqrt{(p_1\dot p_2)^2 - (m_1m_2c^2)^2}}\int \abs{\mathcal{M}}^2(2\pi)^4\delta^4(p_1+p_2-p_3 \dots-p_n) 
-    \times \prod_{j=3}^n 2\pi \delta(p_j^2-m_j^2c^2)\Theta(p_j^0))\frac{\mathrm
-    d^4p_j}{(2\pi)^4}.
-\end{equation}
+To make a field one assigns a quantity to some region in spacetime, e.g. $\phi(\bm{x},t)$. A Lagrangian $L(\phi(\bm{x},t))$ then governs the dynamics, like excitations or interactions of this field, which can e.g. represent the birth and death of particles or interactions by the exchange of a particle between them. One formulation of quantum field theory is by use of the path integral formulation. It then basically boils down to integrals of the form $\int D\phi e^{i\int d^4x L(\phi(\bm{x},t))}$. Where $\int D\phi$ is the integral over all possible paths/ways a particle could take. Through back and forth expansions of the $e$ functions the integral can be solved and the result is a probability - the amplitude $\mathcal{M}$ of e.g. an interaction between two particles, like scattering, usually depicted in the form of Feynman Diagrams. As this follows a pattern the formalism can be contracted into the infamous Feynman rules (for details see \citep{griffiths2020introduction}). 
 
+\section{Probability of a process}
+Probes of elementary particle interactions are accessible via bound states, decays and scattering. The first can be studied within classical quantum mechanics whereas the latter uses the preceding. Since this work deals with a collider experiment I think its at least useful to see how one can calculate in principle a cross section $\sigma$. It is a measure of how possible an interaction is when shooting something at each other. Calculating reaction rates in quantum mechanics is done by Fermi's golden rule. Here the relativistic version for a scattering process like $1+2 \rightarrow 3+4+\dots+n$ is given \citep{griffiths2020introduction}
+\begin{align}
+    \begin{split}
+        \sigma=&\frac{S\hbar^2}{4\sqrt{(p_1\cdot p_2)^2 - (m_1m_2c^2)^2}}\int \abs{\mathcal{M}}^2(2\pi)^4\delta^4(p_1+p_2-p_3 \dots-p_n) \\
+        &\times \prod_{j=3}^n 2\pi \delta(p_j^2-m_j^2c^2)\Theta(p_j^0)\frac{\mathrm
+        d^4p_j}{(2\pi)^4}.
+    \end{split}
+\end{align}
+$S$ is a statistical factor accounting for identical particles (e.g. $a\rightarrow b+b+c+c+c$, then $S=(1/2!)(1/3!)$), $p_i$ are four momenta of particle $i$ over which one integrates, $\mathcal{M}(p_1,\dots,p_n)$ is the amplitude of the process calculable with the Feynman rules, the $\delta^4$ ensures energy and momentum conservation, the last $\delta$ ensures that particles are on their mass shell ($E_j^2/c^2-\bm{p}_j^2=m_j^2c^2$) and the Heaveside $\Theta$ makes sure that outgoing energies are positive $p_j^0=E_j/c>0$. With this, a particle physicist can calculate the probability of any process at a collider experiment.
 
-
-
-To probe nature at the smallest scales 
-
-As we can produce e.g. in a collider experiment 
-
-Equipped with this on can calculate cross sections which is nothing 
-
-
-To get an insight at the smallest scales all we can apparently do is to 
-
-xsec berechnen
-warum xsec 
-wollen wissen wie wahrscheinlich in process ist 
-
-
-This is the low level idea how particle physicists calculate probabilities or amplitudes for a scattering process of interest. 
-
+\section{The Standard Model}
+\ref{sec:field_theory}
 
 dirac, require local gauge invariance -> qed Lagrangian
+
+
+gauge field blah only about Lagrangians, no field solutions needed
