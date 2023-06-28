@@ -4,15 +4,15 @@ FILES=`ls -1 */*.tex`
 
 all: $(FILE).tex
 	# ./prepBib.sh
-	latex ${FILE}.tex
+	pdflatex ${FILE}.tex
 	bibtex ${FILE}
 	# ./feynmaenner.sh
-	latex ${FILE}.tex
-	latex ${FILE}.tex
+	pdflatex ${FILE}.tex
+	pdflatex ${FILE}.tex
 
 spell:  
 	for file in $(FILES); do \
-	aspell -t -c $${file}; \
+	hunspell -t -l $${file}; \
 	done;
 
 ps: $(FILE).dvi
