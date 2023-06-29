@@ -23,7 +23,7 @@ $r$ is the expected rate of occurrences, which translates as our prediction, whe
     \prod_{j=1}^N \frac{(\mu s_j + b_j)^{n_j}}{n_j !} e^{-(\mu s_j + b_j)}
     \prod_{k=1}^M \frac{u_k^{a_k}}{a_k!} e^{-u_k}.
 \end{equation}
-To test for a hypothesized value of $\mu$ we consider the so called profile likelihood ratio that reduces the dependence to one parameter of interest $\mu$
+To test for a hypothesized value of $\mu$, the best choice according to the Neyman-Pearson lemma, is the profile likelihood ratio that reduces the dependence to one parameter of interest $\mu$
 \begin{equation}
 \lambda(\mu)=
     \frac{L(\mu,\hat{\hat{\bm{\Theta}}})}
@@ -32,43 +32,61 @@ To test for a hypothesized value of $\mu$ we consider the so called profile like
 The denominator is the unconditional maximum likelihood estimation so that $\hat{\mu}$ and $\hat{\bm{\Theta}}$ both are free to vary to maximize $L$. Whereas the numerator is the found maximum likelihood conditioned on some chosen $\mu$ and the set of found nuisance parameters $\hat{\hat{\bm{\Theta}}}$ that maximize the likelihood. This definition gives $0 \leq \lambda \leq 1$. For a $\lambda \sim 1$ the hypothesized value of $\mu$ shows good agreement to the Poissonian model.
 
 \subsection{From test statistic to p-value}   
-Transforming this into a test statistic $t_{\mu}$ is practical to calculate p-values
+Transforming the profile likelihood into a test statistic $t_{\mu}$ is practical to calculate p-values
 \begin{equation}
     t_{\mu}=-2\log \lambda(\mu).
 \end{equation}
-This translates as $t_{\mu} \rightarrow 0$ as good agreement, $t_{\mu} \rightarrow \infty$ as bad agreement to the model. A p-value can then be calculated from the probability density function of $t_\mu$: pdf$(t_\mu) = f(t_\mu \mid \mu)$
+This translates as $t_{\mu} \rightarrow 0$ as good agreement, $t_{\mu} \rightarrow \infty$ as bad agreement to the model. A right-tail p-value can then be calculated from the probability density function of $t_\mu$: pdf$(t_\mu) = f(t_\mu \mid \mu)$
 \begin{equation}\label{eq:p-value}
     p_\mu = \int_{t_{\mu ,obs}}^{\infty} 
     f(t_\mu \mid \mu) \mathrm{d}t_\mu
 \end{equation}
-$t_{\mu ,obs}$ is the test statistic $t_\mu$ evaluated at the observed data. This is like plugging into the Poisson distributions the same values for $r$ as for $k$ in eq. \ref{eq:poisson} \footnote{The subindex $\mu$ for the observation in $t_{\mu ,obs}$ can be a bit misleading because plugging in actually drops the dependency on $\mu$.}. Just like a probability density function for a standard normal distribution, intuitively the pdf is just how probable the test statistic $t_\mu$ is under a fixed value of the signal strength (how often it occurs compared to all other values $t_\mu$ can be). This particular form is handy because there exist approximations for $f(t_\mu \mid \mu)$ (for details see \citep{cowan2011asymptotic}). Figure \ref{fig:test_stat_example} illustrates the different steps as a sketch. One caveat here is that this assumes $\mu$ can also take negative values which of course is not the intended goal here. But considering the correct limiting cases one can construct test statistics accordingly (\citep{cowan2011asymptotic} for details). In the scientific community a widely accepted threshold to accept an alternative hypothesis over the null hypothesis is for a p-value of 0.05. 
+$t_{\mu ,obs}$ is the test statistic $t_\mu$ evaluated at the observed data. This is like plugging into the Poisson distributions the same values for $r$ as for $k$ in eq. \ref{eq:poisson}. Just like a probability density function for a standard normal distribution, intuitively the pdf is just how probable is a particular value of the test statistic $t_\mu$ under a fixed value of the signal strength (how often it occurs compared to all other values $t_\mu$ can have). 
+
+This particular form is handy because there exist approximations for $f(t_\mu \mid \mu)$ \citep{cowan2011asymptotic}. Wald \citep{wald1943tests} proved that in the large sample limit the test statistic follows a normalized sum of squared distances between the tested parameter of interest $\mu_i$ and its maximum likelihood estimate $\hat{\mu}_i$. The result was extended by Wilk \citep{wilks1938large} for any number of parameters of interest so the test statistic becomes
+\begin{equation}
+    t_\mu=\sum_i \frac{(\mu_i-\hat{\mu}_i^2)}{\sigma_i^2} + \mathcal{O}(1/\sqrt{N}).
+\end{equation}
+The $\hat{\mu}_i$ are in the large sample limit normally distributed with mean $\mu'$ (true values) and standard deviation $\sigma_i$. This basically the definition of a non-central chi-squared distribution with degrees of freedom equal to the parameters of interest (see section 3.1 in \citep{cowan2011asymptotic}). For one parameter of interest the distribution reads
+\begin{equation}\label{eq:chi-square}
+    f(t_\mu \mid \Lambda(\mu))=\frac{1}{2\sqrt{t_\mu}}\frac{1}{\sqrt{2\pi}}
+    \left[
+\exp\left(-\frac{1}{2}\left(\sqrt{t_\mu}+\sqrt{\Lambda}\right)\right)
++
+\exp\left(-\frac{1}{2}\left(\sqrt{t_\mu}-\sqrt{\Lambda}\right)\right)
+\right],
+\end{equation}
+with non-centrality parameter 
+\begin{equation}
+    \Lambda=\frac{(\mu-\mu')^2}{\sigma^2}.
+\end{equation}
+Figure \ref{fig:test_stat_example} illustrates the different steps. Being able to calculate p-values allows now to state how likely it is that the proposed hypothesis is reflected by the observed data. Put differently, if the experiment would be repeated the p-value represents the probability of obtaining a result that favors the alternative hypothesis over the null hypothesis. In the scientific community a widely accepted threshold for this is a p-value of 0.05. Though particle physicists only claim discovery of a new phenomenon for $p<$\SI{2.87e-7}{} (5 standard deviations of the standard normal distribution).
+
+One caveat here is that this particular form of $t_\mu$ assumes $\mu$ can also be negative, which can be non-physical if one looks for a new process. Test statistics considering the different cases are covered in \citep{cowan2011asymptotic}. 
 \begin{figure}
     \centering
-    \includegraphics[width=0.7\textwidth]{test_stat_example.pdf}
-        \caption[]{This is a sketch to mentally trace the transformation steps. The profile likelihood has essentially a hill like form with a maximum at ${\lambda(\hat{\mu},\hat{\bm{\Theta}})}$, $t_\mu$ is $\sim \mathrm{-ln}(\lambda)$ and under the assumption that the Poissonian model is correct the pdf of $t_\mu$ should peak at ${\lambda(\hat{\mu},\hat{\bm{\Theta}})}$}
+    \includegraphics[width=0.8\textwidth]{test_stat_example.pdf}
+        \caption[]{A sketch to follow the steps to calculate p-values. (\textbf{left}) The profile likelihood (\hexbox{1f77b4}) has essentially some hill-like form with a maximum at ${\lambda(\hat{\mu},\hat{\bm{\Theta}})}$, $t_\mu$ (\hexbox{ff7f0e}) is $-2\mathrm{ln}(\lambda)$. (\textbf{right}) For one parameter of interest in the large sample limit $f(t_\mu \mid \mu)$ follows a non-central chi-squared distribution with one degree of freedom, equation \ref{eq:chi-square}. The blue shaded area under the pdf is a right hand sided p-value.}
     \label{fig:test_stat_example}    
 \end{figure}
 
 \subsection{The CL$_s$ value}\label{sec:cls}
-Being able to calculate p-values allows now to state how likely it is that the proposed hypothesis is reflected by the observed data. Taking the example from the sketch in fig. \ref{fig:test_stat_example} one sees that the blue shaded area makes up about $\sim$\SI{10}{\percent} of the total area below the curve of $f(t_\mu \mid \mu)$. Since $f(t_\mu \mid \mu)$ is a pdf it holds that $\int f(t_\mu \mid \mu) =1$ and therefore gives a p-value of $p\sim 0.1$. With other words it means if we were to repeat the experiment, in $\sim$\SI{10}{\percent} of the cases the observed data would be in agreement with our proposed hypothesis. 
 
-Particle physicists are usually interested in two things when making statistical tests for discovery of new phenomena: how well is the modeling of backgrounds (things we know) and can we find evidence in the observations for a new phenomenon. This means one needs to test two hypotheses: a background only ($b$) and a signal plus background ($s+b$) hypothesis. Each will result in a p-value on their own. For example $p_{b}=1$ would mean that the backgrounds are perfectly reflected by the observations and a $p_{s+b} < 0.05$ could be a sign of new physics. To combine these two metrics into a single score particle physicists came up with the pseudo Confidence Level called CL$_s$ incorporating also the goodness of the modeling of the backgrounds 
+Particle physicists are usually interested in two things when making statistical tests for discovery of new phenomena: how well is the modeling of backgrounds (things we know) and if there is evidence in the observations for a new phenomenon. This means one needs to test two hypotheses: a background only ($b$) and a signal plus background ($s+b$) hypothesis. Each will result in a p-value on their own. For example $p_{b}=0$ would mean that the backgrounds are perfectly reflected by the observations and a $p_{s+b} < 0.05$ could be a sign of e.g. new physics. To combine these two metrics into a single score, particle physicists came up with the pseudo Confidence Level/p-value called CL$_s$ incorporating also the goodness of the modeling of the backgrounds 
 \begin{equation}
-    \mathrm{CL}_s=\frac{\mathrm{CL}_{s+b}}{\mathrm{CL}_{b}}=
+    \mathrm{CL}_s=\frac{p_{s+b}}{1-p_{b}}=
     \frac
-    {\int_{t_{\mu=1 ,obs}}^{\infty} 
-    f(t_\mu \mid \mu=1) \mathrm{d}t_\mu}
-    {\int_{t_{\mu=0 ,obs}}^{\infty} 
-    f(t_\mu \mid \mu=0) \mathrm{d}t_\mu}.
+    {\int_{t_{\mu ,obs}}^{\infty} 
+    f(t_\mu \mid \mu) \mathrm{d}t_\mu}
+    {1-\int_{t_{\mu ,obs}}^{\infty} 
+    f(t_\mu \mid \mu) \mathrm{d}t_\mu}.
 \end{equation}
-This can also be understood visually from the first figure of the heavily cited CL$_s$ paper \citep{read2002presentation} (fig. \ref{fig:cls}). The left figure depicts the pdf's of the test statistic $ f(t_\mu \mid \mu=0)$ of the signal + background ({\color[HTML]{804000}{$\diagup$}}) and background ({\color[HTML]{2100FF}{$\diagup$}}) only hypotheses. The p-value is calculated by integration from $t_{\mu,obs}$ (the red observed line ({\color[HTML]{FF0000}{$\diagup$}})) to infinity (see eq. \ref{eq:p-value}). The green shaded area (\hexbox{00FF00}) corresponds to $p_{s+b}$ whereas the integral from the red line to infinity for the blue curve would be $p_b$. 
-
-The right hand side depicts the degradation of search sensitivity (a)->(c). Unfortunately the colors of the pdf's changed here to signal + background (\hexbox{2100FF}) and background only (\hexbox{FF0000}). For example if you put the observation on the x-axis at 0 in these plots, you would get for the first one basically $p_{b}\approx 1$ and $p_{s+b}\approx 0$ resulting in a CL$_s\approx 0$, whereas with increasing overlap the CL$_s$ value increases and the sensitivity decrease.
-
+Intuitively the numerator is again just the value for the alternative hypothesis whereas the denominator penalizes CL$_s$ if the modeling of the backgrounds is not reflected in the observations. This can also be understood visually from the first figure of the heavily cited CL$_s$ paper \citep{read2002presentation} (see description of fig. \ref{fig:cls}).
 \begin{figure}
     \centering
     \includegraphics[width=1\textwidth]{cls.png}
-        \caption[]{Probability density functions of test statistics from a Higgs search at LEP illustrating the calculation of p-values. Description at the end of section \ref{sec:cls}. From \citep{read2002presentation}.}
+        \caption[]{Probability density functions of test statistics from a Higgs search at LEP illustrating the calculation of p-values ($\lambda$ becomes $Q$). (\textbf{left}) The pdf's of the test statistic $f(t_\mu \mid \mu)$ of the signal + background ({\color[HTML]{804000}{$\diagup$}}) and background ({\color[HTML]{2100FF}{$\diagup$}}) only hypotheses. The p-value is calculated by integration from $t_{\mu,obs}$ (the red observed line ({\color[HTML]{FF0000}{$\diagup$}})) to infinity (see eq. \ref{eq:p-value}). The green shaded area (\hexbox{00FF00}) corresponds to $p_{s+b}$ whereas the yellow area (\hexbox{FDFF02}) corresponds to $1-p_b$ since the integral over one whole pdf is 1. (\textbf{right}) Degradation of search sensitivity from (a) to (c). Note that the colors of the pdf's change here to signal + background (\hexbox{2100FF}) and background only (\hexbox{FF0000}). For example putting the observation on the x-axis at 0 in these plots, one would get for plot (a) $p_{b}\approx 1$ and $p_{s+b}\approx 0$ resulting in a CL$_s\approx 0$, whereas with increasing overlap the CL$_s$ value increases and the sensitivity decreases.
+        From \citep{read2002presentation}.}
     \label{fig:cls}    
 \end{figure}
 
