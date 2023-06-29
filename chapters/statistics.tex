@@ -1,11 +1,11 @@
 \section{Statistics}\label{sec:statistics}
 
-Every science starts from a hypothesis to be tested. The task is to make a statement if the proposed hypothesis agrees or disagrees with observed data, to either accept or reject it against the null-hypothesis. The metric at hand to do so is the p-value that arises within hypothesis testing. 
+Every scientific investigation starts with a hypothesis that is to be tested empirically. The main objective is to evaluate if the proposed hypothesis agrees or disagrees with observed data, to either accept or reject it against the null-hypothesis. The metric at hand to do so is the p-value that arises within hypothesis testing. 
 
-For exactly this task high energy physicists have developed a framework based on likelihood statistics tailored for counting experiments. This section begins to lay out the fundamentals of the approach and then goes to the hands on implementation of its use. The following is based on \citep{cowan2011asymptotic,behnke2013data,pyhf_intro}.
+In the field of high-energy physics, a framework based on likelihood statistics has been developed specifically for this task. This section begins to lay out the mathematical fundamentals of the approach and then goes to the hands on implementation of its use. The following is based on \citep{cowan2011asymptotic,behnke2013data,pyhf_intro}.
 
 \subsection{Building the likelihood}
-As we are dealing with a counting experiment the tool at hand are histograms $\bm{n}=(n_1,...,n_N)$. It can be modeled with a set of parameters divided into so called parameters of interest, here only the signal strength $\mu$, and nuisance parameters $\bm{\Theta}$, that basically serve to give the model flexibility to fit the observations. The bin heights (counts) can then be expressed in terms of the amount of signal $s_i(\bm{\Theta})$ and background $b_i(\bm{\Theta})$ in them. The expectation value of the $n_i$ is then
+Since we are dealing with a counting experiment the tool at hand are histograms $\bm{n}=(n_1,...,n_N)$. It can be modeled with a set of parameters divided into so called parameters of interest, here only the signal strength $\mu$, and nuisance parameters $\bm{\Theta}$, that basically serve to give the model flexibility to fit the observations. The bin heights (counts) can then be expressed in terms of the amount of signal $s_i(\bm{\Theta})$ and background $b_i(\bm{\Theta})$ in them. The expectation value of the $n_i$ is then
 \begin{equation} \label{eq:n_i}
     \langle n_i(\mu,\bm{\Theta})\rangle = \mu s_i(\bm{\Theta}) +b_i(\bm{\Theta}).
 \end{equation}
@@ -13,7 +13,7 @@ The model can be further constrained with auxiliary histograms $\bm{a}=(a_1,...,
 \begin{equation} \label{eq:a_i}
     \langle a_i(\bm{\Theta}) \rangle = u_i(\bm{\Theta}).
 \end{equation}
-As we are expecting the bin counts to occur with a constant mean rate and independent of time compared to the last event each follows a Poisson distribution
+As we are expecting the bin counts to occur with a constant mean rate and independent of time compared to the last event, each bin follows a Poisson distribution
 \begin{equation}\label{eq:poisson}
     \frac{r^k e^{-r}}{k!}.
 \end{equation}
@@ -29,7 +29,7 @@ To test for a hypothesized value of $\mu$, the best choice according to the Neym
     \frac{L(\mu,\hat{\hat{\bm{\Theta}}})}
     {L(\hat{\mu},\hat{\bm{\Theta}})}
 \end{equation}
-The denominator is the unconditional maximum likelihood estimation so that $\hat{\mu}$ and $\hat{\bm{\Theta}}$ both are free to vary to maximize $L$. Whereas the numerator is the found maximum likelihood conditioned on some chosen $\mu$ and the set of found nuisance parameters $\hat{\hat{\bm{\Theta}}}$ that maximize the likelihood. This definition gives $0 \leq \lambda \leq 1$. For a $\lambda \sim 1$ the hypothesized value of $\mu$ shows good agreement to the Poissonian model.
+The denominator is the unconditional maximum likelihood estimation so that $\hat{\mu}$ and $\hat{\bm{\Theta}}$ both are free to vary to maximize $L$, whereas the numerator is the found maximum likelihood conditioned on some chosen $\mu$ and the set of found nuisance parameters $\hat{\hat{\bm{\Theta}}}$ that maximize the likelihood. This definition gives $0 \leq \lambda \leq 1$. For a $\lambda \approx 1$ the hypothesized value of $\mu$ shows good agreement to the Poissonian model.
 
 \subsection{From test statistic to p-value}   
 Transforming the profile likelihood into a test statistic $t_{\mu}$ is practical to calculate p-values
@@ -60,9 +60,7 @@ with non-centrality parameter
 \begin{equation}
     \Lambda=\frac{(\mu-\mu')^2}{\sigma^2}.
 \end{equation}
-Figure \ref{fig:test_stat_example} illustrates the different steps. Being able to calculate p-values allows now to state how likely it is that the proposed hypothesis is reflected by the observed data. Put differently, if the experiment would be repeated the p-value represents the probability of obtaining a result that favors the alternative hypothesis over the null hypothesis. In the scientific community a widely accepted threshold for this is a p-value of 0.05. Though particle physicists only claim discovery of a new phenomenon for $p<$\SI{2.87e-7}{} (5 standard deviations of the standard normal distribution).
-
-One caveat here is that this particular form of $t_\mu$ assumes $\mu$ can also be negative, which can be non-physical if one looks for a new process. Test statistics considering the different cases are covered in \citep{cowan2011asymptotic}. 
+Figure \ref{fig:test_stat_example} illustrates the different steps. Being able to calculate p-values allows now to state how likely it is that the proposed hypothesis is reflected by the observed data. Put differently, if the experiment would be repeated the p-value represents the probability of obtaining a result that favors the alternative hypothesis over the null hypothesis. In the scientific community a widely accepted threshold for this is a p-value of 0.05. Though particle physicists only claim discovery of a new phenomenon for $p$ < \SI{2.87e-7}{} (5 standard deviations of the standard normal distribution). One caveat here is that this particular form of $t_\mu$ assumes $\mu$ can also be negative, which can be non-physical if one looks for a new process. Test statistics considering the different cases are covered in \citep{cowan2011asymptotic}. 
 \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth]{test_stat_example.pdf}
