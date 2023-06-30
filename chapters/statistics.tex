@@ -5,11 +5,15 @@ Every scientific investigation starts with a hypothesis that is to be tested emp
 In the field of high-energy physics, a framework based on likelihood statistics has been developed specifically for this task. This section begins to lay out the mathematical fundamentals of the approach and then goes to the hands on implementation of its use. The following is based on \citep{cowan2011asymptotic,behnke2013data,pyhf_intro}.
 
 \subsection{Building the likelihood}
-Since we are dealing with a counting experiment the tool at hand are histograms $\bm{n}=(n_1,...,n_N)$. It can be modeled with a set of parameters divided into so called parameters of interest, here only the signal strength $\mu$, and nuisance parameters $\bm{\Theta}$, that basically serve to give the model flexibility to fit the observations. The bin heights (counts) can then be expressed in terms of the amount of signal $s_i(\bm{\Theta})$ and background $b_i(\bm{\Theta})$ in them. The expectation value of the $n_i$ is then
+The statistical model must take into account how compatible the observed collision events are with the theoretical predictions. This can be described by a likelihood $L(\bm{x} | \bm{\phi})$ that is just a probability for an observation $\bm{x}$ under a given set of parameters $\bm{\phi}$. Since we are dealing with a counting experiment the tool at hand will be bins of histograms $\bm{h}=(h_1,...,h_N)$. 
+
+It is useful to subdivide a measurement $\bm{x}=(\bm{n},\bm{a})$ further into a quantity of interest $\bm{n}$, (e.g. the invariant mass of a particle) and \textit{auxiliary} measurement histograms $\bm{a}$ that help to constrain the model. Additionally in the context of hypothesis testing it is useful to split the set of parameters $\bm{\phi}=(\bm{\psi},\bm{\Theta})$ into so called parameters of interest $\bm{\psi}$ and nuisance parameters $\bm{\Theta}$. For this section the parameter of interest will be only one parameter, the signal strength $\mu$. 
+
+The bin heights (counts) can then be expressed in terms of the amount of signal $s_i(\bm{\Theta})$ and background $b_i(\bm{\Theta})$ in them depending in some way on the nuisance parameters. The prediction (expectation value) of the $n_i$ can then be expressed as
 \begin{equation} \label{eq:n_i}
-    \langle n_i(\mu,\bm{\Theta})\rangle = \mu s_i(\bm{\Theta}) +b_i(\bm{\Theta}).
+    \langle n_i(\mu,\bm{\Theta})\rangle = \mu s_i(\bm{\Theta}) +b_i(\bm{\Theta}), 
 \end{equation}
-The model can be further constrained with auxiliary histograms $\bm{a}=(a_1,...,a_M)$ with bin height
+and similar for the $a_i$
 \begin{equation} \label{eq:a_i}
     \langle a_i(\bm{\Theta}) \rangle = u_i(\bm{\Theta}).
 \end{equation}
@@ -17,19 +21,19 @@ As we are expecting the bin counts to occur with a constant mean rate and indepe
 \begin{equation}\label{eq:poisson}
     \frac{r^k e^{-r}}{k!}.
 \end{equation}
-$r$ is the expected rate of occurrences, which translates as our prediction, whereas $k$ are the actual measured occurrences. From this a likelihood $L(\bm{x})$ can be built, which is just a probability under a given set of parameters $\bm{x}$. Accounting for all the bins by multiplying them together yields
-\begin{equation}
+$r$ is the expected rate of occurrences, which translates as our prediction, whereas $k$ are the actual measured occurrences. Accounting for all the bins by multiplying them together yields
+\begin{equation}\label{eq:likelihood}
     L(\mu,\bm{\Theta})=
-    \prod_{j=1}^N \frac{(\mu s_j + b_j)^{n_j}}{n_j !} e^{-(\mu s_j + b_j)}
-    \prod_{k=1}^M \frac{u_k^{a_k}}{a_k!} e^{-u_k}.
+    \prod_{j=1}^N \frac{(\mu s_j(\bm{\Theta}) + b_j(\bm{\Theta}))^{n_j}}{n_j !} e^{-(\mu s_j(\bm{\Theta}) + b_j(\bm{\Theta}))}
+    \prod_{k=1}^M \frac{u_k(\bm{\Theta})^{a_k}}{a_k!} e^{-u_k(\bm{\Theta})}.
 \end{equation}
-To test for a hypothesized value of $\mu$, the best choice according to the Neyman-Pearson lemma, is the profile likelihood ratio that reduces the dependence to one parameter of interest $\mu$
+To test for a hypothesized value of $\mu$, the best choice according to the Neyman-Pearson lemma, is the profile likelihood ratio that reduces the dependence to the parameter(s) of interest
 \begin{equation}
 \lambda(\mu)=
     \frac{L(\mu,\hat{\hat{\bm{\Theta}}})}
     {L(\hat{\mu},\hat{\bm{\Theta}})}
 \end{equation}
-The denominator is the unconditional maximum likelihood estimation so that $\hat{\mu}$ and $\hat{\bm{\Theta}}$ both are free to vary to maximize $L$, whereas the numerator is the found maximum likelihood conditioned on some chosen $\mu$ and the set of found nuisance parameters $\hat{\hat{\bm{\Theta}}}$ that maximize the likelihood. This definition gives $0 \leq \lambda \leq 1$. For a $\lambda \approx 1$ the hypothesized value of $\mu$ shows good agreement to the Poissonian model.
+The denominator is the unconditional maximum likelihood estimation so that $\hat{\mu}$ and $\hat{\bm{\Theta}}$ both are free to vary to maximize $L$, whereas the numerator is the found maximum likelihood conditioned on some chosen $\mu$ and the set nuisance parameters $\hat{\hat{\bm{\Theta}}}$ that maximize the likelihood for that particular $\mu$. This definition gives $0 \leq \lambda \leq 1$. For a $\lambda \approx 1$ the hypothesized value of $\mu$ shows good agreement to the Poissonian model.
 
 \subsection{From test statistic to p-value}   
 Transforming the profile likelihood into a test statistic $t_{\mu}$ is practical to calculate p-values
@@ -41,26 +45,28 @@ This translates as $t_{\mu} \rightarrow 0$ as good agreement, $t_{\mu} \rightarr
     p_\mu = \int_{t_{\mu ,obs}}^{\infty} 
     f(t_\mu \mid \mu) \mathrm{d}t_\mu
 \end{equation}
-$t_{\mu ,obs}$ is the test statistic $t_\mu$ evaluated at the observed data. This is like plugging into the Poisson distributions the same values for $r$ as for $k$ in eq. \ref{eq:poisson}. Just like a probability density function for a standard normal distribution, intuitively the pdf is just how probable is a particular value of the test statistic $t_\mu$ under a fixed value of the signal strength (how often it occurs compared to all other values $t_\mu$ can have). 
+$t_{\mu ,obs}$ is the test statistic $t_\mu$ evaluated at the observed data. This is like plugging into the Poisson distributions the same values for $r$ as for $k$ in eq. \ref{eq:poisson}. Just like a probability density function for a standard normal distribution, intuitively the pdf is just, how probable a particular value of the test statistic $t_\mu$ is under a fixed value of the signal strength (how often it occurs compared to all other values $t_\mu$ can have). 
 
 This particular form is handy because there exist approximations for $f(t_\mu \mid \mu)$ \citep{cowan2011asymptotic}. Wald \citep{wald1943tests} proved that in the large sample limit the test statistic follows a normalized sum of squared distances between the tested parameter of interest $\mu_i$ and its maximum likelihood estimate $\hat{\mu}_i$. The result was extended by Wilk \citep{wilks1938large} for any number of parameters of interest so the test statistic becomes
 \begin{equation}
     t_\mu=\sum_i \frac{(\mu_i-\hat{\mu}_i^2)}{\sigma_i^2} + \mathcal{O}(1/\sqrt{N}).
 \end{equation}
-The $\hat{\mu}_i$ are in the large sample limit normally distributed with mean $\mu'$ (true values) and standard deviation $\sigma_i$. This basically the definition of a non-central chi-squared distribution with degrees of freedom equal to the parameters of interest (see section 3.1 in \citep{cowan2011asymptotic}). For one parameter of interest the distribution reads
+The $\hat{\mu}_i$ are in the large sample limit normally distributed with mean $\mu'$ (true values) and standard deviation $\sigma_i$. This is the definition of a non-central chi-squared distribution with degrees of freedom $i$ equal to the parameters of interest (see section 3.1 in \citep{cowan2011asymptotic}). For one parameter of interest the distribution reads
 \begin{equation}\label{eq:chi-square}
-    f(t_\mu \mid \Lambda(\mu))=\frac{1}{2\sqrt{t_\mu}}\frac{1}{\sqrt{2\pi}}
+    f(t_\mu \mid \mu)=\frac{1}{2\sqrt{t_\mu}}\frac{1}{\sqrt{2\pi}}
     \left[
-\exp\left(-\frac{1}{2}\left(\sqrt{t_\mu}+\sqrt{\Lambda}\right)\right)
+\exp\left(-\frac{1}{2}\left(\sqrt{t_\mu}+\sqrt{\Lambda}_\mu\right)\right)
 +
-\exp\left(-\frac{1}{2}\left(\sqrt{t_\mu}-\sqrt{\Lambda}\right)\right)
+\exp\left(-\frac{1}{2}\left(\sqrt{t_\mu}-\sqrt{\Lambda}_\mu\right)\right)
 \right],
 \end{equation}
 with non-centrality parameter 
 \begin{equation}
-    \Lambda=\frac{(\mu-\mu')^2}{\sigma^2}.
+    \Lambda_\mu=\frac{(\mu-\mu')^2}{\sigma^2}.
 \end{equation}
-Figure \ref{fig:test_stat_example} illustrates the different steps. Being able to calculate p-values allows now to state how likely it is that the proposed hypothesis is reflected by the observed data. Put differently, if the experiment would be repeated the p-value represents the probability of obtaining a result that favors the alternative hypothesis over the null hypothesis. In the scientific community a widely accepted threshold for this is a p-value of 0.05. Though particle physicists only claim discovery of a new phenomenon for $p$ < \SI{2.87e-7}{} (5 standard deviations of the standard normal distribution). One caveat here is that this particular form of $t_\mu$ assumes $\mu$ can also be negative, which can be non-physical if one looks for a new process. Test statistics considering the different cases are covered in \citep{cowan2011asymptotic}. 
+Figure \ref{fig:test_stat_example} illustrates the different steps. Being able to calculate p-values allows now to state how likely it is that the proposed hypothesis is reflected by the observed data. Put differently, if the experiment would be repeated the p-value represents the probability of that the outcome favors the alternative hypothesis over the null hypothesis.
+
+In the scientific community a widely accepted threshold for this is a p-value of 0.05. Though particle physicists only claim discovery of a new phenomenon for $p$ < \SI{2.87e-7}{} (5 standard deviations of the standard normal distribution). One caveat here is that this particular form of $t_\mu$ assumes $\mu$ can also be negative, which can be non-physical depending on the impact of a new process. Test statistics and their pdf approximations considering the different cases are covered in \citep{cowan2011asymptotic}. 
 \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth]{test_stat_example.pdf}
@@ -83,25 +89,52 @@ Intuitively the numerator is again just the value for the alternative hypothesis
 \begin{figure}
     \centering
     \includegraphics[width=1\textwidth]{cls.png}
-        \caption[]{Probability density functions of test statistics from a Higgs search at LEP illustrating the calculation of p-values ($\lambda$ becomes $Q$). (\textbf{left}) The pdf's of the test statistic $f(t_\mu \mid \mu)$ of the signal + background ({\color[HTML]{804000}{$\diagup$}}) and background ({\color[HTML]{2100FF}{$\diagup$}}) only hypotheses. The p-value is calculated by integration from $t_{\mu,obs}$ (the red observed line ({\color[HTML]{FF0000}{$\diagup$}})) to infinity (see eq. \ref{eq:p-value}). The green shaded area (\hexbox{00FF00}) corresponds to $p_{s+b}$ whereas the yellow area (\hexbox{FDFF02}) corresponds to $1-p_b$ since the integral over one whole pdf is 1. (\textbf{right}) Degradation of search sensitivity from (a) to (c). Note that the colors of the pdf's change here to signal + background (\hexbox{2100FF}) and background only (\hexbox{FF0000}). For example putting the observation on the x-axis at 0 in these plots, one would get for plot (a) $p_{b}\approx 1$ and $p_{s+b}\approx 0$ resulting in a CL$_s\approx 0$, whereas with increasing overlap the CL$_s$ value increases and the sensitivity decreases.
+        \caption[]{Probability density functions of test statistics from a Higgs search at LEP illustrating the calculation of p-values ($\lambda$ becomes $Q$). (\textbf{left}) The pdf's of the test statistic $f(t_\mu \mid \mu)$ of the signal + background ({\color[HTML]{804000}{$\diagup$}}) and background ({\color[HTML]{2100FF}{$\diagup$}}) only hypotheses. The p-value is calculated by integration from $t_{\mu,obs}$ (the red observed line ({\color[HTML]{FF0000}{$\diagup$}})) to infinity (see eq. \ref{eq:p-value}). The green shaded area (\hexbox{00FF00}) corresponds to $p_{s+b}$ whereas the yellow area (\hexbox{FDFF02}) corresponds to $1-p_b$ since the integral over one whole pdf is 1. (\textbf{right}) Degradation of search sensitivity from (a) to (c). Note that the colors of the pdf's change here to signal + background (\hexbox{2100FF}) and background only (\hexbox{FF0000}). For example putting the observation ($t_{\mu,obs}$) on the x-axis at 0 in these plots, one would get for plot (a) $p_{b}\approx 1$ and $p_{s+b}\approx 0$ resulting in a CL$_s\approx 0$, whereas with increasing overlap the CL$_s$ value increases and the sensitivity decreases.
         From \citep{read2002presentation}.}
     \label{fig:cls}    
 \end{figure}
 
 
 
-\subsection{Histfactory in pyhf}
+\subsection{The HistFactory model}
+
+A model used widely to achieve the preceding for a typical ATLAS analysis is called HistFactory \citep{cranmer2012histfactory} and is implemented within \textsc{pyhf} \ref{pyhf}. This follows closely the introduction to pyhf \ref{pyhf_intro}. HistFactory draws the name from the idea that the problem is reducible to a small number of basic components. In order to build a likelihood like eq. \ref{eq:likelihood} it is again useful to think of another splitting of the nuisance parameters $\bm{\phi}$ into
+
+\newcommand{\freeset}{\bm{\eta}}
+\newcommand{\constrset}{\bm{\chi}}
+\newcommand{\singleconstr}{\chi}
+\newcommand{\channelcounts}{\bm{n}}
+\newcommand{\auxdata}{\bm{a}}
+\newcommand{\poiset}{\bm{\psi}}
+\newcommand{\nuisset}{\bm{\theta}}
+\newcommand{\fullset}{\bm{\phi}}
+\newcommand{\singlefull}{\phi}
 
 
+\begin{equation}
+ L(\bm{x}|\fullset) \quad=\quad
+ L(\bm{x}|\overbrace{\poiset}^{\llap{\text{parameters of interest}}},\underbrace{\nuisset}_{\llap{\text{nuisance parameters}}}) \quad=\quad
+ L(\bm{x}|\overbrace{\freeset}^{\rlap{\text{free}}},\underbrace{\constrset}_{\rlap{\text{constrained}}}) 
+\end{equation}
+free parameters $\freeset$, like a cross section of a process and constrained parameters $\constrset$, to account for systematic uncertainties. The likelihood can then be modeled with Poissonians for each of the channels $c$ (e.g. signal regions), bins $b$ 
+\begin{equation}
+L(\channelcounts, \auxdata \,|\,\freeset,\constrset) = \underbrace{\color{blue}{\prod_{c\in\mathrm{\,channels}} \prod_{b \in \mathrm{\,bins}_c}\textrm{Pois}\left(n_{cb} \,\middle|\, \nu_{cb}\left(\freeset,\constrset\right)\right)}}_{\substack{\text{Simultaneous measurement}\\%
+\text{of multiple channels}}} \underbrace{\color{red}{\prod_{\singleconstr \in \constrset} c_{\singleconstr}(a_{\singleconstr} |\, \singleconstr)}}_{\substack{\text{constraint terms}\\%
+\text{for }\text{auxiliary measurements}}}.
+\end{equation}
+The $n_{cb}$ is the observation itself and $\nu_{cb}(\freeset,\constrset)$ the prediction. The $c_{\singleconstr}$ are constraint terms calculated from auxiliary measurements $a_{\singleconstr}$ to constrain $\singleconstr$ and can be any function (e.g. Gaussian, Poissonian,...) we believe the parameter to be distributed. 
 
-Detector-simulation related uncertainty
-– Calibrations (electron, jet energy scale)
-– Efficiencies (particle ID, reconstruction)
-– Resolutions (jet energy, muon momentum)!
-!
-• Theoretical uncertainties
-– Factorization/Normalization scale of MC generators
-– Choice of MC generator (ME and/or PS, e.g. Herwig vs Pythia)
-• Monte Carlo Statistical uncertainties
-– Statistical uncertainty of simulated samples
+The prediction is a sum over all samples (e.g. $t\overline{t}$, multijet-background etc.) which are modified by multiplicative and additive modifiers
+\begin{align}
+    \nu_{cb}\left(\fullset\right) &= \sum_{s\in\mathrm{\,samples}} \nu_{scb}\left(\freeset,\constrset\right)\\ &= \sum_{s\in\mathrm{\,samples}}\underbrace{\left(\prod_{\kappa\in\,\bm{\kappa}} \kappa_{scb}\left(\freeset,\constrset\right)\right)}_{\text{multiplicative modifiers}}\, \Bigg(\nu_{scb}^0\left(\freeset, \constrset\right) + \underbrace{\sum_{\Delta\in\bm{\Delta}} \Delta_{scb}\left(\freeset,\constrset\right)}_{\text{additive modifiers}}\Bigg).
+\end{align}
 
+
+make plausible poission constraint
+\begin{equation}
+    Var(Pois(k,\lambda))=\sigma^2=lambda=\delta^2 \rightarrow \lambda =\sqrt{\delta}
+\end{equation}
+
+\begin{equation}
+    Pois(k,\frac{1}{\sqrt{\delta}})
+\end{equation}
