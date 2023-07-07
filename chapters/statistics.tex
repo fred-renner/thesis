@@ -3,7 +3,7 @@
 Every scientific investigation starts with a hypothesis that is to be tested empirically. The main objective is to evaluate if the proposed hypothesis agrees or disagrees with observed data, to either accept or reject it against the null-hypothesis. The metric at hand to do so is the p-value that arises within hypothesis testing. 
 
 In the field of high-energy physics, a framework based on likelihood statistics has been developed specifically for this task. This section begins to lay out the mathematical fundamentals of the approach and explains its implementation in \textsc{pyhf}. The following is based on \citep{cowan2011asymptotic,behnke2013data,pyhf_intro}.
-
+ 
 \subsection{Building the likelihood}
 The statistical model must take into account how compatible the observed collision events are with the theoretical predictions. This can be described by a likelihood $L(\bm{x} | \bm{\phi})$ that is just a probability for an observation $\bm{x}$ under a given set of parameters $\bm{\phi}$. Since we are dealing with a counting experiment the tool at hand will be bins of a histogram $\bm{h}=(h_1,...,h_N)$. 
 
@@ -98,7 +98,7 @@ Intuitively the numerator is again just the value for the alternative hypothesis
 
 \subsection{The HistFactory model}
 
-A model used widely to achieve the preceding for a typical ATLAS analysis is called HistFactory \citep{cranmer2012histfactory} and is implemented within \textsc{pyhf} \citep{heinrich2021pyhf}. This follows closely the introduction to the model within the documenation of \textsc{pyhf} \citep{pyhf_intro}. HistFactory draws the name from the idea that the problem is reducible to a small number of basic components. In order to build a likelihood like eq. \ref{eq:likelihood} it is again useful to think of another splitting of the nuisance parameters $\bm{\phi}$ into
+A model used widely to achieve the preceding for a typical ATLAS analysis is called HistFactory \citep{cranmer2012histfactory} and is implemented within \textsc{pyhf} \citep{heinrich2021pyhf}. This section is based on the introduction to the model within the documenation of \textsc{pyhf} \citep{pyhf_intro}. HistFactory draws the name from the idea that the problem is reducible to a small number of basic components. In order to build a likelihood like eq. \ref{eq:likelihood} it is again useful to think of another splitting of the nuisance parameters $\bm{\phi}$ into
 
 \newcommand{\freeset}{\bm{\eta}}
 \newcommand{\constrset}{\bm{\chi}}
@@ -124,35 +124,38 @@ L(\channelcounts, \auxdata \,|\,\freeset,\constrset) = \underbrace{\color{blue}{
 \end{equation}
 The $n_{cb}$ is the observation and $\nu_{cb}(\freeset,\constrset)$ the prediction. The $c_{\singleconstr}$ are calculated from auxiliary measurements $a_{\singleconstr}$ to constrain $\singleconstr$ and can be any function (e.g. Gaussian, Poissonian,...) we believe the parameter to be distributed. 
 
-The prediction is a sum of nominal bin height estimates $\nu_{scb}^0$ over all samples $s$ (e.g. $t\overline{t}$, multijet-background etc.). These nominal bin height estimates can be modified within associated errors. This enters the likelihood through the constraint terms $c_{\singleconstr}$ and multiplicative $\kappa_{scb}$ and additive modifiers $\Delta_{scb}$
+The prediction is a sum of nominal bin height estimates\footnote{People call this also the rate as in the definition of the Poisson distribution.} $\nu_{scb}^0$ over all samples $s$ (e.g. $t\overline{t}$, multijet-background etc.). These nominal bin height estimates have associated errors so we could modify the bin heights according to some belief we think this affects the likelihood. To modify $\nu_{scb}^0$ we use multiplicative $\kappa_{scb}$ and additive factors $\Delta_{scb}$
 \begin{align}
     \nu_{cb}\left(\fullset\right) &= \sum_{s\in\mathrm{\,samples}} \nu_{scb}\left(\freeset,\constrset\right)\\ &= \sum_{s\in\mathrm{\,samples}}\underbrace{\left(\prod_{\kappa\in\,\bm{\kappa}} \kappa_{scb}\left(\freeset,\constrset\right)\right)}_{\text{multiplicative modifiers}}\, \Bigg(\nu_{scb}^0\left(\freeset, \constrset\right) + \underbrace{\sum_{\Delta\in\bm{\Delta}} \Delta_{scb}\left(\freeset,\constrset\right)}_{\text{additive modifiers}}\Bigg).
 \end{align}
-To understand this approach let us consider one systematic. If we would modify the nominal bin height estimate $\nu_{scb}^0$ by some factor (modifier) while the penalization stays small (constraint term), it can be beneficial for our goal of maximizing the likelihood. This means we find the most likely/compatible value to the observed data within our modeling of the errors. 
+How this modification affects the likelihood depends then also on our modeling of the error. This is governed by the auxiliary measurments $c_{\singleconstr}$ and will be explained later.
 
-In HistFactory there are by convention four types $\{ \gamma,\alpha,\lambda,\mu \}$ of such multiplicative rate modifiers that will be explained throughout the rest of this section. 
+For intuition let us consider just one systematic uncertainty to a nominal bin height estimate $\nu_{scb}^0$. If modifying $\nu_{scb}^0$ by $\mu$ while the constraint term $c_\chi(\mu)$ (note the dependence on $\mu$) stays small, it can be beneficial for our goal of maximizing the likelihood. This means we find the most likely/compatible value to the observed data within our modeling of the errors. 
 
-There are free rate modifiers $\lambda$ and $\mu$ that affect all bins equally, like the cross section of a process or the luminosity 
+\subsubsection*{The Modifiers}
+In HistFactory there are by convention four types $\{\lambda,\mu,\gamma,\alpha\}$ of such multiplicative rate modifiers that will be explained throughout the rest of this section. 
+
+There are \textbf{free rate modifiers $\lambda$ and $\mu$} that affect all bins equally, like the cross section of a process or the luminosity 
 \begin{equation}
     \nu_{scb}(\mu)=\mu \nu_{scb}^0.
 \end{equation}
-These are bin-independent and shape(of the histogram)-preserving normalization factors and could be for example the signal strength from above.
+These are bin-independent and shape( of the histogram)-preserving normalization factors and could be for example the signal strength from above.
 
-In addition $\gamma_b$ denotes bin-wise parameters (uncorrelated shape)
+Further there are \textbf{bin-wise modifiers} $\gamma_b$ (uncorrelated shape)
 \begin{equation}
     \nu_{scb}(\gamma_b)=\gamma_b \nu_{scb}^0.
 \end{equation}
-These are useful for example to include the Monte Karlo uncertainties or a per bin data-driven background estimate. This type without a constraint term has to be used with care as if there is only one sample or channel, the fit would always match the data perfectly, which of course is not of much use.
+These are useful for example to include the Monte Karlo uncertainties or a per bin data-driven background estimate. This type without a constraint term is not of much use as if there is only one sample or channel, the fit would always match the data perfectly.
 
-Further there are bin-independent (shape factors) nuisance parameters $\alpha$ that enter the modeling through an interpolation function $\eta$ instead of being the factor itself. There is the multiplicative version 
+In addition there exist \textbf{interpolation parameters $\alpha$} (shape factors) that enter the modeling through an interpolation function $\eta$ instead of being the factor itself. They exist in multiplicative versions 
 \begin{equation}
     \nu_{scb}(\alpha)=\eta(\alpha) \nu_{scb}^0,
 \end{equation}
-and the additive version
+and additive versions
 \begin{equation}
-    \nu_{scb}(\alpha)=\nu_{scb}^0 + \eta(\alpha), 
+    \nu_{scb}(\alpha)=\nu_{scb}^0 + \eta(\alpha).
 \end{equation}
-with some constraint term $c_\alpha(\alpha)$. This is useful if systematic uncertainties are to be included. In an ATLAS analysis typically this is done by plugging in the upper (`1up') and lower (`1down') standard deviation values (pretending they were the nominal values entering the calculation) and observe the impact it has on a final quantity. The interpolation function transports this knowledge into the likelihood model, by scaling the nominal value $\nu_{scb}^0$ and at the same time applying a penalization $c_\alpha$ according to our modeling of the errors. The following illustrates this.
+This is useful to include systematic uncertainties. In a typical ATLAS analysis the effect of some standard deviation to a final to be calculated quantity is usually inferred at some step by plugging in the upper (`1up') or lower (`1down') standard deviation values (pretending they were the nominal values entering the calculation) and observe the impact on a final quantity. The interpolation function transports this knowledge into the likelihood model by scaling just like before the nominal value $\nu_{scb}^0$ and at the same time applying a penalization $c_\alpha$ according to our modeling of the errors. 
 
 In HistFactory there exists four of such interpolation functions. For those exist an identity operator 
 \begin{equation}
@@ -162,7 +165,7 @@ In HistFactory there exists four of such interpolation functions. For those exis
         0 ,& \text{additive modifier, } (\lambda).
     \end{cases}
 \end{equation}
-One of these interpolation function that scales the bin height linear over the known deviations $\eta_{-1}=\nu_{scb}^\mathrm{1down}$ and $\eta_{1}=\nu_{scb}^\mathrm{1up}$ is
+One example of these interpolation function that scales the bin height linear over the known deviations $\eta_{-1}=\nu_{scb}^\mathrm{1down}$ and $\eta_{1}=\nu_{scb}^\mathrm{1up}$ is
 \begin{equation}
     \eta_\mathrm{linear}(\alpha)=
     \begin{cases}
@@ -170,18 +173,18 @@ One of these interpolation function that scales the bin height linear over the k
         \alpha(\eta_0 - \eta_{-1}) ,& \alpha<0
     \end{cases}
 \end{equation}
-An illustration of this can be found in fig. \ref{fig:interp_func}(a). For the other ones the reader is referred to e.g. \citep{heinrich2019searches}. 
+This is illustrated in fig. \ref{fig:interp_func}(a). For the other ones the reader is referred to e.g. \citep{heinrich2019searches}. 
 \begin{figure}
     \centering
     \includegraphics[width=.8\textwidth]{interp_func.png}
         \caption[]{The four Interpolation functions $\eta(\alpha)$ for different up and down standard deviation values. For example in (a) the bin height will be scaled with a factor of 0.8 for an $\alpha=-1$ (1.2 for an $\alpha=1$). From \citep{cranmer2012histfactory}.}
     \label{fig:interp_func}    
 \end{figure}
-Remember $\alpha$ is the nuisance parameter and not the function $\eta(\alpha)$ and there is an associated constraint term $c_\alpha$ to each $\alpha$ that uses Gaussian and Poissonian modeling. The standard normal Gaussian  implementation is straightforward as the nuisance parameter is scaled to the standard deviation values as described before Gauss$=(\alpha \mid a, \sigma=1)$. 
+Remember $\alpha$ is the nuisance parameter and not the function $\eta(\alpha)$ and there is an associated constraint term $c_\alpha$ to each $\alpha$ that uses Gaussian and Poissonian modeling. The Guassian implementation is straightforward as the nuisance parameter is scaled to the standard deviation values as described before Gauss$=(\alpha \mid a, \sigma=1)$. 
 
-For a poissonian constraint to a multiplicative factor $\gamma_b$, with a nominal (most probable) value $\gamma_0=1$, we must scale the Poisson distribution with a factor $f$ so it reflects the original bin-height uncertainty $\sigma$. We basically need to multiply all parameters of the Poisson distribution with a factor f and then solve for the one with the desired uncertainty. Since the Variance of a Poissonian like eq. \ref{eq:poisson} is just the rate parameter $\lambda$ it follows
+For a poissonian constraint to a multiplicative factor $\gamma_b$, with a nominal (most probable) value $\gamma_0=1$, we must scale the Poisson distribution with a factor $f$ so it reflects the original bin-height uncertainty $\sigma$. We basically need to multiply all parameters of the Poisson distribution with a factor f and then solve for the one with the desired uncertainty. Since the variance of a Poissonian like eq. \ref{eq:poisson} is just the rate parameter $\lambda$ it follows
 \begin{equation}
-    \mathrm{Var}(\mathrm{Pois}(k=f\gamma_0,\lambda=f\gamma))=\lambda\stackrel{\gamma=\gamma_0}{=}f\gamma_0=(f\sigma)^2  \quad \rightarrow \quad f=(1/\sigma^2).
+    \mathrm{Var}\left[\mathrm{Pois}(k=f\gamma_0,\lambda=f\gamma)\right]=\lambda\;\stackrel{\gamma=\gamma_0}{=}\;f\gamma_0=(f\sigma)^2  \quad \rightarrow \quad f=(1/\sigma^2).
 \end{equation}
 This completes all the requirements needed for the creation of histfactory models. The different types of modifiers and their constraint terms are summarized in table \ref{tab:histfactory}.
 \begin{table}[]
