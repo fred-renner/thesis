@@ -1,4 +1,5 @@
 \documentclass[12pt,a4paper,openany,final,twoside,longbibliography,hidelinks]{book}
+\usepackage{acronym}
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -100,7 +101,7 @@
 \begin{document}
 
 \pagenumbering{gobble}
-\include{chapters/titlepage}
+\include{sections/titlepage}
 
 \newpage 
 \quad
@@ -108,7 +109,7 @@
 
 \newpage 
 \thispagestyle{empty}
-\include{chapters/abstract}
+\include{sections/abstract}
 
 \newpage
 \quad
@@ -122,8 +123,7 @@
 
 \newpage
 \quad
-\thispagestyle{empty}
-\include{chapters/abbreviations}
+% \thispagestyle{empty}
 
 
 
@@ -140,12 +140,14 @@
 %-------------------------------------------------------------
 
 
-% \include{chapters/introduction}
-\include{chapters/theory}
-\include{chapters/statistics}
-% \include{chapters/experiment}
+% \include{sections/introduction}
+\chapter{Theory}
+\include{theory/intro}
+% \include{sections/statistics}
+% \include{sections/experiment}
 
-
+\appendix
+\include{front_back_matter/acronyms}
 
 %-------------------------------------------------------------
 
@@ -157,7 +159,7 @@
     
 \cleardoublepage    
 \pagestyle{schluss}
-\include{chapters/selbststaendig}
+\include{sections/selbststaendig}
 
 
 \end{document}
