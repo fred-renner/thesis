@@ -1,15 +1,15 @@
-The \ac{sm} of Particle Physics is the current theory that describes three of the four fundamental forces, namely the electromagnetic, strong, and weak forces, with the exception of gravity. Over the last decades it has been probed with remarkable precision but although there are  observational phenomena that lie beyond its scope.
+\noindent The \ac{sm} of Particle Physics is the current theory that describes three of the four fundamental forces, namely the electromagnetic, strong, and weak forces, with the exception of gravity. Over the last decades it has been probed with remarkable precision but although there are  observational phenomena that lie beyond its scope.
 
-The SM is based on symmetry principles and is described by a lorentz-invariant \ac{qft}. This \ac{qft} is renormalizable and invariant under local gauge transformations belonging to the non-abelian gauge group
+The SM is based on symmetry principles and is described by a lorentz-invariant \ac{qft} that is renormalizable and invariant under local gauge transformations. This means that within the non-abelian gauge group
 \begin{equation}
     G = SU(3)_C \otimes SU(2)_L \otimes U(1)_Y,
 \end{equation}
-that leaves the equations of motions invariant under transformations within this group. $SU(3)_C$ is the special unitary group of rank 3 representing the color symmetry within \ac{qcd}, the \ac{qft} describing the strong interactions. $SU(2)_L \otimes U(1)_Y$ exhibits the unification of the weak and electromagnetic interaction into the electro-weak force of $SU(2)_L$ left-chiral fermions of the weak force and right-handed $U(1)_Y$ fermions with hypercharge $Y$ of the electromagnetic force described by Quantum Electrodynamics \ac{qed}.
+the equations of motions are invariant. $SU(3)_C$ is the special unitary group of rank 3 representing the color symmetry within \ac{qcd}, the \ac{qft} describing the strong interactions. $SU(2)_L \otimes U(1)_Y$ exhibits the unification of the weak and electromagnetic interaction into the electro-weak force of $SU(2)_L$ left-chiral fermions of the weak force and right-handed $U(1)_Y$ fermions with hypercharge $Y$ of the electromagnetic force described by Quantum Electrodynamics \ac{qed}.
 
-The following describes the particles of the \ac{sm} and gives a brief overview of the \ac{qft}'s used to describe aforementioned forces. The content of this chapter draws inspiration primarily from \citep{hollik2010quantum,griffiths2020introduction,thomson2013modern,zee2010quantum}. Natural units will be assumed everywhere $\hbar=c=1$.
+The following describes the particles of the \ac{sm} and gives a brief overview of the \ac{qft}'s used to describe aforementioned forces. The content of this chapter draws inspiration primarily from \citep{hollik2010quantum,griffiths2020introduction,thomson2013modern,zee2010quantum}. Natural units are assumed everywhere $\hbar=c=1$.
 
 
-\section{Particles in Standard Model}
+\section{Particles of the Standard Model}
 
 All currently known elementary particles are included in the \ac{sm} and can be organized as depicted in figure \ref{fig:sm}. This includes 12 fermions, that are particles of half-integer spin, 12 vector bosons with spin 1, and the Higgs boson, a scalar particle with spin 0.
 
@@ -35,17 +35,17 @@ The scalar Higgs particle has a unique role in the Standard model. As will be ex
 If not further specified the following always includes the anti-particles when referred to a species or a particular particle.
 
 \section{Quantum Field Theory}
-The number of particles is not conserved in e.g. in pair production. Heuristically, this can be understood by the uncertainty principle of quantum mechanics which states that energy can vary greatly on short time scales and by special relativity which relates energy to mass. This phenomenon and the desire to have a unified theory of quantum mechanics incorporating special relativity drove the development of quantum field theory.
+Elementary Particles can be created, transformed and vanish in all sorts of particle interactions.Quantum mechanics states that energy can vary greatly on short time scales via the uncertainty principle. Special relativity relates energy with mass allowing energy to manifest as massive particles. Though special relativity lacks a quantum mechanical description and in non-relativistic quantum mechanics the particle number is conserved. Neither of these descriptions is sufficient to fully describe the observations therefore a new theory - \ac{qft} - was developed.
 
-For a field description one assigns a quantity to some region in spacetime, e.g. $\phi(x,y,z,t)=\phi(x)$. Similar to the Lagrangian formalism in classical mechanics here a Lagrangian density in spacetime governs the dynamics of the system $\mathcal{L}(\phi_1,...,\phi_n)$. The generalized Euler-Lagrange equation of qft then give the according equations of motion for each field component $\phi_i$.
+For a field description some quantity $\phi(x,y,z,t)=\phi(x)$ is assigned to some region in spacetime $x$. Similar to the Lagrangian formalism in classical mechanics here a Lagrangian density in spacetime governs the dynamics of the system $\mathcal{L}(\phi_1,\dots,\phi_n)$. The generalized Euler-Lagrange equations of qft then give the according equations of motion for each field component $\phi_i$
 \begin{equation}
-    \partial_\mu \left(\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi_i)}\right)=\frac{\partial\mathcal{L}}{\partial \phi_i}
+    \partial_\mu \left(\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi_i)}\right)=\frac{\partial\mathcal{L}}{\partial \phi_i}.
 \end{equation}
-Fields in table \ref{tab:fields} are of interest for the \ac{sm}.
+This relation gives the equations of motion for the Lagrangians associated to fields which appear in the \ac{sm} and are summarized in \ref{tab:fields} table.
 \begin{table}
     \begin{center}
         \begin{tabular}{c|c|c}
-            particle           & field type                  & Lagrange                                                                                                     \\ [1ex]  \hline
+            particle           & field type      & Lagrange                                                                                                     \\ [1ex]  \hline
             spin-0 (scalar)    & scalar $\phi$   & $\mathcal{L}_\mathrm{Klein-Gordon}=\frac{1}{2} (\partial_\mu \phi )(\partial^\mu \phi)-\frac{m^2}{2}\phi^2 $ \\  [1.5ex]
             spin-1/2 (fermion) & spinor $\psi$   & $\mathcal{L}_\mathrm{Dirac}= \overline{\psi}(i \gamma^\mu \partial_\mu - m )\psi$                            \\  [1.5ex]
             spin-1 (boson)     & vector  $A_\mu$ & $\mathcal{L}_\mathrm{Proca}= -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} -\frac{m^2}{2} A_\mu A^\mu$                    \\  [2ex]
@@ -55,7 +55,7 @@ Fields in table \ref{tab:fields} are of interest for the \ac{sm}.
     \end{center}
 \end{table}
 
-The conventional strategy to describe particle dynamics is to start with a free field and treat the interactions of particles as a small perturbation to a chosen order. In the path integral formulation it reduces to integrals of the form \mbox{$\int D\phi e^{i\int d^4x L(\phi(\bm{x},t))}$}. Where $\int D\phi$ is the integral over all possible paths/ways a particle could take. Through back and forth expansions of the $e$ function the integral can be solved to a desired order of perturbation and the result is a probability \mbox{- theamplitude -} usually denoted with $\mathcal{M}$. Via this one can derive the Feynman rules and calculate cross sections.
+The conventional strategy to describe particle dynamics is to start with a free field and treat the interactions of particles as a small perturbation to a chosen order. In the path integral formulation it fundamentally reduces to integrals of the form \mbox{$\int D\phi e^{i\int d^4x L(\phi(\bm{x},t))}$}. Where $\int D\phi$ is the integral over all possible paths a particle could take. Through back and forth expansions of the $e$ function the integral can be solved to a desired order of perturbation and the result is a probability \mbox{- theamplitude -} usually denoted with $\mathcal{M}$. Via this one can derive the Feynman rules and calculate cross sections.
 
 The principle of local gauge invariance generates all the symmetries for the different forces and is inspired by gauge invariance from classical electrodynamics. In the following, this is explained for each of the forces.
 
@@ -69,12 +69,12 @@ This Lagrangian is invariant under a change of phase $\alpha$
 \begin{equation}
     \psi(x) \rightarrow  e^{-i \alpha}\psi(x).
 \end{equation}
-The requirement that this transformation also holds locally means that $\alpha$ now additionally depends on the point $x$ in spacetime $\alpha \rightarrow \alpha(x)$. Since this gives another term because of the derivative, the Lagrangian can be made invariant again by introducing a vector field $A_\mu$ and replacing the derivative $\partial_\mu$ by the covariant derivative $\partial_\mu$
+The requirement that this transformation also holds locally means that $\alpha$ now additionally depends on the point $x$ in spacetime $\alpha \rightarrow \alpha(x)$. Since this gives another term because of the derivative, the Lagrangian can be made invariant again by introducing a vector field $A_\mu$ and replacing the derivative $\partial_\mu$ by the covariant derivative $D_\mu$
 \begin{equation}
     \partial_\mu \rightarrow D_\mu = \partial_\mu + ie A_\mu(x),
     \label{eq:cov_diff}
 \end{equation}
-Thus, the new Lagrangian
+with $e$ the electron charge. Thus, the new Lagrangian
 \begin{equation}
     \mathcal{L} = \overline{\psi}(i \gamma^\mu D_\mu - m )\psi
     =
@@ -87,15 +87,104 @@ becomes invariant under the local gauge transformations
     \psi(x)  & \rightarrow  e^{-i \alpha(x)}\psi(x)                      \\
     A_\mu(x) & \xrightarrow{} A_\mu(x) -\frac{1}{e}\partial_\mu\alpha(x)
 \end{align}
-forming the electromagnetic $U(1)$ gauge group. This is also called the minimal substitution rule. This Lagrangian describes a fermion interacting with a vector field $A_\mu$ - the photon. A kinetic term for the vector field can be from the Proca Lagrangian in table \ref{tab:fields}. $F_{\mu\nu}$ is local gauge invariant whereas the $A_\mu A^\mu$ is not, which is why the gauge field is required to be massless. The full \ac{qed} lagrangian is then
+forming the electromagnetic $U(1)$ gauge group. This is also called the minimal substitution rule. This Lagrangian describes a fermion interacting with a vector field $A_\mu$ - the photon. A kinetic term for the vector field can be from the Proca Lagrangian in table \ref{tab:fields}. $F_{\mu\nu}$ is local gauge invariant whereas the $A_\mu A^\mu$ is not, which is why the gauge field is required to be massless. The full \ac{qed} lagrangian with coupling strength  then
 \begin{equation}
     \mathcal{L}_\mathrm{QED}
     =
     \underbrace{\overline{\psi}(i \gamma^\mu \partial_\mu - m )\psi}_{\mathcal{L}_\mathrm{Dirac} }
     +
     \underbrace{ e\overline{\psi} \gamma^\mu {\psi}A_\mu}_{\mathcal{L}_\mathrm{int}}
-    +
-    \underbrace{-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}}_{\mathcal{L}_\mathrm{Maxwell} }
+    -
+    \underbrace{\frac{1}{4}F_{\mu\nu}F^{\mu\nu}}_{\mathcal{L}_\mathrm{Maxwell} }.
+    \label{eq:l_qed}
 \end{equation}
 Saying that this symmetry for $\alpha(x)$ holds locally for all unitary $1\times1$  matrices $U(1)$ is a bit extravagant, but the formalism is extendable to higher orders as for the electroweak theory and \ac{qcd} case. It is called an abelian gauge group as any $1\times1$ matrix also commutes with itself.
 
+\section{Quantum Chromodynamics}
+
+Along the same lines as \ac{qed} is derived in section \ref{sec:qed}, the theory of the strong interactions \ac{qcd} is now a non-abelian gauge theory of the symmetry group $SU(3)$. The latter is generated by the $3\times 3$ Gellmann matrices $\lambda_a$ with $ a\in\{1,\mathellipsis,8\}$. The fundamental charge is now color and each quark is a triplet of the three color fermion fields $\Psi_k=(\psi_r,\psi_g,\psi_b)^T$ for all quark flavors $k$. Local gauge invariance of the Lagrangian
+\begin{equation}
+    \mathcal{L} =
+    \sum_k
+    \begin{pmatrix}
+        \overline{\psi}_r & \overline{\psi}_g & \overline{\psi}_b
+    \end{pmatrix}
+    (i \gamma^\mu \partial_\mu - m )
+    \begin{pmatrix}
+        \psi_r \\
+        \psi_g \\
+        \psi_b
+    \end{pmatrix}
+    =
+    \sum_k
+    \overline{\Psi}_k(i \gamma^\mu \partial_\mu - m )\Psi_k
+    \label{eq:dirac}
+\end{equation}
+can be achieved via the gauge transformations of the spinors
+\begin{equation}
+    \Psi_k(x) \rightarrow e^{i \alpha_a(x) \lambda_a/2} \Psi_k(x),\qquad \alpha\in\mathbb{R},\quad a\in\{1,\mathellipsis,8\},
+\end{equation}
+with $\alpha_a(x)$ a local phase and the index $a$ for the 8 gluons. Here and in the following  summation over equal indices $\alpha_a(x) \lambda_a=\sum_i \alpha_a(x) \lambda_a$ is assumed. As in \ac{qed} a covariant derivative is introduced
+\begin{equation}
+    D_\mu = \partial_\mu - i g_s \frac{\lambda_a}{2}G_\mu^a,
+\end{equation}
+involving the eight gluon vector fields $G_\mu^a$ and the coupling strength $g_s$, which is related to the strong coupling constant as
+\begin{equation}
+    \alpha_s=\frac{g_s^2}{4\pi}.
+\end{equation}
+Again self coupling terms are added
+\begin{equation}
+    G^a_{\mu\nu}=\partial_\mu G_\nu^a-\partial_\nu G_\mu^a+g_s f^a_{\beta\gamma}G^\beta_\mu G_\nu^\gamma, \qquad \text{with } [\lambda_a,\lambda_b]= i f_{ab}^c \lambda_c,
+\end{equation}
+to get the gauge invariant \ac{qcd} Lagrangian
+\begin{align}
+    {\mathcal {L}}_{\text{QCD}} & =\sum_k\overline{\Psi}_k\left( i \gamma^\mu D_\mu-m_k\right)\Psi_k-{\frac {1}{4}}G_{\mu \nu }^{a}G^{a\mu \nu}                                                                                    \\
+                                & =\sum_k{\overline{\Psi}_k}\left(i\gamma^\mu \partial_\mu-m_k\right)\Psi_k+ g_s{\overline{\Psi}_k}\gamma ^{\mu }\frac{ \lambda_a}{2} \Psi_k G_\mu^a - {\frac {1}{4}}G_{\mu \nu }^{a}G^{a\mu \nu}.
+    \label{eq:l_qcd}
+\end{align}
+This Lagrange consists of a kinetic term for each quark, an interaction term of the quarks with the gluons and gluon-gluon interactions giving vertices shown in \ref{fig:qcd_vertices}. This becomes clear when $G^a_{\mu\nu}$ is squared and also leads to cubic and quartic terms for the fields.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{gluon_gluon_interactions}
+    \caption[]{left: A quark interacting with a gluon. middle and right: triplet and quartic self coupling of gluons. Adopted from \citep{thomson2013modern}.}
+    \label{fig:qcd_vertices}
+\end{figure}
+
+\section{Renormalization}
+\begin{figure}
+    \centering
+    \includegraphics[width=1\textwidth]{qed_diagrams}
+    \caption[]{Higher order loop corrections in \ac{qed} schematically treated as one effective diagram. Adopted from \citep{thomson2013modern}.}
+    \label{fig:qed_diagrams}
+\end{figure}
+When trying to calculate amplitudes $\mathcal{M}$ of higher order diagrams in \ac{qed} like the second or third one in figure \ref{fig:qed_diagrams} it results in diverging integrals. These diagrams are also referred to as vacuum polarization as virtual particle-antiparticle pairs screen the actual charge of the electron $e_0$ like a dielectric medium in classical electrodynamics. The situation can be fixed by absorbing the appearing infinities into an effective charge/coupling $e(q^2)$ which is now a function of the squared four momentum $q^2$ at the virtual photon vertex shown schematically in figure \ref{fig:qed_diagrams}. For the diagram involving only one loop correction (the second one in figure \ref{fig:qed_diagrams}) it can be shown that for some measured coupling $e(q^2=\mu^2)$ the actual coupling $e(q^2)$ follows a scaling behavior that holds if $q^2$ and $\mu^2$ are larger than the electron mass \citep{thomson2013modern}. This so-called running coupling constant $e(q^2)$ reads in terms of the fine structure constant $\alpha(q^2)=e^2(q^2)/4\pi$,
+\begin{equation}
+    \alpha(q^2)=
+    \frac{\alpha(\mu^2)}
+    {1-\alpha(\mu)\frac{1}{3\pi}
+        \ln
+        \left(\frac{q^2}{\mu^2}\right)}.
+        \label{eq:qed_coupling}
+\end{equation}
+With increasing momentum transfer or viewed in a collision as particles getting closer to each other the coupling at the virtual photon vertex increases qualitatively as in figure.
+\begin{figure}
+    \centering
+    \includegraphics[width=.5\textwidth]{qed_scaling}
+        \caption[]{Behavior of equation \ref{eq:qed_coupling}, the running coupling constant of \ac{qed}.}
+    \label{fig:qed_scaling}    
+\end{figure}
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\textwidth]{qcd_diagrams}
+    \caption[]{Some higher order loop corrections in \ac{qcd}. Adopted from \citep{thomson2013modern}.}
+    \label{fig:qed_diagrams}
+\end{figure}
+Renormalization in \ac{qcd} can be derived similarly but also the quartic and triplet couplings exemplified in figure \ref{fig:qed_diagrams} need to be considered resulting in a scaling for the strong coupling constant
+\begin{equation}
+    \alpha_s(\mu_R^2)=\frac{12\pi}{(33-2n_f)\ln(\frac{\mu_R^2}{\Lambda^2_\text{QCD}})}.
+    \label{eq:theory:alphas}
+\end{equation}
+
+no particles with color charge
