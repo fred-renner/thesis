@@ -34,7 +34,7 @@ The scalar Higgs particle has a unique role in the Standard model. As will be ex
 
 If not further specified the following always includes the anti-particles when referred to a species or a particular particle.
 
-\section{Quantum Field Theory}
+\section{Quantum Field Theory}\label{sec:qft}
 Elementary Particles can be created, transformed and vanish in all sorts of particle interactions.Quantum mechanics states that energy can vary greatly on short time scales via the uncertainty principle. Special relativity relates energy with mass allowing energy to manifest as massive particles. Though special relativity lacks a quantum mechanical description and in non-relativistic quantum mechanics the particle number is conserved. Neither of these descriptions is sufficient to fully describe the observations therefore a new theory - \ac{qft} - was developed.
 
 For a field description some quantity $\phi(x,y,z,t)=\phi(x)$ is assigned to some region in spacetime $x$. Similar to the Lagrangian formalism in classical mechanics here a Lagrangian density in spacetime governs the dynamics of the system $\mathcal{L}(\phi_1,\dots,\phi_n)$. The generalized Euler-Lagrange equations of qft then give the according equations of motion for each field component $\phi_i$
@@ -55,7 +55,7 @@ This relation gives the equations of motion for the Lagrangians associated to fi
     \end{center}
 \end{table}
 
-The conventional strategy to describe particle dynamics is to start with a free field and treat the interactions of particles as a small perturbation to a chosen order. In the path integral formulation it fundamentally reduces to integrals of the form \mbox{$\int D\phi e^{i\int d^4x L(\phi(\bm{x},t))}$}. Where $\int D\phi$ is the integral over all possible paths a particle could take. Through back and forth expansions of the $e$ function the integral can be solved to a desired order of perturbation and the result is a probability \mbox{- theamplitude -} usually denoted with $\mathcal{M}$. Via this one can derive the Feynman rules and calculate cross sections.
+The conventional strategy to describe particle dynamics is to start with a free field and treat the interactions of particles as a small perturbation to a chosen order. In the path integral formulation it fundamentally reduces to integrals of the form \mbox{$\int D\phi e^{i\int d^4x L(\phi(\bm{x},t))}$}. Where $\int D\phi$ is the integral over all possible paths a particle could take. Through back and forth expansions of the $e$ function the integral can be solved to a desired order of perturbation and the result is a probability \mbox{- the amplitude -} usually denoted with $\mathcal{M}$. Via this one can derive the Feynman rules and calculate cross sections.
 
 The principle of local gauge invariance generates all the symmetries for the different forces and is inspired by gauge invariance from classical electrodynamics. In the following, this is explained for each of the forces.
 
@@ -157,7 +157,7 @@ This Lagrange consists of a kinetic term for each quark, an interaction term of 
     \caption[]{Higher order loop corrections in \ac{qed} schematically treated as one effective diagram. Adopted from \citep{thomson2013modern}.}
     \label{fig:qed_diagrams}
 \end{figure}
-When trying to calculate amplitudes $\mathcal{M}$ of higher order diagrams in \ac{qed} like the second or third one in figure \ref{fig:qed_diagrams} it results in diverging integrals. These diagrams are also referred to as vacuum polarization as virtual particle-antiparticle pairs screen the actual charge of the electron $e_0$ like a dielectric medium in classical electrodynamics. The situation can be fixed by absorbing the appearing infinities into an effective charge/coupling $e(q^2)$ which is now a function of the squared four momentum $q^2$ at the virtual photon vertex shown schematically in figure \ref{fig:qed_diagrams}. For the diagram involving only one loop correction (the second one in figure \ref{fig:qed_diagrams}) it can be shown that for some measured coupling $e(q^2=\mu^2)$ the actual coupling $e(q^2)$ follows a scaling behavior that holds if $q^2$ and $\mu^2$ are larger than the electron mass \citep{thomson2013modern}. This so-called running coupling constant $e(q^2)$ reads in terms of the fine structure constant $\alpha(q^2)=e^2(q^2)/4\pi$,
+When trying to calculate amplitudes $\mathcal{M}$ of higher order diagrams in \ac{qed} like the second or third one in figure \ref{fig:qed_diagrams} it results in diverging integrals. These diagrams are also referred to as vacuum polarization as virtual particle-antiparticle pairs screen the actual charge of the electron $e_0$ like a dielectric medium in classical electrodynamics. The situation can be fixed by absorbing the appearing infinities into an effective charge/coupling $e(q^2)$ which is now a function of the squared four momentum $q^2$ at the virtual photon vertex shown schematically in figure \ref{fig:qed_diagrams}. For the diagram involving only one loop correction (the second one in figure \ref{fig:qed_diagrams}) it can be shown that for some measured coupling $e(q^2=\mu^2)$ the actual coupling $e(q^2)$ follows a scaling behavior that holds if $q^2$ and $\mu^2$ are larger than the electron mass \citep{thomson2013modern}. The coupling "constant" is now a running coupling $e(q^2)$ and reads in terms of the fine structure constant $\alpha(q^2)=e^2(q^2)/4\pi$,
 \begin{equation}
     \alpha(q^2)=
     \frac{\alpha(\mu^2)}
@@ -166,14 +166,14 @@ When trying to calculate amplitudes $\mathcal{M}$ of higher order diagrams in \a
         \left(\frac{q^2}{\mu^2}\right)}.
         \label{eq:qed_coupling}
 \end{equation}
-With increasing momentum transfer or viewed in a collision as particles getting closer to each other the coupling at the virtual photon vertex increases qualitatively as in figure.
-\begin{figure}
+Therefore with increasing momentum transfer or viewed in a collision as particles getting closer to each other the coupling at the virtual photon vertex increases as can be seen qualitatively in figure \ref{fig:renorm_scaling}(a).
+\begin{figure} 
     \centering
-    \includegraphics[width=.5\textwidth]{qed_scaling}
-        \caption[]{Behavior of equation \ref{eq:qed_coupling}, the running coupling constant of \ac{qed}.}
-    \label{fig:qed_scaling}    
+        \subfigure[]{\includegraphics[width=.49\textwidth]{qed_scaling}}
+        \subfigure[]{\includegraphics[width=.49\textwidth]{qcd_scaling}} 
+\caption[]{Qualitative behavior of the running couplings for (\textbf{a}) \ac{qed} as of equation \ref{eq:qed_coupling} and (\textbf{b}) \ac{qcd} as of equation \ref{eq:qcd_coupling}.}
+\label{fig:renorm_scaling}    
 \end{figure}
-
 
 \begin{figure}
     \centering
@@ -181,10 +181,30 @@ With increasing momentum transfer or viewed in a collision as particles getting 
     \caption[]{Some higher order loop corrections in \ac{qcd}. Adopted from \citep{thomson2013modern}.}
     \label{fig:qed_diagrams}
 \end{figure}
-Renormalization in \ac{qcd} can be derived similarly but also the quartic and triplet couplings exemplified in figure \ref{fig:qed_diagrams} need to be considered resulting in a scaling for the strong coupling constant
+Renormalization in \ac{qcd} can be derived similarly but also the quartic and triplet couplings exemplified in figure \ref{fig:qed_diagrams} need to be considered resulting in a scaling for the strong coupling 
 \begin{equation}
-    \alpha_s(\mu_R^2)=\frac{12\pi}{(33-2n_f)\ln(\frac{\mu_R^2}{\Lambda^2_\text{QCD}})}.
-    \label{eq:theory:alphas}
+    % \alpha_s(\mu_R^2)=\frac{12\pi}{(33-2n_f)\ln(\frac{\mu_R^2}{\Lambda^2_\text{QCD}})}.
+    \alpha_S(q^2)=
+    \frac{\alpha_S(\mu^2)}
+    {1+B\alpha_S(\mu)
+        \ln
+        \left(\frac{q^2}{\mu^2}\right)}, \qquad \text{with } B=\frac{11N_c-2N_f}{12\pi}.    
+        \label{eq:qcd_coupling}
 \end{equation}
+For 3 color charges $N_c$ and 6 fermions in the \ac{sm}, $B$ is positive and the coupling becomes weaker for shorter scales or higher momentum transfer as can be seen in figure \ref{fig:renorm_scaling}(b).
 
-no particles with color charge
+The fine structure constant of \ac{qed} $\alpha(q^2\approx 0)\approx 1/137$ does not vary dramatically over the energy ranges of matter for particle physics as shown in figure \ref{fig:renorm_scaling_exp}(a).
+\begin{figure} 
+    \centering
+        \subfigure[]{\includegraphics[width=.47\textwidth]{qed_scaling_experiment}}\hspace{5mm}
+        \subfigure[]{\includegraphics[width=.47\textwidth]{qcd_scaling_experiment}} 
+\caption[]{Measurements of the running couplings for (\textbf{a}) \ac{qed} (note the inverted coupling on the y-axis) adopted from \citep{opal2004tests} and (\textbf{b}) \ac{qcd} adopted from \citep{particle2022review}.}
+\label{fig:renorm_scaling_exp}    
+\end{figure}
+Most importantly the running coupling of \ac{qed} does not disturb the perturbation ansatz that considers only the leading term as mentioned in section \ref{sec:qft} since developing about $\alpha\ll1$ remains small guaranteeing higher order terms in the perturbation series to vanish. This is not the case for \ac{qcd} where $\alpha_S$ at $q\approx\SI{1}{GeV}$ is of $\mathcal{O}(1)$ and perturbation theory breaks down for calculation on bound hadronic states and latter processes in hadronization. While perturbation theory is valid for $\alpha_S\approx 0.1$ which corresponds to $q\approx \SI{100}{GeV}$ in most cases higher order corrections must be considered in QCD calculations for processes that are of importance at the \ac{lhc}. 
+
+The behavior of the running coupling in \ac{qcd} is called asymptotic freedom, since the theory is free of asymptotics with increasing energy scale or decreasing distance. In turn, since the coupling increases with larger distances, this leads to color confinement, which means that colored particles can only be observed in bound states.
+
+\section{Electroweak Theory/Unification}
+
+% https://en.wikipedia.org/wiki/Weak_interaction

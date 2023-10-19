@@ -1,14 +1,17 @@
 import matplotlib.pyplot as plt
 import numpy as np
-plt.rcParams.update({'font.size': 18})
-import math
 
-x = np.linspace(1e-20, 1e-17, 100)
+
+plt.rcParams.update({"font.size": 18})
+
+# x = np.linspace(1e-20, 1e-17, 100)
+x = np.linspace(3, 10, 100)
 
 
 def f(x):
     alpha_0 = 1 / 137
-    result = alpha_0 / (1 - (alpha_0 * (1 / (3 * math.pi) * np.log(x ))))
+    # result = alpha_0 / (1 - (alpha_0 * (1 / (3 * math.pi) * np.log(x**2))))
+    result = 1/(1 / (1 - np.log(x)))
     return result
 
 
