@@ -35,13 +35,13 @@ The scalar Higgs particle has a unique role in the Standard model. A locally gau
 If not further specified the following always includes the anti-particles when referred to a species or a particular particle.
 
 \section{Quantum Field Theory}\label{sec:qft}
-Elementary Particles can be created, transformed and vanish in all sorts of particle interactions.Quantum mechanics states that energy can vary greatly on short time scales via the uncertainty principle. Special relativity relates energy with mass allowing energy to manifest as massive particles. Though special relativity lacks a quantum mechanical description and in non-relativistic quantum mechanics the particle number is conserved. Neither of these descriptions is sufficient to fully describe the observations therefore a new theory - \ac{qft} - was developed.
+Elementary Particles can be created, transformed and vanish in all sorts of particle interactions. Quantum mechanics states that energy can vary greatly on short time scales via the uncertainty principle. Special relativity relates energy with mass allowing energy to manifest as massive particles. Though special relativity lacks a quantum mechanical description and in non-relativistic quantum mechanics the particle number is conserved. Neither of these descriptions is sufficient to fully describe the observations therefore \ac{qft} was developed.
 
 For a field description some quantity $\phi(x,y,z,t)=\phi(x)$ is assigned to some region in spacetime $x$. Similar to the Lagrangian formalism in classical mechanics here a Lagrangian density in spacetime governs the dynamics of the system $\mathcal{L}(\phi_1,\dots,\phi_n)$. The generalized Euler-Lagrange equations of qft then give the according equations of motion for each field component $\phi_i$
 \begin{equation}
     \partial_\mu \left(\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi_i)}\right)=\frac{\partial\mathcal{L}}{\partial \phi_i}.
 \end{equation}
-This relation gives the equations of motion for the Lagrangians associated to fields which appear in the \ac{sm} and are summarized in \ref{tab:fields} table.
+This relation gives the equations of motion for the Lagrangian. Fields which appear in the \ac{sm} and their associated Lagrangian are summarized in \ref{tab:fields} table.
 \begin{table}
     \begin{center}
         \begin{tabular}{c|c|c}
@@ -55,7 +55,16 @@ This relation gives the equations of motion for the Lagrangians associated to fi
     \end{center}
 \end{table}
 
-The conventional strategy to describe particle dynamics is to start with a free field and treat the interactions of particles as a small perturbation to a chosen order. In the path integral formulation it fundamentally reduces to integrals of the form \mbox{$\int D\phi e^{i\int d^4x L(\phi(\bm{x},t))}$}. Where $\int D\phi$ is the integral over all possible paths a particle could take. Through back and forth expansions of the $e$ function the integral can be solved to a desired order of perturbation and the result is a probability \mbox{- the amplitude -} usually denoted with $\mathcal{M}$. Via this one can derive the Feynman rules and calculate cross sections.
+In \ac{qft} the conventional strategy to describe particle dynamics is to use a perturbation ansatz $\mathcal{L}=\mathcal{L}_0+\mathcal{L}_1$ where one knows the solution of $\mathcal{L}_0$ and adds a small perturbation $\mathcal{L}_1$. Herein the free field/kinetic part of the Lagrangian is \mbox{$\mathcal{L}_0=\frac{1}{2}[(\partial_\mu \phi)^2 - m^2\phi^2] $} and a small perturbation/potential term $\mathcal{L}_1=V(\phi)$ is added as some polyominal in $\phi$ that governs the interactions of particles. A term $J(x)\phi(x)$ needs to be added to excite the field or create/destroy particles so that the ansatz reads
+\begin{equation}
+    \mathcal{L}=\frac{1}{2}[(\partial_\mu \phi)^2 - m^2\phi^2]
+    -V(\phi) + J(x)\phi(x).
+\end{equation}
+In the path integral formulation of \ac{qft} the problem can be reduced to integrals of the form \mbox{$\int D\phi e^{i\int d^4x \mathcal{L}(\phi(\bm{x},t))}$}. Where $\int D\phi$ is the integral over all possible paths of the field. Usually $V(\phi)$ is just one anharmonic term with $\lambda\phi^4$ with coupling strength $\lambda$ and is expanded in $e$ to make the integral solvable
+\begin{equation}
+    e^{-V(\phi)}=e^{-\lambda\phi^4}=1-\lambda\phi^4+\frac{1}{2}\lambda^2\phi^8+\dots
+\end{equation}
+This only works if $\lambda$ is small. The result is a probability also called the amplitude usually denoted with $\mathcal{M}$. Via this one can derive the Feynman rules and calculate cross sections to a desired order of expansion.
 
 The principle of local gauge invariance generates all the symmetries for the different forces and is inspired by gauge invariance from classical electrodynamics. In the following, this is explained for each of the forces.
 
@@ -69,12 +78,12 @@ This Lagrangian is invariant under a change of phase $\alpha$
 \begin{equation}
     \psi(x) \rightarrow  e^{-i \alpha}\psi(x).
 \end{equation}
-The requirement that this transformation also holds locally means that $\alpha$ now additionally depends on the point $x$ in spacetime $\alpha \rightarrow \alpha(x)$. Since this gives another term because of the derivative, the Lagrangian can be made invariant again by introducing a vector field $A_\mu$ and replacing the derivative $\partial_\mu$ by the covariant derivative $D_\mu$
+The requirement that this transformation also holds locally means that $\alpha$ now additionally depends on the point $x$ in spacetime $\alpha \rightarrow \alpha(x)$. Since this gives another term because of the derivative, the Lagrangian can be made invariant again by introducing a vector field $A_\mu$ with a coupling of the size of the electron charge $e$ and replacing the derivative $\partial_\mu$ by the covariant derivative $D_\mu$
 \begin{equation}
-    \partial_\mu \rightarrow D_\mu = \partial_\mu + ie A_\mu(x),
+    \partial_\mu \rightarrow D_\mu = \partial_\mu + ie A_\mu.
     \label{eq:cov_diff}
 \end{equation}
-with $e$ the electron charge. Thus, the new Lagrangian
+Thus, the new Lagrangian
 \begin{equation}
     \mathcal{L} = \overline{\psi}(i \gamma^\mu D_\mu - m )\psi
     =
@@ -87,7 +96,7 @@ becomes invariant under the local gauge transformations
     \psi(x)  & \rightarrow  e^{-i \alpha(x)}\psi(x)                      \\
     A_\mu(x) & \xrightarrow{} A_\mu(x) -\frac{1}{e}\partial_\mu\alpha(x)
 \end{align}
-forming the electromagnetic $U(1)$ gauge group. This is also called the minimal substitution rule. This Lagrangian describes a fermion interacting with a vector field $A_\mu$ - the photon. A kinetic term for the vector field can be from the Proca Lagrangian in table \ref{tab:fields}. $F_{\mu\nu}$ is local gauge invariant whereas the $A_\mu A^\mu$ is not, which is why the gauge field is required to be massless. The full \ac{qed} lagrangian with coupling strength  then
+forming the electromagnetic $U(1)_{EM}$ gauge group. This is also called the minimal substitution rule. This Lagrangian describes a fermion interacting with a vector field $A_\mu$ - the photon. A kinetic term for the vector field can be from the Proca Lagrangian in table \ref{tab:fields}. $F_{\mu\nu}$ is local gauge invariant whereas the $A_\mu A^\mu$ is not, which is why the gauge field is required to be massless. The full \ac{qed} lagrangian with coupling strength  then
 \begin{equation}
     \mathcal{L}_\mathrm{QED}
     =
@@ -199,7 +208,7 @@ The fine structure constant of \ac{qed} $\alpha(q^2\approx 0)\approx 1/137$ does
     \caption[]{Measurements of the running couplings for (\textbf{a}) \ac{qed} (note the inverted coupling on the y-axis) adopted from \citep{opal2004tests} and (\textbf{b}) \ac{qcd} adopted from \citep{particle2022review}.}
     \label{fig:renorm_scaling_exp}
 \end{figure}
-Most importantly the running coupling of \ac{qed} does not disturb the perturbation ansatz since  developing about $\alpha\ll1$ makes the perturbation series vanish so quickly that the leading term is sufficient for calculations. This is not the case for \ac{qcd} where $\alpha_S$ at $q\approx\SI{1}{GeV}$ is of $\mathcal{O}(1)$ and perturbation theory breaks down for calculations on bound hadronic states and latter processes in hadronization. While perturbation theory for \ac{qcd} remains valid for $\alpha_S\approx 0.1$ which corresponds to $q\approx \SI{100}{GeV}$ in basically all processes that are of interest at the \ac{lhc} higher order corrections must be considered in QCD calculations.
+Most importantly the running coupling of \ac{qed} does not disturb the perturbation ansatz sketched out in section \ref{sec:qft} since $\alpha\ll1$. This is not the case for \ac{qcd} where $\alpha_S$ at $q\approx\SI{1}{GeV}$ is of $\mathcal{O}(1)$ and perturbation theory breaks down for calculations on bound hadronic states and latter processes in hadronization. While perturbation theory for \ac{qcd} remains valid for $\alpha_S\approx 0.1$ which corresponds to $q\approx \SI{100}{GeV}$ in basically all processes that are of interest at the \ac{lhc} higher order corrections must be considered in QCD calculations.
 
 The behavior of the running coupling in \ac{qcd} is called asymptotic freedom, since the theory is free of asymptotics with increasing energy scale or decreasing distance. In turn, since the coupling increases with larger distances, this leads to color confinement, which means that colored particles can only be observed in bound states.
 
@@ -233,6 +242,7 @@ with weak isospin $I=1/2$, with the third component $I_3=\pm1/2$ for the upper a
 with $I=0$. The relation between the electric charge of the particle and these quantum numbers is governed by the Gell-Mann-Nishijima Formula $Q=I_3+Y/2$. The electroweak Lagrangian
 \begin{equation}
     \mathcal{L}_\mathrm{EW} = \mathcal{L}_\mathrm{fermions}+\mathcal{L}_\mathrm{gauge}+\mathcal{L}_\mathrm{Higgs}+\mathcal{L}_\mathrm{Yukawa},
+    \label{eq:L_EW}
 \end{equation}
 is then composed of four basic terms. Following the same steps as for \ac{qcd} and \ac{qed} the Lagrangian can be rendered gauge invariant by introducing a covariant derivative and gauge fields that are dictated by the group symmetry.
 
@@ -252,13 +262,13 @@ These are not helicity eigenstates but rather $\psi_{L,R}$ become $\psi$, if $\p
     \end{pmatrix},
     \quad \psi_{R\xi}^j,
 \end{equation}
-with $j$ running over the doublets from equation \ref{eq:weak_doublets} and $\xi=+$ for u-type fermions and $\xi=+$ for d-type fermions.
+with $j$ running over the doublets from equation \ref{eq:weak_doublets} and $\xi=+$ for u-type fermions and $\xi=-$ for d-type fermions.
 The covariant derivative is
 \begin{align}
-    D_\mu^L & =\partial_\mu- i g_2 \frac{{\sigma}_a}{2}W_\mu^a+i g_1\frac{Y}{2}B_\mu, \\
+    D_\mu^L & =\partial_\mu- i g_2 \frac{{\sigma}_a}{2}W_\mu^a+i g_1\frac{Y}{2}B_\mu, \label{eq:cov_diff_L} \\
     D_\mu^R & =\partial_\mu+ i g_1\frac{Y}{2}B_\mu,
 \end{align}
-so that the fermionic part of the Lagrangian becomes
+with coupling $g_2$ and $g_1$ to the vector fields and $\sigma_a$ for the corresponding Pauli matrix, so that the fermionic part of the Lagrangian becomes
 \begin{equation}
     \mathcal {L}_\text{fermions} = \sum_j\overline{\psi}^j_L i \gamma^\mu D_\mu^L\psi_L^j+\sum_{j,\xi}\overline{\psi}^j_{R\xi} i \gamma^\mu D_\mu^R\psi_{R\xi}^j.
     \label{eq:L_fermion}
@@ -274,11 +284,115 @@ with $g_2$ the weak coupling constant and $\epsilon_{abc}$ the totally asymmetri
 \begin{equation}
     \mathcal {L}_\text{gauge} = -\frac{1}{4} W_{\mu\nu}^a W^{\mu\nu,a} - \frac{1}{4}B_{\mu\nu}B^{\mu\nu}.
 \end{equation}
-At this point the gauge fields $W^a_\mu$ are still massless because they would still break the gauge symmetry. To incorporate masses into the Lagrangian this electroweak symmetry can be broken down by the Higgs mechanism.
+At this point the gauge fields $W^a_\mu$ are still massless because they would break the gauge symmetry. Masses can be incorporated into the Lagrangian with the Higgs mechanism explained in section \ref{sec:higgs_mechanism}.
 
 \section{Higgs mechanism}\label{sec:higgs_mechanism}
 
-The Higgs mechanism breaks down the $SU(2)_L \otimes U(1)_Y$ into $U(1)_{EM}$ which is called \ac{ewsb}. The \ac{sm} Higgs is a single isospin doublet of complex scalar fields
+In the previous sections, it was shown that the principle of local gauge invariance applied to the free Dirac Lagrangian can generate all the dynamics for a given interaction. However, this assumes that the accompanying gauge boson vector fields are massless, which is not the case for the weak interactions. The Higgs mechanism adds a field to the Lagrangian that provides mass terms for the vector bosons and fermions while preserving the principle of local gauge invariance. The simplest way to achieve this is to introduce a complex scalar field
+\begin{equation}
+    \phi (x)=\frac{1}{\sqrt{2}}(\phi_1(x)+i\phi_2(x))
+\end{equation}
+so that a Lagrangian with a kinetic term $T(\phi)$ and a potential $V(\phi)$ with parameters $\mu$ and $\lambda$ can be constructed as
+\begin{equation}
+    \mathcal{L}=T(\phi)-V(\phi)=
+    \left[\left(\partial_\mu\phi\right)^* (\partial^\mu\phi)\right]
+    -\left[
+        -\mu^2(\phi^*\phi)+\lambda(\phi^*\phi)^2
+        \right].
+\end{equation}
+To make this Lagrangian locally gauge invariant the transformation steps from section \ref{sec:qed} on \ac{qed} can be followed. Again by replacing the derivative with the covariant derivative with some vector field $B_\mu$ and coupling $g$
+\begin{equation}
+    \partial_\mu \rightarrow D_\mu = \partial_\mu + ig B_\mu.
+\end{equation}
+The resulting Lagrangian can be made locally gauge invariant with the transformations
+\begin{align}
+    \phi(x)  & \rightarrow  e^{-i \alpha(x)}\phi(x),                      \\
+    B_\mu(x) & \xrightarrow{} B_\mu(x) -\partial_\mu\alpha(x).
+\end{align}
+
+The lowest energy state of a free field theory is the vacuum state and therefore its eigenvalue $v$ is also called \ac{vev}. It is the one that minimizes the potential $V(\phi)$
+\begin{equation}
+    v =
+    \begin{cases}
+        0                                                     & \lambda>0, \mu^2<0 \\
+        \sqrt{\phi_1^2+\phi_2^2}=\sqrt{\frac{\mu^2}{\lambda}} & \lambda>0, \mu^2>0
+    \end{cases}
+\end{equation}
+and is either 0 or forms an infinite set of minima as illustrated in figure \ref{fig:higgs_potential} by the dashed circle.
+\begin{figure}
+    \centering
+    \includegraphics[width=.8\textwidth]{higgs_potential}
+    \caption[]{Potential $V(\phi)$ (a) for $\lambda>0$ and $\mu^2<0$ and (b) for values $\lambda>0$ and $\mu^2>0$. Adopted from \citep{thomson2013modern}.}
+    \label{fig:higgs_potential}
+\end{figure}
+
+The perturbation ansatz sketched out in section \ref{sec:qft} considers perturbations around the ground state. Thus for the ansatz to work with the $\mu^2>0$ case new field variables $eta(x)$ and $\xi$ can be introduced so they can be perturbed about the ground state
+\begin{equation}
+    \phi_1(x)=v+\eta(x),\quad \phi_2=\xi.
+\end{equation}
+Therefore the physical vacuum state spontaneously breaks the symmetry of the Lagrangian. Plugging this into the Lagrangian already gives a mass term to a vector boson. The predictions of the Lagrangian do not depend on the choice of the gauge. When choosing it to be $\alpha(x)=-\xi(x)/(gv)$, also called unitary guage, the $\xi$ field can be eliminated entirely so the complex scalar field only depends on the \ac{vev} and $\eta(x)$ becomes the physical Higgs field $h(x)$
+\begin{equation}
+    \phi(x)=\frac{1}{\sqrt{2}}(v+\eta(x)+i\xi(x)) 
+    \stackrel{\text{unitary gauge}}{=} 
+    \frac{1}{\sqrt{2}}(v+h(x)).
+\end{equation}
+The final Lagrangian then is
+so the final Lagrangian becomes
+
+
+\red{ gauge from griffiths better, beacuse exact}
+
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=.8\textwidth]{higgs_couplings}
+    \caption[]{Higgs interaction terms arising from a local the Higgs mechanism for a local $U(1)$ gauge symmetry. Adopted from \citep{thomson2013modern}.}
+    \label{fig:higgs_couplings}
+\end{figure}
+
+
+
+
+
+
+
+physical predications of the theory are unchanged by
+the gauge transformation
+
+
+move L into vev for perturbation ansatz, also needed to get mass term? true symmetry concealed by picking a particular ground state. both L represent the same physical system as the equations of motion
+
+
+
+show L
+
+choose a particular gauge
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+breaks down the $SU(2)_L \otimes U(1)_Y$ symmetry while maintaining the electromagnetic $U(1)_{EM}$ symmetry which is also called \ac{ewsb} and allows mass terms for the gauge bosons of the electroweak Lagrangian. The \ac{sm} Higgs field is a single isospin doublet of complex scalar fields
 \begin{equation}
     \phi(x)=
     \begin{pmatrix}
@@ -288,26 +402,31 @@ The Higgs mechanism breaks down the $SU(2)_L \otimes U(1)_Y$ into $U(1)_{EM}$ wh
     =
     \begin{pmatrix}
         \phi_1 (x)+i \phi_2 (x) \\
-        \phi_3 (x)+i \phi_4 (x)
+        \phi_3 (x)+i \phi_4 (x),
     \end{pmatrix}
 \end{equation}
-again with a covariant derivative
+with hyperchage $Y=1$ so that the covariant derivative from equation \ref{eq:cov_diff_L} reads
 \begin{equation}
-    D_\mu=\partial_\mu- i g_2\frac{{\sigma}_a}{2}W_\mu^a+ i\frac{g_1}{2}B_\mu,
+    D_\mu=\partial_\mu- i g_2\frac{{\sigma}_a}{2}W_\mu^a+ i\frac{g_1}{2}B_\mu.
 \end{equation}
-giving the Higgs term for the electroweak Lagrangian
+\subsubsection*{Higgs term}
+The Higgs term for the electroweak Lagrangian in equation \ref{eq:L_EW} then is
 \begin{equation}
-    \mathcal{L}_\text{Higgs}= \left(D_\mu\phi\right)^\dagger D^\mu\phi-V(\phi),
+    \mathcal{L}_\text{Higgs}= \left(D_\mu\phi\right)^\dagger (D^\mu\phi)-V(\phi),
     \label{eq:L_higgs}
 \end{equation}
 with the Higgs potential
 \begin{equation}
-    V(\phi) = -\mu^2\phi^\dagger\phi+\frac{\lambda}{4}\left(\phi^\dagger\phi\right)^2,
+    V(\phi) = -\mu^2\phi^\dagger\phi+\frac{\lambda}{4}\left(\phi^\dagger\phi\right)^2.
     \label{eq:Higgs_V}
 \end{equation}
+
+the choice is such that
+
+
 containing parameters $\mu$ for the Higgs mass and $\lambda$ for the strength of the Higgs fields self-interaction.
 
-\subsubsection*{Higgs term}
+
 
 \subsubsection*{Yukawa term}
 
