@@ -48,7 +48,7 @@ This relation gives the equations of motion for the Lagrangian. Fields which app
             particle           & field type      & Lagrange                                                                                                     \\ [1ex]  \hline
             spin-0 (scalar)    & scalar $\phi$   & $\mathcal{L}_\mathrm{Klein-Gordon}=\frac{1}{2} (\partial_\mu \phi )(\partial^\mu \phi)-\frac{m^2}{2}\phi^2 $ \\  [1.5ex]
             spin-1/2 (fermion) & spinor $\psi$   & $\mathcal{L}_\mathrm{Dirac}= \overline{\psi}(i \gamma^\mu \partial_\mu - m )\psi$                            \\  [1.5ex]
-            spin-1 (boson)     & vector  $A_\mu$ & $\mathcal{L}_\mathrm{Proca}= -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} -\frac{m^2}{2} A_\mu A^\mu$                    \\  [2ex]
+            spin-1 (boson)     & vector  $A_\mu$ & $\mathcal{L}_\mathrm{Proca}= -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} +\frac{m^2}{2} A_\mu A^\mu$                    \\  [2ex]
         \end{tabular}
         \caption{Quantum fields relevant for the \ac{sm}. With $F_{\mu\nu}=\partial_\mu A_\nu - \partial_\nu A_\mu$ the electromagnetic field strength tensor.}
         \label{tab:fields}
@@ -288,7 +288,7 @@ At this point the gauge fields $W^a_\mu$ are still massless because they would b
 
 \section{Higgs mechanism}\label{sec:higgs_mechanism}
 
-In the previous sections, it was shown that the principle of local gauge invariance applied to the free Dirac Lagrangian can generate all the dynamics for a given interaction. However, this assumes that the accompanying gauge boson vector fields are massless, which is not the case for the weak interactions. The Higgs mechanism adds a field to the Lagrangian that provides mass terms for the vector bosons and fermions while preserving the principle of local gauge invariance. The simplest way to achieve this is to introduce a complex scalar field
+In the previous sections, it was shown that the principle of local gauge invariance applied to the free Dirac Lagrangian can generate all the dynamics for a given interaction. However, this assumes that the accompanying gauge boson vector fields are massless, which is not the case for the weak interactions. The Higgs mechanism adds a field to the Lagrangian that provides mass terms for the vector bosons and fermions while preserving the principle of local gauge invariance. A way to achieve this is to introduce a complex scalar field
 \begin{equation}
     \phi (x)=\frac{1}{\sqrt{2}}(\phi_1(x)+i\phi_2(x))
 \end{equation}
@@ -306,16 +306,15 @@ To make this Lagrangian locally gauge invariant the transformation steps from se
 \end{equation}
 The resulting Lagrangian can be made locally gauge invariant with the transformations
 \begin{align}
-    \phi(x)  & \rightarrow  e^{-i \alpha(x)}\phi(x),                      \\
+    \phi(x)  & \rightarrow  e^{-i \alpha(x)}\phi(x), \label{eq:scalar_local_gauge} \\
     B_\mu(x) & \xrightarrow{} B_\mu(x) -\partial_\mu\alpha(x).
 \end{align}
-
 The lowest energy state of a free field theory is the vacuum state and therefore its eigenvalue $v$ is also called \ac{vev}. It is the one that minimizes the potential $V(\phi)$
 \begin{equation}
     v =
     \begin{cases}
         0                                                     & \lambda>0, \mu^2<0 \\
-        \sqrt{\phi_1^2+\phi_2^2}=\sqrt{\frac{\mu^2}{\lambda}} & \lambda>0, \mu^2>0
+        \sqrt{\phi_1^2+\phi_2^2}=\sqrt{\frac{\mu^2}{\lambda}} & \lambda>0, \mu^2>0,
     \end{cases}
 \end{equation}
 and is either 0 or forms an infinite set of minima as illustrated in figure \ref{fig:higgs_potential} by the dashed circle.
@@ -326,73 +325,40 @@ and is either 0 or forms an infinite set of minima as illustrated in figure \ref
     \label{fig:higgs_potential}
 \end{figure}
 
-The perturbation ansatz sketched out in section \ref{sec:qft} considers perturbations around the ground state. Thus for the ansatz to work with the $\mu^2>0$ case new field variables $eta(x)$ and $\xi$ can be introduced so they can be perturbed about the ground state
+The perturbation ansatz sketched out in section \ref{sec:qft} considers perturbations around the ground state. Thus for the ansatz to work with the $\mu^2>0$ case new field variables $\eta(x)$ and $\xi$ can be introduced so the perturbation calculus can be applied about the ground state
 \begin{equation}
     \phi_1(x)=v+\eta(x),\quad \phi_2=\xi.
 \end{equation}
-Therefore the physical vacuum state spontaneously breaks the symmetry of the Lagrangian. Plugging this into the Lagrangian already gives a mass term to a vector boson. The predictions of the Lagrangian do not depend on the choice of the gauge. When choosing it to be $\alpha(x)=-\xi(x)/(gv)$, also called unitary guage, the $\xi$ field can be eliminated entirely so the complex scalar field only depends on the \ac{vev} and $\eta(x)$ becomes the physical Higgs field $h(x)$
+Tthe physical vacuum state spontaneously breaks the symmetry of the Lagrangian. Furthermore the physical predictions of the Lagrangian do not depend on the choice of the gauge it can be chosen in a way that it eliminates the field $\xi$. In particular if $\alpha(x)=-\xi(x)/(gv)$ it can make the transformation from equation \ref{eq:scalar_local_gauge} unitary $UU^\dagger=1$ when expressed to first order in the fields. Moreover $\eta(x)$ can then be reinterpreted as the physical Higgs field $h(x)$
 \begin{equation}
-    \phi(x)=\frac{1}{\sqrt{2}}(v+\eta(x)+i\xi(x)) 
-    \stackrel{\text{unitary gauge}}{=} 
+    \phi(x)  \rightarrow  e^{-i \alpha(x)}\frac{1}{\sqrt{2}}(v+\eta(x)+i\xi(x))
+    \approx
+    \frac{1}{\sqrt{2}}e^{-i \frac{\xi(x)}{gv}}[v+\eta(x)]e^{i\frac{\xi(x)}{gv}}
+    =
     \frac{1}{\sqrt{2}}(v+h(x)).
 \end{equation}
-The final Lagrangian then is
-so the final Lagrangian becomes
-
-
-\red{ gauge from griffiths better, beacuse exact}
-
-
-
+The written out Lagrangian except for constants is then
+\begin{align}
+    \mathcal{L}=&
+    \underbrace{\frac{1}{2}(\partial_\mu h)(\partial^\mu h)-\lambda v^2 h^2}_{\text{massive h scalar}}
+    -
+    \underbrace{\frac{1}{4}F_{\mu\nu}F^{\mu\nu} -\frac{1}{2}g^2v^2 B_\mu B^\mu}_{\text{massive boson}}
+    \nonumber 
+    \\
+    &+ \underbrace{g^2vB_\mu B^\mu h+\frac{1}{2}g^2 B_\mu B^\mu h^2}_{\text{h,B interactions}}
+    -
+    \underbrace{\lambda v h^3 -\frac{1}{4}\lambda h^4}_{\text{h self-interactions}}
+\end{align}
+and describes a massive scalar particle, a massive boson, interactions between the scalar and boson and as well interactions of the scalar itself depicted in figure \ref{fig:higgs_couplings}.
 \begin{figure}
     \centering
     \includegraphics[width=.8\textwidth]{higgs_couplings}
-    \caption[]{Higgs interaction terms arising from a local the Higgs mechanism for a local $U(1)$ gauge symmetry. Adopted from \citep{thomson2013modern}.}
+    \caption[]{Higgs self interactions for a local $U(1)$ gauge symmetry. Adopted from \citep{thomson2013modern}.}
     \label{fig:higgs_couplings}
 \end{figure}
 
-
-
-
-
-
-
-physical predications of the theory are unchanged by
-the gauge transformation
-
-
-move L into vev for perturbation ansatz, also needed to get mass term? true symmetry concealed by picking a particular ground state. both L represent the same physical system as the equations of motion
-
-
-
-show L
-
-choose a particular gauge
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-breaks down the $SU(2)_L \otimes U(1)_Y$ symmetry while maintaining the electromagnetic $U(1)_{EM}$ symmetry which is also called \ac{ewsb} and allows mass terms for the gauge bosons of the electroweak Lagrangian. The \ac{sm} Higgs field is a single isospin doublet of complex scalar fields
+\subsection*{The \ac{sm} Higgs} 
+For the electroweak Lagrangian a Higgs mechanism needs to breaks down the $SU(2)_L \otimes U(1)_Y$ symmetry while maintaining the electromagnetic $U(1)_{EM}$ symmetry which is also called \ac{ewsb}. Thus the \ac{sm} Higgs field is a single isospin doublet of complex scalar fields
 \begin{equation}
     \phi(x)=
     \begin{pmatrix}
@@ -409,6 +375,7 @@ with hyperchage $Y=1$ so that the covariant derivative from equation \ref{eq:cov
 \begin{equation}
     D_\mu=\partial_\mu- i g_2\frac{{\sigma}_a}{2}W_\mu^a+ i\frac{g_1}{2}B_\mu.
 \end{equation}
+
 \subsubsection*{Higgs term}
 The Higgs term for the electroweak Lagrangian in equation \ref{eq:L_EW} then is
 \begin{equation}
@@ -421,12 +388,8 @@ with the Higgs potential
     \label{eq:Higgs_V}
 \end{equation}
 
-the choice is such that
 
-
-containing parameters $\mu$ for the Higgs mass and $\lambda$ for the strength of the Higgs fields self-interaction.
-
-
+Since this equation was verifiable before the it was a compelling argument for the Higgs to exist.
 
 \subsubsection*{Yukawa term}
 
