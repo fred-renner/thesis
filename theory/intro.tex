@@ -521,8 +521,8 @@ Fermion masses can be incorporated gauge invariant into the electroweak Lagrangi
         \phi^+ \\
         \phi^0
     \end{pmatrix}
-    e_R                                                                                                                        \\
-                           & \phantom{-\;}-G_d
+    e_R                                                                                                                                                                \\
+                                            & \phantom{-\;}-G_d
     \begin{pmatrix}
         \overline{u} & \overline{d} \\
     \end{pmatrix}_L
@@ -530,8 +530,8 @@ Fermion masses can be incorporated gauge invariant into the electroweak Lagrangi
         \phi^+ \\
         \phi^0
     \end{pmatrix}
-    d_R                                                                                                                        \\
-                           & \phantom{-\;}-G_u
+    d_R                                                                                                                                                                \\
+                                            & \phantom{-\;}-G_u
     \begin{pmatrix}
         \overline{u} & \overline{d} \\
     \end{pmatrix}_L
@@ -539,20 +539,54 @@ Fermion masses can be incorporated gauge invariant into the electroweak Lagrangi
         \phi^{0*} \\
         -\phi^-
     \end{pmatrix}
-    u_R                                                                                                                        \\
-                           & \phantom{-\;} +h.c.                                                                               \\
-                           & = -G_e \overline{L}_L \phi e_R -G_d \overline{Q}_L \phi d_R -G_u \overline{L}_L \phi_c e_R + h.c.
+    u_R                                                                                                                                                                \\
+                                            & \phantom{-\;} +h.c.                                                                                                      \\
+                                            & = -G_e \overline{L}_L \phi e_R -G_d \overline{Q}_L \phi d_R -G_u \overline{Q}_L \phi_c e_R + h.c. \label{eq:L_Y_one_gen}
 \end{align}
-with Yukawa coupling constant $G_e,G_d,G_u$ and the charge conjugated Higgs field $\phi_c=i\sigma_2\phi$. The latter can be used because it transforms just like the Higgs field and therefore leaves the Lagrangian gauge invariant. In the unitary gauge of equation \ref{eq:unitary_gauge} the terms become interpretable as mass terms that have the desired form of equation \ref{eq:yukawa_mass_term} but are now introduced gauge invariant and read e.g. for the electron
+with Yukawa coupling constant $G_e,G_d,G_u$ and the charge conjugated Higgs field $\phi_c=i\sigma_2\phi$. The latter can be used because it transforms just like the Higgs field and therefore leaves the Lagrangian gauge invariant. In the unitary gauge of equation \ref{eq:unitary_gauge} mass terms have the desired form of equation \ref{eq:yukawa_mass_term} but are now introduced gauge invariant and read e.g. for the electron
 \begin{equation}
     \mathcal{L}_\mathrm{Y}^e=\frac{-G_e}{\sqrt{2}} v (\overline{e}_L e_R+\overline{e}_R e_L)+\frac{-G_e}{\sqrt{2}} h (\overline{e}_L e_R+\overline{e}_R e_L).
 \end{equation}
-The mass of fermion $f$ is therefore 
+The mass of a fermion $f$ is therefore
 \begin{equation}
-    m_f=G_f\frac{v}{\sqrt{2}}
+    m_f=G_f\frac{v}{\sqrt{2}},
 \end{equation}
 so that the full Yukawa Lagrangian can be written as
 \begin{equation}
-    \mathcal{L}_\mathrm{Yukawa}=-\sum_f m_f\overline{\psi}_F \psi_f -\sum_f \frac{m_f}{v}\overline{\psi}_f \psi_f h.
+    \mathcal{L}_\mathrm{Yukawa}=-\sum_f m_f\overline{\psi}_f \psi_f -\sum_f \frac{m_f}{v}\overline{\psi}_f \psi_f h.
 \end{equation}
-Consequently the Higgs couples to fermions proportional to their mass.
+Consequently the Higgs couples to fermions proportional to their mass. In this form the spinors $\psi_f$ correspond to their mass eigenstates. Since physically observed states are mixed states of the mass eigenstates for the charged weak interactions the formalism can be extended by making the Yukawa couplings $3\times 3$ matrices $G_u=G_{ij}^d$ with $i=u,c,t$ going over up type quarks and $j=d,s,b$ over down type quarks so that the quark part of the Yukawa Lagrangian of equation \ref{eq:L_Y_one_gen} becomes
+\begin{equation}
+    \mathcal{L}_\mathrm{Y}^{\text{quarks}} =
+    -G_{ij}^d \overline{Q}_L^i \phi d_R^j -G_{ij}^u \overline{Q}_L^i \phi_c e_R^j + h.c.
+\end{equation}
+The $G_{ij}$ matrices mix the mass eigenstates and can be diagonalized with four unitary matrices $V_{L,R}^{u,d}$
+\begin{equation}
+    \Tilde{u}^i_{L,R}=(V^u_{L,R})_{ik}u^k_{L,R}, \quad \Tilde{d}^i_{L,R}=(V^d_{L,R})_{ik}u^k_{L,R}.
+\end{equation}
+With the identity $V_L^uV_L^{d\dagger}\equiv V_\mathrm{CKM}$ the quark mixing matrix also called \ac{ckm} matrix of the physically observed states are
+\begin{equation}
+    \begin{pmatrix}
+        d' \\
+        s' \\
+        b' \\
+    \end{pmatrix}
+    =V_\mathrm{CKM}\begin{pmatrix}
+        d \\
+        s \\
+        b \\
+    \end{pmatrix}=
+    \begin{pmatrix}
+        V_{ud} & V_{us} & V_{ub} \\
+        V_{cd} & V_{cs} & V_{cb} \\
+        V_{td} & V_{ts} & V_{tb} \\
+    \end{pmatrix}
+    \begin{pmatrix}
+        d \\
+        s \\
+        b \\
+    \end{pmatrix}
+\end{equation}
+with $V_{ij}$ describing the transition probability for a quark $j$ to quark $i$ via the charged weak interactions.
+
+Note that in this model neutrinos are assumed massless. But they can be easily added as fermions with a mass term and their mixing can be introduced analogous to the quarks. This completes the electroweak Lagrangian of equation \ref{eq:L_EW} and the description of the current \ac{sm}.
