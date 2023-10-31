@@ -4,7 +4,7 @@ The SM is based on symmetry principles and is described by a lorentz-invariant \
 \begin{equation}
     G = SU(3)_C \otimes SU(2)_L \otimes U(1)_Y,
 \end{equation}
-the equations of motions are invariant. $SU(3)_C$ is the special unitary group of rank 3 representing the color symmetry within \ac{qcd}, the \ac{qft} describing the strong interactions. $SU(2)_L \otimes U(1)_Y$ exhibits the unification of the weak and electromagnetic interaction into the electro-weak force of $SU(2)_L$ left-chiral fermions of the weak force and right-handed $U(1)_Y$ fermions with weak hypercharge $Y$ of the electromagnetic force described by Quantum Electrodynamics \ac{qed}.
+the equations of motions are invariant. $SU(3)_C$ is the special unitary group of rank 3 representing the color symmetry within \ac{qcd}, the \ac{qft} describing the strong interactions. $SU(2)_L \otimes U(1)_Y$ exhibits the unification of the weak and electromagnetic interaction into the \ac{ew} force of $SU(2)_L$ left-chiral fermions of the weak force and right-handed $U(1)_Y$ fermions with weak hypercharge $Y$ of the electromagnetic force described by Quantum Electrodynamics \ac{qed}.
 
 The following describes the particles of the \ac{sm} and gives a brief overview of the \ac{qft}'s used to describe aforementioned forces. The content of this chapter draws inspiration primarily from \citep{hollik2010quantum,griffiths2020introduction,thomson2013modern,zee2010quantum,halzen1984introductory}. Natural units are assumed everywhere $\hbar=c=1$.
 
@@ -34,14 +34,10 @@ The scalar Higgs particle has a unique role in the Standard model. A locally gau
 
 If not further specified the following always includes the anti-particles when referred to a species or a particular particle.
 
-\section{Quantum Field Theory}\label{sec:qft}
-Elementary Particles can be created, transformed and vanish in all sorts of particle interactions. Quantum mechanics states that energy can vary greatly on short time scales via the uncertainty principle. Special relativity relates energy with mass allowing energy to manifest as massive particles. Though special relativity lacks a quantum mechanical description and in non-relativistic quantum mechanics the particle number is conserved. Neither of these descriptions is sufficient to fully describe the observations therefore \ac{qft} was developed.
+\section{Elements of Quantum Field Theory}\label{sec:qft}
+Elementary Particles can be created, transformed and vanish in various forms of particle interactions. These phenomena can be understood on the hand by special relativity that relates energy with mass thus allowing energy to manifest as massive particles. And on the other hand from quantum mechanics that states through the uncertainty principle that energy can vary greatly on short time scales. Alhough special relativity lacks a quantum mechanical description and in non-relativistic quantum mechanics the particle number is conserved. \ac{qft} offers a ways out of this dilemma and was developed to model these observations.
 
-For a field description some quantity $\phi(x,y,z,t)=\phi(x)$ is assigned to some region in spacetime $x$. Similar to the Lagrangian formalism in classical mechanics here a Lagrangian density in spacetime governs the dynamics of the system $\mathcal{L}(\phi_1,\dots,\phi_n)$. The generalized Euler-Lagrange equations of qft then give the according equations of motion for each field component $\phi_i$
-\begin{equation}
-    \partial_\mu \left(\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi_i)}\right)=\frac{\partial\mathcal{L}}{\partial \phi_i}.
-\end{equation}
-This relation gives the equations of motion for the Lagrangian. Fields which appear in the \ac{sm} and their associated Lagrangian are summarized in \ref{tab:fields} table.
+For a field description, some quantity $\phi(x,y,z,t)=\phi(x)$ is assigned to some region in spacetime $x$. Similar to the Lagrangian formalism in classical mechanics here a Lagrangian density in spacetime governs the dynamics of the system $\mathcal{L}(\phi_1,\dots,\phi_n) =T-V$. 
 \begin{table}
     \begin{center}
         \begin{tabular}{c|c|c}
@@ -54,19 +50,25 @@ This relation gives the equations of motion for the Lagrangian. Fields which app
         \label{tab:fields}
     \end{center}
 \end{table}
+Fields which appear in the \ac{sm} and their associated Lagrangian are summarized in \ref{tab:fields} table. 
+% Via the generalized Euler-Lagrange equations of \ac{qft} 
+% \begin{equation}
+%     \partial_\mu \left(\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi_i)}\right)=\frac{\partial\mathcal{L}}{\partial \phi_i}.
+% \end{equation}
+% the according equations of motion associated with the fields can be obtained.
 
-In \ac{qft} the conventional strategy to describe particle dynamics is to use a perturbation ansatz $\mathcal{L}=\mathcal{L}_0+\mathcal{L}_1$ where one knows the solution of $\mathcal{L}_0$ and adds a small perturbation $\mathcal{L}_1$. Herein the free field/kinetic part of the Lagrangian is \mbox{$\mathcal{L}_0=\frac{1}{2}[(\partial_\mu \phi)^2 - m^2\phi^2] $} and a small perturbation/potential term $\mathcal{L}_1=V(\phi)$ is added as some polyominal in $\phi$ that governs the interactions of particles. A term $J(x)\phi(x)$ needs to be added to excite the field or create/destroy particles so that the ansatz reads
+In \ac{qft} the conventional strategy to describe particle dynamics is to use a perturbation ansatz $\mathcal{L}=\mathcal{L}_0+\mathcal{L}_1$ where one knows the solution of $\mathcal{L}_0$ and adds a small perturbation $\mathcal{L}_1$ so that $\mathcal{L}$ can be solved. Here the free field/kinetic part of the Lagrangian is \mbox{$\mathcal{L}_0=\frac{1}{2}[(\partial_\mu \phi)^2 - m^2\phi^2] $} and a small perturbation/potential term $\mathcal{L}_1=V(\phi)$ is added as some polyominal in $\phi$ that governs the interactions of particles. A term $J(x)\phi(x)$ needs to be added to excite the field or create/destroy particles so that the ansatz reads
 \begin{equation}
     \mathcal{L}=\frac{1}{2}[(\partial_\mu \phi)^2 - m^2\phi^2]
     -V(\phi) + J(x)\phi(x).
 \end{equation}
-In the path integral formulation of \ac{qft} the problem can be reduced to integrals of the form \mbox{$\int D\phi e^{i\int d^4x \mathcal{L}(\phi(\bm{x},t))}$}. Where $\int D\phi$ is the integral over all possible paths of the field. Usually $V(\phi)$ is just one anharmonic term with $\lambda\phi^4$ with coupling strength $\lambda$ and is expanded in $e$ to make the integral solvable
+In the path integral formulation of \ac{qft} the problem can be reduced to integrals of the form \mbox{$\int D\phi e^{i\int d^4x \mathcal{L}(\phi(\bm{x},t))}$}. Where $\int D\phi$ is the integral over all possible paths of the field. Usually the perturbation $V(\phi)$ is just one anharmonic term with $\lambda\phi^4$ with coupling strength $\lambda$ and is expanded in $e$ to make the integral solvable
 \begin{equation}
     e^{-V(\phi)}=e^{-\lambda\phi^4}=1-\lambda\phi^4+\frac{1}{2}\lambda^2\phi^8+\dots
 \end{equation}
-This only works if $\lambda$ is small. The result is a probability also called the amplitude usually denoted with $\mathcal{M}$. Via this one can derive the Feynman rules and calculate cross sections to a desired order of expansion.
+This only works if $\lambda$ is small. With this the Lagrangian can be solved and the result is a probability also called the amplitude usually denoted with $\mathcal{M}$. Via this one can derive the Feynman rules and calculate cross-sections to a desired order of expansion.
 
-The principle of local gauge invariance generates all the symmetries for the different forces and is inspired by gauge invariance from classical electrodynamics. In the following, this is explained for each of the forces.
+The forces and Lagrangians occurring in the \ac{sm} are discussed in the following sections on \ac{qed} \ref{sec:qed}, \ac{qcd} \ref{sec:qcd} and the \ac{ew} theory \ref{sec:ew}. The principle of local gauge invariance plays a key role for this and is inspired by gauge invariance from classical electrodynamics as described in the following.
 
 \section{Quantum Electrodynamics}\label{sec:qed}
 The \ac{qft}-description of the electromagnetic interaction \ac{qed} can be derived from the free fermion field given by the Dirac equation
@@ -93,10 +95,19 @@ Thus, the new Lagrangian
 \end{equation}
 becomes invariant under the local gauge transformations
 \begin{align}
-    \psi(x)  & \rightarrow  e^{-i \alpha(x)}\psi(x)                      \\
-    A_\mu(x) & \xrightarrow{} A_\mu(x) -\frac{1}{e}\partial_\mu\alpha(x)
+    \psi(x)  & \rightarrow  e^{-i \alpha(x)}\psi(x),                      \\
+    A_\mu(x) & \xrightarrow{} A_\mu(x) -\frac{1}{e}\partial_\mu\alpha(x),
 \end{align}
-forming the electromagnetic $U(1)_{EM}$ gauge group. The particular scheme of these replacements is also called the minimal substitution rule. This Lagrangian describes a fermion interacting with a vector field $A_\mu$ - the photon. A kinetic term for the vector field can be added from the Proca Lagrangian in table \ref{tab:fields}. $F_{\mu\nu}$ is local gauge invariant whereas the $A_\mu A^\mu$ is not, since it picks up a second derivative for $\alpha$ and therefore is required to be massless. The full \ac{qed} lagrangian is then
+forming the electromagnetic $U(1)_{EM}$ gauge group. 
+% The particular scheme of these replacements is also called the minimal substitution rule. 
+This Lagrangian describes two fermions interacting with a vector field $A_\mu$ - the photon represented by the fundamental interaction vertex of \ac{qed} in figure \ref{fig:qed_fundamental}.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.27\textwidth]{qed_fundamental}
+        \caption[]{The Fundamental interaction vertex of \ac{qed}. Two fermions interacting with a massless photon.}
+    \label{fig:qed_fundamental}    
+\end{figure}
+A kinetic term for the vector field can be added from the Proca Lagrangian in table \ref{tab:fields}. $F_{\mu\nu}$ is locally gauge invariant whereas the $A_\mu A^\mu$ is not, since it picks up a second derivative for $\alpha$ and therefore is required to be massless. The full \ac{qed} lagrangian is then
 \begin{equation}
     \mathcal{L}_\mathrm{QED}
     =
@@ -107,11 +118,11 @@ forming the electromagnetic $U(1)_{EM}$ gauge group. The particular scheme of th
     \underbrace{\frac{1}{4}F_{\mu\nu}F^{\mu\nu}}_{\mathcal{L}_\mathrm{Maxwell} }.
     \label{eq:l_qed}
 \end{equation}
-Saying that this symmetry for $\alpha(x)$ holds locally for all unitary $1\times1$  matrices $U(1)$ is a bit extravagant, but the formalism is extendable to higher orders as for the electroweak theory and \ac{qcd} case. It is called an abelian gauge group as any $1\times1$ matrix also commutes with itself.
+Saying that this symmetry holds locally for all unitary $1\times1$ matrices $U(1)$ is a bit extravagant, but the formalism is extendable to higher orders as for the \ac{ew} theory and \ac{qcd} case. The gauge group is abelian as any $1\times1$ matrix also commutes with itself.
 
-\section{Quantum Chromodynamics}
+\section{Quantum Chromodynamics}\label{sec:qcd}
 
-Along the same lines as \ac{qed} is derived in section \ref{sec:qed}, the theory of the strong interactions \ac{qcd} is now a non-abelian gauge theory of the symmetry group $SU(3)$. The latter is generated by the $3\times 3$ Gell-Mann matrices $\lambda_a$ with $ a\in\{1,\mathellipsis,8\}$. The fundamental charge is now color and each quark is a triplet of the three color fermion fields $\Psi_k=(\psi_r,\psi_g,\psi_b)^T$ for all quark flavors $k$. Local gauge invariance of the Lagrangian
+Along the same lines as \ac{qed} is derived in section \ref{sec:qed}, the theory of the strong interactions \ac{qcd} is now a non-abelian gauge theory of the symmetry group $SU(3)$. The latter is generated by the $3\times 3$ Gell-Mann matrices $\lambda_a$ with $ a\in\{1,\mathellipsis,8\}$. The fundamental charge is becomes color and each quark is a triplet of the three color fermion fields $\Psi_k=(\psi_r,\psi_g,\psi_b)^T$ for all quark flavors $k$. Local gauge invariance of the Lagrangian
 \begin{equation}
     \mathcal{L} =
     \sum_k
@@ -126,7 +137,7 @@ Along the same lines as \ac{qed} is derived in section \ref{sec:qed}, the theory
     \end{pmatrix}
     =
     \sum_k
-    \overline{\Psi}_k(i \gamma^\mu \partial_\mu - m )\Psi_k
+    \overline{\Psi}_k(i \gamma^\mu \partial_\mu - m )\Psi_k,
     \label{eq:dirac}
 \end{equation}
 means that the spinors are required to be invariant under the transformation
@@ -151,7 +162,7 @@ to get the gauge invariant \ac{qcd} Lagrangian
                                 & =\sum_k{\overline{\Psi}_k}\left(i\gamma^\mu \partial_\mu-m_k\right)\Psi_k+ g_s{\overline{\Psi}_k}\gamma ^{\mu }\frac{ \lambda_a}{2} \Psi_k G_\mu^a - {\frac {1}{4}}G_{\mu \nu }^{a}G^{a\mu \nu}.
     \label{eq:l_qcd}
 \end{align}
-This Lagrange consists of a kinetic term for each quark, an interaction term of the quarks with the gluons and gluon-gluon interactions giving vertices shown in \ref{fig:qcd_vertices}. This becomes clear when $G^a_{\mu\nu}$ is squared and also leads to cubic and quartic terms for the fields.
+This Lagrangian consists of a kinetic term for each quark, an interaction term of the quarks with the gluons and gluon-gluon interactions giving vertices shown in \ref{fig:qcd_vertices}. becomes clear when $G^a_{\mu\nu}$ is squared and also leads to cubic and quartic terms for the fields.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{gluon_gluon_interactions}
@@ -166,7 +177,9 @@ This Lagrange consists of a kinetic term for each quark, an interaction term of 
     \caption[]{Higher order loop corrections in \ac{qed} schematically treated as one effective diagram. Adopted from \citep{thomson2013modern}.}
     \label{fig:qed_diagrams}
 \end{figure}
-When trying to calculate amplitudes $\mathcal{M}$ of higher order diagrams in \ac{qed} like the second or third one in figure \ref{fig:qed_diagrams} it results in diverging integrals. These diagrams are also referred to as vacuum polarization as virtual particle-antiparticle pairs screen the actual charge of the electron $e_0$ like a dielectric medium in classical electrodynamics. The situation can be fixed by absorbing the appearing infinities into an effective charge/coupling $e(q^2)$ which is now a function of the squared four momentum $q^2$ at the virtual photon vertex shown schematically in figure \ref{fig:qed_diagrams}. For the the second diagram in figure \ref{fig:qed_diagrams} involving only one loop correction it can be shown that for some measured coupling $e(q^2=\mu^2)$ the actual coupling $e(q^2)$ follows a scaling behavior that holds if $q^2$ and $\mu^2$ are larger than the electron mass \citep{thomson2013modern}. The coupling constant is now a running coupling $e(q^2)$ and reads in terms of the fine structure constant $\alpha(q^2)=e^2(q^2)/4\pi$,
+When trying to calculate amplitudes $\mathcal{M}$ of higher order diagrams in \ac{qed} like the second or third one in figure \ref{fig:qed_diagrams} it results in diverging integrals. These diagrams are also referred to as vacuum polarization as virtual particle-antiparticle pairs screen the actual charge of the electron $e_0$ like a dielectric medium in classical electrodynamics. The situation can be fixed by absorbing the appearing infinities into an effective charge/coupling $e(q^2)$ which is now a function of the squared four momentum $q^2$ at the virtual photon vertex shown schematically in figure \ref{fig:qed_diagrams}. 
+
+For the second diagram in figure \ref{fig:qed_diagrams} with only one loop correction, it can be shown that for some measured coupling $e(q^2=\mu^2)$ the actual coupling $e(q^2)$ follows a scaling behavior that holds if $q^2$ and $\mu^2$ are larger than the electron mass \citep{thomson2013modern}. The coupling constant is now a running coupling $e(q^2)$ and reads in terms of the fine structure constant $\alpha(q^2)=e^2(q^2)/4\pi$,
 \begin{equation}
     \alpha(q^2)=
     \frac{\alpha(\mu^2)}
@@ -187,9 +200,9 @@ Therefore with increasing momentum transfer or closer approach in a collision th
     \centering
     \includegraphics[width=1\textwidth]{qcd_diagrams}
     \caption[]{Some higher order loop corrections in \ac{qcd}. Adopted from \citep{thomson2013modern}.}
-    \label{fig:qed_diagrams}
+    \label{fig:qcd_diagrams}
 \end{figure}
-Renormalization in \ac{qcd} can be derived similarly but also the quartic and triplet couplings exemplified in figure \ref{fig:qed_diagrams} need to be considered that result in a scaling for the strong coupling
+Renormalization in \ac{qcd} can be derived similarly but also the quartic and triplet couplings exemplified in figure \ref{fig:qcd_diagrams} need to be considered that result in a scaling for the strong coupling
 \begin{equation}
     \alpha_S(q^2)=
     \frac{\alpha_S(\mu^2)}
@@ -208,11 +221,11 @@ The fine structure constant of \ac{qed} $\alpha(q^2\approx 0)\approx 1/137$ does
     \caption[]{Measurements of the running couplings for (\textbf{a}) \ac{qed} (note the inverted coupling on the y-axis) adopted from \citep{opal2004tests} and (\textbf{b}) \ac{qcd} adopted from \citep{particle2022review}.}
     \label{fig:renorm_scaling_exp}
 \end{figure}
-Most importantly the running coupling of \ac{qed} does not disturb the perturbation ansatz sketched out in section \ref{sec:qft} since $\alpha\ll1$. This is not the case for \ac{qcd} where $\alpha_S$ at $q\approx\SI{1}{GeV}$ is of $\mathcal{O}(1)$ and perturbation theory breaks down for calculations on bound hadronic states and latter processes in hadronization. While perturbation theory for \ac{qcd} remains valid for $\alpha_S\approx 0.1$ which corresponds to $q\approx \SI{100}{GeV}$ in basically all processes that are of interest at the \ac{lhc} higher order corrections must be considered in QCD calculations.
+Most importantly the running coupling of \ac{qed} does not disturb the perturbation ansatz sketched out in section \ref{sec:qft} since $\alpha\ll1$. This is not the case for \ac{qcd} where $\alpha_S$ at $q\approx\SI{1}{GeV}$ is of $\mathcal{O}(1)$ and perturbation theory breaks down for calculations on bound hadronic states and latter processes in hadronization. While perturbation theory for \ac{qcd} remains valid for $\alpha_S\gtrsim  0.1$, which corresponds to $q\gtrsim \SI{100}{GeV}$, for basically all \ac{qcd} calculations at the \ac{lhc}, higher order corrections must be considered.
 
-The behavior of the running coupling in \ac{qcd} is called asymptotic freedom, since the theory is free of asymptotics with increasing energy scale or decreasing distance. In turn, since the coupling increases with larger distances, this leads to color confinement, which means that colored particles can only be observed in bound states.
+The behavior of the running coupling in \ac{qcd} is called asymptotic freedom, since the theory is free of asymptotics with increasing energy scale or decreasing distance. In turn, since the coupling increases with larger distances, any attempt to observe quarks individually fail. This is because with increasing separation of the quarks, couplings to gluons increase that will hadronize into colorless bound states. This is also called color confinement, which means that colored particles can only be observed in bound states.
 
-\section{Electroweak Unification}
+\section{Electroweak Unification}\label{sec:ew}
 The weak force can be added to the gauge invariant formalism with a $SU(2)$ symmetry and can be combined with the electromagnetic force so that both forces originate from one electroweak force by requiring a symmetry $SU(2)_L \otimes U(1)_Y$. The weak force couples to left handed chiral particle states only, e.g. for some fermion $\psi_L$. Fermions can be grouped by their characteristics into left handed doublets
 \begin{equation}
     \begin{pmatrix}
@@ -235,7 +248,7 @@ The weak force can be added to the gauge invariant formalism with a $SU(2)$ symm
     \end{pmatrix}_L, \;
     \label{eq:weak_doublets}
 \end{equation}
-with weak isospin $I=1/2$, with the third component $I_3=\pm1/2$ for the upper and lower doublet particle respectively, whereas the weak hypercharge $Y$ is associated to right handed singlets
+with weak isospin $I=1/2$ that has as third component $I_3=\pm1/2$ for the upper and lower doublet particle respectively. In contrast the weak hypercharge $Y$ is associated to right handed singlets
 \begin{equation}
     e_R    ,\quad \mu_R ,\quad    \tau_R ,\quad    u_R,\quad d_R ,\quad    c_R ,\quad s_R ,\quad    t_R ,\quad b_R,
 \end{equation}
@@ -257,7 +270,7 @@ $SU(2)$ is generated through the three Pauli matrices $\bm{\sigma}$ requiring 3 
     \\
     \psi_{R} & \rightarrow e^{ i\beta(x) Y/2} \psi_{R},\qquad                    & \beta\in\mathbb{R}                                   & \label{eq:gauge_transformation_right}
 \end{align}
-At this stage the new vector fields are still massless and give the fermionic and gauge parts of the Lagrangian and will be explained below. The masses for the fermions and bosons can be incorporated via the Higgs mechanism that is described in section \ref{sec:higgs_mechanism} yielding the Higgs and Yukawa parts of the Lagrangian.
+% At this stage the new vector fields are still massless and give the fermionic and gauge parts of the Lagrangian and will be explained below. The masses for the fermions and bosons can be incorporated via the Higgs mechanism that is described in section \ref{sec:higgs_mechanism} yielding the Higgs and Yukawa parts of the Lagrangian.
 
 
 \subsubsection*{Fermion term}
@@ -265,12 +278,12 @@ To distinguish left- and right handed particle states the according spinors can 
 \begin{equation}
     \psi_L=\frac{1-\gamma^5}{2}\psi, \quad \psi_R=\frac{1+\gamma^5}{2}\psi.
 \end{equation}
-These are not helicity eigenstates but rather $\psi_{L,R}$ become $\psi$ if $\psi$ has the corresponding helicity and vanish otherwise, e.g. for a left-handed state that carries helicity -1
+These are not helicity eigenstates but rather $\psi_{L,R}$ become $\psi$ if $\psi$ has the corresponding helicity and vanish otherwise
 \begin{equation}
-    \frac{1}{2}(1-y^5)\psi =
+    \frac{1}{2}(1 \pm y^5)\psi =
     \begin{cases}
-        0    & \text{if } \psi \text{ has helicity +1,} \\
-        \psi & \text{if } \psi \text{ has helicity -1.}
+        0    & \text{if } \psi \text{ has helicity } \mp1, \\
+        \psi & \text{if } \psi \text{ has helicity } \pm1.
     \end{cases}\label{eq:left_handed_state}
 \end{equation}
 The aforementioned doublets and singlets are then represented by
@@ -303,14 +316,16 @@ with $g_2$ the weak coupling constant and $\epsilon_{abc}$ the totally asymmetri
 \begin{equation}
     \mathcal {L}_\text{gauge} = -\frac{1}{4} W_{\mu\nu}^a W^{\mu\nu,a} - \frac{1}{4}B_{\mu\nu}B^{\mu\nu}.
 \end{equation}
-So far this Lagrangian describes massless fermions and gauge fields $W^a_\mu$ because the gauge invariance would be broken otherwise. A Proca mass term $\frac{1}{2} m^2 B_\mu B^\mu$ is not invariant as discussed in section \ref{sec:qed}. For a Dirac term like $-m\overline{\psi}\psi$ this can be seen by rewriting it in terms of the left-handed and right-handed fields by inserting a 1 for e.g. the electron and exploiting the transformation of chiral states as e.g. from equation \ref{eq:left_handed_state}
-\begin{equation}
-    -m\overline{e}e =
-    -m\overline{e} \left[\frac{1}{2}(1-y^5)+\frac{1}{2}(1+y^5)\right]e
-    =-m(\overline{e}_R e_L+\overline{e}_L e_R).
-    \label{eq:yukawa_mass_term}
-\end{equation}
-$\overline{e}_R$ is a $SU(2)$ singlet and $e_L$ is one component of a $SU(2)$ doublet and therefore such a term is not gauge invariant. Masses will be incorporated into the Lagrangian with the Higgs mechanism explained in section \ref{sec:higgs_mechanism}.
+So far the \ac{ew} Lagrangian made of the fermions and gauge part describes massless fermions and gauge fields $W^a_\mu$ as the naive mass terms of the fields from table \ref{tab:fields} would break the gauge invariance.
+% A Proca mass term $\frac{1}{2} m^2 B_\mu B^\mu$ is not invariant as discussed in section \ref{sec:qed}. For a Dirac term like $-m\overline{\psi}\psi$ this can be seen by rewriting it in terms of the left-handed and right-handed fields by inserting a 1 for e.g. the electron and exploiting the transformation of chiral states as of equation \ref{eq:left_handed_state}
+% \begin{equation}
+%     -m\overline{e}e =
+%     -m\overline{e} \left[\frac{1}{2}(1-y^5)+\frac{1}{2}(1+y^5)\right]e
+%     =-m(\overline{e}_R e_L+\overline{e}_L e_R).
+%     \label{eq:yukawa_mass_term}
+% \end{equation}
+% $\overline{e}_R$ is a $SU(2)$ singlet and $e_L$ is one component of a $SU(2)$ doublet and therefore such a term is not gauge invariant. 
+Masses will be incorporated into the Lagrangian with the Higgs mechanism explained in section \ref{sec:higgs_mechanism}.
 
 \section{Higgs mechanism}\label{sec:higgs_mechanism}
 
@@ -347,7 +362,7 @@ and is either 0 or forms an infinite set of minima as illustrated in figure \ref
 \begin{figure}
     \centering
     \includegraphics[width=.8\textwidth]{higgs_potential}
-    \caption[]{Potential $V(\phi)$ (a) for $\lambda>0$ and $\mu^2<0$ and (b) for values $\lambda>0$ and $\mu^2>0$. Adopted from \citep{thomson2013modern}.}
+    \caption[]{Potential $V(\phi)$: (\textbf{a}) for $\lambda>0$ and $\mu^2<0$ and (\textbf{b}) for values $\lambda>0$ and $\mu^2>0$. Adopted from \citep{thomson2013modern}.}
     \label{fig:higgs_potential}
 \end{figure}
 
@@ -355,7 +370,7 @@ The \ac{qft} perturbation ansatz sketched out in section \ref{sec:qft} starts fr
 \begin{equation}
     \phi_1(x)=v+\eta(x),\quad \phi_2=\xi.
 \end{equation}
-The physical vacuum state spontaneously breaks the symmetry of the Lagrangian. Furthermore the physical predictions of the Lagrangian do not depend on the choice of the gauge it can be chosen in a way that it eliminates the field $\xi$. In particular if $\alpha(x)=-\xi(x)/(gv)$ the transformation from equation \ref{eq:scalar_local_gauge} can be made unitary ($UU^\dagger=1$) when expressed to first order in the fields. Moreover $\eta(x)$ can then be reinterpreted as the physical Higgs field $h(x)$
+The physical vacuum state spontaneously breaks the symmetry of the Lagrangian. Furthermore the physical predictions of the Lagrangian do not depend on the choice of the gauge and can be chosen in a way that it eliminates the field $\xi$. In particular if $\alpha(x)=-\xi(x)/(gv)$ the transformation from equation \ref{eq:scalar_local_gauge} can be made unitary ($UU^\dagger=1$) when expressed to first order in the fields. Moreover $\eta(x)$ can then be reinterpreted as the physical Higgs field $h(x)$
 \begin{equation}
     \phi(x)  \rightarrow  e^{-i \alpha(x)}\frac{1}{\sqrt{2}}(v+\eta(x)+i\xi(x))
     \approx
@@ -363,7 +378,7 @@ The physical vacuum state spontaneously breaks the symmetry of the Lagrangian. F
     =
     \frac{1}{\sqrt{2}}(v+h(x)).
 \end{equation}
-The written out Lagrangian except for constants is then
+The full locally gauge invariant Lagrangian for a $U(1)$ scalar fields is except for constants
 \begin{align}
     \mathcal{L}= &
     \underbrace{\frac{1}{2}(\partial_\mu h)(\partial^\mu h)-\lambda v^2 h^2}_{\text{massive h scalar}}
@@ -375,7 +390,7 @@ The written out Lagrangian except for constants is then
     -
     \underbrace{\lambda v h^3 -\frac{1}{4}\lambda h^4}_{\text{h self-interactions}}
 \end{align}
-and describes a massive scalar particle, a massive boson, interactions between the scalar and boson and as well interactions of the scalar itself depicted in figure \ref{fig:higgs_couplings}.
+and describes a massive scalar particle $h$, a massive boson $B_\mu$, interactions between the scalar and boson and as well interactions of the scalar itself depicted in figure \ref{fig:higgs_couplings}.
 \begin{figure}
     \centering
     \includegraphics[width=.8\textwidth]{higgs_couplings}
@@ -384,7 +399,7 @@ and describes a massive scalar particle, a massive boson, interactions between t
 \end{figure}
 
 \subsection*{The Standard Model Higgs}
-For the electroweak Lagrangian a Higgs mechanism needs to break down the $SU(2)_L \otimes U(1)_Y$ symmetry while maintaining the electromagnetic $U(1)_{EM}$ symmetry which is also called \ac{ewsb}. This can be done with a single isospin doublet of complex scalar fields
+For the electroweak Lagrangian the $SU(2)_L \otimes U(1)_Y$ symmetry is broken down by the Higgs mechanism while maintaining the electromagnetic $U(1)_{EM}$ symmetry. This is also called \ac{ewsb} and be realized with a single isospin doublet of complex scalar fields
 \begin{equation}
     \phi(x)=
     \begin{pmatrix}
@@ -397,7 +412,7 @@ For the electroweak Lagrangian a Higgs mechanism needs to break down the $SU(2)_
         \phi_3 (x)+i \phi_4 (x)
     \end{pmatrix}.
 \end{equation}
-with weak hyperchage $Y=1$. With the Gell-mann Nishijima formula from equation \ref{eq:gellmann_nishijima_formula}, the upper state $\phi^+$ with $I_3=1/2$ is electrically charged and the lower state $\phi^0$ with $I_3=-1/2$ is electrically neutral.
+with weak hyperchage $Y=1$. T1he upper state $\phi^+$ has $I_3=1/2$ is electrically charged and the lower state $\phi^0$ with $I_3=-1/2$ is electrically neutral consistent with the Gell-mann Nishijima formula from equation \ref{eq:gellmann_nishijima_formula}.
 
 
 \subsubsection*{Higgs term}
@@ -449,13 +464,13 @@ becomes in the unitary gauge with the physical \ac{sm} Higgs field
     \end{pmatrix}.
     \label{eq:unitary_gauge}
 \end{equation}
-In this form the potential then becomes in terms of $\mu$ and $v$ through equation \ref{eq:higgs_vev}
+In this form the potential then becomes by virtue of equation \ref{eq:higgs_vev} in terms of $\mu$ and $v$ 
 \begin{equation}
     V=\mu^2h^2+\frac{\mu^2}{v}h^3+\frac{\mu^2}{4v^2}h^4
     =
     \frac{m_h^2}{2}h^2+\frac{m_h^2}{2v}h^3+\frac{m_h^2}{8v^2}h^4.
 \end{equation}
-with triplet and quartic self-couplings proportional to the Higgs mass $m_h=\mu\sqrt{2}$. The kinematic term of the Higgs Lagrangian can be brought into a form that the gauge fields $W^1_\mu,W^2_\mu,W^3_\mu,B_\mu$ represent the physical fields. The charged massive $W^{\pm}$ gauge bosons then are
+This yields a Higgs mass term $m_h=\mu\sqrt{2}$ and triplet and quartic self-couplings proportional to the Higgs mass. The kinematic term of the Higgs Lagrangian can be brought into a form that the gauge fields $W^1_\mu,W^2_\mu,W^3_\mu,B_\mu$ represent the physical fields. The charged massive $W^{\pm}$ gauge bosons then are
 \begin{equation}
     W_\mu^\pm = \frac{1}{\sqrt{2}}(W_\mu^1\mp i W_\mu^2),
 \end{equation}
@@ -475,7 +490,7 @@ and the neutral massive $Z$ boson and the massless photon $A_\mu$ are mixed stat
         W^3_\mu
     \end{pmatrix}
 \end{equation}
-rotated by the weak mixing angle $\theta_W$. This yields the kinematic Higgs term
+rotated by the weak mixing angle $\theta_W$. The kinematic Higgs term then becomes
 \begin{equation}
     \left(D_\mu\phi\right)^\dagger (D^\mu\phi )=
     \frac{1}{2}(\partial_\mu h)(\partial^\mu h)+
@@ -499,7 +514,7 @@ rotated by the weak mixing angle $\theta_W$. This yields the kinematic Higgs ter
 %         Z_\mu
 %     \end{pmatrix}
 % \end{align}
-with trilinear $HWW,HZZ$ and quadrilinear terms $HHWW,HHZZ$ vertices. The photon becomes naturally massless in this form and the masses of the massive gauge bosons masses can be read off
+and describes trilinear $HWW,HZZ$ and quadrilinear $HHWW,HHZZ$ vertices. The photon becomes naturally massless in this form and the masses of the massive gauge bosons can be read off
 \begin{equation}
     m_W= \frac{1}{2}g_2v,\quad m_Z=\frac{1}{2}\sqrt{g_1^2+g_2^2}.
 \end{equation}
@@ -543,7 +558,7 @@ Fermion masses can be incorporated gauge invariant into the electroweak Lagrangi
                                             & \phantom{-\;} +h.c.                                                                                                      \\
                                             & = -G_e \overline{L}_L \phi e_R -G_d \overline{Q}_L \phi d_R -G_u \overline{Q}_L \phi_c e_R + h.c. \label{eq:L_Y_one_gen}
 \end{align}
-with Yukawa coupling constant $G_e,G_d,G_u$ and the charge conjugated Higgs field $\phi_c=i\sigma_2\phi$. The latter can be used because it transforms just like the Higgs field and therefore leaves the Lagrangian gauge invariant. In the unitary gauge of equation \ref{eq:unitary_gauge} mass terms have the desired form of equation \ref{eq:yukawa_mass_term} but are now introduced gauge invariant and read e.g. for the electron
+with Yukawa coupling constant $G_e,G_d,G_u$ and the charge conjugated Higgs field $\phi_c=i\sigma_2\phi$. The latter can be used because it transforms just like the Higgs field and therefore leaves the Lagrangian gauge invariant. Furthermore in the unitary gauge mass terms arise  e.g. for the electron in the form
 \begin{equation}
     \mathcal{L}_\mathrm{Y}^e=\frac{-G_e}{\sqrt{2}} v (\overline{e}_L e_R+\overline{e}_R e_L)+\frac{-G_e}{\sqrt{2}} h (\overline{e}_L e_R+\overline{e}_R e_L).
 \end{equation}
@@ -555,7 +570,7 @@ so that the full Yukawa Lagrangian can be written as
 \begin{equation}
     \mathcal{L}_\mathrm{Yukawa}=-\sum_f m_f\overline{\psi}_f \psi_f -\sum_f \frac{m_f}{v}\overline{\psi}_f \psi_f h.
 \end{equation}
-Consequently the Higgs couples to fermions proportional to their mass. In this form the spinors $\psi_f$ correspond to their mass eigenstates. Since physically observed states are mixed states of the mass eigenstates for the charged weak interactions the formalism can be extended by making the Yukawa couplings $3\times 3$ matrices $G_u=G_{ij}^d$ with $i=u,c,t$ going over up type quarks and $j=d,s,b$ over down type quarks so that the quark part of the Yukawa Lagrangian of equation \ref{eq:L_Y_one_gen} becomes
+Consequently the Higgs couples to fermions proportional to their masses. In this form the spinors $\psi_f$ correspond to their mass eigenstates. Since physically observed states are mixed states of the mass eigenstates for the charged weak interactions, the formalism can be extended by making the Yukawa couplings $3\times 3$ matrices $G_u=G_{ij}^d$ with $i=u,c,t$ going over up type quarks and $j=d,s,b$ over down type quarks. Thus that the quark part of the Yukawa Lagrangian of equation \ref{eq:L_Y_one_gen} becomes
 \begin{equation}
     \mathcal{L}_\mathrm{Y}^{\text{quarks}} =
     -G_{ij}^d \overline{Q}_L^i \phi d_R^j -G_{ij}^u \overline{Q}_L^i \phi_c e_R^j + h.c.
@@ -589,4 +604,4 @@ With the identity $V_L^uV_L^{d\dagger}\equiv V_\mathrm{CKM}$ the quark mixing ma
 \end{equation}
 with $V_{ij}$ describing the transition probability for a quark $j$ to quark $i$ via the charged weak interactions.
 
-Note that in this model neutrinos are assumed massless. But they can be easily added as fermions with a mass term and their mixing can be introduced analogous to the quarks. This completes the electroweak Lagrangian of equation \ref{eq:L_EW} and the description of the current \ac{sm}.
+In this model neutrinos are assumed massless. Though they can be easily added including their mixing analogous to the quarks. This completes the current \ac{sm} electroweak Lagrangian of equation \ref{eq:L_EW}.
