@@ -1,4 +1,5 @@
-\noindent The \ac{sm} of Particle Physics is the current theory that describes three of the four fundamental forces, namely the electromagnetic, strong, and weak forces, with the exception of gravity. Over the last decades it has been probed with remarkable precision but although there are  observational phenomena that lie beyond its scope.
+\chapter{The Standard Model of Particle Physics}
+\noindent The \ac{sm} of Particle Physics is the current theory that describes three of the four fundamental forces, namely the electromagnetic, strong, and weak forces, with the exception of gravity. Over the last decades it has been probed with remarkable precision although there are  observational phenomena that lie beyond its scope.
 
 The SM is based on symmetry principles and is described by a lorentz-invariant \ac{qft} that is renormalizable and invariant under local gauge transformations. This means that within the non-abelian gauge group
 \begin{equation}
@@ -221,7 +222,7 @@ The fine structure constant of \ac{qed} $\alpha(q^2\approx 0)\approx 1/137$ does
     \caption[]{Measurements of the running couplings for (\textbf{a}) \ac{qed} (note the inverted coupling on the y-axis) adopted from \citep{opal2004tests} and (\textbf{b}) \ac{qcd} adopted from \citep{particle2022review}.}
     \label{fig:renorm_scaling_exp}
 \end{figure}
-Most importantly the running coupling of \ac{qed} does not disturb the perturbation ansatz sketched out in section \ref{sec:qft} since $\alpha\ll1$. This is not the case for \ac{qcd} where $\alpha_S$ at $q\approx\SI{1}{GeV}$ is of $\mathcal{O}(1)$ and perturbation theory breaks down for calculations on bound hadronic states and latter processes in hadronization. While perturbation theory for \ac{qcd} remains valid for $\alpha_S\gtrsim  0.1$, which corresponds to $q\gtrsim \SI{100}{GeV}$, for basically all \ac{qcd} calculations at the \ac{lhc}, higher order corrections must be considered.
+Most importantly the running coupling of \ac{qed} does not disturb the perturbation ansatz sketched out in section \ref{sec:qft} since $\alpha\ll1$. This is not the case for \ac{qcd} where $\alpha_S$ at $q\approx\qty{1}{GeV}$ is of $\mathcal{O}(1)$ and perturbation theory breaks down for calculations on bound hadronic states and latter processes in hadronization. While perturbation theory for \ac{qcd} remains valid for $\alpha_S\gtrsim  0.1$, which corresponds to $q\gtrsim \qty{100}{GeV}$, for basically all \ac{qcd} calculations at the \ac{lhc}, higher order corrections must be considered.
 
 The behavior of the running coupling in \ac{qcd} is called asymptotic freedom, since the theory is free of asymptotics with increasing energy scale or decreasing distance. In turn, since the coupling increases with larger distances, any attempt to observe quarks individually fail. This is because with increasing separation of the quarks, couplings to gluons increase that will hadronize into colorless bound states. This is also called color confinement, which means that colored particles can only be observed in bound states.
 
@@ -570,7 +571,7 @@ so that the full Yukawa Lagrangian can be written as
 \begin{equation}
     \mathcal{L}_\mathrm{Yukawa}=-\sum_f m_f\overline{\psi}_f \psi_f -\sum_f \frac{m_f}{v}\overline{\psi}_f \psi_f h.
 \end{equation}
-Consequently the Higgs couples to fermions proportional to their masses. In this form the spinors $\psi_f$ correspond to their mass eigenstates. Since physically observed states are mixed states of the mass eigenstates for the charged weak interactions, the formalism can be extended by making the Yukawa couplings $3\times 3$ matrices $G_u=G_{ij}^d$ with $i=u,c,t$ going over up type quarks and $j=d,s,b$ over down type quarks. Thus that the quark part of the Yukawa Lagrangian of equation \ref{eq:L_Y_one_gen} becomes
+Consequently the Higgs couples to fermions proportional to their masses. In this form the spinors $\psi_f$ correspond to their mass eigenstates. Since physically observed states are mixed states of the mass eigenstates for the charged weak interactions, the formalism can be extended by making the Yukawa couplings $3\times 3$ matrices $G_u=G_{ij}^d$ with $i=u,c,t$ going over up type quarks and $j=d,s,b$ over down type quarks. Thus the quark part of the Yukawa Lagrangian of equation \ref{eq:L_Y_one_gen} becomes
 \begin{equation}
     \mathcal{L}_\mathrm{Y}^{\text{quarks}} =
     -G_{ij}^d \overline{Q}_L^i \phi d_R^j -G_{ij}^u \overline{Q}_L^i \phi_c e_R^j + h.c.
@@ -579,7 +580,7 @@ The $G_{ij}$ matrices mix the mass eigenstates and can be diagonalized with four
 \begin{equation}
     \Tilde{u}^i_{L,R}=(V^u_{L,R})_{ik}u^k_{L,R}, \quad \Tilde{d}^i_{L,R}=(V^d_{L,R})_{ik}u^k_{L,R}.
 \end{equation}
-With the identity $V_L^uV_L^{d\dagger}\equiv V_\mathrm{CKM}$ the quark mixing matrix also called \ac{ckm} matrix of the physically observed states are
+With the identity $V_L^uV_L^{d\dagger}\equiv V_\mathrm{CKM}$ the quark mixing matrix also called \ac{ckm} matrix mixes so that the physically observed states are mixtures of the mass eigenstates
 \begin{equation}
     \begin{pmatrix}
         d' \\
@@ -600,8 +601,8 @@ With the identity $V_L^uV_L^{d\dagger}\equiv V_\mathrm{CKM}$ the quark mixing ma
         d \\
         s \\
         b \\
-    \end{pmatrix}
+    \end{pmatrix}.
 \end{equation}
-with $V_{ij}$ describing the transition probability for a quark $j$ to quark $i$ via the charged weak interactions.
+The $V_{ij}$ describes the transition probability for a quark $j$ to quark $i$ via the charged weak interactions.
 
 In this model neutrinos are assumed massless. Though they can be easily added including their mixing analogous to the quarks. This completes the current \ac{sm} electroweak Lagrangian of equation \ref{eq:L_EW}.
