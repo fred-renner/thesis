@@ -46,5 +46,28 @@ It is surrounded by a solenoid magnet whose field lines point in the direction t
 
 The \ac{ibl}, pixel detector, and \ac{sct} all consist of silicon detectors of various sizes. When passing through silicon, charged particles ionize electrons that travel in an electric field to an electrode and provide positional information. The \ac{ibl} plays a crucial role in b-tagging as will become clear in section \red{add ref}.
 
-After aforementioned semiconductor trackers the \ac{trt} surrounds them and is based on transition radiation and can also provide particle ID's. It consists of several layers of tubes perpendicular to the beamline, filled with a gas mixture, and a conducting wire in their center, which is under voltage and attracts negative charges. The tubes are embedded in polypropylene. Transition radiation is emitted when a charged particle passes through media with different permittivities at the boundary of the materials. The intensity of this radiation depends on the velocity, so that for particles of the same energy more photons are released for the lighter particle, so that for example electrons can be distinguished from pions.
+Aforementioned semiconductor trackers are surrounded by the \ac{trt} which apart from tracking also can identify particles. It consists of several layers of tubes perpendicular to the beamline, filled with a gas mixture, and a conducting wire in their center, which is under voltage and attracts negative charges. The tubes are surrounded in a material with different permittivity so that charged particles passing through the boundaries of the material emit transition radiation. The intensity of this radiation depends on the velocity, so that for particles of the same energy more photons are released for the lighter particle. Therefore for electrons for example can be distinguished from pions.
 
+\subsection{Calorimeters}
+
+When high-energy particles pass through dense matter the various particle interactions create secondary particles that result in a particle shower. Via this the energy of particles can be inferred and is done in \ac{atlas} with two sampling calorimeters. These consist of alternating layers of a high-density metal to absorb the energy and a material that can track the particles of the shower. 
+
+\subsubsection*{Electromagnetic Calorimeter}
+ 
+In the electromagnetic calorimeter the main energy deposits are from electrons and photons. The stopping material consists of lead and steel and is alternated with a copper plate on which there is an electrode grid. Between the plates is liquid argon. When interacting with the dense metal e.g. by bremsstrahlung of an electron or by pair production induced by a photon, the created secondary particles ionize the argon atoms in between. The negatively charged ions are then pulled to the charged copper electrodes to determine the position. From the distance a particle has traveled through the electromagnetic calorimeter, one can infer the energy of the particle as it entered the calorimeter.
+
+\subsubsection*{Hadronic Calorimeter}
+
+Hadrons also deposit energy in the electromagnetic calorimeter but interact with nuclei as well. However as they are more energetic more stopping power is needed which is provided by the hadronic calorimeter that surrounds the electromagnetic calorimeter. The configuration is made of many layers of tiles positioned in planes perpendicular to the beamline. In these layers tiles of steel as stopping material alternate by a scintillating plastic which radiates light if charged particles pass through. The light is collected at the edges by wavelength-shifting optical fibres  which reduce the energy of the photons and then read out by photomultiplier tubes.
+
+\subsection*{Muon Spectrometer}
+
+The muon spectrometer encircles all other detectors to capture muons which barely loose energy passing through the other detectors. Its basic units are resistive plate chambers in three layers around the calorimeters. These are basically large charged capacitors filled with gas. When charged particles pass through they ionize the gas and the resulting avalanche of ions drawn to the electrodes is measured to determine the position and time of flight through the plates.  In addition, they are also used in a design where the electrodes consist of a tube filled with gas and a wire inside similar to the \ac{trt}. The entire spectrometer is placed in a toroidal magnetic field so that the field lines are in phi direction in order to also measure the momentum due to the curvature of the muons.
+
+The figure \ref{fig:particles_in_detector} shows where which type of particles are stopped in the different detectors.
+\begin{figure}
+    \centering
+    \includegraphics[width=1\textwidth]{particles_in_detector}
+        \caption[]{Paths and energy deposits of particle types in the subdetectors. Adopted from \citep{Pequenao:1505342}.}
+    \label{fig:particles_in_detector}    
+\end{figure}
