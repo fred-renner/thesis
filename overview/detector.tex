@@ -31,7 +31,7 @@ Its purpose is to measure the trajectory, momentum, and energy of particles orig
 \subsection*{Coordinate System}
 The coordinate system of \ac{atlas} is right-handed and originates at the interaction point at the center of the detector. The z-axis points along the beam line, the x-axis to the center of the lhc and the y-axis away from earth. Thus quantities transversal to the z-axis are Lorentz-invariant. Inside the detector cylindrical coordinates $r,\phi$ are used with $\phi$ the azimuthal angle about the z-axis and the polar angle $\Theta$ of a particle measured in form of the pseudorapidity $\eta=-\ln(\Theta/2)$. This quantity is defined as an approximation for the Lorentz invariant rapidity and holds for highly relativistic particles. With these a useful quantity to describe angular distances in the detector is
 \begin{equation}
-    \Delta R = \sqrt{(\Delta\phi)^2+(\Delta eta)^2}.
+    \Delta R = \sqrt{(\Delta\phi)^2+(\Delta \eta)^2}.
 \end{equation}
 
 \section{Inner detector}
@@ -73,3 +73,4 @@ The figure \ref{fig:particles_in_detector} shows where which type of particles a
 \end{figure}
 
 \section{Data Acquisition}
+Bunches of protons in the \ac{lhc} are brought to collision in \ac{atlas} with a rate of \qty[]{40}{MHz}. It is technically impossible at the moment to record all collisions as this would correspond to a data rate of \qty[]{40}{TB\per s}. Therefore events that are useful for physics analysis need to be preselected which is called triggering and is performed in two steps. The first step is the \ac{l1} trigger and is hardware based and reduces the event rate to \qty[]{100}{kHZ}. This is done by selecting events with large transverse momentum deposits in the detector and also if transverse momentum is missing. Afterwards the regions in the detector where this is the case are passed to a a software \ac{hlt}. It uses the full detector information in these regions to reduce the rate further down to \qty[]{1}{kHz}.
