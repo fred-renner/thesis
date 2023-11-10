@@ -6,7 +6,7 @@ The \ac{lhc} is a circular proton proton collider with \qty[]{27}{km} circumfere
 \begin{equation}
     L=\frac{1}{\sigma}\frac{\dint{N}}{\dint{t}}.
 \end{equation}
-It can be read as particle interactions per unit time and area. The area understood as the interaction cross-section of a particular process. The total recorded number of collision events is then with the integrated luminosity 
+It can be read as particle interactions per unit time and area. The area understood as the interaction cross-section of a particular process. The total recorded number of collision events can thus be calculated by summing the luminosity over time which gives with the integrated luminosity
 \begin{equation}
     N=\sigma\cdot\int L dt=\sigma\cdot L_\mathrm{int}.
 \end{equation}
@@ -14,8 +14,8 @@ For the full run 2 dataset used in this thesis the integrated luminosity for eve
 \begin{figure}
     \centering
     \includegraphics[width=0.5\textwidth]{mu_2015_2018}
-        \caption[]{Pile up profiles for run 2 data taking periods \citep{pileup}.}
-    \label{fig:pileup}    
+    \caption[]{Pile up profiles for run 2 data taking periods \citep{pileup}.}
+    \label{fig:pileup}
 \end{figure}
 
 \section{The ATLAS detector}
@@ -23,8 +23,8 @@ The \ac{atlas} (A Toroidal LHC Apparatus) experiment is a particle detector with
 \begin{figure}
     \centering
     \includegraphics[width=1\textwidth]{atlas_detector}
-        \caption[]{The \ac{atlas} experiment at the \ac{lhc} with its subdetectors. Adopted from \citep{Pequenao:1095924}.}
-    \label{fig:atlas_detector}    
+    \caption[]{The \ac{atlas} experiment at the \ac{lhc} with its subdetectors. Adopted from \citep{Pequenao:1095924}.}
+    \label{fig:atlas_detector}
 \end{figure}
 Its purpose is to measure the trajectory, momentum, and energy of particles originating from proton-proton collisions, depending on the particular kind of interaction of the collision products with matter. The various subdetectors are explained below from the inside out.
 
@@ -36,25 +36,25 @@ The coordinate system of \ac{atlas} is right-handed and originates at the intera
 \end{equation}
 
 \section{Inner detector}\label{sec:inner_detector}
-The inner detector, shown schematically in figure \ref{fig:inner_tracker}, is designed to track charged particles and figure out their momentum and provide information on the particle type. 
+The inner detector, shown schematically in figure \ref{fig:inner_tracker}, is designed to track charged particles and figure out their momentum and provide information on the particle type.
 \begin{figure}
     \centering
     \includegraphics[width=0.65\textwidth]{inner_tracker}
-        \caption[]{The inner detector schematically with the subdetectors described in the full text. Adopted from \citep{Potamianos:2016ptf}.}
-    \label{fig:inner_tracker}    
+    \caption[]{The inner detector schematically with the subdetectors described in the full text. Adopted from \citep{Potamianos:2016ptf}.}
+    \label{fig:inner_tracker}
 \end{figure}
 It is surrounded by a solenoid magnet whose field lines point in the direction the beam so that charged particles are bent in the transverse plane of the detector due to the Lorentz force. The bending direction reveals the charge whereas the curvature depends on the momentum.
 
-The \ac{ibl}, pixel detector, and \ac{sct} all consist of silicon detectors of various sizes. When passing through silicon, charged particles ionize electrons that travel in an electric field to an electrode and provide positional information. The \ac{ibl} plays a crucial role in b-tagging as will become clear in section \red{add ref}.
+The \ac{ibl}, pixel detector, and \ac{sct} all consist of silicon detectors of various sizes. When passing through silicon, charged particles ionize electrons that travel in an electric field to an electrode and provide positional information. The \ac{ibl} plays a crucial role in b-tagging as will become clear in section \ref{sec:b_tagging}.
 
 Aforementioned semiconductor trackers are surrounded by the \ac{trt} which apart from tracking also can identify particles. It consists of several layers of tubes perpendicular to the beamline, filled with a gas mixture, and a conducting wire in their center, which is under voltage and attracts negative charges. The tubes are surrounded in a material with different permittivity so that charged particles passing through the boundaries of the material emit transition radiation. The intensity of this radiation depends on the velocity, so that for particles of the same energy more photons are released for the lighter particle. Therefore for electrons for example can be distinguished from pions.
 
 \section{Calorimeters}
 
-When high-energy particles pass through dense matter the various particle interactions create secondary particles that result in a particle shower. Via this the energy of particles can be inferred and is done in \ac{atlas} with two sampling calorimeters. These consist of alternating layers of a high-density metal to absorb the energy and a material that can track the particles of the shower. 
+When high-energy particles pass through dense matter the various particle interactions create secondary particles that result in a particle shower. Via this the energy of particles can be inferred and is done in \ac{atlas} with two sampling calorimeters. These consist of alternating layers of a high-density metal to absorb the energy and a material that can track the particles of the shower.
 
 \subsection*{Electromagnetic Calorimeter}
- 
+
 In the electromagnetic calorimeter the main energy deposits are from electrons and photons. The stopping material consists of lead and steel and is alternated with a copper plate on which there is an electrode grid. Between the plates is liquid argon. When interacting with the dense metal e.g. by bremsstrahlung of an electron or by pair production induced by a photon, the created secondary particles ionize the argon atoms in between. The negatively charged ions are then pulled to the charged copper electrodes to determine the position. From the distance a particle has traveled through the electromagnetic calorimeter, one can infer the energy of the particle as it entered the calorimeter.
 
 \subsection*{Hadronic Calorimeter}
@@ -68,9 +68,9 @@ The muon spectrometer encircles all other detectors to capture muons which barel
 The figure \ref{fig:particles_in_detector} shows where which type of particles are stopped in the different detectors.
 \begin{figure}
     \centering
-    \includegraphics[width=1\textwidth]{particles_in_detector}
-        \caption[]{Paths and energy deposits of particle types in the subdetectors. Adopted from \citep{Pequenao:1505342}.}
-    \label{fig:particles_in_detector}    
+    \includegraphics[width=1\textwidth]{particle-shower}
+    \caption[]{Paths and energy deposits of particle types in the subdetectors. Adopted from \citep{Guth:2765038}.}
+    \label{fig:particles_in_detector}
 \end{figure}
 
 \section{Data Acquisition}
