@@ -17,8 +17,8 @@ The energy and mass resolution calculated from these clusters can be improved by
 \subsection{Track-CaloClusters}
 Instead of using the energy measurement of the tracks as for \acp{pfo} for \ac{tcc} the calorimeter energy measurement is used and complemented by the angular information of the tracks. \ac{tcc} was developed for high \pt jets since the resolution in the calorimeters improves with larger momentum since the calorimeter deposits become more localized.
  
-\subsection{Unified Flow Object}
-Particle Flow benefits from the momentum/energy resolution of the \ac{id} compared to the calorimeters especially at low momenta. Although this gradually breaks down with increasing momentum and also with particle density because the matching of tracks to clusters becomes more and more ambiguous in that case. \ac{ufo} jets are designed to make the most of both reconstruction algorithms by choosing the algorithm that performs best for the situation at hand.
+% \subsection{Unified Flow Object}
+% Particle Flow benefits from the momentum/energy resolution of the \ac{id} compared to the calorimeters especially at low momenta. Although this gradually breaks down with increasing momentum and also with particle density because the matching of tracks to clusters becomes more and more ambiguous in that case. \ac{ufo} jets are designed to make the most of both reconstruction algorithms by choosing the algorithm that performs best for the situation at hand.
 
 \subsection{Anti-$k_t$ Jet Clustering Algorithm}\label{sec:anti_kt}
 The definition of a jet is not unique as it depends on the size and direction of the cone and thus how many particles are included. For this the Anti-$k_t$ algorithm \citep{cacciari2008anti} clusters aforementioned four vector objects in this section into cone-shaped jets. It starts with calculating the distances between all four vector objects $i,j$ that are considered
@@ -29,14 +29,15 @@ and the distance to the beam
 \begin{equation}
     d_{iB}=\frac{1}{p_{T,i}^{2}},
 \end{equation}
-with the transverse momenta of the particles $p_{T,i},p_{T,j}$ their angular distance $\Delta R$ as of equation \ref{eq:delta_R} and a chosen radius parameter $R$. The algorithm combines objects $i,j$ into a new four vector for the smallest distance $d_{ij}$. Since this distance is small for large transverse momentum \pt and small angular distance $\Delta R_{ij}$ the algorithm prefers these accordingly. After combining two object the algorithm starts for as long as $d_{iB}<d_{ij}$. Thus it stops once particles outside of the chosen radius would be added.
+with the transverse momenta of the particles $p_{T,i},p_{T,j}$ their angular distance $\Delta R$ as of equation \ref{eq:delta_R} and a chosen radius parameter $R$. The algorithm combines objects $i,j$ into a new four vector for the smallest distance $d_{ij}$. Since this distance is small for large transverse momentum \pt and small angular distance $\Delta R_{ij}$ the algorithm prefers these accordingly. After combining two object the algorithm starts for as long as $d_{iB}<d_{ij}$. Thus it stops once particles outside of the chosen radius would be added. In \ac{atlas} jets with  jets with a radius parameter of $R=0.4 (1.0)$ are usually denoted Small-R (Large-R) jets.
+
 
 \subsection{Variable Radius Jets}\label{sec:vr_jets}
 In very boosted regimes mit large momenta individual jets can overlap. In order to still reconstruct them individually a variable radius for the $R$ parameter from the Anti-$k_t$ Jet Clustering Algorithm of section \ref{sec:anti_kt} is used
 \begin{equation}
     R\rightarrow R_\text{eff}(\pt)=\frac{\rho}{\pt}
 \end{equation}
-It becomes therefore dependent on the transverse momentum and is controlled by a parameter $\rho$ so that the jet size decreases with \pt. Variable Radius jets are reconstruct from tracks only. 
+It becomes therefore dependent on the transverse momentum and is controlled by a parameter $\rho$ so that the jet size decreases with \pt. Variable Radius jets are reconstructed from tracks only. 
 
 \section{$b$-tagging}\label{sec:b_tagging}
 This analysis has four $b$-quarks in the final state and therefore relies on their identification.  Fortunately, due to their large mass $\tau\sim\qty{1.5}{ps}$, $b$ quarks have a long lifetime compared to other quarks resulting in a path length of about $c\tau\sim\qty{450}{\micro m}$. Even though they do not reach the \ac{id} a secondary vertex is formed at the point where the $b$-hadron decays which can be inferred from the tracks. Such tracks have a large impact parameter that is defined as the distance of closest approach in the $r-\phi$ projection in transverse $d_0$ and longitudinal $z_o$ direction \citep{aad2008atlas} as illustrated in figure \ref{fig:secondary_vertex}b. Other methods for determining the secondary vertex attempt to connect the tracks of the $b$-hadron decay with those of a subsequent $c$-hadron decay by aligning the tracks in Fig. \ref{fig:secondary_vertex}a and also by deriving the mutual origins of the tracks \citep{ATL-PHYS-PUB-2017-013}. 
@@ -52,3 +53,43 @@ This analysis has four $b$-quarks in the final state and therefore relies on the
   \caption{(a) Example decay involving a $b$-jet (\hexbox{8AB2D3}) and jets from light flavor hadrons (\hexbox{C5C6C6}). (b) Impact parameters defined for tracks as distance of closest approach to the primary vertex for (\mbox{\color[HTML]{009245}{$d_0$}}) in the $r-\phi$-plane and for (\mbox{\color[HTML]{EC1C25}{$z_0$}}) along the z axis. (a) Adopted from \cite{Guth:2765038}.}
   \label{fig:secondary_vertex}
 \end{figure} 
+
+\section{Calibration}
+Every measuring instrument must be calibrated. The main causes of differences between properties of jets deduced from reconstruction compared to their true properties include \citep{atlas2011jet}:
+\begin{itemize}
+  \item Smaller calorimeter response to non-\ac{em} components of hadron showers than to \ac{em} components
+  \item Dead material: energy is deposited in non-instrumented areas
+  \item Particles from the jet are outside of the reconstruction cone
+  \item Energy deposition below the noise threshold
+  \item Particles from pile-up 
+  \item Leakage: particles are not stopped inside the calorimeter (punch-through)
+\end{itemize}
+There are several algorithms employed to mitigate these effects and also account for the detector geometry fully described in \citep{atlas2021jet}. 
+
+\subsection{Pilup mitigation}
+\subsubsection*{Small-R Jets}
+At a first step contributions from pileup are reduced by subtracting the median transverse momentum density $\rho=\pt / A$ of jets found within $\eta<2.0$ multiplied by the active area of the jet $A_T$ as defined in \textsc{FastJet} \citep{cacciari2012fastjet}. Another reduction observes that the pileup corrected \pt is a function of the number of primary Vertices $N_\text{PV}$ and the mean number of interactions $\mu$ so that the pile up corrected transverse momentum reads 
+\begin{equation}
+\pt^\text{corr}=\pt-\rho A_T -\alpha(N_\text{PV}-1)-\beta\mu
+\end{equation}
+with parameters $\alpha$ and $\beta$. The effect of the correction is shown in figure \ref{fig:jet_pt_correction}.
+\begin{figure}
+  \centering
+  \includegraphics[width=1\textwidth]{jet_pt_correction}
+      \caption[]{\pt correction to remove the \pt dependence of the jet at different $\eta$ for the \pt dependent on (left) the number of primary vertices and (right) average number of interactions of the collision.}
+  \label{fig:jet_pt_correction}    
+\end{figure}
+\subsubsection*{Large-R Jets}
+To reduce pileup contributions in large R jets a technique called groomming is applied. For this a large R jet is reclustered into $R=0.2$ subjets for which only the ones are kept that have at least $\pt>\qty[]{5}{\percent}$ of the original large R jet \pt.
+
+\subsection{\ac{jes}, $\eta$ and mass}
+\begin{figure}
+  \centering
+  \includegraphics[width=1\textwidth]{jet_eta_mismatch}
+      \caption[]{Jet energy response $E_\text{reco}/E_\text{truth}$ for different detector $\eta$ values (left) before and after applying (right) the calibration. Adopted from \citep{jet_eta_calib}.}
+  \label{fig:jet_eta_mismatch}    
+\end{figure}
+A clear mismatch between reconstructed and \ac{mc} truth two jet events can be seen in the left plot of figure \ref{fig:jet_eta_mismatch} measured in $\eta$ bins. From this a smooth correction function of $\eta$ is derived and applied 
+
+
+Scale factors extracted from this response function are then applied to correct for differences of reconstructed jets in $E_\text{reco}/E_\text{truth}$, $\eta_\text{reco}-\eta_\text{truth}$ and also for large R-jets 

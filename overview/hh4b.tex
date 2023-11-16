@@ -43,19 +43,23 @@ This analysis uses the full run 2 data taken by \ac{atlas} between 2015 and 2018
 
 \ac{mc} generation in \ac{atlas} is done in three steps. At first at parton level events are generated with \textsc{MadGraph} (v.2.7.3p3.atlas6) \citep{alwall2014automated}. The output of this tool are stochastically sampled four vectors of the final states of the process of interest.
 
-Afterwards \textsc{Pythia8} \citep{Sjostrand:2014zea} simulates the hadronization process. Because of the scaling behavior of \ac{qcd} described in \ref{sec:renormalization} partons inside a proton cannot be modeled since the perturbation ansatz of \ref{sec:qft} breaks down. However the partons momentum fraction can be deduced by measuring \ac{pdf} at some energy scale. For this the \textsc{NNPDF3.0nlo} is used by \textsc{Pythia8}. For normalization the \ac{sm} \ac{vbf} cross-section is multiplied by the 4b branching ratio $\mathcal{B}(4b)=0.3392$.
+Afterwards \textsc{Pythia8} \citep{Sjostrand:2014zea} simulates the hadronization process. Because of the scaling behavior of \ac{qcd} described in \ref{sec:renormalization} partons inside a proton cannot be modeled since the perturbation ansatz of \ref{sec:qft} breaks down. However the partons momentum fraction can be deduced from \acp{pdf} by measuring them at some energy scale. For this the \textsc{NNPDF3.0nlo} \ac{pdf} is used by \textsc{Pythia8}. For normalization the \ac{sm} \ac{vbf} cross-section is multiplied by the 4b branching ratio $\mathcal{B}(4b)=0.3392$.
 
 
 \red{add samples linear combination}
-
+% https://www.overleaf.com/project/638e1930f926cd21d5264259
 % linear combination
 % Unfortunately, MC generation is computationally expensive and time-consuming. As such, only1443
 % a handful of MC simulation samples for only a handful of coupling values are actually produced, and a1444
 % sample combination technique is employed to model the signal hypothesis across the coupling parameter1445
 % space
+% https://trexfitter-docs.web.cern.ch/trexfitter-docs/model_building/expression/
+% https://gitlab.cern.ch/hh4b/hh4b-boosted-vbf-limits/-/blob/main/create_workspaces/configs/k2V_parameterized_BDT_decorXbb.config?ref_type=heads#L285-331
 
 \section{Analysis objects}
+This section presents the details of the reconstruction for the objects used in the analysis. 
 \subsection{Large Radius Jets}
+
 \subsection{$X\rightarrow bb$ tagger}
 
 % This work focuses on the boosted regime of the 4 $b$-quark final state. If jets are very boosted two $b$-jets can overlap and are reconstruct as variable radius jets inside a larger jet.
@@ -70,6 +74,9 @@ Afterwards \textsc{Pythia8} \citep{Sjostrand:2014zea} simulates the hadronizatio
 
 \subsection{Small Radius Jets}
 \section{Analysis Strategy}
+To fully capture the boosted topology of two jets that contain 2 collimated $b$-jets each so called Large R jets are used. These are formed with a radius parameter of $R=1.0$ for the Anti-$k_t$ clustering algorithm described in \ref{sec:anti_kt}.
+
+region definitions
 \subsection{Trigger}
 \subsection{Event selection}
 \subsubsection{Kinematic Selection}
