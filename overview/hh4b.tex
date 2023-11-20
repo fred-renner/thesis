@@ -56,23 +56,44 @@ Afterwards \textsc{Pythia8} \citep{Sjostrand:2014zea} simulates the hadronizatio
 % https://trexfitter-docs.web.cern.ch/trexfitter-docs/model_building/expression/
 % https://gitlab.cern.ch/hh4b/hh4b-boosted-vbf-limits/-/blob/main/create_workspaces/configs/k2V_parameterized_BDT_decorXbb.config?ref_type=heads#L285-331
 
-\section{Analysis objects}
-This section presents the details of the reconstruction for the objects used in the analysis. 
-\subsection{Large Radius Jets}
-Large 
-\subsection{$X\rightarrow bb$ tagger}
+\section{Analysis Selection}
+This section describes the event selection and analysis strategy. A detailed description of used reconstructed physical objects is described in chapter \ref{ch:reco}. 
 
-% This work focuses on the boosted regime of the 4 $b$-quark final state. If jets are very boosted two $b$-jets can overlap and are reconstruct as variable radius jets inside a larger jet.
-% as explained in section \ref{sec:vr_jets}.
+\subsection{Trigger}
+As outlined in section \ref{sec:tdaq} events need to be preselected/triggered. The \ac{hlt} applied in this analysis selects events with a large transverse energy $E_\text{T}$ large R jet. The definition slightly changed over the data taking years as can be seen in table \ref{tab:trigger}.
+\begin{table}[htbp]
+    \centering
+    \caption{Trigger selections per data taking year and minimum requirements on transverse energy $E_\text{T}$ and mass $m$ on the large R jet. }
+    \begin{tabular}{ccc}
+        \hline
+        Year & $E_\text{T}$ & $m$   \\ \hline
+        2015 & $>360$       & 0     \\
+        2016 & $>420$       & 0     \\
+        2017 & $>420$       & $>35$ \\
+        2018 & $>420$       & $>40$ \\ \hline
+    \end{tabular}
+    \label{tab:trigger}
+\end{table}
+\red{Figure \ref{fig:trigger_eff} depicts the efficiencies for the different triggers that become fully efficient at about $\pt>\qty[]{420}{GeV}$}.
+\begin{figure}
+    \centering
+    \includegraphics[width=1\textwidth]{trigger_eff}
+    \caption[]{\red{TODO MYSELF}}
+    \label{fig:trigger_eff}
+\end{figure}
 
-% xbb tagger citation
-% \citep{ATL-PHYS-PUB-2020-019}
-% https://cds.cern.ch/record/2724739/files/ATL-PHYS-PUB-2020-019.pdf
-% https://cds.cern.ch/record/2777811/files/ATL-PHYS-PUB-2021-035.pdf
-% https://cds.cern.ch/record/2866601/files/ATL-PHYS-PUB-2023-021.pdf
-% modeling
+\subsection{Large R jets}
+To fully capture the boosted Higgs pair topology two large $R=1.0$ jets clustered with the Anti-$k_t$ algorithm from \acp{tcc} are used as described in section \ref{sec:jets}. These enclose the two boosted collimated $b$-jets in each of them to form the Higgs candidates. If there are several large-$R$ jets the two with the highest \pt are chosen. To be fully efficient on the trigger the leading large-$R$ jet is required to have $\pt>\qty[]{450}{GeV}$. In general for decay products to be inside a jet approximately holds $R\approx 2m/\pt$. For a Higgs mass of \qty[]{125}{GeV} to be contained inside a large-$R$ jet the Higgs candidate therefore must have $\pt\gtrsim \qty[]{250}{GeV}$ and is thus chosen as the \pt requirement on the sub-leading Higgs candidate. Additionally both Higgs candidates have a mass requirement $m>\qty[]{50}{GeV}$ to reduce \ac{qcd} background. 
+
+% As a minimum quality criterion large R jets are then required to have $200<p_{\text{T}}<3000$ GeV, $50<m<600$ GeV and $|\eta|<2$.
+
+The identification of $b$-jets inside the selected large-$R$ jets is done with the $X\rightarrow bb$ tagger explained in section \ref{sec:xbb}. The top fraction $f_\text{top}$ is set to 0.25 and the \qty[]{60}{\percent} Higgs efficiency \ac{wp} is required.
 
 \subsection{Small Radius Jets}
+Small radius jets are reconstructed as 
+jvt tight 
+
+
 \section{Analysis Strategy}
 To fully capture the boosted topology of two jets that contain 2 collimated $b$-jets each so called Large R jets are used. These are formed with a radius parameter of $R=1.0$ for the Anti-$k_t$ clustering algorithm described in \ref{sec:anti_kt}.
 
