@@ -20,7 +20,7 @@ $\sigma_\text{vbf HH}^\text{SM}=\qty[]{1.73}{fb}$ at \ac{nnnlo} \citep{PhysRevD.
 \begin{figure}
     \centering
     \includegraphics[width=0.7\textwidth]{branching_fraction_hh}
-    \caption[]{Contributions of final states represented by area for a pair of Higgs \citep{Abbott:2708599}}
+    \caption[]{Contributions of final states represented by area for a pair of Higgs. Adopted from \citep{ATL-COM-PHYS-2020-083}.}
     \label{fig:branching_fraction_hh}
 \end{figure}
 Figure \ref{fig:branching_fraction_hh} reveals that an interesting channel is the final state with the largest branching fraction of about \qty[]{34}{percent} consisting of four $b$-quarks. However as this a fully hadronic final state it comes with the challenge of large \ac{qcd} backgrounds.
@@ -56,8 +56,8 @@ Afterwards \textsc{Pythia8} \citep{Sjostrand:2014zea} simulates the hadronizatio
 % https://trexfitter-docs.web.cern.ch/trexfitter-docs/model_building/expression/
 % https://gitlab.cern.ch/hh4b/hh4b-boosted-vbf-limits/-/blob/main/create_workspaces/configs/k2V_parameterized_BDT_decorXbb.config?ref_type=heads#L285-331
 
-\section{Analysis Selection}
-This section describes the event selection and analysis strategy. A detailed description of used reconstructed physical objects is described in chapter \ref{ch:reco}. 
+\section{Analysis strategy}
+This section describes the event selection and analysis strategy. A detailed description of used reconstructed physical objects is described in chapter \ref{ch:reco}.
 
 \subsection{Trigger}
 As outlined in section \ref{sec:tdaq} events need to be preselected/triggered. The \ac{hlt} applied in this analysis selects events with a large transverse energy $E_\text{T}$ large R jet. The definition slightly changed over the data taking years as can be seen in table \ref{tab:trigger}.
@@ -74,32 +74,116 @@ As outlined in section \ref{sec:tdaq} events need to be preselected/triggered. T
     \end{tabular}
     \label{tab:trigger}
 \end{table}
-\red{Figure \ref{fig:trigger_eff} depicts the efficiencies for the different triggers that become fully efficient at about $\pt>\qty[]{420}{GeV}$}.
-\begin{figure}
-    \centering
-    \includegraphics[width=1\textwidth]{trigger_eff}
-    \caption[]{\red{TODO MYSELF}}
-    \label{fig:trigger_eff}
-\end{figure}
+Previous studies have shown that they become fully efficient at about $\pt>\qty[]{420}{GeV}$ \citep{ATL-COM-PHYS-2020-083,ATL-COM-PHYS-2023-033}.
+% \red{Figure \ref{fig:trigger_eff} depicts the efficiencies for the different triggers that become fully efficient at about $\pt>\qty[]{420}{GeV}$}.
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=1\textwidth]{trigger_eff}
+%     \caption[]{\red{TODO MYSELF}}
+%     \label{fig:trigger_eff}
+% \end{figure}
 
-\subsection{Large R jets}
-To fully capture the boosted Higgs pair topology two large $R=1.0$ jets clustered with the Anti-$k_t$ algorithm from \acp{tcc} are used as described in section \ref{sec:jets}. These enclose the two boosted collimated $b$-jets in each of them to form the Higgs candidates. If there are several large-$R$ jets the two with the highest \pt are chosen. To be fully efficient on the trigger the leading large-$R$ jet is required to have $\pt>\qty[]{450}{GeV}$. In general for decay products to be inside a jet approximately holds $R\approx 2m/\pt$. For a Higgs mass of \qty[]{125}{GeV} to be contained inside a large-$R$ jet the Higgs candidate therefore must have $\pt\gtrsim \qty[]{250}{GeV}$ and is thus chosen as the \pt requirement on the sub-leading Higgs candidate. Additionally both Higgs candidates have a mass requirement $m>\qty[]{50}{GeV}$ to reduce \ac{qcd} background. 
+\subsection{Large Radius Jets}
+To fully capture the boosted Higgs pair topology two large $R=1.0$ jets clustered with the Anti-$k_t$ algorithm from \acp{tcc} are used as described in section \ref{sec:jets}. These enclose the two boosted collimated $b$-jets in each of them to form the Higgs candidates. If there are several large-$R$ jets the two with the highest \pt are chosen. To be fully efficient on the trigger the leading large-$R$ jet is required to have $\pt>\qty[]{450}{GeV}$. In general for decay products to be inside a jet approximately holds $R\approx 2m/\pt$ with the mass $m$ and tranverse momentum of the parent particle \citep{ATL-COM-PHYS-2020-083}. For a Higgs mass of \qty[]{125}{GeV} to be contained inside a large-$R$ jet the Higgs candidate therefore must have $\pt\gtrsim \qty[]{250}{GeV}$ and is thus chosen as the \pt requirement on the sub-leading Higgs candidate. Additionally both Higgs candidates have a mass requirement $m>\qty[]{50}{GeV}$ to reduce \ac{qcd} background.
 
 % As a minimum quality criterion large R jets are then required to have $200<p_{\text{T}}<3000$ GeV, $50<m<600$ GeV and $|\eta|<2$.
 
 The identification of $b$-jets inside the selected large-$R$ jets is done with the $X\rightarrow bb$ tagger explained in section \ref{sec:xbb}. The top fraction $f_\text{top}$ is set to 0.25 and the \qty[]{60}{\percent} Higgs efficiency \ac{wp} is required.
 
 \subsection{Small Radius Jets}
-Small radius jets are reconstructed as 
-jvt tight 
+Two small radius $R=0.4$ jets are required for the \ac{vbf} signature and are referred to as \ac{vbf} jets in the following. They are also reconstructed with the anti-$k_t$ algorithm and as \acp{pfo} as described in \ref{sec:jets}. The tight \ac{wp} for the \ac{jvt} ad the LooseBad \ac{wp}for the event cleaning are applied both described in \ref{sec:calibration}. Small-$R$ jets $j$ are selected for $\pt>\qty[]{20}{GeV}$ and $|\eta|<4.5$ and are required to be outside of the Higgs candidate large-$R$ jets $J$ by imposing $\Delta R(J,j) > 1.4$. \red{Further cuts applied on the jet system optimized on significance are $|\Delta\eta(j,j)| > 3$ and $m_{jj} > \qty{1}{TeV}$.}
+
+\subsection{Kinematic Regions}\label{sec:kinematic_regions}
+\ac{sr},\ac{vr} and \ac{cr} are explored and optimized in previous analyses \citep{aad2023search,ATL-COM-PHYS-2023-033} in the $m_{H1},m_{H2}$ plane and are defined as
+\begin{equation}
+    SR=X_{hh} =  \sqrt{\left(\frac{m_{H1} - \SI{124}{\GeV}}{1500 / m_{H1}}\right)^{2} + \left(\frac{m_{H2} - \SI{117}{\GeV}}{1900 / m_{H2}}\right)^{2}} < 1.6,
+\end{equation}
+\begin{equation}
+    \label{VR_Xhh}
+    VR =  \sqrt{\left(\frac{m_{H1} - \SI{124}{\GeV}}{0.1 \ln(m_{H1})}\right)^{2} + \left(\frac{m_{H2} - \SI{117}{\GeV}}{0.1 \ln(m_{H2})}\right)^{2}} < 100,
+\end{equation}
+and
+\begin{equation}
+    \label{CR_Xhh}
+    CR = \sqrt{\left(\frac{m_{H1} - \SI{124}{\GeV}}{0.1 \ln(m_{H1})}\right)^{2} + \left(\frac{m_{H2} - \SI{117}{\GeV}}{0.1 \ln(m_{H2})}\right)^{2}} > 100  \ \& \ < 170.
+\end{equation}
+Figure depicts the regions in the $m_{H1},m_{H2}$ plane on the \ac{sm} signal sample
+
+\begin{figure}
+    \centering
+    \subfigure[]{\includegraphics[width=.49\textwidth]{m_hh_plane}}
+    \subfigure[]{\includegraphics[width=.49\textwidth]{massplane_SR_opening}}
+    \caption[]{\red{REDO}}
+    \label{fig:m_hh_plane}
+\end{figure}
+\subsection{Cutflow}
+\red{TODO, also fine like that?}
+\red{
+    \begin{table}[ht]
+        \centering
+        \begin{tabular}{lccc}
+            \hline  \hline
+            Selection                          & Event           & Fraction [\%] & Total Fraction [\%] \\
+            \hline  \hline
+            Initial                            & 16854036422.000 &               &                     \\
+            Preselections (MNT + Jet Cleaning) & 670573995.000   & 100.000       & 100.000             \\
+            PassTrigBoosted                    & 63944638.000    & 9.536         & 9.536               \\
+            PassTwoFatJets                     & 57510800.000    & 89.938        & 8.576               \\
+            PassTwoHbbJets                     & 12875.000       & 0.0223        & <0.001              \\
+            PassVBFJets                        & 5762.000        & 44.753        & <0.001              \\
+            PassFatJetPt                       & 3902.000        & 67.720        & <0.001              \\
+            PassVBFCut                         & 314.000         & 8.047         & <0.001              \\
+            \hline  \hline
+        \end{tabular}
+        \caption{Cut-flow table for data before signal region cut}
+        \label{cutflow_dsid502970}
+    \end{table}
+}
 
 
-\section{Analysis Strategy}
-To fully capture the boosted topology of two jets that contain 2 collimated $b$-jets each so called Large R jets are used. These are formed with a radius parameter of $R=1.0$ for the Anti-$k_t$ clustering algorithm described in \ref{sec:anti_kt}.
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{lccc}
+        \hline  \hline
+        Selection                          & Event    & Fraction [\%] & Total Fraction [\%] \\
+        \hline  \hline
+        Initial                            & 1475.226 &               &                     \\
+        Preselections (MNT + Jet Cleaning) & 547.960  & 100.000       & 100.000             \\
+        PassTrigBoosted                    & 20.926   & 3.819         & 3.819               \\
+        PassTwoFatJets                     & 14.141   & 67.576        & 2.581               \\
+        PassTwoHbbJets                     & 5.353    & 37.852        & 0.977               \\
+        PassVBFJets                        & 2.243    & 41.903        & 0.409               \\
+        PassFatJetPt                       & 1.408    & 62.793        & 0.257               \\
+        PassVBFCut                         & 0.148    & 10.539        & 0.027               \\
+        PassSR                             & 0.097    & 65.484        & 0.018               \\
+        OverlapRemoval                     & 0.059    & 61.200        & 0.011               \\
+        \hline  \hline
+    \end{tabular}
+    \caption{Cut-flow table for DSID = 600463}
+    \label{cutflow_dsid600463}
+\end{table}
 
-region definitions
-\subsection{Trigger}
-\subsection{Event selection}
-\subsubsection{Kinematic Selection}
-\subsection{Background Estimation}
+\subsection{Background Estimation and Validation}
+Since the final state of this analysis is hadronic it remains an infeasible task to estimate the contributions from the plethora of \ac{qcd} processes that contribute to the background. Therefore the well established ABCD method is employed to derive a data-driven background estimate \citep{buttinger2018background,PhysRevD.103.035021}. Its is based on the idea to use two independent variables e.g. $f$ and $g$ to define four orthogonal regions A,B,C and D as illustrated in figure \ref{fig:abcd} so that for some combination of the ratio of the event yields in the regions hold
+\begin{equation}
+    \frac{N_A}{N_B}=\frac{N_C}{N_D}.
+\end{equation}
+\begin{figure}
+    \centering
+    \includegraphics[width=.7\textwidth]{abcd}
+    \caption[]{Illustration of four orthogonal regions A,B,C and D defined by two variables $f$ and $g$ in the horizontal and signal and background yields in the vertical dimension. Adopted from \citep{PhysRevD.103.035021}.}
+    \label{fig:abcd}
+\end{figure}
+By rearranging the equation for the unknown $N_A$ an estimate for the background of the signal region can be derived from the other known quantities that lie in the regions dominated by the background. This approach only works well if the change in shape of the background in Figure \ref{fig:abcd} does not vary greatly between C to D and A to B. Therefore the method should always be tested in another region to proof its validity.
 
+In this analysis the two orthogonal variables are defined via the amount of $X\rightarrow bb$ double $bb$-tagged large-$R$ jets and between the kinematic regions of the \ac{sr} and \ac{cr} defined in \ref{sec:kinematic_regions}. This gives the four orthogonal regions shown in table \ref{tab:abcd}
+\begin{table}[htbp]
+    \centering
+    \caption{Four orthogonal region definitions for the ABCD method}
+    \begin{tabular}{|c|c|}
+        \hline
+        2 Higgs tagged large-$R$ jets in SR & 2 Higgs tagged large-$R$ jets in CR \\ \hline
+        1 Higgs tagged large-$R$ jets in SR & 1 Higgs tagged large-$R$ jets in CR \\ \hline
+    \end{tabular}
+    \label{tab:abcd}
+\end{table}

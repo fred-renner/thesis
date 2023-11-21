@@ -12,7 +12,7 @@ As explained in section \ref{sec:renormalization} quarks cannot be observed indi
 For that purpose the deposited energy of these decays in the calorimeters are grouped three-dimensionally by combining calorimeter cells into so-called topoclusters. These clusters are seeded from cells that display a signal stronger than four times the standard deviation of detector noise $4\sigma_\mathrm{noise}$ and is complemented by $2\sigma_\mathrm{noise}$ cells.
 
 \subsection{Particle Flow Object}
-The energy and mass resolution calculated from these clusters can be improved by geometrically matching tracks to the clusters. If a track is matched successfully to a topocluster the energy of the track and the position in the calorimeter is used to infer the energy of the particle that created the track. From this expected energy all associated cluster cell energies are subtracted and the remnant is removed from the expected energy if the deviation corresponds to energies of the order of typical fluctuations. Such combination of a topocluster and a track are called \ac{pfo} \citep{aaboud2017jet}. Sometimes energy of one track ends up in several clusters. For this the Particle Flow algorithm combines the most probable clusters with the track. Topoclusters without matched tracks are assumed to be neutral particles as they do not leave a trace in the \ac{id}. \acp{pfo} not matched to the \ac{pv} are removed to reduce the contribution from pileup.
+The energy and mass resolution calculated from these clusters can be improved by geometrically matching tracks to the clusters. If a track is matched successfully to a topocluster the energy of the track and the position in the calorimeter is used to infer the energy of the particle that created the track. From this expected energy all associated cluster cell energies are subtracted and the remnant is removed from the expected energy if the deviation corresponds to energies of the order of typical fluctuations. Such combination of a topocluster and a track are called \ac{pfo} \citep{aaboud2017jet}. Sometimes energy of one track ends up in several clusters. For this the Particle Flow algorithm combines the most probable clusters with the track. Topoclusters without matched tracks are assumed to be neutral particles as they do not leave a trace in the \ac{id}. \acp{pfo} not matched to the \ac{pv} are removed to reduce the contribution from pileup. In particular it improves reconstruction of lower \pt clusters since the \ac{id} has a much better resolution.
 
 \subsection{Track-CaloClusters}
 Instead of using the energy measurement of the tracks as for \acp{pfo} for \ac{tcc} the calorimeter energy measurement is used and complemented by the angular information of the tracks. \ac{tcc} was developed for high \pt jets since the resolution in the calorimeters improves with larger momentum since the calorimeter deposits become more localized.
@@ -71,7 +71,7 @@ The $X\rightarrow bb$ tagger is a feed-forward \ac{nn} \citep{ATL-PHYS-PUB-2020-
 \end{equation}
 $f_\text{top}$ denotes the top fraction with regards to the multijet output. Again from the evaluation a score can be defined with the Higgs tagging efficiency.
 
-\section{Calibration}
+\section{Jet Calibration}\label{sec:calibration}
 Every measuring instrument must be calibrated. The main causes of differences between properties of jets deduced from reconstruction compared to their true properties include \citep{atlas2011jet}:
 \begin{itemize}
   \item Non-Compensation: smaller calorimeter response of non-\ac{em} particles of hadron showers than to \ac{em}
@@ -86,10 +86,10 @@ There are several algorithms employed to mitigate these effects and also account
 \subsection{Pilup mitigation}
 When bunches are collided not only one but rather several proton-proton interactions are measured. Methods to disentangle several interactions are described below and improved over time so the mean number of interactions also called pile up increased during the data taking period as can be seen in figure \ref{fig:pileup}.
 \begin{figure}
-    \centering
-    \includegraphics[width=0.5\textwidth]{mu_2015_2018}
-    \caption[]{Pile up profiles for run 2 data taking periods \citep{pileup}.}
-    \label{fig:pileup}
+  \centering
+  \includegraphics[width=0.5\textwidth]{mu_2015_2018}
+  \caption[]{Pile up profiles for run 2 data taking periods \citep{pileup}.}
+  \label{fig:pileup}
 \end{figure}
 
 \subsubsection*{Small-R Jets}
@@ -126,6 +126,9 @@ This step mainly corrects the jet \pt without changing the mean energy of the je
 
 \subsection{In situ calibration}
 At the final step differences between data and simulation are corrected for in \pt. These variations stem from imperfect simulations of detector materials and the modeling of the involved physics processes. For this well known physics processes are used and correction factors are extracted in \pt. This step is only applied to data.
+
+\subsection{Jet Event Cleaning}
+Another method to reduce background is called event cleaning. It removes the whole event if jets are found that where generated by out-of-time pileup, cosmic rays or beam-induced backgrounds by applying a set of quality criteria to variables describing the jet profile \citep{ATLAS-CONF-2015-029}.
 
 \subsection{Mass correction for Large-R jets}
 The mass of a jet is calculated from the energy deposits in calorimeter clusters $i$ and their transverse momentum as
