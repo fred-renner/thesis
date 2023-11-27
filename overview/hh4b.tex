@@ -91,7 +91,7 @@ To fully capture the boosted Higgs pair topology two large $R=1.0$ jets clustere
 The identification of $b$-jets inside the selected large-$R$ jets is done with the $X\rightarrow bb$ tagger explained in section \ref{sec:xbb}. The top fraction $f_\text{top}$ is set to 0.25 and the \qty[]{60}{\percent} Higgs efficiency \ac{wp} is required.
 
 \subsection{Small Radius Jets}
-Two small radius $R=0.4$ jets are required for the \ac{vbf} signature and are referred to as \ac{vbf} jets in the following. They are also reconstructed with the anti-$k_t$ algorithm and as \acp{pfo} as described in \ref{sec:jets}. The tight \ac{wp} for the \ac{jvt} ad the LooseBad \ac{wp}for the event cleaning are applied both described in \ref{sec:calibration}. Small-$R$ jets $j$ are selected for $\pt>\qty[]{20}{GeV}$ and $|\eta|<4.5$ and are required to be outside of the Higgs candidate large-$R$ jets $J$ by imposing $\Delta R(J,j) > 1.4$. \red{Further cuts applied on the jet system optimized on significance are $|\Delta\eta(j,j)| > 3$ and $m_{jj} > \qty{1}{TeV}$.}
+Two small radius $R=0.4$ jets are required for the \ac{vbf} signature and are referred to as \ac{vbf} jets in the following. They are also reconstructed with the anti-$k_t$ algorithm and as \acp{pfo} as described in \ref{sec:jets}. The tight \ac{wp} for the \ac{jvt} ad the LooseBad \ac{wp}for the event cleaning are applied both described in \ref{sec:calibration}. Small-$R$ jets $j$ are selected for $\pt>\qty[]{20}{GeV}$ and $|\eta|<4.5$ and are required to be outside of the Higgs candidate large-$R$ jets $J$ by imposing $\Delta R(J,j) > 1.4$. \red{Further cuts applied on the jet system optimized on Asimov significance are $|\Delta\eta(j,j)| > 3$ and $m_{jj} > \qty{1}{TeV}$.}
 
 \subsection{Kinematic Regions}\label{sec:kinematic_regions}
 \ac{sr},\ac{vr} and \ac{cr} are explored and optimized in previous analyses \citep{aad2023search,ATL-COM-PHYS-2023-033} in the $m_{H1},m_{H2}$ plane and are defined as
@@ -163,7 +163,10 @@ Figure depicts the regions in the $m_{H1},m_{H2}$ plane on the \ac{sm} signal sa
     \label{cutflow_dsid600463}
 \end{table}
 
-\subsection{Background Estimation and Validation}
+\red{\subsection{Analysis Optimization}
+present here the used NN, retrieved from neos from chapter blah 
+}
+\subsection{Background Estimation}
 Since the final state of this analysis is hadronic it remains an infeasible task to estimate the contributions from the plethora of \ac{qcd} processes that contribute to the background. Therefore the well established ABCD method is employed to derive a data-driven background estimate \citep{buttinger2018background,PhysRevD.103.035021}. Its is based on the idea to use two independent variables e.g. $f$ and $g$ to define four orthogonal regions A,B,C and D as illustrated in figure \ref{fig:abcd} so that for some combination of the ratio of the event yields in the regions hold
 \begin{equation}
     \frac{N_A}{N_B}=\frac{N_C}{N_D}.
@@ -176,14 +179,20 @@ Since the final state of this analysis is hadronic it remains an infeasible task
 \end{figure}
 By rearranging the equation for the unknown $N_A$ an estimate for the background of the signal region can be derived from the other known quantities that lie in the regions dominated by the background. This approach only works well if the change in shape of the background in Figure \ref{fig:abcd} does not vary greatly between C to D and A to B. Therefore the method should always be tested in another region to proof its validity.
 
-In this analysis the two orthogonal variables are defined via the amount of $X\rightarrow bb$ double $bb$-tagged large-$R$ jets and between the kinematic regions of the \ac{sr} and \ac{cr} defined in \ref{sec:kinematic_regions}. This gives the four orthogonal regions shown in table \ref{tab:abcd}
+In this analysis the two orthogonal variables are defined via the amount of $X\rightarrow bb$ Higgs tagged large-$R$ jets denoted as Xbb and the kinematic regions of the \ac{sr} and \ac{cr} defined in \ref{sec:kinematic_regions}.
 \begin{table}[htbp]
     \centering
     \caption{Four orthogonal region definitions for the ABCD method}
     \begin{tabular}{|c|c|}
         \hline
-        2 Higgs tagged large-$R$ jets in SR & 2 Higgs tagged large-$R$ jets in CR \\ \hline
-        1 Higgs tagged large-$R$ jets in SR & 1 Higgs tagged large-$R$ jets in CR \\ \hline
+        2 Xbb in CR & 2 Xbb in SR \\ \hline
+        1 Xbb in CR & 1 Xbb in SR \\ \hline
     \end{tabular}
     \label{tab:abcd}
 \end{table}
+This gives the four orthogonal regions shown in table \ref{tab:abcd} so that the background in the \ac{sr} is estimated with a weight extracted from the \ac{cr}
+\begin{equation}
+    N_\text{SR}^\text{2Higgs}=\frac{N_\text{CR}^\text{2Higgs}}{N_\text{CR}^\text{1Higgs}} N_\text{SR}^\text{1Higgs} = w_\text{CR} N_\text{SR}^\text{1Higgs}.
+\end{equation}
+
+\red{question is if we put the validation already here, conflict with neos description, beacuse would need to explain the nn used before to understand validation}
