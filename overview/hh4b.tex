@@ -57,7 +57,7 @@ Afterwards \textsc{Pythia8} \citep{Sjostrand:2014zea} simulates the hadronizatio
 % https://gitlab.cern.ch/hh4b/hh4b-boosted-vbf-limits/-/blob/main/create_workspaces/configs/k2V_parameterized_BDT_decorXbb.config?ref_type=heads#L285-331
 
 \section{Analysis strategy}
-This section describes the event selection and analysis strategy. A detailed description of used reconstructed physical objects is described in chapter \ref{ch:reco}.
+This section describes the event selection and analysis strategy. A detailed description of reconstructed physical objects used is described in chapter \ref{ch:reco}.
 
 \subsection{Trigger}
 As outlined in section \ref{sec:tdaq} events need to be preselected/triggered. The \ac{hlt} applied in this analysis selects events with a large transverse energy $E_\text{T}$ large R jet. The definition slightly changed over the data taking years as can be seen in table \ref{tab:trigger}.
@@ -88,10 +88,10 @@ To fully capture the boosted Higgs pair topology two large $R=1.0$ jets clustere
 
 % As a minimum quality criterion large R jets are then required to have $200<p_{\text{T}}<3000$ GeV, $50<m<600$ GeV and $|\eta|<2$.
 
-The identification of $b$-jets inside the selected large-$R$ jets is done with the $X\rightarrow bb$ tagger explained in section \ref{sec:xbb}. The top fraction $f_\text{top}$ is set to 0.25 and the \qty[]{60}{\percent} Higgs efficiency \ac{wp} is required.
+The identification of $b$-jets inside the selected large-$R$ jets is done with the $X\rightarrow bb$ tagger explained in section \ref{sec:xbb}. The top fraction $f_\text{top}$ is set to 0.25 and the \qty[]{60}{\percent} Higgs efficiency \ac{wp} is required. Studies with the more inclusive \qty[]{60}{\percent} \ac{wp} displayed slightly worse limit results \citep{ATL-COM-PHYS-2023-033}.
 
 \subsection{Small Radius Jets}
-Two small radius $R=0.4$ jets are required for the \ac{vbf} signature and are referred to as \ac{vbf} jets in the following. They are also reconstructed with the anti-$k_t$ algorithm and as \acp{pfo} as described in \ref{sec:jets}. The tight \ac{wp} for the \ac{jvt} ad the LooseBad \ac{wp}for the event cleaning are applied both described in \ref{sec:calibration}. Small-$R$ jets $j$ are selected for $\pt>\qty[]{20}{GeV}$ and $|\eta|<4.5$ and are required to be outside of the Higgs candidate large-$R$ jets $J$ by imposing $\Delta R(J,j) > 1.4$. \red{Further cuts applied on the jet system optimized on Asimov significance are $|\Delta\eta(j,j)| > 3$ and $m_{jj} > \qty{1}{TeV}$.}
+Two small radius $R=0.4$ jets are required for the \ac{vbf} signature and are referred to as \ac{vbf} jets in the following. They are also reconstructed with the anti-$k_t$ algorithm and as \acp{pfo} as described in \ref{sec:jets}. The tight \ac{wp} for the \ac{jvt} ad the LooseBad \ac{wp}for the event cleaning are applied both described in \ref{sec:calibration}. Small-$R$ jets $j$ are selected for $\pt>\qty[]{20}{GeV}$ and $|\eta|<4.5$ and are required to be outside of the Higgs candidate large-$R$ jets $J$ by imposing $\Delta R(J,j) > 1.4$. \red{Further cuts applied on the jet system optimized on significance are $|\Delta\eta(j,j)| > 3$ and $m_{jj} > \qty{1}{TeV}$.}
 
 \subsection{Kinematic Regions}\label{sec:kinematic_regions}
 \ac{sr},\ac{vr} and \ac{cr} are explored and optimized in previous analyses \citep{aad2023search,ATL-COM-PHYS-2023-033} in the $m_{H1},m_{H2}$ plane and are defined as

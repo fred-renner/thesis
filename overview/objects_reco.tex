@@ -55,17 +55,17 @@ Such tracks have a large impact parameter that is defined as the distance of clo
   \label{fig:secondary_vertex}
 \end{figure}
 
-\subsection{DL1r Tagger}
-The results of the secondary vertex- and impact parameter finding algorithm as well as the jet kinematics are then passed into a deep feed-forward neural network called DL1r which is trained to distinguish $b$-jets from jets of other flavors \citep{atlas2022atlas}. The outputs nodes for flavor classification ($p_\mathrm{b}, p_\mathrm{c}, p_\mathrm{light}$) are further combined into a single discriminating score variable
+\subsection{DL1d Tagger}
+The results of the secondary vertex- and impact parameter finding algorithm as well as the jet kinematics are then passed into a deep feed-forward neural network called DL1d which is trained to distinguish $b$-jets from jets of other flavors \citep{atlas2022atlas}. The outputs nodes for flavor classification ($p_\mathrm{b}, p_\mathrm{c}, p_\mathrm{light}$) are further combined into a single discriminating score variable
 \begin{equation}
-  D_\mathrm{DL1r}=\ln\left(\frac{p_b}{f_c \cdot p_c + (1-f_c)\cdot p_\mathrm{light} }\right).
+  D_\mathrm{DL1d}=\ln\left(\frac{p_b}{f_c \cdot p_c + (1-f_c)\cdot p_\mathrm{light} }\right).
 \end{equation}
 $f_c$ is the fraction of charm jets in the background and can be used to tune the importance of the different background classes ($\sum f_\mathrm{bkg} =1$). When evaluating the \ac{nn} a value for the discriminating variable can be derived that corresponds to a $b$-jet selection efficiency which is then applied in physics analysis.
 
 \subsection{$X\rightarrow bb$ Tagger}\label{sec:xbb}
 For a collision event where the decay products consists of $b$-jets with large transverse momentum they can overlap. For such cases \ac{vr} track jets from section \ref{sec:vr_jets} can be reconstructed from inside large-$R$ jets that encompass both $b$-jets. The \ac{vr} jets are required to have $\rho=\qty[]{30}{GeV}$ and an allowed radius parameter range of $R_\text{min}=0.02$ and $R_\text{max}=0.4$. These parameters are optimized for Higgs to $bb$ decays \citep{ATL-PHYS-PUB-2017-010} and the \ac{vr} jets are not allowed to overlap.
 
-The $X\rightarrow bb$ tagger is a feed-forward \ac{nn} \citep{ATL-PHYS-PUB-2020-019} that gets as inputs the \pt and $\eta$ of the large-$R$ jet and the output from DL1r for up to three \ac{vr} track jets. Similar to DL1r a discriminant is calculated from the output scores for Higgs, top and multijet decay of the event passed to the \ac{nn}
+The $X\rightarrow bb$ tagger is a feed-forward \ac{nn} \citep{ATL-PHYS-PUB-2020-019} that gets as inputs the \pt and $\eta$ of the large-$R$ jet and the output from DL1d for up to three \ac{vr} track jets. Similar to DL1d a discriminant is calculated from the output scores for Higgs, top and multijet decay of the event passed to the \ac{nn}
 \begin{equation}
   D_{\text{Xbb}}=\ln\left({\frac{p_{\text{Higgs}}}{f_{\text{top}}\cdot p_{\text{top}}+(1-f_{\text{top}})\cdot p_{\text{multijet}}}}\right).
 \end{equation}
@@ -81,7 +81,7 @@ Every measuring instrument must be calibrated. The main causes of differences be
   \item Particles from pile-up
   \item Leakage: particles are not stopped inside the calorimeter (punch-through)
 \end{itemize}
-There are several algorithms employed to mitigate these effects and also account for the detector geometry fully described in \citep{atlas2021jet}.
+To mitigate these effects there are several algorithms employed that also account for the detector geometry as described in detail in \citep{atlas2021jet}. Reference objects are chosen from well-understood physics processes that leave a distinct signature in the detector like dijet events or decays of $Z$-bosons or photons.
 
 \subsection{Pilup mitigation}
 When bunches are collided not only one but rather several proton-proton interactions are measured. Methods to disentangle several interactions are described below and improved over time so the mean number of interactions also called pile up increased during the data taking period as can be seen in figure \ref{fig:pileup}.
@@ -118,10 +118,9 @@ Due to the large Area of large-R jets they are particularly susceptible to pileu
   \caption[]{Jet energy response $E_\text{reco}/E_\text{truth}$ for different detector $\eta$ values (left) before and after applying (right) the calibration. Adopted from \citep{jet_eta_calib}.}
   \label{fig:jet_eta_mismatch}
 \end{figure}
-A clear mismatch between reconstructed and \ac{mc} truth two jet events can be seen in the left plot of figure \ref{fig:jet_eta_mismatch} measured in $\eta$ bins. From this a continuous correction function in $\eta$ is derived and applied to correct for differences in jet energy, $\eta$ and mass. This is exemplified in the right hand plot of figure \ref{fig:jet_eta_mismatch}.
+A clear mismatch between reconstructed and \ac{mc} truth two jet events can be seen in the left plot of figure \ref{fig:jet_eta_mismatch} measured in $\eta$ bins. From this a continuous correction function in $\eta$ is derived and applied to correct for differences in jet energy, $\eta$ and mass \citep{atlas2011jet,Aaboud:2019aa}. This is exemplified in the right hand plot of figure \ref{fig:jet_eta_mismatch}.
 
 \subsection{Global Sequential Calibration}
-
 This step mainly corrects the jet \pt without changing the mean energy of the jet. It corrects for non-compensation, dead material and leakage effects by using observables like the charged particle fraction, energy fractions in different calorimeter layers, track-related quantities and the muon activity behind the calorimeter. Corrections are again derived in \pt and $\eta$ and are applied sequentially.
 
 \subsection{In situ calibration}
