@@ -13,18 +13,51 @@ Jets are calibrated using well known reference objects as described in section \
 
 \section{$X\rightarrow bb$ Tagger Uncertainties}
 The \ac{nn} of the $X\rightarrow bb$ tagger was trained using simulations leading to potential discrepancies in selection efficiencies between observed data and simulation. Calibration is conducted with $Z(\rightarrow b\overline{b})+$~jets and $Z(\rightarrow b\overline{b})+\gamma$ applying the same methodology as in \citep{ATL-PHYS-PUB-2021-035}. However as of this analysis the $b$-tagging algorithm for the \ac{vr} track jets has been updated to the DL1d algorithm described in section \ref{sec:b_tagging}. The differences between \ac{mc} and data are measured in large-$R$ jet \pt and the extracted scale factors and their corresponding combined systematic and statistical uncertainties are shown in figure \ref{fig:xbb_sf}.
-\begin{figure} 
+\begin{figure}
     \centering
-        \subfigure[]{\includegraphics[width=.49\textwidth]{SF_Xbb50_internal_09March2023}}
-        \subfigure[]{\includegraphics[width=.49\textwidth]{SF_Xbb60_internal_09March2023}} 
-\caption[]{Derived scale factors in large-$R$ jet \pt for the \textbf{(a)} \qty[]{50}{\percent} and \textbf{(b)} \qty[]{60}{\percent} \ac{wp} from the calibration of the $X\rightarrow bb$ tagger.}
-\label{fig:xbb_sf}    
+    \subfigure[]{\includegraphics[width=.49\textwidth]{SF_Xbb50_internal_09March2023}}
+    \subfigure[]{\includegraphics[width=.49\textwidth]{SF_Xbb60_internal_09March2023}}
+    \caption[]{Derived scale factors in large-$R$ jet \pt for the \textbf{(a)} \qty[]{50}{\percent} and \textbf{(b)} \qty[]{60}{\percent} \ac{wp} from the calibration of the $X\rightarrow bb$ tagger.}
+    \label{fig:xbb_sf}
 \end{figure}
 
 \section{Theory Uncertainties}
+% sagen jetzt wie wir die xs kalkuliert haben und welche unsicherheiten dabei entstehen
+The cross-section calculation for some process initiated by a proton proton collision calculated at $n$-th order has some functional form \citep{unc_recipe}
+\begin{equation}
+    \sigma^{(n)} = PDF(x_1, \mu_F)  PDF(x_2, \mu_F) \hat{\sigma}^{(n)}(x_1,x_2,\mu_R).
+    \label{eq:xs_unc_1}
+\end{equation}
+with the \acfp{pdf} carrying momentum fraction $x_{1,2}$ of the partons and the factorization scale $\mu_F$ named after the assumption the the cross-sections of the initial particle can be caluclated by factorizing it in its partons \citep{halzen1984introductory}. The cross-section at the end of this equation is the calculable part $\hat{\sigma}^{(n)}$ with renormalization scale $\mu_R$ described in section \ref{sec:renormalization} and is expanded to a desired order in the strong coupling constant $\alpha_s$ with the usual \ac{qft} ansatz outlined in section \ref{sec:qft}
+\begin{equation}
+    \hat{\sigma}^{(n)} = \alpha_s \hat{\sigma}^{(0)} + \alpha_s^2 \hat{\sigma}^{(1)} + \ldots + \alpha_s^n \hat{\sigma}^{(n)} + \mathcal{O}(\alpha_s^{n+1}).
+    \label{eq:xs_unc_2}
+\end{equation}
+The modeling of the cross-sections via \acp{pdf} is necessary since the approximation of the perturbation ansatz of section \ref{sec:qft} breaks down for low energy scales $Q^2$ as described in section \ref{sec:renormalization} for which the theory would be necessary to hold to describe the partons inside a proton. However similar to renormalization a scaling behavior can be derived which allows to deduce an estimate of the \acp{pdf} $PDF(x,Q^2)$ by measuring it at a different energy scale $Q^2$ to then extrapolate it to a desired energy scale. The equations that allow that also do an expansion to a desired order in $\alpha_s$ and are named after the inventors DGLAP equations \citep{halzen1984introductory}.
 
-\section{Background Uncertainties}
 
+scale variations
+pdf müssen experimentell bestimmt werden
+alpha(s) auch experimentell determined 
+
+% dglap verwurschtelt momentum fraction und alpha_s(q^2)
+
+
+
+
+% The scale uncertainty, ∆scale, results from a variation of the factorization and renormalization
+% scales (I.5.3) by a factor of 2 keeping μF = μR, as indicated above, and the combined PDF⊕αs uncer-
+% tainty ∆PDF⊕αs is obtained following the PDF4LHC recipe [35].
+
+
+% for crosssection unc \citep{de2016arxiv}
+
+
+% As it can be seen from the above there are 3 main sources of uncertainty in pQCD calculations:
+% https://twiki.cern.ch/twiki/bin/view/AtlasProtected/PmgSystematicUncertaintyRecipes#Normalisation_uncertainties
+\subsection{}
+
+\section{Background Modelling Uncertainties}
 
 
 
@@ -34,12 +67,10 @@ The \ac{nn} of the $X\rightarrow bb$ tagger was trained using simulations leadin
 theory errors
 methodische errors, bkg unc
 
-this analysis driven by stats
 
 modelling errors
 
-statistical unc sqrt(w) blah
+Statistical errors are taken into account as $\sqrt(n)$ with $n$
 
 luminosity
 
-\section{Reconstruction Uncertainties}
