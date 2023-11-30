@@ -22,40 +22,43 @@ The \ac{nn} of the $X\rightarrow bb$ tagger was trained using simulations leadin
 \end{figure}
 
 \section{Theory Uncertainties}
-% sagen jetzt wie wir die xs kalkuliert haben und welche unsicherheiten dabei entstehen
-The cross-section calculation for some process initiated by a proton proton collision calculated at $n$-th order has some functional form \citep{unc_recipe}
+The cross-section calculation for some process initiated by a proton proton collision calculated at $n$-th order has a functional form \citep{unc_recipe}
 \begin{equation}
-    \sigma^{(n)} = PDF(x_1, \mu_F)  PDF(x_2, \mu_F) \hat{\sigma}^{(n)}(x_1,x_2,\mu_R).
+    \sigma^{(n)} = PDF(x_1, \mu_F)  PDF(x_2, \mu_F) \hat{\sigma}^{(n)}(x_1,x_2,\mu_R),
     \label{eq:xs_unc_1}
 \end{equation}
-with the \acfp{pdf} carrying momentum fraction $x_{1,2}$ of the partons and the factorization scale $\mu_F$ named after the assumption the the cross-sections of the initial particle can be caluclated by factorizing it in its partons \citep{halzen1984introductory}. The cross-section at the end of this equation is the calculable part $\hat{\sigma}^{(n)}$ with renormalization scale $\mu_R$ described in section \ref{sec:renormalization} and is expanded to a desired order in the strong coupling constant $\alpha_s$ with the usual \ac{qft} ansatz outlined in section \ref{sec:qft}
+with the \acfp{pdf} carrying momentum fraction $x_{1,2}$ of the partons and the factorization scale $\mu_F$. This scale is named after the assumption that the cross-sections of the initial particle can be calculated by factorizing it in its parton contributions \citep{halzen1984introductory}. The term $\hat{\sigma}^{(n)}$ in equation \ref{eq:xs_unc_1} is the calculable part of the cross-section at renormalization scale $\mu_R$ as described in section \ref{sec:renormalization} and is expanded to a desired order $n$ in the strong coupling constant $\alpha_s$ with the usual \ac{qft} ansatz outlined in section \ref{sec:qft}
 \begin{equation}
     \hat{\sigma}^{(n)} = \alpha_s \hat{\sigma}^{(0)} + \alpha_s^2 \hat{\sigma}^{(1)} + \ldots + \alpha_s^n \hat{\sigma}^{(n)} + \mathcal{O}(\alpha_s^{n+1}).
     \label{eq:xs_unc_2}
 \end{equation}
-The modeling of the cross-sections via \acp{pdf} is necessary since the approximation of the perturbation ansatz of section \ref{sec:qft} breaks down for low energy scales $Q^2$ as described in section \ref{sec:renormalization} for which the theory would be necessary to hold to describe the partons inside a proton. However similar to renormalization a scaling behavior can be derived which allows to deduce an estimate of the \acp{pdf} $PDF(x,Q^2)$ by measuring it at a different energy scale $Q^2$ to then extrapolate it to a desired energy scale. The equations that allow that also do an expansion to a desired order in $\alpha_s$ and are named after the inventors DGLAP equations \citep{halzen1984introductory}.
+Modelling cross-sections via \acp{pdf} is necessary since the approximation of the perturbation ansatz of section \ref{sec:qft} breaks down for low energy scales $Q^2$ as described in section \ref{sec:renormalization} which is the energy scale for which the approximation would need to hold to describe the partons inside a proton. However similar to renormalization a scaling behavior can be derived which allows to deduce an estimate of the \acp{pdf} by measuring it at a some energy scale $Q^2$ to extrapolate it to another. The equations enabling this are also expanded in $\alpha_s$ to a desired order and are knwon as DGLAP equations \citep{halzen1984introductory}. Three main sources of uncertainty arise in this calculation described in the following.
 
+\subsubsection*{Scale Variations}
+$\alpha_s$ is expanded to some order $n$ in the cross-section calculation and as well in estimating the \acp{pdf}. To account for missing higher orders corrections of theses expansions scale variations of the renormalization and factorization scales are performed pairwise $\{\mu_\text{r},\mu_\text{f}\}\ \times \{0.5,0.5\}, \{1,0.5\}, \{0.5,1\}, \{1,1\}, \{2,1\}, \{1,2\}, \{2,2\}$. For the cross-section calculation this accounts essentially for the term $\mathcal{O}(\alpha_s^{n+1})$ in equation \ref{eq:xs_unc_2}. The envelope that gives the largest variation is taken as the scale uncertainty.
 
-scale variations
-pdf müssen experimentell bestimmt werden
-alpha(s) auch experimentell determined 
+\subsubsection*{\ac{pdf} Uncertainties}
+\acp{pdf} need to be deduced from experiment and thus come by themselves with experimental uncertainties. Further uncertainties arise from the functional forms assumed for the \acp{pdf}.
 
-% dglap verwurschtelt momentum fraction und alpha_s(q^2)
+\subsubsection*{$\alpha_s$ Uncertainties}
+$\alpha_s$ is also experimentally deduced at the scale of the $Z$ mass which is subject to uncertainties. In all perturbative calculations it is truncated at some order that needs to be accounted for. 
 
+The uncertainties on $\alpha_s$ and the \acp{pdf} are both estimated by varying $\alpha_s$. Even though there correlation is not strong they are usually applied combined \citep{unc_recipe}.
 
+\subsection{Uncertainty on HH cross section}
+The cross-section calculation for the \ac{vbf} Higgs pair production process has associated uncertainties for the scale variations $^{+0.03\%}_{-0.04\%}$ and the combined \ac{pdf}+$\alpha_s$ uncertainty is $\pm 2.1\%$ \citep{de2016arxiv}. 
 
+\subsection{Uncertainty on Acceptance}
+Theoretical uncertainties on the final acceptance are evaluated on \ac{mc} simulations for scale variations and \acp{pdf} + $\alpha_s$ \red{TODO, although shouldnt matter...} 
 
-% The scale uncertainty, ∆scale, results from a variation of the factorization and renormalization
-% scales (I.5.3) by a factor of 2 keeping μF = μR, as indicated above, and the combined PDF⊕αs uncer-
-% tainty ∆PDF⊕αs is obtained following the PDF4LHC recipe [35].
+% pdf alpha_s easy TODO
+\subsection{Parton Shower}
+\textsc{Pythia 8} and \textsc{Herwig 7} are compared. \red{TODO}
 
+parton shower 
+\subsection{Branching Ratio Uncertainty}
 
-% for crosssection unc \citep{de2016arxiv}
-
-
-% As it can be seen from the above there are 3 main sources of uncertainty in pQCD calculations:
-% https://twiki.cern.ch/twiki/bin/view/AtlasProtected/PmgSystematicUncertaintyRecipes#Normalisation_uncertainties
-\subsection{}
+\subsection{Reweighting Uncertainties}
 
 \section{Background Modelling Uncertainties}
 
