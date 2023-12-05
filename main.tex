@@ -40,6 +40,7 @@
 \renewcommand{\dateseparator}{.}
 \usepackage{feynmf}
 \usepackage{fancyhdr} 
+\usepackage{appendix} 
 
 \pagestyle{fancy}
 \renewcommand{\chaptermark}[1]{\markboth{\thechapter.\space#1}{}} 
@@ -108,21 +109,21 @@
 \begin{document}
 
 \pagenumbering{gobble}
-\include{sections/titlepage}
-
-\newpage 
-\quad
-\thispagestyle{empty}
-
-\newpage 
-\thispagestyle{empty}
-\include{sections/abstract}
+\include{front_back_matter/titlepage}
 
 \newpage
 \quad
 \thispagestyle{empty}
 
-\setcounter{tocdepth}{1}
+\newpage
+\thispagestyle{empty}
+\include{front_back_matter/abstract}
+
+\newpage
+\quad
+\thispagestyle{empty}
+
+% \setcounter{tocdepth}{1}
 \tableofcontents
 
 % \newpage
@@ -136,9 +137,9 @@
 
 
 
-\newpage 
+\newpage
 \thispagestyle{empty}
-\quad  
+\quad
 
 \newpage
 \thispagestyle{empty}
@@ -153,30 +154,36 @@
 % \part{Overview}
 % \include{overview/sm}
 % \include{overview/detector}
+% \part{Methodology}
 % \include{overview/objects_reco}
-\include{overview/hh4b}
-\include{overview/neos}
+% \include{overview/hh4b}
+% \include{overview/neos}
 \include{overview/systematics}
+\include{overview/statistics}
+\part{Results}
 % \include{results/smt}
+\include{results/hh4b}
 
 
-% \include{sections/statistics}
-% \include{sections/experiment}
 
-\appendix
-\include{front_back_matter/acronyms}
+\begin{appendix}
+    \appendixpage
+    \addappheadtotoc
+    \input{front_back_matter/acronyms}
+    \input{appendix/cutflow}
+\end{appendix}
 
 %-------------------------------------------------------------
 
-    \thispagestyle{empty}
-    \cleardoublepage
-    
-    \phantomsection
-    \bibliography{bib} 
-    
-\cleardoublepage    
+\thispagestyle{empty}
+\cleardoublepage
+
+\phantomsection
+\bibliography{bib}
+
+\cleardoublepage
 \pagestyle{schluss}
-\include{sections/selbststaendig}
+\include{front_back_matter/selbststaendig}
 
 
 \end{document}

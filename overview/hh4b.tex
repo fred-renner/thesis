@@ -1,6 +1,6 @@
 \chapter{The HH$\rightarrow$4b analysis}
 
-The search for the exact shape of the Higgs potential is an interesting endeavor as its not only  directly related to \ac{ewsb} but also could solve some fundamental questions about the nature of the universe as described in section \ref{sec:beyond_sm}. Since the Higgs interacts via Yukawa couplings from equation \ref{eq:yukawa_term} the coupling strengths for fermions are directly proportional to their mass and thus the Higgs couples most strongly to heavy particles. The main production modes at the \ac{lhc} are shown in figure \ref{fig:main_production_processes}. All couplings in the following are scaled with respect to their \ac{sm} values and are denoted with $\kappa_\mathrm{c} = c/c_\mathrm{sm}$ so that $\kappa_\mathrm{c}=1$ represents the \ac{sm} value of some coupling $c$.
+The search for the exact shape of the Higgs potential is an interesting endeavor as its not only  directly related to \ac{ewsb} but also to fundamental questions about the nature of the universe as described in section \ref{sec:beyond_sm}. Since the Higgs interacts via Yukawa couplings from equation \ref{eq:yukawa_term} the coupling strengths for fermions are directly proportional to their mass and thus the Higgs couples most strongly to heavy particles. The main production modes at the \ac{lhc} are shown in figure \ref{fig:main_production_processes}. All couplings in the following are scaled with respect to their \ac{sm} values and are denoted with $\kappa_\mathrm{c} = c/c_\mathrm{sm}$ so that $\kappa_\mathrm{c}=1$ represents the \ac{sm} value of some coupling $c$.
 
 The dominant Higgs pair production processes are shown in figure \ref{fig:main_production_processes}. The first two \ac{ggf} diagrams (a) and (b) have a cross-section of
 $\sigma_\text{vbf HH}^\text{SM}=\qty[]{31.05}{fb}$ calculated at a center of mass energy of \qty[]{13}{TeV} at \ac{nnlo} \citep{Grazzini_2018} while the \ac{vbf} processes (c), (d) and (e) of figure \ref{fig:main_production_processes} have a production cross-section of
@@ -105,7 +105,7 @@ and
     \label{CR_Xhh}
     CR = \sqrt{\left(\frac{m_{H1} - \SI{124}{\GeV}}{0.1 \ln(m_{H1})}\right)^{2} + \left(\frac{m_{H2} - \SI{117}{\GeV}}{0.1 \ln(m_{H2})}\right)^{2}} > 100  \ \& \ < 170.
 \end{equation}
-Figure depicts the regions in the $m_{H1},m_{H2}$ plane on the \ac{sm} signal sample
+Figure \ref{fig:m_hh_plane} depicts the regions in the $m_{H1},m_{H2}$ plane on the \ac{sm} signal sample.
 
 \begin{figure}
     \centering
@@ -114,57 +114,8 @@ Figure depicts the regions in the $m_{H1},m_{H2}$ plane on the \ac{sm} signal sa
     \caption[]{\red{REDO}}
     \label{fig:m_hh_plane}
 \end{figure}
-\subsection{Cutflow}
-\red{TODO, also fine like that?}
-\red{
-    \begin{table}[ht]
-        \centering
-        \begin{tabular}{lccc}
-            \hline  \hline
-            Selection                          & Event           & Fraction [\%] & Total Fraction [\%] \\
-            \hline  \hline
-            Initial                            & 16854036422.000 &               &                     \\
-            Preselections (MNT + Jet Cleaning) & 670573995.000   & 100.000       & 100.000             \\
-            PassTrigBoosted                    & 63944638.000    & 9.536         & 9.536               \\
-            PassTwoFatJets                     & 57510800.000    & 89.938        & 8.576               \\
-            PassTwoHbbJets                     & 12875.000       & 0.0223        & <0.001              \\
-            PassVBFJets                        & 5762.000        & 44.753        & <0.001              \\
-            PassFatJetPt                       & 3902.000        & 67.720        & <0.001              \\
-            PassVBFCut                         & 314.000         & 8.047         & <0.001              \\
-            \hline  \hline
-        \end{tabular}
-        \caption{Cut-flow table for data before signal region cut}
-        \label{cutflow_dsid502970}
-    \end{table}
-}
 
-
-\begin{table}[ht]
-    \centering
-    \begin{tabular}{lccc}
-        \hline  \hline
-        Selection                          & Event    & Fraction [\%] & Total Fraction [\%] \\
-        \hline  \hline
-        Initial                            & 1475.226 &               &                     \\
-        Preselections (MNT + Jet Cleaning) & 547.960  & 100.000       & 100.000             \\
-        PassTrigBoosted                    & 20.926   & 3.819         & 3.819               \\
-        PassTwoFatJets                     & 14.141   & 67.576        & 2.581               \\
-        PassTwoHbbJets                     & 5.353    & 37.852        & 0.977               \\
-        PassVBFJets                        & 2.243    & 41.903        & 0.409               \\
-        PassFatJetPt                       & 1.408    & 62.793        & 0.257               \\
-        PassVBFCut                         & 0.148    & 10.539        & 0.027               \\
-        PassSR                             & 0.097    & 65.484        & 0.018               \\
-        OverlapRemoval                     & 0.059    & 61.200        & 0.011               \\
-        \hline  \hline
-    \end{tabular}
-    \caption{Cut-flow table for DSID = 600463}
-    \label{cutflow_dsid600463}
-\end{table}
-
-\red{\subsection{Analysis Optimization}
-present here the used NN, retrieved from neos from chapter blah 
-}
-\subsection{Background Estimation}
+\subsection{Background Estimation}\label{sec:abcd}
 Since the final state of this analysis is hadronic it remains an infeasible task to estimate the contributions from the plethora of \ac{qcd} processes that contribute to the background. Therefore the well established ABCD method is employed to derive a data-driven background estimate \citep{buttinger2018background,PhysRevD.103.035021}. Its is based on the idea to use two independent variables e.g. $f$ and $g$ to define four orthogonal regions A,B,C and D as illustrated in figure \ref{fig:abcd} so that for some combination of the ratio of the event yields in the regions hold
 \begin{equation}
     \frac{N_A}{N_B}=\frac{N_C}{N_D}.
@@ -190,9 +141,14 @@ In this analysis the two orthogonal variables are defined via the amount of $X\r
 \end{table}
 This gives the four orthogonal regions shown in table \ref{tab:abcd} so that the background in the \ac{sr} is estimated with a weight extracted from the \ac{cr}
 \begin{equation}
-    N_\text{SR}^\text{2Higgs}=\frac{N_\text{CR}^\text{2Higgs}}{N_\text{CR}^\text{1Higgs}} N_\text{SR}^\text{1Higgs} = w_\text{CR} N_\text{SR}^\text{1Higgs}.
+    N_\text{SR}^\text{2Xbb}=\frac{N_\text{CR}^\text{2Xbb}}{N_\text{CR}^\text{1Xbb}} N_\text{SR}^\text{1Xbb} = w_\text{CR} N_\text{SR}^\text{1Xbb}.
 \end{equation}
 
 \red{question is if we put the validation already here, conflict with neos description, beacuse would need to explain the nn used before to understand validation}
 
 \red{studies with a bin-wise trained \ac{nn} didnt gain anything (like in the resolved analysis), but lets put this as well in the results part}
+
+
+\red{\subsection{Analysis Optimization}
+present here the used NN, retrieved from neos from chapter blah 
+}

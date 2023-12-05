@@ -1,19 +1,21 @@
-\section{Statistics}\label{sec:statistics}
+\chapter{Statistics}\label{sec:statistics}
 
-Every scientific investigation starts with a hypothesis that is to be tested empirically. The main objective is to evaluate if the proposed hypothesis agrees or disagrees with observed data, to either accept or reject it against the null-hypothesis. The metric at hand to do so is the p-value that arises within hypothesis testing. 
+Every scientific investigation starts with a hypothesis that is to be tested empirically. The main objective is to evaluate if the proposed hypothesis agrees or disagrees with observed data, to either accept or reject it against the null-hypothesis which represents a baseline scenario where only known phenomena are presumed to occur. 
 
-In the field of high energy physics, a framework based on likelihood statistics has been developed specifically for this task. This section begins to lay out the mathematical fundamentals of the approach and explains its implementation in \textsc{pyhf} \citep{pyhf,pyhf_joss}. The following is based on \citep{cowan2011asymptotic,behnke2013data,pyhf}.
+A key metric that quantifies this is the p-value that arises within hypothesis testing. Test results of an experiment follow some probability density function. Assuming some hypothesis the p-value is the integrated probability for test results compatible with this hypothesis and ergo measuring the compatibility of the observation to the assumption. In other words if the experiment where to be repeated it gives the probability that the result favors the proposed hypothesis.
+
+In the field of high energy physics a framework has been developed specifically for this task. This section begins to lay out the mathematical fundamentals of the approach and explains its implementation in \textsc{pyhf} \citep{pyhf,pyhf_joss}. The following is based on \citep{cowan2011asymptotic,behnke2013data,pyhf}.
  
-\subsection{Building the likelihood}\label{sec:likelihood}
-The statistical model must take into account how compatible are the theoretical predictions with the observed collision events. This can be described by a likelihood $L(\bm{x} | \bm{\phi})$ which is in in general a probability for an observation $\bm{x}$ under a given set of parameters $\bm{\phi}$. Through $\bm{\phi}$ the theoretical predictions are incorporated into the probability calculation. Given that this is a counting experiment, the preferred tool of analysis are bins of a histogram $\bm{h}=(h_1,...,h_N)$.
+\section{Building the likelihood}\label{sec:likelihood}
+The statistical model needs to reflect the compatibility of predictions with the observed collision events. This can be quantified by a likelihood $L(\bm{x} | \bm{\phi})$ which is a probability for an observation $\bm{x}$ under a given set of parameters $\bm{\phi}$ that govern the predictions. Given that this is a counting experiment bins of a histogram $\bm{h}=(h_1,...,h_N)$ are the main tool of analysis.
 
-It is useful to subdivide a measurement $\bm{x}=(\bm{n},\bm{a})$ further into observable histograms $\bm{n}$, (e.g. the invariant mass of a particle) and auxiliary measurement histograms $\bm{a}$ that help to constrain the model. Additionally, in the context of hypothesis testing it is useful to split the set of parameters $\bm{\phi}=(\bm{\psi},\bm{\Theta})$ into so-called parameters of interest $\bm{\psi}$ and nuisance parameters $\bm{\Theta}$. For this subsection it is instructive to consider only one parameter of interest, the signal strength $\mu$. 
+The observation can be subdivided $\bm{x}=(\bm{n},\bm{a})$ into observable histograms $\bm{n}$ and auxiliary measurements. Observable histograms could be e.g. the invariant mass of a particle and auxiliary measurement histograms $\bm{a}$ are mainly uncertainties that help to constrain the model. Additionally, in the context of hypothesis testing it is useful to split the set of parameters $\bm{\phi}=(\bm{\psi},\bm{\Theta})$ into so-called parameters of interest $\bm{\psi}$ and nuisance parameters $\bm{\Theta}$. For this subsection it is instructive to consider only one parameter of interest, the signal strength $\mu$. 
 
 The bin contents can then be expressed in terms of the amount of signal $s_i(\bm{\Theta})$ and background $b_i(\bm{\Theta})$ in bin $i$ that depend on the nuisance parameters. The prediction (expectation value) of the histogram bins of the observable $n_i$ can then be expressed as 
 \begin{equation} \label{eq:n_i}
     \langle n_i(\mu,\bm{\Theta})\rangle = \mu s_i(\bm{\Theta}) +b_i(\bm{\Theta}). 
 \end{equation}
-Similarly, for auxiliary measurement bins $a_i$ their expectation value can be calculated from functions $u_i(\bm{\Theta})$ that also depend on the nuisance parameters and help to constrain the model
+Similarly, for auxiliary measurement bins $a_i$ their expectation value can be calculated from functions $u_i(\bm{\Theta})$ which are explained in section \ref{sec:histfactory_model} that also depend on the nuisance parameters and help to constrain the model
 \begin{equation} \label{eq:a_i}
     \langle a_i(\bm{\Theta}) \rangle = u_i(\bm{\Theta}).
 \end{equation}
@@ -35,7 +37,7 @@ The last product can also be thought of penalizing the likelihood if e.g. an aux
 \end{equation}
 The denominator is the unconditional maximum likelihood estimation so that $\hat{\mu}$ and $\hat{\bm{\Theta}}$ both are free to vary to maximize $L$, whereas the numerator is the found maximum likelihood conditioned on some chosen $\mu$ and the set of nuisance parameters $\hat{\hat{\bm{\Theta}}}$ that maximize the likelihood for that particular $\mu$. This definition gives $0 \leq \lambda \leq 1$. For a $\lambda \approx 1$ the hypothesized value of $\mu$ shows good agreement to the Poissonian model.
 
-\subsection{From test statistic to p-value}
+\section{From test statistic to p-value}
 For this subsection $\mu$ can be a set of parameters of interest (defined above as $\bm{\psi}$) to be consistent with the usage in the literature. To test for alternative hypotheses it is useful to transform the profile likelihood into a test statistic $t_{\mu}$ 
 \begin{equation}
     t_{\mu}=-2\log \lambda(\mu).
@@ -74,7 +76,7 @@ In the scientific community a widely accepted threshold for this is a p-value of
     \label{fig:test_stat_example}    
 \end{figure}
 
-\subsection{The CL$_s$ value}\label{sec:cls}
+\section{The CL$_s$ value}\label{sec:cls}
 
 Particle physicists are usually interested in two things when making statistical tests for the discovery of new phenomena: how well is the modeling of backgrounds (things we know) and whether there is evidence in the observations for a new phenomenon. This means one needs to test two hypotheses: a background only ($b$) and a signal plus background ($s+b$) hypothesis. Each will result in a p-value of their own. For example, $p_{b}=0$ would mean that the backgrounds are perfectly reflected by the observations and a $p_{s+b} < 0.05$ could be a sign of e.g. new physics. To combine these two metrics into a single score, particle physicists came up with the pseudo Confidence Level/p-value called CL$_s$ incorporating also the goodness of the modeling of the backgrounds 
 \begin{equation}
@@ -96,7 +98,7 @@ Intuitively the numerator is again just the value for the alternative hypothesis
 
 
 
-\subsection{The HistFactory model}
+\section{The \textsc{HistFactory} model}\label{sec:histfactory_model}
 
 A model used widely to build a likelihood as described in section \ref{sec:likelihood} is called HistFactory \citep{cranmer2012histfactory} and is implemented within \textsc{pyhf} \citep{pyhf}. This section is based on the introduction to the model within the documentation of \textsc{pyhf}. HistFactory reduces the building of a likelihood into a small number of basic components. For this purpose, it is again useful to think of another splitting of the model parameters $\bm{\phi}$ into
 
@@ -126,13 +128,15 @@ The $n_{cb}$ is the observation and $\nu_{cb}(\freeset,\constrset)$ the predicti
 
 The prediction is a sum of nominal bin counts\footnote{also called rates, like in the definition of a Poisson distribution} $\nu_{scb}^0$ over all samples $s$ (e.g. $t\overline{t}$, multijet-background, etc.). These nominal bin counts are subject to uncertainties. Therefore the bin counts can be varied within the bounds of these uncertainties. However the effect of this modification to the likelihood must be taken into account which is through the constraint terms. These penalize the likelihood the larger the modification to a nominal value becomes. The $\nu_{scb}^0$ are varied with multiplicative $\kappa_{scb}$ and additive modifiers $\Delta_{scb}$ 
 \begin{align}
-    \nu_{cb}\left(\fullset\right) &= \sum_{s\in\mathrm{\,samples}} \nu_{scb}\left(\freeset,\constrset\right)\\ &= \sum_{s\in\mathrm{\,samples}}\underbrace{\left(\prod_{\kappa\in\,\bm{\kappa}} \kappa_{scb}\left(\freeset,\constrset\right)\right)}_{\text{multiplicative modifiers}}\, \Bigg(\nu_{scb}^0\left(\freeset, \constrset\right) + \underbrace{\sum_{\Delta\in\bm{\Delta}} \Delta_{scb}\left(\freeset,\constrset\right)}_{\text{additive modifiers}}\Bigg).
+    \nu_{cb}\left(\fullset\right) &= \sum_{s\in\mathrm{\,samples}} \nu_{scb}\left(\freeset,\constrset\right)\\ 
+    &= \sum_{s\in\mathrm{\,samples}}\underbrace{\left(\prod_{\kappa\in\,\bm{\kappa}} \kappa_{scb}\left(\freeset,\constrset\right)\right)}_{\text{multiplicative modifiers}}\, 
+    \Bigg(\nu_{scb}^0 + \underbrace{\sum_{\Delta\in\bm{\Delta}} \Delta_{scb}\left(\freeset,\constrset\right)}_{\text{additive modifiers}}\Bigg).
 \end{align}
 The different types of modifiers are explained in section \ref{sec:modifiers} and the constraint terms $c_{\singleconstr}$ in section \ref{sec:constraint_terms}.
 
 Why this is useful can be seen by considering one uncertainty to a nominal bin count estimate $\nu_{scb}^0$. By modifying $\nu_{scb}^0$ with a factor $\kappa$ in a way that increases the Poisson probability while the corresponding constraint term $c_\kappa(\kappa)$ stays around 1, it can be beneficial for the goal of maximizing the likelihood. This means the most likely/compatible value to the observed data within the modeling of the uncertainties can be found. 
 
-\subsection{The Modifiers}\label{sec:modifiers}
+\section{The Modifiers}\label{sec:modifiers}
 In HistFactory there are by convention four types $\{\lambda,\mu,\gamma,\alpha\}$ of such multiplicative rate modifiers that are explained in this section. There are \textbf{free rate modifiers $\lambda$ and $\mu$} that affect all bins equally, like the cross-section of a process or the luminosity 
 \begin{equation}
     \nu_{scb}(\mu)=\mu \nu_{scb}^0.
@@ -177,7 +181,7 @@ This is illustrated in fig. \ref{fig:interp_func}(a). For the other ones see e.g
     \label{fig:interp_func}    
 \end{figure}
 
-\subsection{The constraint terms}\label{sec:constraint_terms}
+\section{The constraint terms}\label{sec:constraint_terms}
 Uncertainties are modeled either Gaussian or Poissonian. The Gaussian implementation is straightforward as the uncertainty appears squared in the definition. For the interpolation function the nuisance parameter is scaled to the standard deviation values as described before $\mathrm{Gauss}(\alpha \mid a, \sigma=1)$. 
 
 For a Poissonian constraint to a multiplicative modifier $\gamma_b$, with a nominal (most probable) value $\gamma_0=1$, the Poisson distribution must be scaled with a factor $f$, so it reflects the original bin-count uncertainty $\sigma$. To find the corresponding Poisson distribution all parameters are multiplied by a factor $f$ and is then solved for the one with the desired uncertainty. Since the variance of a Poissonian like eq. \ref{eq:poisson} is  the rate parameter $\lambda$ it follows

@@ -1,12 +1,8 @@
-% The text outlines systematic uncertainties in a physics analysis, distinguishing between Monte Carlo (MC) simulation uncertainties and those from data-driven backgrounds. MC uncertainties, per CP group recommendations, impact only the signal and are propagated accordingly. Luminosity uncertainty, at 0.83%, has minimal analysis impact. Jet-related uncertainties involve energy scale, resolution, and mass, corrected through established in situ methods and additional flavor/topology considerations. The \Xbb tagging efficiency discrepancy between data and MC is calibrated using $Z(\rightarrow \bb)+$ jets events, with overall stable calibration but some fluctuations at the 70% working point.
+\chapter{Systematic Uncertainties}
+Any measurement needs to consider uncertainties in order to determine its validity. In this analysis they can be divided into systematic errors for the reconstructed objects, uncertainties from theoretical calculations, methodological errors and statistical uncertainties and are described in the following.
 
-% The impact of \Xbb uncertainties is significant, affecting all signal events' BDT responses by about +70%/-50%. By de-correlating uncertainties across transverse momentum bins, the analysis's sensitivity is improved. Small-R jet uncertainties are calculated using the JetUncertainties tool, considering various effects like dijet balance and single-particle uncertainties.
-
-% Theoretical uncertainties are considered for cross-section calculations and parton shower modeling. The latter compares \PYTHIA8 and \HERWIGV7 generated samples, applying an interpolation strategy for resonant signals. Reweighting uncertainties from ggF to VBF variations are deemed negligible after validation against simulation.
-
-% Background uncertainties include normalization and shape variations. The normalization factor is derived from control regions with an uncertainty of 12.3% for non-resonant and 14.4% for resonant analyses. Shape uncertainties are estimated from validation regions, applying smoothing techniques like the 2-bin method to mitigate statistical fluctuations. Overall, the text concludes with a systematic summary table indicating the influence of each uncertainty on normalization and shape for both signal and background.
-\chapter{Systematics Uncertainties}
-Any measurement needs to consider uncertainties in order to determine its validity. In this analysis they can be divided into systematic errors for the reconstructed objects, uncertainties from theoretical calculations, methodological errors and statistical uncertainties and are described in the following
+\section{Luminosity}
+The combined integrated luminosity for the years 2015-2018 has an uncertainty of \qty[]{0.83}{\percent} determined with the LUCID-2 detector and is applied. It is applied to the Higgs Pair Signal process and has minimal impact on the analysis.
 
 \section{Jet Uncertainties}
 Jets are calibrated using well known reference objects as described in section \ref{sec:calibration}. These corrections are themselves subject to uncertainties related to detector effects, modeling and statistics leading to corrections of the jet energy and are collectively referred to as \ac{jes} \citep{atlas2021jet,Aaboud:2019aa}. Since simulations of jets have a higher accuracy than observed jets the uncertainties of the simulated jets are broadened to be consistent with the jets observed in the data. These uncertainties are known as \ac{jer}. Furthermore large-$R$ jets are additionally corrected for their mass. The uncer tainties related to this procedure are called \ac{jmr} \citep{ATLAS-CONF-2020-022}.
@@ -53,41 +49,31 @@ Theoretical uncertainties on the final acceptance are evaluated on \ac{mc} simul
 
 % pdf alpha_s easy TODO
 \subsection{Parton Shower}
-\textsc{Pythia 8} and \textsc{Herwig 7} are compared. \red{TODO}
+Uncertainties related to the parton showering are estimated using different modelings from \textsc{Pythia 8} and \textsc{Herwig 7}. The largest deviations from the nominal are used as uncertainties on the Higgs pair process. \red{TODO}
 
 
 \subsection{Branching Ratio Uncertainty}
 The error estimate for the branching ratio takes into account theoretical uncertainties (THU) and parametric uncertainties (PU) that are included in the \ac{sm} calculations. The theoretical uncertainties mainly considers missing higher orders while for the parameters $p$ the four leading non-negligible contributions of $p=\alpha_s,m_c,m_b,m_t$ are considered.
 
-Parametric uncertainties are Gaussian errors and are added in quadrature which ensures unity in the Branching Ratio calculation. Theoretical uncertainties in turn are not Gaussian and would lead to underestimated errors and are therefore are added linearly \citep{de2016arxiv}. By assuming a Higgs mas of \qty[]{125}{GeV} since and considering that there are two Higgs decaying to two $b$-quarks the error on the branching is 
+Parametric uncertainties are Gaussian errors and are added in quadrature which ensures unity in the Branching Ratio calculation. Theoretical uncertainties in turn are not Gaussian and would lead to underestimated errors and are therefore added linearly \citep{de2016arxiv}. By assuming a Higgs mass of \qty[]{125}{GeV} and considering that there are two Higgs decaying to two $b$-quarks the error on the branching is 
 \begin{equation}
 \Delta\text{BR} = 2 \times \left(\Delta\text{BR}(\text{THU}) + \sqrt{\sum\nolimits_{p} \Delta\text{BR}(\text{PU}_{p})^2 }\right) = _{-3.5\%}^{+3.4\%}.
 \end{equation}
 
-\subsection{Reweighting Uncertainties}
-
-\section{Background Modelling Uncertainties}
-
 \section{Statistical Uncertainties}
-As discussed in the chapter on statistics \ref{sec:statistics} the bin content for histograms in this work follows a Poisson distribution thus the standard error for $N$ events is the square root of the variance $\sigma=\sqrt{\text{Var}}=\sqrt{N}$. Since histograms are filled weighted this needs to be taken into account. The variance of a bin filled with weights $w_i$ is $\sigma^2 = \text{Var}_\text{bin}(w_i)$. Since the variance is additive and invariant with respect to constants it follows for the variance of the bin decomposed per event 
-\begin{align}
+As discussed in the chapter on statistics \ref{sec:statistics} the bin content for histograms in this work follows a Poisson distribution. Therefore the standard error for $N$ events is the square root of the variance $\sigma=\sqrt{\text{Var}}=\sqrt{N}$. Since histograms are filled weighted $\sum_i w_i N_i$ this needs to be taken into account. By making use of the additive property and invariance with respect to constants of the variance a bin filled with weights $w_i$ can be written as
+\begin{align} 
     \sigma_\text{stat}^2 &= \text{Var}_\text{bin}\left(\sum_i w_i\right)
     =
     \underbrace{\sum_i \text{Var}(w_i \times 1\text{ event})}_{\text{Var}(i+j)=\text{Var}(i)+\text{Var}(j)}
     =
-    \underbrace{\sum_i w_i^2\text{Var}(1\text{ event})}_{\text{Var}(aX)=a^2\text{Var}(X)}\\
+    \underbrace{\sum_i w_i^2\text{Var}(1\text{ event})}_{\text{Var}(aX)=a^2\text{Var}(X)}\\ \nonumber
     &=\sum_i w_i^2\sqrt{(1\text{ event})},
 \end{align}
-so that the statistical error of a bin is
+so that the statistical error reads
 \begin{equation}
-    \sigma_\text{stat}^\text{bin}=\sqrt{\sum_i w_i^2}
+    \sigma_\text{stat}^\text{bin}=\sqrt{\sum_i w_i^2}.
 \end{equation}
 
-methodische errors, bkg unc
-
-
-modelling errors
-
-
-luminosity
-
+\section{Background Derivation Uncertainties}
+The \ac{qcd} background is estimated with the ABCD method from the control region as detailed in section \ref{sec:abcd}. The uncertainties are assessed through error propagation of the statistical uncertainty meaning the statistical errors of the event yields used to retrieve the weight factor result in an uncertainty for the weight factor $\Delta w_\text{CR}= \red{\qty[]{0.0}{\percent}}$. To estimate a bin-wise statistical uncertainty of the \ac{nn} score histogram the ABCD procedure is applied in the \ac{vr} by also propagating the error $\Delta w_\text{CR}$ of the applied weight factor. 

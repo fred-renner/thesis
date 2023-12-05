@@ -27,7 +27,7 @@ In three dimensions this corresponds to a mountaineer searching for the valley b
 
 
 \section{NEOS}
-The key idea of \ac{neos} is now to choose the cost function as the quantity which is to be minimized. In this case the $\mathrm{CL}_s$ value is a reasonable choice as discussed section \red{\ref{sec:statistics}}. For a typical analysis chain as shown in figure \ref{fig:neos} this corresponds mathematically to a functional concatenation of the individual steps in the chain, as each step depends on the previous one.
+The key idea of \acl{neos} is to choose the cost function as the quantity which is to be minimized. In this case the $\mathrm{CL}_s$ value is a reasonable choice as discussed in chapter \ref{sec:statistics}. For a typical analysis chain as shown in figure \ref{fig:neos} this corresponds mathematically to a functional concatenation of the individual steps in the chain, as each step depends on the previous one.
 \begin{figure}
     \centering
     \includegraphics[width=1\textwidth]{neos}
@@ -42,7 +42,7 @@ In order to find the minimum via the gradient descent of equation \ref{eq:grad_d
 \begin{equation}
     \frac{\partial\,\mathrm{CL}_s}{\partial \varphi_i} = \frac{\partial f_{\mathrm{sensitivity}}}{\partial f_{\mathrm{test\,stat}}}\frac{\partial f_{\mathrm{test\,stat}}}{\partial f_{ \mathrm{likelihood}}} \frac{\partial f_{\mathrm{likelihood}}}{\partial f_{\mathrm{histogram}}}   \frac{\partial f_{\mathrm{histogram}}}{\partial f_{\mathrm{observable}}}  \frac{\partial f_{\mathrm{observable}}}{\partial \varphi_i}.
 \end{equation}
-Apart from histogramming which is inherently discrete all steps are differentiable. One way to make histograms differentiable is \ac{kde} \citep{CRANMER2001198}. Instead of counting a quantity in bins, a histogram can be approximated by representing each data point by a normal distribution, the kernel, with the mean of the data point and a chosen value for the standard deviation, also called the bandwidth in this context. Since the area under the Gaussian is equal to one, the summation of all Gaussian's can produce a smoothed estimate of a histogram that is inherently differentiable. However the bandwidth should be chosen around the desired binning width as the estimate depends crucially on it, as exemplified in Figure \ref{fig:relaxed_hist}. Although this can be a source of uncertainty one can always revert any differentiable step or block in figure \ref{fig:neos} and go back to the exact calculation.
+Apart from histogramming which is inherently discrete all steps are differentiable. One way to make histograms differentiable is \ac{kde} \citep{CRANMER2001198}. Instead of counting a quantity in bins, a histogram can be approximated by representing each data point by a normal distribution, the kernel, with the mean of the data point and a chosen value for the standard deviation, also called the bandwidth in this context. Since the area under the Gaussian is equal to one, the summation of all Gaussian's can produce a smoothed estimate of a histogram that is inherently differentiable. However the bandwidth should be chosen around the desired binning width as the estimate depends crucially on it, as exemplified in Figure \ref{fig:relaxed_hist}. Although this can be a source of uncertainty any differentiable step or block in figure \ref{fig:neos} can always be reverted back to the exact calculation.
 \begin{figure}
     \centering
     \includegraphics[width=1\textwidth]{relaxed_hist}
