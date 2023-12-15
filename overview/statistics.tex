@@ -51,7 +51,7 @@ This translates to $t \rightarrow 0$ as increasing agreement and $t \rightarrow 
 \end{equation}
 $t_\text{obs}$ is the test statistic $t$ evaluated at the observed data which means replacing the predictions in the likelihood of the numerator of equation \ref{eq:likelihood_ratio} with the values observed in data. Similar to the \ac{pdf} of a standard normal distribution the \ac{pdf} in this context quantifies how probable a particular value of the test statistic $t$ is under a fixed value of the signal strength. This essentially measures how frequently a particular value of $t$ occurs in comparison to all other possible values that $t$ can take.
 
-To calculate p-values the integral of equation \ref{eq:p-value} must be solved. The test statistic's specific form is useful because it allows for approximations of $f(t | \mu)$ \citep{cowan2011asymptotic}. Let $f(t | \mu')$ be the probability distribution for the true strength parameter $\mu'$. \citet{wald1943tests} demonstrated that for a single parameter of interest the test statistic is equivalent to a normalized sum of squared distances between the tested parameter $\mu$ and its maximum likelihood estimate $\hat{\mu}$
+To calculate p-values the integral of equation \ref{eq:p-value} must be solved. The test statistic's specific form is useful because of existing approximations for $f(t | \mu)$ \citep{cowan2011asymptotic}. Let $f(t | \mu')$ be the probability distribution for the true strength parameter $\mu'$. \citet{wald1943tests} demonstrated that for a single parameter of interest the test statistic is equivalent to a normalized sum of squared distances between the tested parameter $\mu$ and its maximum likelihood estimate $\hat{\mu}$
 \begin{equation}
     t(\mu)=-2\ln \lambda(\mu)=
     \left(\frac{\mu-\hat{\mu}}{\sigma_{\hat{\mu}}} \right)^2
@@ -74,7 +74,7 @@ Figure \ref{fig:test_stat_example} illustrates these steps. Being able to calcul
 \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth]{test_stat_example.pdf}
-    \caption[]{A sketch to follow the steps to calculate p-values. (\textbf{left}) The profile likelihood (\hexbox{1f77b4}) has essentially some hill-like form with a maximum at ${\lambda(\hat{\mu},\hat{\bm{\Theta}})}$. The test statistic $t$ (\hexbox{ff7f0e}) is calculated as $-2\mathrm{ln}(\lambda)$. (\textbf{right}) For one parameter of interest in the large sample limit $f(t | \mu)$ from equation \ref{eq:chi-square} follows a non-central chi-squared distribution with one degree of freedom. The blue shaded area under the \acp{pdf} is a right hand sided p-value.}
+    \caption[]{A sketch to follow the steps to calculate p-values. (\textbf{left}) The profile likelihood ({\color[HTML]{1f77b4}{$\bm{\diagup}$}}) has essentially some hill-like form with a maximum at ${\lambda(\hat{\mu},\hat{\bm{\Theta}})}$. The test statistic $t$ ({\color[HTML]{ff7f0e}{$\bm{\diagup}$}}) is calculated as $-2\mathrm{ln}(\lambda)$. (\textbf{right}) For one parameter of interest in the large sample limit $f(t | \mu)$ from equation \ref{eq:chi-square} follows a non-central chi-squared distribution with one degree of freedom. The blue shaded area under the \acp{pdf} is a right hand sided p-value.}
     \label{fig:test_stat_example}
 \end{figure}
 
@@ -151,7 +151,7 @@ The prediction is a sum of nominal bin counts\footnote{also called rates, like i
 \end{align}
 The usefulness of this approach becomes clear when considering one uncertainty $a_\chi$ on a nominal bin count estimate $\nu_{scb}^0$. The main goal remains to maximize the overall likelihood $L$. This can be achieved via maximizing the Poisson probability (blue part in equation \ref{eq:histfactory_likelihood}) and at the same time keeping the constraint term (red part in equation \ref{eq:histfactory_likelihood}) large. It is illustrative to consider one nuisance parameter $\chi$ as a multiplicative modifier $\kappa_{scb}=\chi$ on $\nu_{scb}^0$. An optimum can be found by modifying the prediction to move closer to the observed value (blue part in equation \ref{eq:histfactory_likelihood}) while at the same time keeping the constraint term $c_\kappa(\kappa)$ (red part in equation \ref{eq:histfactory_likelihood}) controlled by the same $\chi$ at values where the penalization of the likelihood stays insignificant. This works well for example when $\kappa$ has a very large uncertainty rendering the constraint term's influence on the likelihood relatively small. 
 
-\section{The Modifiers}\label{sec:modifiers}
+\subsection{The Modifiers}\label{sec:modifiers}
 In HistFactory there are by convention four types $\{\lambda,\mu,\gamma,\alpha\}$ of such multiplicative rate modifiers that are explained in this section. There are \textbf{free rate modifiers} for the luminosity $\lambda$ and signal strength $\mu$ that affect all bins equally
 \begin{equation}
     \nu_{scb}(\mu)=\mu \nu_{scb}^0.
@@ -196,7 +196,7 @@ This is illustrated in fig. \ref{fig:interp_func}(a). For the other ones see e.g
     \label{fig:interp_func}
 \end{figure}
 
-\section{The constraint terms}\label{sec:constraint_terms}
+\subsection{The constraint terms}\label{sec:constraint_terms}
 Uncertainties are modeled either Gaussian or Poissonian. The Gaussian uncertainty implementation is straightforward as the standard deviation $\sigma$ appears in the definition of the Gaussian with mean $\mu$
 \begin{equation}
     \text{Gaus}(\mu|x,\sigma)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}.
@@ -205,25 +205,25 @@ So that the likelihood for a Gaussian uncertainty is constrained by a Gaussian s
 
 Similar to the Gaussian uncertainty for an uncertainty that is Poissonian distributed
 \begin{equation}
-    \text{Pois}(r|\rho)= \frac{\rho^r e^{-\rho}}{r!}.
+    \text{Pois}(k|r)= \frac{r^k e^{-r}}{k!}.
 \end{equation}
-the nuisance parameter for a multiplicative factor $\kappa_{scb}=\gamma$ in equation \ref{eq:modifier_equation} should control the Poisson constraint term such that the uncertainty $\sigma$ is reflected by the variance of the Poisson $\text{Var}(\text{Pois})=\rho=\sigma^2$. This is achieved by scaling the distribution with a factor $f$ which is then solved for the one with the desired uncertainty by evaluating it at the nominal value of the multiplicative modifier $\gamma_0=1$ 
+the nuisance parameter for a multiplicative factor $\kappa_{scb}=\gamma$ in equation \ref{eq:modifier_equation} should control the Poisson constraint term such that the uncertainty $\sigma$ is reflected by the variance of the Poisson $\text{Var}(\text{Pois})=r=\sigma^2$. This is achieved by scaling the distribution with a factor $f$ which is then solved for the one with the desired uncertainty by evaluating it at the nominal value of the multiplicative modifier $\gamma_0=1$ 
 \begin{equation}
-    \mathrm{Var}\left[\mathrm{Pois}(r=f\gamma_0 | \rho=f\gamma)\right]
+    \mathrm{Var}\left[\mathrm{Pois}(k=f\gamma_0 | r=f\gamma)\right]
     =
-    \rho=f\gamma\;\stackrel{\gamma=\gamma_0}{=}\;f\gamma_0=(f\sigma)^2 
+    r=f\gamma\;\stackrel{\gamma=\gamma_0}{=}\;f\gamma_0=(f\sigma)^2 
     \quad 
     \rightarrow \quad f=(1/\sigma^2).
 \end{equation}
-Thus a Poissonian constraint term for a multiplicative modifier $\gamma$ reads $\text{Pois}(r=\sigma^{-2}|\rho=\sigma^{-2}\gamma)$. This completes the necessities for the HistFactory model. The different types of modifiers and their constraint terms are summarized in table \ref{tab:histfactory}.
+Thus a Poissonian constraint term for a multiplicative modifier $\gamma$ with uncertainty $\sigma$ reads \mbox{$\text{Pois}(k=\sigma^{-2}|r=\sigma^{-2}\gamma)$.} This completes the necessities for the HistFactory model. The different types of modifiers and their constraint terms are summarized in table \ref{tab:histfactory}.
 \begin{table}[]
-    \caption[]{Modifiers and constraint terms used in HistFactory implemented by \textsc{pyhf}. Note that the interpolation functions are called $f_p$ and $g_p$ here instead of $\eta$ as chosen in the full text. Adopted from \citep{pyhf}}
+    \caption[]{Modifiers and constraint terms used in HistFactory implemented by \textsc{pyhf}. Note that the interpolation functions are called $f_p$ and $g_p$ here instead of $\eta$ as chosen in the full text. Input for the constraint terms are the corresponding uncertainties. Adapted from \citep{pyhf}.}
     \centering
     \resizebox{0.97\textwidth}{!}{
         \begin{tabular}{l|l|l|l}\label{tab:histfactory}
             Description          & Modification                                                                                            & Constraint Term $c_\singleconstr$                                                               & $c_\chi$ input                     \\
             \hline
-            Uncorrelated Shape   & $\kappa_{scb}(\gamma_b) = \gamma_b$                                                                     & $\prod_b \mathrm{Pois}\left(r_b = \sigma_b^{-2}\middle|\,\rho_b = \sigma_b^{-2}\gamma_b\right)$ & $\sigma_{b}$                       \\
+            Uncorrelated Shape   & $\kappa_{scb}(\gamma_b) = \gamma_b$                                                                     & $\prod_b \mathrm{Pois}\left(k_b = \sigma_b^{-2}\middle|\,r_b = \sigma_b^{-2}\gamma_b\right)$ & $\sigma_{b}$                       \\
             Correlated Shape     & $\Delta_{scb}(\alpha) = f_p\left(\alpha\middle|\,\Delta_{scb,\alpha=-1},\Delta_{scb,\alpha = 1}\right)$ & $\displaystyle\mathrm{Gaus}\left(a = 0\middle|\,\alpha,\sigma = 1\right)$                       & $\Delta_{scb,\alpha=\pm1}$         \\
             Normalisation Unc.   & $\kappa_{scb}(\alpha) = g_p\left(\alpha\middle|\,\kappa_{scb,\alpha=-1},\kappa_{scb,\alpha=1}\right)$   & $\displaystyle\mathrm{Gaus}\left(a = 0\middle|\,\alpha,\sigma = 1\right)$                       & $\kappa_{scb,\alpha=\pm1}$         \\
             MC Stat. Uncertainty & $\kappa_{scb}(\gamma_b) = \gamma_b$                                                                     & $\prod_b \mathrm{Gaus}\left(a_{\gamma_b} = 1\middle|\,\gamma_b,\delta_b\right)$                 & $\delta_b^2 = \sum_s\delta^2_{sb}$ \\

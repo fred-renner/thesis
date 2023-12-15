@@ -1,0 +1,30 @@
+
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\space#1}{}} 
+
+\fancypagestyle{schluss}{
+    \fancyhead{}
+    \fancyfoot[EL]{\thepage} 
+    \fancyfoot[OR]{\thepage}
+    \renewcommand{\headrulewidth}{0pt}}\graphicspath{{./images/}}
+    
+\fancyhf{}  % Kopf- und Fußzeile leeren 
+\makeatletter
+\let\ps@plain\ps@fancy
+\makeatother
+
+\fancypagestyle{myfancy}{
+\newcommand{\lmod}{\fontfamily{lmodern}\fontsize{9}{11}\selectfont}
+\fancyhead[EL,OL]{\lmod \nouppercase{\scshape\leftmark}} 
+\fancyhead[ER,OR]{\lmod \nouppercase{\scshape\rightmark}} 
+\fancyfoot[EL]{\lmod\thepage} 
+\fancyfoot[OR]{\lmod\thepage}} 
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\space#1}{}} 
+
+
+\fancypagestyle{schluss}{
+    \fancyhead{}
+    \fancyfoot[EL]{\thepage} 
+    \fancyfoot[OR]{\thepage}
+    \renewcommand{\headrulewidth}{0pt}}
+\fancyhf{} 

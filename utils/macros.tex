@@ -1,0 +1,59 @@
+
+
+\newcommand{\sg}[1]{\textcolor{blue}{#1}}
+\newcommand{\ui}[1]{\textcolor{Green}{#1}}
+
+\DeclareMathOperator{\Tr}{Tr}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\wert}[3]{\SI[separate-uncertainty=true]{#1(#2)}{#3}}
+\newcommand{\abs}[1]{\ensuremath{\left\vert#1\right\vert}}
+\newcommand{\ket}[1]{\ensuremath{\left\vert #1\right>}}
+\newcommand{\bra}[1]{\ensuremath{\left<#1\right\vert}}
+\newcommand{\kasten}[1]{\mbox{\color{#1}$\blacksquare$}}
+\newcommand{\rgbbox}[1]{\mbox{\color[RGB]{#1}$\blacksquare$}}
+\newcommand{\hexbox}[1]{\mbox{\color[HTML]{#1}$\blacksquare$}}
+\newcommand{\hexline}[1]{\mbox{\color[HTML]{#1}$\bm{\diagup}$}}
+\newcommand{\dint}[1]{\ensuremath{\mathop{\mathrm{d}#1}}}
+\newcommand{\vect}[1]{\mathbf{#1}}
+\newcommand*{\pt}{\ensuremath{p_{\text{T}}}\xspace}
+\newcommand*{\ktwov}{\ensuremath{\kappa_{\text{2V}}}\xspace}
+\newcommand*{\cls}{\ensuremath{\mathrm{CL}_s}\xspace}
+\newcommand{\ptrel}{$p_\mathrm{T}^\mathrm{rel}$\xspace}
+\newcommand*{\ttbar}{\ensuremath{t\overline{t}}\xspace}
+
+
+
+
+
+
+% \newcommand{\semileptonicDecay}{
+%   \begin{tikzpicture}
+%     \begin{feynman}
+%       \vertex (a5) {\(b\)};
+%       \vertex[right=1.5cm of a5] (a7);
+%       \vertex[right=3.5cm of a5] (a6) {\(u\)};
+
+%       \vertex[below=1.5em of a5] (b5) {\(d\)};
+%       \vertex[right=3.5cm of b5] (b4) {\(d\)};
+
+%       \vertex[above=of a6] (c1) {\(\nu_{\mu}\)};
+%       \vertex[above=2em of c1] (c3) {\(\mu^{-}\)};
+%       \vertex at ($(c1)!0.5!(c3) - (1cm, 0)$) (c2);
+
+%       \diagram* {
+%       {[edges=fermion]
+%           (a5) -- (a7)-- (a6),(b4) -- (b5),
+%         },
+%       (c1) -- [fermion, out=180, in=-45] (c2) -- [fermion, out=45, in=180] (c3),
+%       (a7) -- [boson, bend left, edge label=\(W^{-}\)] (c2),
+%       };
+
+%       \draw [decoration={brace}, decorate] (b5.south west) -- (a5.north west)
+%       node [pos=0.5, left] {\( B^{0}\)};
+
+%       \draw [decoration={brace}, decorate] (a6.north east) -- (b4.south east)
+%       node [pos=0.5, right] {\(\pi^{+}\)};
+%     \end{feynman}
+%   \end{tikzpicture}
+% }
+ 

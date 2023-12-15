@@ -11,7 +11,7 @@ As explained in section \ref{sec:renormalization} quarks cannot be observed indi
 \subsection{Topocluster}
 For that purpose the deposited energy of these decays in the calorimeters are grouped three-dimensionally by combining calorimeter cells into so-called topoclusters. These clusters are seeded from cells that display a signal stronger than four times the standard deviation of detector noise $4\sigma_\mathrm{noise}$ and is complemented by $2\sigma_\mathrm{noise}$ cells.
 
-\subsection{Particle Flow Object}
+\subsection{Particle Flow Object}\label{sec:particle_flow}
 The energy and mass resolution calculated from these clusters can be improved by geometrically matching tracks to the clusters. If a track is matched successfully to a topocluster the energy of the track and the position in the calorimeter is used to infer the energy of the particle that created the track. From this expected energy all associated cluster cell energies are subtracted and the remnant is removed from the expected energy if the deviation corresponds to energies of the order of typical fluctuations. Such combination of a topocluster and a track are called \ac{pfo} \citep{aaboud2017jet}. Sometimes energy of one track ends up in several clusters. For this the Particle Flow algorithm combines the most probable clusters with the track. Topoclusters without matched tracks are assumed to be neutral particles as they do not leave a trace in the \ac{id}. \acp{pfo} not matched to the \ac{pv} are removed to reduce the contribution from pileup. In particular it improves reconstruction of lower \pt clusters since the \ac{id} has a much better resolution.
 
 \subsection{Track-CaloClusters}
@@ -56,11 +56,11 @@ Such tracks have a large impact parameter that is defined as the distance of clo
 \end{figure}
 
 \subsection{DL1d Tagger}
-The results of the secondary vertex- and impact parameter finding algorithm as well as the jet kinematics are then passed into a deep feed-forward neural network called DL1d which is trained to distinguish $b$-jets from jets of other flavors \citep{atlas2022atlas}. The outputs nodes for flavor classification ($p_\mathrm{b}, p_\mathrm{c}, p_\mathrm{light}$) are further combined into a single discriminating score variable
+The results of the secondary vertex- and impact parameter finding algorithm as well as the jet kinematics are then passed into a deep feed-forward neural network called DL1d which is trained to distinguish $b$-jets from jets of other flavors \citep{atlas2022atlas}. The output nodes for flavor classification ($p_\mathrm{b}, p_\mathrm{c}, p_\mathrm{light}$) are further combined into a single discriminating score variable
 \begin{equation}
   D_\mathrm{DL1d}=\ln\left(\frac{p_b}{f_c \cdot p_c + (1-f_c)\cdot p_\mathrm{light} }\right).
 \end{equation}
-$f_c$ is the fraction of charm jets in the background and can be used to tune the importance of the different background classes ($\sum f_\mathrm{bkg} =1$). When evaluating the \ac{nn} a value for the discriminating variable can be derived that corresponds to a $b$-jet selection efficiency which is then applied in physics analysis.
+$f_c$ is the fraction of charm jets in the background and can be used to tune the importance of the different background classes ($\sum f_\mathrm{bkg} =1$). When evaluating the \ac{nn} a value for the discriminating variable $D$ can be derived that corresponds to a $b$-jet selection efficiency which is then applied in physics analysis.
 
 \subsection{$X\rightarrow bb$ Tagger}\label{sec:xbb}
 For a collision event where the decay products consists of $b$-jets with large transverse momentum they can overlap. For such cases \ac{vr} track jets from section \ref{sec:vr_jets} can be reconstructed from inside large-$R$ jets that encompass both $b$-jets. The \ac{vr} jets are required to have $\rho=\qty[]{30}{GeV}$ and an allowed radius parameter range of $R_\text{min}=0.02$ and $R_\text{max}=0.4$. These parameters are optimized for Higgs to $bb$ decays \citep{ATL-PHYS-PUB-2017-010} and the \ac{vr} jets are not allowed to overlap.
