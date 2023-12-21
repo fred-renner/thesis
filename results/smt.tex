@@ -326,7 +326,7 @@ The evaluation for the model that added all variables is shown in fig. \ref{fig:
   \caption{SHAP values for the $b$-jet output node of the DL1dmu\_all\_vars representing the impact of an input features influence to the neural network.}
   \label{fig:ttbar_r22_shapley_b_all_vars}
 \end{figure}
-This is most likely because most of them are related to the muon energy, which is strongly linearly correlated with the \pt of the muon as can be seen from the correlation matrix in figure \ref{fig:correlation_matrix} and is also already informationally covered in other variables such as the Momentum Balance Significance. Scatter plots for the \ac{mcp} variables can also be found in fig. \ref{fig:scatterplot_matrix_mcp}.
+The minimal impact of incorporating most MCP variables on the model's performance is likely due to their strong linear correlation with the muon's transverse momentum \pt. This correlation is clearly evident in the correlation matrix presented in Figure \ref{fig:correlation_matrix}. Since the \pt of the muon is already informatively represented in other variables, such as the Momentum Balance Significance, the additional MCP variables do not contribute significant new information to the model. A more detailed visual representation is shown in scatter plots of Figure \ref{fig:scatterplot_matrix_mcp} showcasing the relationships among \ac{smt} and \ac{mcp} variables.
 \begin{figure}[]
   \centering
   \includegraphics[width=1\textwidth]{correlation_matrix}

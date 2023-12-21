@@ -1,8 +1,8 @@
 \chapter{The ATLAS Experiment}\label{sec:atlas}
-Exploring the nature of the Higgs particle requires collision energies on the \qty[]{}{TeV} scale. The \ac{lhc} is currently the most powerful particle accelerator making it the best available facility for studying the Higgs particle. The main reference for this section is \citep{aad2008atlas}.
+Exploring the nature of the Higgs particle requires collision energies on the \qty[]{}{TeV} scale. With the \ac{lhc} as the most powerful particle accelerator currently in existence making it the the premier facility for studying the Higgs particle. The main reference for this section is \citep{aad2008atlas}.
 
 \section{The Large Hadron Collider}
-The \ac{lhc} is a circular proton proton collider with \qty[]{27}{km} circumference with a center-of-mass energy of $\sqrt{s}=\qty[]{13}{TeV}$. The two anticyclic proton beams are actually bunches containing $10^{11}$ protons that are brought to collisions at several points of the ring for the experiments performed at the \ac{lhc}. A measure of how tightly particles are packed in these bunches is the instantaneous luminosity and is characteristic to the collider
+The \ac{lhc} is a circular proton proton collider with \qty[]{27}{km} circumference with a center-of-mass energy of $\sqrt{s}=\qty[]{13}{TeV}$. The two anticyclic proton beams comprise several bunches that contain $10^{11}$ protons. These bunches are brought to collisions at several points along the ring facilitating various experiments conducted at the LHC. A measure of how tightly particles are packed in these bunches is the instantaneous luminosity and is characteristic to the collider
 \begin{equation}
     L=\frac{1}{\sigma}\frac{\dint{N}}{\dint{t}}.
 \end{equation}
@@ -23,43 +23,42 @@ The \ac{atlas} (A Toroidal LHC Apparatus) experiment is a particle detector with
 Its purpose is to measure the trajectory, momentum, and energy of particles originating from proton-proton collisions, depending on the particular kind of interaction of the collision products with matter. The various subdetectors are explained below from the inside out.
 
 \subsection*{Coordinate System}
-The coordinate system of \ac{atlas} is right-handed and originates at the interaction point at the center of the detector. The z-axis points along the beam line, the x-axis to the center of the lhc and the y-axis away from earth. Thus quantities transversal to the z-axis are Lorentz-invariant. Inside the detector cylindrical coordinates $r,\phi$ are used with $\phi$ the azimuthal angle about the z-axis and the polar angle $\Theta$ of a particle measured in form of the pseudorapidity $\eta=-\ln(\Theta/2)$. This quantity is defined as an approximation for the Lorentz invariant rapidity and holds for highly relativistic particles. With these a useful quantity to describe angular distances in the detector is
+The coordinate system of \ac{atlas} is right-handed and originates at the interaction point at the center of the detector. The z-axis points along the beam line, the x-axis to the center of the \ac{lhc} and the y-axis away from earth. Quantities transversal to the z-axis are therefore Lorentz-invariant. Inside the detector cylindrical coordinates $r,\phi$ are used with $\phi$ the azimuthal angle about the z-axis. The polar angle $\Theta$ of a particle is expressed through the pseudorapidity $\eta=-\ln(\Theta/2)$. This quantity is defined as an approximation for the Lorentz invariant rapidity and holds for highly relativistic particles. This provides a valuable measure for describing angular separation $\Delta R$ between objects within the detector
 \begin{equation}
     \Delta R = \sqrt{(\Delta\phi)^2+(\Delta \eta)^2}.
     \label{eq:delta_R}
 \end{equation}
 
 \section{Inner Detector}\label{sec:inner_detector}
-The inner detector, shown schematically in figure \ref{fig:inner_tracker}, is designed to track charged particles and figure out their momentum and provide information on the particle type.
+The inner detector, shown schematically in figure \ref{fig:inner_tracker}, is designed to track charged particles and to determine their momentum and to provide insights into their particle type.
 \begin{figure}
     \centering
     \includegraphics[width=0.65\textwidth]{inner_tracker}
     \caption[]{The inner detector schematically with the subdetectors described in the full text. Adopted from \citep{Potamianos:2016ptf}.}
     \label{fig:inner_tracker}
 \end{figure}
-It is surrounded by a solenoid magnet whose field lines point in the direction the beam so that charged particles are bent in the transverse plane of the detector due to the Lorentz force. The bending direction reveals the charge whereas the curvature depends on the momentum.
+It is surrounded by a solenoid magnet whose field lines point in the direction the beam so that charged particles are bent in the transverse plane of the detector due to the Lorentz force. The direction of this bending reveals the particle's charge while the degree of curvature relates directly to its momentum.
 
-The \ac{ibl}, pixel detector, and \ac{sct} all consist of silicon detectors of various sizes. When passing through silicon, charged particles ionize electrons that travel in an electric field to an electrode and provide positional information. The \ac{ibl} plays a crucial role in b-tagging as will become clear in section \ref{sec:b_tagging}.
+The \ac{ibl}, pixel detector, and \ac{sct} consist of silicon detectors of various sizes. When passing through silicon, charged particles ionize electrons that travel in an electric field to an electrode and provide positional information. The \ac{ibl} plays a crucial role in b-tagging as will become clear in section \ref{sec:b_tagging}.
 
-Aforementioned semiconductor trackers are surrounded by the \ac{trt} which apart from tracking also can identify particles. It consists of several layers of tubes perpendicular to the beamline, filled with a gas mixture, and a conducting wire in their center, which is under voltage and attracts negative charges. The tubes are surrounded in a material with different permittivity so that charged particles passing through the boundaries of the material emit transition radiation. The intensity of this radiation depends on the velocity, so that for particles of the same energy more photons are released for the lighter particle. Therefore for electrons for example can be distinguished from pions.
+Aforementioned semiconductor trackers are surrounded by the \ac{trt} which assist further in tracking and identification of particles. It consists of multiple layers of tubes arranged perpendicular to the beamline. These tubes are filled with a gas mixture and have a conducting wire at their center, maintained under a voltage to attract negatively charged particles. The tubes are surrounded by a material with different permittivity so that charged particles traversing these materials emit transition radiation. The intensity of this radiation depends on the velocity, making it possible to distinguish between particles of different types. For instance, for particles with the same energy, lighter ones like electrons emit more photons compared to heavier particles like pions, aiding in their identification.
 
 \section{Calorimeters}
+When high-energy particles pass through dense matter they interact with the matter through various processes such as ionization and excitation, bremsstrahlung, pair creation and annihilation, or by interacting with the nuclei of the material. These interactions result in the creation of secondary particles which then generate a particle shower. By reconstructing this shower, the energy of the particles can be inferred. In the \ac{ATLAS} detector, this is achieved using two sampling calorimeters. These calorimeters consist of alternating layers: a high-density metal that absorbs the energy of the particles and a material capable of tracking these particles.
 
-When high-energy particles pass through dense matter the various particle interactions create secondary particles that result in a particle shower. Via this the energy of particles can be inferred and is done in \ac{atlas} with two sampling calorimeters. These consist of alternating layers of a high-density metal to absorb the energy and a material that can track the particles of the shower.
+\subsection{Electromagnetic Calorimeter}
 
-\subsection*{Electromagnetic Calorimeter}
+In the electromagnetic calorimeter the main energy deposits are from electrons and photons. The stopping material consists of lead and steel and is alternated with a copper plate on which there is an electrode grid. Between the plates is liquid argon. When interacting with the dense metal e.g. by bremsstrahlung of an electron or by pair production induced by a photon, the created secondary particles ionize the argon atoms in between. The negatively charged ions are then pulled to the charged copper electrodes to determine the position. From the distance a particle has traveled through the electromagnetic calorimeter the energy of the particle can be inferred.
 
-In the electromagnetic calorimeter the main energy deposits are from electrons and photons. The stopping material consists of lead and steel and is alternated with a copper plate on which there is an electrode grid. Between the plates is liquid argon. When interacting with the dense metal e.g. by bremsstrahlung of an electron or by pair production induced by a photon, the created secondary particles ionize the argon atoms in between. The negatively charged ions are then pulled to the charged copper electrodes to determine the position. From the distance a particle has traveled through the electromagnetic calorimeter, one can infer the energy of the particle as it entered the calorimeter.
-
-\subsection*{Hadronic Calorimeter}
+\subsection{Hadronic Calorimeter}
 
 Hadrons also deposit energy in the electromagnetic calorimeter but interact with nuclei as well. However as they are more energetic more stopping power is needed which is provided by the hadronic calorimeter that surrounds the electromagnetic calorimeter. The configuration is made of many layers of tiles positioned in planes perpendicular to the beamline. In these layers tiles of steel as stopping material alternate by a scintillating plastic which radiates light if charged particles pass through. The light is collected at the edges by wavelength-shifting optical fibres  which reduce the energy of the photons and then read out by photomultiplier tubes.
 
 \section{Muon Spectrometer}
 
-The muon spectrometer encircles all other detectors to capture muons which barely loose energy passing through the other detectors. Its basic units are resistive plate chambers in three layers around the calorimeters. These are basically large charged capacitors filled with gas. When charged particles pass through they ionize the gas and the resulting avalanche of ions drawn to the electrodes is measured to determine the position and time of flight through the plates.  In addition, they are also used in a design where the electrodes consist of a tube filled with gas and a wire inside similar to the \ac{trt}. The entire spectrometer is placed in a toroidal magnetic field so that the field lines are in phi direction in order to also measure the momentum due to the curvature of the muons.
+The muon spectrometer encircles all other detectors to capture muons which barely loose energy passing through the other detectors. The core elements of the muon spectrometer are resistive plate chambers, arranged in three layers around the calorimeters. Essentially functioning as charged capacitors filled with gas, these chambers detect charged particles when they ionize the gas inside. The resultant ion avalanche, attracted to the electrodes, is then measured to determine the particle's position. Additionally, the detection process is enhanced by electrodes, akin to those in the \ac{TRT}, comprising tubes filled with gas and a central wire.
 
-The figure \ref{fig:particles_in_detector} shows where which type of particles are stopped in the different detectors.
+Figure \ref{fig:particles_in_detector} illustrates the interaction of different particle types with the various sections of the particle detector. 
 \begin{figure}
     \centering
     \includegraphics[width=1\textwidth]{particle-shower}
@@ -68,4 +67,6 @@ The figure \ref{fig:particles_in_detector} shows where which type of particles a
 \end{figure}
 
 \section{Data Acquisition}\label{sec:tdaq}
-Bunches of protons in the \ac{lhc} are brought to collision in \ac{atlas} with a rate of \qty[]{40}{MHz}. It is technically impossible at the moment to record all collisions as this would correspond to a data rate of \qty[]{40}{TB\per s}. Therefore events that are useful for physics analysis need to be preselected which is called triggering and is performed in two steps. The first step is the \ac{l1} trigger and is hardware based and reduces the event rate to \qty[]{100}{kHZ}. This is done by selecting events with large transverse momentum deposits in the detector and also for events with missing transverse momentum. Afterwards the regions in the detector where this is the case are passed to a software \ac{hlt}. This then uses the full detector information in these regions to reduce the rate further down to \qty[]{1}{kHz}.
+In the \ac{LHC}, bunches of protons are collided within the \ac{ATLAS} detector at a rate of 40 MHz. Currently, it is technically infeasible to record all these collisions, as doing so would require handling a data rate of approximately 40 TB/s. To manage this, a preselection process known as triggering is employed, which is carried out in two stages.
+
+The first stage is the hardware-based \ac{L1} trigger, which reduces the event rate to about 100 kHz. This reduction is achieved by selecting events that exhibit large transverse momentum deposits in the detector or those that have missing transverse momentum. The regions in the detector where these criteria are met are then passed to a software-based \ac{HLT}. The \ac{HLT} then uses the full detector information in these regions to reduce the rate further down to \qty[]{1}{kHz}.
