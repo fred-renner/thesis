@@ -63,28 +63,28 @@ The results of the secondary vertex- and impact parameter finding algorithm as w
 $f_c$ is the fraction of charm jets in the background and can be used to tune the importance of the different background classes ($\sum f_\mathrm{bkg} =1$). When evaluating the \ac{nn} a value for the discriminating variable $D$ can be derived that corresponds to a $b$-jet selection efficiency which is then applied in physics analysis.
 
 \subsection{$X\rightarrow bb$ Tagger}\label{sec:xbb}
-For a collision event where the decay products consists of $b$-jets with large transverse momentum they can overlap. For such cases \ac{vr} track jets from section \ref{sec:vr_jets} can be reconstructed from inside large-$R$ jets that encompass both $b$-jets. The \ac{vr} jets are required to have $\rho=\qty[]{30}{GeV}$ and an allowed radius parameter range of $R_\text{min}=0.02$ and $R_\text{max}=0.4$. These parameters are optimized for Higgs to $bb$ decays \citep{ATL-PHYS-PUB-2017-010} and the \ac{vr} jets are not allowed to overlap.
+For a collision event with decay products consisting of $b$-jets with large transverse momenta, jets reconstructed with a fixed radius parameter can become overlapped. To address such scenarios, \ac{vr} track jets, as discussed in Section \ref{sec:vr_jets}, can be reconstructed within a large-$R$ jet that encompasses both $b$-jets. The \ac{vr} jets are required to have $\rho=\qty[]{30}{GeV}$ a radius parameter constrained to $0.02 <R<0.4$. Further the \ac{vr} jets are not allowed to overlap. These parameters are optimized for Higgs to $bb$ decays \citep{ATL-PHYS-PUB-2017-010}.
 
-The $X\rightarrow bb$ tagger is a feed-forward \ac{nn} \citep{ATL-PHYS-PUB-2020-019} that gets as inputs the \pt and $\eta$ of the large-$R$ jet and the output from DL1d for up to three \ac{vr} track jets. Similar to DL1d a discriminant is calculated from the output scores for Higgs, top and multijet decay of the event passed to the \ac{nn}
+The $X\rightarrow bb$ tagger is a feed-forward \ac{nn} \citep{ATL-PHYS-PUB-2020-019}. The inputs include the transverse momentum \pt and pseudorapidity $\eta$ of the large-$R$ jet along with outputs from DL1d for up to three \ac{vr} track jets. Similar to DL1d, a discriminant is computed from the \ac{nn}'s output scores, which reflect the likelihood of the event being a Higgs, top, or multijet decay:
 \begin{equation}
   D_{\text{Xbb}}=\ln\left({\frac{p_{\text{Higgs}}}{f_{\text{top}}\cdot p_{\text{top}}+(1-f_{\text{top}})\cdot p_{\text{multijet}}}}\right).
 \end{equation}
-$f_\text{top}$ denotes the top fraction with regards to the multijet output. Again from the evaluation a score can be defined with the Higgs tagging efficiency.
+$f_\text{top}$ denotes the top fraction with regards to the multijet output. From the evaluation of the discriminant \acp{wp} are defined depending on the Higgs tagging efficiency.
 
 \section{Jet Calibration}\label{sec:calibration}
-Every measuring instrument must be calibrated. The main causes of differences between properties of jets deduced from reconstruction compared to their true properties include \citep{atlas2011jet}:
+Every measuring instrument must be calibrated In the case of jet reconstruction the main causes of discrepancies between the properties of jets inferred from reconstruction and their true properties include \citep{atlas2011jet}:
 \begin{itemize}
-  \item Non-Compensation: smaller calorimeter response of non-\ac{em} particles of hadron showers than to \ac{em}
+  \item Non-Compensation: smaller calorimeter response of non-\ac{em} to particles of hadron showers than to \ac{em}
   \item Dead material: energy is deposited in non-instrumented areas
-  \item Particles from the jet are outside of the reconstruction cone
+  \item Particles belonging to a decay but are outside of the reconstruction cone.
   \item Energy deposition below the noise threshold
   \item Particles from pile-up
   \item Leakage: particles are not stopped inside the calorimeter (punch-through)
 \end{itemize}
-To mitigate these effects there are several algorithms employed that also account for the detector geometry as described in detail in \citep{atlas2021jet}. Reference objects are chosen from well-understood physics processes that leave a distinct signature in the detector like dijet events or decays of $Z$-bosons or photons.
+To mitigate these effects there are several algorithms employed that also account for the detector geometry and are described in the following based on \citep{atlas2021jet}. As reference objects serve well-understood physics processes that leave a distinct signature in the detector like dijet events or decays of $Z$-bosons or photons.
 
 \subsection{Pilup mitigation}
-When bunches are collided not only one but rather several proton-proton interactions are measured. Methods to disentangle several interactions are described below and improved over time so the mean number of interactions also called pile up increased during the data taking period as can be seen in figure \ref{fig:pileup}.
+When bunches of protons are collided, not only one but rather several proton-proton interactions are measured. Various methods have been developed to separate these numerous interactions and are described for both small and large $R$ jets. Pile-up is categorized into in-time pile-up referring to additional proton-proton collisions occurring within the same bunch-crossing and out-of-time pile-up collisions occurring before and after the collision of interest. Over time these methods have seen significant improvements allowing for an increase in the mean number of interactions commonly referred to as pile-up. This increase in pile-up during the data taking period is depicted in Figure \ref{fig:pileup}.
 \begin{figure}
   \centering
   \includegraphics[width=0.5\textwidth]{mu_2015_2018}
@@ -92,8 +92,9 @@ When bunches are collided not only one but rather several proton-proton interact
   \label{fig:pileup}
 \end{figure}
 
-\subsubsection*{Small-R Jets}
-At a first step contributions from pileup are reduced by subtracting the median transverse momentum density $\rho=\pt / A$ of jets found within $\eta<2.0$ multiplied by the active area of the jet $A_T$ as defined in \textsc{FastJet} \citep{cacciari2012fastjet}. Another reduction observes that the pileup corrected \pt is a function of the number of primary Vertices $N_\text{PV}$ and the mean number of interactions $\mu$ so that the pile up corrected transverse momentum reads
+
+\subsubsection{Small-R Jets}
+At a first step contributions from pileup are reduced by subtracting the median transverse momentum density $\rho=\pt / A$ of jets found within $\eta<2.0$ multiplied by the active area of the jet $A_T$ as defined in \textsc{FastJet} \citep{cacciari2012fastjet}. Another reduction observes that the pileup corrected \pt is a function of the number of primary Vertices $N_\text{PV}$ and the mean number of interactions $\mu$. Thus the corrected transverse momentum is expressed as 
 \begin{equation}
   \pt^\text{corr}=\pt-\rho A_T -\alpha(N_\text{PV}-1)-\beta\mu
 \end{equation}
@@ -108,8 +109,8 @@ with parameters $\alpha$ and $\beta$. The effect of the correction is shown in f
 Moreover pileup contributions can be further reduced by comparing the scalar \pt sum of tracks from the \ac{pv} associated to the jet with the scalar \pt sum of all tracks including other \acp{pv}. The \ac{jvt} \citep{ATLAS-CONF-2014-018} utilizes this property to apply a quality criterion on jets with $\pt<\qty[]{60}{GeV}$ and $|\eta|<2.4$.
 
 
-\subsubsection*{Large-R Jets}
-Due to the large Area of large-R jets they are particularly susceptible to pileup contributions and therefore a technique called groomming is applied. For this a large R jet is reclustered into $R=0.2$ subjets for which only the ones are kept that have at least $\pt>\qty[]{5}{\percent}$ of the original large R jet \pt.
+\subsubsection{Large-R Jets}
+Due to their large surface area, large-$R$-jets are particularly susceptible to pile-up contributions. To counteract this, a technique known as grooming is used. In this process, a large $R$-jet is divided into smaller sub-jets with a radius of $R=0.2$. Of these subjets, only those that contain at least $\pt>\qty[]{5}{\percent}$ of the original large-$R$ jet are retained.
 
 \subsection{\ac{jes}, $\eta$ and mass}
 \begin{figure}
@@ -118,10 +119,10 @@ Due to the large Area of large-R jets they are particularly susceptible to pileu
   \caption[]{Jet energy response $E_\text{reco}/E_\text{truth}$ for different detector $\eta$ values (left) before and after applying (right) the calibration. Adopted from \citep{jet_eta_calib}.}
   \label{fig:jet_eta_mismatch}
 \end{figure}
-A clear mismatch between reconstructed and \ac{mc} truth two jet events can be seen in the left plot of figure \ref{fig:jet_eta_mismatch} measured in $\eta$ bins. From this a continuous correction function in $\eta$ is derived and applied to correct for differences in jet energy, $\eta$ and mass \citep{atlas2011jet,Aaboud:2019aa}. This is exemplified in the right hand plot of figure \ref{fig:jet_eta_mismatch}.
+A clear mismatch between reconstructed and truth energy of simulated two jet events can be seen in the left plot of figure \ref{fig:jet_eta_mismatch} measured in $\eta$ bins. Based on this a continuous correction function in $\eta$ is derived and applied to correct for differences in jet energy, $\eta$ and mass \citep{atlas2011jet,Aaboud:2019aa}. This is exemplified in the right hand plot of figure \ref{fig:jet_eta_mismatch}.
 
 \subsection{Global Sequential Calibration}
-This step mainly corrects the jet \pt without changing the mean energy of the jet. It corrects for non-compensation, dead material and leakage effects by using observables like the charged particle fraction, energy fractions in different calorimeter layers, track-related quantities and the muon activity behind the calorimeter. Corrections are again derived in \pt and $\eta$ and are applied sequentially.
+This step corrects the jet \pt without changing the mean energy of the jet. It corrects for non-compensation, dead material and leakage effects by using observables like the charged particle fraction, energy fractions in different calorimeter layers, track-related quantities and the muon activity behind the calorimeter. Corrections are again derived in \pt and $\eta$ and are applied sequentially.
 
 \subsection{In situ calibration}
 At the final step differences between data and simulation are corrected for in \pt. These variations stem from imperfect simulations of detector materials and the modeling of the involved physics processes. For this well known physics processes are used and correction factors are extracted in \pt. This step is only applied to data.
@@ -129,16 +130,16 @@ At the final step differences between data and simulation are corrected for in \
 \subsection{Jet Event Cleaning}
 Another method to reduce background is called event cleaning. It removes the whole event if jets are found that where generated by out-of-time pileup, cosmic rays or beam-induced backgrounds by applying a set of quality criteria to variables describing the jet profile \citep{ATLAS-CONF-2015-029}.
 
-\subsection{Mass correction for Large-R jets}
-The mass of a jet is calculated from the energy deposits in calorimeter clusters $i$ and their transverse momentum as
+\subsection{Mass correction for Large-$R$ jets}
+The mass of a jet is calculated from the energy deposits in calorimeter clusters $i$ via
 \begin{equation}
   m_{\text{calo}} = \sqrt{\left(\sum_{i\in \text{Jet}}E_i\right)^2-\left(\sum_{i\in \text{Jet}}\vec{p_i}\right)^2}.
 \end{equation}
-The spread of decay products inside large-R jets scales with $1/\pt$. For very boosted jets the spread can become the size of the granularity of the calorimeter and the energy resolution degrades. With the help of tracking information the energy and mass resolution can be improved across the whole \pt range \citep{Aaboud:2019aa}. The track assisted jet mass is then
+For very boosted jets the spread of particles inside the jet can become the size of the granularity of the calorimeter and the energy resolution degrades accordingly. With the help of tracking information from the \ac{id} the energy and mass resolution can be improved across the whole \pt range \citep{Aaboud:2019aa}. The track assisted jet mass is then
 \begin{equation}
   m_{\text{TA}} = \frac{p_{\text{T}}^{\text{calo}}}{p_{\text{T}}^{\text{track}}} \cdot m_{\text{track}}
 \end{equation}
-where $p_{\text{T}}^{\text{calo}}$ is the transverse momentum measured in the calorimeter, $p_{\text{T}}^{\text{track}}$ is the transverse momentum of the four-vector sum of tracks associated to the large-R jet and $m_\text{track}$ is the invariant mass of this four-vector sum of tracks. Since the \ac{id} is only susceptible to charged particles the ratio of $p_{\text{T}}^{\text{calo}}$ and $p_{\text{T}}^{\text{track}}$ scales the mass measured from tracks to include neutral particles. The improvement is visualized in figure \ref{fig:combined_mass_large_R}. The calorimeter and track-assisted mass measurement are then linearly combined with a weight $w$ to give optimal results
+where $p_{\text{T}}^{\text{calo}}$ is the transverse momentum measured in the calorimeter, $p_{\text{T}}^{\text{track}}$ is the transverse momentum of the four-vector sum of tracks associated to the large-$R$ jet and $m_\text{track}$ is the invariant mass of this four-vector sum of tracks. Since the \ac{id} is only susceptible to charged particles the ratio of $p_{\text{T}}^{\text{calo}}$ and $p_{\text{T}}^{\text{track}}$ scales the mass measured from tracks to include neutral particles. The improvement is visualized in figure \ref{fig:combined_mass_large_R}. The calorimeter and track-assisted mass measurement are then linearly combined with a weight $w$ to give optimal results
 \begin{equation}
   m_{\text{comb}} =  w\cdot m_{\text{calo}}+(1-w)\cdot m_{\text{TA}}.
 \end{equation}
