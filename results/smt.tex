@@ -1,10 +1,9 @@
 \chapter{Studies with the Soft Muon Tagger}
-Analyses that involve final states with $b$-quarks heavily rely on the accurate identification of these quarks. Ongoing efforts are dedicated to refine this identification process. This chapter presents a study on how muons can contribute to the identification of $b$-quarks in current $b$-tagging algorithms applied to small-$R$ jets.
-
+In analyses where final states involve  $b$-quarks, as is the case in this study, heavily rely on the accurate identification of these quarks. Thus ongoing research and development efforts are focused on improving the accuracy and efficiency of this identification process. This chapter presents a study on how muons can contribute to the identification of $b$-quarks in current $b$-tagging algorithms applied to small-$R$ jets.
 
 \section{Soft Muon tagging}
 \label{sec:SoftMuonTagging}
-Algorithms currently in use for $b$-tagging described in section \ref{sec:b_tagging}, primarily exploit the displaced secondary vertex that is characteristic of the long lifetime of $b$-quarks. Besides vertex finding algorithms muons can be used as indication for the presence of a $b$-hadron.This is because approximately \qty{20}{\percent} of the $b$-jets undergo semi-leptonic decays that involve a muon as exemplified in figure \ref{fig:semileptonicDecay}. The branching fractions for these decays are roughly \qty{11}{\percent} for direct $b$ to muon decays $BR( b \rightarrow \mu \nu X )$ and about \qty{10}{\percent} for cascade decays $BR( b \rightarrow c \rightarrow \mu \nu X )$ \citep{expectedPerformanceAtlas}.
+Algorithms currently in use for $b$-tagging described in section \ref{sec:b_tagging}, primarily exploit the displaced secondary vertex that is characteristic of the long lifetime of $b$-quarks. Besides vertex finding algorithms muons can be used as indication for the presence of a $b$-hadron. This is because approximately \qty{20}{\percent} of the $b$-jets undergo semi-leptonic decays that involve a muon as exemplified in figure \ref{fig:semileptonicDecay}. The branching fractions for these decays are roughly \qty{11}{\percent} for direct $b$ to muon decays $BR( b \rightarrow \mu \nu X )$ and about \qty{10}{\percent} for cascade decays $BR( b \rightarrow c \rightarrow \mu \nu X )$ \citep{expectedPerformanceAtlas}.
 \begin{figure}[]
   \centering
   \includegraphics[width=0.4\textwidth]{semileptonic_b_decay}
@@ -37,7 +36,7 @@ Despite their limited branching ratio, muons from semi-leptonic heavy-flavor dec
 \section{Muon Selection}
 \label{sec:MuonSelection}
 %-------------------------------------------------------------------------------
-The particle flow algorithm used to reconstruct small-$R$ jets described in section \ref{sec:particle_flow} does not include muons. To address this muons are associated to jets using the shrinking association \DeltaR cone as depicted in figure \ref{fig:shrinkCone}.
+The particle flow algorithm used to reconstruct small-$R$ jets described in section \ref{sec:particle_flow} does not include muons. Thus they are added after jet reconstruction using the shrinking association \DeltaR cone as depicted in figure \ref{fig:shrinkCone}.
 \begin{figure}[]
   \centering
   \includegraphics[width=0.5\textwidth]{shrinkCone}
@@ -46,7 +45,7 @@ The particle flow algorithm used to reconstruct small-$R$ jets described in sect
 \end{figure}
 Selected muons must be combined muons meaning they are reconstructed using both the inner detector and the muon spectrometer. The closest muon within $\DeltaR_\mathrm{\mu, jet} < 0.4$ to the jet axis is chosen provided it has a minimum \pt of \qty{4}{GeV}. This threshold is set as muon reconstruction below \qty{3}{GeV} is generally unreliable due to minimally ionizing particles losing approximately \qty{3}{GeV} in the ATLAS calorimeters \citep{expectedPerformanceAtlas}.
 
-Truth studies revealed that most muons associated to jets result from secondary (non-prompt) decays of $c$- and $b$-hadrons as as evidenced in figure \ref{fig:muonTruth}(a). However this figure also reveals the introduction of $b$-tagging backgrounds since muons are also associated to light jets. These backgrounds predominantly arise from in flight decays of pions and kaons but also prompt muons from nearby $W$-boson decays and muons from light and strange mesons as shown in figure \ref{fig:muonTruth}(b).
+Truth studies revealed that most muons associated to jets result from secondary (non-prompt) decays of $c$- and $b$-hadrons as evidenced in figure \ref{fig:muonTruth}(a). However this figure also reveals the introduction of $b$-tagging backgrounds since muons are also associated to light jets. These backgrounds predominantly arise from in flight decays of pions and kaons but also prompt muons from nearby $W$-boson decays and muons from light and strange mesons as shown in figure \ref{fig:muonTruth}(b).
 \begin{figure}[]
   \centering
   \subfigure[]{
@@ -77,7 +76,7 @@ Table \ref{tab:MuonJetFlavors} shows the proportion of jets with an associated m
 Figure \ref{fig:muon_2d_truth} visualizes the amount of fake muons in $b$-jets with an associated muons depending on the jet- and muon-\pt. A notable trend is that $b$-jets with low momentum tend to have low momentum muons. Falsely associated muons become more common at high jet momentum and low muon momentum.
 \begin{figure}[]
   \includegraphics[width=1\textwidth]{muon_2d_truth_ttbar}
-  \caption{2D histograms of $p_\mathrm{T}^\mathrm{jet}$ and $p_\mathrm{T}^\mathrm{muon}$ for $t\bar{t}$ selected on $b$-jets only. The colorbar is the fraction of muons that do not originate from b-hadrons. The distribution is actually smooth although some irregularities are visible which is due to a bug in the plotting library.}
+  \caption{2D histograms of $p_\mathrm{T}^\mathrm{jet}$ and $p_\mathrm{T}^\mathrm{muon}$ for $b$-jets with an associated muons from a $t\bar{t}$ sample. The colorbar is the fraction of muons that do not originate from b-hadrons. Irregularities in the distribution are due to a bug in the plotting library.}
   \label{fig:muon_2d_truth}
 \end{figure}
 
@@ -105,7 +104,7 @@ The soft muon variables are selected based on their $b$-tagging discrimination p
     \includegraphics[width=0.47\textwidth]{softMuon_ip3dZ0Significance}
     \label{fig:softMuon_ip3dZ0Significance}
   }
-  \caption{Impact parameters of the soft muon retrieved with the IP3D algorithm \citep{ATL-PHYS-PUB-2017-013}, normalized per flavor.}
+  \caption{Impact parameters of the soft muon retrieved with the IP3D algorithm \citep{ATL-PHYS-PUB-2017-013}.}
   \label{fig:softMuonKinematics}
 \end{figure}
 In addition variables are used to reject muons from in flight decays of Kaons and Pions \citep{ATLAS-CONF-2020-030}. The Scattering Neighbor Significance measures if the track of a particle has kinks that could be a sign of an additional decay. By connecting neighboring detector hits along the track with straight lines and measuring the angles between adjacent lines the Scattering Neighbor Significance is obtained by taking the maximum of the angle divided by its uncertainty. In figure \ref{fig:softMuon_scatteringNeighbourSignificance} light jets therefore tend to have larger values as they have a smaller \pt (cf. figure \ref{fig:softMuon_pt}). Another variable to identify possible background sources is the Momentum Balance Significance. It calculates the difference of the muon-\pt determined with the inner detector with the one from the muon spectrometer and corrects it for energy deposits in the calorimeters. This would be zero in figure \ref{fig:softMuon_momentumBalanceSignificance} for a perfect energy loss correction and if the muon did not arise from an in flight decay. Furthermore there is the curvature comparison between inner detector (ID) and the one from the muon spectrometer (MS) termed q over p ratio: $(q/p)_\mathrm{ID}\, \bm{/}\, (q/p)_\mathrm{MS}$ in figure \ref{fig:softMuon_qOverPratio}.
@@ -125,13 +124,13 @@ In addition variables are used to reject muons from in flight decays of Kaons an
     \includegraphics[width=0.47\textwidth]{softMuon_qOverPratio}
     \label{fig:softMuon_qOverPratio}
   }
-  \caption{Variables to reject light jet background. Description in section \ref{sec:SoftMuonVariables}.}
+  \caption{Variables designed to reject light jet backgrounds. Description in section \ref{sec:SoftMuonVariables}.}
   \label{fig:softMuonVariables2}
 \end{figure}
 
 
 \section{Neural Network Training}
-For all trainings the Umami neural network training framework \citep{Froch:2857164} is used with \ttbar and \Zprime Monte Carlo samples described in \citep{ATL-PHYS-PUB-2017-013}. \Zprime is a hypothetical particle used here to enhance the statistics at larger jet-\pt>$\SI{250}{GeV}$. For the training both \ttbar and \Zprime samples are merged and resampled to make the \pt and $\eta$ distributions appear the same for all flavors. This is done to allow for a fair training between flavor categories, as the kinematic regimes are neither over- nor under-represented between flavors when the neural network is trained. The flavor composition of jets can be seen before and after applying the resampling in figure \ref{fig:resampling}. A total of \qty{23.6e6}{jets} are used with \qty{3.9e6}{jets} (\qty{16.6}{\percent}) having an associated soft muon.
+For all trainings the Umami neural network training framework \citep{Froch:2857164} is used with \ttbar and \Zprime Monte Carlo samples described in \citep{ATL-PHYS-PUB-2017-013}. \Zprime is a hypothetical particle used here to enhance the statistics at larger jet-\pt$>\SI{250}{GeV}$. For the training both \ttbar and \Zprime samples are merged and resampled to make the \pt and $\eta$ distributions appear the same for all flavors. This is done to allow for a fair \ac{nn} training between flavor categories, as the kinematic regimes are neither over- nor under-represented between flavors. The flavor composition of jets can be seen before and after applying the resampling in figure \ref{fig:resampling}. A total of \qty{23.6e6}{} jets are used with \qty{3.9e6}{} jets (\qty{16.6}{\percent}) having an associated soft muon.
 \begin{figure}
   \centering
   \subfigure[]{\includegraphics[width=.8\textwidth]{pt_btagJes-cut_spectrum}}\\
@@ -142,12 +141,11 @@ For all trainings the Umami neural network training framework \citep{Froch:28571
 
 
 \section{Adding muons to $b$-tagging algorithms}\label{sec:add_muons}
-Current $b$-tagging algorithms in use are deep feed-forward neural networks with the prefix \ac{dl1} that assign a probability score ($p_\mathrm{b}, p_\mathrm{c}, p_\mathrm{light}$) to a jet depending on its flavor content. Depending on the strategy used to introduce additional tracking information associated with the jet it can become DL1r if the outputs of the RNNIP (Recurrent Neural Network Impact Parameter) \citep{Gilles:2806947} tagger or DL1d if the outputs of the \ac{dips} \citep{ATL-PHYS-PUB-2020-014} tagger are added as inputs to \ac{dl1}. The outputs of these taggers are then combined into a single signal to background ratio variable, the discriminant, defined as
+Current $b$-tagging algorithms in use are deep feed-forward neural networks with the prefix \ac{dl1} that assign a probability score ($p_\mathrm{b}, p_\mathrm{c}, p_\mathrm{light}$) to a jet depending on its flavor content. Depending on the strategy used to introduce additional tracking information associated with the jet \ac{dl1} can become DL1r if the outputs of the RNNIP (Recurrent Neural Network Impact Parameter) \citep{Gilles:2806947} tagger or DL1d if the outputs of the \ac{dips} \citep{ATL-PHYS-PUB-2020-014} tagger are added as inputs to \ac{dl1}. The outputs of these taggers are then combined into a single signal to background ratio variable, the discriminant, defined as
 \begin{equation}
   \mathrm{D}=\ln\left(\frac{p_b}{f_c \cdot p_c + (1-f_c)\cdot p_\mathrm{light} }\right).
 \end{equation}
-$f_c$ is the fraction of charm jets in the background and can be used to tune the importance of the different background classes ($\sum f_\mathrm{bkg} =1$).
-Figure \ref{fig:scores_comparison_DL1d_to_DL1dmu} illustrates the discriminant of DL1d in comparison to the DL1dmu tagger, which will be discussed later.
+$f_c$ is the fraction of charm jets in the background and can be used to tune the importance of the different background classes ($\sum f_\mathrm{bkg} =1$). Figure \ref{fig:scores_comparison_DL1d_to_DL1dmu} illustrates the flavor distribution of this discriminant.
 \begin{figure}[]
   \centering
   \includegraphics[width=0.7\textwidth]{scores_comparison_DL1d_to_DL1dmu}
@@ -155,13 +153,13 @@ Figure \ref{fig:scores_comparison_DL1d_to_DL1dmu} illustrates the discriminant o
   \label{fig:scores_comparison_DL1d_to_DL1dmu}
 \end{figure}
 
-Information of the selected muon variables are added to these tracking information inclusive taggers as additional inputs. For a performance reference point initial trainings of DL1r were conducted and two ways of introducing the muon information were explored. The first refers to an approach where the muon variables itself were used to train an additional neural network called the \ac{smt} with architecture: (soft muon input variables) $\rightarrow$ 3 hidden layers (100, 20, 10) $\rightarrow (p_\text{b}, p_\text{c}, p_\text{light})$. The output scores of the \ac{smt} are then added as inputs to the \ac{dl1} training. The tagger resulting from this method will be referred to as DL1rSMT. In a second approach the muon variables were added directly as inputs to the DL1r training and are denoted as DL1rmu.
+The selected muon variables are added to DL1r/DL1d as additional inputs. For a performance reference point initial trainings of DL1r were conducted and two ways of introducing the muon information were explored. The first refers to an approach where the muon variables itself were used to train an additional neural network called the \ac{smt} with architecture: (soft muon input variables) $\rightarrow$ 3 hidden layers (100, 20, 10) $\rightarrow (p_\text{b}, p_\text{c}, p_\text{light})$. The output scores of the \ac{smt} are then added as inputs to the \ac{dl1} training. The tagger resulting from this method will be referred to as DL1rSMT. In a second approach the muon variables were added directly as inputs to the DL1r training and are denoted as DL1rmu.
 
 \section{Performance evaluation}
-A retraining of the DL1r or DL1d tagger serve in all cases as performance reference point against which other models are compared to. As a typical evaluation metric \ac{roc} curves are used to evaluate a classifier. In these curves the true positive rate (rate at which the classifier identifies correctly what it should identify) is plotted against the false positive rate (rate at which the classifier identifies falsely what it should identify). The first translates here into the $b$-jet efficiency. It corresponds to integrating from right to left in figure \ref{fig:scores_comparison_DL1d_to_DL1dmu} for a desired $b$-jet efficiency. The latter (false positive rate) will be plotted inversely here as rejection instead of as efficiency (1/$\epsilon_\mathrm{flavor}$.) For the case at hand the performance increases if the curve moves to the upper right corner, as the model can reject more background for a designated $b$-jet efficiency. If the \ac{roc} curve of a classifier would be a \qty{45}{\degree} line the classifier is of no use as there would be always a \qty{50}{\percent} chance to correctly or falsely identify a property of interest, essentially performing no better than random chance.
+A retraining of the DL1r or DL1d tagger serves in all cases as performance baseline against which other models are compared to. As a typical evaluation metric \ac{roc} curves are used to evaluate a classifier. In these curves the true positive rate (rate at which the classifier identifies correctly what it should identify) is plotted against the false positive rate (rate at which the classifier identifies falsely what it should identify). The first translates here into the $b$-jet efficiency. It corresponds to integrating from right to left in figure \ref{fig:scores_comparison_DL1d_to_DL1dmu} for a desired $b$-jet efficiency. The latter (false positive rate) will be plotted inversely here as rejection instead of as efficiency (1/$\epsilon_\mathrm{flavor}$). For the case at hand the performance increases if the curve moves to the upper right corner, as the model can reject more background for a designated $b$-jet efficiency. If the \ac{roc} curve of a classifier would be a \qty{45}{\degree} line the classifier is of no use as there would be always a \qty{50}{\percent} chance to correctly or falsely identify a property of interest, essentially performing no better than random chance.
 
 \section{DL1rmu vs. DL1rSMT}
-\ac{roc} curves comparing performances of DL1r, DL1rmu and DL1rSMT, detailed in \ref{sec:add_muons} are shown in figure \ref{fig:DL1rmu_vs_DL1r_SMT_tt} and \ref{fig:DL1rmu_vs_DL1r_SMT_z} which shows a \qty{25}{\percent} improvement in the light flavor jet rejection and a \qty{10}{\percent} $c$-flavor jet rejection upon introducing muon information.  Since adding the soft muon variables to the inputs of DL1r/DL1d results in fewer technical interdependencies and also allows DL1r to figure out potential correlations to other variables, it was decided to default to this option.
+\ac{roc} curves comparing performances of DL1r, DL1rmu and DL1rSMT are shown in figure \ref{fig:DL1rmu_vs_DL1r_SMT_tt} and \ref{fig:DL1rmu_vs_DL1r_SMT_z} and display for both methods a \qty{25}{\percent} improvement in the light flavor jet rejection and a \qty{10}{\percent} $c$-flavor jet rejection upon introducing muon variables. Since adding the soft muon variables to the inputs of DL1r/DL1d results in fewer technical interdependencies and also allows DL1r to figure out potential correlations to other variables, it was decided to default to this option.
 
 \begin{figure}[]
   \centering
@@ -194,7 +192,7 @@ A retraining of the DL1r or DL1d tagger serve in all cases as performance refere
 
 
 \section{Additional soft muon variables}
-The full potential of muons were explored phenomenologically by successively adding input variables of four different classes to \ac{dl1}. New inputs are categorized into variables related to quality criteria used by the \ac{mcp} group, number of hits in the various subdetectors of the inner detector and of course the tracking information from \ac{dips} and mentioned \ac{smt} variables as detailed in \ref{sec:SoftMuonVariables}. Results are shown in section \ref{sec:dl1d_results}
+The full potential of muons were explored phenomenologically by successively adding input variables of four different classes to \ac{dl1}. New inputs are categorized into variables related to quality criteria used by the \ac{mcp} group, number of hits in the various subdetectors of the inner detector and of course the tracking information from \ac{dips} and mentioned \ac{smt} variables as detailed in \ref{sec:SoftMuonVariables}. 
 
 The different variations of input variables are shown in table \ref{tab:smtAbbreviations} and \ref{tab:DL1dModels} while figures \ref{fig:smt_vars_1}-\ref{fig:smt_vars_7} show their distributions per flavor. Table \ref{tab:smtAbbreviations} is a reduced version of available variables since some of them did not display any flavor discrimination power. A detailed explanation and modeling of these variables can be found in \citep{Assamagan:1099953,Bugge:2665711}.
 
@@ -267,7 +265,7 @@ The different variations of input variables are shown in table \ref{tab:smtAbbre
 \input{results/smt_all_figures.tex}
 
 \section{Adding a muon quality criterion}
-Muons used in the association are as inclusive as possible and therefore apart from the selection mentioned in section \ref{sec:MuonSelection} no further quality criterion are applied initially. In other trainings muons were required to have the  ``low pt'' muon identification working point \citep{ATL-PHYS-PUB-2020-002}. This quality criterion improves the muon selection efficiency for muons in the range particularly relevant for this study $\qty[]{3}{GeV}<\pt < \qty[]{6}{GeV}$ (cf. figure \ref{fig:softMuon_pt}). It reduces the backgrounds by \qty{54}{\percent} for light flavor jets and by \qty{23}{\percent} for tau-jets by keeping \qty{77}{\percent} of the $c$-jets and \qty{90}{\percent} of the $b$-jets (cf. table \ref{tab:lowPtMuonJetFlavors}).
+Muons used in the association are as inclusive as possible and therefore apart from the selection mentioned in section \ref{sec:MuonSelection} no further quality criterion were applied initially. In other trainings muons were required to have the  ``low pt'' muon identification working point \citep{ATL-PHYS-PUB-2020-002}. This quality criterion improves the muon selection efficiency for muons in the range particularly relevant for this study $\qty[]{3}{GeV}<\pt < \qty[]{6}{GeV}$ (cf. figure \ref{fig:softMuon_pt}). It reduces the backgrounds by \qty{54}{\percent} for light flavor jets and by \qty{23}{\percent} for tau-jets by keeping \qty{77}{\percent} of the $c$-jets and \qty{90}{\percent} of the $b$-jets (cf. table \ref{tab:lowPtMuonJetFlavors}).
 \begin{table}[]
   % \sisetup{group-minimum-digits=4}
   \caption{Fraction of associated low pt working point muons per flavor. Fraction of low pt muons to all associated muons (fractions to table \ref{tab:MuonJetFlavors}), the fraction of muons kept after applying the working point. }%
@@ -289,12 +287,12 @@ Muons used in the association are as inclusive as possible and therefore apart f
       \hline
     \end{tabular}}
 \end{table}
-One way to introduce this information into the neural network is to add another Boolean input variable \textit{isLowPt} that indicates whether the muon meets the necessary requirements for the identification working point. Another option is to use only the muons that passed the identification working point.
+One way to introduce this information into the neural network is to add another Boolean input variable \textit{isLowPt} that indicates whether the muon meets the necessary requirements for the identification working point. Another option is to use only the muons that passed the identification working point. Both methods were tested in separate trainings.
 
 \section{Performance comparison to DL1d}
-The various additions of muon information to different trainings of \ac{dl1} is evaluated in figure \ref{fig:DL1dmu_ttbar} and \ref{fig:DL1dmu_zpext}. DL1dmu displays similar to DL1r a \qty{25}{\percent} improvement in the light flavor jet rejection and a \qty{10}{\percent} $c$-flavor jet rejection but does neither improve significantly upon adding the hits variables nor for adding the parameters from the muon combined performance variables. Notably, when the "lowPt" identification working point is applied, DL1dmu shows further improvement in its rejection capabilities. Specifically, there's an additional enhancement of approximately $\sim$\qty{10}{\percent}in rejecting light flavor jets and about $\sim$\SI{5}{\percent} in rejecting $c$-flavor jets.
+The various additions of muon information to different trainings of \ac{dl1} is evaluated in figure \ref{fig:DL1dmu_ttbar} and \ref{fig:DL1dmu_zpext}. DL1dmu shows similar to DL1r a \qty{25}{\percent} improvement in the light flavor jet rejection and a \qty{10}{\percent} $c$-flavor jet rejection but does neither improve significantly upon adding the hits variables nor for adding the parameters from the muon combined performance variables. Notably, when the ``lowPt'' identification working point is applied, DL1dmu shows further improvement in its rejection capabilities. Specifically, there's an additional increase of approximately $\sim$\qty{10}{\percent} in rejecting light flavor jets and about $\sim$\SI{5}{\percent} in rejecting $c$-flavor jets.
 
-This is regardless if the more inclusive muons selection is applied only given the boolean \textit{lowPt} information or by using the \textit{lowPt} selected muons only which removes a notable \qty{44}{\percent} of the muons. This means that the neural network does not learn anything from the background muons, and that having a muon associated with a $b$-jet is the strongest indicator for a b-hadron. DL1dmu with the \textit{islowPt} variable improves light flavor rejection by $\sim$\qty{40}{\percent} and c-flavor rejection by $\sim$\qty{30}{\percent} compared to the DL1d training
+This is regardless if the more inclusive muon selection is used, where only the boolean \textit{lowPt} information is added as a variable or by using the \textit{lowPt} selected muons only which removes a notable \qty{44}{\percent} of the muons. This means that the neural network does not learn anything from the background muons, and that having a muon associated with a $b$-jet is the strongest indicator for a b-hadron. Hence, DL1dmu with the \textit{islowPt} variable, improves light flavor rejection by $\sim$\qty{40}{\percent} and c-flavor rejection by $\sim$\qty{30}{\percent} compared to the nominal DL1d training.
 
 \begin{figure}[]
   \centering
@@ -310,7 +308,7 @@ This is regardless if the more inclusive muons selection is applied only given t
 \end{figure}
 
 \section{Feature importance}
-To understand the influence of a variable to a training of a neural network it can be evaluated with a framework called \ac{shap} \citep{shap,NIPS2017_7062}. It is based on the idea to turn input features on and off and comparing the \ac{ml} model's prediction for both cases. If this is done for all possible combinations the average importance of a feature for a machine learning model can be estimated with the \ac{shap} value. Large positive or negative \ac{shap} values are thus indicators how significantly a particular input feature influences the model's prediction. In the context of $b$-tagging large negative \ac{shap} values will help the model to better reject whereas features with large positive \ac{shap} values helps the model to learn that these are most probably jets from the output node of interest.
+To understand the influence of a variable to a training of a neural network it can be evaluated with a framework called \ac{shap} \citep{shap,NIPS2017_7062}. It is based on the idea to turn input features on and off and to compare the \ac{ml} model's prediction for both cases. If this is done for all possible combinations the average impact a feature for a machine learning model can be estimated with the \ac{shap} value. Large positive or negative \ac{shap} values are thus indicators how significantly a particular input feature influences the model's prediction. In the context of $b$-tagging large negative \ac{shap} values will help the model to better reject whereas features with large positive \ac{shap} values helps the model to learn that these are most probably jets from a \ac{nn} output node of interest.
 
 The evaluation for DL1dmu, with the boolean \textit{isLowPt} variable added, is shown in fig. \ref{fig:shapleyDL1dmu}. It clearly shows that main improvements over the previous implementation are due to the addition of the muon \pt and the low pt working point information to DL1dmu.
 \begin{figure}[]
@@ -319,14 +317,14 @@ The evaluation for DL1dmu, with the boolean \textit{isLowPt} variable added, is 
   \caption{SHAP values for the $b$-jet output node of DL1dmu representing the impact of an input features influence to the neural network.}
   \label{fig:shapleyDL1dmu}
 \end{figure}
-The evaluation for the model that added all variables is shown in fig. \ref{fig:ttbar_r22_shapley_b_all_vars}. Even though a lot of the \ac{mcp} variables (see table \ref{tab:DL1dModels}) rank mediocre there was basically no improvement in performance (fig. \ref{fig:DL1dmu_ttbar}-\ref{fig:DL1dmu_zpext}).
+The evaluation for the model that added all variables is shown in fig. \ref{fig:ttbar_r22_shapley_b_all_vars}. Even though a lot of the \ac{mcp} variables (see table \ref{tab:DL1dModels}) rank mediocre there was basically no improvement in performance (figure \ref{fig:DL1dmu_ttbar}-\ref{fig:DL1dmu_zpext}).
 \begin{figure}[]
   \centering
   \includegraphics[width=0.97\textwidth]{ttbar_r22_shapley_b-jets_all_vars}
   \caption{SHAP values for the $b$-jet output node of the DL1dmu\_all\_vars representing the impact of an input features influence to the neural network.}
   \label{fig:ttbar_r22_shapley_b_all_vars}
 \end{figure}
-The minimal impact of incorporating most MCP variables on the model's performance is likely due to their strong linear correlation with the muon's transverse momentum \pt. This correlation is clearly evident in the correlation matrix presented in Figure \ref{fig:correlation_matrix}. Since the \pt of the muon is already informatively represented in other variables, such as the Momentum Balance Significance, the additional MCP variables do not contribute significant new information to the model. A more detailed visual representation is shown in scatter plots of Figure \ref{fig:scatterplot_matrix_mcp} showcasing the relationships among \ac{smt} and \ac{mcp} variables.
+The minimal impact of incorporating most MCP variables on the model's performance is likely due to their strong linear correlation with the muon's transverse momentum. This correlation is clearly evident in the correlation matrix presented in Figure \ref{fig:correlation_matrix}. Since the \pt of the muon is already informatively represented in other variables, such as the Momentum Balance Significance, the additional MCP variables do not contribute significant new information to the model. A more detailed visual representation is shown in scatter plots of Figure \ref{fig:scatterplot_matrix_mcp} showcasing the relationships among \ac{smt} and \ac{mcp} variables.
 \begin{figure}[]
   \centering
   \includegraphics[width=1\textwidth]{correlation_matrix}
