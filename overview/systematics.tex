@@ -18,37 +18,27 @@ The \ac{nn} of the $X\rightarrow bb$ tagger was trained using simulations leadin
 \end{figure}
 
 \section{Theory Uncertainties}
-The cross-section calculation for some process initiated by a proton proton collision calculated at $n$-th order has a functional form \citep{unc_recipe}
+The cross-section calculation for some process initiated by a proton proton collision calculated at $n$-th order as described in section \ref{sec:mc_simulation} has a functional form 
 \begin{equation}
     \sigma^{(n)} = PDF(x_1, \mu_F)  PDF(x_2, \mu_F) \hat{\sigma}^{(n)}(x_1,x_2,\mu_R),
     \label{eq:xs_unc_1}
 \end{equation}
-with the \acfp{pdf} carrying momentum fraction $x_{1,2}$ of the partons and the factorization scale $\mu_F$. This scale is named after the assumption that the cross-sections of the initial particle can be calculated by factorizing it in its parton contributions \citep{halzen1984introductory}.
- and depends on the energy as exemplified in figure.
-\begin{figure}
-    \centering
-    \subfigure[]{\includegraphics[width=.49\textwidth]{NNPDF-10}}
-    \subfigure[]{\includegraphics[width=.49\textwidth]{NNPDF-10000}}
-    \caption[]{Parton distribution functions for two different factorization scales $\mu_F^2$. (left) $\mu_F^2=$\qty{10}{GeV}$^2$, (right) $\mu_F^2=$\qty{10}{TeV}$^2$. Adopted from \citep{PhysRevD.98.030001}.}
-    \label{fig:}
-\end{figure}
-The term $\hat{\sigma}^{(n)}$ in equation \ref{eq:xs_unc_1} is the calculable part of the cross-section at renormalization scale $\mu_R$ as described in section \ref{sec:renormalization} and is expanded to a desired order $n$ in the strong coupling constant $\alpha_s$ with the usual \ac{qft} ansatz outlined in section \ref{sec:qft}
+with the \acfp{pdf} carrying momentum fraction $x_{1,2}$ of the partons and the factorization scale $\mu_F$. The term $\hat{\sigma}^{(n)}$ in equation \ref{eq:xs_unc_1} is the calculable part of the cross-section at renormalization scale $\mu_R$ as described in section \ref{sec:renormalization} and is expanded to a desired order $n$ in the strong coupling constant $\alpha_s$ with the usual \ac{qft} ansatz outlined in section \ref{sec:qft}
 \begin{equation}
     \hat{\sigma}^{(n)} = \alpha_s \hat{\sigma}^{(0)} + \alpha_s^2 \hat{\sigma}^{(1)} + \ldots + \alpha_s^n \hat{\sigma}^{(n)} + \mathcal{O}(\alpha_s^{n+1}).
     \label{eq:xs_unc_2}
 \end{equation}
-Modelling cross-sections via \acp{pdf} is necessary since the approximation of the perturbation ansatz of section \ref{sec:qft} breaks down for low energy scales $Q^2$ as described in section \ref{sec:renormalization} which is the energy scale for which the approximation would need to hold to describe the partons inside a proton. However similar to renormalization a scaling behavior can be derived which allows to deduce an estimate of the \acp{pdf} by measuring it at a some energy scale $Q^2$ to extrapolate it to another. The equations enabling this are also expanded in $\alpha_s$ to a desired order and are knwon as DGLAP equations \citep{halzen1984introductory}. Three main sources of uncertainty arise in this calculation described in the following.
+Similar to renormalization a scaling behavior can be derived which allows to deduce an estimate of the \acp{pdf} by measuring it at some energy scale $\mu_F^2$ to extrapolate it to another. The equations enabling this are also expanded in $\alpha_s$ to a desired order and are known as DGLAP equations \citep{halzen1984introductory}. Three main sources of uncertainty arise in this calculation described in the following.
 
 \subsubsection*{Scale Variations}
 $\alpha_s$ is expanded to some order $n$ in the cross-section calculation and as well in estimating the \acp{pdf}. To account for missing higher orders corrections of theses expansions scale variations of the renormalization and factorization scales are performed pairwise $\{\mu_\text{r},\mu_\text{f}\}\ \times \{0.5,0.5\}, \{1,0.5\}, \{0.5,1\}, \{1,1\}, \{2,1\}, \{1,2\}, \{2,2\}$. For the cross-section calculation this accounts essentially for the term $\mathcal{O}(\alpha_s^{n+1})$ in equation \ref{eq:xs_unc_2}. The envelope that gives the largest variation is taken as the scale uncertainty.
 
-\subsubsection*{\ac{pdf} Uncertainties}
+\subsubsection*{\ac{pdf} + $\alpha_s$ Uncertainties}
 \acp{pdf} need to be deduced from experiment and thus come by themselves with experimental uncertainties. Further uncertainties arise from the functional forms assumed for the \acp{pdf}.
 
-\subsubsection*{$\alpha_s$ Uncertainties}
 $\alpha_s$ is also experimentally deduced at the scale of the $Z$ mass which is subject to uncertainties. In all perturbative calculations it is truncated at some order that needs to be accounted for.
 
-The uncertainties on $\alpha_s$ and the \acp{pdf} are both estimated by varying $\alpha_s$. Even though there correlation is not strong they are usually applied combined \citep{unc_recipe}.
+The uncertainties on $\alpha_s$ and the \acp{pdf} are both estimated by varying $\alpha_s$. Since  their correlation is small these uncertainties are applied combined \citep{unc_recipe}.
 
 \subsection{Uncertainty on HH cross section}
 The cross-section calculation for the \ac{vbf} Higgs pair production process has associated uncertainties for the scale variations $^{+0.03\%}_{-0.04\%}$ and the combined \ac{pdf}+$\alpha_s$ uncertainty is $\pm 2.1\%$ \citep{de2016arxiv}.
@@ -62,15 +52,15 @@ Uncertainties related to the parton showering are estimated using different mode
 
 
 \subsection{Branching Ratio Uncertainty}
-The error estimate for the branching ratio takes into account theoretical uncertainties (THU) and parametric uncertainties (PU) that are included in the \ac{sm} calculations. The theoretical uncertainties mainly considers missing higher orders while for the parameters $p$ the four leading non-negligible contributions of $p=\alpha_s,m_c,m_b,m_t$ are considered.
+The error estimate for the branching ratio takes into account theoretical uncertainties (THU) and parametric uncertainties (PU) that are included in the \ac{sm} calculations. The theoretical uncertainties mainly considers missing higher orders while for the parameters $p$ the four leading non-negligible contributions of the strong coupling and the quark masses $p=\{\alpha_s,m_c,m_b,m_t\}$ are considered.
 
-Parametric uncertainties are Gaussian errors and are added in quadrature which ensures unity in the Branching Ratio calculation. Theoretical uncertainties in turn are not Gaussian and would lead to underestimated errors and are therefore added linearly \citep{de2016arxiv}. By assuming a Higgs mass of \qty[]{125}{GeV} and considering that there are two Higgs decaying to two $b$-quarks the error on the branching is
+Parametric uncertainties are Gaussian errors and are added in quadrature which ensures unity in the Branching Ratio calculation \citep{de2016arxiv}. Theoretical uncertainties in turn are not Gaussian and would lead to underestimated errors and are therefore added linearly \citep{de2016arxiv}. By assuming a Higgs mass of \qty[]{125}{GeV} and considering that there are two Higgs decaying to two $b$-quarks the error on the branching ratio is
 \begin{equation}
     \Delta\text{BR} = 2 \times \left(\Delta\text{BR}(\text{THU}) + \sqrt{\sum\nolimits_{p} \Delta\text{BR}(\text{PU}_{p})^2 }\right) = _{-3.5\%}^{+3.4\%}.
 \end{equation}
 
 \section{Statistical Uncertainties}
-As discussed in the chapter on statistics \ref{sec:statistics} the bin content for histograms in this work follows a Poisson distribution. Therefore the standard error for $N$ events is the square root of the variance $\sigma=\sqrt{\text{Var}}=\sqrt{N}$. Since histograms are filled weighted $\sum_i w_i N_i$ this needs to be taken into account. By making use of the additive property and invariance with respect to constants of the variance a bin filled with weights $w_i$ can be written as
+As discussed in the chapter \ref{sec:statistics} on statistics the bin content for histograms in this work follows a Poisson distribution. Therefore the standard error for $N$ events is the square root of the Poisson variance $\sigma=\sqrt{\text{Var}}=\sqrt{N}$. Since histograms are filled weighted $\sum_i w_i N_i$ this needs to be taken into account. By making use of the additive property and invariance with respect to constants of the variance a bin filled with weights $w_i$ can be written as
 \begin{align}
     \sigma_\text{stat}^2 & = \text{Var}_\text{bin}\left(\sum_i w_i\right)
     =
@@ -85,4 +75,26 @@ so that the statistical error reads
 \end{equation}
 
 \section{Background Derivation Uncertainties}
-The \ac{qcd} background is estimated with the ABCD method from the control region as detailed in section \ref{sec:abcd}. The uncertainties are assessed through error propagation of the statistical uncertainty meaning the statistical errors of the event yields used to retrieve the weight factor result in an uncertainty for the weight factor $\Delta w_\text{CR}= \red{\qty[]{0.0}{\percent}}$. To estimate a bin-wise statistical uncertainty of the \ac{nn} score histogram the ABCD procedure is applied in the \ac{vr} by also propagating the error $\Delta w_\text{CR}$ of the applied weight factor.
+The \ac{qcd} background is estimated with the ABCD method from the control region as detailed in section \ref{sec:abcd}. The uncertainties are assessed through error propagation of the statistical uncertainties on the quantities used to calculate the weight. 
+\begin{equation}
+    \Delta_\text{stat} w_\text{CR} = w_\text{CR} \sqrt{
+        \left(\frac{\Delta_\text{stat} N_\text{CR}^\text{2Xbb}}{N_\text{CR}^\text{2Xbb}}\right)^2
+        +
+        \left(\frac{\Delta_\text{stat} N_\text{CR}^\text{1Xbb}}{N_\text{CR}^\text{1Xbb}}\right)^2
+        }
+        = \red{\qty[]{0.0}{\percent}}
+\end{equation}
+To estimate uncertainty of the background estimate in the \ac{sr} for the $i$-th bin, statistical uncertainties are propagated and estimated from the \ac{vr}
+\begin{equation}
+    \Delta N_\text{SR, i}^\text{2Xbb} 
+    =   
+    \sqrt{
+        \left(\frac{\Delta_\text{stat} w_\text{CR}}{w_\text{CR}}\right)^2
+        +
+        \left(\frac{\Delta_\text{stat} N_\text{VR, i}^\text{1Xbb}}{N_\text{VR, i}^\text{1Xbb}}\right)^2
+        }
+        \approx \red{\qty[]{0.0}{\percent}}.
+\end{equation}
+
+
+\red{will say in results part that the bkg estimate is validated as it is within the statistical error estimate}
