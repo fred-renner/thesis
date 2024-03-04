@@ -31,12 +31,11 @@ with the \acfp{pdf} carrying momentum fraction $x_{1,2}$ of the partons and the 
 Similar to renormalization a scaling behavior can be derived which allows to deduce an estimate of the \acp{pdf} by measuring it at some energy scale $\mu_F^2$ to extrapolate it to another. The equations enabling this are also expanded in $\alpha_s$ to a desired order and are known as DGLAP equations \citep{halzen1984introductory}. Three main sources of uncertainty arise in this calculation described in the following.
 
 \subsubsection*{Scale Variations}
-$\alpha_s$ is expanded to some order $n$ in the cross-section calculation and as well in estimating the \acp{pdf}. To account for missing higher orders corrections of these expansions scale variations of the renormalization and factorization scales are performed pairwise $\{\mu_\text{r},\mu_\text{f}\}\ \times \{0.5,0.5\}, \{1,0.5\}, \{0.5,1\}, \{1,1\}, \{2,1\}, \{1,2\}, \{2,2\}$. For the cross-section calculation this accounts essentially for the term $\mathcal{O}(\alpha_s^{n+1})$ in equation \ref{eq:xs_unc_2}.
+$\alpha_s$ is expanded to some order $n$ in the cross-section calculation and as well in estimating the \acp{pdf}. To account for missing higher orders corrections of these expansions scale variations of the renormalization and factorization scales are performed pairwise $\{\mu_\text{r},\mu_\text{f}\}\ \times \{0.5,0.5\}, \{1,0.5\}, \{0.5,1\}, \{1,1\}, \{2,1\}, \{1,2\}, \{2,2\}$. For the cross-section calculation this accounts essentially for the term $\mathcal{O}(\alpha_s^{n+1})$ in equation \ref{eq:xs_unc_2}. The envelope encompassing all scale variations is used as the uncertainty as depicted in figure \ref{fig:theory-uncertainties}.
+
 
 \subsubsection*{\ac{pdf} + $\alpha_s$ Uncertainties}
-\acp{pdf} need to be deduced from experiment and thus have experimental uncertainties. Further uncertainties arise from the functional forms assumed for the \acp{pdf}. $\alpha_s$ is also experimentally deduced at the scale of the $Z$ mass and thus subject to uncertainties. In all perturbative calculations it is truncated at some order that needs to be accounted for \citep{unc_recipe,Butterworth_2016}.
-
-Theoretical uncertainties on the final acceptance are evaluated on \ac{mc} simulations for scale variations and for \acp{pdf} and $\alpha_s$. For the scale variation the envelope the envelope encompassing all scale variations is used as the uncertainty.
+\acp{pdf} need to be deduced from experiment and thus have experimental uncertainties. Further uncertainties arise from the functional forms assumed for the \acp{pdf}. $\alpha_s$ is  experimentally deduced at the scale of the $Z$ mass and thus subject to uncertainties. In all perturbative calculations it is truncated at some order that needs to be accounted for \citep{unc_recipe,Butterworth_2016}.
 
 The uncertainty introduced by the \acp{pdf} is calculated as a standard deviation of the cross section from the nominal \ac{pdf} set $\sigma^{(0)}$ \citep{Butterworth_2016}
 \begin{equation}
@@ -49,13 +48,23 @@ The uncertainty on $\alpha_s=0.1180\pm0.0015$ is estimated with the associated u
 \end{equation}
 
 Since the correlation between $\alpha_s$ and the \acp{pdf} is small their uncertainties are applied quadratically combined \citep{unc_recipe,Butterworth_2016}.
-
 \begin{equation}
     \Delta^{\text{PDF}+\alpha_s}\sigma=\sqrt{(\Delta^\text{PDF}\sigma )^2+(\Delta^{\alpha_s}\sigma)^2}
 \end{equation}
 
+
+\begin{figure}
+    \centering
+    \subfigure[]{\includegraphics[width=.47\textwidth]{atos_cls_5_sys_SR_xbb_2_signal_scale_variations}
+        \label{fig:scale-variations}
+    }
+    \subfigure[]{\includegraphics[width=.47\textwidth]{red}
+        \label{fig:pdf_alpha_s}    }
+    \caption[]{Shape uncertainties for \textbf{(a)} Scale variations and \textbf{(b)} \ac{pdf} + $\alpha_s$.}
+\end{figure}
+
 \subsection{Uncertainty on HH cross section}
-The cross-section uncertainties for the \ac{vbf} Higgs pair production process from upper mentioned approaches are for the scale variations \red{$^{+0.03\%}_{-0.04\%}$ and the combined \ac{pdf}+$\alpha_s$ uncertainty is $\pm 2.1\%$ }\citep{de2016arxiv}.
+Normalization uncertainties on the final acceptance are evaluated on \ac{mc} simulations for scale variations and for \acp{pdf} and $\alpha_s$. This is essentially the upper approach with one bin. The cross-section uncertainties for the \ac{vbf} Higgs pair production process then has an uncertainty due to scale variations of \red{$^{+0.03\%}_{-0.04\%}$ and the combined \ac{pdf}+$\alpha_s$ uncertainty is $\pm 2.1\%$ }\citep{de2016arxiv}. 
 
 \subsection{Parton Shower}
 Uncertainties related to the parton showering are estimated using different modelings from \textsc{Pythia 8} and \textsc{Herwig 7}. The largest deviations from the nominal are used as uncertainties on the Higgs pair process. \red{TODO}
@@ -85,16 +94,16 @@ so that the statistical error reads
 \end{equation}
 
 \section{Background Derivation Uncertainties}
-The \ac{qcd} background is estimated with the ABCD method from the control region as detailed in section \ref{sec:abcd}. The uncertainties are assessed through error propagation of the statistical uncertainties on the quantities used to calculate the weight.
+The \ac{qcd} background is estimated with the ABCD method from the control region as detailed in section \ref{sec:abcd}. The uncertainties on the weight factor $w_\text{CR}$ are assessed through error propagation of the statistical uncertainties on the quantities used to calculate the weight
 \begin{equation}
     \Delta_\text{stat} w_\text{CR} = w_\text{CR} \sqrt{
         \left(\frac{\Delta_\text{stat} N_\text{CR}^\text{2Xbb}}{N_\text{CR}^\text{2Xbb}}\right)^2
         +
         \left(\frac{\Delta_\text{stat} N_\text{CR}^\text{1Xbb}}{N_\text{CR}^\text{1Xbb}}\right)^2
     }
-    = \red{\qty[]{0.0}{\percent}}
+    = \red{\qty[]{8.3}{\percent}}.
 \end{equation}
-To estimate uncertainty of the background estimate in the \ac{sr} for the $i$-th bin, statistical uncertainties are propagated and estimated from the \ac{vr}
+To estimate the shape uncertainty of the background estimate in the \ac{sr} for the $i$-th bin, statistical uncertainties are taken from the \ac{vr} of figure \ref{fig:bkg-validation} and error propagated with the uncertainty on the weight $\Delta_\text{stat} w_\text{CR}$
 \begin{equation}
     \Delta N_\text{SR, i}^\text{2Xbb}
     =
@@ -102,9 +111,13 @@ To estimate uncertainty of the background estimate in the \ac{sr} for the $i$-th
         \left(\frac{\Delta_\text{stat} w_\text{CR}}{w_\text{CR}}\right)^2
         +
         \left(\frac{\Delta_\text{stat} N_\text{VR, i}^\text{1Xbb}}{N_\text{VR, i}^\text{1Xbb}}\right)^2
-    }
-    \approx \red{\qty[]{0.0}{\percent}}.
+    }.
 \end{equation}
+The resulting shape variation is shown in figure \ref{fig:bkg-estimate-shape}.
+\begin{figure}
+    \centering
+    \includegraphics[width=.8\textwidth]{atos_cls_5_sys_SR_xbb_2_Background_bkg_estimate_shape}
+    \caption[]{Shape uncertainty for the data driven background estimate.}
+    \label{fig:bkg-estimate-shape}
+\end{figure}
 
-
-\red{will say in results part that the bkg estimate is validated as it is within the statistical error estimate}
