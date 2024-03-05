@@ -1,0 +1,60 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: unsrtnat.bst
+A level-1 auxiliary file: front_back_matter/titlepage.aux
+A level-1 auxiliary file: front_back_matter/abstract.aux
+A level-1 auxiliary file: overview/introduction.aux
+A level-1 auxiliary file: methodology/hh4b.aux
+A level-1 auxiliary file: results/hh4b.aux
+A level-1 auxiliary file: front_back_matter/selbststaendig.aux
+Database file #1: bib.bib
+Warning--entry type for "buttinger2018background" isn't style-file defined
+--line 587 of file bib.bib
+Warning--there's a number but no series in de2016arxiv
+Warning--empty author in ATL-PHYS-PUB-2019-007
+Warning--empty journal in DAPR-2021-01
+Warning--empty author in ATLAS-CONF-2019-049
+Warning--empty year in buttinger2018background
+You've used 20 entries,
+            2481 wiz_defined-function locations,
+            696 strings with 10954 characters,
+and the built_in function-call counts, 9051 in all, are:
+= -- 606
+> -- 814
+< -- 10
++ -- 299
+- -- 258
+* -- 854
+:= -- 1637
+add.period$ -- 80
+call.type$ -- 20
+change.case$ -- 42
+chr.to.int$ -- 19
+cite$ -- 27
+duplicate$ -- 361
+empty$ -- 625
+format.name$ -- 278
+if$ -- 1786
+int.to.chr$ -- 2
+int.to.str$ -- 21
+missing$ -- 16
+newline$ -- 127
+num.names$ -- 54
+pop$ -- 143
+preamble$ -- 1
+purify$ -- 20
+quote$ -- 0
+skip$ -- 204
+stack$ -- 0
+substring$ -- 204
+swap$ -- 52
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 134
+warning$ -- 5
+while$ -- 48
+width$ -- 0
+write$ -- 302
+(There were 6 warnings)

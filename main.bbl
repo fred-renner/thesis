@@ -1,0 +1,127 @@
+\begin{thebibliography}{20}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Guest et~al.(2018)Guest, Cranmer, and Whiteson]{guest2018deep}
+Dan Guest, Kyle Cranmer, and Daniel Whiteson.
+\newblock Deep learning and its application to lhc physics.
+\newblock \emph{Annual Review of Nuclear and Particle Science}, 68\penalty0 (1):\penalty0 161--181, 2018.
+\newblock \doi{10.1146/annurev-nucl-101917-021019}.
+\newblock URL \url{https://doi.org/10.1146/annurev-nucl-101917-021019}.
+
+\bibitem[Grazzini et~al.(2018)Grazzini, Heinrich, Jones, Kallweit, Kerner, Lindert, and Mazzitelli]{Grazzini_2018}
+M.~Grazzini, G.~Heinrich, S.~Jones, S.~Kallweit, M.~Kerner, J.~M. Lindert, and J.~Mazzitelli.
+\newblock Higgs boson pair production at {NNLO} with top quark mass effects.
+\newblock \emph{Journal of High Energy Physics}, 2018\penalty0 (5), may 2018.
+\newblock \doi{10.1007/jhep05(2018)059}.
+\newblock URL \url{https://doi.org/10.1007%2Fjhep05%282018%29059}.
+
+\bibitem[Dreyer and Karlberg(2018)]{PhysRevD.98.114016}
+Fr\'ed\'eric~A. Dreyer and Alexander Karlberg.
+\newblock Vector-boson fusion higgs pair production at ${\mathrm{n}}^{3}\mathrm{LO}$.
+\newblock \emph{Phys. Rev. D}, 98:\penalty0 114016, Dec 2018.
+\newblock \doi{10.1103/PhysRevD.98.114016}.
+
+\bibitem[de~Florian et~al.(2016)de~Florian, Fontes, Quevillon, Schumacher, Llanes-Estrada, Gritsan, Vryonidou, Signer, de~Castro~Manzano, Pagani, et~al.]{de2016arxiv}
+Daniel de~Florian, D~Fontes, J~Quevillon, M~Schumacher, FJ~Llanes-Estrada, AV~Gritsan, E~Vryonidou, A~Signer, P~de~Castro~Manzano, D~Pagani, et~al.
+\newblock \emph{arXiv: Handbook of LHC Higgs Cross Sections: 4. Deciphering the Nature of the Higgs Sector}.
+\newblock Number arXiv: 1610.07922. Cern, 2016.
+
+\bibitem[{ATLAS Collaboration}(2023)]{aad2023search}
+{ATLAS Collaboration}.
+\newblock Search for nonresonant pair production of higgs bosons in the b b{\={}} b b{\={}} final state in p p collisions at s= 13 tev with the atlas detector.
+\newblock \emph{Phys. Rev. D}, 108\penalty0 (5):\penalty0 052003, 2023.
+\newblock \doi{10.1103/PhysRevD.108.052003}.
+
+\bibitem[Abbott et~al.(2020)Abbott, Balunas, Borgna, Emerman, Frost, Gasiorowski, Grundy, Hartman, Hayashida, Huffman, Issever, Kagan, Nakahama, Paredes~Saenz, Picazio, Schaarschmidt, Seiss, Shochet, Stanislaus, Swiatlowski, Teixeira De~Lima, Willocq, Goussiou, Konstantinidis, Wu, Chan, Zhou, Zhang, Gubbels, Czurylo, Norisam, Khoo, Cortes-Gonzalez, Guest, Shi, Veliscek, Valente, Betti, Milke, and Leney]{ATL-COM-PHYS-2020-083}
+Dale~Charles Abbott, William~Keaton Balunas, Lucas~Santiago Borgna, Alexander Emerman, James Frost, Sean~Joseph Gasiorowski, James~Cameron Grundy, Nicole~Michelle Hartman, Shota Hayashida, Todd~Brian Huffman, Cigdem Issever, Michael Kagan, Yu~Nakahama, Santiago~Rafael Paredes~Saenz, Attilio Picazio, Jana Schaarschmidt, Todd Seiss, Mel Shochet, Beojan Stanislaus, Maximilian~J Swiatlowski, Rafael Teixeira De~Lima, Stephane Willocq, Anna Goussiou, Nikolaos Konstantinidis, Sau~Lan Wu, Chen-Hsun Chan, Chen Zhou, Rui Zhang, Christopher Gubbels, Marta~Maja Czurylo, Raif Rafideen~Bin Norisam, Teng~Jian Khoo, Arely Cortes-Gonzalez, Daniel Guest, Liaoshan Shi, Iza Veliscek, Marco Valente, Alessandra Betti, Christopher~Don Milke, and Katharine Leney.
+\newblock {Supporting Document: The Search for Resonant HH Production Decaying to the 4b Final State Using the Full Run-2 Data and the Boosted Analysis Channel}.
+\newblock Technical report, CERN, Geneva, 2020.
+\newblock URL \url{https://cds.cern.ch/record/2708599}.
+
+\bibitem[ATL(2019{\natexlab{a}})]{ATL-PHYS-PUB-2019-007}
+{Validation of signal Monte Carlo event generation in searches for Higgs boson pairs with the ATLAS detector}.
+\newblock Technical report, CERN, Geneva, 2019{\natexlab{a}}.
+\newblock URL \url{https://cds.cern.ch/record/2665057}.
+\newblock All figures including auxiliary figures are available at https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PUBNOTES/ATL-PHYS-PUB-2019-007.
+
+\bibitem[{ATLAS Collaboration}(2022)]{DAPR-2021-01}
+{ATLAS Collaboration}.
+\newblock {Luminosity determination in $pp$ collisions at $\sqrt{s}=13$ TeV using the ATLAS detector at the LHC}.
+\newblock 2022.
+\newblock \doi{10.48550/ARXIV.2212.09379}.
+
+\bibitem[Alwall et~al.(2014)Alwall, Frederix, Frixione, Hirschi, Maltoni, Mattelaer, Shao, Stelzer, Torrielli, and Zaro]{alwall2014automated}
+Johan Alwall, R~Frederix, S~Frixione, V~Hirschi, Fabio Maltoni, Olivier Mattelaer, H-S Shao, T~Stelzer, P~Torrielli, and M~Zaro.
+\newblock The automated computation of tree-level and next-to-leading order differential cross sections, and their matching to parton shower simulations.
+\newblock \emph{Journal of High Energy Physics}, 2014\penalty0 (7):\penalty0 1--157, 2014.
+
+\bibitem[Halzen et~al.(1984)Halzen, Martin, and Quarks]{halzen1984introductory}
+Francis Halzen, A~Martin, and Leptons Quarks.
+\newblock An introductory course in modern particle physics.
+\newblock \emph{John and Wiley}, 1984.
+
+\bibitem[Thomson(2013)]{thomson2013modern}
+Mark Thomson.
+\newblock \emph{Modern particle physics}.
+\newblock Cambridge University Press, 2013.
+
+\bibitem[et~al.(2018)]{PhysRevD.98.030001}
+M.~Tanabashi et~al.
+\newblock Review of particle physics.
+\newblock \emph{Phys. Rev. D}, 98:\penalty0 030001, Aug 2018.
+\newblock \doi{10.1103/PhysRevD.98.030001}.
+
+\bibitem[Sj{\"o}strand et~al.(2015)Sj{\"o}strand, Ask, Christiansen, Corke, Desai, Ilten, Mrenna, Prestel, Rasmussen, and Skands]{Sjostrand:2014zea}
+Torbj{\"o}rn Sj{\"o}strand, Stefan Ask, Jesper~R. Christiansen, Richard Corke, Nishita Desai, Philip Ilten, Stephen Mrenna, Stefan Prestel, Christine~O. Rasmussen, and Peter~Z. Skands.
+\newblock {An introduction to PYTHIA 8.2}.
+\newblock \emph{Comput. Phys. Commun.}, 191:\penalty0 159, 2015.
+\newblock \doi{10.1016/j.cpc.2015.01.024}.
+
+\bibitem[H\"oche(2015)]{Hoche:2014rga}
+Stefan H\"oche.
+\newblock {Introduction to parton-shower event generators}.
+\newblock In \emph{{Theoretical Advanced Study Institute in Elementary Particle Physics}: {Journeys Through the Precision Frontier: Amplitudes for Colliders}}, pages 235--295, 2015.
+\newblock \doi{10.1142/9789814678766_0005}.
+
+\bibitem[{GEANT4 Collaboration} et~al.(2003){GEANT4 Collaboration}, Agostinelli, et~al.]{Agostinelli:2002hh}
+{GEANT4 Collaboration}, S.~Agostinelli, et~al.
+\newblock {\textsc{Geant4} -- a simulation toolkit}.
+\newblock \emph{Nucl. Instrum. Meth. A}, 506:\penalty0 250, 2003.
+\newblock \doi{10.1016/S0168-9002(03)01368-8}.
+
+\bibitem[ATL(2019{\natexlab{b}})]{ATLAS-CONF-2019-049}
+{Constraints on the Higgs boson self-coupling from the combination of single-Higgs and double-Higgs production analyses performed with the ATLAS experiment}.
+\newblock Technical report, CERN, Geneva, 2019{\natexlab{b}}.
+\newblock URL \url{http://cds.cern.ch/record/2693958}.
+\newblock All figures including auxiliary figures are available at https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2019-049.
+
+\bibitem[Wu et~al.(2023)Wu, Kotwal, Cortes~Gonzalez, Kagan, Li, Swiatlowski, Shi, Behr, Cairo, Schwarz, Rettie, Liu, Zhang, Hyneman, Ganguly, Portillo~Quintero, Ran, Valente, Belfkir, Teixeira De~Lima, Wang, Battulga, Guhit, Zhang, Bate, Falb, Nasri, Azri, and Gonzalez~Rodrigues]{ATL-COM-PHYS-2023-033}
+Sau~Lan Wu, Ashutosh Kotwal, Arely Cortes~Gonzalez, Michael Kagan, Shu Li, Maximilian~J Swiatlowski, Liaoshan Shi, Janna~Katharina Behr, Valentina Cairo, Thomas~Andrew Schwarz, Sebastien Rettie, Yanlin Liu, Rui Zhang, Rachel~Jordan Hyneman, Sanmay Ganguly, Dilia~Maria Portillo~Quintero, Kunlin Ran, Marco Valente, Mohamed Belfkir, Rafael Teixeira De~Lima, Zhen Wang, Daariimaa Battulga, Jem Aizen~Mendiola Guhit, Yuwen~Ebony Zhang, Russell Bate, Karl Ver~Hage Falb, Salah Nasri, Hemza Azri, and Marcus~Vinicius Gonzalez~Rodrigues.
+\newblock {Search for resonant and non-resonant boosted Higgs boson pair production in $bbbb$ final state via vector-boson-fusion (VBF) production using the full Run 2 data with ATLAS detector}.
+\newblock Technical report, CERN, Geneva, 2023.
+\newblock URL \url{https://cds.cern.ch/record/2848140}.
+
+\bibitem[{ATLAS Collaboration}(2020)]{ATLAS-CONF-2020-022}
+{ATLAS Collaboration}.
+\newblock {Measurement of the ATLAS Detector Jet Mass Response using Forward Folding with \(80\,\text{fb}^{-1}\) of \(\sqrt{s} = 13\,\text{TeV}\) \(pp\) data}.
+\newblock {ATLAS-CONF-2020-022}, 2020.
+\newblock URL \url{https://cds.cern.ch/record/2724442}.
+
+\bibitem[Buttinger()]{buttinger2018background}
+Will Buttinger.
+\newblock Background estimation with the abcd method.
+\newblock URL \url{{https://twiki.cern.ch/twiki/pub/Main/ABCDMethod/ABCDGuide_draft18Oct18.pdf}}.
+\newblock Last accessed: 2023-11-21.
+
+\bibitem[Kasieczka et~al.(2021)Kasieczka, Nachman, Schwartz, and Shih]{PhysRevD.103.035021}
+Gregor Kasieczka, Benjamin Nachman, Matthew~D. Schwartz, and David Shih.
+\newblock Automating the abcd method with machine learning.
+\newblock \emph{Phys. Rev. D}, 103:\penalty0 035021, Feb 2021.
+\newblock \doi{10.1103/PhysRevD.103.035021}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevD.103.035021}.
+
+\end{thebibliography}
