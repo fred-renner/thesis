@@ -1,43 +1,24 @@
 \chapter{Introduction}
+% Understanding nature from its foundational principles has always been at the heart of human curiosity. 
+Understanding nature through first principles is an intrinsic human endeavor. The \ac{sm} of particle physics currently stands as the most precise theory, articulating elementary particles and their interactions through symmetry principles. The landmark discovery of the Higgs boson by the \ac{cms} \citep{higgs-cms} and \ac{atlas} \citep{higgs} collaborations at the \ac{lhc} in 2012, a half-century after its theoretical prediction \citep{PhysRevLett.13.321,PhysRevLett.13.508}, stands not only as a testament of the scientific method but also filled a pivotal gap in our understanding of the universe's fundamental structure.
 
-Its an innate human drive to understand nature from first principles. The current best theory of the fundamental building blocks of the universe is the \ac{sm} of particle physics. It is a remarkably precise framework describing fundamental particles and their interactions based on symmetry principles. The discovery of the Higgs boson in 2012 at the  \ac{lhc} by the CMS and ATLAS collaborations, 50 years after its prediction, marks not only one of the greatest successes of the scientific method but also completed a missing cornerstone in this \ac{sm}. 
+Yet, this achievement opens the door to new questions regarding the \acp{sm} completeness and consistency. As a \ac{qft}, the \ac{sm} is subject to loop corrections that demand extreme precision for the observed Higgs mass \citep{peskin2016trail}, implying that our current understanding may represent only an effective theory, hinting at the existence of undiscovered physics. Additionally, the conventional potential of the Higgs boson, instrumental in maintaining the \acp{sm} consistency, relies on the simplest conceivable form. The true complexity of this potential, the possibility of multiple Higgs bosons, or even the Higgs' status as a fundamental particle remain open questions with any deviation from \ac{sm} predictions signalling a sign of new physics \citep{PhysRevD.101.075023}. These considerations extend to the stability of the universe itself, with current precision of measurements suggesting a meta-stable state \citep{Buttazzo:2013uya}. The discovery of the Higgs boson is therefore more than just a milestone; it acts as a portal to uncharted territories in physics and thus requires more precise measurements \citep{dawsona2022report}.
 
-If consistency is required on the theory several questions arise. The \ac{sm} is a \ac{qft} in which loop corrections arise. For the currently measured value of the Higgs mass these loop corrections must be extremely precise which suggests that the current formulation of the theory is only an effective theory and that there might be new physics involved. Furthermore the currently assumed Higgs particle that doctors up the consistency of the \ac{sm} assumes the simplest potential form that can be chosen. It is not a priori clear if the shape of this potential is not more complex or if there are several Higgs particles or even if the Higgs is a composite particle. This has repercussions as far as that it can even question the stability of the universe with the current precision of measured values putting it at a meta-stable state. The discovery of the Higgs boson is thus not necessarily a culmination into understanding the fundamental structure of matter but rather a gateway to new realms of physics exploration. 
+The \ac{sm} encompasses 26 parameters, 15 of which are determined by the Higgs mechanism, emphasizing its centrality in the model \citep{thomson2013modern}. One prediction is the process of Higgs boson pair production, a phenomenon under rigorous scrutiny by both the \ac{atlas} and \ac{cms} collaborations across various decay channels \citep{GOUZEVITCH2020100039}. This thesis concentrates on the search for Higgs boson pairs in a boosted topology, decaying into the four $b$-quark final state using the \ac{atlas} detector \citep{atlas2018search}.
 
-Within the \ac{sm} there are 26 parameters from which 15 are dictated by the Higgs mechanism underlining the centrality within the model. It is thus of utter importance for more precise measurements as not only parameters are yet to be determined by experiment but also any deviation from \ac{sm} predictions in precise measurements of the Higgs boson's properties could be a sign of new physics. One of those unmeasured parameters are the predicted processes of Higgs boson pair production. There has been extensive searches as well at ATLAS and CMS in several decay channels (zitate). This thesis focuses on the boosted topology of Higgs pairs decaying into 4 $b$-quark final state which has the largest branching fraction.
+The advent of machine learning in particle physics introduced powerful tools for classification problems but also challenges in optimizing these tools for the field's unique goals. These tools, often tailored for specific tasks, may not align with the overarching goals of discovering new particles or verifying new theories, leading to suboptimal outcomes \citep{guest2018deep}.
+This gap primarily arises from depending on intermediate optimization metrics that disregard systematic uncertainties' significant role in the statistical test's validity for theory confirmation. The innovative \textsc{neos} approach \citep{Simpson_2023} introduces a solution to this problem, for which this work demonstrates a first application of of a systematic-aware optimization on sensitivity in a particle physics experiment.
 
-A major issue arising in particle physics is that the optimization of analyses usually happens several steps away from the ultimate goal of testing a hypothesis (dan zitat), which leads to suboptimal results and use of intermediate optimization metrics that do not necessarily correlate with the predictive power of a statistical test. This thesis presents the application of a novel approach that optimizes the sensitivy 
-
-\citep{guest2018deep}
------
-Now, this is all very sensible of course (we want to discover our signal), but this approach has some shortcomings that distance the efficacy of the resulting configuration from our physics goals. A recent review of deep learning in LHC physics (Guest, Cranmer, and Whiteson 2018) lets us in on why:
-
-    (…) tools are often optimized for performance on a particular task that is several steps removed from the ultimate physical goal of searching for a new particle or testing a new physical theory.
-
-    (…) sensitivity to high-level physics questions must account for systematic uncertainties, which involve a nonlinear trade-off between the typical machine learning performance metrics and the systematic uncertainty estimates.
-
-This is the crux of the issue: we’re not accounting for uncertainty. Our data analysis process comes with many sources of systematic error, which we endeavour to model in the likelihood function as nuisance parameters. However, optimizing with respect to any of the above quantities isn’t going to be aware of that process. We need something better.
+This thesis is structured to first introduce the \ac{sm} \ref{ch:sm} and the \ac{atlas} detector \ref{sec:atlas}, followed by a comprehensive discussion of analytical methodologies, including the reconstruction of physical objects \ref{ch:reco}, analysis strategy and event selection \ref{ch:hh4b}, machine learning for systematic-aware neural network training \ref{sec:analysis_optimization}, systematic uncertainties \ref{ch:systematics} and the framework used for the evaluation of statistical tests \ref{sec:statistics}. The results section presents a strategy for improved $b$-quark identification using muons \ref{ch:smt} and findings on Higgs pair production cross-section limits using Run 2 data. \ref{ch:hh4b-results}.
 
 
 
-% The current best limits 
-% atlas 2021 
-% of 𝜅2𝑉  043 and 𝜅2𝑉 ¡ 256
-% https://arxiv.org/pdf/2001.05178.pdf 
 
-% is the higgs a fundamental prticle 
-
-
-% https://arxiv.org/pdf/2207.00043.pdf
-
-% mehr gründe warum physik versteckt in top und higgs präziosions messungen... 
 
 % latest limits: https://arxiv.org/pdf/2301.03212.pdf 
 % hh review 
 % https://www.sciencedirect.com/science/article/pii/S2405428320300022#fig0002
 
-% higgs review
-% https://sci-hub.hkvisa.net/10.1016/j.revip.2020.100039
 
 % The current best limits 
 % atlas 2021 
@@ -45,14 +26,6 @@ This is the crux of the issue: we’re not accounting for uncertainty. Our data 
 % https://arxiv.org/pdf/2001.05178.pdf 
 
 % depending on if current r21 comes out before 
-    
-
-% higgs physics
-% https://arxiv.org/pdf/2209.07510.pdf 
-% II. Why the Higgs is the Most Important Particle
-
-% Investigating the exact shape of the Higgs potential is an interesting endeavor, as it is directly related to \ac{ewsb} and fundamental questions about the nature of the universe, as discussed in section \ref{sec:beyond_sm}.  
-
 
 % Prospects of non-resonant Higgs pair production
 % at the HL-LHC and HE-LHC
