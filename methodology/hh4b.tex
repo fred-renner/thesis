@@ -62,13 +62,14 @@ In a second step the parton shower evolution including hadronization and initial
 In a final step the detector response of simulated final state particles is simulated with \textsc{Geant}4 \citep{Agostinelli:2002hh}. It models the detector geometry, the particle's path through the magnetic fields and the particle interactions with the detector material, potentially producing new particles or decays. The output of this step are energy deposits in the various subdetectors of \ac{atlas}. Subsequently these are passed on to a process known as digitization which models the readout electronics. The result of this is raw data being no different from that read out in the actual experiment.
 
 
-\section{Linear combination of samples}
+\section{Linear combination of samples}\label{sec:linear_combination}
 \newcommand{\kl}{\kappa_\lambda}
 \newcommand{\kt}{\kappa_t}
 \newcommand{\kvv}{\kappa_\text{2V}}
 \newcommand{\kv}{\kappa_\text{V}}
 \newcommand{\mhh}{m_\text{HH}}
 
+\red{redo}
 This analysis is interested in constraining the couplings $\kappa_\text{V},\kappa_\lambda,\kappa_\text{2V}$ associated to the \ac{vbf} processes shown in figure \ref{fig:main_production_processes}. As computing resources are limited and MC generation is unfortunately computationally expensive only a few hypothesis can be simulated. However by exploiting the properties of the differential cross-sectional calculation, samples of any hypothesized coupling value can be created through linear combination of samples \citep{ATLAS-CONF-2019-049}. It is illustrative to consider the two \ac{ggf} diagrams with the $\kl$ and $\kt$ couplings when calculating the differential cross-section
 \begin{align}
     \label{eqn:ggf_hh_feynSum}
