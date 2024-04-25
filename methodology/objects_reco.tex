@@ -6,19 +6,20 @@ Physical properties of particles produced from a collision at the \ac{lhc} are d
 Charged particles leave a trajectory in the \ac{id} as explained in the section \ref{sec:inner_detector}. To reconstruct the path of these particles an algorithm first groups hits that are close to each other in the silicon detectors into clusters. These clusters are then successively combined to determine the most probable trajectory that the particles have taken through the detector which are referred to as tracks \citep{aaboud2017performance}. These are then geometrically matched to proton-proton interactions and the vertex with the largest scalar sum of transverse momenta $\sum \pt^2$ is identified as the primary hard scatter vertex. In addition, the momentum is also determined based on the curvature of the particle through the magnetic field and at least two tracks with $\pt>\qty[]{500}{MeV}$ are required to be in the tracking volume $\abs{\eta}<2.5$.
 
 \section{Jets}\label{sec:jets}
-As discussed in section \ref{sec:renormalization} quarks cannot be observed individually but only as colorless hadrons. When decaying they undergo showering and hadronization forming cone-like structures of energy deposits in the detector called jets. They are reconstructed by combining and grouping tracking and calorimeter information.
+As discussed in section \ref{sec:renormalization} quarks cannot be observed individually but only as colorless hadrons. When decaying they undergo showering and hadronization forming cone-like structures of energy deposits in the detector called jets. They are reconstructed by combining and grouping both \ac{id} and calorimeter information.
 
-\subsection{Topocluster}
-The deposited energy of decays in the calorimeters are grouped three-dimensionally by combining calorimeter cells into so-called topoclusters. These clusters are seeded from cells that display a signal stronger than four times the standard deviation of detector noise $4\sigma_\mathrm{noise}$ encompassed by $2\sigma_\mathrm{noise}$ cells.
+\subsection{Topo-Cluster}
+Decaying particles deposit energy in the calorimeters as described in section \ref{sec:calorimeters}. The energy deposits are grouped three-dimensionally by topologically related calorimeter cells into so-called Topo-Clusters. These clusters are seeded from cells that display a signal stronger than four times the standard deviation of detector noise $4\sigma_\mathrm{noise}$ encompassed by $2\sigma_\mathrm{noise}$ cells.
 
 \subsection{Particle Flow Object}\label{sec:particle_flow}
-The energy and mass resolution calculated from topoclusters can be improved by geometrically matching tracks to the clusters. This exploits the momentum and position resolution of the \ac{id} to complement the energy measurements obtained from the calorimeter. When a track is successfully matched to a topocluster, the expected energy, based on the particle that created the track, is computed. From this expected energy all associated cluster cell energies are subtracted and the remnant is removed from the expected energy if energy is within the range of typical fluctuations. Such combination of a topocluster and a track are called \ac{pfo} \citep{aaboud2017jet}. Sometimes energy of one track ends up in several clusters. For this the Particle Flow algorithm combines the most probable clusters with the track. Topoclusters without matched tracks are assumed to be neutral particles as they do not leave a trace in the \ac{id}. \acp{pfo} not matched to the \ac{pv} are removed to reduce the contribution from pileup.  This technique, especially in the reconstruction of low \pt clusters, enhances the overall resolution.
+The energy and mass resolution calculated from Topo-Clusters can be improved by geometrically matching tracks to the clusters. This exploits the superior momentum and position resolution of the \ac{id} compared to the calorimeters to complement the energy measurements obtained from the calorimeter. When a track is successfully matched to a Topo-Cluster, the expected energy, based on the particle that created the track, is computed. From this expected energy all associated cluster cell energies are subtracted and the remnant is removed from the expected energy if energy is within the range of typical fluctuations. Such combination of a Topo-Cluster and a track are called \ac{pfo} \citep{aaboud2017jet}. Sometimes the energy of one track ends up in several clusters. For this the Particle Flow algorithm combines the most probable clusters with the track. Topo-Clusters without matched tracks are assumed to be neutral particles as they do not leave a trace in the \ac{id}. \acp{pfo} not matched to the \ac{pv} are removed to reduce the contribution from pileup.  This technique, especially in the reconstruction of low \pt clusters, enhances the overall resolution.
 
 \subsection{Track-CaloClusters}
-Instead of using the energy measurement of the tracks as for \acp{pfo} for \ac{tcc} the calorimeter energy measurement is used and complemented by the angular information of the tracks. \ac{tcc} was developed for high \pt jets since the resolution in the calorimeters improves with larger momentum since the calorimeter deposits become more localized.
+Instead of using the energy measurement of the tracks as for \acp{pfo} for \acp{tcc} the calorimeter energy measurement is used and complemented by the angular information of the tracks. \ac{tcc} was developed for high \pt jets since the resolution in the calorimeters improves with larger momentum since the calorimeter deposits become more localized. The procedure involves two steps. High quality tracks are selected and extrapolated to the topo-clusters. If the extrapolation uncertainty exceeds the Topo-Cluster width the tracks is removed. If a track-cluster pair is found it will only be accepted if their angular separation is smaller than the quadratically summed Topo-Cluster width and track extrapolation uncertainty $\Delta R < \sqrt{\sigma_\text{cluster}^2+\sigma_\text{track}^2}$ \citep{ATL-PHYS-PUB-2017-015}.
 
-% \subsection{Unified Flow Object}
-% Particle Flow benefits from the momentum/energy resolution of the \ac{id} compared to the calorimeters especially at low momenta. Although this gradually breaks down with increasing momentum and also with particle density because the matching of tracks to clusters becomes more and more ambiguous in that case. \ac{ufo} jets are designed to make the most of both reconstruction algorithms by choosing the algorithm that performs best for the situation at hand.
+\subsection{Unified Flow Object}
+\acp{pfo} benefit from better momentum/energy resolution of the \ac{id} compared to the calorimeters at low momenta. However, as momentum and particle density increase, the process of matching tracks to clusters becomes increasingly ambiguous. To address this issue the Topo-Clusters used in the particle flow algorithm are refined with \acp{tcc} which produces \acp{ufo}. This method allows the algorithm to select the most effective reconstruction technique for the given conditions \citep{atlas2021optimisation,ATL-PHYS-PUB-2022-038}.
+
 
 \subsection{Anti-$k_t$ Jet Clustering Algorithm}\label{sec:anti_kt}
 The definition of a jet is not unique as it depends on the size and direction of the cone and thus how many particles are included. For this the Anti-$k_t$ algorithm \citep{cacciari2008anti} clusters aforementioned four vector objects in this section into cone-shaped jets. It starts with calculating the distances between all four vector objects $i,j$ that are considered
@@ -29,15 +30,15 @@ and the distance to the beam
 \begin{equation}
   d_{iB}=\frac{1}{p_{T,i}^{2}},
 \end{equation}
-with the transverse momenta of the particles $p_{T,i},p_{T,j}$ their angular distance $\Delta R$ as of equation \ref{eq:delta_R} and a chosen radius parameter $R$. The algorithm combines objects $i,j$ into a new four vector for the smallest distance $d_{ij}$. The distance is small for large transverse momenta \pt and small angular distances $\Delta R_{ij}$ and are therefore preferred by the algorithm. After combining two objects the algorithm starts for as long as $d_{iB}<d_{ij}$. Thus it stops once particles outside of the chosen radius would be added. In \ac{atlas} jets with a radius parameter of $R=0.4 (1.0)$ are usually denoted as Small-R(Large-R) jets.
+with the transverse momenta of the particles $p_{T,i},p_{T,j}$ their angular distance $\Delta R$ as of equation \ref{eq:delta_R} and a chosen radius parameter $R$. The algorithm combines objects $i,j$ into a new four vector for the smallest distance $d_{ij}$. The distance is small for large transverse momenta \pt and small angular distances $\Delta R_{ij}$ and are therefore preferred by the algorithm. After combining two objects the algorithm runs as long as $d_{iB}<d_{ij}$. Thus it stops once particles outside of the chosen radius would be added. In \ac{atlas} jets with a radius parameter of $R=0.4 (1.0)$ are usually denoted as Small-R(Large-R) jets.
 
 
-\subsection{Variable Radius Jets}\label{sec:vr_jets}
-In very boosted regimes mit large momenta individual jets can overlap. In order to still reconstruct them individually a \ac{vr} for the $R$ parameter from the Anti-$k_t$ Jet Clustering Algorithm of section \ref{sec:anti_kt} is used
-\begin{equation}
-  R\rightarrow R_\text{eff}(\pt)=\frac{\rho}{\pt}
-\end{equation}
-It becomes therefore dependent on the transverse momentum and is controlled by a parameter $\rho$ so that the jet size decreases with \pt. \ac{vr} jets are reconstructed from tracks and are required to have $\pt>\qty[]{10}{GeV}$.
+% \subsection{Variable Radius Jets}\label{sec:vr_jets}
+% In very boosted regimes mit large momenta individual jets can overlap. In order to still reconstruct them individually a \ac{vr} for the $R$ parameter from the Anti-$k_t$ Jet Clustering Algorithm of section \ref{sec:anti_kt} is used
+% \begin{equation}
+%   R\rightarrow R_\text{eff}(\pt)=\frac{\rho}{\pt}
+% \end{equation}
+% It becomes therefore dependent on the transverse momentum and is controlled by a parameter $\rho$ so that the jet size decreases with \pt. \ac{vr} jets are reconstructed from tracks and are required to have $\pt>\qty[]{10}{GeV}$.
 
 \section{$b$-tagging}\label{sec:b_tagging}
 This analysis has four $b$-quarks in the final state and therefore relies on their identification.One of the key characteristics of $b$ quarks is their relatively large mass resulting in a long lifetime compared to other quarks $\tau\sim\qty{1.5}{ps}$. This translates to a decay length of about $c\tau \sim \qty{450}{\micro m}$ and leads to a secondary vertex. Although these $b$-hadrons do not reach the \ac{id} directly their decay positions can be deduced from tracks.
@@ -51,7 +52,7 @@ Such tracks have a large impact parameter that is defined as the distance of clo
   \subfigure[]{
     \includegraphics[width=0.49\textwidth]{SV_sketch}
   }
-  \caption{(a) Example decay involving a $b$-jet (\hexbox{8AB2D3}) and jets from light flavor hadrons (\hexbox{C5C6C6}). (b) Impact parameters defined for tracks as distance of closest approach to the primary vertex for (\mbox{\color[HTML]{009245}{$d_0$}}) in the $r-\phi$-plane and for (\mbox{\color[HTML]{EC1C25}{$z_0$}}) along the z axis. (a) Adopted from \cite{Guth:2765038}.}
+  \caption{(a) Example decay involving a $b$-jet (\hexbox{8AB2D3}) and jets from light flavor hadrons (\hexbox{C5C6C6}) (Adopted from \cite{Guth:2765038}). (b) Impact parameters defined for tracks as distance of closest approach to the primary vertex for (\mbox{\color[HTML]{009245}{$d_0$}}) in the $r-\phi$-plane and for (\mbox{\color[HTML]{EC1C25}{$z_0$}}) along the z axis.}
   \label{fig:secondary_vertex}
 \end{figure}
 
@@ -60,16 +61,26 @@ The results of the secondary vertex- and impact parameter finding algorithm as w
 \begin{equation}
   D_\mathrm{DL1d}=\ln\left(\frac{p_b}{f_c \cdot p_c + (1-f_c)\cdot p_\mathrm{light} }\right).
 \end{equation}
-$f_c$ is the fraction of charm jets in the background and can be used to tune the importance of the different background classes ($\sum f_\mathrm{bkg} =1$). When evaluating the \ac{nn} a value for the discriminating variable $D$ can be derived that corresponds to a $b$-jet selection efficiency which is then applied in physics analysis.
+$f_c$ is a parameter to tune the importance between charm and light quark background classes ($\sum f_\mathrm{bkg} =1$). When evaluating the \ac{nn} a value for the discriminating variable $D$ can be derived that corresponds to a $b$-jet selection efficiency which is then applied in physics analysis.
 
-\subsection{$X\rightarrow bb$ Tagger}\label{sec:xbb}
-For a collision event with decay products consisting of $b$-jets with large transverse momenta, jets reconstructed with a fixed radius parameter can become overlapped. To address such scenarios, \ac{vr} track jets, as discussed in Section \ref{sec:vr_jets}, can be reconstructed within a large-$R$ jet that encompasses both $b$-jets. The \ac{vr} jets are required to have $\rho=\qty[]{30}{GeV}$ a radius parameter constrained to $0.02 <R<0.4$. Further the \ac{vr} jets are not allowed to overlap. These parameters are optimized for Higgs to $bb$ decays \citep{ATL-PHYS-PUB-2017-010}.
+\subsection{GN2X tagger}\label{sec:gn2x}
+For a collision event with decay products consisting of two $b$-jets with large transverse momenta, jets reconstructed with a fixed radius parameter can become overlapped making a clear separation impossible. To address such scenarios jets with a larger radius ($R=1.0$) can be reconstructed  that encompass both $b$-jets. The latest iteration of $b$-tagging algorithms in \ac{atlas} uses \acp{gnn} \citep{shlomi2020graph, ATL-PHYS-PUB-2022-027}. This choice is such that a graph with edges and vertices represents a more natural representation of a jet. This involves globally updated states on all network parameters, modeling the properties of the whole jet, e.g. its flavor origin, as well as tracks as vertices and their interactions as edges between them. 
 
-The $X\rightarrow bb$ tagger is a feed-forward \ac{nn} \citep{ATL-PHYS-PUB-2020-019}. The inputs include the transverse momentum \pt and pseudorapidity $\eta$ of the large-$R$ jet along with outputs from DL1d for up to three \ac{vr} track jets. Similar to DL1d, a discriminant is computed from the \ac{nn}'s output scores, which reflect the likelihood of the event being a Higgs, top, or multijet decay:
+The GN2X tagger in addition adds a transformer architecture \citep{ATL-PHYS-PUB-2023-021} on top of the graph representation. The reason to do so is that Transformers are able to capture the relationships between objects in a sequence a feature present in particle decays. The input to the model consist of Track parameters and \pt, $\eta$ and mass of the jet. The model is designed to identify the quark content of Higgs candidate decays and has thus probability outputs for the decays of two $b$-quarks, two $c$-quarks, top quark and multijet background processes. Similar to DL1d, a discriminant is computed from the \ac{gnn} output scores, which reflect the likelihood of the the large-$R$ jet originating from two $b$-quarks, two $c$-quarks a top quark or multijet 
 \begin{equation}
-  D_{\text{Xbb}}=\ln\left({\frac{p_{\text{Higgs}}}{f_{\text{top}}\cdot p_{\text{top}}+(1-f_{\text{top}})\cdot p_{\text{multijet}}}}\right).
+  D_{\text{GN2X}}=\ln\left({\frac{p_{\text{Hbb}}}{
+    f_{\text{Hcc}}\cdot p_{\text{Hcc}}+
+    f_{\text{top}}\cdot p_{\text{top}}+
+    (1-f_{\text{Hcc}}-f_{\text{top}})\cdot p_{\text{QCD}}}}\right).
 \end{equation}
-$f_\text{top}$ denotes the top fraction with regards to the multijet output. From the evaluation of the discriminant \acp{wp} are defined depending on the Higgs tagging efficiency.
+$f_\text{top}=0.25$ and $f_\text{Hcc}=0.02$ denotes chosen parameters weighting the influence of the corresponding \ac{gnn} output nodes to the discriminant. \red{For a given Higgs tagging efficiency some sculpting is observed and therefore. ask darrii}
+
+
+% The $X\rightarrow bb$ tagger is a feed-forward \ac{nn} \citep{ATL-PHYS-PUB-2020-019}. The inputs include the transverse momentum \pt and pseudorapidity $\eta$ of the large-$R$ jet along with outputs from DL1d for up to three \ac{vr} track jets. Similar to DL1d, a discriminant is computed from the \ac{nn}'s output scores, which reflect the likelihood of the event being a Higgs, top, or multijet decay:
+% \begin{equation}
+%   D_{\text{Xbb}}=\ln\left({\frac{p_{\text{Higgs}}}{f_{\text{top}}\cdot p_{\text{top}}+(1-f_{\text{top}})\cdot p_{\text{multijet}}}}\right).
+% \end{equation}
+% $f_\text{top}$ denotes the top fraction with regards to the multijet output. From the evaluation of the discriminant \acp{wp} are defined depending on the Higgs tagging efficiency.
 
 \section{Jet Calibration}\label{sec:calibration}
 Every measuring instrument must be calibrated In the case of jet reconstruction the main causes of discrepancies between the properties of jets inferred from reconstruction and their true properties include \citep{atlas2011jet}:
@@ -94,7 +105,7 @@ When bunches of protons are collided, not only one but rather several proton-pro
 
 
 \subsubsection{Small-R Jets}
-At a first step contributions from pileup are reduced by subtracting the median transverse momentum density $\rho=\pt / A$ of jets found within $\eta<2.0$ multiplied by the active area of the jet $A_T$ as defined in \textsc{FastJet} \citep{cacciari2012fastjet}. Another reduction observes that the pileup corrected \pt is a function of the number of primary Vertices $N_\text{PV}$ and the mean number of interactions $\mu$. Thus the corrected transverse momentum is expressed as 
+At a first step contributions from pileup are reduced by subtracting the median transverse momentum density $\rho=\pt / A$ of jets found within $\eta<2.0$ multiplied by the active area of the jet $A_T$ as defined in \textsc{FastJet} \citep{cacciari2012fastjet}. Another reduction observes that the pileup corrected \pt is a function of the number of primary Vertices $N_\text{PV}$ and the mean number of interactions $\mu$. Thus the corrected transverse momentum is expressed as
 \begin{equation}
   \pt^\text{corr}=\pt-\rho A_T -\alpha(N_\text{PV}-1)-\beta\mu
 \end{equation}
