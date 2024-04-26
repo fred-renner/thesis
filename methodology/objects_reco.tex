@@ -21,7 +21,7 @@ Instead of using the energy measurement of the tracks as for \acp{pfo} for \acp{
 \acp{pfo} benefit from better momentum/energy resolution of the \ac{id} compared to the calorimeters at low momenta. However, as momentum and particle density increase, the process of matching tracks to clusters becomes increasingly ambiguous. To address this issue the Topo-Clusters used in the particle flow algorithm are refined with \acp{tcc} which produces \acp{ufo}. This method allows the algorithm to select the most effective reconstruction technique for the given conditions \citep{atlas2021optimisation,ATL-PHYS-PUB-2022-038}.
 
 
-\subsection{Anti-$k_t$ Jet Clustering Algorithm}\label{sec:anti_kt}
+\subsection{Jet Clustering Algorithm}\label{sec:anti_kt}
 The definition of a jet is not unique as it depends on the size and direction of the cone and thus how many particles are included. For this the Anti-$k_t$ algorithm \citep{cacciari2008anti} clusters aforementioned four vector objects in this section into cone-shaped jets. It starts with calculating the distances between all four vector objects $i,j$ that are considered
 \begin{equation}
   d_{ij}=\frac{1}{\max(p_{T,i}^{2}\,,\,p_{T,j}^{2})} \frac{\Delta R_{ij}^2}{R^2},
@@ -30,7 +30,7 @@ and the distance to the beam
 \begin{equation}
   d_{iB}=\frac{1}{p_{T,i}^{2}},
 \end{equation}
-with the transverse momenta of the particles $p_{T,i},p_{T,j}$ their angular distance $\Delta R$ as of equation \ref{eq:delta_R} and a chosen radius parameter $R$. The algorithm combines objects $i,j$ into a new four vector for the smallest distance $d_{ij}$. The distance is small for large transverse momenta \pt and small angular distances $\Delta R_{ij}$ and are therefore preferred by the algorithm. After combining two objects the algorithm runs as long as $d_{iB}<d_{ij}$. Thus it stops once particles outside of the chosen radius would be added. In \ac{atlas} jets with a radius parameter of $R=0.4 (1.0)$ are usually denoted as Small-R(Large-R) jets.
+with the transverse momenta of the particles $p_{T,i},p_{T,j}$ their angular distance $\Delta R$ as of equation \ref{eq:delta_R} and a chosen radius parameter $R$. The algorithm combines objects $i,j$ into a new four vector for the smallest distance $d_{ij}$. The distance is small for large transverse momenta \pt and small angular distances $\Delta R_{ij}$ and are therefore preferred by the algorithm. After combining two objects the algorithm runs as long as $d_{iB}<d_{ij}$. Thus it stops once particles outside of the chosen radius would be added. In \ac{atlas} jets with a radius parameter of $R=0.4 (1.0)$ are denoted as Small-R(Large-R) jets. If the first factor of $d_{i,j}$ is exchanged to $\min(p_{T,i}^{2}\,,\,p_{T,j}^{2})$ the algorithm is called $k_t$ and the Cambridge Aachen version is $\min(p_{T,i}\,,\,p_{T,j})$.
 
 
 % \subsection{Variable Radius Jets}\label{sec:vr_jets}
@@ -61,20 +61,19 @@ The results of the secondary vertex- and impact parameter finding algorithm as w
 \begin{equation}
   D_\mathrm{DL1d}=\ln\left(\frac{p_b}{f_c \cdot p_c + (1-f_c)\cdot p_\mathrm{light} }\right).
 \end{equation}
-$f_c$ is a parameter to tune the importance between charm and light quark background classes ($\sum f_\mathrm{bkg} =1$). When evaluating the \ac{nn} a value for the discriminating variable $D$ can be derived that corresponds to a $b$-jet selection efficiency which is then applied in physics analysis.
+$f_c$ is a parameter to tune the importance between charm and light quark background classes ($\sum f_\mathrm{bkg} =1$). When evaluating the \ac{nn} a value for the discriminating variable $D$ can be derived that corresponds to a $b$-jet selection efficiency. In this analysis the chosen efficiency is \qty[]{77}{\percent}. 
 
 \subsection{GN2X tagger}\label{sec:gn2x}
-For a collision event with decay products consisting of two $b$-jets with large transverse momenta, jets reconstructed with a fixed radius parameter can become overlapped making a clear separation impossible. To address such scenarios jets with a larger radius ($R=1.0$) can be reconstructed  that encompass both $b$-jets. The latest iteration of $b$-tagging algorithms in \ac{atlas} uses \acp{gnn} \citep{shlomi2020graph, ATL-PHYS-PUB-2022-027}. This choice is such that a graph with edges and vertices represents a more natural representation of a jet. This involves globally updated states on all network parameters, modeling the properties of the whole jet, e.g. its flavor origin, as well as tracks as vertices and their interactions as edges between them. 
+For a collision event with decay products consisting of two $b$-jets with large transverse momenta, small-$R=0.4$ jets can become overlapped making a clear separation infeasible. To address such scenarios, jets with a larger radius ($R=1.0$) can be reconstructed that encompass both $b$-jets. The latest iteration of $b$-tagging algorithms in \ac{atlas} uses \acp{gnn} \citep{shlomi2020graph, ATL-PHYS-PUB-2022-027}. This choice is such that a graph with edges and vertices represents a more natural relational structure of a jet opposed to a feed-forward network. This involves globally updated states on all network parameters, modeling the properties of the whole jet, e.g. its flavor origin, as well as tracks as vertices and their interactions as edges between them. 
 
-The GN2X tagger in addition adds a transformer architecture \citep{ATL-PHYS-PUB-2023-021} on top of the graph representation. The reason to do so is that Transformers are able to capture the relationships between objects in a sequence a feature present in particle decays. The input to the model consist of Track parameters and \pt, $\eta$ and mass of the jet. The model is designed to identify the quark content of Higgs candidate decays and has thus probability outputs for the decays of two $b$-quarks, two $c$-quarks, top quark and multijet background processes. Similar to DL1d, a discriminant is computed from the \ac{gnn} output scores, which reflect the likelihood of the the large-$R$ jet originating from two $b$-quarks, two $c$-quarks a top quark or multijet 
+The GN2X tagger uses a transformer architecture \citep{ATL-PHYS-PUB-2023-021} on top of the graph representation. Transformers are able to capture the relationships between squential objects, a feature present in particle decays. The input to the model consists of Variables associated to  \pt, $\eta$ and mass of the jet and properties of the tracks. The model is designed to identify the quark content of Higgs candidate decays and has thus probability outputs for the decays of two $b$-quarks, two $c$-quarks, top quark and multijet background processes. Similar to DL1d, a discriminant is computed from the \ac{gnn} output scores, which reflect the likelihood of the large-$R$ jet originating from a flavor category
 \begin{equation}
   D_{\text{GN2X}}=\ln\left({\frac{p_{\text{Hbb}}}{
     f_{\text{Hcc}}\cdot p_{\text{Hcc}}+
     f_{\text{top}}\cdot p_{\text{top}}+
     (1-f_{\text{Hcc}}-f_{\text{top}})\cdot p_{\text{QCD}}}}\right).
 \end{equation}
-$f_\text{top}=0.25$ and $f_\text{Hcc}=0.02$ denotes chosen parameters weighting the influence of the corresponding \ac{gnn} output nodes to the discriminant. \red{For a given Higgs tagging efficiency some sculpting is observed and therefore. ask darrii}
-
+$f_\text{top}=0.25$ and $f_\text{Hcc}=0.02$ denotes chosen parameters weighting the influence of the corresponding \ac{gnn} output nodes to the discriminant. Analogous to DL1d a discriminant value for a \qty[]{60}{\percent} Higgs efficiency is chosen. As mentioned in \citep{ATL-PHYS-PUB-2023-021} mass sculpting is observed which can become a problem for a data-driven background estimate as used in this thesis. This issue has been addressed by slightly altering the discriminant value depending on the mass of the jet in a way that the \ac{qcd} background efficiency is not altered by the tagger. 
 
 % The $X\rightarrow bb$ tagger is a feed-forward \ac{nn} \citep{ATL-PHYS-PUB-2020-019}. The inputs include the transverse momentum \pt and pseudorapidity $\eta$ of the large-$R$ jet along with outputs from DL1d for up to three \ac{vr} track jets. Similar to DL1d, a discriminant is computed from the \ac{nn}'s output scores, which reflect the likelihood of the event being a Higgs, top, or multijet decay:
 % \begin{equation}
@@ -94,8 +93,8 @@ Every measuring instrument must be calibrated In the case of jet reconstruction 
 \end{itemize}
 To mitigate these effects there are several algorithms employed that also account for the detector geometry and are described in the following based on \citep{atlas2021jet}. As reference objects serve well-understood physics processes that leave a distinct signature in the detector like dijet events or decays of $Z$-bosons or photons.
 
-\subsection{Pilup mitigation}
-When bunches of protons are collided, not only one but rather several proton-proton interactions are measured. Various methods have been developed to separate these numerous interactions and are described for both small and large $R$ jets. Pile-up is categorized into in-time pile-up referring to additional proton-proton collisions occurring within the same bunch-crossing and out-of-time pile-up collisions occurring before and after the collision of interest. Over time these methods have seen significant improvements allowing for an increase in the mean number of interactions commonly referred to as pile-up. This increase in pile-up during the data taking period is depicted in Figure \ref{fig:pileup}.
+\subsection{Pile-up mitigation}
+When bunches of protons are collided, not only one but rather several proton-proton interactions are measured. Various methods have been developed to isolate each interaction and are described for both small and large $R$ jets. The mean number of interactions is commonly referred to as pile-up and is categorized into in-time pile-up referring to additional proton-proton collisions occurring within the same bunch-crossing and out-of-time pile-up collisions occurring before and after the collision of interest. Over time these methods have seen significant improvements allowing to record and disentangle more collision events per bunch crossing. This increase in pile-up during the data taking period is depicted in Figure \ref{fig:pileup}.
 \begin{figure}
   \centering
   \includegraphics[width=0.5\textwidth]{mu_2015_2018}
@@ -105,7 +104,7 @@ When bunches of protons are collided, not only one but rather several proton-pro
 
 
 \subsubsection{Small-R Jets}
-At a first step contributions from pileup are reduced by subtracting the median transverse momentum density $\rho=\pt / A$ of jets found within $\eta<2.0$ multiplied by the active area of the jet $A_T$ as defined in \textsc{FastJet} \citep{cacciari2012fastjet}. Another reduction observes that the pileup corrected \pt is a function of the number of primary Vertices $N_\text{PV}$ and the mean number of interactions $\mu$. Thus the corrected transverse momentum is expressed as
+At a first step contributions from pileup are reduced by subtracting the median transverse momentum density $\rho=\pt / A$ of $k_t$-reclustered jets found within $\eta<2.0$ multiplied by the area of the jet $A_T$. This area is determined by uniformly adding massless `ghost' particles to the event. The area in $(\eta-\phi)$ space covered by ghosts clustered to a jet determine its area \citep{ATLAS-CONF-2017-065}. Another reduction observes that the pileup corrected \pt is a function of the number of primary Vertices $N_\text{PV}$ and the mean number of interactions $\mu$. Thus the corrected transverse momentum is expressed as
 \begin{equation}
   \pt^\text{corr}=\pt-\rho A_T -\alpha(N_\text{PV}-1)-\beta\mu
 \end{equation}
@@ -113,15 +112,26 @@ with parameters $\alpha$ and $\beta$. The effect of the correction is shown in f
 \begin{figure}
   \centering
   \includegraphics[width=1\textwidth]{jet_pt_correction}
-  \caption[]{\pt correction to remove the \pt dependence of the jet at different $\eta$ for the \pt dependent on (left) the number of primary vertices and (right) average number of interactions of the collision.}
+  \caption[]{\pt correction to remove the \pt dependence of the jet at different $\eta$ for: (left)\pt dependent on the number of primary vertices and (right) average number of interactions of the collision.}
   \label{fig:jet_pt_correction}
 \end{figure}
 
-Moreover pileup contributions can be further reduced by comparing the scalar \pt sum of tracks from the \ac{pv} associated to the jet with the scalar \pt sum of all tracks including other \acp{pv}. The \ac{jvt} \citep{ATLAS-CONF-2014-018} utilizes this property to apply a quality criterion on jets with $\pt<\qty[]{60}{GeV}$ and $|\eta|<2.4$.
+Moreover pileup contributions can be further reduced by comparing the scalar \pt sum of tracks from the \ac{pv} associated to the jet with the scalar \pt sum of all tracks including other \acp{pv}. The \ac{jvt} \citep{ATLAS-CONF-2014-018} uses this property to apply a quality criterion on jets with $\pt<\qty[]{60}{GeV}$ and $|\eta|<2.4$.
 
 
 \subsubsection{Large-R Jets}
-Due to their large surface area, large-$R$-jets are particularly susceptible to pile-up contributions. To counteract this, a technique known as grooming is used. In this process, a large $R$-jet is divided into smaller sub-jets with a radius of $R=0.2$. Of these subjets, only those that contain at least $\pt>\qty[]{5}{\percent}$ of the original large-$R$ jet are retained.
+Due to their large surface area, large-$R$ jets are particularly susceptible to pile-up contributions which is why several algorithms are used to mitigate pile-up \citep{atlas2021optimisation}. Similar to the median \pt subtraction for small-$R$ jets a so-called constituent subtraction (CS) is applied. In this method, a pile-up estimate per ghost particle is iteratively subtracted from the clusters that are closest to the ghosts in the jet \citep{ATLAS-CONF-2017-065}. 
+
+Additionally, an algorithm named SoftKiller (SK) which imposes a \pt requirement on constituents to eliminate soft particles. This \pt cut is determined per event by selecting a \pt-value that leaves half of the cells in an ($\eta,\phi$) grid empty, effectively achieving a median \pt of zero, akin to that used in constituent subtraction \citep{ATLAS-CONF-2017-065}.
+
+Another method employed is jet grooming, which aims to remove soft wide-angle radiation from the jet. This is achieved through the SoftDrop (SD) algorithm, which applies the Cambridge/Aachen clustering method \citep{Larkoski_2014}. This clustering approach groups the jet's constituents based on their angular distance. Recursively a \pt requirement is applied to constituents always checked on the widest angle constituent with a stopping criterion. 
+
+% This series of strategies ensures a more accurate reconstruction of jets
+
+
+% In this process, a large $R$-jet is divided into smaller sub-jets with a radius of $R=0.2$. Of these subjets, only those that contain at least $\pt>\qty[]{5}{\percent}$ of the original large-$R$ jet are retained.
+
+
 
 \subsection{\ac{jes}, $\eta$ and mass}
 \begin{figure}

@@ -69,36 +69,39 @@ In a final step the detector response of simulated final state particles is simu
 \newcommand{\kv}{\kappa_\text{V}}
 \newcommand{\mhh}{m_\text{HH}}
 
-\red{redo}
-This analysis is interested in constraining the couplings $\kappa_\text{V},\kappa_\lambda,\kappa_\text{2V}$ associated to the \ac{vbf} processes shown in figure \ref{fig:main_production_processes}. As computing resources are limited and MC generation is unfortunately computationally expensive only a few hypothesis can be simulated. However by exploiting the properties of the differential cross-sectional calculation, samples of any hypothesized coupling value can be created through linear combination of samples \citep{ATLAS-CONF-2019-049}. It is illustrative to consider the two \ac{ggf} diagrams with the $\kl$ and $\kt$ couplings when calculating the differential cross-section
+This analysis is interested in constraining the couplings $\kappa_\text{V},\kappa_\lambda,\kappa_\text{2V}$ associated to the \ac{vbf} processes shown in figure \ref{fig:main_production_processes}. As computing resources are limited and MC generation is unfortunately computationally expensive only a few hypothesis can be simulated. However by exploiting the properties of the differential cross-sectional calculation, samples of any hypothesized coupling value can be created through linear combination of samples \citep{ATLAS-CONF-2019-049}. Considering the \ac{vbf} diagrams denoted subscripted as (1,2,3) with couplings $\kl$, $\kv$ and \ktwov the differential (per bin) cross-section of a kinematic variable, e.g. the invariant mass of the Higgs pair system can be rewritten as
 \begin{align}
-    \label{eqn:ggf_hh_feynSum}
-    \frac{d\sigma(\kl, \kt)}{d \mhh} & =
-    | A(\kt, \kl) |^2 = | \kl \kt M_{\bigtriangleup}(\mhh) + \kt^2 M_{\Box}(\mhh) |^2                                                                                                                                          \\
-                                     & = \kl^2 \kt^2 |M_{\bigtriangleup}(\mhh)|^2                                                                                                                                              \\ & \quad+
-    \kl \kt^3 [ M_{\bigtriangleup}^*(\mhh) M_{\Box}(\mhh)                                                              +                                                           M_{\Box}^*(\mhh) M_{\bigtriangleup}(\mhh) ] \\ &\quad +
-    \kt^4 |M_{\Box}|^2                                                                                                                                                                                                         \\
-                                     & = \kl^2 \kt^2 a_1(\mhh) + \kl \kt^3 a_2(\mhh) + \kt^4 a_3(\mhh).
+    \label{eqn:xsec_vbf}
+    \frac{d\sigma(\kvv, \kv, \kl )}{d \mhh} = &
+    \left| A(\kvv, \kv, \kl ) \right|^2                                                                               \\
+    =                                         & \left| \kv \kl M_1(\mhh) + \kvv M_2(\mhh) + \kv^2 M_3(\mhh) \right|^2 \\
+    =                                         & \abs{M_1}^2 \kl^2 \kv^2  + 2 \mathcal{R}(M_{1}^* M_{2})  \kvv \kl \kv \\
+                                              & + 2 \mathcal{R}(M_{1}^* M_{3}) \kl \kv^3 + \abs{M_2}^2  \kvv^2        \\
+                                              & + 2 \mathcal{R}(M_{2}^* M_{3}) \kvv \kv^2 + \abs{M_3}^2 \kv^4.
 \end{align}
-When setting $\kt$ to its \ac{sm} value 1 the equation reduces to
-\begin{equation}
-    \label{eqn:ggf_hh_feynSimple}
-    \frac{d\sigma(\kl)}{d \mhh} = \kl^2 a_1(\mhh) + \kl a_2(\mhh) + a_3(\mhh).
-\end{equation}
-The parameters $a_i$ depend non-trivially on $\mhh$. However for three given hypotheses of $\kl$ a linear system of equations with variables $a_i$ can be solved and thus $\frac{d\sigma(\kl)}{d \mhh}(\kl)$ is a function of $\kl$ only.
+The prefactors of amplitudes in front of the couplings depend non-trivially on $\mhh$. However
+rewritten as
+\begin{align}
+    \frac{d\sigma(\kvv, \kv, \kl )}{d \mhh}
+    = \;& a_1 \kl^2 \kv^2  + 2 a_2 \kvv \kl \kv  + 2 a_3 \kl \kv^3 \\
+    &+ a_4 \kvv^2     + 2 a_5 \kvv \kv^2 + a_6\kv^4. \nonumber
+\end{align}
+and six given solutions a linear system of equations with variables $a_i$ can be solved and thus $\frac{d\sigma(\kl)}{d \mhh}(\kl)$ as a function of ($\kl$, $\kv$ and \ktwov) allows to deduce the cross-section for a desired hypothesis. 
 
-In complete analogy the squared expansion of the cross-sectional formula involving the three \ac{vbf} couplings  $\kappa_\text{V},\kappa_\lambda,\kappa_\text{2V}$ samples can be combined to produce any hypotheses from 6 simulated hypotheses
-\begin{flalign}
-    \label{eqn:vbf_hh_6term_chosen}
-    \frac{d\sigma}{d\mhh}(\kvv, \kl, \kv) \nonumber =                                                                                                                                                                                                                                                                           \\ \nonumber
-    \left(\frac{68 \kappa_{2V}^{2}}{135} - 4 \kappa_{2V} \kappa_{V}^{2} + \frac{20 \kappa_{2V} \kappa_{V} \kappa_{\lambda}}{27} + \frac{772 \kappa_{V}^{4}}{135} - \frac{56 \kappa_{V}^{3} \kappa_{\lambda}}{27} + \frac{\kappa_{V}^{2} \kappa_{\lambda}^{2}}{9}\right) \times \frac{d\sigma}{d\mhh}{\left(1,1,1 \right)}       \\ \nonumber
-    + \left(- \frac{4 \kappa_{2V}^{2}}{5} + 4 \kappa_{2V} \kappa_{V}^{2} - \frac{16 \kappa_{V}^{4}}{5}\right) \times \frac{d\sigma}{d\mhh}{\left(\frac{3}{2},1,1 \right)}                                                                                                                                                       \\ \nonumber
-    + \left(\frac{11 \kappa_{2V}^{2}}{60} + \frac{\kappa_{2V} \kappa_{V}^{2}}{3} - \frac{19 \kappa_{2V} \kappa_{V} \kappa_{\lambda}}{24} - \frac{53 \kappa_{V}^{4}}{30} + \frac{13 \kappa_{V}^{3} \kappa_{\lambda}}{6} - \frac{\kappa_{V}^{2} \kappa_{\lambda}^{2}}{8}\right) \times \frac{d\sigma}{d\mhh}{\left(1,2,1 \right)} \\ \nonumber
-    + \left(- \frac{11 \kappa_{2V}^{2}}{540} + \frac{11 \kappa_{2V} \kappa_{V} \kappa_{\lambda}}{216} + \frac{13 \kappa_{V}^{4}}{270} - \frac{5 \kappa_{V}^{3} \kappa_{\lambda}}{54} + \frac{\kappa_{V}^{2} \kappa_{\lambda}^{2}}{72}\right) \times \frac{d\sigma}{d\mhh}{\left(1,10,1 \right)}                                 \\ \nonumber
-    + \left(\frac{88 \kappa_{2V}^{2}}{45} - \frac{16 \kappa_{2V} \kappa_{V}^{2}}{3} + \frac{4 \kappa_{2V} \kappa_{V} \kappa_{\lambda}}{9} + \frac{152 \kappa_{V}^{4}}{45} - \frac{4 \kappa_{V}^{3} \kappa_{\lambda}}{9}\right) \times \frac{d\sigma}{d\mhh}{\left(1,1,\frac{1}{2} \right)}                                      \\
-    + \left(\frac{8 \kappa_{2V}^{2}}{45} - \frac{4 \kappa_{2V} \kappa_{V} \kappa_{\lambda}}{9} - \frac{8 \kappa_{V}^{4}}{45} + \frac{4 \kappa_{V}^{3} \kappa_{\lambda}}{9}\right) \times \frac{d\sigma}{d\mhh}{\left(1,-5,\frac{1}{2} \right)}.
-\end{flalign}
-A validation of the method can be found in \citep{ATL-COM-PHYS-2023-033}.
+\red{add validation}
+
+% In complete analogy the squared expansion of the cross-sectional formula involving the three \ac{vbf} couplings  $\kappa_\text{V},\kappa_\lambda,\kappa_\text{2V}$ samples can be combined to produce any hypotheses from 6 simulated hypotheses
+% \begin{flalign}
+%     \label{eqn:vbf_hh_6term_chosen}
+%     \frac{d\sigma}{d\mhh}(\kvv, \kl, \kv) \nonumber =                                                                                                                                                                                                                                                                           \\ \nonumber
+%     \left(\frac{68 \kappa_{2V}^{2}}{135} - 4 \kappa_{2V} \kappa_{V}^{2} + \frac{20 \kappa_{2V} \kappa_{V} \kappa_{\lambda}}{27} + \frac{772 \kappa_{V}^{4}}{135} - \frac{56 \kappa_{V}^{3} \kappa_{\lambda}}{27} + \frac{\kappa_{V}^{2} \kappa_{\lambda}^{2}}{9}\right) \times \frac{d\sigma}{d\mhh}{\left(1,1,1 \right)}       \\ \nonumber
+%     + \left(- \frac{4 \kappa_{2V}^{2}}{5} + 4 \kappa_{2V} \kappa_{V}^{2} - \frac{16 \kappa_{V}^{4}}{5}\right) \times \frac{d\sigma}{d\mhh}{\left(\frac{3}{2},1,1 \right)}                                                                                                                                                       \\ \nonumber
+%     + \left(\frac{11 \kappa_{2V}^{2}}{60} + \frac{\kappa_{2V} \kappa_{V}^{2}}{3} - \frac{19 \kappa_{2V} \kappa_{V} \kappa_{\lambda}}{24} - \frac{53 \kappa_{V}^{4}}{30} + \frac{13 \kappa_{V}^{3} \kappa_{\lambda}}{6} - \frac{\kappa_{V}^{2} \kappa_{\lambda}^{2}}{8}\right) \times \frac{d\sigma}{d\mhh}{\left(1,2,1 \right)} \\ \nonumber
+%     + \left(- \frac{11 \kappa_{2V}^{2}}{540} + \frac{11 \kappa_{2V} \kappa_{V} \kappa_{\lambda}}{216} + \frac{13 \kappa_{V}^{4}}{270} - \frac{5 \kappa_{V}^{3} \kappa_{\lambda}}{54} + \frac{\kappa_{V}^{2} \kappa_{\lambda}^{2}}{72}\right) \times \frac{d\sigma}{d\mhh}{\left(1,10,1 \right)}                                 \\ \nonumber
+%     + \left(\frac{88 \kappa_{2V}^{2}}{45} - \frac{16 \kappa_{2V} \kappa_{V}^{2}}{3} + \frac{4 \kappa_{2V} \kappa_{V} \kappa_{\lambda}}{9} + \frac{152 \kappa_{V}^{4}}{45} - \frac{4 \kappa_{V}^{3} \kappa_{\lambda}}{9}\right) \times \frac{d\sigma}{d\mhh}{\left(1,1,\frac{1}{2} \right)}                                      \\
+%     + \left(\frac{8 \kappa_{2V}^{2}}{45} - \frac{4 \kappa_{2V} \kappa_{V} \kappa_{\lambda}}{9} - \frac{8 \kappa_{V}^{4}}{45} + \frac{4 \kappa_{V}^{3} \kappa_{\lambda}}{9}\right) \times \frac{d\sigma}{d\mhh}{\left(1,-5,\frac{1}{2} \right)}.
+% \end{flalign}
+% A validation of the method can be found in \citep{ATL-COM-PHYS-2023-033}.
 
 
 % https://www.overleaf.com/project/638e1930f926cd21d5264259
