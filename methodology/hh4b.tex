@@ -24,7 +24,7 @@ $\sigma_\text{vbf HH}^\text{SM}=\qty[]{1.73}{fb}$ at \ac{nnnlo} \citep{PhysRevD.
 \end{figure}
 Figure \ref{fig:branching_fraction_hh} highlights that an interesting channel in the study of Higgs pair production is the final state with the largest branching fraction, which consists of four $b$ quarks and amounts to about \qty[]{34}{\percent}. Thus the \ac{sm} \ac{vbf} cross-section is calculated to correspond to the 4b branching ratio by multiplying it with $\mathcal{B}(4b)=0.3392$. This fully hadronic final state, however, presents the challenge of significant \ac{qcd} backgrounds.
 
-This work focuses on the boosted topology of highly energetic jets which do not allow reconstruction of $b$-jets individually but rather of final states consisting of large-$R$ jets encapsulating two collimated $b$-jets inside. This approach substantially reduces \ac{qcd} backgrounds, as highly energetic jets are more likely to originate from heavy particles like $b$ quarks. Additionally, events with jets of large \pt are easier to trigger on. While representing a comparatively clean signal, such events are rare and thus have limited statistical power. Despite other decay signatures being more suitable for the discovery of the Higgs pair production process the power of this selection lies in proving the existence of the \ktwov coupling shown in figure \ref{fig:main_production_processes}(d) to which it is directly sensitive.
+This work focuses on the boosted topology of highly energetic jets which do not allow reconstruction of $b$-jets individually but rather of final states consisting of large-$R$ jets encapsulating two collimated $b$-jets inside. This approach substantially reduces \ac{qcd} backgrounds, as highly energetic jets are more likely to originate from heavy particles like $b$ quarks. Additionally, events with jets of large \pt are have a clearer signature to trigger on. While representing a comparatively clean signal, such events are rare and thus have limited statistical power. Despite other decay signatures being more suitable for the discovery of the Higgs pair production process the power of this selection lies in proving the existence of the \ktwov coupling shown in figure \ref{fig:main_production_processes}(d) to which it is directly sensitive.
 
 The low cross-section for this process is due to the fact that diagrams (d) and (e) in Figure \ref{fig:main_production_processes} exhibit destructive interference for \ac{sm} values. Conversely, when $\ktwov$ deviates from \ac{sm} values, the production cross-section increases significantly, with $\sigma_{\ktwov=0}\approx 20\sigma_{\ktwov=1}$ and the decay products exhibit much larger transverse momentum, as illustrated in Figure \ref{fig:kappa_2v_variations_mhh}.
 \begin{figure}
@@ -61,60 +61,8 @@ In a second step the parton shower evolution including hadronization and initial
 
 In a final step the detector response of simulated final state particles is simulated with \textsc{Geant}4 \citep{Agostinelli:2002hh}. It models the detector geometry, the particle's path through the magnetic fields and the particle interactions with the detector material, potentially producing new particles or decays. The output of this step are energy deposits in the various subdetectors of \ac{atlas}. Subsequently these are passed on to a process known as digitization which models the readout electronics. The result of this is raw data being no different from that read out in the actual experiment.
 
-
-\section{Linear combination of samples}\label{sec:linear_combination}
-\newcommand{\kl}{\kappa_\lambda}
-\newcommand{\kt}{\kappa_t}
-\newcommand{\kvv}{\kappa_\text{2V}}
-\newcommand{\kv}{\kappa_\text{V}}
-\newcommand{\mhh}{m_\text{HH}}
-
-This analysis is interested in constraining the couplings $\kappa_\text{V},\kappa_\lambda,\kappa_\text{2V}$ associated to the \ac{vbf} processes shown in figure \ref{fig:main_production_processes}. As computing resources are limited and MC generation is unfortunately computationally expensive only a few hypothesis can be simulated. However by exploiting the properties of the differential cross-sectional calculation, samples of any hypothesized coupling value can be created through linear combination of samples \citep{ATLAS-CONF-2019-049}. Considering the \ac{vbf} diagrams denoted subscripted as (1,2,3) with couplings $\kl$, $\kv$ and \ktwov the differential (per bin) cross-section of a kinematic variable, e.g. the invariant mass of the Higgs pair system can be rewritten as
-\begin{align}
-    \label{eqn:xsec_vbf}
-    \frac{d\sigma(\kvv, \kv, \kl )}{d \mhh} = &
-    \left| A(\kvv, \kv, \kl ) \right|^2                                                                               \\
-    =                                         & \left| \kv \kl M_1(\mhh) + \kvv M_2(\mhh) + \kv^2 M_3(\mhh) \right|^2 \\
-    =                                         & \abs{M_1}^2 \kl^2 \kv^2  + 2 \mathcal{R}(M_{1}^* M_{2})  \kvv \kl \kv \\
-                                              & + 2 \mathcal{R}(M_{1}^* M_{3}) \kl \kv^3 + \abs{M_2}^2  \kvv^2        \\
-                                              & + 2 \mathcal{R}(M_{2}^* M_{3}) \kvv \kv^2 + \abs{M_3}^2 \kv^4.
-\end{align}
-The prefactors of amplitudes in front of the couplings depend non-trivially on $\mhh$. However
-rewritten as
-\begin{align}
-    \frac{d\sigma(\kvv, \kv, \kl )}{d \mhh}
-    = \;& a_1 \kl^2 \kv^2  + 2 a_2 \kvv \kl \kv  + 2 a_3 \kl \kv^3 \\
-    &+ a_4 \kvv^2     + 2 a_5 \kvv \kv^2 + a_6\kv^4. \nonumber
-\end{align}
-and six given solutions a linear system of equations with variables $a_i$ can be solved and thus $\frac{d\sigma(\kl)}{d \mhh}(\kl)$ as a function of ($\kl$, $\kv$ and \ktwov) allows to deduce the cross-section for a desired hypothesis. 
-
-\red{add validation}
-
-% In complete analogy the squared expansion of the cross-sectional formula involving the three \ac{vbf} couplings  $\kappa_\text{V},\kappa_\lambda,\kappa_\text{2V}$ samples can be combined to produce any hypotheses from 6 simulated hypotheses
-% \begin{flalign}
-%     \label{eqn:vbf_hh_6term_chosen}
-%     \frac{d\sigma}{d\mhh}(\kvv, \kl, \kv) \nonumber =                                                                                                                                                                                                                                                                           \\ \nonumber
-%     \left(\frac{68 \kappa_{2V}^{2}}{135} - 4 \kappa_{2V} \kappa_{V}^{2} + \frac{20 \kappa_{2V} \kappa_{V} \kappa_{\lambda}}{27} + \frac{772 \kappa_{V}^{4}}{135} - \frac{56 \kappa_{V}^{3} \kappa_{\lambda}}{27} + \frac{\kappa_{V}^{2} \kappa_{\lambda}^{2}}{9}\right) \times \frac{d\sigma}{d\mhh}{\left(1,1,1 \right)}       \\ \nonumber
-%     + \left(- \frac{4 \kappa_{2V}^{2}}{5} + 4 \kappa_{2V} \kappa_{V}^{2} - \frac{16 \kappa_{V}^{4}}{5}\right) \times \frac{d\sigma}{d\mhh}{\left(\frac{3}{2},1,1 \right)}                                                                                                                                                       \\ \nonumber
-%     + \left(\frac{11 \kappa_{2V}^{2}}{60} + \frac{\kappa_{2V} \kappa_{V}^{2}}{3} - \frac{19 \kappa_{2V} \kappa_{V} \kappa_{\lambda}}{24} - \frac{53 \kappa_{V}^{4}}{30} + \frac{13 \kappa_{V}^{3} \kappa_{\lambda}}{6} - \frac{\kappa_{V}^{2} \kappa_{\lambda}^{2}}{8}\right) \times \frac{d\sigma}{d\mhh}{\left(1,2,1 \right)} \\ \nonumber
-%     + \left(- \frac{11 \kappa_{2V}^{2}}{540} + \frac{11 \kappa_{2V} \kappa_{V} \kappa_{\lambda}}{216} + \frac{13 \kappa_{V}^{4}}{270} - \frac{5 \kappa_{V}^{3} \kappa_{\lambda}}{54} + \frac{\kappa_{V}^{2} \kappa_{\lambda}^{2}}{72}\right) \times \frac{d\sigma}{d\mhh}{\left(1,10,1 \right)}                                 \\ \nonumber
-%     + \left(\frac{88 \kappa_{2V}^{2}}{45} - \frac{16 \kappa_{2V} \kappa_{V}^{2}}{3} + \frac{4 \kappa_{2V} \kappa_{V} \kappa_{\lambda}}{9} + \frac{152 \kappa_{V}^{4}}{45} - \frac{4 \kappa_{V}^{3} \kappa_{\lambda}}{9}\right) \times \frac{d\sigma}{d\mhh}{\left(1,1,\frac{1}{2} \right)}                                      \\
-%     + \left(\frac{8 \kappa_{2V}^{2}}{45} - \frac{4 \kappa_{2V} \kappa_{V} \kappa_{\lambda}}{9} - \frac{8 \kappa_{V}^{4}}{45} + \frac{4 \kappa_{V}^{3} \kappa_{\lambda}}{9}\right) \times \frac{d\sigma}{d\mhh}{\left(1,-5,\frac{1}{2} \right)}.
-% \end{flalign}
-% A validation of the method can be found in \citep{ATL-COM-PHYS-2023-033}.
-
-
-% https://www.overleaf.com/project/638e1930f926cd21d5264259
-% linear combination
-% Unfortunately, MC generation is computationally expensive and time-consuming. As such, only1443
-% a handful of MC simulation samples for only a handful of coupling values are actually produced, and a1444
-% sample combination technique is employed to model the signal hypothesis across the coupling parameter1445
-% space
-% https://trexfitter-docs.web.cern.ch/trexfitter-docs/model_building/expression/
-% https://gitlab.cern.ch/hh4b/hh4b-boosted-vbf-limits/-/blob/main/create_workspaces/configs/k2V_parameterized_BDT_decorXbb.config?ref_type=heads#L285-331
-
 \section{Analysis strategy}
-This section describes the event selection and analysis strategy. A detailed description of reconstructed physical objects used is described in chapter \ref{ch:reco}.
+This section describes the event selection and analysis strategy. A detailed description of reconstructed physical objects is given in chapter \ref{ch:reco}.
 
 \subsection{Trigger}
 As outlined in section \ref{sec:tdaq} events need to be preselected. The \ac{hlt} applied in this analysis selects events with a large transverse energy $E_\text{T}$ large-$R$ jet. The definition slightly changed over the data taking years as can be seen in table \ref{tab:trigger}.
@@ -141,13 +89,15 @@ Previous studies have shown that they become fully efficient at about $\pt>\qty[
 % \end{figure}
 
 \subsection{Large Radius Jets}
-To fully capture the boosted Higgs pair topology two large $R=1.0$ jets clustered with the Anti-$k_t$ algorithm from \acp{tcc} are used as described in section \ref{sec:jets}. These enclose the two boosted collimated $b$-jets in each of them to form the Higgs candidates. If there are several large-$R$ jets the two with the highest \pt are chosen. To be fully efficient on the trigger the leading large-$R$ jet is required to have $\pt>\qty[]{450}{GeV}$. For decay products to be inside a jet holds approximately $R\approx 2m/\pt$ with the mass $m$ and transverse momentum of the parent particle \citep{ATLAS-CONF-2020-022}. For a Higgs mass of \qty[]{125}{GeV} to be contained inside a large-$R$ jet the Higgs candidate therefore must have $\pt\gtrsim \qty[]{250}{GeV}$ and is thus chosen as the \pt requirement on the sub-leading Higgs candidate. If there are several large-$R$ jets the two leading \pt jets are selected. Additionally both Higgs candidates have a mass requirement $m>\qty[]{50}{GeV}$ to reduce \ac{qcd} background.
-% As a minimum quality criterion large R jets are then required to have $200<p_{\text{T}}<3000$ GeV, $50<m<600$ GeV and $|\eta|<2$.
-\red{correct tagger and jets}
-The $X\rightarrow bb$ tagger described in \ref{sec:xbb} is used to identify b-jets within the selected large-R jets. The top fraction $f_\text{top}$ is set to 0.25 and the \qty[]{60}{\percent} Higgs efficiency \ac{wp} is required. Studies with the more inclusive \qty[]{70}{\percent} \ac{wp} displayed slightly worse limit results \citep{ATL-COM-PHYS-2023-033}.
+To fully capture the boosted Higgs pair topology two \ac{ufo} large $R=1.0$ jets are selected as described in section \ref{sec:jets}. These enclose the two boosted collimated $b$-jets in each of them to form the Higgs candidates. If there are several large-$R$ jets the two with the highest \pt are chosen. The large-$R$ jets are required to be within $200<p_{\text{T}}<3000$ GeV and $50<m<600$ GeV for which the calibration is valid
+
+\red{$|\eta|<2$, rel 21 did not do this one, even though they are saying it or it is applied somewhere else, because to capture also very boosted? i havent applied it either}.
+
+To be fully efficient on the trigger the leading large-$R$ jet is required to have $\pt>\qty[]{450}{GeV}$. For decay products to be inside a jet approximately $R\approx 2m/\pt$ holds with the mass $m$ and transverse momentum of the parent particle \citep{ATLAS-CONF-2020-022}. For a Higgs mass of \qty[]{125}{GeV} to be contained inside a large-$R$ jet the Higgs candidates therefore must have $\pt\gtrsim \qty[]{250}{GeV}$ and is thus chosen as the \pt requirement on the sub-leading Higgs candidate. If there are several large-$R$ jets the two leading \pt jets are selected. Additionally both Higgs candidates have a mass requirement $m>\qty[]{50}{GeV}$ to reduce \ac{qcd} background. The GN2X tagger described in \ref{sec:gn2x} is used to identify if a selected large-$R$ jet contains two $b$-jets. The top fraction $f_\text{top}(f_\text{Hcc})$ is set to 0.25(0.02) and the \qty[]{60}{\percent} Higgs efficiency \ac{wp} is required with a discriminant depending on the jet mass to avoid mass sculpting as mentioned in \ref{sec:gn2x}.
+
 
 \subsection{Small Radius Jets}
-Two small radius $R=0.4$ jets are required for the \ac{vbf} signature and are referred to as \ac{vbf} jets in the following. They are also reconstructed with the anti-$k_t$ algorithm and as \acp{pfo} as described in \ref{sec:jets}. The tight \ac{wp} for the \ac{jvt} and the LooseBad \ac{wp} for the event cleaning are applied both described in \ref{sec:calibration}. Small-$R$ jets $j$ are selected for $\pt>\qty[]{20}{GeV}$ and $|\eta|<4.5$ and are required to be outside of the Higgs candidate large-$R$ jets $J$ by imposing $\Delta R(J,j) > 1.4$. Further cuts applied on the \ac{vbf} jet system optimized on significance are $|\Delta\eta(j,j)| > 3$ and $m_{jj} > \qty{1}{TeV}$.
+Two small radius $R=0.4$ jets are required for the \ac{vbf} signature and are referred to as \ac{vbf} jets in the following. They are also reconstructed with the anti-$k_t$ algorithm and as \acp{pfo} as described in \ref{sec:jets}. The tight \ac{wp} for the \ac{jvt} and the LooseBad \ac{wp} for the event cleaning are applied both described in \ref{sec:calibration}. Small-$R$ jets $j$ are selected for $\pt>\qty[]{20}{GeV}$ and $|\eta|<4.5$ and are required to be outside of the Higgs candidate large-$R$ jets $J$ by imposing $\Delta R(J,j) > 1.4$. \red{Further cuts applied on the \ac{vbf} jet system optimized on significance are $|\Delta\eta(j,j)| > 3$ and $m_{jj} > \qty{1}{TeV}$. does neos actually go to zero on mjj}
 
 \subsection{Kinematic Regions}\label{sec:kinematic_regions}
 \ac{sr}, Validation Region (VR) and \ac{cr} are explored and optimized in previous analyses \citep{aad2023search,ATL-COM-PHYS-2023-033} in the $m_{H1},m_{H2}$ plane and are defined as
@@ -156,20 +106,22 @@ Two small radius $R=0.4$ jets are required for the \ac{vbf} signature and are re
 \end{equation}
 \begin{equation}
     \label{VR_Xhh}
-    VR =  \sqrt{\left(\frac{m_{H1} - \SI{124}{\GeV}}{0.1 \ln(m_{H1})}\right)^{2} + \left(\frac{m_{H2} - \SI{117}{\GeV}}{0.1 \ln(m_{H2})}\right)^{2}} < 100,
+    VR =  \sqrt{\left(\frac{m_{H1} - \SI{124}{\GeV}}{0.1 \ln(m_{H1}/\text{GeV})}\right)^{2} + \left(\frac{m_{H2} - \SI{117}{\GeV}}{0.1 \ln(m_{H2}/\text{GeV})}\right)^{2}} < 100,
 \end{equation}
 and
 \begin{equation}
     \label{CR_Xhh}
-    CR = \sqrt{\left(\frac{m_{H1} - \SI{124}{\GeV}}{0.1 \ln(m_{H1})}\right)^{2} + \left(\frac{m_{H2} - \SI{117}{\GeV}}{0.1 \ln(m_{H2})}\right)^{2}} > 100  \ \& \ < 170.
+    CR = \sqrt{\left(\frac{m_{H1} - \SI{124}{\GeV}}{0.1 \ln(m_{H1}/\text{GeV})}\right)^{2} + \left(\frac{m_{H2} - \SI{117}{\GeV}}{0.1 \ln(m_{H2}/\text{GeV})}\right)^{2}} > 100  \ \& \ < 170.
 \end{equation}
-Figure \ref{fig:m_hh_plane} depicts the regions in the $m_{H1},m_{H2}$ plane on the \ac{sm} signal sample.
-
+Figure \ref{fig:m_hh_plane} depicts $m_{H1},m_{H2}$ planes for data and signal samples.
 \begin{figure}
     \centering
-    \includegraphics[width=.7\textwidth]{m_hh_plane}
-    % \subfigure[]{\includegraphics[width=.49\textwidth]{massplane_SR_opening}}
-    \caption[]{\red{REDO}}
+    % \includegraphics[width=.7\textwidth]{m_hh_plane}
+    \subfigure[]{\includegraphics[width=.47\textwidth]{m_hh_plane}}
+    \subfigure[]{\includegraphics[width=.47\textwidth]{m_hh_plane}}
+    \subfigure[]{\includegraphics[width=.47\textwidth]{m_hh_plane}}
+    \subfigure[]{\includegraphics[width=.47\textwidth]{m_hh_plane}}
+    \caption[]{ $m_{H1},m_{H2}$ planes for data with 1 and 2 xbb tags, a \ac{sm} and $\ktwov$=0 signal sample with 2 xbb tags.}
     \label{fig:m_hh_plane}
 \end{figure}
 
@@ -200,9 +152,24 @@ In this analysis the two orthogonal variables are defined via the amount of $X\r
 \end{table}
 This gives the four orthogonal regions shown in table \ref{tab:abcd}. Hence, the background in the \ac{sr} is estimated with a weight extracted from the \ac{cr}
 \begin{equation}
-    N_\text{SR}^\text{2Xbb}=\frac{N_\text{CR}^\text{2Xbb}}{N_\text{CR}^\text{1Xbb}} N_\text{SR}^\text{1Xbb} = w_\text{CR} N_\text{SR}^\text{1Xbb}=  \red{0.0081} \times N_\text{SR}^\text{1Xbb}.
+    N_\text{SR}^\text{2Xbb}=\frac{N_\text{CR}^\text{2Xbb}}{N_\text{CR}^\text{1Xbb}} N_\text{SR}^\text{1Xbb} = w_\text{CR} N_\text{SR}^\text{1Xbb}=  \red{(0.0039 \pm 0.0002)} \times N_\text{SR}^\text{1Xbb}.
 \end{equation}
-The method is validated in the \ac{vr} within statistical uncertainties as displayed in figure \ref{fig:bkg-validation}. It is noted that the previous analysis also studied a binned transfer-factor without but did not see any improvement \citep{ATL-COM-PHYS-2023-033}.
+
+
+\subsection{Event Classification}
+After the selection of events, a deep feed-forward neural network is employed to construct a histogram suitable for a statistical test of significance. This neural network's training utilizes a novel approach \textsc{neos}, which is thoroughly discussed in Chapter \ref{sec:neos} and optimizes on the $CL_s$ quantity detailed in section \ref{sec:statistics}. Inputs to the neural network include 20 features, which are the four vectors ($\pt,\eta,\phi,m$) of the Higgs boson pair system, the four vector variables of the individual Higgs candidates, the two \ac{vbf} jets and the leading score of the GN2X tagger. It is only possible to use one GN2X score since the background background is estimated with one tag only.
+
+The network's architecture features three fully connected layers, each comprising 100 nodes, and concludes with a singular output node. The hidden layers are followed by a rectified linear unit activation function whereas the output node employs a sigmoid activation for classification. The architecture is thus defined as [20,100,100,100,1], indicating the sequence of layers from input to output. Figure \ref{fig:nominal-hist} displays the nominal expected histogram for this analysis
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\textwidth]{atos_cls_5_sys_NOSYS.SR_xbb_2_nominal_hist.pdf}
+    \caption[]{\red{redo}Expected histogram the data-driven background estimate and a signal hypothesis with $\kappa_\text{2V}=0$ and other couplings set to their \ac{sm} value. \red{add other nominal hypotheses + ggf}}
+    \label{fig:nominal-hist}
+\end{figure}
+
+\subsection{ABCD method validation}
+The ABCD method is validated in the \ac{vr} within statistical uncertainties as displayed in figure \ref{fig:bkg-validation}. It is noted that the previous analysis also studied a binned transfer-factor but did not gain any improvement \citep{ATL-COM-PHYS-2023-033}.
 \begin{figure}
     \centering
     \includegraphics[width=0.7\textwidth]{atos_cls_5_sys_NOSYS.VR_xbb_2_compareABCD}
@@ -211,18 +178,70 @@ The method is validated in the \ac{vr} within statistical uncertainties as displ
 \end{figure}
 
 
+\section{Linear combination of signal hypotheses}\label{sec:linear_combination}
+\newcommand{\kl}{\kappa_\lambda}
+\newcommand{\kt}{\kappa_t}
+\newcommand{\kvv}{\kappa_\text{2V}}
+\newcommand{\kv}{\kappa_\text{V}}
+\newcommand{\mhh}{m_\text{HH}}
 
-
-
-\subsection{Event Classification}
-After the selection of events, a deep feed-forward neural network is employed to construct the final histogram for the statistical test. This neural network's training utilizes a novel approach \textsc{neos}, which is thoroughly discussed in Chapter \ref{sec:neos} and optimizes on the $CL_s$ quantity detailed in section \ref{sec:statistics}. Inputs to the neural network include 20 features, which are the four vectors ($\pt,\eta,\phi,m$) of the Higgs boson pair system, the individual Higgs candidates, and the two \ac{vbf} jets.
-
-The network's architecture features three fully connected layers, each comprising 100 nodes, and concludes with a singular output node. The hidden layers are followed by a rectified linear unit activation function whereas the output node employs a sigmoid activation for classification. The architecture is thus defined as [20,100,100,100,1], indicating the sequence of layers from input to output. Figure \ref{fig:nominal-hist} displays the nominal expected histogram for this analysis.
-
-
+This analysis is interested in constraining the couplings $\kappa_\text{V},\kappa_\lambda,\kappa_\text{2V}$ associated to the \ac{vbf} processes shown in figure \ref{fig:main_production_processes}. As computing resources are limited and MC generation is unfortunately computationally expensive only a few hypothesis are simulated. However by exploiting the properties of the differential cross-sectional calculation, samples of any hypothesized coupling value can be created through linear combination of samples \citep{ATLAS-CONF-2019-049}. Considering the \ac{vbf} diagrams denoted subscripted as (1,2,3) with couplings $\kl$, $\kv$ and \ktwov the differential (per bin) cross-section of a kinematic variable $x$, e.g. the invariant mass of the Higgs pair system can be rewritten as
+\begin{align}
+    \label{eqn:xsec_vbf}
+    \frac{\mathrm{d}\sigma(\kvv, \kv, \kl )}{\mathrm{d} x } = &
+    \left| A(\kvv, \kv, \kl ) \right|^2                                                                                               \\
+    =                                                         & \left| \kv \kl M_1(x    ) + \kvv M_2(x  ) + \kv^2 M_3(x   ) \right|^2 \\
+    =                                                         & \abs{M_1}^2 \kl^2 \kv^2  + 2 \mathcal{R}(M_{1}^* M_{2})  \kvv \kl \kv \\
+                                                              & + 2 \mathcal{R}(M_{1}^* M_{3}) \kl \kv^3 + \abs{M_2}^2  \kvv^2        \\
+                                                              & + 2 \mathcal{R}(M_{2}^* M_{3}) \kvv \kv^2 + \abs{M_3}^2 \kv^4.
+\end{align}
+The amplitude prefactors in front of the couplings depend non-trivially on $x$. However
+rewritten as
+\begin{align}\label{eq:reweight}
+    \frac{\mathrm{d}\sigma(\kvv, \kv, \kl )}{\mathrm{d} x}
+    = \; & a_1 \kl^2 \kv^2  + 2 a_2 \kvv \kl \kv  + 2 a_3 \kl \kv^3  \\
+         & + a_4 \kvv^2     + 2 a_5 \kvv \kv^2 + a_6\kv^4, \nonumber
+\end{align}
+and six solutions to this equation, a linear system of equations with variables $a_i$ can be solved and thus $\frac{d\sigma(\kl)}{d x}(\kl)$ as a function of ($\kl$, $\kv$ and \ktwov) allows to deduce the cross-section for a desired hypothesis. Table \ref*{tab:vbf_hh_6term_varlist} shows the list of samples used for the derivation.
+\begin{table}
+    \centering
+    \caption{6-Term VBF Combination Sample Variations}
+    \label{tab:vbf_hh_6term_varlist}
+    \begin{tabular}{ |l|l|l| }
+        \hline
+        \textbf {$\kappa_{2V}$} & \textbf {$\kappa_\lambda$} & \textbf {$\kappa_V$} \\
+        \hline
+        1                       & 1                          & 1                    \\
+        1.5                     & 1                          & 1                    \\
+        1                       & 2                          & 1                    \\
+        1                       & 10                         & 1                    \\
+        1                       & 1                          & 0.5                  \\
+        1                       & -5                         & 0.5                  \\
+        \hline
+    \end{tabular}
+\end{table}
+The approach is employed bin-wise as the extraction factors deviate substantially per bin as shown in figure \ref{fig:linear_combine_bin_solutions}.
 \begin{figure}
     \centering
-    \includegraphics[width=0.7\textwidth]{atos_cls_5_sys_NOSYS.SR_xbb_2_nominal_hist.pdf}
-    \caption[]{Expected histogram the data-driven background estimate and a signal hypothesis with $\kappa_\text{2V}=0$ and other couplings set to their \ac{sm} value. \red{add other nominal hypotheses}}
-    \label{fig:nominal-hist}
+    \includegraphics[width=.47\textwidth]{linear_combine_bin_solutions}
+    \caption[]{Extracted reweighting factors per bin for equation \ref{eq:reweight}.}
+    \label{fig:linear_combine_bin_solutions}
 \end{figure}
+The method is validated with a mc generated $\ktwov=0$ samples. Figure \ref{fig:tomatos_cls_5_nominal_reweighted_ratio} reveals a \qty[]{5}{\percent} deviation for this approach. \red{should one introduce a very conservative shape uncertainty because of that? the behavior across all values however is unclear with just one validation sample, maybe something for the outlook.}
+\begin{figure}
+    \centering
+    \includegraphics[width=.6\textwidth]{tomatos_cls_5_nominal_reweighted_ratio}
+    \caption[]{Comparison between a \ac{mc}-generated $\ktwov=0$ signal sample and a signal sample created with the reweighting approach by linearly combining different \ktwov hypotheses. \red{whats with the mc stat error in general for the reweighted, makes stat err small as taken and scaled in my code from k2v=0}}
+    \label{fig:tomatos_cls_5_nominal_reweighted_ratio}
+\end{figure}
+
+ 
+% , another one would be 
+% l0cvv1cv1, however why validating for kl if we scan k2v, I don't think this validation is worth anything in a phase space we are not testing on.
+
+
+
+% https://www.overleaf.com/project/638e1930f926cd21d5264259
+% https://trexfitter-docs.web.cern.ch/trexfitter-docs/model_building/expression/
+% https://gitlab.cern.ch/hh4b/hh4b-boosted-vbf-limits/-/blob/main/create_workspaces/configs/k2V_parameterized_BDT_decorXbb.config?ref_type=heads#L285-331
+

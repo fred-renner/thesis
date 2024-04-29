@@ -5,19 +5,18 @@ Any measurement needs to consider uncertainties in order to determine its validi
 The combined integrated luminosity for the years 2015-2018 has an uncertainty of \qty[]{0.83}{\percent} determined with the LUCID-2 detector. It is applied to the Higgs Pair signal process and has minimal impact on this analysis.
 
 \section{Jet Uncertainties}
-Jets are calibrated using well known reference objects as described in section \ref{sec:calibration}. These corrections are themselves subject to uncertainties related to detector effects, modeling and statistics leading to corrections of the jet energy and are collectively referred to as \ac{jes} \citep{atlas2021jet,Aaboud:2019aa}. Since simulations of jets have a higher accuracy than observed jets the uncertainties of the simulated jets are broadened to be consistent with the jets observed in the data. These uncertainties are known as \ac{jer}. Furthermore large-$R$ jets are additionally corrected for their mass similar to the approach for the \ac{jes}. The uncertainties related to this procedure are called \ac{jmr} \citep{ATLAS-CONF-2020-022}.
+Jets are calibrated using well known reference objects as described in section \ref{sec:calibration}. These corrections are themselves subject to uncertainties related to detector effects, modeling and statistics leading to corrections of the jet energy and are collectively referred to as \ac{jes} \citep{atlas2021jet,Aaboud:2019aa}. Since simulations of jets have a higher accuracy than observed jets the uncertainties of the simulated jets are broadened to be consistent with the jets observed in the data. These uncertainties are known as \ac{jer}. Furthermore large-$R$ jets are additionally corrected for their mass similar to the approach for the \ac{jes}. The uncertainties related to this procedure are called \ac{jmr} \citep{ATLAS-CONF-2020-022}. By the time of writing this thesis no calibrated uncertainties for large-$R$ jets were available and thus uncertainties from a previous software release serve as a proxy on the \ac{ufo} jets.
 
-\section{$X\rightarrow bb$ Tagger Uncertainties}
-The \ac{nn} of the $X\rightarrow bb$ tagger was trained using simulations leading to potential discrepancies in selection efficiencies between observed data and simulation. Calibration is conducted with $Z(\rightarrow b\overline{b})+\text{jets}$ and $Z(\rightarrow b\overline{b})+\gamma$ applying the same methodology as in \citep{ATL-PHYS-PUB-2021-035}. However as of this analysis the $b$-tagging algorithm for the \ac{vr} track jets has been updated to the DL1d algorithm described in section \ref{sec:b_tagging}. The differences between \ac{mc} and data are measured in large-$R$ jet \pt and the extracted scale factors and their corresponding combined systematic and statistical uncertainties are shown in figure \ref{fig:xbb_sf}.
+\section{GN2X Tagger Uncertainties}
+The \ac{nn} of the GN2X tagger tagger was trained using simulations leading to potential discrepancies in selection efficiencies between observed data and simulation. An estimate for theses differences has not been estimated by the time of writing this thesis and therefore no uncertainties from the previous large-$R$ jet $X\rightarrow bb$ \citep{ATL-PHYS-PUB-2020-019} tagger are used. The $X\rightarrow bb$ tagger was calibrated with $Z(\rightarrow b\overline{b})+\text{jets}$ and $Z(\rightarrow b\overline{b})+\gamma$ applying the same methodology as in \citep{ATL-PHYS-PUB-2021-035}. The differences between \ac{mc} and data are measured in large-$R$ jet \pt and the extracted scale factors and their corresponding combined systematic and statistical uncertainties are shown in figure \ref{fig:xbb_sf}.
 \begin{figure}
     \centering
-    \subfigure[]{\includegraphics[width=.49\textwidth]{SF_Xbb50_internal_09March2023}}
-    \subfigure[]{\includegraphics[width=.49\textwidth]{SF_Xbb60_internal_09March2023}}
-    \caption[]{Derived scale factors in large-$R$ jet \pt for the \textbf{(a)} \qty[]{50}{\percent} and \textbf{(b)} \qty[]{60}{\percent} \ac{wp} from the calibration of the $X\rightarrow bb$ tagger.}
+    \includegraphics[width=.49\textwidth]{SF_Xbb60_internal_09March2023}
+    \caption[]{Derived scale factors in large-$R$ jet \pt for the  \qty[]{60}{\percent} \ac{wp} from the calibration of the $X\rightarrow bb$ tagger.}
     \label{fig:xbb_sf}
 \end{figure}
 
-\section{Theory Uncertainties}
+\section{Theory Uncertainties}\label{sec:theory_uncertainties}
 The cross-section calculation for some process initiated by a proton proton collision calculated at $n$-th order as described in section \ref{sec:mc_simulation} has a functional form
 \begin{equation}
     \sigma^{(n)} = PDF(x_1, \mu_F)  PDF(x_2, \mu_F) \hat{\sigma}^{(n)}(x_1,x_2,\mu_R),
@@ -64,7 +63,7 @@ Since the correlation between $\alpha_s$ and the \acp{pdf} is small their uncert
 \end{figure}
 
 \subsection{Uncertainty on HH cross section}
-Normalization uncertainties on the final acceptance are evaluated on \ac{mc} simulations for scale variations and for \acp{pdf} and $\alpha_s$. This is essentially the upper approach with one bin. The cross-section uncertainties for the \ac{vbf} Higgs pair production process then has an uncertainty due to scale variations of \red{$^{+0.03\%}_{-0.04\%}$ and the combined \ac{pdf}+$\alpha_s$ uncertainty is $\pm 2.1\%$ }\citep{de2016arxiv}. 
+Normalization uncertainties on the final acceptance are evaluated on \ac{mc} simulations for scale variations and for \acp{pdf} and $\alpha_s$. This essentially a one bin normalization uncertainty of the theory uncertainties in section \ref{sec:theory_uncertainties}.
 
 \subsection{Parton Shower}
 Uncertainties related to the parton showering are estimated using different modelings from \textsc{Pythia 8} and \textsc{Herwig 7}. The largest deviations from the nominal are used as uncertainties on the Higgs pair process. \red{TODO}
@@ -117,7 +116,7 @@ The resulting shape variation is shown in figure \ref{fig:bkg-estimate-shape}.
 \begin{figure}
     \centering
     \includegraphics[width=.8\textwidth]{atos_cls_5_sys_SR_xbb_2_Background_bkg_estimate_shape}
-    \caption[]{Shape uncertainty for the data driven background estimate.}
+    \caption[]{Shape uncertainty for the data driven background estimate. \red{redo}}
     \label{fig:bkg-estimate-shape}
 \end{figure}
 
