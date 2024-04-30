@@ -62,7 +62,7 @@ In a second step the parton shower evolution including hadronization and initial
 In a final step the detector response of simulated final state particles is simulated with \textsc{Geant}4 \citep{Agostinelli:2002hh}. It models the detector geometry, the particle's path through the magnetic fields and the particle interactions with the detector material, potentially producing new particles or decays. The output of this step are energy deposits in the various subdetectors of \ac{atlas}. Subsequently these are passed on to a process known as digitization which models the readout electronics. The result of this is raw data being no different from that read out in the actual experiment.
 
 \section{Analysis strategy}
-This section describes the event selection and analysis strategy. A detailed description of reconstructed physical objects is given in chapter \ref{ch:reco}.
+This section describes the event selection and analysis strategy. A detailed description of reconstructed physical objects is given in chapter \ref{ch:reco}. Events only from a Good Runs List are chosen to avoid events where e.g. the \ac{lhc} beam was not stable and to ensure all detectors  are operating as expected.
 
 \subsection{Trigger}
 As outlined in section \ref{sec:tdaq} events need to be preselected. The \ac{hlt} applied in this analysis selects events with a large transverse energy $E_\text{T}$ large-$R$ jet. The definition slightly changed over the data taking years as can be seen in table \ref{tab:trigger}.
@@ -117,11 +117,11 @@ Figure \ref{fig:m_hh_plane} depicts $m_{H1},m_{H2}$ planes for data and signal s
 \begin{figure}
     \centering
     % \includegraphics[width=.7\textwidth]{m_hh_plane}
-    \subfigure[]{\includegraphics[width=.47\textwidth]{m_hh_plane}}
-    \subfigure[]{\includegraphics[width=.47\textwidth]{m_hh_plane}}
-    \subfigure[]{\includegraphics[width=.47\textwidth]{m_hh_plane}}
-    \subfigure[]{\includegraphics[width=.47\textwidth]{m_hh_plane}}
-    \caption[]{ $m_{H1},m_{H2}$ planes for data with 1 and 2 xbb tags, a \ac{sm} and $\ktwov$=0 signal sample with 2 xbb tags.}
+    \subfigure[]{\includegraphics[width=.49\textwidth]{massplane_NOSYS.xbb_1_run2}}
+    \subfigure[]{\includegraphics[width=.49\textwidth]{massplane_NOSYS.xbb_2_run2}}
+    \subfigure[]{\includegraphics[width=.49\textwidth]{massplane_NOSYS.xbb_2_SM}}
+    \subfigure[]{\includegraphics[width=.49\textwidth]{massplane_NOSYS.xbb_2_k2v0}}
+    \caption[]{ $m_{H1},m_{H2}$ planes for data with 1 and 2 GN2X tags, a \ac{sm} and $\ktwov$=0 signal sample with 2 GN2X tags. Defined kinematic regions are given as contours for \ac{cr},\ac{vr} and \ac{sr}.}
     \label{fig:m_hh_plane}
 \end{figure}
 
@@ -157,14 +157,14 @@ This gives the four orthogonal regions shown in table \ref{tab:abcd}. Hence, the
 
 
 \subsection{Event Classification}
-After the selection of events, a deep feed-forward neural network is employed to construct a histogram suitable for a statistical test of significance. This neural network's training utilizes a novel approach \textsc{neos}, which is thoroughly discussed in Chapter \ref{sec:neos} and optimizes on the $CL_s$ quantity detailed in section \ref{sec:statistics}. Inputs to the neural network include 20 features, which are the four vectors ($\pt,\eta,\phi,m$) of the Higgs boson pair system, the four vector variables of the individual Higgs candidates, the two \ac{vbf} jets and the leading score of the GN2X tagger. It is only possible to use one GN2X score since the background background is estimated with one tag only.
+After the selection of events, a deep feed-forward neural network is employed to construct a histogram suitable for a statistical test of significance. This neural network's training utilizes a novel approach \textsc{neos}, which is thoroughly discussed in Chapter \ref{sec:neos} and optimizes on the $CL_s$ quantity detailed in section \ref{sec:statistics}. Inputs to the neural network include 20 features, which are the four vector components ($\pt,\eta,\phi,m$) of the Higgs boson pair system, the four vector components of the individual Higgs candidates, the two \ac{vbf} jets and the leading score of the GN2X tagger. The \ac{nn} needs to be applicable across all samples, therefore only one GN2X score is incorporated, as the background estimation relies on a single GN2X tag.
 
 The network's architecture features three fully connected layers, each comprising 100 nodes, and concludes with a singular output node. The hidden layers are followed by a rectified linear unit activation function whereas the output node employs a sigmoid activation for classification. The architecture is thus defined as [20,100,100,100,1], indicating the sequence of layers from input to output. Figure \ref{fig:nominal-hist} displays the nominal expected histogram for this analysis
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.7\textwidth]{atos_cls_5_sys_NOSYS.SR_xbb_2_nominal_hist.pdf}
-    \caption[]{\red{redo}Expected histogram the data-driven background estimate and a signal hypothesis with $\kappa_\text{2V}=0$ and other couplings set to their \ac{sm} value. \red{add other nominal hypotheses + ggf}}
+    \includegraphics[width=0.7\textwidth]{tomatos_cls_5_NOSYS.SR_xbb_2_nominal_hist.pdf}
+    \caption[]{Expected \ac{nn} response to the data-driven background rescaled \ac{sm} signal hypothesis for \ac{vbf} and \ac{ggf} and $\kappa_\text{2V}=0$.}
     \label{fig:nominal-hist}
 \end{figure}
 
@@ -185,7 +185,7 @@ The ABCD method is validated in the \ac{vr} within statistical uncertainties as 
 \newcommand{\kv}{\kappa_\text{V}}
 \newcommand{\mhh}{m_\text{HH}}
 
-This analysis is interested in constraining the couplings $\kappa_\text{V},\kappa_\lambda,\kappa_\text{2V}$ associated to the \ac{vbf} processes shown in figure \ref{fig:main_production_processes}. As computing resources are limited and MC generation is unfortunately computationally expensive only a few hypothesis are simulated. However by exploiting the properties of the differential cross-sectional calculation, samples of any hypothesized coupling value can be created through linear combination of samples \citep{ATLAS-CONF-2019-049}. Considering the \ac{vbf} diagrams denoted subscripted as (1,2,3) with couplings $\kl$, $\kv$ and \ktwov the differential (per bin) cross-section of a kinematic variable $x$, e.g. the invariant mass of the Higgs pair system can be rewritten as
+This analysis is interested in constraining the couplings $\kappa_\text{V},\kappa_\lambda,\kappa_\text{2V}$ associated to the \ac{vbf} processes shown in figure \ref{fig:main_production_processes}. As computing resources are limited and MC generation is unfortunately computationally expensive only a few hypothesis are simulated. However by exploiting the properties of the differential cross-sectional calculation, samples of any hypothesized coupling value can be created through linear combination of samples \citep{ATLAS-CONF-2019-049}. Considering the \ac{vbf} diagrams subscripted as (1,2,3) with couplings $\kl$, $\kv$ and \ktwov the differential (per bin) cross-section of a kinematic variable $x$, e.g. the invariant mass of the Higgs pair system can be rewritten as
 \begin{align}
     \label{eqn:xsec_vbf}
     \frac{\mathrm{d}\sigma(\kvv, \kv, \kl )}{\mathrm{d} x } = &
@@ -235,7 +235,7 @@ The method is validated with a mc generated $\ktwov=0$ samples. Figure \ref{fig:
     \label{fig:tomatos_cls_5_nominal_reweighted_ratio}
 \end{figure}
 
- 
+
 % , another one would be 
 % l0cvv1cv1, however why validating for kl if we scan k2v, I don't think this validation is worth anything in a phase space we are not testing on.
 
