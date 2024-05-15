@@ -1,5 +1,5 @@
 \chapter{Studies with the Soft Muon Tagger}\label{ch:smt}
-In analyses where final states involve  $b$-quarks, as is the case in this study, heavily rely on the accurate identification of these quarks. Thus ongoing research and development efforts are focused on improving the accuracy and efficiency of this identification process. This chapter presents a study on how muons can contribute to the identification of $b$-quarks in current $b$-tagging algorithms applied to small-$R$ jets.
+Analyses involving $b$-quarks in the final state, as is the case in this study, heavily rely on the accurate identification of these quarks. Thus ongoing research and development efforts are focused on improving the accuracy and efficiency of this identification process. This chapter presents a study on how muons can contribute to the identification of $b$-quarks in current $b$-tagging algorithms applied to small-$R$ jets.
 
 \section{Soft Muon tagging}
 \label{sec:SoftMuonTagging}
@@ -26,7 +26,7 @@ Despite their limited branching ratio, muons from semi-leptonic heavy-flavor dec
     \includegraphics[width=0.49\textwidth]{softMuon_dR}
     \label{fig:softMuon_dR}
   }
-  \caption{Kinematics of soft muons: \textbf{(a)} transverse momentum distribution, \textbf{(b)} relative transverse momentum ($p_\text{T}^\text{rel}$) indicative of muons from direct $b$-jet decays being more boosted transversely to the jet axis, and \textbf{(c)} $\Delta R$ distribution between soft muons and jets, normalized per flavor.}
+  \caption{Kinematics of soft muons: \textbf{(a)} transverse momentum distribution (\red{the c-jet drop off at \qty{10}{GeV} requires investigation ok? }), \textbf{(b)} relative transverse momentum ($p_\text{T}^\text{rel}$) indicative of muons from direct $b$-jet decays being more boosted transversely to the jet axis, and \textbf{(c)} $\Delta R$ distribution between soft muons and jets, normalized per flavor.}
   \label{fig:muonsForSMT}
 \end{figure}
 
@@ -54,7 +54,7 @@ Truth studies revealed that most muons associated to jets result from secondary 
   \subfigure[]{
     \includegraphics[width=0.47\textwidth]{softMuon_truthOrigin_norm}
   }
-  \caption{Jet truth type (a) and truth origin (b) for jets with an associated muon normalized per flavor from $t\overline{t}$ and $Z'$ samples. Truth types: unclassified (0), prompt (6), non-prompt (7) and background muon (8). Truth origins: tau lepton decays (9), prompt muons from nearby W decays (12), light (23), strange (24), charm (25), bottom (26) mesons and in flight decays of pions (34) and kaons (35) according to the Monte Carlo truth classification \citep{mctruthclassification}.}
+  \caption{\red{i know this plot is not nice, should we keep it? its all i have from back then i guess} Jet truth type (a) and truth origin (b) for jets with an associated muon normalized per flavor from $t\overline{t}$ and $Z'$ samples. Truth types: unclassified (0), prompt (6), non-prompt (7) and background muon (8). Truth origins: tau lepton decays (9), prompt muons from nearby W decays (12), light (23), strange (24), charm (25), bottom (26) mesons and in flight decays of pions (34) and kaons (35) according to the Monte Carlo truth classification \citep{mctruthclassification}.}
   \label{fig:muonTruth}
 \end{figure}
 Table \ref{tab:MuonJetFlavors} shows the proportion of jets with an associated muon for each flavor. Approximately \qty{15}{\percent} of $b$-jets and around \qty{1}{\percent} of both light and tau jets have an associated muon.
@@ -141,6 +141,7 @@ For all trainings the Umami neural network training framework \citep{Froch:28571
 
 
 \section{Adding muons to $b$-tagging algorithms}\label{sec:add_muons}
+\red{reference dl1d to objects reco}
 Current $b$-tagging algorithms in use are deep feed-forward neural networks with the prefix \ac{dl1} that assign a probability score ($p_\mathrm{b}, p_\mathrm{c}, p_\mathrm{light}$) to a jet depending on its flavor content. Depending on the strategy used to introduce additional tracking information associated with the jet \ac{dl1} can become DL1r if the outputs of the RNNIP (Recurrent Neural Network Impact Parameter) \citep{Gilles:2806947} tagger or DL1d if the outputs of the \ac{dips} \citep{ATL-PHYS-PUB-2020-014} tagger are added as inputs to \ac{dl1}. The outputs of these taggers are then combined into a single signal to background ratio variable, the discriminant, defined as
 \begin{equation}
   \mathrm{D}=\ln\left(\frac{p_b}{f_c \cdot p_c + (1-f_c)\cdot p_\mathrm{light} }\right).

@@ -61,8 +61,8 @@ In a second step the parton shower evolution including hadronization and initial
 
 In a final step the detector response of simulated final state particles is simulated with \textsc{Geant}4 \citep{Agostinelli:2002hh}. It models the detector geometry, the particle's path through the magnetic fields and the particle interactions with the detector material, potentially producing new particles or decays. The output of this step are energy deposits in the various subdetectors of \ac{atlas}. Subsequently these are passed on to a process known as digitization which models the readout electronics. The result of this is raw data being no different from that read out in the actual experiment.
 
-\section{Analysis strategy}
-This section describes the event selection and analysis strategy. A detailed description of reconstructed physical objects is given in chapter \ref{ch:reco}. Events only from a Good Runs List are chosen to avoid events where e.g. the \ac{lhc} beam was not stable and to ensure all detectors  are operating as expected.
+\section{Analysis strategy}\label{hh4b_analysis_strategy}
+This section outlines the event selection and analysis strategy. A detailed description of reconstructed physical objects is given in chapter \ref{ch:reco}. Only events from a Good Runs List are chosen to ensure all detectors are operating as expected and to avoid events where for example the \ac{lhc} beam was not stable. This strategy builds upon a previous iteration of the same analysis, incorporating the latest advancements in object reconstruction available at the time of writing this thesis. Consequently there is an opportunity for further refinement of the event selection strategy which is beyond the scope of this current thesis.
 
 \subsection{Trigger}
 As outlined in section \ref{sec:tdaq} events need to be preselected. The \ac{hlt} applied in this analysis selects events with a large transverse energy $E_\text{T}$ large-$R$ jet. The definition slightly changed over the data taking years as can be seen in table \ref{tab:trigger}.
@@ -89,20 +89,18 @@ Previous studies have shown that they become fully efficient at about $\pt>\qty[
 % \end{figure}
 
 \subsection{Large Radius Jets}
-To fully capture the boosted Higgs pair topology two \ac{ufo} large $R=1.0$ jets are selected as described in section \ref{sec:jets}. These are designed to enclose the two boosted collimated $b$-jets in each of them to form the Higgs candidates. If there are several large-$R$ jets the two with the highest \pt are chosen. The large-$R$ jets are required to be within $200<p_{\text{T}}<3000$ GeV and $50<m<600$ GeV for which the calibration is valid
-
-\red{$|\eta|<2$, rel 21 did not do this one, even though they are saying it or it is applied somewhere else, because to capture also very boosted? i havent applied it either}.
+To fully capture the boosted Higgs pair topology two \ac{ufo} large $R=1.0$ jets are selected as described in section \ref{sec:jets}. These are designed to enclose the two boosted collimated $b$-jets in each of them to form the Higgs candidates. If there are several large-$R$ jets the two with the highest \pt are chosen. The large-$R$ jets are required to be within $200<p_{\text{T}}<2400$ GeV and $40<m<600$ GeV for which the calibration is valid.
 
 To be fully efficient on the trigger the leading large-$R$ jet is required to have $\pt>\qty[]{450}{GeV}$. For decay products to be inside a jet approximately $R\approx 2m/\pt$ holds with the mass $m$ and transverse momentum of the parent particle \citep{ATLAS-CONF-2020-022}. For a Higgs mass of \qty[]{125}{GeV} to be contained inside a large-$R$ jet the Higgs candidates therefore must have $\pt\gtrsim \qty[]{250}{GeV}$ and is thus chosen as the \pt requirement on the sub-leading Higgs candidate. If there are several large-$R$ jets the two leading \pt jets are selected. Additionally both Higgs candidates have a mass requirement $m>\qty[]{50}{GeV}$ to reduce \ac{qcd} background. The GN2X tagger described in \ref{sec:gn2x} is used to identify if a selected large-$R$ jet contains two $b$-jets. The top fraction $f_\text{top}(f_\text{Hcc})$ is set to 0.25(0.02) and the \qty[]{60}{\percent} Higgs efficiency \ac{wp} is required with a discriminant depending on the jet mass to avoid mass sculpting as mentioned in \ref{sec:gn2x}.
 
 
 \subsection{Small Radius Jets}
-Two small radius $R=0.4$ jets are required for the \ac{vbf} signature and are referred to as \ac{vbf} jets in the following. They are also reconstructed with the anti-$k_t$ algorithm and as \acp{pfo} as described in \ref{sec:jets}. The tight \ac{wp} for the \ac{jvt} and the LooseBad \ac{wp} for the event cleaning are applied both described in \ref{sec:calibration}. Small-$R$ jets $j$ are selected for $\pt>\qty[]{20}{GeV}$ and $|\eta|<4.5$ and are required to be outside of the Higgs candidate large-$R$ jets $J$ by imposing $\Delta R(J,j) > 1.4$. \red{Further cuts applied on the \ac{vbf} jet system optimized on significance are $|\Delta\eta(j,j)| > 3$ and $m_{jj} > \qty{1}{TeV}$. does neos actually go to zero on mjj}
+Two small radius $R=0.4$ jets are required for the \ac{vbf} signature and are referred to as \ac{vbf} jets in the following. They are also reconstructed with the anti-$k_t$ algorithm and as \acp{pfo} as described in \ref{sec:jets}. The tight \ac{wp} for the \ac{jvt} and the LooseBad \ac{wp} for the event cleaning are applied both described in \ref{sec:calibration}. Small-$R$ jets $j$ are selected for $\pt>\qty[]{20}{GeV}$ and $|\eta|<4.5$ and are required to be outside of the Higgs candidate large-$R$ jets $J$ by imposing $\Delta R(J,j) > 1.4$. \red{lets mention later that a previous analysis applied these in line with what one expects from a matrix calculation. Further cuts applied on the \ac{vbf} jet system optimized on significance are $|\Delta\eta(j,j)| > 3$ and $m_{jj} > \qty{1}{TeV}$. however if neos finds them to tight, some other cuts are probably too tight...}
 
 \subsection{Kinematic Regions}\label{sec:kinematic_regions}
 \ac{sr}, Validation Region (VR) and \ac{cr} are explored and optimized in previous analyses \citep{aad2023search,ATL-COM-PHYS-2023-033} in the $m_{H1},m_{H2}$ plane and are defined as
 \begin{equation}
-    SR=X_{hh} =  \sqrt{\left(\frac{m_{H1} - \SI{124}{\GeV}}{1500 / m_{H1}}\right)^{2} + \left(\frac{m_{H2} - \SI{117}{\GeV}}{1900 / m_{H2}}\right)^{2}} < 1.6,
+    SR =  \sqrt{\left(\frac{m_{H1} - \SI{124}{\GeV}}{1500 / m_{H1}}\right)^{2} + \left(\frac{m_{H2} - \SI{117}{\GeV}}{1900 / m_{H2}}\right)^{2}} < 1.6,
 \end{equation}
 \begin{equation}
     \label{VR_Xhh}
@@ -113,7 +111,7 @@ and
     \label{CR_Xhh}
     CR = \sqrt{\left(\frac{m_{H1} - \SI{124}{\GeV}}{0.1 \ln(m_{H1}/\text{GeV})}\right)^{2} + \left(\frac{m_{H2} - \SI{117}{\GeV}}{0.1 \ln(m_{H2}/\text{GeV})}\right)^{2}} > 100  \ \& \ < 170.
 \end{equation}
-Figure \ref{fig:m_hh_plane} depicts $m_{H1},m_{H2}$ planes for data and signal samples.
+Figure \ref{fig:m_hh_plane} depicts $m_{H1}-m_{H2}$ planes for data and signal samples.
 \begin{figure}
     \centering
     % \includegraphics[width=.7\textwidth]{m_hh_plane}
@@ -121,12 +119,13 @@ Figure \ref{fig:m_hh_plane} depicts $m_{H1},m_{H2}$ planes for data and signal s
     \subfigure[]{\includegraphics[width=.49\textwidth]{massplane_NOSYS.xbb_2_run2}}
     \subfigure[]{\includegraphics[width=.49\textwidth]{massplane_NOSYS.xbb_2_SM}}
     \subfigure[]{\includegraphics[width=.49\textwidth]{massplane_NOSYS.xbb_2_k2v0}}
-    \caption[]{ $m_{H1},m_{H2}$ planes for data with 1 and 2 GN2X tags, a \ac{sm} and $\ktwov$=0 signal sample with 2 GN2X tags. Defined kinematic regions are given as contours for \ac{cr},\ac{vr} and \ac{sr}.}
+    \caption[]{ $m_{H1}-m_{H2}$ planes for data with (a) 1 and (b) 2 GN2X tags, (c) a \ac{sm} and (d) $\ktwov$=0 signal sample with 2 GN2X tags. Defined kinematic regions are given as contours for \ac{cr}, \ac{vr} and \ac{sr}.}
     \label{fig:m_hh_plane}
 \end{figure}
 
 \subsection{Background Estimation}\label{sec:abcd}
-Since the final state of this analysis is hadronic it remains a challenging task to estimate the contributions from the plethora of \ac{qcd} processes that contribute to backgrounds via  misidentification of light quarks as heavy $(b, t)$-quarks. Therefore the well established ABCD method is employed to derive a data-driven background estimate \citep{buttinger2018background,PhysRevD.103.035021}. It is based on the idea to use two independent variables $f$ and $g$ to define four orthogonal regions A, B, C and D as illustrated in figure \ref{fig:abcd} that for some combination of the ratio of the event yields in the regions hold
+\red{how about showing in the analysis strategy section, a fully optimized tomatos cls 5, in neos chapter the fair comparison, redo all plots then here }
+Since the final state of this analysis is hadronic, it remains a challenging task to estimate the contributions from the plethora of \ac{qcd} processes that contribute to backgrounds via  misidentification of light quarks as heavy $(b, t)$-quarks. Therefore the well established ABCD method is employed to derive a data-driven background estimate \citep{buttinger2018background,PhysRevD.103.035021}. It is based on the idea to use two independent variables $f$ and $g$ to define four orthogonal regions A, B, C and D as illustrated in figure \ref{fig:abcd} that for some combination of the ratio of event yields in the regions hold
 \begin{equation}
     \frac{N_A}{N_B}=\frac{N_C}{N_D}.
 \end{equation}
@@ -139,25 +138,25 @@ Since the final state of this analysis is hadronic it remains a challenging task
 By rearranging the equation for the unknown $N_A$ an estimate for the background of the signal region can be derived from the other known quantities that lie in the regions dominated by the background. This approach relies on the assumption that the shape of the background in figure \ref{fig:abcd} does not vary greatly between C to D and A to B. Therefore the method must always be tested in a different region to determine its reliability.
 
 
-In this analysis the two orthogonal variables are defined via the amount of $X\rightarrow bb$ Higgs tagged large-$R$ jets denoted as Xbb and the kinematic regions of the \ac{sr} and \ac{cr} defined in \ref{sec:kinematic_regions}.
+In this analysis the two orthogonal variables are defined via the amount of $X\rightarrow bb$ Higgs tagged large-$R$ jets denoted as GN2X and the kinematic regions of the \ac{sr} and \ac{cr} defined in \ref{sec:kinematic_regions}.
 \begin{table}[htbp]
     \centering
     \caption{Four orthogonal region definitions for the ABCD method}
     \begin{tabular}{|c|c|}
         \hline
-        2 Xbb in CR & 2 Xbb in SR \\ \hline
-        1 Xbb in CR & 1 Xbb in SR \\ \hline
+        2 GN2X in CR & 2 GN2X in SR \\ \hline
+        1 GN2X in CR & 1 GN2X in SR \\ \hline
     \end{tabular}
     \label{tab:abcd}
 \end{table}
 This gives the four orthogonal regions shown in table \ref{tab:abcd}. Hence, the background in the \ac{sr} is estimated with a weight extracted from the \ac{cr}
 \begin{equation}
-    N_\text{SR}^\text{2Xbb}=\frac{N_\text{CR}^\text{2Xbb}}{N_\text{CR}^\text{1Xbb}} N_\text{SR}^\text{1Xbb} = w_\text{CR} N_\text{SR}^\text{1Xbb}=  \red{(0.0039 \pm 0.0002)} \times N_\text{SR}^\text{1Xbb}.
+    N_\text{SR}^\text{2 GN2X}=\frac{N_\text{CR}^\text{2 GN2X}}{N_\text{CR}^\text{1 GN2X}} N_\text{SR}^\text{1 GN2X} = w_\text{CR} N_\text{SR}^\text{1 GN2X}=  \red{(0.0039 \pm 0.0002)} \times N_\text{SR}^\text{1 GN2X}.
 \end{equation}
 
 
 \subsection{Event Classification}
-After the selection of events, a deep feed-forward neural network is employed to construct a histogram suitable for a statistical test of significance. This neural network's training utilizes a novel approach \textsc{neos}, which is thoroughly discussed in Chapter \ref{sec:neos} and optimizes on the $CL_s$ quantity detailed in section \ref{sec:statistics}. Inputs to the neural network include 20 features, which are the four vector components ($\pt,\eta,\phi,m$) of the Higgs boson pair system, the four vector components of the individual Higgs candidates, the two \ac{vbf} jets and the leading score of the GN2X tagger. The \ac{nn} needs to be applicable across all samples, therefore only one GN2X score is incorporated, as the background estimation relies on a single GN2X tag.
+After the selection of events, a deep feed-forward neural network is employed to construct a histogram suitable for a statistical test of significance. This neural network's training utilizes a novel approach \textsc{neos}, which is thoroughly discussed in Chapter \ref{sec:neos} and optimizes on the $CL_s$ quantity detailed in section \ref{sec:statistics}. Inputs to the neural network include 21 features, which are the four vector components ($\pt,\eta,\phi,m$) of: the Higgs boson pair system, the individual Higgs candidates and the two \ac{vbf} jets. In addition the leading score of the GN2X tagger is used. The \ac{nn} needs to be applicable across all samples, therefore only the leading GN2X score is incorporated, as the background estimation relies on a single GN2X tag.
 
 The network's architecture features three fully connected layers, each comprising 100 nodes, and concludes with a singular output node. The hidden layers are followed by a rectified linear unit activation function whereas the output node employs a sigmoid activation for classification. The architecture is thus defined as [21,100,100,100,1], indicating the sequence of layers from input to output. Figure \ref{fig:nominal-hist} displays the nominal expected histogram for this analysis
 
@@ -169,21 +168,14 @@ The network's architecture features three fully connected layers, each comprisin
 \end{figure}
 
 \subsection{ABCD method validation}
-The ABCD method is validated in the \ac{vr} within statistical uncertainties as displayed in figure \ref{fig:bkg-validation}. \red{decide for w or w vec}
+The ABCD method is validated in the \ac{vr} within statistical uncertainties as displayed in figure \ref{fig:bkg-validation}. \red{decide for w or w vec [0,1,{2,3,4}]}
 \begin{figure}
     \centering
-    \includegraphics[width=0.7\textwidth]{tomatos_cls_5_NOSYS.VR_xbb_2_compareABCD_weight}
-    \caption[]{The background estimated in the \ac{vr} from data with 1 GN2X tag, agrees with data in the \ac{vr} with 2 GN2X tags within statistical uncertainties.}
+    \includegraphics[width=0.7\textwidth]{tomatos_cls_5_NOSYS.VR_xbb_2_compareABCD}
+    \caption[]{\red{The background estimated in the \ac{vr} from data with 1 GN2X tag, agrees with data in the \ac{vr} with 2 GN2X tags within statistical uncertainties.}}
     \label{fig:bkg-validation}
 \end{figure}
 
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.7\textwidth]{tomatos_cls_5_NOSYS.VR_xbb_2_compareABCD_weight_vector}
-    \caption[]{The background estimated in the \ac{vr} from data with 1 GN2X tag, agrees with data in the \ac{vr} with 2 GN2X tags within statistical uncertainties.}
-    \label{fig:bkg-validation}
-\end{figure}
 
 \section{Linear combination of signal hypotheses}\label{sec:linear_combination}
 \newcommand{\kl}{\kappa_\lambda}
@@ -192,24 +184,24 @@ The ABCD method is validated in the \ac{vr} within statistical uncertainties as 
 \newcommand{\kv}{\kappa_\text{V}}
 \newcommand{\mhh}{m_\text{HH}}
 
-This analysis is interested in constraining the couplings $\kappa_\text{V},\kappa_\lambda,\kappa_\text{2V}$ associated to the \ac{vbf} processes shown in figure \ref{fig:main_production_processes}. As computing resources are limited and MC generation is unfortunately computationally expensive only a few hypothesis are simulated. However by exploiting the properties of the differential cross-sectional calculation, samples of any hypothesized coupling value can be created through linear combination of samples \citep{ATLAS-CONF-2019-049}. Considering the \ac{vbf} diagrams subscripted as (1,2,3) with couplings $\kl$, $\kv$ and \ktwov the differential (per bin) cross-section of a kinematic variable $x$, e.g. the invariant mass of the Higgs pair system can be rewritten as
+This analysis is interested in constraining the couplings $\kappa_\text{V},\kappa_\lambda,\kappa_\text{2V}$ associated to the \ac{vbf} processes shown in figure \ref{fig:main_production_processes}. As computing resources are limited and MC generation is unfortunately computationally expensive only a few hypothesis are simulated. However by exploiting the properties of the differential cross-sectional calculation, samples of any hypothesized coupling value can be created through linear combination of samples \citep{ATLAS-CONF-2019-049}. Considering the \ac{vbf} diagrams subscripted as (1,2,3) with couplings $\kl$, $\kv$ and \ktwov the differential (per bin) cross-section of a kinematic variable $x$, which can be e.g. the invariant mass of the Higgs pair system, can be rewritten as
 \begin{align}
     \label{eqn:xsec_vbf}
     \frac{\mathrm{d}\sigma(\kvv, \kv, \kl )}{\mathrm{d} x } = &
-    \left| A(\kvv, \kv, \kl ) \right|^2                                                                                               \\
+    \left| A(\kvv, \kv, \kl ) \right|^2                                                                                               \\ \nonumber
     =                                                         & \left| \kv \kl M_1(x    ) + \kvv M_2(x  ) + \kv^2 M_3(x   ) \right|^2 \\ \nonumber
     =                                                         & \abs{M_1}^2 \kl^2 \kv^2  + 2 \mathcal{R}(M_{1}^* M_{2})  \kvv \kl \kv \\ \nonumber
                                                               & + 2 \mathcal{R}(M_{1}^* M_{3}) \kl \kv^3 + \abs{M_2}^2  \kvv^2        \\ \nonumber
                                                               & + 2 \mathcal{R}(M_{2}^* M_{3}) \kvv \kv^2 + \abs{M_3}^2 \kv^4.
 \end{align}
 The amplitude prefactors $M_i$ in front of the couplings depend non-trivially on $x$. However
-rewriting equation \ref{eqn:xsec_vbf}
+rewriting equation \ref{eqn:xsec_vbf} by grouping the prefactors into $a_i$
 \begin{align}\label{eq:reweight}
     \frac{\mathrm{d}\sigma(\kvv, \kv, \kl )}{\mathrm{d} x}
     = \; & a_1 \kl^2 \kv^2  + 2 a_2 \kvv \kl \kv  + 2 a_3 \kl \kv^3  \\
          & + a_4 \kvv^2     + 2 a_5 \kvv \kv^2 + a_6\kv^4, \nonumber
 \end{align}
-gives a dependence on the couplings alone if the resulting system of equations depending on $a_i$ is solved for six solutions to this equation. Thus $\frac{\mathrm{d}\sigma}{\mathrm{d} x } $ as a function of $(\kvv, \kv, \kl )$ allows to deduce the cross-section for a desired hypothesis. Table \ref*{tab:vbf_hh_6term_varlist} shows the list of samples used for the derivation.
+the equation depends on the couplings and the six prefactors. Thus plugging in six solutions of a bin content in the variable $x$ by solving this system of equations the function can be reduced to be solely dependent on $(\kvv, \kv, \kl )$ to deduce the cross-section for a desired hypothesis. Table \ref*{tab:vbf_hh_6term_varlist} shows the list of samples used for the derivation.
 \begin{table}
     \centering
     \caption{6-Term VBF Combination Sample Variations}
@@ -234,14 +226,15 @@ The approach is employed bin-wise as the extraction factors deviate substantiall
     \caption[]{Extracted reweighting factors per bin for equation \ref{eq:reweight}.}
     \label{fig:linear_combine_bin_solutions}
 \end{figure}
-The method is validated with a mc generated $\ktwov=0$ sample. Figure \ref{fig:tomatos_cls_5_nominal_reweighted_ratio} reveals a $\sim$\qty[]{5}{\percent} deviation for this approach. \red{should one introduce a very conservative shape uncertainty because of that? the behavior across all values however is unclear with just one validation sample, maybe something for the outlook.}
+The method is validated with the mc generated $\ktwov=0$ sample. Figure \ref{fig:tomatos_cls_5_nominal_reweighted_ratio} reveals a $\sim$\qty[]{5}{\percent} deviation for this approach. \red{should one introduce a very conservative shape uncertainty because of that? the behavior across all values however is unclear with just one validation sample, maybe something for the outlook.}
+\red{also mention here, bad choice for a k2v scan, but thats what was available, or rather in discussion? }
 \begin{figure}
     \centering
     \includegraphics[width=.6\textwidth]{tomatos_cls_5_nominal_reweighted_ratio}
-    \caption[]{Comparison between a \ac{mc}-generated $\ktwov=0$ signal sample and a signal sample created with the reweighting approach by linearly combining different \ktwov hypotheses. \red{whats with the mc stat error, after rewewighting mc stat error definition becomes useless...}}
+    \caption[]{Comparison between a \ac{mc}-generated $\ktwov=0$ signal sample and a signal sample created with the reweighting approach by linearly combining different \ktwov hypotheses. \red{whats with the mc stat error, after rewewighting mc stat error definition becomes useless... error propagation of the stat uncertainties from the different samples }}
     \label{fig:tomatos_cls_5_nominal_reweighted_ratio}
 \end{figure}
-
+ 
 
 % , another one would be 
 % l0cvv1cv1, however why validating for kl if we scan k2v, I don't think this validation is worth anything in a phase space we are not testing on.
