@@ -61,7 +61,7 @@ In a second step the parton shower evolution including hadronization and initial
 
 In a final step the detector response of simulated final state particles is simulated with \textsc{Geant}4 \citep{Agostinelli:2002hh}. It models the detector geometry, the particle's path through the magnetic fields and the particle interactions with the detector material, potentially producing new particles or decays. The output of this step are energy deposits in the various subdetectors of \ac{atlas}. Subsequently these are passed on to a process known as digitization which models the readout electronics. The result of this is raw data being no different from that read out in the actual experiment.
 
-\section{Analysis strategy}\label{hh4b_analysis_strategy}
+\section{Analysis strategy}\label{sec:hh4b_analysis_strategy}
 This section outlines the event selection and analysis strategy. A detailed description of reconstructed physical objects is given in chapter \ref{ch:reco}. Only events from a Good Runs List are chosen to ensure all detectors are operating as expected and to avoid events where for example the \ac{lhc} beam was not stable. This strategy builds upon a previous iteration of the same analysis, incorporating the latest advancements in object reconstruction available at the time of writing this thesis. Consequently there is an opportunity for further refinement of the event selection strategy which is beyond the scope of this current thesis.
 
 \subsection{Trigger}
@@ -95,7 +95,7 @@ To be fully efficient on the trigger the leading large-$R$ jet is required to ha
 
 
 \subsection{Small Radius Jets}
-Two small radius $R=0.4$ jets are required for the \ac{vbf} signature and are referred to as \ac{vbf} jets in the following. They are also reconstructed with the anti-$k_t$ algorithm and as \acp{pfo} as described in \ref{sec:jets}. The tight \ac{wp} for the \ac{jvt} and the LooseBad \ac{wp} for the event cleaning are applied both described in \ref{sec:calibration}. Small-$R$ jets $j$ are selected for $\pt>\qty[]{20}{GeV}$ and $|\eta|<4.5$ and are required to be outside of the Higgs candidate large-$R$ jets $J$ by imposing $\Delta R(J,j) > 1.4$. \red{lets mention later that a previous analysis applied these in line with what one expects from a matrix calculation. Further cuts applied on the \ac{vbf} jet system optimized on significance are $|\Delta\eta(j,j)| > 3$ and $m_{jj} > \qty{1}{TeV}$. however if neos finds them to tight, some other cuts are probably too tight...}
+Two small radius $R=0.4$ jets are required for the \ac{vbf} signature and are referred to as \ac{vbf} jets in the following. They are also reconstructed with the anti-$k_t$ algorithm and as \acp{pfo} as described in \ref{sec:jets}. The tight \ac{wp} for the \ac{jvt} and the LooseBad \ac{wp} for the event cleaning are applied both described in \ref{sec:calibration}. Small-$R$ jets $j$ are selected for $\pt>\qty[]{20}{GeV}$ and $|\eta|<4.5$ and are required to be outside of the Higgs candidate large-$R$ jets $J$ by imposing $\Delta R(J,j) > 1.4$. It can be shown pthat the vbf jets tend to have a large invariant mass of the (\ac{vbf} jet 1, \ac{vbf} jet 2) - system and a large pseudorapidity difference $|\Delta\eta(j,j)|$ \citep{rauch2016vectorboson}. Thus in typical $HH\rightarrow 4b$ \ac{vbf} analyses cuts are applied on these quantities. However this analysis explores an automated optimization on these cuts as will be discussed in chapter \ref{sec:analysis_optimization}.
 
 \subsection{Kinematic Regions}\label{sec:kinematic_regions}
 \ac{sr}, Validation Region (VR) and \ac{cr} are explored and optimized in previous analyses \citep{aad2023search,ATL-COM-PHYS-2023-033} in the $m_{H1},m_{H2}$ plane and are defined as
@@ -178,11 +178,6 @@ The ABCD method is validated in the \ac{vr} within statistical uncertainties as 
 
 
 \section{Linear combination of signal hypotheses}\label{sec:linear_combination}
-\newcommand{\kl}{\kappa_\lambda}
-\newcommand{\kt}{\kappa_t}
-\newcommand{\kvv}{\kappa_\text{2V}}
-\newcommand{\kv}{\kappa_\text{V}}
-\newcommand{\mhh}{m_\text{HH}}
 
 This analysis is interested in constraining the couplings $\kappa_\text{V},\kappa_\lambda,\kappa_\text{2V}$ associated to the \ac{vbf} processes shown in figure \ref{fig:main_production_processes}. As computing resources are limited and MC generation is unfortunately computationally expensive only a few hypothesis are simulated. However by exploiting the properties of the differential cross-sectional calculation, samples of any hypothesized coupling value can be created through linear combination of samples \citep{ATLAS-CONF-2019-049}. Considering the \ac{vbf} diagrams subscripted as (1,2,3) with couplings $\kl$, $\kv$ and \ktwov the differential (per bin) cross-section of a kinematic variable $x$, which can be e.g. the invariant mass of the Higgs pair system, can be rewritten as
 \begin{align}
@@ -234,7 +229,7 @@ The method is validated with the mc generated $\ktwov=0$ sample. Figure \ref{fig
     \caption[]{Comparison between a \ac{mc}-generated $\ktwov=0$ signal sample and a signal sample created with the reweighting approach by linearly combining different \ktwov hypotheses. \red{whats with the mc stat error, after rewewighting mc stat error definition becomes useless... error propagation of the stat uncertainties from the different samples }}
     \label{fig:tomatos_cls_5_nominal_reweighted_ratio}
 \end{figure}
- 
+
 
 % , another one would be 
 % l0cvv1cv1, however why validating for kl if we scan k2v, I don't think this validation is worth anything in a phase space we are not testing on.

@@ -50,46 +50,65 @@ While all steps except histogramming are inherently differentiable, histogrammin
 \end{figure}
 
 
+
+\subsection{Implementation}
+Tracing differentiation through software is achievable by recognizing that any software essentially comprises a series of elementary arithmetic operations. Since the analytic solutions for these operations are known, the task reduces to concatenating all these operations and differentiating the resulting function. This is also known as \textit{Automatic Differentiation} and is achieved here with the help of the software package \textsc{jax} \citep{jax2018github}.
+
+While the concept may appear straightforward, one of the challenges that previously hindered its implementation is the difficulty of differentiating across multiple individual software frameworks. That this became feasible within a reasonable time frame builds greatly on the transition efforts  of the individual steps to the \textsc{Python} programming language, moving away from C++ \textsc{ROOT}-based software \citep{ANTCHEVA20092499}. While \textsc{root} was indispensable at its time of emergence it is now less optimal for contemporary scientific analysis. This is because \textsc{Python} is much more user friendly and solutions are maintained by a broad scientific community doing data-analysis. This presents in this context a notable advantage since it benefits from pre-existing solutions to many common problems, enabling the use of tools like \textsc{jax}, which are not originally connected to \ac{hep}.
+
+The original proposers \citet{Simpson_2023} of \ac{neos} developed differentiable versions of common \ac{hep} tasks like the upper mentioned hypothesis test, histogramming and the optimization of a cut in a packaged called \textsc{relaxed} \citep{Simpson_relaxed_version_0_3_0_2023}. They successfully tested the entire pipeline in a toy model \citep{Simpson_neos_version_0_2_0_2021}. For this thesis these efforts were further developed within a framework called TOMATOS - auTOMATed Optimization of Sensitivity \citep{tomatos}.
+
+
+
 \section{Training}
-In order to build the statistical model each histogram entering it needs to be created during training. This requires a full dataset per sample (signal, background estimate, some systematic, etc.) being processed through the whole pipeline. To make use of all available data and to avoid a training class imbalance bias each sample is upscaled by replicating values to the sample with the largest event content. Table \ref{tab:neos-samples} gives an overview of used samples in the training and the input variables per sample are shown in figure \ref{fig:tomats_inputs_0} and \ref{fig:tomats_inputs_1}. They are chosen from an impact ranking on a \mhh fit from fig. \red{fig reference}.
+In order to build the statistical model each histogram entering it needs to be created during training. This requires a full dataset per sample (signal, background estimate, some systematic, etc.) being processed through the whole pipeline as of figure \ref{fig:neos}.
 
+\acp{nn} tend to learn from more frequently observed data. Thus to make use of all available data and to avoid a training class imbalance each sample is upscaled by replicating values to the sample with the largest event content, which in this case is a sample with the systematic: `JET EtaIntercalibration NonClosure PreRec up' as result of a slightly increased selection efficiency if $\eta$ is varied upwards. This needs to be accounted with a scale-factor $n_\text{sample}/n_\text{max}$ in the weights to not artificially change the counting in the histograms.
 
-To ensure a fair training between features and to not let features with large values dominate the learning process a min-max scaling is applied to the input dataset
+Table \ref{tab:neos-samples} gives an overview of used samples and the number of events they contain. They are chosen from an impact ranking on a \mhh fit as of fig. \red{fig reference}. The table also reveals that the background estimate is upscaled by a factor of $\sim 2$. Input variables per sample are shown in figure \ref{fig:tomats_inputs_0} and \ref{fig:tomats_inputs_1}. To ensure a fair training between features and to not let features with large values dominate the learning process a min-max scaling is applied to the inputs
 \begin{equation}
-    x'=\frac{x - \text{min}(x)}{\text{max}(x)-\text{min}(x)}.
+    x'=\frac{x - \text{min}(x)}{\text{max}(x)-\text{min}(x)},
 \end{equation}
+scaling them between 0 and 1. \qty[]{90}{\percent} of events in the dataset are used for training (39713 events), whereas the other \qty[]{10}{\percent} are again split into a \qty[]{80}{\percent} validation sample (3530 events) and \qty[]{20}{\percent} test sample (883 events). In addition four samples are processed through the pipeline to estimate the background with the ABCD method described in \ref{sec:abcd}. The transfer factor and its uncertainty is estimated from the \ac{cr} and a shape uncertainty is estimated in the \ac{vr}. Event numbers are also shown in table \ref{tab:neos-samples}. Per training epoch, which corresponds to a full processing of the dataset, data are reshuffled.
+
+The optimization also optimizes cuts on the invariant mass $m_{jj}$ and the pseudorapidity difference $|\Delta\eta(j,j)|$ of the two \ac{vbf} jets as mentioned in \ref{sec:hh4b_analysis_strategy}. Cutting on a value can be viewed mathematically by multiplying the to be cutted value with a Heaviside function that is shifted by the cut value. As differentiable approximation a sigmoid function is used which is then multiplied to the event weights.
+
+Only uncertainties that impact the fit are used to speed up the training process. Uncertainties are are detailed in chapter \ref{sec:systematics}. The uncertainties used in the optimization comprise the 4 $b$-quark branching ratio normalization, the statistical error on the ABCD method transfer factor extraction and the shape uncertainty associated to this method, the four estimated $p_T$ binned uncertainties of the GN2X tagger, the envelope of the scale variations, the statistical errors on the \ktwov signal sample and the background estimate and two $\eta$ small-$R$ jet uncertainties.
+
+
+
 
 \begin{table}[]
     \centering
-    \caption{Samples and available number of events after the selection described in section \ref{hh4b_analysis_strategy} used in the training. Systematics are described in \ref{sec:systematics}. Deviations }
-    \begin{tabular}{cc}
+    \caption{Samples and available number of events after the selection described in section \ref{sec:hh4b_analysis_strategy} used in the training. Systematics are described in \ref{sec:systematics}. Deviations }
+    \begin{tabular}{lr}
         \hline
-        Sample                                                                                         & Events \\ \hline 
-        Data Background Estimate                                                                       & 21913   \\ \hline
-        VBF Signal $\kappa_\mathrm{2V}=0$ Nominal                                                      & 43492  \\
-        VBF Signal $\kappa_\mathrm{2V}=0$ systematic: GN2X pt bin 0 up                                 & 43492  \\
-        VBF Signal $\kappa_\mathrm{2V}=0$ systematic: GN2X pt bin 0 down                               & 43492  \\
-        VBF Signal $\kappa_\mathrm{2V}=0$ systematic: GN2X pt bin 1 up                                 & 43492  \\
-        VBF Signal $\kappa_\mathrm{2V}=0$ systematic: GN2X pt bin 1 down                               & 43492  \\
-        VBF Signal $\kappa_\mathrm{2V}=0$ systematic: GN2X pt bin 2 up                                 & 43492  \\
-        VBF Signal $\kappa_\mathrm{2V}=0$ systematic: GN2X pt bin 2 down                               & 43492  \\
-        VBF Signal $\kappa_\mathrm{2V}=0$ systematic: GN2X pt bin 3 up                                 & 43492  \\
-        VBF Signal $\kappa_\mathrm{2V}=0$ systematic: GN2X pt bin 3 down                               & 43492  \\
-        VBF Signal $\kappa_\mathrm{2V}=0$ systematic: JET EtaIntercalibration NonClosure PreRec up     & 44126  \\
-        VBF Signal $\kappa_\mathrm{2V}=0$ systematic: JET EtaIntercalibration NonClosure PreRec down   & 42737  \\
-        VBF Signal $\kappa_\mathrm{2V}=0$ systematic: JET EtaIntercalibration Modelling up             & 43917  \\
-        VBF Signal $\kappa_\mathrm{2V}=0$ systematic: JET EtaIntercalibration Modelling down           & 42984  \\
-        VBF Signal $\kappa_\mathrm{2V}=0$ systematic: Scale Variation $\mu_R = 0.5, \mu_F=0.5$         & 43492  \\
-        VBF Signal $\kappa_\mathrm{2V}=0$ systematic: Scale Variation $\mu_R = 0.5, \mu_F=1.0$         & 43492  \\
-        VBF Signal $\kappa_\mathrm{2V}=0$ systematic: Scale Variation $\mu_R = 1.0, \mu_F=0.5$         & 43492  \\
-        VBF Signal $\kappa_\mathrm{2V}=0$ systematic: Scale Variation $\mu_R = 1.0, \mu_F=1.0$         & 43492  \\
-        VBF Signal $\kappa_\mathrm{2V}=0$ systematic: Scale Variation $\mu_R = 1.0, \mu_F=2.0$         & 43492  \\
-        VBF Signal $\kappa_\mathrm{2V}=0$ systematic: Scale Variation $\mu_R = 2.0, \mu_F=1.0$         & 43492  \\
-        VBF Signal $\kappa_\mathrm{2V}=0$ systematic:         Scale Variation $\mu_R = 2.0, \mu_F=2.0$ & 43492  \\ \hline
-        VBF Signal $\kappa_\mathrm{2V}=0$ \ac{cr} GN2X tags: 1                                         & 142443 \\
-        VBF Signal $\kappa_\mathrm{2V}=0$ \ac{cr} GN2X tags: 2                                         & 544    \\
-        VBF Signal $\kappa_\mathrm{2V}=0$ \ac{vr} GN2X tags: 1                                         & 57098  \\
-        VBF Signal $\kappa_\mathrm{2V}=0$ \ac{vr} GN2X tags: 2                                         & 243    \\
+        Sample (Systematic)                                                            & Events \\ \hline \hline
+        Data Background Estimate                                                       & 21913  \\ \hline
+        Signal $\kappa_\mathrm{2V}=0$ (Nominal)                                        & 43492  \\
+        Signal $\kappa_\mathrm{2V}=0$ (GN2X pt bin 0 up)                               & 43492  \\
+        Signal $\kappa_\mathrm{2V}=0$ (GN2X pt bin 0 down)                             & 43492  \\
+        Signal $\kappa_\mathrm{2V}=0$ (GN2X pt bin 1 up)                               & 43492  \\
+        Signal $\kappa_\mathrm{2V}=0$ (GN2X pt bin 1 down)                             & 43492  \\
+        Signal $\kappa_\mathrm{2V}=0$ (GN2X pt bin 2 up)                               & 43492  \\
+        Signal $\kappa_\mathrm{2V}=0$ (GN2X pt bin 2 down)                             & 43492  \\
+        Signal $\kappa_\mathrm{2V}=0$ (GN2X pt bin 3 up)                               & 43492  \\
+        Signal $\kappa_\mathrm{2V}=0$ (GN2X pt bin 3 down)                             & 43492  \\
+        Signal $\kappa_\mathrm{2V}=0$ (JET EtaIntercalibration NonClosure PreRec up)   & 44126  \\
+        Signal $\kappa_\mathrm{2V}=0$ (JET EtaIntercalibration NonClosure PreRec down) & 42737  \\
+        Signal $\kappa_\mathrm{2V}=0$ (JET EtaIntercalibration Modelling up)           & 43917  \\
+        Signal $\kappa_\mathrm{2V}=0$ (JET EtaIntercalibration Modelling down)         & 42984  \\
+        Signal $\kappa_\mathrm{2V}=0$ (Scale Variation $\mu_R = 0.5, \mu_F=0.5)$       & 43492  \\
+        Signal $\kappa_\mathrm{2V}=0$ (Scale Variation $\mu_R = 0.5, \mu_F=1.0)$       & 43492  \\
+        Signal $\kappa_\mathrm{2V}=0$ (Scale Variation $\mu_R = 1.0, \mu_F=0.5)$       & 43492  \\
+        Signal $\kappa_\mathrm{2V}=0$ (Scale Variation $\mu_R = 1.0, \mu_F=1.0)$       & 43492  \\
+        Signal $\kappa_\mathrm{2V}=0$ (Scale Variation $\mu_R = 1.0, \mu_F=2.0)$       & 43492  \\
+        Signal $\kappa_\mathrm{2V}=0$ (Scale Variation $\mu_R = 2.0, \mu_F=1.0)$       & 43492  \\
+        Signal $\kappa_\mathrm{2V}=0$ (Scale Variation $\mu_R = 2.0, \mu_F=2.0$)       & 43492  \\ \hline
+        Signal $\kappa_\mathrm{2V}=0$ (\ac{cr}, GN2X tags: 1)                          & 142443 \\
+        Signal $\kappa_\mathrm{2V}=0$ (\ac{cr}, GN2X tags: 2)                          & 544    \\
+        Signal $\kappa_\mathrm{2V}=0$ (\ac{vr}, GN2X tags: 1)                          & 57098  \\
+        Signal $\kappa_\mathrm{2V}=0$ (\ac{vr}, GN2X tags: 2)                          & 243    \\
     \end{tabular}
     \label{tab:neos-samples}
 \end{table}
@@ -98,8 +117,8 @@ To ensure a fair training between features and to not let features with large va
 \begin{figure}
     \centering
     \includegraphics[width=1\textwidth]{tomats_inputs_0}
-        \caption[]{Neos input variables (1/2)}
-    \label{fig:tomats_inputs_0}    
+    \caption[]{Neos input variables (1/2): The coloums from left to right corresponds to the four vectors of the leading Higgs candidate, the subleading Higgs candidate and the Higgs Pair system. A legend valid for all figures is shown in the upper right figure.}
+    \label{fig:tomats_inputs_0}
 \end{figure}
 
 
@@ -107,114 +126,6 @@ To ensure a fair training between features and to not let features with large va
 \begin{figure}
     \centering
     \includegraphics[width=1\textwidth]{tomats_inputs_1}
-        \caption[]{Neos input variables (2/2)}
-    \label{fig:tomats_inputs_1}    
+    \caption[]{Neos input variables (2/2): Columns from left to right: Four vectors of the two vbf jets and the leading GN2X score in the event is depicted above the legend.}
+    \label{fig:tomats_inputs_1}
 \end{figure}
-
-
-
-
-
-% preprocess
-min max scaled
-
-run2 sr_xbb1
-22111
-k2v0 sr_xbb2
-NOSYS
-43518
-JET_EtaIntercalibration_NonClosure_PreRec__1up
-44152
-
-bkg upscaled with a factor of ~2
-
-
-everythign is upscaled to the largest array
-JET_EtaIntercalibration_NonClosure_PreRec__1up
-
-
-in order for the batching mechanism to work
-signal samples upscaled due to slight variations in the selection caused by some systematic uncertainty the largest sample size
-
-
-send each systematics dataset through nn
-
-#train test split
-
-% _m_jj_eta_jj does not help during training, maybe only if cuts are offf????
-
-% 5 bins 
-% self.vars = [
-%     "pt_j1",
-%     "eta_j1",
-%     "phi_j1",
-%     "E_j1",
-%     "pt_j2",
-%     "eta_j2",
-%     "phi_j2",
-%     "E_j2",
-%     "pt_h1",
-%     "eta_h1",
-%     "phi_h1",
-%     "m_h1",
-%     "pt_h2",
-%     "eta_h2",
-%     "phi_h2",
-%     "m_h2",
-%     "pt_hh",
-%     "eta_hh",
-%     "phi_hh",
-%     "m_hh",
-%     "lead_xbb_score",
-%     "m_jj",
-%     "eta_jj",
-% ]
-% self.systematics = [
-%     "NOSYS",
-%     "xbb_pt_bin_0__1up",
-%     "xbb_pt_bin_0__1down",
-%     "xbb_pt_bin_1__1up",
-%     "xbb_pt_bin_1__1down",
-%     "xbb_pt_bin_2__1up",
-%     "xbb_pt_bin_2__1down",
-%     "xbb_pt_bin_3__1up",
-%     "xbb_pt_bin_3__1down",
-%     "JET_EtaIntercalibration_NonClosure_PreRec__1up",
-%     "JET_EtaIntercalibration_Modelling__1up",
-%     "JET_EtaIntercalibration_NonClosure_PreRec__1down",
-%     "JET_EtaIntercalibration_Modelling__1down",
-%     "GEN_MUR05_MUF05_PDF260000",
-%     "GEN_MUR05_MUF10_PDF260000",
-%     "GEN_MUR10_MUF05_PDF260000",
-%     "GEN_MUR10_MUF10_PDF260000",
-%     "GEN_MUR10_MUF20_PDF260000",
-%     "GEN_MUR20_MUF10_PDF260000",
-%     "GEN_MUR20_MUF20_PDF260000",
-%     stat error
-% ]
-
-\red{is saved and loaded in selection}
-
-\section{Performance}
-\red{in results part}
-
-\subsection{Implementation}
-Tracing differentiation through software is achievable by recognizing that any software essentially comprises a series of elementary arithmetic operations. Since the analytic solutions for these operations are known, the task reduces to concatenating all these operations and differentiating the resulting function. This is also known as \textit{Automatic Differentiation} and is achieved here with the help of the software package \textsc{jax} \citep{jax2018github}.
-
-While the concept may appear straightforward, one of the challenges that previously hindered its implementation is the difficulty of differentiating across multiple individual software frameworks.That this became feasible within a reasonable time frame builds greatly on the transition efforts  of the individual steps to the \textsc{Python} programming language, moving away from C++ \textsc{ROOT}-based software \citep{ANTCHEVA20092499}. While \textsc{root} was indispensable at its time of emergence it is now less optimal for contemporary scientific analysis. This is because it is not only more difficult to integrate within other current software but also due to its user-unfriendliness compared to \textsc{Python} solutions which are maintained by a broad scientific community doing data-analysis. Using \textsc{python} in this context presents a notable advantage since it benefits from widespread community support and pre-existing solutions to many common problems, enabling the use of tools like \textsc{jax}, which are not originally connected to \ac{hep}.
-
-The original proposers \citet{Simpson_2023} of \ac{neos} developed differentiable versions of common \ac{hep} tasks like the upper mentioned hypothesis test, histogramming and the optimization of a cut in a packaged called \textsc{relaxed} \citep{Simpson_relaxed_version_0_3_0_2023}. They successfully tested the entire pipeline in a toy model \citep{Simpson_neos_version_0_2_0_2021}. These efforts were transferred and further developed to be applicable to this analysis with \citep{hh_neos}.
-
-
-\red{ this somewhere here, or outlook?
-    stack several neural networks together!!! end to end training
-    one for pairing, event selection
-    stack arbitrarily
-    selling point ist binning ist optimiert, auch mit fixen bins
-}
-
-\red{
-    welche unsicherheiten wurden für training benutzt
-    tight starting condition, also stabilizes/increase training convergence, but local minimum?
-    optimization turns cuts off entirely
-}
