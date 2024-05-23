@@ -334,13 +334,13 @@ So far the \ac{ew} Lagrangian made of the fermions and gauge part describes mass
 % $\overline{e}_R$ is a $SU(2)$ singlet and $e_L$ is one component of a $SU(2)$ doublet and therefore such a term is not gauge invariant. 
 
 
-\section{Higgs mechanism}\label{sec:higgs_mechanism}
+\section{Higgs Mechanism}\label{sec:higgs_mechanism}
 
 In the previous sections, it was shown that the principle of local gauge invariance applied to the free Dirac Lagrangian can generate all the dynamics for a given interaction. However, this assumes that the accompanying gauge boson vector fields are massless, which is not the case for the weak interactions. The Higgs mechanism adds a field to the Lagrangian that provides mass terms for the vector bosons and fermions while preserving the principle of local gauge invariance. A way to implement this for a $U(1)$ symmetry is to consider two scalar fields $\phi_1$ and $\phi_2$ and combine them into a complex scalar field
 \begin{equation}
-    \phi (x)=\frac{1}{\sqrt{2}}(\phi_1(x)+i\phi_2(x)),
+    \phi (x)=\frac{1}{\sqrt{2}}(\phi_1(x)+i\phi_2(x)).
 \end{equation}
-used in a Lagrangian with a kinetic term $T(\phi)$ and a potential $V(\phi)$ with parameters $\mu$ and $\lambda$
+A Lagrangian with a kinetic term $T(\phi)$ and a potential $V(\phi)$ with parameters $\mu$ and $\lambda$ can then be written as
 \begin{equation}
     \mathcal{L}=T(\phi)-V(\phi)=
     \left[\left(\partial_\mu\phi\right)^* (\partial^\mu\phi)\right]
@@ -354,7 +354,7 @@ This Lagrangian can be made locally gauge invariant under a $U(1)$ symmetry by f
 \end{equation}
 The transformations for the scalar and gauge fields are given as
 \begin{align}
-    \phi(x)  & \rightarrow  e^{-i \alpha(x)}\phi(x), \label{eq:scalar_local_gauge} \\
+    \phi(x)  & \rightarrow  e^{i g\alpha(x)}\phi(x), \label{eq:scalar_local_gauge} \\
     B_\mu(x) & \xrightarrow{} B_\mu(x) -\partial_\mu\alpha(x).
 \end{align}
 The lowest energy state of a \ac{qft} is the vacuum state and therefore its eigenvalue is also called \ac{vev}. Here it is the one that minimizes the potential $V(\phi)$
@@ -373,15 +373,15 @@ and is either 0 or forms an infinite set of minima as illustrated in figure \ref
     \label{fig:higgs_potential}
 \end{figure}
 
-The \ac{qft} perturbation ansatz from section \ref{sec:qft} starts from perturbations around the ground state. Thus for the ansatz to work with the $\mu^2>0$ case new field variables $\eta(x)$ and $\xi$ can be introduced so the perturbation calculus can be applied about the ground state
+The \ac{qft} perturbation ansatz from section \ref{sec:qft} starts from perturbations around the ground state. Thus for the ansatz to work with the $\mu^2>0$ case new field variables $\eta(x)$ and $\xi(x)$ can be introduced so the perturbation calculus can be applied about the ground state
 \begin{equation}
     \phi_1(x)=v+\eta(x),\quad \phi_2(x)=\xi(x).
 \end{equation}
-The physical vacuum state spontaneously breaks the symmetry of the Lagrangian. Furthermore the physical predictions of the Lagrangian do not depend on the choice of the gauge and can be chosen in a way that it eliminates the field $\xi$. In particular if $\alpha(x)=-\xi(x)/(gv)$ the transformation from equation \ref{eq:scalar_local_gauge} can be made unitary ($UU^\dagger=1$) when expressed to first order in the fields. Moreover $\eta(x)$ can then be reinterpreted as the Higgs field $h(x)$
+The physical vacuum state spontaneously breaks the symmetry of the Lagrangian. Furthermore the physical predictions of the Lagrangian do not depend on the choice of the gauge and can be chosen in a way that it eliminates the field $\xi (x)$. In particular, if $\alpha(x)=-\xi(x)/(gv)$, the transformation from equation \ref{eq:scalar_local_gauge} can be made unitary ($UU^\dagger=1$) when expressed to first order in the field variables. Moreover $\eta(x)$ can then be reinterpreted as the Higgs field $h(x)$
 \begin{equation}
-    \phi(x)  \rightarrow  e^{-i \alpha(x)}\frac{1}{\sqrt{2}}(v+\eta(x)+i\xi(x))
+    \phi(x)  \rightarrow  e^{i g\alpha(x)}\frac{1}{\sqrt{2}}(v+\eta(x)+i\xi(x))
     \approx
-    \frac{1}{\sqrt{2}}e^{-i \frac{\xi(x)}{gv}}[v+\eta(x)]e^{i\frac{\xi(x)}{gv}}
+    \frac{1}{\sqrt{2}}e^{-i \frac{\xi(x)}{v}}[v+\eta(x)]e^{i\frac{\xi(x)}{v}}
     =
     \frac{1}{\sqrt{2}}(v+h(x)).
 \end{equation}
@@ -395,7 +395,7 @@ The full locally gauge invariant Lagrangian for a $U(1)$ complex scalar field th
     \\
                  & + \underbrace{g^2vB_\mu B^\mu h+\frac{1}{2}g^2 B_\mu B^\mu h^2}_{\text{h,B interactions}}
     -
-    \underbrace{\lambda v h^3 -\frac{1}{4}\lambda h^4}_{\text{h self-interactions}}
+    \underbrace{\lambda v h^3 -\frac{1}{4}\lambda h^4}_{\text{h self-interactions}},
 \end{align}
 and describes a massive scalar particle $h$, a massive boson $B_\mu$, interactions between the scalar and boson and as well interactions of the scalar itself depicted in figure \ref{fig:higgs_couplings}.
 \begin{figure}
@@ -406,7 +406,7 @@ and describes a massive scalar particle $h$, a massive boson $B_\mu$, interactio
 \end{figure}
 
 \subsection*{The Standard Model Higgs}
-For the electroweak Lagrangian the $SU(2)_L \otimes U(1)_Y$ symmetry is broken by the Higgs mechanism while maintaining the electromagnetic $U(1)_{EM}$ symmetry. This is also called \ac{ewsb} and is realized with a single isospin doublet of complex scalar fields
+For the electroweak Lagrangian the $SU(2)_L \otimes U(1)_Y$ symmetry is broken by the Higgs mechanism while maintaining the electromagnetic $U(1)_{EM}$ symmetry. This is also called \ac{ewsb} and is realized with a isospin doublet of complex scalar fields
 \begin{equation}
     \phi(x)=
     \begin{pmatrix}
@@ -422,7 +422,7 @@ For the electroweak Lagrangian the $SU(2)_L \otimes U(1)_Y$ symmetry is broken b
 with weak hyperchage $Y=1$. The upper state $\phi^+$ with $I_3=1/2$ is electrically charged and the lower state $\phi^0$ with $I_3=-1/2$ is electrically neutral consistent with the Gell-mann Nishijima formula from equation \ref{eq:gellmann_nishijima_formula}.
 
 
-\subsubsection*{Higgs term}
+\subsubsection*{Higgs Term}
 With $Y=1$ the covariant derivative from equation \ref{eq:cov_diff_L} becomes
 \begin{equation}
     D_\mu=\partial_\mu- i g_2\frac{{\sigma}_a}{2}W_\mu^a+ ig_1\frac{1}{2}B_\mu.
@@ -442,7 +442,7 @@ In analogy to the steps for the $U(1)$ Higgs mechanism from section \ref{sec:hig
     \phi^\dagger\phi=\frac{1}{2}(\phi_1^2+\phi_2^2+\phi_3^2+\phi_4^2)=\frac{v^2}{2}=\frac{4\mu^2}{\lambda}.
     \label{eq:higgs_vev}
 \end{equation}
-The \ac{vev} is chosen in a way that the vacuum shares the symmetry of the electromagnetic gauge group $U(1)_{EM}$ which is \mbox{$\phi_1=\phi_2=\phi_4=0$} and $\phi_3=v$
+Since the photon needs to remain massless and as shown in section \ref{sec:higgs_mechanism} broken symmetries generate gauge bosons with mass, the \ac{vev} is chosen in a way that the vacuum shares the symmetry of the electromagnetic gauge group $U(1)_{EM}$ from section \ref{sec:qed} via setting \mbox{$\phi_1=\phi_2=\phi_4=0$} and $\phi_3=v$ such that the \ac{vev} becomes
 \begin{equation}
     \langle0\vert \phi \vert0\rangle=\phi_0=\frac{1}{\sqrt{2}}
     \begin{pmatrix}
@@ -450,7 +450,7 @@ The \ac{vev} is chosen in a way that the vacuum shares the symmetry of the elect
         v
     \end{pmatrix}.
 \end{equation}
-The reason for this is that the photon needs to remain massless and any broken symmetry creates gauge bosons with mass as shown in section \ref{sec:higgs_mechanism}. The generator of the electromagnetic subgroup is $Q=I_3+Y/2$. $\phi_0$ breaks $SU(2)_L$ and $U(1)_Y$ but since the lower state is electrically neutral $Q=0$, it remains locally gauge invariant under $U(1)_{EM}$ as can be seen from
+The generator of the electromagnetic subgroup is $Q=I_3+Y/2$. $\phi_0$ breaks $SU(2)_L$ and $U(1)_Y$ but since the lower state is electrically neutral $Q=0$, it remains locally gauge invariant under $U(1)_{EM}$ as can be seen from
 \begin{equation}
     \phi_0 \rightarrow e^{i\alpha(x)Q}\phi_0=\phi_0.
 \end{equation}
@@ -533,7 +533,7 @@ Furthermore a relation to the weak mixing angle and the electric charge follow
 \end{equation}
 The $\cos\theta_W$ was verifiable before the Higgs discovery and a compelling argument for the Higgs to exist.
 
-\subsubsection*{Yukawa term}\label{sec:yukawa_term}
+\subsubsection*{Yukawa Term}\label{sec:yukawa_term}
 Fermion masses can be incorporated gauge invariant into the electroweak Lagrangian of equation \ref{eq:L_EW} with the help of the Higgs mechanism in the form of Yukawa couplings. For one generation of leptons and quarks gauge invariant terms are introduced via couplings between the left-handed doublet states, the Higgs field and right handed singlet states
 \begin{align}
     \mathcal{L}_\mathrm{Y}^{\text{one gen}} & =
@@ -614,8 +614,8 @@ With the identity $V_L^uV_L^{d\dagger}\equiv V_\mathrm{CKM}$ the quark mixing ma
 \end{equation}
 The $V_{ij}$ describes the transition probability for a quark $j$ to quark $i$ via the charged weak interactions. In this model neutrinos are assumed massless. Though they could be added including their mixing analogous to the quarks. This completes the current \ac{sm} electroweak Lagrangian of equation \ref{eq:L_EW}.
 
-\section{Physics beyond the Standard Model}\label{sec:beyond_sm}
-The \ac{sm} works within its realm but is inherently incomplete and in discrepancy with other models. Most importantly there is no quantum theory for gravity so it is excluded entirely. The standard cosmological model - Lambda CDM - includes dark matter and dark energy to model the microwave background for which both the \ac{sm} offers no explanation. Further neutrinos are actually massive. In principle they can be added like fermions as in the section on the fermion Yukawa mass term \ref{sec:yukawa_term} but this requires right-handed neutrinos which have not been observed. Moreover in the standard cosmological model matter and antimatter should have been created in equal amounts but the universe is basically entirely made of matter.
+\section{Physics Beyond The Standard Model}\label{sec:beyond_sm}
+The \ac{sm} works within its realm but is inherently incomplete and in discrepancy with other models. Most importantly there is no quantum theory for gravity excluding it entirely. The standard cosmological model - Lambda CDM - includes dark matter and dark energy to model the microwave background for which both the \ac{sm} offers no explanation. Furthermore neutrinos are known to be massive. In principle they can be added like fermions as in the section on the fermion Yukawa mass term \ref{sec:yukawa_term} but this requires right-handed neutrinos which have not been observed. This suggests, since their masses are much smaller than for the other fermions that there might be another mechanism responsible for the generation of the mass of neutrinos. Moreover, in the standard cosmological model, matter and antimatter should have been created in equal amounts, yet the universe is predominantly made of matter.
 
 \begin{figure}
     \centering
@@ -623,7 +623,8 @@ The \ac{sm} works within its realm but is inherently incomplete and in discrepan
     \caption[]{Leading correction to the Higgs field from top pair interaction.}
     \label{fig:top_loop}
 \end{figure}
-Especially with respect to the Higgs, it is not clear whether the assumed form of the Higgs potential is the one realized in nature since only the mass term of the Higgs potential from equation \ref{eq:higgs_potential} is determined by experiment. If considering top loop corrections to the Higgs field as shown in figure \ref{fig:top_loop} the $\lambda(\mu)$ parameter becomes dependent on the energy scale, potentially becoming negative around $\Lambda_I\approx \qty[]{e10}{GeV}$. Such a scenario would destabilize the currently measured \ac{vev}, suggesting it might not be the absolute minimum, thus possibly leading to energetically lower or even unbounded states \citep{devoto2022false}. The stability of the universe, under the assumptions of \ac{sm} physics, depends critically on the exact values of the Higgs and top quark masses as can be seen from the phase diagram figure \ref{fig:vev_stability}, placing the universe at the boundary between stability and metastability, given current measurement accuracies.
+Especially with respect to the Higgs particle, it is not clear whether the assumed form of the Higgs potential is the one realized in nature since only the mass term of the Higgs potential from equation \ref{eq:higgs_potential} is determined by experiment. Considering top-quark loop corrections to the Higgs field, as illustrated in figure \ref{fig:top_loop}, the $\lambda(\mu)$ parameter in the Higgs potential becomes energy scale-dependent. At an instability energy scale of $\Lambda_I\approx \qty[]{e10}{GeV}$, $\lambda(\mu)$ could turn negative, suggesting that the current \ac{vev} might not be the absolute minimum of the Higgs potential but could be energetically lower or even unbounded. A phase transition via quantum tunneling into a different \ac{vev} could result in the universe's particles, forces and structures ceasing to exist and being replaced by different ones. The stability of the universe, under the assumptions of \ac{sm} physics, critically depends on the precise values of the Higgs and top quark masses, as depicted in the phase diagram in figure \ref{fig:vev_stability}, which places the universe at the boundary between stability and metastability given current measurement accuracies.
+
 \begin{figure}
     \centering
     \includegraphics[width=0.7\textwidth]{vev_stability}
@@ -631,4 +632,4 @@ Especially with respect to the Higgs, it is not clear whether the assumed form o
     \label{fig:vev_stability}
 \end{figure}
 
-Investigating the true form of the Higgs potential could thus provide insights into physics phenomena, present only in the universe's earliest moments, far beyond the reach of any existing collider. Precise measurements of the top quark mass and the Higgs potential could answer questions about the possibility of a false vacuum decay and even hint at previously unknown forms of matter. Therefore investigating the true form of the Higgs potential is a promising endeavor that this work aims to contribute to.
+Through the Higgs mechanism, elementary particles gain mass by interacting with the Higgs field. Accurate measurements of properties such as the mass and decay channels of the Higgs boson and the top quark offer means to validate and challenge the \ac{sm}. A precise understanding of these is crucial as any deviation from the expected values could indicate new physics. Moreover, the stability of our universe might be related to these properties. The study of the Higgs potential is therefore a promising endeavor to which this work aims to contribute.
