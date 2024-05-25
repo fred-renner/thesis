@@ -1,0 +1,95 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: unsrtnat.bst
+A level-1 auxiliary file: front_back_matter/titlepage.aux
+A level-1 auxiliary file: front_back_matter/abstract.aux
+A level-1 auxiliary file: methodology/objects_reco.aux
+A level-1 auxiliary file: methodology/hh4b.aux
+A level-1 auxiliary file: methodology/neos.aux
+A level-1 auxiliary file: methodology/systematics.aux
+A level-1 auxiliary file: methodology/statistics.aux
+A level-1 auxiliary file: front_back_matter/selbststaendig.aux
+Database file #1: bib.bib
+Warning--entry type for "pyhf" isn't style-file defined
+--line 89 of file bib.bib
+Warning--entry type for "pileup" isn't style-file defined
+--line 189 of file bib.bib
+Warning--entry type for "Guth:2765038" isn't style-file defined
+--line 308 of file bib.bib
+Warning--entry type for "jet_eta_calib" isn't style-file defined
+--line 470 of file bib.bib
+Warning--entry type for "buttinger2018background" isn't style-file defined
+--line 587 of file bib.bib
+Warning--entry type for "jax2018github" isn't style-file defined
+--line 684 of file bib.bib
+Warning--entry type for "Simpson_neos_version_0_2_0_2021" isn't style-file defined
+--line 708 of file bib.bib
+Warning--entry type for "Simpson_relaxed_version_0_3_0_2023" isn't style-file defined
+--line 717 of file bib.bib
+Warning--entry type for "unc_recipe" isn't style-file defined
+--line 764 of file bib.bib
+Warning--entry type for "Athena" isn't style-file defined
+--line 910 of file bib.bib
+Warning--empty journal in atlas2021optimisation
+Warning--empty author in ATL-PHYS-PUB-2017-015
+Warning--empty author in ATL-PHYS-PUB-2022-038
+Warning--empty author in ATL-PHYS-PUB-2022-027
+Warning--empty author in ATL-PHYS-PUB-2023-021
+Warning--empty year in pileup
+Warning--empty author in ATLAS-CONF-2017-065
+Warning--empty author in ATLAS-CONF-2014-018
+Warning--empty year in jet_eta_calib
+Warning--empty author in ATLAS-CONF-2015-029
+Warning--empty author in ATLAS-CONF-2016-035
+Warning--there's a number but no series in de2016arxiv
+Warning--empty author in ATL-PHYS-PUB-2019-007
+Warning--empty journal in DAPR-2021-01
+Warning--empty year in buttinger2018background
+Warning--empty author in ATLAS-CONF-2019-049
+Warning--empty year in Athena
+Warning--empty author in ATL-PHYS-PUB-2020-019
+Warning--empty year in unc_recipe
+Warning--empty year in pyhf
+You've used 69 entries,
+            2481 wiz_defined-function locations,
+            978 strings with 24420 characters,
+and the built_in function-call counts, 29224 in all, are:
+= -- 1977
+> -- 2572
+< -- 35
++ -- 958
+- -- 816
+* -- 2711
+:= -- 5223
+add.period$ -- 265
+call.type$ -- 69
+change.case$ -- 148
+chr.to.int$ -- 65
+cite$ -- 100
+duplicate$ -- 1160
+empty$ -- 2085
+format.name$ -- 885
+if$ -- 5792
+int.to.chr$ -- 5
+int.to.str$ -- 70
+missing$ -- 41
+newline$ -- 410
+num.names$ -- 174
+pop$ -- 523
+preamble$ -- 1
+purify$ -- 69
+quote$ -- 0
+skip$ -- 695
+stack$ -- 0
+substring$ -- 577
+swap$ -- 153
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 471
+warning$ -- 20
+while$ -- 149
+width$ -- 0
+write$ -- 1002
+(There were 30 warnings)

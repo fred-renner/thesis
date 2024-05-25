@@ -1,0 +1,58 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\numberline {1}Physical Object Reconstruction}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Tracks and Primary Vertex}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Jets}{2}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Topo-Cluster}{2}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Particle Flow Object}{2}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Track-CaloClusters}{3}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.4}Unified Flow Object}{3}{subsection.1.2.4}%
+\contentsline {subsection}{\numberline {1.2.5}Jet Clustering Algorithm}{3}{subsection.1.2.5}%
+\contentsline {section}{\numberline {1.3}$b$-tagging}{4}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}DL1d Tagger}{4}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}GN2X Tagger}{5}{subsection.1.3.2}%
+\contentsline {section}{\numberline {1.4}Jet Calibration}{6}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Pile-up Mitigation}{7}{subsection.1.4.1}%
+\contentsline {subsubsection}{Small-R Jets}{7}{section*.15}%
+\contentsline {subsubsection}{Large-R Jets}{9}{section*.18}%
+\contentsline {subsection}{\numberline {1.4.2}\ac {jes}, $\eta $ and Mass}{9}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Global Sequential Calibration}{10}{subsection.1.4.3}%
+\contentsline {subsection}{\numberline {1.4.4}In Situ Calibration}{10}{subsection.1.4.4}%
+\contentsline {subsection}{\numberline {1.4.5}Jet Event Cleaning}{10}{subsection.1.4.5}%
+\contentsline {subsection}{\numberline {1.4.6}Mass Correction For Large-$R$ Jets}{10}{subsection.1.4.6}%
+\contentsline {chapter}{\numberline {2}The HH$\rightarrow $4b Analysis}{12}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Data And Monte Carlo Simulation}{15}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Analysis Strategy}{18}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Trigger}{18}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Large Radius Jets}{19}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Small Radius Jets}{19}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Kinematic Regions}{20}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}Background Estimation}{20}{subsection.2.2.5}%
+\contentsline {subsection}{\numberline {2.2.6}Event Classification}{22}{subsection.2.2.6}%
+\contentsline {section}{\numberline {2.3}Linear Combination Of Signal Hypotheses}{23}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Analysis Optimization}{27}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Machine Learning}{28}{section.3.1}%
+\contentsline {section}{\numberline {3.2}NEOS}{29}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Implementation}{30}{subsection.3.2.1}%
+\contentsline {section}{\numberline {3.3}Training}{32}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Systematic Uncertainties}{37}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Luminosity}{37}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Jet Uncertainties}{37}{section.4.2}%
+\contentsline {section}{\numberline {4.3}GN2X Tagger Uncertainties}{38}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Theory Uncertainties}{39}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Scale Variations}{39}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}\ac {pdf} + $\alpha _s$ Uncertainties}{40}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Uncertainty on HH cross section}{41}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Parton Shower}{41}{subsection.4.4.4}%
+\contentsline {subsection}{\numberline {4.4.5}Branching Ratio Uncertainty}{41}{subsection.4.4.5}%
+\contentsline {section}{\numberline {4.5}Statistical Uncertainties}{41}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Background Derivation Uncertainties}{42}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Statistical Analysis}{44}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Profile Likelihood Ratio}{44}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Test Statistic and p-value}{46}{section.5.2}%
+\contentsline {section}{\numberline {5.3}The CL$_s$ Value}{48}{section.5.3}%
+\contentsline {section}{\numberline {5.4}HistFactory}{49}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}The Modifiers}{51}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}The constraint terms}{54}{subsection.5.4.2}%
+\contentsline {chapter}{Appendices}{57}{section*.69}%
+\contentsline {chapter}{\numberline {A}Acronyms}{57}{appendix.A}%
+\contentsline {chapter}{Bibliography}{61}{appendix*.71}%
