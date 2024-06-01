@@ -56,10 +56,11 @@ Such tracks have a large impact parameter that is defined as the distance of clo
   \label{fig:secondary_vertex}
 \end{figure}
 
-\subsection{DL1d Tagger}
-The results obtained from the secondary vertex- and impact parameter finding algorithms by exploiting the characteristics of $b$-hadron decays and the kinematics of the jet are then passed into a deep feed-forward neural network called DL1d which is trained to distinguish $b$-jets from jets of other flavors \citep{atlas2022atlas}. The output nodes for flavor classification ($p_\mathrm{b}, p_\mathrm{c}, p_\mathrm{light}$) are further combined into a single discriminating score variable
+\subsection{DL1 Tagger}\label{sec:dl1}
+The results obtained from the secondary vertex- and impact parameter finding algorithms by exploiting the characteristics of $b$-hadron decays and the kinematics of the jet are then passed to a deep feed-forward neural network existing in several versions with prefix \ac{dl1} which is trained to distinguish $b$-jets from jets of other flavors \citep{atlas2022atlas}. 
+Depending on the strategy of introducing additional tracking information associated with the jet \ac{dl1} can become DL1r if the outputs of the RNNIP (Recurrent Neural Network Impact Parameter) \citep{Gilles:2806947} tagger or DL1d if the outputs of the \ac{dips} \citep{ATL-PHYS-PUB-2020-014} tagger are added as inputs to \ac{dl1}. The outputs of these taggers are then combined into a single signal to background ratio variable, the discriminant, defined as
 \begin{equation}
-  D_\mathrm{DL1d}=\ln\left(\frac{p_b}{f_c \cdot p_c + (1-f_c)\cdot p_\mathrm{light} }\right).
+  \mathrm{D}=\ln\left(\frac{p_b}{f_c \cdot p_c + (1-f_c)\cdot p_\mathrm{light} }\right).
 \end{equation}
 $f_c$ is a parameter to tune the importance between charm and light quark background classes ($\sum f_\mathrm{bkg} =1$). When evaluating the \ac{nn} a value for the discriminating variable $D$ can be derived that corresponds to a $b$-jet selection efficiency. In this analysis the chosen efficiency is \qty[]{77}{\percent}. 
 

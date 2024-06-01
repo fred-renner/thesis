@@ -31,7 +31,7 @@ with $r$ the expected rate of occurrences which translates as the prediction and
     \prod_{j=1}^N \frac{(\mu s_j(\bm{\Theta}) + b_j(\bm{\Theta}))^{n_j}}{n_j !} e^{-(\mu s_j(\bm{\Theta}) + b_j(\bm{\Theta}))}
     \prod_{k=1}^M c_k(\bm{\Theta}).
 \end{equation}
-These constraint terms can be viewed as penalizing the likelihood with increasing change of some nuisance parameter and are discussed in detail in section \ref{sec:histfactory_model}. 
+These constraint terms can be viewed as penalizing the likelihood with increasing change of some nuisance parameter and are discussed in detail in section \ref{sec:histfactory_model}.
 
 To test for a hypothesized value of $\mu$, the best choice according to the Neyman-Pearson lemma, is the profile likelihood ratio that reduces the dependence of the likelihood function to the parameter of interest
 \begin{equation}\label{eq:likelihood_ratio}
@@ -54,7 +54,7 @@ This translates to $t \rightarrow 0$ as increasing agreement and $t \rightarrow 
 \end{equation}
 $t_\text{obs}$ is the test statistic $t$ computed using the particular $\mu$ and observed data. Similar to the \ac{pdf} of a standard normal distribution the \ac{pdf} in this context quantifies how probable a particular value of the test statistic $t$ is under a fixed value of the signal strength. This essentially measures how frequently a particular value of $t$ occurs in comparison to all other possible values that $t$ can take.
 
-The test statistic's specific form is useful because of existing approximations for $f(t | \mu')$ with $\mu'$ as the true strength parameter \citep{cowan2011asymptotic}. 
+The test statistic's specific form is useful because of existing approximations for $f(t | \mu')$ with $\mu'$ as the true strength parameter \citep{cowan2011asymptotic}.
 %Let $f(t | \mu')$ be the probability distribution for the true strength parameter $\mu'$. 
 \citet{wald1943tests} demonstrated that for a single parameter of interest the test statistic asymptotically approaches in the large sample limit a squared distance between the tested parameter $\mu$ and its maximum likelihood estimate $\hat{\mu}$
 \begin{equation}
@@ -77,6 +77,9 @@ with the non-centrality parameter as the normalized distance between the tested 
 \end{equation}
 Figure \ref{fig:test_stat_example} illustrates these steps. $\Lambda_\mu$ is determined by estimating the true $\mu'$ from the `Asimov' dataset. This dataset sets the predictions to the observations such that the true values $\mu'$ in $\Lambda_\mu$ become the maximum likelihood estimate ones $\hat{\mu}$.
 
+For more than one parameter of interest the equation \ref{eq:chi-square} generalizes to a sum such that $t_\mu$ is a $\chi^2$-distribution with the degrees of freedom equaling the number of parameters.
+
+
 \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth]{test_stat_example.pdf}
@@ -86,7 +89,15 @@ Figure \ref{fig:test_stat_example} illustrates these steps. $\Lambda_\mu$ is det
 
 The capability to compute p-values allows to state how likely it is that the proposed hypothesis is reflected by the observed data. Specifically, the p-value indicates how probable it is to obtain data at least as extreme as the observed ones if the experiment were repeated many times. This measure thus reflects the degree of incompatibility between prediction and observation.
 
-In the scientific community a p-value of 0.05 is commonly accepted as significant. Though particle physicists only claim discovery of a new phenomenon for $p$ < \qty{2.87e-7}{} corresponding to 5 standard deviations of the standard normal distribution and exclude hypotheses if the p-value is not below 2 standard deviations of the standard normal distribution, corresponding to $p$ < \qty{0.05}{}. 
+In the scientific community a p-value of 0.05 is commonly accepted as significant. However particle physicists usually transform the p-value is into a significance via the inverse cumulative distribution function of the standard normal distribution
+\begin{equation}
+    Z = \Phi^{-1}(1 - p).
+\end{equation}
+The found p-value is thus expressed in terms of the number of standard deviations this p-value would have if the test statistic were standard normal distributed. Particle physicists only claim discovery of a new phenomenon for $Z>5$ ($p$ < \qty{2.87e-7}{}) and exclude hypotheses for $Z>2$ ($p$ < 0.05). When setting data points to the expected number of events predicted by the model an estimate for the significance can be calculated referred to as Asimov significance from the bin contents
+\begin{equation}\label{eq:asimov-significance}
+    Z_A = \sqrt{2\sum_{i\in bins}((s_i + b_i)(\log{(1 + s_i / b_i)}) - s_i)}.
+\end{equation}
+
 
 A key consideration is that $t$ can assume negative values for $\mu$ which might be non-physical depending on the context. This is handled by cutting off the test statistic for undesired behavior. An example of an adjusted test statistic for setting upper limits is
 \begin{equation}
@@ -120,7 +131,7 @@ The numerator represents the p-value for the alternative hypothesis while the de
 
 
 \section{HistFactory}\label{sec:histfactory_model}
-A widely-used model for constructing likelihoods as discussed in section \ref{sec:likelihood} is known as HistFactory \citep{cranmer2012histfactory}. HistFactory simplifies the process of building a likelihood by breaking it down into several fundamental components. This considers a different categorization of the model parameters $\bm{\phi}$ 
+A widely-used model for constructing likelihoods as discussed in section \ref{sec:likelihood} is known as HistFactory \citep{cranmer2012histfactory}. HistFactory simplifies the process of building a likelihood by breaking it down into several fundamental components. This considers a different categorization of the model parameters $\bm{\phi}$
 \newcommand{\freeset}{\bm{\eta}}
 \newcommand{\constrset}{\bm{\chi}}
 \newcommand{\singleconstr}{\chi}
@@ -139,27 +150,27 @@ into free parameters $\freeset$ and constrained parameters $\constrset$ which ar
 \begin{equation}
     L(\channelcounts, \auxdata \,|\,\freeset,\constrset)
     = \underbrace{{\prod_{c\in\mathrm{\,channels}} \prod_{b \in \mathrm{\,bins}_c}
-            \textrm{Pois} ( 
+                \textrm{Pois} (
                 \;\overbrace{n_{cb}}^{\llap{\text{\strut observed}\quad\;}}
-            \,|\, \overbrace{\nu_{cb}\left(\freeset,\constrset\right)}^{\llap{\quad\text{\strut predicted}}}
-            \;)}}_{\substack{\text{Simultaneous measurement}\\%
+                \,|\, \overbrace{\nu_{cb}\left(\freeset,\constrset\right)}^{\llap{\quad\text{\strut predicted}}}
+                \;)}}_{\substack{\text{Simultaneous measurement}\\%
             \text{of multiple channels}}}
     \underbrace{{\prod_{\singleconstr \in \constrset} c_{\singleconstr}(a_{\singleconstr} |\, \singleconstr)}}_{\substack{\text{constraint terms}\\%
             \text{for }\text{auxiliary measurements}}}.
-            \label{eq:histfactory_likelihood}
+    \label{eq:histfactory_likelihood}
 \end{equation}
 $\bm{n}$ are observed and $\bm{a}$ the auxiliary measurement histograms. The $n_{cb}$ enter the Poisson term per bin and channel where the predicted counts per bin are governed by the free and constrained parameters $\nu_{cb}(\freeset,\constrset)$. $c_{\singleconstr}(a_{\singleconstr} |\, \singleconstr)$ are functions that penalize the likelihood $L$ with uncertainties $a_\chi$ to constrain the parameter $\singleconstr$ and are discussed in detail section \ref{sec:constraint_terms}.
 
-The prediction is a sum of nominal counts per bin $\nu_{scb}^0$ over all samples $s$ (e.g. $t\overline{t}$, multijet-background, etc.). Counts per bin are also called rates, like in the definition of a Poisson distribution. These nominal bin counts are subject to uncertainties and have thus have some degree of freedom. However the effect of this modification to the likelihood must be taken into account which is through the constraint terms. These penalize the likelihood proportional to the modification. Modifiers are discussed in detail in section \ref{sec:modifiers}. They enter the likelihood through linear modeling of the nominal bin content $\nu_{scb}^0$ with multiplicative $\kappa_{scb}$ and additive modifiers $\Delta_{scb}$ 
+The prediction is a sum of nominal counts per bin $\nu_{scb}^0$ over all samples $s$ (e.g. $t\overline{t}$, multijet-background, etc.). Counts per bin are also called rates, like in the definition of a Poisson distribution. These nominal bin counts are subject to uncertainties and have thus have some degree of freedom. However the effect of this modification to the likelihood must be taken into account which is through the constraint terms. These penalize the likelihood proportional to the modification. Modifiers are discussed in detail in section \ref{sec:modifiers}. They enter the likelihood through linear modeling of the nominal bin content $\nu_{scb}^0$ with multiplicative $\kappa_{scb}$ and additive modifiers $\Delta_{scb}$
 \begin{align}
     \nu_{cb}\left(\freeset,\constrset\right) & = \sum_{s\in\mathrm{\,samples}} \nu_{scb}\left(\freeset,\constrset\right)                                                                                                \\
                                              & = \sum_{s\in\mathrm{\,samples}}\underbrace{\left(\prod_{\kappa\in\,\bm{\kappa}} \kappa_{scb}\left(\freeset,\constrset\right)\right)}_{\text{multiplicative modifiers}}\,
     \Bigg(\nu_{scb}^0 + \underbrace{\sum_{\Delta\in\bm{\Delta}} \Delta_{scb}\left(\freeset,\constrset\right)}_{\text{additive modifiers}}\Bigg).
     \label{eq:modifier_equation}
 \end{align}
-The usefulness of this approach becomes clear when considering one uncertainty $a_\chi$ on a nominal bin count estimate $\nu_{scb}^0$. The main goal remains to maximize the overall likelihood $L$. This can be achieved via maximizing the Poisson probability (blue part in equation \ref{eq:histfactory_likelihood}) and at the same time keeping the constraint term (red part in equation \ref{eq:histfactory_likelihood}) large. It is illustrative to consider one nuisance parameter $\chi$ as a multiplicative modifier $\kappa_{scb}=\chi$ on $\nu_{scb}^0$. An optimum can be found by modifying the prediction to move closer to the observed value while at the same time keeping the constraint term controlled by the same $\chi$ at values where the penalization of the likelihood stays insignificant. This works well for example when $\kappa$ has a very large uncertainty rendering the constraint term's influence on the likelihood relatively small. 
+The usefulness of this approach becomes clear when considering one uncertainty $a_\chi$ on a nominal bin count estimate $\nu_{scb}^0$. The main goal remains to maximize the overall likelihood $L$. This can be achieved via maximizing the Poisson probability (blue part in equation \ref{eq:histfactory_likelihood}) and at the same time keeping the constraint term (red part in equation \ref{eq:histfactory_likelihood}) large. It is illustrative to consider one nuisance parameter $\chi$ as a multiplicative modifier $\kappa_{scb}=\chi$ on $\nu_{scb}^0$. An optimum can be found by modifying the prediction to move closer to the observed value while at the same time keeping the constraint term controlled by the same $\chi$ at values where the penalization of the likelihood stays insignificant. This works well for example when $\kappa$ has a very large uncertainty rendering the constraint term's influence on the likelihood relatively small.
 
-\subsection{The Modifiers}\label{sec:modifiers}
+\subsection{Modifiers}\label{sec:modifiers}
 In HistFactory there are by convention four types $\{\lambda,\mu,\gamma,\alpha\}$ of such multiplicative rate modifiers that are explained in this section. There are \textbf{free rate modifiers} for the luminosity $\lambda$ and signal strength $\mu$ that affect all bins equally
 \begin{equation}
     \nu_{scb}(\mu)=\mu \nu_{scb}^0.
@@ -204,7 +215,7 @@ This is illustrated in fig. \ref{fig:interp_func}(a). For the other ones see e.g
     \label{fig:interp_func}
 \end{figure}
 
-\subsection{The constraint terms}\label{sec:constraint_terms}
+\subsection{Constraint Terms}\label{sec:constraint_terms}
 Uncertainties are modeled either Gaussian or Poissonian. The Gaussian uncertainty implementation is straightforward as the standard deviation $\sigma$ appears in the definition of the Gaussian with mean $\mu$
 \begin{equation}
     \text{Gaus}(\mu|x,\sigma)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}.
@@ -215,12 +226,12 @@ The Poisson distribution reads
 \begin{equation}
     \text{Pois}(k|r)= \frac{r^k e^{-r}}{k!}.
 \end{equation}
-For a Poissonian distributed uncertainty the nuisance parameter for a multiplicative factor $\kappa_{scb}=\gamma$ in equation \ref{eq:modifier_equation} should control the Poisson constraint term such that the uncertainty $\sigma$ is reflected by the variance of the Poisson $\text{Var}(\text{Pois})=r=\sigma^2$. This is achieved by scaling the distribution with a factor $f$ which is then solved for the one with the desired uncertainty by evaluating it at the nominal value of the multiplicative modifier $\gamma_0=1$ 
+For a Poissonian distributed uncertainty the nuisance parameter for a multiplicative factor $\kappa_{scb}=\gamma$ in equation \ref{eq:modifier_equation} should control the Poisson constraint term such that the uncertainty $\sigma$ is reflected by the variance of the Poisson $\text{Var}(\text{Pois})=r=\sigma^2$. This is achieved by scaling the distribution with a factor $f$ which is then solved for the one with the desired uncertainty by evaluating it at the nominal value of the multiplicative modifier $\gamma_0=1$
 \begin{equation}
     \mathrm{Var}\left[\mathrm{Pois}(k=f\gamma_0 | r=f\gamma)\right]
     =
-    r=f\gamma\;\stackrel{\gamma=\gamma_0}{=}\;f\gamma_0=(f\sigma)^2 
-    \quad 
+    r=f\gamma\;\stackrel{\gamma=\gamma_0}{=}\;f\gamma_0=(f\sigma)^2
+    \quad
     \rightarrow \quad f=(1/\sigma^2).
 \end{equation}
 Thus a Poissonian constraint term for a multiplicative modifier $\gamma$ with uncertainty $\sigma$ reads \mbox{$\text{Pois}(k=\sigma^{-2}|r=\sigma^{-2}\gamma)$.} This completes the necessities for the HistFactory model. The different types of modifiers and their constraint terms are summarized in table \ref{tab:histfactory}.
@@ -229,15 +240,15 @@ Thus a Poissonian constraint term for a multiplicative modifier $\gamma$ with un
     \centering
     \resizebox{0.97\textwidth}{!}{
         \begin{tabular}{l|l|l|l}\label{tab:histfactory}
-            Description          & Modification                                                                                            & Constraint Term $c_\singleconstr$                                                               & $c_\chi$ input                     \\
+            Description          & Modification                                                                                            & Constraint Term $c_\singleconstr$                                                            & $c_\chi$ input                     \\
             \hline
             Uncorrelated Shape   & $\kappa_{scb}(\gamma_b) = \gamma_b$                                                                     & $\prod_b \mathrm{Pois}\left(k_b = \sigma_b^{-2}\middle|\,r_b = \sigma_b^{-2}\gamma_b\right)$ & $\sigma_{b}$                       \\
-            Correlated Shape     & $\Delta_{scb}(\alpha) = f_p\left(\alpha\middle|\,\Delta_{scb,\alpha=-1},\Delta_{scb,\alpha = 1}\right)$ & $\displaystyle\mathrm{Gaus}\left(a = 0\middle|\,\alpha,\sigma = 1\right)$                       & $\Delta_{scb,\alpha=\pm1}$         \\
-            Normalisation Unc.   & $\kappa_{scb}(\alpha) = g_p\left(\alpha\middle|\,\kappa_{scb,\alpha=-1},\kappa_{scb,\alpha=1}\right)$   & $\displaystyle\mathrm{Gaus}\left(a = 0\middle|\,\alpha,\sigma = 1\right)$                       & $\kappa_{scb,\alpha=\pm1}$         \\
-            MC Stat. Uncertainty & $\kappa_{scb}(\gamma_b) = \gamma_b$                                                                     & $\prod_b \mathrm{Gaus}\left(a_{\gamma_b} = 1\middle|\,\gamma_b,\delta_b\right)$                 & $\delta_b^2 = \sum_s\delta^2_{sb}$ \\
-            Luminosity           & $\kappa_{scb}(\lambda) = \lambda$                                                                       & $\displaystyle\mathrm{Gaus}\left(l = \lambda_0\middle|\,\lambda,\sigma_\lambda\right)$          & $\lambda_0,\sigma_\lambda$         \\
-            Normalisation        & $\kappa_{scb}(\mu_b) = \mu_b$                                                                           &                                                                                                 &                                    \\
-            Data-driven Shape    & $\kappa_{scb}(\gamma_b) = \gamma_b$                                                                     &                                                                                                 &                                    \\
+            Correlated Shape     & $\Delta_{scb}(\alpha) = f_p\left(\alpha\middle|\,\Delta_{scb,\alpha=-1},\Delta_{scb,\alpha = 1}\right)$ & $\displaystyle\mathrm{Gaus}\left(a = 0\middle|\,\alpha,\sigma = 1\right)$                    & $\Delta_{scb,\alpha=\pm1}$         \\
+            Normalisation Unc.   & $\kappa_{scb}(\alpha) = g_p\left(\alpha\middle|\,\kappa_{scb,\alpha=-1},\kappa_{scb,\alpha=1}\right)$   & $\displaystyle\mathrm{Gaus}\left(a = 0\middle|\,\alpha,\sigma = 1\right)$                    & $\kappa_{scb,\alpha=\pm1}$         \\
+            MC Stat. Uncertainty & $\kappa_{scb}(\gamma_b) = \gamma_b$                                                                     & $\prod_b \mathrm{Gaus}\left(a_{\gamma_b} = 1\middle|\,\gamma_b,\delta_b\right)$              & $\delta_b^2 = \sum_s\delta^2_{sb}$ \\
+            Luminosity           & $\kappa_{scb}(\lambda) = \lambda$                                                                       & $\displaystyle\mathrm{Gaus}\left(l = \lambda_0\middle|\,\lambda,\sigma_\lambda\right)$       & $\lambda_0,\sigma_\lambda$         \\
+            Normalisation        & $\kappa_{scb}(\mu_b) = \mu_b$                                                                           &                                                                                              &                                    \\
+            Data-driven Shape    & $\kappa_{scb}(\gamma_b) = \gamma_b$                                                                     &                                                                                              &                                    \\
         \end{tabular}
     }
 \end{table}

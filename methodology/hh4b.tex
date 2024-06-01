@@ -63,7 +63,7 @@ In a second step the parton shower evolution including hadronization and initial
 In a final step the detector response of simulated final state particles is simulated with \textsc{Geant}4 \citep{Agostinelli:2002hh}. It models the detector geometry, the particle's path through the magnetic fields and the particle interactions with the detector material, potentially producing new particles or decays. The output of this step are energy deposits in the various subdetectors of \ac{atlas}. Subsequently these are passed on to a process known as digitization which models the readout electronics. The result of this is raw data being no different from that read out in the actual experiment.
 
 \section{Analysis Strategy}\label{sec:hh4b_analysis_strategy}
-This section outlines the event selection and analysis strategy. A detailed description of reconstructed objects is given in chapter \ref{ch:reco}. Only events from a Good Runs List are chosen to ensure all detectors are operating as expected and to avoid events where for example the \ac{lhc} beam was not stable. This strategy builds upon a previous iteration of the same analysis, incorporating the latest advancements in object reconstruction available at the time of writing this thesis. Consequently there is an opportunity for further refinement of the event selection strategy which is beyond the scope of this current thesis.
+This section outlines the event selection and analysis strategy. A detailed description of reconstructed objects is given in chapter \ref{ch:reco}. Only events from a Good Runs List are chosen to ensure all detectors are operating as expected and to avoid events where for example the \ac{lhc} beam was not stable. Selections are executed with the selector module within the \textsc{pyhh} \citep{pyhh} package developed for this analysis. This strategy builds upon a previous iteration of the same analysis, incorporating the latest advancements in object reconstruction available at the time of writing this thesis. Consequently there is an opportunity for further refinement of the event selection strategy which is beyond the scope of this current thesis. 
 
 \subsection{Trigger}
 As outlined in section \ref{sec:tdaq} events need to be preselected. The \ac{hlt} applied in this analysis selects events with a large transverse energy $E_\text{T}$ large-$R$ jet. The definition slightly changed over the data taking years as can be seen in table \ref{tab:trigger}.
@@ -157,7 +157,7 @@ This gives the four orthogonal regions shown in table \ref{tab:abcd}. Hence, the
 \end{equation}
 
 
-\subsection{Event Classification}
+\subsection{Event Classification}\label{sec:event_classification}
 After the selection of events, a deep feed-forward neural network is employed to construct a histogram suitable for a statistical test the significance of the outcome. This neural network's training utilizes a novel approach \textsc{neos}, which is thoroughly discussed in Chapter \ref{sec:neos} %and optimizes on the $CL_s$ quantity detailed in section \ref{sec:statistics}.
 Inputs to the neural network include 21 features, which are the four vector components ($\pt,\eta,\phi,m$) of: the Higgs boson pair system, the individual Higgs candidates and the two \ac{vbf} jets. In addition the leading score of the GN2X tagger is used. The \ac{nn} needs to be applicable across all samples, therefore only the leading GN2X score is incorporated, as the background estimation relies on a single GN2X tag.
 
