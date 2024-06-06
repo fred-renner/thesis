@@ -1,0 +1,121 @@
+General:
+  Measurement: HH4b VBF boosted
+  POI: signal_norm
+  HistogramFolder: /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv1cv1/histograms
+  InputPath: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv1cv1.root:{RegionPath}/{SamplePath}/{VariationPath}
+  VariationPath: m_hh_5_NOSYS
+Regions:
+- Name: m_hh_5_SR_xbb_2
+  RegionPath: SR_xbb_2
+  Binning:
+  - 500000.0
+  - 1000000.0
+  - 1500000.0
+  - 2000000.0
+  - 2500000.0
+  - 3000000.0
+Samples:
+- Name: Data
+  SamplePath: run2
+  Data: true
+- Name: VBF Signal
+  SamplePath: signal
+  DisableStaterror: true
+- Name: ggF Signal
+  SamplePath: ggf
+  DisableStaterror: true
+- Name: Background
+  SamplePath: bkg_estimate
+  DisableStaterror: true
+NormFactors:
+- Name: signal_norm
+  Samples: VBF Signal
+  Nominal: 1
+  Bounds:
+  - 0.0
+  - 3891.598885928799
+Systematics:
+- Name: bkg_estimate_norm
+  Up:
+    Normalization: 0.19651515108506173
+  Down:
+    Normalization: -0.19651515108506173
+  Samples: Background
+  Type: Normalization
+- Name: branching_ratio_bb
+  Up:
+    Normalization: 0.034230167215544956
+  Down:
+    Normalization: -0.03479541236132045
+  Samples: VBF Signal
+  Type: Normalization
+- Name: scale_variations
+  Up:
+    VariationPath: scale_up
+  Down:
+    VariationPath: scale_down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: bkg_estimate_shape
+  Up:
+    VariationPath: bkg_estimate_shape__1up
+  Down:
+    VariationPath: bkg_estimate_shape__1down
+  Samples: Background
+  Type: NormPlusShape
+- Name: stat_bkg_estimate
+  Up:
+    VariationPath: stat_bkg_estimate_up
+  Down:
+    VariationPath: stat_bkg_estimate_down
+  Samples: Background
+  Type: NormPlusShape
+- Name: stat_signal
+  Up:
+    VariationPath: stat_signal_up
+  Down:
+    VariationPath: stat_signal_down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: m_hh_5_JET_EtaIntercalibration_Modelling
+  Up:
+    VariationPath: m_hh_5_JET_EtaIntercalibration_Modelling__1up
+  Down:
+    VariationPath: m_hh_5_JET_EtaIntercalibration_Modelling__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: m_hh_5_JET_EtaIntercalibration_NonClosure_PreRec
+  Up:
+    VariationPath: m_hh_5_JET_EtaIntercalibration_NonClosure_PreRec__1up
+  Down:
+    VariationPath: m_hh_5_JET_EtaIntercalibration_NonClosure_PreRec__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: m_hh_5_xbb_pt_bin_0
+  Up:
+    VariationPath: m_hh_5_xbb_pt_bin_0__1up
+  Down:
+    VariationPath: m_hh_5_xbb_pt_bin_0__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: m_hh_5_xbb_pt_bin_1
+  Up:
+    VariationPath: m_hh_5_xbb_pt_bin_1__1up
+  Down:
+    VariationPath: m_hh_5_xbb_pt_bin_1__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: m_hh_5_xbb_pt_bin_2
+  Up:
+    VariationPath: m_hh_5_xbb_pt_bin_2__1up
+  Down:
+    VariationPath: m_hh_5_xbb_pt_bin_2__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: m_hh_5_xbb_pt_bin_3
+  Up:
+    VariationPath: m_hh_5_xbb_pt_bin_3__1up
+  Down:
+    VariationPath: m_hh_5_xbb_pt_bin_3__1down
+  Samples: VBF Signal
+  Type: NormPlusShape

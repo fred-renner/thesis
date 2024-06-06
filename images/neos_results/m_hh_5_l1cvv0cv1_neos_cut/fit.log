@@ -1,0 +1,1091 @@
+2024-06-04 15:49:07 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root
+2024-06-04 15:49:07 INFO     opening config file /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/cabinetry_config.yaml
+2024-06-04 15:49:07 INFO     the config contains:
+2024-06-04 15:49:07 INFO       4 Sample(s)
+2024-06-04 15:49:07 INFO       1 Regions(s)
+2024-06-04 15:49:07 INFO       1 NormFactor(s)
+2024-06-04 15:49:07 INFO       12 Systematic(s)
+2024-06-04 15:49:07 DEBUG      in region m_hh_5_SR_xbb_2
+2024-06-04 15:49:07 DEBUG        reading sample Data
+2024-06-04 15:49:07 DEBUG          variation Nominal
+2024-06-04 15:49:07 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root:SR_xbb_2/run2/m_hh_5_NOSYS
+2024-06-04 15:49:07 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root
+2024-06-04 15:49:07 WARNING  m_hh_5_SR_xbb_2_Data has empty bins: [0 1 2 3 4]
+2024-06-04 15:49:07 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_Data.npz
+2024-06-04 15:49:07 DEBUG        reading sample VBF Signal
+2024-06-04 15:49:07 DEBUG          variation Nominal
+2024-06-04 15:49:07 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root:SR_xbb_2/signal/m_hh_5_NOSYS
+2024-06-04 15:49:07 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root
+2024-06-04 15:49:07 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_VBF-Signal.npz
+2024-06-04 15:49:07 DEBUG          variation scale_variations Up
+2024-06-04 15:49:07 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root:SR_xbb_2/signal/scale_up
+2024-06-04 15:49:07 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root
+2024-06-04 15:49:07 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_VBF-Signal_scale_variations_Up.npz
+2024-06-04 15:49:07 DEBUG          variation scale_variations Down
+2024-06-04 15:49:07 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root:SR_xbb_2/signal/scale_down
+2024-06-04 15:49:07 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root
+2024-06-04 15:49:07 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_VBF-Signal_scale_variations_Down.npz
+2024-06-04 15:49:07 DEBUG          variation stat_signal Up
+2024-06-04 15:49:07 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root:SR_xbb_2/signal/stat_signal_up
+2024-06-04 15:49:07 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root
+2024-06-04 15:49:07 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_VBF-Signal_stat_signal_Up.npz
+2024-06-04 15:49:07 DEBUG          variation stat_signal Down
+2024-06-04 15:49:07 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root:SR_xbb_2/signal/stat_signal_down
+2024-06-04 15:49:07 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root
+2024-06-04 15:49:07 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_VBF-Signal_stat_signal_Down.npz
+2024-06-04 15:49:07 DEBUG          variation m_hh_5_JET_EtaIntercalibration_Modelling Up
+2024-06-04 15:49:07 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root:SR_xbb_2/signal/m_hh_5_JET_EtaIntercalibration_Modelling__1up
+2024-06-04 15:49:07 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root
+2024-06-04 15:49:07 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_VBF-Signal_m_hh_5_JET_EtaIntercalibration_Modelling_Up.npz
+2024-06-04 15:49:07 DEBUG          variation m_hh_5_JET_EtaIntercalibration_Modelling Down
+2024-06-04 15:49:07 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root:SR_xbb_2/signal/m_hh_5_JET_EtaIntercalibration_Modelling__1down
+2024-06-04 15:49:07 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root
+2024-06-04 15:49:07 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_VBF-Signal_m_hh_5_JET_EtaIntercalibration_Modelling_Down.npz
+2024-06-04 15:49:07 DEBUG          variation m_hh_5_JET_EtaIntercalibration_NonClosure_PreRec Up
+2024-06-04 15:49:07 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root:SR_xbb_2/signal/m_hh_5_JET_EtaIntercalibration_NonClosure_PreRec__1up
+2024-06-04 15:49:07 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root
+2024-06-04 15:49:07 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_VBF-Signal_m_hh_5_JET_EtaIntercalibration_NonClosure_PreRec_Up.npz
+2024-06-04 15:49:07 DEBUG          variation m_hh_5_JET_EtaIntercalibration_NonClosure_PreRec Down
+2024-06-04 15:49:07 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root:SR_xbb_2/signal/m_hh_5_JET_EtaIntercalibration_NonClosure_PreRec__1down
+2024-06-04 15:49:07 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root
+2024-06-04 15:49:07 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_VBF-Signal_m_hh_5_JET_EtaIntercalibration_NonClosure_PreRec_Down.npz
+2024-06-04 15:49:07 DEBUG          variation m_hh_5_xbb_pt_bin_0 Up
+2024-06-04 15:49:07 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root:SR_xbb_2/signal/m_hh_5_xbb_pt_bin_0__1up
+2024-06-04 15:49:07 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root
+2024-06-04 15:49:07 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_VBF-Signal_m_hh_5_xbb_pt_bin_0_Up.npz
+2024-06-04 15:49:07 DEBUG          variation m_hh_5_xbb_pt_bin_0 Down
+2024-06-04 15:49:07 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root:SR_xbb_2/signal/m_hh_5_xbb_pt_bin_0__1down
+2024-06-04 15:49:07 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root
+2024-06-04 15:49:07 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_VBF-Signal_m_hh_5_xbb_pt_bin_0_Down.npz
+2024-06-04 15:49:07 DEBUG          variation m_hh_5_xbb_pt_bin_1 Up
+2024-06-04 15:49:07 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root:SR_xbb_2/signal/m_hh_5_xbb_pt_bin_1__1up
+2024-06-04 15:49:07 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root
+2024-06-04 15:49:07 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_VBF-Signal_m_hh_5_xbb_pt_bin_1_Up.npz
+2024-06-04 15:49:08 DEBUG          variation m_hh_5_xbb_pt_bin_1 Down
+2024-06-04 15:49:08 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root:SR_xbb_2/signal/m_hh_5_xbb_pt_bin_1__1down
+2024-06-04 15:49:08 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root
+2024-06-04 15:49:08 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_VBF-Signal_m_hh_5_xbb_pt_bin_1_Down.npz
+2024-06-04 15:49:08 DEBUG          variation m_hh_5_xbb_pt_bin_2 Up
+2024-06-04 15:49:08 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root:SR_xbb_2/signal/m_hh_5_xbb_pt_bin_2__1up
+2024-06-04 15:49:08 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root
+2024-06-04 15:49:08 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_VBF-Signal_m_hh_5_xbb_pt_bin_2_Up.npz
+2024-06-04 15:49:08 DEBUG          variation m_hh_5_xbb_pt_bin_2 Down
+2024-06-04 15:49:08 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root:SR_xbb_2/signal/m_hh_5_xbb_pt_bin_2__1down
+2024-06-04 15:49:08 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root
+2024-06-04 15:49:08 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_VBF-Signal_m_hh_5_xbb_pt_bin_2_Down.npz
+2024-06-04 15:49:08 DEBUG          variation m_hh_5_xbb_pt_bin_3 Up
+2024-06-04 15:49:08 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root:SR_xbb_2/signal/m_hh_5_xbb_pt_bin_3__1up
+2024-06-04 15:49:08 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root
+2024-06-04 15:49:08 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_VBF-Signal_m_hh_5_xbb_pt_bin_3_Up.npz
+2024-06-04 15:49:08 DEBUG          variation m_hh_5_xbb_pt_bin_3 Down
+2024-06-04 15:49:08 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root:SR_xbb_2/signal/m_hh_5_xbb_pt_bin_3__1down
+2024-06-04 15:49:08 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root
+2024-06-04 15:49:08 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_VBF-Signal_m_hh_5_xbb_pt_bin_3_Down.npz
+2024-06-04 15:49:08 DEBUG        reading sample ggF Signal
+2024-06-04 15:49:08 DEBUG          variation Nominal
+2024-06-04 15:49:08 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root:SR_xbb_2/ggf/m_hh_5_NOSYS
+2024-06-04 15:49:08 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root
+2024-06-04 15:49:08 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_ggF-Signal.npz
+2024-06-04 15:49:08 DEBUG        reading sample Background
+2024-06-04 15:49:08 DEBUG          variation Nominal
+2024-06-04 15:49:08 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root:SR_xbb_2/bkg_estimate/m_hh_5_NOSYS
+2024-06-04 15:49:08 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root
+2024-06-04 15:49:08 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_Background.npz
+2024-06-04 15:49:08 DEBUG          variation bkg_estimate_shape Up
+2024-06-04 15:49:08 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root:SR_xbb_2/bkg_estimate/bkg_estimate_shape__1up
+2024-06-04 15:49:08 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root
+2024-06-04 15:49:08 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_Background_bkg_estimate_shape_Up.npz
+2024-06-04 15:49:08 DEBUG          variation bkg_estimate_shape Down
+2024-06-04 15:49:08 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root:SR_xbb_2/bkg_estimate/bkg_estimate_shape__1down
+2024-06-04 15:49:08 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root
+2024-06-04 15:49:08 WARNING  m_hh_5_SR_xbb_2_Background_bkg_estimate_shape_Down has empty bins: [3 4]
+2024-06-04 15:49:08 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_Background_bkg_estimate_shape_Down.npz
+2024-06-04 15:49:08 DEBUG          variation stat_bkg_estimate Up
+2024-06-04 15:49:08 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root:SR_xbb_2/bkg_estimate/stat_bkg_estimate_up
+2024-06-04 15:49:08 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root
+2024-06-04 15:49:08 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_Background_stat_bkg_estimate_Up.npz
+2024-06-04 15:49:08 DEBUG          variation stat_bkg_estimate Down
+2024-06-04 15:49:08 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root:SR_xbb_2/bkg_estimate/stat_bkg_estimate_down
+2024-06-04 15:49:08 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_m_hh_5_l1cvv0cv1.root
+2024-06-04 15:49:08 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_Background_stat_bkg_estimate_Down.npz
+2024-06-04 15:49:08 DEBUG      in region m_hh_5_SR_xbb_2
+2024-06-04 15:49:08 DEBUG        reading sample Data
+2024-06-04 15:49:08 DEBUG          variation Nominal
+2024-06-04 15:49:08 WARNING  m_hh_5_SR_xbb_2_Data has empty bins: [0 1 2 3 4]
+2024-06-04 15:49:08 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_Data_modified.npz
+2024-06-04 15:49:08 DEBUG        reading sample VBF Signal
+2024-06-04 15:49:08 DEBUG          variation Nominal
+2024-06-04 15:49:08 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_VBF-Signal_modified.npz
+2024-06-04 15:49:08 DEBUG          variation scale_variations Up
+2024-06-04 15:49:08 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_VBF-Signal_scale_variations_Up_modified.npz
+2024-06-04 15:49:08 DEBUG          variation scale_variations Down
+2024-06-04 15:49:08 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_VBF-Signal_scale_variations_Down_modified.npz
+2024-06-04 15:49:08 DEBUG          variation stat_signal Up
+2024-06-04 15:49:08 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_VBF-Signal_stat_signal_Up_modified.npz
+2024-06-04 15:49:08 DEBUG          variation stat_signal Down
+2024-06-04 15:49:08 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_VBF-Signal_stat_signal_Down_modified.npz
+2024-06-04 15:49:08 DEBUG          variation m_hh_5_JET_EtaIntercalibration_Modelling Up
+2024-06-04 15:49:08 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_VBF-Signal_m_hh_5_JET_EtaIntercalibration_Modelling_Up_modified.npz
+2024-06-04 15:49:08 DEBUG          variation m_hh_5_JET_EtaIntercalibration_Modelling Down
+2024-06-04 15:49:08 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_VBF-Signal_m_hh_5_JET_EtaIntercalibration_Modelling_Down_modified.npz
+2024-06-04 15:49:08 DEBUG          variation m_hh_5_JET_EtaIntercalibration_NonClosure_PreRec Up
+2024-06-04 15:49:08 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_VBF-Signal_m_hh_5_JET_EtaIntercalibration_NonClosure_PreRec_Up_modified.npz
+2024-06-04 15:49:08 DEBUG          variation m_hh_5_JET_EtaIntercalibration_NonClosure_PreRec Down
+2024-06-04 15:49:08 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_VBF-Signal_m_hh_5_JET_EtaIntercalibration_NonClosure_PreRec_Down_modified.npz
+2024-06-04 15:49:08 DEBUG          variation m_hh_5_xbb_pt_bin_0 Up
+2024-06-04 15:49:08 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_VBF-Signal_m_hh_5_xbb_pt_bin_0_Up_modified.npz
+2024-06-04 15:49:08 DEBUG          variation m_hh_5_xbb_pt_bin_0 Down
+2024-06-04 15:49:08 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_VBF-Signal_m_hh_5_xbb_pt_bin_0_Down_modified.npz
+2024-06-04 15:49:08 DEBUG          variation m_hh_5_xbb_pt_bin_1 Up
+2024-06-04 15:49:08 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_VBF-Signal_m_hh_5_xbb_pt_bin_1_Up_modified.npz
+2024-06-04 15:49:08 DEBUG          variation m_hh_5_xbb_pt_bin_1 Down
+2024-06-04 15:49:08 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_VBF-Signal_m_hh_5_xbb_pt_bin_1_Down_modified.npz
+2024-06-04 15:49:08 DEBUG          variation m_hh_5_xbb_pt_bin_2 Up
+2024-06-04 15:49:08 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_VBF-Signal_m_hh_5_xbb_pt_bin_2_Up_modified.npz
+2024-06-04 15:49:08 DEBUG          variation m_hh_5_xbb_pt_bin_2 Down
+2024-06-04 15:49:08 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_VBF-Signal_m_hh_5_xbb_pt_bin_2_Down_modified.npz
+2024-06-04 15:49:08 DEBUG          variation m_hh_5_xbb_pt_bin_3 Up
+2024-06-04 15:49:08 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_VBF-Signal_m_hh_5_xbb_pt_bin_3_Up_modified.npz
+2024-06-04 15:49:08 DEBUG          variation m_hh_5_xbb_pt_bin_3 Down
+2024-06-04 15:49:08 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_VBF-Signal_m_hh_5_xbb_pt_bin_3_Down_modified.npz
+2024-06-04 15:49:08 DEBUG        reading sample ggF Signal
+2024-06-04 15:49:08 DEBUG          variation Nominal
+2024-06-04 15:49:08 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_ggF-Signal_modified.npz
+2024-06-04 15:49:08 DEBUG        reading sample Background
+2024-06-04 15:49:08 DEBUG          variation Nominal
+2024-06-04 15:49:08 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_Background_modified.npz
+2024-06-04 15:49:08 DEBUG          variation bkg_estimate_shape Up
+2024-06-04 15:49:08 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_Background_bkg_estimate_shape_Up_modified.npz
+2024-06-04 15:49:08 DEBUG          variation bkg_estimate_shape Down
+2024-06-04 15:49:08 WARNING  m_hh_5_SR_xbb_2_Background_bkg_estimate_shape_Down has empty bins: [3 4]
+2024-06-04 15:49:08 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_Background_bkg_estimate_shape_Down_modified.npz
+2024-06-04 15:49:08 DEBUG          variation stat_bkg_estimate Up
+2024-06-04 15:49:08 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_Background_stat_bkg_estimate_Up_modified.npz
+2024-06-04 15:49:08 DEBUG          variation stat_bkg_estimate Down
+2024-06-04 15:49:08 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/m_hh_5_l1cvv0cv1/histograms/m_hh_5_SR_xbb_2_Background_stat_bkg_estimate_Down_modified.npz
+2024-06-04 15:49:08 INFO     visualizing systematic templates
+2024-06-04 15:49:08 INFO     saving figure as figures/templates/m_hh_5_SR_xbb_2_VBF-Signal_scale_variations.pdf
+2024-06-04 15:49:09 INFO     saving figure as figures/templates/m_hh_5_SR_xbb_2_VBF-Signal_stat_signal.pdf
+2024-06-04 15:49:09 INFO     saving figure as figures/templates/m_hh_5_SR_xbb_2_VBF-Signal_m_hh_5_JET_EtaIntercalibration_Modelling.pdf
+2024-06-04 15:49:10 INFO     saving figure as figures/templates/m_hh_5_SR_xbb_2_VBF-Signal_m_hh_5_JET_EtaIntercalibration_NonClosure_PreRec.pdf
+2024-06-04 15:49:10 INFO     saving figure as figures/templates/m_hh_5_SR_xbb_2_VBF-Signal_m_hh_5_xbb_pt_bin_0.pdf
+2024-06-04 15:49:11 INFO     saving figure as figures/templates/m_hh_5_SR_xbb_2_VBF-Signal_m_hh_5_xbb_pt_bin_1.pdf
+2024-06-04 15:49:11 INFO     saving figure as figures/templates/m_hh_5_SR_xbb_2_VBF-Signal_m_hh_5_xbb_pt_bin_2.pdf
+2024-06-04 15:49:11 INFO     saving figure as figures/templates/m_hh_5_SR_xbb_2_VBF-Signal_m_hh_5_xbb_pt_bin_3.pdf
+2024-06-04 15:49:12 INFO     saving figure as figures/templates/m_hh_5_SR_xbb_2_Background_bkg_estimate_shape.pdf
+2024-06-04 15:49:12 INFO     saving figure as figures/templates/m_hh_5_SR_xbb_2_Background_stat_bkg_estimate.pdf
+2024-06-04 15:49:13 INFO     building workspace
+2024-06-04 15:49:13 DEBUG    adding NormFactor signal_norm to sample VBF Signal in region m_hh_5_SR_xbb_2
+2024-06-04 15:49:13 DEBUG    adding OverallSys branching_ratio_bb to sample VBF Signal in region m_hh_5_SR_xbb_2
+2024-06-04 15:49:13 DEBUG    adding OverallSys and HistoSys scale_variations to sample VBF Signal in region m_hh_5_SR_xbb_2
+2024-06-04 15:49:13 DEBUG    adding OverallSys and HistoSys stat_signal to sample VBF Signal in region m_hh_5_SR_xbb_2
+2024-06-04 15:49:13 DEBUG    adding OverallSys and HistoSys m_hh_5_JET_EtaIntercalibration_Modelling to sample VBF Signal in region m_hh_5_SR_xbb_2
+2024-06-04 15:49:13 DEBUG    adding OverallSys and HistoSys m_hh_5_JET_EtaIntercalibration_NonClosure_PreRec to sample VBF Signal in region m_hh_5_SR_xbb_2
+2024-06-04 15:49:13 DEBUG    adding OverallSys and HistoSys m_hh_5_xbb_pt_bin_0 to sample VBF Signal in region m_hh_5_SR_xbb_2
+2024-06-04 15:49:13 DEBUG    adding OverallSys and HistoSys m_hh_5_xbb_pt_bin_1 to sample VBF Signal in region m_hh_5_SR_xbb_2
+2024-06-04 15:49:13 DEBUG    adding OverallSys and HistoSys m_hh_5_xbb_pt_bin_2 to sample VBF Signal in region m_hh_5_SR_xbb_2
+2024-06-04 15:49:13 DEBUG    adding OverallSys and HistoSys m_hh_5_xbb_pt_bin_3 to sample VBF Signal in region m_hh_5_SR_xbb_2
+2024-06-04 15:49:13 DEBUG    adding OverallSys bkg_estimate_norm to sample Background in region m_hh_5_SR_xbb_2
+2024-06-04 15:49:13 DEBUG    adding OverallSys and HistoSys bkg_estimate_shape to sample Background in region m_hh_5_SR_xbb_2
+2024-06-04 15:49:13 DEBUG    adding OverallSys and HistoSys stat_bkg_estimate to sample Background in region m_hh_5_SR_xbb_2
+2024-06-04 15:49:13 INFO     Validating spec against schema: workspace.json
+2024-06-04 15:49:13 DEBUG    saving workspace to workspaces/m_hh_5_l1cvv0cv1.json
+2024-06-04 15:49:13 INFO     Validating spec against schema: workspace.json
+2024-06-04 15:49:13 INFO     Validating spec against schema: model.json
+2024-06-04 15:49:13 INFO     adding modifier bkg_estimate_shape (1 new nuisance parameters)
+2024-06-04 15:49:13 INFO     adding modifier stat_bkg_estimate (1 new nuisance parameters)
+2024-06-04 15:49:13 INFO     adding modifier m_hh_5_JET_EtaIntercalibration_Modelling (1 new nuisance parameters)
+2024-06-04 15:49:13 INFO     adding modifier m_hh_5_JET_EtaIntercalibration_NonClosure_PreRec (1 new nuisance parameters)
+2024-06-04 15:49:13 INFO     adding modifier m_hh_5_xbb_pt_bin_0 (1 new nuisance parameters)
+2024-06-04 15:49:13 INFO     adding modifier m_hh_5_xbb_pt_bin_1 (1 new nuisance parameters)
+2024-06-04 15:49:13 INFO     adding modifier m_hh_5_xbb_pt_bin_2 (1 new nuisance parameters)
+2024-06-04 15:49:13 INFO     adding modifier m_hh_5_xbb_pt_bin_3 (1 new nuisance parameters)
+2024-06-04 15:49:13 INFO     adding modifier scale_variations (1 new nuisance parameters)
+2024-06-04 15:49:13 INFO     adding modifier stat_signal (1 new nuisance parameters)
+2024-06-04 15:49:13 INFO     adding modifier signal_norm (1 new nuisance parameters)
+2024-06-04 15:49:13 INFO     adding modifier bkg_estimate_norm (1 new nuisance parameters)
+2024-06-04 15:49:13 INFO     adding modifier branching_ratio_bb (1 new nuisance parameters)
+2024-06-04 15:49:13 INFO     saving figure as figures/modifier_grid.pdf
+2024-06-04 15:49:13 INFO     performing maximum likelihood fit
+2024-06-04 15:49:13 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 40.81                      │              Nfcn = 352              │
+│ EDM = 5.13e-19 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:13 DEBUG    -2 log(L) = 40.812046 at best-fit point
+2024-06-04 15:49:13 INFO     fit results (with symmetric uncertainties):
+2024-06-04 15:49:13 INFO     bkg_estimate_shape                               =  0.0000 +/- 0.8922
+2024-06-04 15:49:13 INFO     stat_bkg_estimate                                =  0.0000 +/- 0.9930
+2024-06-04 15:49:13 INFO     m_hh_5_JET_EtaIntercalibration_Modelling         =  0.0000 +/- 0.9933
+2024-06-04 15:49:13 INFO     m_hh_5_JET_EtaIntercalibration_NonClosure_PreRec =  0.0000 +/- 0.9933
+2024-06-04 15:49:13 INFO     m_hh_5_xbb_pt_bin_0                              =  0.0000 +/- 0.9626
+2024-06-04 15:49:13 INFO     m_hh_5_xbb_pt_bin_1                              =  0.0000 +/- 0.9767
+2024-06-04 15:49:13 INFO     m_hh_5_xbb_pt_bin_2                              =  0.0000 +/- 0.9531
+2024-06-04 15:49:13 INFO     m_hh_5_xbb_pt_bin_3                              =  0.0000 +/- 0.8015
+2024-06-04 15:49:13 INFO     scale_variations                                 =  0.0000 +/- 0.9887
+2024-06-04 15:49:13 INFO     stat_signal                                      =  0.0000 +/- 0.9932
+2024-06-04 15:49:13 INFO     signal_norm                                      =  1.0000 +/- 0.4542
+2024-06-04 15:49:13 INFO     bkg_estimate_norm                                =  0.0000 +/- 0.9868
+2024-06-04 15:49:13 INFO     branching_ratio_bb                               =  0.0000 +/- 0.9933
+2024-06-04 15:49:13 INFO     calculating goodness-of-fit
+2024-06-04 15:49:13 DEBUG    Delta NLL = 0.000000
+2024-06-04 15:49:13 DEBUG    number of degrees of freedom: 4
+2024-06-04 15:49:13 INFO     p-value for goodness-of-fit test: 100.00%
+2024-06-04 15:49:13 INFO     saving figure as figures/pulls.pdf
+2024-06-04 15:49:13 INFO     saving figure as figures/correlation_matrix.pdf
+2024-06-04 15:49:14 DEBUG    total stdev is [[2.475088265800739, 5.092970038805114, 3.897521703176816, 1.916236251019006, 0.7490403075956337]]
+2024-06-04 15:49:14 DEBUG    total stdev per channel is [11.964430742125366]
+2024-06-04 15:49:14 DEBUG    total stdev is [[2.015115383436406, 3.748198852847209, 1.9319051818705968, 0.9565146043506914, 0.36584833828408153]]
+2024-06-04 15:49:14 DEBUG    total stdev per channel is [6.836254340403548]
+2024-06-04 15:49:14 INFO     saving figure as figures/m_hh_5_SR_xbb_2_prefit.pdf
+2024-06-04 15:49:14 INFO     saving figure as figures/m_hh_5_SR_xbb_2_postfit.pdf
+2024-06-04 15:49:14 INFO     yields per bin for pre-fit model prediction:
+╒════════════╤═══════════════════╤══════════════╤═════════════╤═════════════╤═════════════╕
+│ sample     │ m_hh_5_SR_xbb_2   │              │             │             │             │
+│            │ bin 1             │ bin 2        │ bin 3       │ bin 4       │ bin 5       │
+╞════════════╪═══════════════════╪══════════════╪═════════════╪═════════════╪═════════════╡
+│ Background │ 7.02 ± 1.82       │ 8.94 ± 0.85  │ 2.08 ± 0.30 │ 0.61 ± 0.61 │ 0.13 ± 0.14 │
+├────────────┼───────────────────┼──────────────┼─────────────┼─────────────┼─────────────┤
+│ VBF Signal │ 4.32 ± 1.68       │ 13.94 ± 5.02 │ 7.17 ± 3.89 │ 3.00 ± 1.82 │ 1.16 ± 0.74 │
+├────────────┼───────────────────┼──────────────┼─────────────┼─────────────┼─────────────┤
+│ ggF Signal │ 0.19 ± 0.00       │ 0.23 ± 0.00  │ 0.04 ± 0.00 │ 0.00 ± 0.00 │ 0.00 ± 0.00 │
+├────────────┼───────────────────┼──────────────┼─────────────┼─────────────┼─────────────┤
+│ total      │ 11.53 ± 2.48      │ 23.11 ± 5.09 │ 9.28 ± 3.90 │ 3.61 ± 1.92 │ 1.30 ± 0.75 │
+├────────────┼───────────────────┼──────────────┼─────────────┼─────────────┼─────────────┤
+│ data       │ 11.53             │ 23.11        │ 9.28        │ 3.61        │ 1.30        │
+╘════════════╧═══════════════════╧══════════════╧═════════════╧═════════════╧═════════════╛
+2024-06-04 15:49:14 INFO     saving table as tables/yields_per_bin_pre-fit.txt
+2024-06-04 15:49:15 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 40.81                      │              Nfcn = 352              │
+│ EDM = 4.12e-18 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:15 DEBUG    -2 log(L) = 40.812046 at best-fit point
+2024-06-04 15:49:15 INFO     calculating impact of bkg_estimate_shape on signal_norm
+2024-06-04 15:49:15 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 42.04                      │              Nfcn = 357              │
+│ EDM = 0.00114 (Goal: 0.002)      │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:15 DEBUG    -2 log(L) = 42.037150 at best-fit point
+2024-06-04 15:49:15 DEBUG    POI is 0.929323, difference to nominal is -0.070677
+2024-06-04 15:49:15 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 42.06                      │              Nfcn = 383              │
+│ EDM = 0.000152 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:15 DEBUG    -2 log(L) = 42.055716 at best-fit point
+2024-06-04 15:49:15 DEBUG    POI is 1.099691, difference to nominal is 0.099691
+2024-06-04 15:49:15 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.78                      │              Nfcn = 357              │
+│ EDM = 0.000926 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:15 DEBUG    -2 log(L) = 41.783735 at best-fit point
+2024-06-04 15:49:15 DEBUG    POI is 0.936363, difference to nominal is -0.063637
+2024-06-04 15:49:15 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.81                      │              Nfcn = 383              │
+│ EDM = 0.000119 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:15 DEBUG    -2 log(L) = 41.807170 at best-fit point
+2024-06-04 15:49:15 DEBUG    POI is 1.088350, difference to nominal is 0.088350
+2024-06-04 15:49:15 INFO     calculating impact of stat_bkg_estimate on signal_norm
+2024-06-04 15:49:15 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.81                      │              Nfcn = 305              │
+│ EDM = 0.000637 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:15 DEBUG    -2 log(L) = 41.813331 at best-fit point
+2024-06-04 15:49:15 DEBUG    POI is 0.994334, difference to nominal is -0.005666
+2024-06-04 15:49:15 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.81                      │              Nfcn = 305              │
+│ EDM = 0.000641 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:15 DEBUG    -2 log(L) = 41.813350 at best-fit point
+2024-06-04 15:49:15 DEBUG    POI is 1.005611, difference to nominal is 0.005611
+2024-06-04 15:49:15 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.8                       │              Nfcn = 305              │
+│ EDM = 0.000628 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:15 DEBUG    -2 log(L) = 41.799412 at best-fit point
+2024-06-04 15:49:15 DEBUG    POI is 0.994374, difference to nominal is -0.005626
+2024-06-04 15:49:15 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.8                       │              Nfcn = 305              │
+│ EDM = 0.000632 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:15 DEBUG    -2 log(L) = 41.799431 at best-fit point
+2024-06-04 15:49:15 DEBUG    POI is 1.005572, difference to nominal is 0.005572
+2024-06-04 15:49:15 INFO     calculating impact of m_hh_5_JET_EtaIntercalibration_Modelling on signal_norm
+2024-06-04 15:49:15 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.81                      │              Nfcn = 305              │
+│ EDM = 0.000186 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:15 DEBUG    -2 log(L) = 41.812264 at best-fit point
+2024-06-04 15:49:15 DEBUG    POI is 0.996599, difference to nominal is -0.003401
+2024-06-04 15:49:15 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.81                      │              Nfcn = 305              │
+│ EDM = 0.000336 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:15 DEBUG    -2 log(L) = 41.812415 at best-fit point
+2024-06-04 15:49:15 DEBUG    POI is 1.004488, difference to nominal is 0.004488
+2024-06-04 15:49:15 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.8                       │              Nfcn = 305              │
+│ EDM = 0.000183 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:15 DEBUG    -2 log(L) = 41.798982 at best-fit point
+2024-06-04 15:49:15 DEBUG    POI is 0.996621, difference to nominal is -0.003379
+2024-06-04 15:49:16 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.8                       │              Nfcn = 305              │
+│ EDM = 0.000332 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:16 DEBUG    -2 log(L) = 41.799132 at best-fit point
+2024-06-04 15:49:16 DEBUG    POI is 1.004458, difference to nominal is 0.004458
+2024-06-04 15:49:16 INFO     calculating impact of m_hh_5_JET_EtaIntercalibration_NonClosure_PreRec on signal_norm
+2024-06-04 15:49:16 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.81                      │              Nfcn = 305              │
+│ EDM = 0.000457 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:16 DEBUG    -2 log(L) = 41.812534 at best-fit point
+2024-06-04 15:49:16 DEBUG    POI is 0.994762, difference to nominal is -0.005238
+2024-06-04 15:49:16 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.81                      │              Nfcn = 305              │
+│ EDM = 0.000807 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:16 DEBUG    -2 log(L) = 41.812968 at best-fit point
+2024-06-04 15:49:16 DEBUG    POI is 1.006957, difference to nominal is 0.006957
+2024-06-04 15:49:16 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.8                       │              Nfcn = 305              │
+│ EDM = 0.000451 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:16 DEBUG    -2 log(L) = 41.799219 at best-fit point
+2024-06-04 15:49:16 DEBUG    POI is 0.994797, difference to nominal is -0.005203
+2024-06-04 15:49:16 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.8                       │              Nfcn = 305              │
+│ EDM = 0.000797 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:16 DEBUG    -2 log(L) = 41.799648 at best-fit point
+2024-06-04 15:49:16 DEBUG    POI is 1.006910, difference to nominal is 0.006910
+2024-06-04 15:49:16 INFO     calculating impact of m_hh_5_xbb_pt_bin_0 on signal_norm
+2024-06-04 15:49:16 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.87                      │              Nfcn = 357              │
+│ EDM = 0.00129 (Goal: 0.002)      │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:16 DEBUG    -2 log(L) = 41.869620 at best-fit point
+2024-06-04 15:49:16 DEBUG    POI is 0.912855, difference to nominal is -0.087145
+2024-06-04 15:49:16 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.89                      │              Nfcn = 383              │
+│ EDM = 8.93e-05 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:16 DEBUG    -2 log(L) = 41.887448 at best-fit point
+2024-06-04 15:49:16 DEBUG    POI is 1.109622, difference to nominal is 0.109622
+2024-06-04 15:49:16 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.79                      │              Nfcn = 357              │
+│ EDM = 0.0012 (Goal: 0.002)       │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:16 DEBUG    -2 log(L) = 41.791937 at best-fit point
+2024-06-04 15:49:16 DEBUG    POI is 0.916031, difference to nominal is -0.083969
+2024-06-04 15:49:16 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.81                      │              Nfcn = 383              │
+│ EDM = 8.25e-05 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:16 DEBUG    -2 log(L) = 41.808581 at best-fit point
+2024-06-04 15:49:16 DEBUG    POI is 1.105369, difference to nominal is 0.105369
+2024-06-04 15:49:16 INFO     calculating impact of m_hh_5_xbb_pt_bin_1 on signal_norm
+2024-06-04 15:49:16 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.84                      │              Nfcn = 357              │
+│ EDM = 0.000927 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:16 DEBUG    -2 log(L) = 41.844557 at best-fit point
+2024-06-04 15:49:16 DEBUG    POI is 0.910152, difference to nominal is -0.089848
+2024-06-04 15:49:16 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.85                      │              Nfcn = 357              │
+│ EDM = 0.0013 (Goal: 0.002)       │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:16 DEBUG    -2 log(L) = 41.851336 at best-fit point
+2024-06-04 15:49:16 DEBUG    POI is 1.099503, difference to nominal is 0.099503
+2024-06-04 15:49:17 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.8                       │              Nfcn = 357              │
+│ EDM = 0.000883 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:17 DEBUG    -2 log(L) = 41.797015 at best-fit point
+2024-06-04 15:49:17 DEBUG    POI is 0.912174, difference to nominal is -0.087826
+2024-06-04 15:49:17 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.8                       │              Nfcn = 357              │
+│ EDM = 0.00124 (Goal: 0.002)      │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:17 DEBUG    -2 log(L) = 41.803526 at best-fit point
+2024-06-04 15:49:17 DEBUG    POI is 1.097105, difference to nominal is 0.097105
+2024-06-04 15:49:17 INFO     calculating impact of m_hh_5_xbb_pt_bin_2 on signal_norm
+2024-06-04 15:49:17 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.89                      │              Nfcn = 383              │
+│ EDM = 0.000174 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:17 DEBUG    -2 log(L) = 41.887255 at best-fit point
+2024-06-04 15:49:17 DEBUG    POI is 0.842083, difference to nominal is -0.157917
+2024-06-04 15:49:17 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.91                      │              Nfcn = 383              │
+│ EDM = 6.39e-06 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:17 DEBUG    -2 log(L) = 41.912510 at best-fit point
+2024-06-04 15:49:17 DEBUG    POI is 1.203428, difference to nominal is 0.203428
+2024-06-04 15:49:17 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.79                      │              Nfcn = 383              │
+│ EDM = 0.000149 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:17 DEBUG    -2 log(L) = 41.788750 at best-fit point
+2024-06-04 15:49:17 DEBUG    POI is 0.848804, difference to nominal is -0.151196
+2024-06-04 15:49:17 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.81                      │              Nfcn = 357              │
+│ EDM = 0.00104 (Goal: 0.002)      │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:17 DEBUG    -2 log(L) = 41.812771 at best-fit point
+2024-06-04 15:49:17 DEBUG    POI is 1.187743, difference to nominal is 0.187743
+2024-06-04 15:49:17 INFO     calculating impact of m_hh_5_xbb_pt_bin_3 on signal_norm
+2024-06-04 15:49:17 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 42.21                      │              Nfcn = 383              │
+│ EDM = 0.000213 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:17 DEBUG    -2 log(L) = 42.207346 at best-fit point
+2024-06-04 15:49:17 DEBUG    POI is 0.699895, difference to nominal is -0.300105
+2024-06-04 15:49:17 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 42.54                      │              Nfcn = 383              │
+│ EDM = 0.000417 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:17 DEBUG    -2 log(L) = 42.544983 at best-fit point
+2024-06-04 15:49:17 DEBUG    POI is 1.473501, difference to nominal is 0.473501
+2024-06-04 15:49:17 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.71                      │              Nfcn = 383              │
+│ EDM = 0.000117 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:17 DEBUG    -2 log(L) = 41.712890 at best-fit point
+2024-06-04 15:49:17 DEBUG    POI is 0.751350, difference to nominal is -0.248650
+2024-06-04 15:49:17 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.92                      │              Nfcn = 383              │
+│ EDM = 0.000227 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:17 DEBUG    -2 log(L) = 41.917182 at best-fit point
+2024-06-04 15:49:17 DEBUG    POI is 1.365104, difference to nominal is 0.365104
+2024-06-04 15:49:17 INFO     calculating impact of scale_variations on signal_norm
+2024-06-04 15:49:18 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.82                      │              Nfcn = 383              │
+│ EDM = 0.000184 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:18 DEBUG    -2 log(L) = 41.818609 at best-fit point
+2024-06-04 15:49:18 DEBUG    POI is 0.856707, difference to nominal is -0.143293
+2024-06-04 15:49:18 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.83                      │              Nfcn = 383              │
+│ EDM = 8.13e-05 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:18 DEBUG    -2 log(L) = 41.825570 at best-fit point
+2024-06-04 15:49:18 DEBUG    POI is 1.202093, difference to nominal is 0.202093
+2024-06-04 15:49:18 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.8                       │              Nfcn = 383              │
+│ EDM = 0.000178 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:18 DEBUG    -2 log(L) = 41.796030 at best-fit point
+2024-06-04 15:49:18 DEBUG    POI is 0.858192, difference to nominal is -0.141808
+2024-06-04 15:49:18 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.8                       │              Nfcn = 383              │
+│ EDM = 7.95e-05 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:18 DEBUG    -2 log(L) = 41.802832 at best-fit point
+2024-06-04 15:49:18 DEBUG    POI is 1.199604, difference to nominal is 0.199604
+2024-06-04 15:49:18 INFO     calculating impact of stat_signal on signal_norm
+2024-06-04 15:49:18 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.81                      │              Nfcn = 305              │
+│ EDM = 0.000254 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:18 DEBUG    -2 log(L) = 41.812644 at best-fit point
+2024-06-04 15:49:18 DEBUG    POI is 0.995883, difference to nominal is -0.004117
+2024-06-04 15:49:18 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.81                      │              Nfcn = 305              │
+│ EDM = 0.000254 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:18 DEBUG    -2 log(L) = 41.812664 at best-fit point
+2024-06-04 15:49:18 DEBUG    POI is 1.004204, difference to nominal is 0.004204
+2024-06-04 15:49:18 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.8                       │              Nfcn = 305              │
+│ EDM = 0.00025 (Goal: 0.002)      │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:18 DEBUG    -2 log(L) = 41.799028 at best-fit point
+2024-06-04 15:49:18 DEBUG    POI is 0.995911, difference to nominal is -0.004089
+2024-06-04 15:49:18 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.8                       │              Nfcn = 305              │
+│ EDM = 0.000251 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:18 DEBUG    -2 log(L) = 41.799047 at best-fit point
+2024-06-04 15:49:18 DEBUG    POI is 1.004176, difference to nominal is 0.004176
+2024-06-04 15:49:18 INFO     calculating impact of bkg_estimate_norm on signal_norm
+2024-06-04 15:49:18 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.83                      │              Nfcn = 357              │
+│ EDM = 0.000173 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:18 DEBUG    -2 log(L) = 41.826047 at best-fit point
+2024-06-04 15:49:18 DEBUG    POI is 0.939802, difference to nominal is -0.060198
+2024-06-04 15:49:18 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.83                      │              Nfcn = 357              │
+│ EDM = 0.000162 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:18 DEBUG    -2 log(L) = 41.825382 at best-fit point
+2024-06-04 15:49:18 DEBUG    POI is 1.063806, difference to nominal is 0.063806
+2024-06-04 15:49:18 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.8                       │              Nfcn = 357              │
+│ EDM = 0.000168 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:18 DEBUG    -2 log(L) = 41.799383 at best-fit point
+2024-06-04 15:49:18 DEBUG    POI is 0.940608, difference to nominal is -0.059392
+2024-06-04 15:49:19 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.8                       │              Nfcn = 357              │
+│ EDM = 0.000158 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:19 DEBUG    -2 log(L) = 41.798776 at best-fit point
+2024-06-04 15:49:19 DEBUG    POI is 1.062980, difference to nominal is 0.062980
+2024-06-04 15:49:19 INFO     calculating impact of branching_ratio_bb on signal_norm
+2024-06-04 15:49:19 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.81                      │              Nfcn = 330              │
+│ EDM = 1.03e-06 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:19 DEBUG    -2 log(L) = 41.812047 at best-fit point
+2024-06-04 15:49:19 DEBUG    POI is 0.966514, difference to nominal is -0.033486
+2024-06-04 15:49:19 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.81                      │              Nfcn = 331              │
+│ EDM = 0.00118 (Goal: 0.002)      │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:19 DEBUG    -2 log(L) = 41.813221 at best-fit point
+2024-06-04 15:49:19 DEBUG    POI is 1.023151, difference to nominal is 0.023151
+2024-06-04 15:49:19 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.8                       │              Nfcn = 330              │
+│ EDM = 1e-06 (Goal: 0.002)        │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:19 DEBUG    -2 log(L) = 41.798783 at best-fit point
+2024-06-04 15:49:19 DEBUG    POI is 0.966735, difference to nominal is -0.033265
+2024-06-04 15:49:19 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 41.8                       │              Nfcn = 330              │
+│ EDM = 7.79e-07 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-04 15:49:19 DEBUG    -2 log(L) = 41.798783 at best-fit point
+2024-06-04 15:49:19 DEBUG    POI is 1.035480, difference to nominal is 0.035480
+2024-06-04 15:49:19 INFO     saving figure as figures/ranking.pdf
+2024-06-04 15:49:20 INFO     calculating 95% confidence level upper limit for signal_norm
+2024-06-04 15:49:20 INFO     determining observed upper limit
+2024-06-04 15:49:20 DEBUG    signal_norm = 0.0010, observed CLs = 1.0000
+2024-06-04 15:49:21 DEBUG    signal_norm = 10.0000, observed CLs = 0.0000
+2024-06-04 15:49:22 DEBUG    signal_norm = 9.5001, observed CLs = 0.0000
+2024-06-04 15:49:22 DEBUG    signal_norm = 4.7505, observed CLs = 0.0002
+2024-06-04 15:49:23 DEBUG    signal_norm = 2.3758, observed CLs = 0.0280
+2024-06-04 15:49:24 DEBUG    signal_norm = 1.1884, observed CLs = 0.3533
+2024-06-04 15:49:24 DEBUG    signal_norm = 2.2953, observed CLs = 0.0333
+2024-06-04 15:49:25 DEBUG    signal_norm = 2.0581, observed CLs = 0.0560
+2024-06-04 15:49:25 DEBUG    signal_norm = 2.1207, observed CLs = 0.0488
+2024-06-04 15:49:26 DEBUG    signal_norm = 2.1103, observed CLs = 0.0499
+2024-06-04 15:49:26 DEBUG    signal_norm = 2.1053, observed CLs = 0.0505
+2024-06-04 15:49:26 INFO     successfully converged after 11 steps
+2024-06-04 15:49:26 INFO     observed upper limit: 2.1103
+2024-06-04 15:49:26 INFO     determining expected -2 sigma upper limit
+2024-06-04 15:49:26 DEBUG    signal_norm = 0.0010, expected -2 sigma CLs = 1.0000 (cached)
+2024-06-04 15:49:26 DEBUG    signal_norm = 1.1884, expected -2 sigma CLs = 0.0000 (cached)
+2024-06-04 15:49:27 DEBUG    signal_norm = 1.1290, expected -2 sigma CLs = 0.0000
+2024-06-04 15:49:27 DEBUG    signal_norm = 0.5650, expected -2 sigma CLs = 0.0009
+2024-06-04 15:49:28 DEBUG    signal_norm = 0.2830, expected -2 sigma CLs = 0.0199
+2024-06-04 15:49:28 DEBUG    signal_norm = 0.1420, expected -2 sigma CLs = 0.1300
+2024-06-04 15:49:29 DEBUG    signal_norm = 0.2445, expected -2 sigma CLs = 0.0325
+2024-06-04 15:49:29 DEBUG    signal_norm = 0.2002, expected -2 sigma CLs = 0.0583
+2024-06-04 15:49:30 DEBUG    signal_norm = 0.2144, expected -2 sigma CLs = 0.0482
+2024-06-04 15:49:30 DEBUG    signal_norm = 0.2094, expected -2 sigma CLs = 0.0515
+2024-06-04 15:49:30 INFO     successfully converged after 10 steps
+2024-06-04 15:49:30 INFO     expected -2 sigma upper limit: 0.2094
+2024-06-04 15:49:30 INFO     determining expected -1 sigma upper limit
+2024-06-04 15:49:30 DEBUG    signal_norm = 0.2830, expected -1 sigma CLs = 0.0645 (cached)
+2024-06-04 15:49:30 DEBUG    signal_norm = 0.5650, expected -1 sigma CLs = 0.0060 (cached)
+2024-06-04 15:49:31 DEBUG    signal_norm = 0.3529, expected -1 sigma CLs = 0.0344
+2024-06-04 15:49:31 DEBUG    signal_norm = 0.3166, expected -1 sigma CLs = 0.0475
+2024-06-04 15:49:32 DEBUG    signal_norm = 0.3116, expected -1 sigma CLs = 0.0497
+2024-06-04 15:49:32 DEBUG    signal_norm = 0.3066, expected -1 sigma CLs = 0.0520
+2024-06-04 15:49:32 INFO     successfully converged after 6 steps
+2024-06-04 15:49:32 INFO     expected -1 sigma upper limit: 0.3116
+2024-06-04 15:49:32 INFO     determining expected upper limit
+2024-06-04 15:49:32 DEBUG    signal_norm = 0.3529, expected CLs = 0.1222 (cached)
+2024-06-04 15:49:32 DEBUG    signal_norm = 0.5650, expected CLs = 0.0353 (cached)
+2024-06-04 15:49:33 DEBUG    signal_norm = 0.5291, expected CLs = 0.0433
+2024-06-04 15:49:33 DEBUG    signal_norm = 0.5013, expected CLs = 0.0507
+2024-06-04 15:49:34 DEBUG    signal_norm = 0.5063, expected CLs = 0.0493
+2024-06-04 15:49:34 INFO     successfully converged after 5 steps
+2024-06-04 15:49:34 INFO     expected upper limit: 0.5063
+2024-06-04 15:49:34 INFO     determining expected +1 sigma upper limit
+2024-06-04 15:49:34 DEBUG    signal_norm = 0.5650, expected +1 sigma CLs = 0.1599 (cached)
+2024-06-04 15:49:34 DEBUG    signal_norm = 1.1290, expected +1 sigma CLs = 0.0216 (cached)
+2024-06-04 15:49:34 DEBUG    signal_norm = 1.0134, expected +1 sigma CLs = 0.0321
+2024-06-04 15:49:35 DEBUG    signal_norm = 0.8439, expected +1 sigma CLs = 0.0582
+2024-06-04 15:49:35 DEBUG    signal_norm = 0.8971, expected +1 sigma CLs = 0.0482
+2024-06-04 15:49:36 DEBUG    signal_norm = 0.8874, expected +1 sigma CLs = 0.0499
+2024-06-04 15:49:36 DEBUG    signal_norm = 0.8824, expected +1 sigma CLs = 0.0507
+2024-06-04 15:49:36 INFO     successfully converged after 7 steps
+2024-06-04 15:49:36 INFO     expected +1 sigma upper limit: 0.8874
+2024-06-04 15:49:36 INFO     determining expected +2 sigma upper limit
+2024-06-04 15:49:36 DEBUG    signal_norm = 1.1884, expected +2 sigma CLs = 0.1234 (cached)
+2024-06-04 15:49:36 DEBUG    signal_norm = 2.0581, expected +2 sigma CLs = 0.0191 (cached)
+2024-06-04 15:49:37 DEBUG    signal_norm = 1.8004, expected +2 sigma CLs = 0.0328
+2024-06-04 15:49:38 DEBUG    signal_norm = 1.5369, expected +2 sigma CLs = 0.0576
+2024-06-04 15:49:38 DEBUG    signal_norm = 1.6173, expected +2 sigma CLs = 0.0484
+2024-06-04 15:49:39 DEBUG    signal_norm = 1.6033, expected +2 sigma CLs = 0.0499
+2024-06-04 15:49:39 DEBUG    signal_norm = 1.5983, expected +2 sigma CLs = 0.0504
+2024-06-04 15:49:39 INFO     successfully converged after 7 steps
+2024-06-04 15:49:39 INFO     expected +2 sigma upper limit: 1.6033
+2024-06-04 15:49:39 INFO     total of 46 steps to calculate all limits
+2024-06-04 15:49:39 INFO     summary of 95% confidence level upper limits:
+2024-06-04 15:49:39 INFO     observed         : 2.1103
+2024-06-04 15:49:39 INFO     expected -2 sigma: 0.2094
+2024-06-04 15:49:39 INFO     expected -1 sigma: 0.3116
+2024-06-04 15:49:39 INFO     expected         : 0.5063
+2024-06-04 15:49:39 INFO     expected +1 sigma: 0.8874
+2024-06-04 15:49:39 INFO     expected +2 sigma: 1.6033
+2024-06-04 15:49:39 INFO     saving figure as figures/limit.pdf
+2024-06-04 15:49:39 INFO     calculating discovery significance for signal_norm
+2024-06-04 15:49:40 INFO     observed p-value: 9.951e-08
+2024-06-04 15:49:40 INFO     observed significance: 5.200
+2024-06-04 15:49:40 INFO     expected p-value: 9.951e-08
+2024-06-04 15:49:40 INFO     expected significance: 5.200

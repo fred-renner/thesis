@@ -78,12 +78,11 @@ Table \ref{tab:neos-samples} gives an overview of used samples and the number of
 \begin{equation}
     x'=\frac{x - \text{min}(x)}{\text{max}(x)-\text{min}(x)},
 \end{equation}
-scaling them between 0 and 1. \qty[]{90}{\percent} of events in the dataset are used for training (39713 events), whereas the other \qty[]{10}{\percent} are again split into a \qty[]{80}{\percent} validation sample (3530 events) and \qty[]{20}{\percent} test sample (883 events). In addition four samples are processed through the pipeline to estimate the background with the ABCD method described in \ref{sec:abcd}. The transfer factor and its uncertainty is estimated from the \ac{cr} and a shape uncertainty is estimated in the \ac{vr}. Event numbers are also shown in table \ref{tab:neos-samples}. Per training epoch, which corresponds to a full processing of the dataset, data are reshuffled.
+scaling them between 0 and 1. \qty[]{90}{\percent} of events in the dataset are used for training (39713 events), whereas the other \qty[]{10}{\percent} are again split into a \qty[]{80}{\percent} validation sample (3530 events) and \qty[]{20}{\percent} test sample (883 events). The epoch with the lowest loss value when evaluated on the validation sample is chosen after training. 
 
-The optimization also optimizes cuts on the invariant mass $m_{jj}$ and the pseudorapidity difference $|\Delta\eta(j,j)|$ of the two \ac{vbf} jets as mentioned in \ref{sec:hh4b_analysis_strategy}. Cutting on a value can be viewed mathematically by multiplying the to be cutted value with a Heaviside function that is shifted by the cut value. As differentiable approximation a sigmoid function is used which is then multiplied to the event weights.
+In addition four samples are processed through the pipeline to estimate the background with the ABCD method described in \ref{sec:abcd}. The transfer factor and its uncertainty is estimated from the \ac{cr} and a shape uncertainty is estimated in the \ac{vr} as described in \ref{sec:bkg_uncertainties}. Event numbers are also shown in table \ref{tab:neos-samples}. Per training epoch, which corresponds to a full processing of the dataset, data are reshuffled.
 
-
-
+The optimization also optimizes cuts on the invariant mass $m_{jj}$ and the pseudorapidity difference $|\Delta\eta(j,j)|$ of the two \ac{vbf} jets as mentioned in \ref{sec:hh4b_analysis_strategy}. Mathematically, applying a cut can be represented by multiplying the value to be cut with a Heaviside function shifted by the cut value. For a differentiable approximation, a sigmoid function is used, which is then multiplied to an event's weight.
 
 \begin{table}[]
     \centering
@@ -124,7 +123,7 @@ The optimization also optimizes cuts on the invariant mass $m_{jj}$ and the pseu
 \begin{figure}
     \centering
     \includegraphics[width=1\textwidth]{tomats_inputs_0}
-    \caption[]{Neos input variables (1/2): The coloums from left to right corresponds to the four vectors of the leading Higgs candidate, the subleading Higgs candidate and the Higgs Pair system. A legend valid for all figures is shown in the upper right figure.}
+    \caption[]{Neos input variables (1/2): The coloums from left to right correspond to the four vectors of the leading Higgs candidate, the subleading Higgs candidate and the Higgs Pair system. A legend valid for all figures is shown in the upper right figure.}
     \label{fig:tomats_inputs_0}
 \end{figure}
 

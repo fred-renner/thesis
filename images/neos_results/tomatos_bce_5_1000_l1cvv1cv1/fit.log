@@ -1,0 +1,348 @@
+2024-06-05 12:46:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root
+2024-06-05 12:46:59 INFO     opening config file /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/cabinetry_config.yaml
+2024-06-05 12:46:59 INFO     the config contains:
+2024-06-05 12:46:59 INFO       4 Sample(s)
+2024-06-05 12:46:59 INFO       1 Regions(s)
+2024-06-05 12:46:59 INFO       1 NormFactor(s)
+2024-06-05 12:46:59 INFO       12 Systematic(s)
+2024-06-05 12:46:59 DEBUG      in region tomatos_bce_5_1000_SR_xbb_2
+2024-06-05 12:46:59 DEBUG        reading sample Data
+2024-06-05 12:46:59 DEBUG          variation Nominal
+2024-06-05 12:46:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root:SR_xbb_2/run2/tomatos_bce_5_1000_NOSYS
+2024-06-05 12:46:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root
+2024-06-05 12:46:59 WARNING  tomatos_bce_5_1000_SR_xbb_2_Data has empty bins: [0 1 2 3 4]
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_Data.npz
+2024-06-05 12:46:59 DEBUG        reading sample VBF Signal
+2024-06-05 12:46:59 DEBUG          variation Nominal
+2024-06-05 12:46:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root:SR_xbb_2/signal/tomatos_bce_5_1000_NOSYS
+2024-06-05 12:46:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal.npz
+2024-06-05 12:46:59 DEBUG          variation scale_variations Up
+2024-06-05 12:46:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root:SR_xbb_2/signal/scale_up
+2024-06-05 12:46:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_scale_variations_Up.npz
+2024-06-05 12:46:59 DEBUG          variation scale_variations Down
+2024-06-05 12:46:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root:SR_xbb_2/signal/scale_down
+2024-06-05 12:46:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_scale_variations_Down.npz
+2024-06-05 12:46:59 DEBUG          variation stat_signal Up
+2024-06-05 12:46:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root:SR_xbb_2/signal/stat_signal_up
+2024-06-05 12:46:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_stat_signal_Up.npz
+2024-06-05 12:46:59 DEBUG          variation stat_signal Down
+2024-06-05 12:46:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root:SR_xbb_2/signal/stat_signal_down
+2024-06-05 12:46:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_stat_signal_Down.npz
+2024-06-05 12:46:59 DEBUG          variation tomatos_bce_5_1000_JET_EtaIntercalibration_Modelling Up
+2024-06-05 12:46:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root:SR_xbb_2/signal/tomatos_bce_5_1000_JET_EtaIntercalibration_Modelling__1up
+2024-06-05 12:46:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_tomatos_bce_5_1000_JET_EtaIntercalibration_Modelling_Up.npz
+2024-06-05 12:46:59 DEBUG          variation tomatos_bce_5_1000_JET_EtaIntercalibration_Modelling Down
+2024-06-05 12:46:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root:SR_xbb_2/signal/tomatos_bce_5_1000_JET_EtaIntercalibration_Modelling__1down
+2024-06-05 12:46:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_tomatos_bce_5_1000_JET_EtaIntercalibration_Modelling_Down.npz
+2024-06-05 12:46:59 DEBUG          variation tomatos_bce_5_1000_JET_EtaIntercalibration_NonClosure_PreRec Up
+2024-06-05 12:46:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root:SR_xbb_2/signal/tomatos_bce_5_1000_JET_EtaIntercalibration_NonClosure_PreRec__1up
+2024-06-05 12:46:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_tomatos_bce_5_1000_JET_EtaIntercalibration_NonClosure_PreRec_Up.npz
+2024-06-05 12:46:59 DEBUG          variation tomatos_bce_5_1000_JET_EtaIntercalibration_NonClosure_PreRec Down
+2024-06-05 12:46:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root:SR_xbb_2/signal/tomatos_bce_5_1000_JET_EtaIntercalibration_NonClosure_PreRec__1down
+2024-06-05 12:46:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_tomatos_bce_5_1000_JET_EtaIntercalibration_NonClosure_PreRec_Down.npz
+2024-06-05 12:46:59 DEBUG          variation tomatos_bce_5_1000_xbb_pt_bin_0 Up
+2024-06-05 12:46:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root:SR_xbb_2/signal/tomatos_bce_5_1000_xbb_pt_bin_0__1up
+2024-06-05 12:46:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_tomatos_bce_5_1000_xbb_pt_bin_0_Up.npz
+2024-06-05 12:46:59 DEBUG          variation tomatos_bce_5_1000_xbb_pt_bin_0 Down
+2024-06-05 12:46:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root:SR_xbb_2/signal/tomatos_bce_5_1000_xbb_pt_bin_0__1down
+2024-06-05 12:46:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_tomatos_bce_5_1000_xbb_pt_bin_0_Down.npz
+2024-06-05 12:46:59 DEBUG          variation tomatos_bce_5_1000_xbb_pt_bin_1 Up
+2024-06-05 12:46:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root:SR_xbb_2/signal/tomatos_bce_5_1000_xbb_pt_bin_1__1up
+2024-06-05 12:46:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_tomatos_bce_5_1000_xbb_pt_bin_1_Up.npz
+2024-06-05 12:46:59 DEBUG          variation tomatos_bce_5_1000_xbb_pt_bin_1 Down
+2024-06-05 12:46:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root:SR_xbb_2/signal/tomatos_bce_5_1000_xbb_pt_bin_1__1down
+2024-06-05 12:46:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_tomatos_bce_5_1000_xbb_pt_bin_1_Down.npz
+2024-06-05 12:46:59 DEBUG          variation tomatos_bce_5_1000_xbb_pt_bin_2 Up
+2024-06-05 12:46:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root:SR_xbb_2/signal/tomatos_bce_5_1000_xbb_pt_bin_2__1up
+2024-06-05 12:46:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_tomatos_bce_5_1000_xbb_pt_bin_2_Up.npz
+2024-06-05 12:46:59 DEBUG          variation tomatos_bce_5_1000_xbb_pt_bin_2 Down
+2024-06-05 12:46:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root:SR_xbb_2/signal/tomatos_bce_5_1000_xbb_pt_bin_2__1down
+2024-06-05 12:46:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_tomatos_bce_5_1000_xbb_pt_bin_2_Down.npz
+2024-06-05 12:46:59 DEBUG          variation tomatos_bce_5_1000_xbb_pt_bin_3 Up
+2024-06-05 12:46:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root:SR_xbb_2/signal/tomatos_bce_5_1000_xbb_pt_bin_3__1up
+2024-06-05 12:46:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_tomatos_bce_5_1000_xbb_pt_bin_3_Up.npz
+2024-06-05 12:46:59 DEBUG          variation tomatos_bce_5_1000_xbb_pt_bin_3 Down
+2024-06-05 12:46:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root:SR_xbb_2/signal/tomatos_bce_5_1000_xbb_pt_bin_3__1down
+2024-06-05 12:46:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_tomatos_bce_5_1000_xbb_pt_bin_3_Down.npz
+2024-06-05 12:46:59 DEBUG        reading sample ggF Signal
+2024-06-05 12:46:59 DEBUG          variation Nominal
+2024-06-05 12:46:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root:SR_xbb_2/ggf/tomatos_bce_5_1000_NOSYS
+2024-06-05 12:46:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_ggF-Signal.npz
+2024-06-05 12:46:59 DEBUG        reading sample Background
+2024-06-05 12:46:59 DEBUG          variation Nominal
+2024-06-05 12:46:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root:SR_xbb_2/bkg_estimate/tomatos_bce_5_1000_NOSYS
+2024-06-05 12:46:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_Background.npz
+2024-06-05 12:46:59 DEBUG          variation bkg_estimate_shape Up
+2024-06-05 12:46:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root:SR_xbb_2/bkg_estimate/bkg_estimate_shape__1up
+2024-06-05 12:46:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_Background_bkg_estimate_shape_Up.npz
+2024-06-05 12:46:59 DEBUG          variation bkg_estimate_shape Down
+2024-06-05 12:46:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root:SR_xbb_2/bkg_estimate/bkg_estimate_shape__1down
+2024-06-05 12:46:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root
+2024-06-05 12:46:59 WARNING  tomatos_bce_5_1000_SR_xbb_2_Background_bkg_estimate_shape_Down has empty bins: [2 4]
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_Background_bkg_estimate_shape_Down.npz
+2024-06-05 12:46:59 DEBUG          variation stat_bkg_estimate Up
+2024-06-05 12:46:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root:SR_xbb_2/bkg_estimate/stat_bkg_estimate_up
+2024-06-05 12:46:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_Background_stat_bkg_estimate_Up.npz
+2024-06-05 12:46:59 DEBUG          variation stat_bkg_estimate Down
+2024-06-05 12:46:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root:SR_xbb_2/bkg_estimate/stat_bkg_estimate_down
+2024-06-05 12:46:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry_tomatos_bce_5_1000_l1cvv1cv1.root
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_Background_stat_bkg_estimate_Down.npz
+2024-06-05 12:46:59 DEBUG      in region tomatos_bce_5_1000_SR_xbb_2
+2024-06-05 12:46:59 DEBUG        reading sample Data
+2024-06-05 12:46:59 DEBUG          variation Nominal
+2024-06-05 12:46:59 WARNING  tomatos_bce_5_1000_SR_xbb_2_Data has empty bins: [0 1 2 3 4]
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_Data_modified.npz
+2024-06-05 12:46:59 DEBUG        reading sample VBF Signal
+2024-06-05 12:46:59 DEBUG          variation Nominal
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_modified.npz
+2024-06-05 12:46:59 DEBUG          variation scale_variations Up
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_scale_variations_Up_modified.npz
+2024-06-05 12:46:59 DEBUG          variation scale_variations Down
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_scale_variations_Down_modified.npz
+2024-06-05 12:46:59 DEBUG          variation stat_signal Up
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_stat_signal_Up_modified.npz
+2024-06-05 12:46:59 DEBUG          variation stat_signal Down
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_stat_signal_Down_modified.npz
+2024-06-05 12:46:59 DEBUG          variation tomatos_bce_5_1000_JET_EtaIntercalibration_Modelling Up
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_tomatos_bce_5_1000_JET_EtaIntercalibration_Modelling_Up_modified.npz
+2024-06-05 12:46:59 DEBUG          variation tomatos_bce_5_1000_JET_EtaIntercalibration_Modelling Down
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_tomatos_bce_5_1000_JET_EtaIntercalibration_Modelling_Down_modified.npz
+2024-06-05 12:46:59 DEBUG          variation tomatos_bce_5_1000_JET_EtaIntercalibration_NonClosure_PreRec Up
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_tomatos_bce_5_1000_JET_EtaIntercalibration_NonClosure_PreRec_Up_modified.npz
+2024-06-05 12:46:59 DEBUG          variation tomatos_bce_5_1000_JET_EtaIntercalibration_NonClosure_PreRec Down
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_tomatos_bce_5_1000_JET_EtaIntercalibration_NonClosure_PreRec_Down_modified.npz
+2024-06-05 12:46:59 DEBUG          variation tomatos_bce_5_1000_xbb_pt_bin_0 Up
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_tomatos_bce_5_1000_xbb_pt_bin_0_Up_modified.npz
+2024-06-05 12:46:59 DEBUG          variation tomatos_bce_5_1000_xbb_pt_bin_0 Down
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_tomatos_bce_5_1000_xbb_pt_bin_0_Down_modified.npz
+2024-06-05 12:46:59 DEBUG          variation tomatos_bce_5_1000_xbb_pt_bin_1 Up
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_tomatos_bce_5_1000_xbb_pt_bin_1_Up_modified.npz
+2024-06-05 12:46:59 DEBUG          variation tomatos_bce_5_1000_xbb_pt_bin_1 Down
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_tomatos_bce_5_1000_xbb_pt_bin_1_Down_modified.npz
+2024-06-05 12:46:59 DEBUG          variation tomatos_bce_5_1000_xbb_pt_bin_2 Up
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_tomatos_bce_5_1000_xbb_pt_bin_2_Up_modified.npz
+2024-06-05 12:46:59 DEBUG          variation tomatos_bce_5_1000_xbb_pt_bin_2 Down
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_tomatos_bce_5_1000_xbb_pt_bin_2_Down_modified.npz
+2024-06-05 12:46:59 DEBUG          variation tomatos_bce_5_1000_xbb_pt_bin_3 Up
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_tomatos_bce_5_1000_xbb_pt_bin_3_Up_modified.npz
+2024-06-05 12:46:59 DEBUG          variation tomatos_bce_5_1000_xbb_pt_bin_3 Down
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_tomatos_bce_5_1000_xbb_pt_bin_3_Down_modified.npz
+2024-06-05 12:46:59 DEBUG        reading sample ggF Signal
+2024-06-05 12:46:59 DEBUG          variation Nominal
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_ggF-Signal_modified.npz
+2024-06-05 12:46:59 DEBUG        reading sample Background
+2024-06-05 12:46:59 DEBUG          variation Nominal
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_Background_modified.npz
+2024-06-05 12:46:59 DEBUG          variation bkg_estimate_shape Up
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_Background_bkg_estimate_shape_Up_modified.npz
+2024-06-05 12:46:59 DEBUG          variation bkg_estimate_shape Down
+2024-06-05 12:46:59 WARNING  tomatos_bce_5_1000_SR_xbb_2_Background_bkg_estimate_shape_Down has empty bins: [2 4]
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_Background_bkg_estimate_shape_Down_modified.npz
+2024-06-05 12:46:59 DEBUG          variation stat_bkg_estimate Up
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_Background_stat_bkg_estimate_Up_modified.npz
+2024-06-05 12:46:59 DEBUG          variation stat_bkg_estimate Down
+2024-06-05 12:46:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_1000_l1cvv1cv1/histograms/tomatos_bce_5_1000_SR_xbb_2_Background_stat_bkg_estimate_Down_modified.npz
+2024-06-05 12:46:59 INFO     visualizing systematic templates
+2024-06-05 12:46:59 INFO     saving figure as figures/templates/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_scale_variations.pdf
+2024-06-05 12:47:00 INFO     saving figure as figures/templates/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_stat_signal.pdf
+2024-06-05 12:47:00 INFO     saving figure as figures/templates/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_tomatos_bce_5_1000_JET_EtaIntercalibration_Modelling.pdf
+2024-06-05 12:47:01 INFO     saving figure as figures/templates/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_tomatos_bce_5_1000_JET_EtaIntercalibration_NonClosure_PreRec.pdf
+2024-06-05 12:47:01 INFO     saving figure as figures/templates/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_tomatos_bce_5_1000_xbb_pt_bin_0.pdf
+2024-06-05 12:47:01 INFO     saving figure as figures/templates/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_tomatos_bce_5_1000_xbb_pt_bin_1.pdf
+2024-06-05 12:47:02 INFO     saving figure as figures/templates/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_tomatos_bce_5_1000_xbb_pt_bin_2.pdf
+2024-06-05 12:47:02 INFO     saving figure as figures/templates/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_tomatos_bce_5_1000_xbb_pt_bin_3.pdf
+2024-06-05 12:47:03 INFO     saving figure as figures/templates/tomatos_bce_5_1000_SR_xbb_2_Background_bkg_estimate_shape.pdf
+2024-06-05 12:47:03 INFO     saving figure as figures/templates/tomatos_bce_5_1000_SR_xbb_2_Background_stat_bkg_estimate.pdf
+2024-06-05 12:47:03 INFO     building workspace
+2024-06-05 12:47:03 DEBUG    adding NormFactor signal_norm to sample VBF Signal in region tomatos_bce_5_1000_SR_xbb_2
+2024-06-05 12:47:03 DEBUG    adding OverallSys branching_ratio_bb to sample VBF Signal in region tomatos_bce_5_1000_SR_xbb_2
+2024-06-05 12:47:03 DEBUG    adding OverallSys and HistoSys scale_variations to sample VBF Signal in region tomatos_bce_5_1000_SR_xbb_2
+2024-06-05 12:47:03 DEBUG    adding OverallSys and HistoSys stat_signal to sample VBF Signal in region tomatos_bce_5_1000_SR_xbb_2
+2024-06-05 12:47:03 DEBUG    adding OverallSys and HistoSys tomatos_bce_5_1000_JET_EtaIntercalibration_Modelling to sample VBF Signal in region tomatos_bce_5_1000_SR_xbb_2
+2024-06-05 12:47:03 DEBUG    adding OverallSys and HistoSys tomatos_bce_5_1000_JET_EtaIntercalibration_NonClosure_PreRec to sample VBF Signal in region tomatos_bce_5_1000_SR_xbb_2
+2024-06-05 12:47:03 DEBUG    adding OverallSys and HistoSys tomatos_bce_5_1000_xbb_pt_bin_0 to sample VBF Signal in region tomatos_bce_5_1000_SR_xbb_2
+2024-06-05 12:47:03 DEBUG    adding OverallSys and HistoSys tomatos_bce_5_1000_xbb_pt_bin_1 to sample VBF Signal in region tomatos_bce_5_1000_SR_xbb_2
+2024-06-05 12:47:03 DEBUG    adding OverallSys and HistoSys tomatos_bce_5_1000_xbb_pt_bin_2 to sample VBF Signal in region tomatos_bce_5_1000_SR_xbb_2
+2024-06-05 12:47:03 DEBUG    adding OverallSys and HistoSys tomatos_bce_5_1000_xbb_pt_bin_3 to sample VBF Signal in region tomatos_bce_5_1000_SR_xbb_2
+2024-06-05 12:47:03 DEBUG    adding OverallSys bkg_estimate_norm to sample Background in region tomatos_bce_5_1000_SR_xbb_2
+2024-06-05 12:47:03 DEBUG    adding OverallSys and HistoSys bkg_estimate_shape to sample Background in region tomatos_bce_5_1000_SR_xbb_2
+2024-06-05 12:47:03 DEBUG    adding OverallSys and HistoSys stat_bkg_estimate to sample Background in region tomatos_bce_5_1000_SR_xbb_2
+2024-06-05 12:47:03 INFO     Validating spec against schema: workspace.json
+2024-06-05 12:47:04 DEBUG    saving workspace to workspaces/tomatos_bce_5_1000_l1cvv1cv1.json
+2024-06-05 12:47:04 INFO     Validating spec against schema: workspace.json
+2024-06-05 12:47:04 INFO     Validating spec against schema: model.json
+2024-06-05 12:47:04 INFO     adding modifier bkg_estimate_shape (1 new nuisance parameters)
+2024-06-05 12:47:04 INFO     adding modifier stat_bkg_estimate (1 new nuisance parameters)
+2024-06-05 12:47:04 INFO     adding modifier scale_variations (1 new nuisance parameters)
+2024-06-05 12:47:04 INFO     adding modifier stat_signal (1 new nuisance parameters)
+2024-06-05 12:47:04 INFO     adding modifier tomatos_bce_5_1000_JET_EtaIntercalibration_Modelling (1 new nuisance parameters)
+2024-06-05 12:47:04 INFO     adding modifier tomatos_bce_5_1000_JET_EtaIntercalibration_NonClosure_PreRec (1 new nuisance parameters)
+2024-06-05 12:47:04 INFO     adding modifier tomatos_bce_5_1000_xbb_pt_bin_0 (1 new nuisance parameters)
+2024-06-05 12:47:04 INFO     adding modifier tomatos_bce_5_1000_xbb_pt_bin_1 (1 new nuisance parameters)
+2024-06-05 12:47:04 INFO     adding modifier tomatos_bce_5_1000_xbb_pt_bin_2 (1 new nuisance parameters)
+2024-06-05 12:47:04 INFO     adding modifier tomatos_bce_5_1000_xbb_pt_bin_3 (1 new nuisance parameters)
+2024-06-05 12:47:04 INFO     adding modifier signal_norm (1 new nuisance parameters)
+2024-06-05 12:47:04 INFO     adding modifier bkg_estimate_norm (1 new nuisance parameters)
+2024-06-05 12:47:04 INFO     adding modifier branching_ratio_bb (1 new nuisance parameters)
+2024-06-05 12:47:04 INFO     saving figure as figures/modifier_grid.pdf
+2024-06-05 12:47:04 INFO     performing maximum likelihood fit
+2024-06-05 12:47:04 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 40.54                      │              Nfcn = 360              │
+│ EDM = 5.74e-18 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│     SOME parameters at limit     │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-06-05 12:47:04 DEBUG    -2 log(L) = 40.539792 at best-fit point
+2024-06-05 12:47:04 INFO     fit results (with symmetric uncertainties):
+2024-06-05 12:47:04 INFO     bkg_estimate_shape                                           =  0.0000 +/- 0.3477
+2024-06-05 12:47:04 INFO     stat_bkg_estimate                                            =  0.0000 +/- 0.9914
+2024-06-05 12:47:04 INFO     scale_variations                                             =  0.0000 +/- 0.9933
+2024-06-05 12:47:04 INFO     stat_signal                                                  =  0.0000 +/- 0.9933
+2024-06-05 12:47:04 INFO     tomatos_bce_5_1000_JET_EtaIntercalibration_Modelling         =  0.0000 +/- 0.9933
+2024-06-05 12:47:04 INFO     tomatos_bce_5_1000_JET_EtaIntercalibration_NonClosure_PreRec =  0.0000 +/- 0.9933
+2024-06-05 12:47:04 INFO     tomatos_bce_5_1000_xbb_pt_bin_0                              =  0.0000 +/- 0.9933
+2024-06-05 12:47:04 INFO     tomatos_bce_5_1000_xbb_pt_bin_1                              =  0.0000 +/- 0.9933
+2024-06-05 12:47:04 INFO     tomatos_bce_5_1000_xbb_pt_bin_2                              = -0.0000 +/- 0.9933
+2024-06-05 12:47:04 INFO     tomatos_bce_5_1000_xbb_pt_bin_3                              = -0.0000 +/- 0.9933
+2024-06-05 12:47:04 INFO     signal_norm                                                  =  1.0000 +/- 339.8755
+2024-06-05 12:47:04 INFO     bkg_estimate_norm                                            =  0.0000 +/- 0.9379
+2024-06-05 12:47:04 INFO     branching_ratio_bb                                           =  0.0000 +/- 0.9933
+2024-06-05 12:47:04 INFO     calculating goodness-of-fit
+2024-06-05 12:47:04 DEBUG    Delta NLL = -0.000000
+2024-06-05 12:47:04 DEBUG    number of degrees of freedom: 4
+2024-06-05 12:47:04 INFO     p-value for goodness-of-fit test: 100.00%
+2024-06-05 12:47:04 INFO     saving figure as figures/pulls.pdf
+2024-06-05 12:47:05 INFO     saving figure as figures/correlation_matrix.pdf
+2024-06-05 12:47:05 DEBUG    total stdev is [[3.886808195763064, 4.3240115423262555, 4.173671465859373, 1.7650757007601798, 3.1510922208316905]]
+2024-06-05 12:47:05 DEBUG    total stdev per channel is [16.192199120438556]
+2024-06-05 12:47:05 DEBUG    total stdev is [[3.960000189150917, 1.400602852627337, 1.5387236701561158, 2.478242380301315, 17.42913522018265]]
+2024-06-05 12:47:05 DEBUG    total stdev per channel is [24.956930229334667]
+2024-06-05 12:47:05 INFO     saving figure as figures/tomatos_bce_5_1000_SR_xbb_2_prefit.pdf
+2024-06-05 12:47:05 INFO     saving figure as figures/tomatos_bce_5_1000_SR_xbb_2_postfit.pdf
+2024-06-05 12:47:06 INFO     yields per bin for pre-fit model prediction:
+╒════════════╤═══════════════════════════════╤═════════════╤═════════════╤═════════════╤═════════════╕
+│ sample     │ tomatos_bce_5_1000_SR_xbb_2   │             │             │             │             │
+│            │ bin 1                         │ bin 2       │ bin 3       │ bin 4       │ bin 5       │
+╞════════════╪═══════════════════════════════╪═════════════╪═════════════╪═════════════╪═════════════╡
+│ Background │ 70.77 ± 3.89                  │ 5.59 ± 4.32 │ 3.15 ± 4.17 │ 2.14 ± 1.77 │ 2.04 ± 3.15 │
+├────────────┼───────────────────────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+│ VBF Signal │ 0.01 ± 0.00                   │ 0.00 ± 0.00 │ 0.01 ± 0.00 │ 0.01 ± 0.00 │ 0.05 ± 0.02 │
+├────────────┼───────────────────────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+│ ggF Signal │ 0.64 ± 0.00                   │ 0.27 ± 0.00 │ 0.25 ± 0.00 │ 0.22 ± 0.00 │ 0.51 ± 0.00 │
+├────────────┼───────────────────────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+│ total      │ 71.42 ± 3.89                  │ 5.86 ± 4.32 │ 3.40 ± 4.17 │ 2.37 ± 1.77 │ 2.61 ± 3.15 │
+├────────────┼───────────────────────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+│ data       │ 71.42                         │ 5.86        │ 3.40        │ 2.37        │ 2.61        │
+╘════════════╧═══════════════════════════════╧═════════════╧═════════════╧═════════════╧═════════════╛
+2024-06-05 12:47:06 INFO     saving table as tables/yields_per_bin_pre-fit.txt
+2024-06-05 12:47:06 INFO     calculating 95% confidence level upper limit for signal_norm
+2024-06-05 12:47:06 INFO     determining observed upper limit
+2024-06-05 12:47:06 DEBUG    signal_norm = 0.0010, observed CLs = 1.0000
+2024-06-05 12:47:07 DEBUG    signal_norm = 1945.7994, observed CLs = 0.0000
+2024-06-05 12:47:08 DEBUG    signal_norm = 1848.5095, observed CLs = 0.0000
+2024-06-05 12:47:09 DEBUG    signal_norm = 924.2553, observed CLs = 0.0000
+2024-06-05 12:47:10 DEBUG    signal_norm = 462.1281, observed CLs = 0.0000
+2024-06-05 12:47:10 DEBUG    signal_norm = 231.0646, observed CLs = 0.0030
+2024-06-05 12:47:11 DEBUG    signal_norm = 115.5328, observed CLs = 0.0472
+2024-06-05 12:47:11 DEBUG    signal_norm = 108.6163, observed CLs = 0.0566
+2024-06-05 12:47:12 DEBUG    signal_norm = 113.4830, observed CLs = 0.0498
+2024-06-05 12:47:12 DEBUG    signal_norm = 113.3412, observed CLs = 0.0500
+2024-06-05 12:47:13 DEBUG    signal_norm = 113.3462, observed CLs = 0.0500
+2024-06-05 12:47:13 INFO     successfully converged after 11 steps
+2024-06-05 12:47:13 INFO     observed upper limit: 113.3412
+2024-06-05 12:47:13 INFO     determining expected -2 sigma upper limit
+2024-06-05 12:47:13 DEBUG    signal_norm = 0.0010, expected -2 sigma CLs = 1.0000 (cached)
+2024-06-05 12:47:13 DEBUG    signal_norm = 108.6163, expected -2 sigma CLs = 0.0019 (cached)
+2024-06-05 12:47:13 DEBUG    signal_norm = 103.3871, expected -2 sigma CLs = 0.0025
+2024-06-05 12:47:14 DEBUG    signal_norm = 51.6940, expected -2 sigma CLs = 0.0392
+2024-06-05 12:47:14 DEBUG    signal_norm = 37.2445, expected -2 sigma CLs = 0.0935
+2024-06-05 12:47:15 DEBUG    signal_norm = 48.8275, expected -2 sigma CLs = 0.0464
+2024-06-05 12:47:15 DEBUG    signal_norm = 47.5217, expected -2 sigma CLs = 0.0502
+2024-06-05 12:47:16 DEBUG    signal_norm = 47.5869, expected -2 sigma CLs = 0.0500
+2024-06-05 12:47:16 DEBUG    signal_norm = 47.5819, expected -2 sigma CLs = 0.0500
+2024-06-05 12:47:16 INFO     successfully converged after 9 steps
+2024-06-05 12:47:16 INFO     expected -2 sigma upper limit: 47.5869
+2024-06-05 12:47:16 INFO     determining expected -1 sigma upper limit
+2024-06-05 12:47:16 DEBUG    signal_norm = 51.6940, expected -1 sigma CLs = 0.1062 (cached)
+2024-06-05 12:47:16 DEBUG    signal_norm = 103.3871, expected -1 sigma CLs = 0.0134 (cached)
+2024-06-05 12:47:16 DEBUG    signal_norm = 82.9945, expected -1 sigma CLs = 0.0293
+2024-06-05 12:47:17 DEBUG    signal_norm = 63.5990, expected -1 sigma CLs = 0.0643
+2024-06-05 12:47:17 DEBUG    signal_norm = 71.5143, expected -1 sigma CLs = 0.0464
+2024-06-05 12:47:18 DEBUG    signal_norm = 69.9251, expected -1 sigma CLs = 0.0495
+2024-06-05 12:47:18 DEBUG    signal_norm = 69.6888, expected -1 sigma CLs = 0.0500
+2024-06-05 12:47:18 DEBUG    signal_norm = 69.6938, expected -1 sigma CLs = 0.0500
+2024-06-05 12:47:18 INFO     successfully converged after 8 steps
+2024-06-05 12:47:18 INFO     expected -1 sigma upper limit: 69.6888
+2024-06-05 12:47:18 INFO     determining expected upper limit
+2024-06-05 12:47:18 DEBUG    signal_norm = 108.6163, expected CLs = 0.0549 (cached)
+2024-06-05 12:47:18 DEBUG    signal_norm = 113.3412, expected CLs = 0.0485 (cached)
+2024-06-05 12:47:19 DEBUG    signal_norm = 112.2335, expected CLs = 0.0499
+2024-06-05 12:47:19 DEBUG    signal_norm = 112.1763, expected CLs = 0.0500
+2024-06-05 12:47:20 DEBUG    signal_norm = 112.1813, expected CLs = 0.0500
+2024-06-05 12:47:20 INFO     successfully converged after 5 steps
+2024-06-05 12:47:20 INFO     expected upper limit: 112.1763
+2024-06-05 12:47:20 INFO     determining expected +1 sigma upper limit
+2024-06-05 12:47:20 DEBUG    signal_norm = 115.5328, expected +1 sigma CLs = 0.1894 (cached)
+2024-06-05 12:47:20 DEBUG    signal_norm = 231.0646, expected +1 sigma CLs = 0.0286 (cached)
+2024-06-05 12:47:20 DEBUG    signal_norm = 215.6908, expected +1 sigma CLs = 0.0365
+2024-06-05 12:47:21 DEBUG    signal_norm = 191.6922, expected +1 sigma CLs = 0.0537
+2024-06-05 12:47:21 DEBUG    signal_norm = 196.8203, expected +1 sigma CLs = 0.0494
+2024-06-05 12:47:22 DEBUG    signal_norm = 196.0962, expected +1 sigma CLs = 0.0500
+2024-06-05 12:47:22 DEBUG    signal_norm = 196.0688, expected +1 sigma CLs = 0.0500
+2024-06-05 12:47:22 DEBUG    signal_norm = 196.0738, expected +1 sigma CLs = 0.0500
+2024-06-05 12:47:22 INFO     successfully converged after 8 steps
+2024-06-05 12:47:22 INFO     expected +1 sigma upper limit: 196.0688
+2024-06-05 12:47:22 INFO     determining expected +2 sigma upper limit
+2024-06-05 12:47:22 DEBUG    signal_norm = 231.0646, expected +2 sigma CLs = 0.1683 (cached)
+2024-06-05 12:47:22 DEBUG    signal_norm = 462.1281, expected +2 sigma CLs = 0.0170 (cached)
+2024-06-05 12:47:23 DEBUG    signal_norm = 411.7099, expected +2 sigma CLs = 0.0276
+2024-06-05 12:47:23 DEBUG    signal_norm = 322.3402, expected +2 sigma CLs = 0.0669
+2024-06-05 12:47:24 DEBUG    signal_norm = 360.7932, expected +2 sigma CLs = 0.0455
+2024-06-05 12:47:24 DEBUG    signal_norm = 352.7801, expected +2 sigma CLs = 0.0493
+2024-06-05 12:47:25 DEBUG    signal_norm = 351.4359, expected +2 sigma CLs = 0.0500
+2024-06-05 12:47:25 DEBUG    signal_norm = 351.4463, expected +2 sigma CLs = 0.0500
+2024-06-05 12:47:26 DEBUG    signal_norm = 351.4413, expected +2 sigma CLs = 0.0500
+2024-06-05 12:47:26 INFO     successfully converged after 9 steps
+2024-06-05 12:47:26 INFO     expected +2 sigma upper limit: 351.4463
+2024-06-05 12:47:26 INFO     total of 50 steps to calculate all limits
+2024-06-05 12:47:26 INFO     summary of 95% confidence level upper limits:
+2024-06-05 12:47:26 INFO     observed         : 113.3412
+2024-06-05 12:47:26 INFO     expected -2 sigma: 47.5869
+2024-06-05 12:47:26 INFO     expected -1 sigma: 69.6888
+2024-06-05 12:47:26 INFO     expected         : 112.1763
+2024-06-05 12:47:26 INFO     expected +1 sigma: 196.0688
+2024-06-05 12:47:26 INFO     expected +2 sigma: 351.4463
+2024-06-05 12:47:26 INFO     saving figure as figures/limit.pdf
+2024-06-05 12:47:26 INFO     calculating discovery significance for signal_norm
+2024-06-05 12:47:27 INFO     observed p-value: 48.939%
+2024-06-05 12:47:27 INFO     observed significance: 0.027
+2024-06-05 12:47:27 INFO     expected p-value: 48.939%
+2024-06-05 12:47:27 INFO     expected significance: 0.027

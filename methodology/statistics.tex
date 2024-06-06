@@ -47,12 +47,12 @@ To test for a given hypothesis it is useful to transform the profile likelihood 
     t(\mu)=-2\ln \lambda(\mu).
 \end{equation}
 % For a given signal strength $\mu$ this statistic is a function of the observations $n$ alone
-This translates to $t \rightarrow 0$ as increasing agreement and $t \rightarrow \infty$ as decreasing agreement to the model. A right-tail p-value can then be calculated from the probability density function of the test statistic: \ac{pdf}$(t) = f(t | \mu)$
+This translates to $t \rightarrow 0$ as increasing agreement and $t \rightarrow \infty$ as decreasing agreement to the model. A right-tail p-value can then be calculated from the probability density of the test statistic $f(t | \mu)$ as 
 \begin{equation}\label{eq:p-value}
     p= \int_{t_\text{obs}}^{\infty}
     f(t | \mu) \mathrm{d}t
 \end{equation}
-$t_\text{obs}$ is the test statistic $t$ computed using the particular $\mu$ and observed data. Similar to the \ac{pdf} of a standard normal distribution the \ac{pdf} in this context quantifies how probable a particular value of the test statistic $t$ is under a fixed value of the signal strength. This essentially measures how frequently a particular value of $t$ occurs in comparison to all other possible values that $t$ can take.
+$t_\text{obs}$ is the test statistic $t$ computed using the particular $\mu$ and observed data. Similar to the probability density of a standard normal distribution the probability density in this context quantifies how probable a particular value of the test statistic $t$ is under a fixed value of the signal strength. This essentially measures how frequently a particular value of $t$ occurs in comparison to all other possible values that $t$ can take.
 
 The test statistic's specific form is useful because of existing approximations for $f(t | \mu')$ with $\mu'$ as the true strength parameter \citep{cowan2011asymptotic}.
 %Let $f(t | \mu')$ be the probability distribution for the true strength parameter $\mu'$. 
@@ -62,7 +62,7 @@ The test statistic's specific form is useful because of existing approximations 
     \left(\frac{\mu-\hat{\mu}}{\sigma_{\hat{\mu}}} \right)^2
     + \mathcal{O}(\frac{1}{\sqrt{N}}),
 \end{equation}
-such that the maximum likelihood estimate $\hat{\mu}$ is in this limit normally distributed around its true value $\mu'$ with standard deviation $\sigma_{\hat{\mu}}$. This is the definition of a $\chi$-squared distribution with one degree of freedom. With this result it can be shown that \citep{cowan2011asymptotic} the \ac{pdf} of $t$ asymptotically follows in the large sample limit
+such that the maximum likelihood estimate $\hat{\mu}$ is in this limit normally distributed around its true value $\mu'$ with standard deviation $\sigma_{\hat{\mu}}$. This is the definition of a $\chi$-squared distribution with one degree of freedom. With this result it can be shown that \citep{cowan2011asymptotic} the probability density function of $t$ asymptotically follows in the large sample limit
 \begin{equation}\label{eq:chi-square}
     f(t | \mu)=\frac{1}{2\sqrt{t}}\frac{1}{\sqrt{2\pi}}
     \left[
@@ -83,7 +83,7 @@ For more than one parameter of interest the equation \ref{eq:chi-square} general
 \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth]{test_stat_example.pdf}
-    \caption[]{A sketch to follow the steps to calculate p-values. (\textbf{left}) The profile likelihood ({\color[HTML]{1f77b4}{$\bm{\diagup}$}}) has essentially some hill-like form with a maximum at ${\lambda(\hat{\mu},\hat{\bm{\Theta}})}$. The test statistic $t$ ({\color[HTML]{ff7f0e}{$\bm{\diagup}$}}) is calculated as $-2\mathrm{ln}(\lambda)$. (\textbf{right}) For one parameter of interest in the large sample limit $f(t | \mu)$ from equation \ref{eq:chi-square} follows a non-central chi-squared distribution with one degree of freedom. The blue shaded area under the \acp{pdf} is a right hand sided p-value.}
+    \caption[]{A sketch to follow the steps to calculate p-values. (\textbf{left}) The profile likelihood ({\color[HTML]{1f77b4}{$\bm{\diagup}$}}) has essentially some hill-like form with a maximum at ${\lambda(\hat{\mu},\hat{\bm{\Theta}})}$. The test statistic $t$ ({\color[HTML]{ff7f0e}{$\bm{\diagup}$}}) is calculated as $-2\mathrm{ln}(\lambda)$. (\textbf{right}) For one parameter of interest in the large sample limit $f(t | \mu)$ from equation \ref{eq:chi-square} follows a non-central chi-squared distribution with one degree of freedom. The blue shaded area under the probability density functions is a right hand sided p-value.}
     \label{fig:test_stat_example}
 \end{figure}
 
@@ -107,7 +107,7 @@ A key consideration is that $t$ can assume negative values for $\mu$ which might
         0                  & \hat{\mu}> \mu
     \end{cases}.
 \end{equation}
-Here, if a tested signal strength $\mu$ is not larger than the maximum estimate, it would not be regarded as less compatible and is therefore set to zero. Various cases and approximations of \acp{pdf} in different scenarios are detailed in \citep{cowan2011asymptotic}.
+Here, if a tested signal strength $\mu$ is not larger than the maximum estimate, it would not be regarded as less compatible and is therefore set to zero. Various cases and approximations of probability density functions in different scenarios are detailed in \citep{cowan2011asymptotic}.
 
 \section{The CL$_s$ Value}\label{sec:cls}
 Particle physicists typically concentrate on two key aspects when performing statistical tests to discover new phenomena: the accurate modeling of known backgrounds and whether there is evidence in the observations for a new phenomenon. This involves assessing two distinct hypotheses: a background only ($b$) and one that involves signal and background ($s+b$). Each will result in a p-value of their own.
@@ -125,7 +125,7 @@ The numerator represents the p-value for the alternative hypothesis while the de
 \begin{figure}
     \centering
     \includegraphics[width=1\textwidth]{cls.png}
-    \caption[]{Probability density functions of test statistics from a Higgs search at LEP illustrating the calculation of p-values ($\lambda$ from the full text becomes $Q$). (\textbf{left}) The \acp{pdf} of the test statistic $f(t | \mu)$ of the signal + background ({\color[HTML]{804000}{$\bm{\diagup}$}}) and background ({\color[HTML]{2100FF}{$\bm{\diagup}$}}) only hypotheses. The p-value is calculated by integration from $t_\text{obs}$ (the red observed line ({\color[HTML]{FF0000}{$\bm{\diagup}$}})) to infinity (see eq. \ref{eq:p-value}). The green shaded area (\hexbox{00FF00}) corresponds to $p_{s+b}$ whereas the yellow area (\hexbox{FDFF02}) corresponds to $1-p_b$ since the integral over one whole \ac{pdf} is 1. (\textbf{right}) Degradation of search sensitivity from (a) to (c). Note that the colors of the \acp{pdf}'s change here to signal + background (\hexbox{2100FF}) and background only (\hexbox{FF0000}). For example putting the observation ($t_\text{obs}$) on the x-axis at 0 in these plots, one would get for plot (a) $p_{b}\approx 1$ and $p_{s+b}\approx 0$ resulting in a CL$_s\approx 0$, whereas with increasing overlap the CL$_s$ value increases and the sensitivity decreases. Adopted from \citep{read2002presentation}.}
+    \caption[]{Probability density functions of test statistics from a Higgs search at LEP illustrating the calculation of p-values ($\lambda$ from the full text becomes $Q$). (\textbf{left}) The probability density functions of the test statistic $f(t | \mu)$ of the signal + background ({\color[HTML]{804000}{$\bm{\diagup}$}}) and background ({\color[HTML]{2100FF}{$\bm{\diagup}$}}) only hypotheses. The p-value is calculated by integration from $t_\text{obs}$ (the red observed line ({\color[HTML]{FF0000}{$\bm{\diagup}$}})) to infinity (see eq. \ref{eq:p-value}). The green shaded area (\hexbox{00FF00}) corresponds to $p_{s+b}$ whereas the yellow area (\hexbox{FDFF02}) corresponds to $1-p_b$ since the integral over one whole probability density is 1. (\textbf{right}) Degradation of search sensitivity from (a) to (c). Note that the colors of the probability density functions change here to signal + background (\hexbox{2100FF}) and background only (\hexbox{FF0000}). For example putting the observation ($t_\text{obs}$) on the x-axis at 0 in these plots, one would get for plot (a) $p_{b}\approx 1$ and $p_{s+b}\approx 0$ resulting in a CL$_s\approx 0$, whereas with increasing overlap the CL$_s$ value increases and the sensitivity decreases. Adopted from \citep{read2002presentation}.}
     \label{fig:cls}
 \end{figure}
 
