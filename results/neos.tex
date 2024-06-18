@@ -8,17 +8,33 @@
 
 \red{gegen den einwand warum nicht hier schon vollständig neos, macht vergleich kaputt im final fit, weil der ist teuer mit allen sys, fairer vergkeuc}
 
-This chapter compares the \ac{neos} approach to established methods by evaluating upper cross-section limits on the boosted \ac{vbf} $HH\rightarrow4b$ analysis. This evaluation employs \ac{neos} in what this thesis terms "autoanalysis", wherein only the most basic selections of reconstructed objects that encapsulate the process of interest are used, and \ac{neos} optimizes considered cuts and uncertainties simultaneously when searching for the best limits. The objective here is not to find the most stringent cross-section limits but to provide a fair comparison and present the potential \ac{neos} offers compared to more traditional methods.
+\red{if we use this reference point, migth be nice to say highly non-optimized for either analysis variable}
+
+\red{rather to have a well defined reference point for comparison}
+
+\red{mention bandwidth somewhere 1e-8 und 0.2}
+
+\red{shape uncertainties are always norm + shape, where?, hier weil resultat anwendung von histfactory }
+
+\red{ttbar is negelected because}
+
+\red{also say here we havent done any optimization on neos}
+
+\red{add correlation mjj etajj}
+
+\red{adapt variable selection writing}
+
+This chapter compares the \ac{neos} approach to established methods by evaluating upper cross-section limits on the boosted \ac{vbf} $HH\rightarrow4b$ analysis. This evaluation employs \ac{neos} in what this thesis terms `autoanalysis', wherein only the most basic selections of reconstructed objects that encapsulate the process of interest are used, and \ac{neos} optimizes considered cuts and uncertainties simultaneously when searching for the best limits. The objective here is not to find the most stringent cross-section limits but to provide a fair comparison and present the potential \ac{neos} offers compared to more traditional methods.
 
 Cross-section upper limits are obtained with a maximum likelihood fit as explained in chapter \ref{sec:statistics}. \ac{neos} is compared against limits from using the Higgs pair invariant mass $m_{HH}$ and a classifier \ac{nn} trained on separation for signal to background with a \ac{bce} loss function as of equation \ref{eq:bce}. Models are trained with the \ac{tomatos} \ac{nn} training framework developed for this purpose \citep{tomatos} described in section \ref{sec:neos_training}. Both the training for \ac{neos} as well as the classifier use the same \ac{nn} architecture described in \ref{sec:event_classification}, and the hyperparameters are kept consistent to ensure a fair comparison.
 
-Each fit employs the same subset of uncertainties, chosen from the highest-ranked uncertainties of an $m_{HH}$ fit that incorporated the full set of uncertainties. The reduced set used in optimizing \ac{neos} is summarized in table \ref{tab:neos-samples} and ranked by its impact on an \mhh fit illustrated in Figure \ref{fig:m_hh_neos_unc_ranking}. The complete ranked list of uncertainties on the \mhh fit is available in Appendix \ref{fig:m_hh_full_sys_ranking}. To demonstrate compatibility across all types of uncertainties, both nominal statistical uncertainties and two jet-related uncertainties are included. The \ac{pdf}+$\alpha_s$ uncertainty, however, was excluded from the optimization due to its minimal impact relative to the computational overhead of processing 100 additional samples.
+Each fit employs the same subset of uncertainties, chosen from the highest-ranked uncertainties of an $m_{HH}$ fit that incorporated the full set of uncertainties. The reduced set used in optimizing \ac{neos} is summarized in table \ref{tab:neos-samples} and ranked by its impact on an \mhh fit illustrated in Figure \ref{fig:m_hh_neos_unc_ranking} \red{replace with ps}. The complete ranked list of uncertainties on the \mhh fit is available in Appendix \ref{fig:m_hh_full_sys_ranking}. To demonstrate compatibility across all types of uncertainties, both nominal statistical uncertainties and two jet-related uncertainties are included. The \ac{pdf}+$\alpha_s$ uncertainty, however, was excluded from the optimization due to its minimal impact relative to the computational overhead of processing 100 additional samples.
 
 
 \begin{figure}
     \centering
     \includegraphics[width=0.95\textwidth]{neos_results/m_hh_neos_unc_ranking.pdf}
-    \caption[]{Ranking of nuisance parameters ordered by their post-fit impact on the signal strength, $\Delta\mu$, displayed on the upper axis for an invariant Higgs Pair mass fit (\mhh{}). The impact of a nuisance parameter $\Theta$ is assessed by performing four fits. The impact of a nuisance parameter $\Theta$ is assessed by performing four fits. In each fit, the parameter $\Theta$ is fixed to its nominal best-fit value $\hat{\Theta}$ plus a given nuisance parameter uncertainty $\Delta\Theta$. The difference between the resulting fitted signal strength $\mu_\text{fit}$ and the nominal best-fitted value is then computed as $\Delta\mu=\hat{\mu} - \mu_\text{fit}$. This process is repeated for pre-fit $\pm\Delta\Theta$ and post-fit $\pm\Delta\hat{\Theta}$ uncertainties of $\Theta$. The lower axis and the black points represent the pull for each nuisance paramter, calculated as the difference between the best-fit value and the nominal pre-fit $(\hat{\Theta} - \Theta_0)$, divided by its variance $\Delta\Theta$ for the parameter $\Theta$. If the model is accurate, the expected value of each pull should be zero, with a variance of one, in the asymptotic limit. In this limit the test statistic is computed from the sum of pulls and follows a $\chi^2$ distribution if the model is correct. Therefore, pulls serve as goodness-of-fit quantities. }
+    \caption[]{Ranking of nuisance parameters ordered by their post-fit impact on the signal strength, $\Delta\mu$, displayed on the upper axis for an invariant Higgs Pair mass fit (\mhh{}). The impact of a nuisance parameter $\Theta$ is assessed by performing four fits. In each fit, the parameter $\Theta$ is fixed to its nominal best-fit value $\hat{\Theta}$ plus a given nuisance parameter uncertainty $\Delta\Theta$. The difference between the resulting fitted signal strength $\mu_\text{fit}$ and the nominal best-fitted value is then computed as $\Delta\mu=\hat{\mu} - \mu_\text{fit}$. This process is repeated for pre-fit $\pm\Delta\Theta$ and post-fit $\pm\Delta\hat{\Theta}$ uncertainties of $\Theta$. The lower axis and the black points represent the pull for each nuisance paramter, calculated as the difference between the best-fit value and the nominal pre-fit $(\hat{\Theta} - \Theta_0)$, divided by its variance $\Delta\Theta$ for the parameter $\Theta$. If the model is accurate, the expected value of each pull should be zero, with a variance of one, in the asymptotic limit. In this limit the test statistic is computed from the sum of pulls and follows a $\chi^2$ distribution if the model is correct. Therefore, pulls serve as goodness-of-fit quantities. }
     \label{fig:m_hh_neos_unc_ranking}
 \end{figure}
 
@@ -27,12 +43,12 @@ The $\ktwov=0$ sample is used due to its large statistic as nominal \ac{vbf} sig
 
 \begin{figure}
     \centering
-    \subfigure[]{\includegraphics[width=.45\textwidth]{tomatos_bce_5_1000/bce.pdf}}
-    \subfigure[]{\includegraphics[width=.45\textwidth]{tomatos_cls_5_1000_unbound_shapesys/cls.pdf}} \label{fig:neos_validation_loss}\\
-    \subfigure[]{\includegraphics[width=.45\textwidth]{tomatos_bce_5_1000/hist.pdf}}
-    \subfigure[]{\includegraphics[width=.45\textwidth]{tomatos_cls_5_400_unbound_shapesys/hist.pdf}} \\
-    \subfigure[]{\includegraphics[width=.45\textwidth]{tomatos_bce_5_1000/Z_A.pdf}}
-    \subfigure[]{\includegraphics[width=.45\textwidth]{tomatos_cls_5_1000_unbound_shapesys/Z_A.pdf}} \\
+    \subfigure[]{\includegraphics[width=.45\textwidth]{neos_results/tomatos_bce_5_1000/bce.pdf}}
+    \subfigure[]{\includegraphics[width=.45\textwidth]{neos_results/tomatos_cls_5_1000_bounded/cls.pdf}} \label{fig:neos_validation_loss}\\
+    \subfigure[]{\includegraphics[width=.45\textwidth]{neos_results/tomatos_bce_5_1000/hist.pdf}}
+    \subfigure[]{\includegraphics[width=.45\textwidth]{neos_results/tomatos_cls_5_1000_bounded/hist.pdf}} \\
+    \subfigure[]{\includegraphics[width=.45\textwidth]{neos_results/tomatos_bce_5_1000/Z_A.pdf}}
+    \subfigure[]{\includegraphics[width=.45\textwidth]{neos_results/tomatos_cls_5_1000_bounded/Z_A.pdf}} \\
     \caption[]{\textbf{(Left Column)} \ac{nn} trained with a \ac{bce} loss function. \textbf{(Right Coloumn)} \ac{nn} trained with \ac{neos}.  \textbf{(Top To bottom)}: Loss function evaluated on training, validation and test dataset per training epoch, histogrammed \ac{nn} score for samples used in the training and Asimov significance. }
     \label{fig:training_metrics_validation}
 \end{figure}
@@ -41,8 +57,8 @@ The $\ktwov=0$ sample is used due to its large statistic as nominal \ac{vbf} sig
 \begin{figure}
     \centering
     \subfigure[]{\includegraphics[width=.47\textwidth]{red}}
-    \subfigure[]{\includegraphics[width=.47\textwidth]{/Users/fred/phd/thesis/images/tomatos_cls_5_1000_unbound_shapesys/images/0185.png}}
-    \caption[]{\red{Histograms used in the optimization after Kernel Density Estimation. hyperparameter tweaking it looses gradient if I go below bandwidth 0.2 }}
+    \subfigure[]{\includegraphics[width=.47\textwidth]{neos_results/tomatos_cls_5_1000_bounded/images/0597.png}}
+    \caption[]{\red{(a)bce (b)cls Histograms used in the optimization after Kernel Density Estimation. hyperparameter tweaking it looses gradient if I go below bandwidth 0.2 }}
     \label{fig:neos_valid_kde_hists}
 \end{figure}
 
@@ -62,21 +78,23 @@ To determine the $m_{jj}$ and $|\Delta\eta(j,j)|$ cuts on the \ac{vbf} jets for 
 
 Loosening a cut corresponds to introducing new data which is always beneficial in training \acp{nn} and thus results in a smaller training loss. However at the same time it is not obvious how uncertainties like the background estimate are affected by this change. Ideally \ac{neos} should be able to capture this but the instability of the training loss indicates a hard to find gradient for \ac{neos} for this procedure. This also potentially explain the shape of the validation loss for the \ac{neos} training as of figure \ref{fig:neos_validation_loss}. Overtraining starts around epoch 200 and worsens until epoch 400 which is where the cuts merely change. Upon introducing more data by further loosening the cuts around epoch 400 the validation also decreases again until at epoch 600 where $m_{jj}$ plateaus again. However the \ac{nn} is potentially already in a local overtrained minimum showing no signs of further improvement and the training becomes unstable. \red{This is further investigated in chapter \ref{ch:hh4b-results}.}
 
+\red{say also again about asimov for neos eta probably too tight for bkg estimate}
+
 \begin{figure}
     \centering
     \subfigure[]{\includegraphics[width=.3\textwidth]{s_b_optimization/s_b_optimization_m_hh_5_m_jj}}
     \subfigure[]{\includegraphics[width=.3\textwidth]{s_b_optimization/s_b_optimization_tomatos_bce_5_1000_m_jj}}
-    \subfigure[]{\includegraphics[width=.3\textwidth]{s_b_optimization/s_b_optimization_tomatos_cls_5_400_unbound_shapesys_m_jj}}\\
+    % \subfigure[]{\includegraphics[width=.3\textwidth]{s_b_optimization/s_b_optimization_tomatos_cls_5_1000_bounded_m_jj}}\\
     \subfigure[]{\includegraphics[width=.3\textwidth]{s_b_optimization/s_b_optimization_m_hh_5_eta_jj}}
     \subfigure[]{\includegraphics[width=.3\textwidth]{s_b_optimization/s_b_optimization_tomatos_bce_5_1000_eta_jj}}
-    \subfigure[]{\includegraphics[width=.3\textwidth]{s_b_optimization/s_b_optimization_tomatos_cls_5_400_unbound_shapesys_eta_jj}}
-    \caption[]{Columns left to right: $\mhh$, \ac{bce}-trained \ac{nn}, \ac{neos}-trained \ac{nn}: Asimov Significances after applying a cut on \textbf{(a)-(c)} on the invariant mass $m_{jj}$ and \textbf{(d)-(f)} the pseudorapidity separation $|\Delta\eta(j,j)|$ of the \ac{vbf} jets.}
+    % \subfigure[]{\includegraphics[width=.3\textwidth]{s_b_optimization/s_b_optimization_tomatos_cls_5_1000_bounded_eta_jj}}
+    \caption[]{Columns left to right: $\mhh$, \ac{bce}-trained \ac{nn}, \ac{neos}-trained \ac{nn}: Asimov Significances after applying a cut on \textbf{(a)-(c)} on the invariant mass $m_{jj}$ and \textbf{(d)-(f)} the pseudorapidity separation $|\Delta\eta(j,j)|$ of the \ac{vbf} jets. \red{redo}}
     \label{fig:cut_scan}
 \end{figure}
 
 \begin{figure}
     \centering
-    \includegraphics[width=.6\textwidth]{tomatos_cls_5_1000_unbound_shapesys/cuts}
+    \includegraphics[width=.6\textwidth]{neos_results/tomatos_cls_5_1000_bounded/cuts}
     \caption[]{Optimized \ac{neos} cuts per epoch for the invariant mass $m_{jj}$ and the pseudorapidity difference $|\Delta\eta(j,j)|$ of the two \ac{vbf} jets.}
     \label{fig:neos_cuts}
 \end{figure}
@@ -104,26 +122,26 @@ All models use the same methods for the background uncertainty estimation descri
     \centering
     \subfigure[]{\includegraphics[width=.3\textwidth]{neos_results/m_hh_5_l1cvv0cv1/figures/templates/m_hh_5_SR_xbb_2_VBF-Signal_m_hh_5_xbb_pt_bin_0.pdf}}
     \subfigure[]{\includegraphics[width=.3\textwidth]{neos_results/tomatos_bce_5_1000_l1cvv0cv1/figures/templates/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_tomatos_bce_5_1000_xbb_pt_bin_0.pdf}}
-    \subfigure[]{\includegraphics[width=.3\textwidth]{neos_results/tomatos_cls_5_400_unbound_shapesys_l1cvv0cv1/figures/templates/tomatos_cls_5_400_unbound_shapesys_SR_xbb_2_VBF-Signal_tomatos_cls_5_400_unbound_shapesys_xbb_pt_bin_0.pdf}} \\
+    \subfigure[]{\includegraphics[width=.3\textwidth]{neos_results/tomatos_cls_5_1000_bounded_l1cvv0cv1/figures/templates/neos_VBF-Signal_tomatos_cls_5_1000_bounded_xbb_pt_bin_0.pdf}} \\
     \subfigure[]{\includegraphics[width=.3\textwidth]{neos_results/m_hh_5_l1cvv0cv1/figures/templates/m_hh_5_SR_xbb_2_VBF-Signal_m_hh_5_xbb_pt_bin_1.pdf}}
     \subfigure[]{\includegraphics[width=.3\textwidth]{neos_results/tomatos_bce_5_1000_l1cvv0cv1/figures/templates/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_tomatos_bce_5_1000_xbb_pt_bin_1.pdf}}
-    \subfigure[]{\includegraphics[width=.3\textwidth]{neos_results/tomatos_cls_5_400_unbound_shapesys_l1cvv0cv1/figures/templates/tomatos_cls_5_400_unbound_shapesys_SR_xbb_2_VBF-Signal_tomatos_cls_5_400_unbound_shapesys_xbb_pt_bin_1.pdf}} \\
+    \subfigure[]{\includegraphics[width=.3\textwidth]{neos_results/tomatos_cls_5_1000_bounded_l1cvv0cv1/figures/templates/neos_VBF-Signal_tomatos_cls_5_1000_bounded_xbb_pt_bin_1.pdf}} \\
     \subfigure[]{\includegraphics[width=.3\textwidth]{neos_results/m_hh_5_l1cvv0cv1/figures/templates/m_hh_5_SR_xbb_2_VBF-Signal_m_hh_5_xbb_pt_bin_2.pdf}}
     \subfigure[]{\includegraphics[width=.3\textwidth]{neos_results/tomatos_bce_5_1000_l1cvv0cv1/figures/templates/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_tomatos_bce_5_1000_xbb_pt_bin_2.pdf}}
-    \subfigure[]{\includegraphics[width=.3\textwidth]{neos_results/tomatos_cls_5_400_unbound_shapesys_l1cvv0cv1/figures/templates/tomatos_cls_5_400_unbound_shapesys_SR_xbb_2_VBF-Signal_tomatos_cls_5_400_unbound_shapesys_xbb_pt_bin_2.pdf}} \\
+    \subfigure[]{\includegraphics[width=.3\textwidth]{neos_results/tomatos_cls_5_1000_bounded_l1cvv0cv1/figures/templates/neos_VBF-Signal_tomatos_cls_5_1000_bounded_xbb_pt_bin_2.pdf}} \\
     \subfigure[]{\includegraphics[width=.3\textwidth]{neos_results/m_hh_5_l1cvv0cv1/figures/templates/m_hh_5_SR_xbb_2_VBF-Signal_m_hh_5_xbb_pt_bin_3.pdf}}
     \subfigure[]{\includegraphics[width=.3\textwidth]{neos_results/tomatos_bce_5_1000_l1cvv0cv1/figures/templates/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_tomatos_bce_5_1000_xbb_pt_bin_3.pdf}}
-    \subfigure[]{\includegraphics[width=.3\textwidth]{neos_results/tomatos_cls_5_400_unbound_shapesys_l1cvv0cv1/figures/templates/tomatos_cls_5_400_unbound_shapesys_SR_xbb_2_VBF-Signal_tomatos_cls_5_400_unbound_shapesys_xbb_pt_bin_3.pdf}} \\
+    \subfigure[]{\includegraphics[width=.3\textwidth]{neos_results/tomatos_cls_5_1000_bounded_l1cvv0cv1/figures/templates/neos_VBF-Signal_tomatos_cls_5_1000_bounded_xbb_pt_bin_3.pdf}} \\
     \caption[]{Uncertainties (1/2) for columns left to right: $\mhh$, \ac{bce}-trained \ac{nn}, \ac{neos}-trained \ac{nn}. Top to bottom: 30\% GN2X scale factor uncertainties for the four bins used in the calibration of the GN2X tagger as shown in figure \ref{fig:xbb_sf}.\red{increase labels}}
     \label{fig:neos_validation_uncertaintes_1}
 \end{figure}
 \begin{figure}
     \centering
     \subfigure[]{\includegraphics[width=.3\textwidth]{neos_results/m_hh_5_l1cvv0cv1/figures/templates/m_hh_5_SR_xbb_2_Background_bkg_estimate_shape.pdf}}    \subfigure[]{\includegraphics[width=.3\textwidth]{neos_results/tomatos_bce_5_1000_l1cvv0cv1/figures/templates/tomatos_bce_5_1000_SR_xbb_2_Background_bkg_estimate_shape.pdf}}
-    \subfigure[]{\includegraphics[width=.3\textwidth]{neos_results/tomatos_cls_5_400_unbound_shapesys_l1cvv0cv1/figures/templates/tomatos_cls_5_400_unbound_shapesys_SR_xbb_2_Background_bkg_estimate_shape.pdf}} \\
+    \subfigure[]{\includegraphics[width=.3\textwidth]{neos_results/tomatos_cls_5_1000_bounded_l1cvv0cv1/figures/templates/neos_Background_bkg_estimate_shape.pdf}} \\
     \subfigure[]{\includegraphics[width=.3\textwidth]{neos_results/m_hh_5_l1cvv0cv1/figures/templates/m_hh_5_SR_xbb_2_VBF-Signal_scale_variations.pdf}}
     \subfigure[]{\includegraphics[width=.3\textwidth]{neos_results/tomatos_bce_5_1000_l1cvv0cv1/figures/templates/tomatos_bce_5_1000_SR_xbb_2_VBF-Signal_scale_variations.pdf}}
-    \subfigure[]{\includegraphics[width=.3\textwidth]{neos_results/tomatos_cls_5_400_unbound_shapesys_l1cvv0cv1/figures/templates/tomatos_cls_5_400_unbound_shapesys_SR_xbb_2_VBF-Signal_scale_variations.pdf}} \\
+    \subfigure[]{\includegraphics[width=.3\textwidth]{neos_results/tomatos_cls_5_1000_bounded_l1cvv0cv1/figures/templates/neos_VBF-Signal_scale_variations.pdf}} \\
     \caption[]{Uncertainties (2/2) for columns left to right: $\mhh$, \ac{bce}-trained \ac{nn}, \ac{neos}-trained \ac{nn}. Top to bottom: background shape uncertainty and the envelope of scale variations. Details about their estimation are found in chapter \ref{ch:systematics}. \red{check again if these contain all} }
     \label{fig:neos_validation_uncertaintes_2}
 \end{figure}
@@ -133,10 +151,10 @@ Histograms and their uncertainties are shown in figure \ref{fig:neos_pre_post_fi
     \centering
     \subfigure[]{\includegraphics[width=.3\textwidth]{neos_results/m_hh_5_l1cvv0cv1/figures/m_hh_5_SR_xbb_2_prefit.pdf}}
     \subfigure[]{\includegraphics[width=.3\textwidth]{neos_results/tomatos_bce_5_1000_l1cvv0cv1/figures/tomatos_bce_5_1000_SR_xbb_2_prefit.pdf}}
-    \subfigure[]{\includegraphics[width=.3\textwidth]{neos_results/tomatos_cls_5_400_unbound_shapesys_l1cvv0cv1/figures/tomatos_cls_5_400_unbound_shapesys_SR_xbb_2_prefit.pdf}} \\
+    \subfigure[]{\includegraphics[width=.3\textwidth]{neos_results/tomatos_cls_5_1000_bounded_l1cvv0cv1/figures/neos_prefit.pdf}} \\
     \subfigure[]{\includegraphics[width=.3\textwidth]{neos_results/m_hh_5_l1cvv0cv1/figures/m_hh_5_SR_xbb_2_postfit.pdf}}
     \subfigure[]{\includegraphics[width=.3\textwidth]{neos_results/tomatos_bce_5_1000_l1cvv0cv1/figures/tomatos_bce_5_1000_SR_xbb_2_postfit.pdf}}
-    \subfigure[]{\includegraphics[width=.3\textwidth]{neos_results/tomatos_cls_5_400_unbound_shapesys_l1cvv0cv1/figures/tomatos_cls_5_400_unbound_shapesys_SR_xbb_2_postfit.pdf}}
+    \subfigure[]{\includegraphics[width=.3\textwidth]{neos_results/tomatos_cls_5_1000_bounded_l1cvv0cv1/figures/neos_postfit.pdf}}
     \caption[]{Pre- \textbf{(a)-(c)} and Postfit \textbf{(d)-(f)} histogram for columns left to right: $\mhh$, \ac{bce}-trained \ac{nn}, \ac{neos}-trained \ac{nn} }
     \label{fig:neos_pre_post_fit}
 \end{figure}
@@ -151,7 +169,7 @@ Nuisance parameter rankings for the \ac{bce}-trained and neos-trained \ac{nn} ar
 \end{figure}
 \begin{figure}
     \centering
-    \includegraphics[width=1\textwidth]{neos_results/tomatos_cls_5_400_unbound_shapesys_l1cvv0cv1/figures/ranking.pdf}
+    \includegraphics[width=1\textwidth]{neos_results/tomatos_cls_5_1000_bounded_l1cvv0cv1/figures/ranking.pdf}
     \caption[]{Ranking of nuisance parameters ordered by their post-fit impact on the signal strength, $\Delta\mu$, displayed on the upper axis for \ac{neos}. The black dots and the lower axis represent the pulls. A detailed explanation of this plot can be found in figure \ref{fig:m_hh_neos_unc_ranking}.}
     \label{fig:neos_valid_ranking_cls}
 \end{figure}
@@ -176,7 +194,7 @@ Thus, if parameters $\theta_1, \theta_2$ are correlated the cross-term \(2 \left
 \end{figure}
 \begin{figure}
     \centering
-    \includegraphics[width=1\textwidth]{neos_results/tomatos_cls_5_400_unbound_shapesys_l1cvv0cv1/figures/correlation_matrix.pdf}
+    \includegraphics[width=1\textwidth]{neos_results/tomatos_cls_5_1000_bounded_l1cvv0cv1/figures/correlation_matrix.pdf}
     \caption[]{Correlation matrix of correlation coefficients between parameters for \ac{neos}.}
     \label{fig:correlation_matrix_cls}
 \end{figure}
@@ -192,9 +210,22 @@ Expected limits on the cross-section for $\ktwov=0$ and the \ac{sm} \ac{vbf} sig
 \end{figure}
 
 With the linear combination of \ac{vbf} signal hypotheses as explained in section \ref{sec:linear_combination} a \ktwov scan for the three models is conducted with determined limits shown in figure \ref{fig:neos_valid_k2v_scan}. The constrained limits for \ktwov are summed up in table \ref{tab:neos_valid_k2v_constraints} with a relative improvement of neos to \ac{bce}-trained \ac{nn} (\mhh) of \qty[]{10}{(27)\percent} on the lower limit and \qty[]{3}{(9)\percent}.
-\red{show overlay here in final part only brazil scan}
+\red{show overlay here, in final part only brazil scan}
 
-\red{auch zeigen sample kombinierungsplot für alle?}
+
+
+\begin{figure}
+    \centering
+    \subfigure[]{\includegraphics[width=.3\textwidth]{m_hh_5_nominal_reweighted_ratio}}
+    \subfigure[]{\includegraphics[width=.3\textwidth]{tomatos_bce_5_1000_nominal_reweighted_ratio}}
+    \subfigure[]{\includegraphics[width=.3\textwidth]{tomatos_cls_5_1000_slope_50_nominal_reweighted_ratio}} \\
+    \caption[]{\red{maybe in appendix?}}
+    \label{fig:reweight_validation}
+\end{figure}
+
+
+
+
 \begin{figure}
     \centering
     \includegraphics[width=1\textwidth]{neos_results/k2v_scan_limits_overlay_neos_validation.pdf}
@@ -212,4 +243,5 @@ With the linear combination of \ac{vbf} signal hypotheses as explained in sectio
     \end{tabular}
 \end{table}
 
-This highlights the crux of the situation as optimizing on Asimov significance alone cannot account for uncertainties and has thus decreased performance compared to \ac{neos}. If \ac{neos} is not applicable it can be advisable when searching for a new process to optimize on the Asimov significance given the observed performance correlation. A study on this has also shown that such an approach can give improved results for analyses dominated by systematics uncertainties \citep{elwood2018direct}.
+\red{maybe move this to discussion}
+This highlights the crux of the situation as optimizing on Asimov significance alone cannot account for uncertainties and has thus decreased performance compared to \ac{neos}. If \ac{neos} is not applicable it can be advisable when searching for a new process to implement a loss function that optimizes the Asimov significance given the observed correlation in figure \ref{fig:neos_validation_loss}. A study on this has also shown that such an approach can give improved results for analyses dominated by systematic uncertainties \citep{elwood2018direct}.

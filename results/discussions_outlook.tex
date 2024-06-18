@@ -89,7 +89,24 @@ auch nochmal smt aufgreifen hier?
 
 with neos forget about weird reweighting techniques and error estimation in resovled hh4b
 
+
+------neos-------
+gradient improve neos
 inrcease gradient by worsening bkg shapesys with factor
+cut slopes
+bandwidth 
+lr / optimizer
+run cut optimization alone wihtout nn improvement
+binning hat nichts gebracht
+
+use w vector in training, didnt work…
+
+this does not work:
+xbb score entfernern
+bandwidth also kind of optimized
+more complicated arch not useufl
+cuts at 0 also weird 
+different bin nr not so important
 
 cut optimierung verbessern mit slopes… 
 auch müsste man herausfinden 
@@ -101,6 +118,27 @@ lukas neue idee erwähnen
 
 
 
+antwrot auf frage wie kann binning übernehmen 
+in theory could turn on binning, by figuring how to disable binning parameters so the opimization cant find gradients anymore 
+degeneracy argument… hat nichts gebracht etc. nn should learn which bin
+
+
+different arch didnt gain improvement
+
+
 can see crux of situation, blindly going for Asimov significance, can not account for uncertainties
 warum nicht auf s/b optimieren, kennt zwar keine unsicherheiten
 gradient verstärken für bkg estiamte oder so
+
+
+improve Training
+dropout layers, different arch, 
+
+
+pt_h2 lösen? …nein —> könnte man auch bei best fit versuchen
+lets argue, were not available
+
+eig noch eine VR
+stats reichen nicht 
+cut in half, use one for extraction, another one for actual validation dann in eig fit?
+

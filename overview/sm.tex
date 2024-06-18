@@ -1,16 +1,16 @@
-\chapter{The Standard Model of Particle Physics}\label{ch:sm}
+\chapter{The Standard Model Of Particle Physics}\label{ch:sm}
 \noindent The \ac{sm} of Particle Physics is the current theory that describes three of the four fundamental forces, namely the electromagnetic, strong, and weak forces, with the exception of gravity. Over the last decades it has been probed with remarkable precision. However, as discussed later in this chapter, there are still observational phenomena that lie beyond its scope.
 
-The \ac{sm} is based on symmetry principles and is described by a lorentz-invariant \ac{qft} that is renormalizable and invariant under local gauge transformations. This means that within the non-abelian gauge group
+The \ac{sm} is described by a lorentz-invariant \ac{qft} that is renormalizable and invariant under local gauge transformations. This means that within the non-abelian gauge group
 \begin{equation}
     G = SU(3)_C \otimes SU(2)_L \otimes U(1)_Y,
 \end{equation}
-the equations of motions remain invariant. $SU(3)_C$ is the special unitary group of rank 3 representing the color symmetry within \ac{qcd}, the \ac{qft} describing the strong interactions. $SU(2)_L \otimes U(1)_Y$ exhibits the unification of the weak and electromagnetic interaction into the \ac{ew} force of $SU(2)_L$ left-chiral fermions of the weak force and right-handed $U(1)_Y$ fermions with weak hypercharge $Y$ of the electromagnetic force described by \ac{qed}.
+the equations of motions remain invariant. $SU(3)_C$ is the special unitary group of rank 3 representing the color symmetry within \ac{qcd}, the \ac{qft} describing the strong interactions. $SU(2)_L \otimes U(1)_Y$ exhibits the unification of the weak and electromagnetic interaction into the \ac{ew} force of that leave $SU(2)_L$ left-chiral particle doublets and particles carrying $U(1)_Y$ fermions with weak hypercharge $Y$.
 
 The following describes the particles of the \ac{sm} and gives a brief overview of the \ac{qft}'s used to describe aforementioned forces. The content of this chapter draws inspiration primarily from \citep{hollik2010quantum,griffiths2020introduction,thomson2013modern,zee2010quantum,halzen1984introductory}. Natural units are assumed everywhere $\hbar=c=1$.
 
 
-\section{Particles of the Standard Model}
+\section{Particles Of The Standard Model}
 
 All currently known elementary particles are included in the \ac{sm} and can be organized as depicted in figure \ref{fig:sm}. This includes 12 fermions, that are particles of half-integer spin, 12 vector bosons with spin 1, and the Higgs boson, a scalar particle with spin 0.
 
@@ -76,6 +76,7 @@ This only works if $\lambda$ is small. With this the Lagrangian can be solved an
 The forces and Lagrangians occurring in the \ac{sm} are discussed in the following sections on \ac{qed} \ref{sec:qed}, \ac{qcd} \ref{sec:qcd} and the \ac{ew} theory \ref{sec:ew}. For these the principle of local gauge invariance plays a key role and is inspired by gauge invariance from classical electrodynamics.
 
 \section{Quantum Electrodynamics}\label{sec:qed}
+\red{    In QED, the gauge bosons (photons) do not interact with each other. This is a direct consequence of the Abelian nature of U(1) In contrast, in non-Abelian gauge theories like Quantum Chromodynamics (QCD), the gauge bosons (gluons) do interact with each other due to the non-commuting nature of the gauge group generators.}
 The \ac{qft}-description of the electromagnetic interaction \ac{qed} can be derived from the free fermion field given by the Dirac equation
 \begin{equation}
     \mathcal{L}_\mathrm{Dirac} = \overline{\psi}(i \gamma^\mu \partial_\mu - m )\psi.
@@ -615,6 +616,7 @@ With the identity $V_L^uV_L^{d\dagger}\equiv V_\mathrm{CKM}$ the quark mixing ma
 The $V_{ij}$ describes the transition probability for a quark $j$ to quark $i$ via the charged weak interactions. In this model neutrinos are assumed massless. Though they could be added including their mixing analogous to the quarks. This completes the current \ac{sm} electroweak Lagrangian of equation \ref{eq:L_EW}.
 
 \section{Physics Beyond The Standard Model}\label{sec:beyond_sm}
+\red{    shape, phase transition matter antimatter}
 The \ac{sm} works within its realm but is inherently incomplete and in discrepancy with other models. Most importantly there is no quantum theory for gravity excluding it entirely. The standard cosmological model - Lambda CDM - includes dark matter and dark energy to model the microwave background for which both the \ac{sm} offers no explanation. Furthermore neutrinos are known to be massive. In principle they can be added like fermions as in the section on the fermion Yukawa mass term \ref{sec:yukawa_term} but this requires right-handed neutrinos which have not been observed. This suggests, since their masses are much smaller than for the other fermions that there might be another mechanism responsible for the generation of the mass of neutrinos. Moreover, in the standard cosmological model, matter and antimatter should have been created in equal amounts, yet the universe is predominantly made of matter.
 
 \begin{figure}
@@ -623,7 +625,7 @@ The \ac{sm} works within its realm but is inherently incomplete and in discrepan
     \caption[]{Leading correction to the Higgs field from top pair interaction.}
     \label{fig:top_loop}
 \end{figure}
-Especially with respect to the Higgs particle, it is not clear whether the assumed form of the Higgs potential is the one realized in nature since only the mass term of the Higgs potential from equation \ref{eq:higgs_potential} is determined by experiment. Considering top-quark loop corrections to the Higgs field, as illustrated in figure \ref{fig:top_loop}, the $\lambda(\mu)$ parameter in the Higgs potential becomes energy scale-dependent. At an instability energy scale of $\Lambda_I\approx \qty[]{e10}{GeV}$, $\lambda(\mu)$ could turn negative, suggesting that the current \ac{vev} might not be the absolute minimum of the Higgs potential but could be energetically lower or even unbounded. A phase transition via quantum tunneling into a different \ac{vev} could result in the universe's particles, forces and structures ceasing to exist and being replaced by different ones. The stability of the universe, under the assumptions of \ac{sm} physics, critically depends on the precise values of the Higgs and top quark masses, as depicted in the phase diagram in figure \ref{fig:vev_stability}, which places the universe at the boundary between stability and metastability given current measurement accuracies.
+Especially with respect to the Higgs particle, it is not clear whether the assumed form of the Higgs potential is the one realized in nature since only the mass term of the Higgs potential from equation \ref{eq:higgs_potential} is determined by experiment. Considering top-quark loop corrections to the Higgs field, as illustrated in figure \ref{fig:top_loop}, the $\lambda(\mu)$ parameter in the Higgs potential becomes energy scale-dependent. At an instability energy scale of $\Lambda_I\approx \qty[]{e10}{GeV}$, $\lambda(\mu)$ could turn negative, suggesting that the current \ac{vev} might not be the absolute minimum of the Higgs potential but could be energetically lower or even unbounded \citep{devoto2022false}. A phase transition via quantum tunneling into a different \ac{vev} could result in the universe's particles, forces and structures ceasing to exist and being replaced by different ones. The stability of the universe, under the assumptions of \ac{sm} physics, critically depends on the precise values of the Higgs and top quark masses, as depicted in the phase diagram in figure \ref{fig:vev_stability}, which places the universe at the boundary between stability and metastability given current measurement accuracies.
 
 \begin{figure}
     \centering
@@ -633,3 +635,6 @@ Especially with respect to the Higgs particle, it is not clear whether the assum
 \end{figure}
 
 Through the Higgs mechanism, elementary particles gain mass by interacting with the Higgs field. Accurate measurements of properties such as the mass and decay channels of the Higgs boson and the top quark offer means to validate and challenge the \ac{sm}. A precise understanding of these is crucial as any deviation from the expected values could indicate new physics. Moreover, the stability of our universe might be related to these properties. The study of the Higgs potential is therefore a promising endeavor to which this work aims to contribute.
+
+
+\red{ Thomson s. 450 weak sector measurable with high precision -->deviations bsm, relations that couple paramaters in EW, senstitive to loop corrections, }

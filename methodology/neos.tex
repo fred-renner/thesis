@@ -1,5 +1,5 @@
 \chapter{Analysis Optimization}\label{sec:analysis_optimization}
-
+\red{add mjj etajj input vars}
 After selecting objects that represent the final state of the physical process under investigation, a metric needs to be constructed sensitive to the outcomes of a hypothesis test. Often, this metric takes the form of a kinematic variable, such as the invariant mass of the Higgs pair system $m_\text{HH}$ in this analysis, designed to differentiate between signal and background events. As elaborated in Chapter \ref{sec:statistics}, the underlying statistical test employs frequentist principles, thus histograms derived from this metric serve as inputs to these tests. Throughout the development of this variable, various optimizations typically aim to maximize the signal-to-background ratio as a proxy for the statistical tests expressivity. This ratio
 
 Since the purpose of this quantity is to separate signal from background it is well suited to be anaylized with a \ac{ml} model. While such models have gained widespread usage in particle physics \citep{albertsson2019machine,shlomi2020graph,feickert2021living,Schwartz2021Modern}, their effectiveness is limited when they are only optimized for signal-to-background discrimination. This is because their training does not usually consider broader goals like assessing discovery significance or establishing confidence levels.
@@ -22,8 +22,8 @@ To address these challenges, \textit{\ac{neos}} \citep{Simpson_2023} offers a pr
 
 The training of \acp{nn} is usually performed with the back-propagation algorithm which seeks to minimize a cost function $C(\bm{\varphi})$. This function measures the deviation of a given input from a desired output as a function of the model parameters $\bm{\varphi}$. For training a binary classifier, where the output ranges continuously from 0 to 1, e.g. 1 indicating signal and 0 indicating background, the \ac{bce} cost function is widely used:
 \begin{equation}\label{eq
-}
-C = -\frac{1}{N} \sum_{i=1}^{N} \left[ y_i \log(p_i) + (1 - y_i) \log(1 - p_i) \right],
+    }
+    C = -\frac{1}{N} \sum_{i=1}^{N} \left[ y_i \log(p_i) + (1 - y_i) \log(1 - p_i) \right],
 \end{equation}
 where $N$ is the total number of training examples, $y_i$ represents the true label and $p_i$ the predicted value by the \ac{nn} of the $i$-th training example.
 
@@ -74,16 +74,17 @@ In order to build the statistical model each histogram entering it needs to be f
 
 \acp{nn} tend to learn from more frequently observed data. Thus to make use of all available data and to avoid a training class imbalance each sample is upscaled by replicating values to the sample with the largest event content, which in this case is a sample with the systematic: `JET EtaIntercalibration NonClosure PreRec up'. This is a result of a slightly increased selection efficiency if $\eta$ is varied upwards. To avoid artificially altering the event counts in the histograms, a scale factor of $n_\text{sample}/n_\text{max}$ is applied to the weights.
 
-Table \ref{tab:neos-samples} gives an overview of used samples and the number of events they contain. Only uncertainties with an impact on an \mhh{} fit as of figure \ref{fig:m_hh_full_sys_ranking} are used to speed up the training process. These uncertainties are detailed in chapter \ref{sec:systematics} and comprise the 4 $b$-quark branching ratio normalization, the statistical error on the ABCD method transfer factor extraction and the shape uncertainty associated to this method, the four estimated $p_T$ binned uncertainties of the GN2X tagger, the envelope of the scale variations, the statistical errors on the \ktwov signal sample and the background estimate and two $\eta$ small-$R$ jet uncertainties. Table \ref{tab:neos-samples} also reveals that the background estimate is upscaled by a factor of $\sim 2$. Input variables per sample are shown in figure \ref{fig:tomats_inputs_0} and \ref{fig:tomats_inputs_1}. To ensure a fair training across features and prevent those with large values from dominating the learning process, a min-max scaling is applied to the inputs:
+Table \ref{tab:neos-samples} gives an overview of used samples and the number of events they contain. Only uncertainties with an impact on an \mhh{} fit as of figure \ref{fig:m_hh_full_sys_ranking} are used to speed up the training process. These uncertainties are detailed in chapter \ref{sec:systematics} and comprise the 4 $b$-quark branching ratio normalization, the statistical error on the ABCD method transfer factor extraction and the shape uncertainty associated to this method, the four estimated $p_T$ binned uncertainties of the GN2X tagger, the envelope of the scale variations, the statistical errors on the \ktwov signal sample and the background estimate and two $\eta$ small-$R$ jet uncertainties. Table \ref{tab:neos-samples} also reveals that the background estimate is upscaled by a factor of $\sim 2$. Input variables per sample are shown in figure \ref{fig:tomatos_inputs_0} and \ref{fig:tomatos_inputs_1}. To ensure a fair training across features and prevent those with large values from dominating the learning process, a min-max scaling is applied to the inputs:
 \begin{equation}
     x'=\frac{x - \text{min}(x)}{\text{max}(x)-\text{min}(x)},
 \end{equation}
-scaling them between 0 and 1. \qty[]{90}{\percent} of events in the dataset are used for training (39713 events), whereas the other \qty[]{10}{\percent} are again split into a \qty[]{80}{\percent} validation sample (3530 events) and \qty[]{20}{\percent} test sample (883 events). The epoch with the lowest loss value when evaluated on the validation sample is chosen after training. 
+scaling them between 0 and 1. \qty[]{90}{\percent} of events in the dataset are used for training (39713 events), whereas the other \qty[]{10}{\percent} are again split into a \qty[]{80}{\percent} validation sample (3530 events) and \qty[]{20}{\percent} test sample (883 events). The epoch with the lowest loss value when evaluated on the validation sample is chosen after training.
 
 In addition four samples are processed through the pipeline to estimate the background with the ABCD method described in \ref{sec:abcd}. The transfer factor and its uncertainty is estimated from the \ac{cr} and a shape uncertainty is estimated in the \ac{vr} as described in \ref{sec:bkg_uncertainties}. The downward uncertainty estimate is unbound such that it can assume negative values during optimization. This resulted in improved cross-section limits determined after optimization when the ucnertainty is bounded at zero. \red{need to redo with mix-max scale on alle samples, as currently clipped The Min-Max scaling for the input variables is derived on the \ac{sr} and thus only knows about mass values for the Higgs candidate for that region. } Event numbers are also shown in table \ref{tab:neos-samples}. Per training epoch, which corresponds to a full processing of the dataset, data are reshuffled.
 
 The optimization also optimizes cuts on the invariant mass $m_{jj}$ and the pseudorapidity difference $|\Delta\eta(j,j)|$ of the two \ac{vbf} jets as mentioned in \ref{sec:hh4b_analysis_strategy}. Mathematically, applying a cut can be represented by multiplying the value to be cut with a Heaviside function shifted by the cut value. For a differentiable approximation, a sigmoid function is used, which is then multiplied to an event's weight.
 
+\red{update table}
 \begin{table}[]
     \centering
     \caption{Samples and available number of events after the selection described in section \ref{sec:hh4b_analysis_strategy} used in the training. Systematics are described in \ref{sec:systematics}. Deviations }
@@ -122,16 +123,16 @@ The optimization also optimizes cuts on the invariant mass $m_{jj}$ and the pseu
 
 \begin{figure}
     \centering
-    \includegraphics[width=1\textwidth]{tomats_inputs_0}
+    \includegraphics[width=1\textwidth]{neos_results/tomatos_inputs_0}
     \caption[]{Neos input variables (1/2): The coloums from left to right correspond to the four vectors of the leading Higgs candidate, the subleading Higgs candidate and the Higgs Pair system. A legend valid for all figures is shown in the upper right figure.}
-    \label{fig:tomats_inputs_0}
+    \label{fig:tomatos_inputs_0}
 \end{figure}
 
 
 
 \begin{figure}
     \centering
-    \includegraphics[width=1\textwidth]{tomats_inputs_1}
+    \includegraphics[width=1\textwidth]{neos_results/tomatos_inputs_1}
     \caption[]{Neos input variables (2/2): Columns from left to right: Four vectors of the two vbf jets and the leading GN2X score in the event is depicted above the legend.}
-    \label{fig:tomats_inputs_1}
+    \label{fig:tomatos_inputs_1}
 \end{figure}

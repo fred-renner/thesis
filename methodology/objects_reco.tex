@@ -57,24 +57,24 @@ Such tracks have a large impact parameter that is defined as the distance of clo
 \end{figure}
 
 \subsection{DL1 Tagger}\label{sec:dl1}
-The results obtained from the secondary vertex- and impact parameter finding algorithms by exploiting the characteristics of $b$-hadron decays and the kinematics of the jet are then passed to a deep feed-forward neural network existing in several versions with prefix \ac{dl1} which is trained to distinguish $b$-jets from jets of other flavors \citep{atlas2022atlas}. 
+The results obtained from the secondary vertex- and impact parameter finding algorithms by exploiting the characteristics of $b$-hadron decays and the kinematics of the jet are then passed to a deep feed-forward neural network existing in several versions with prefix \ac{dl1} which is trained to distinguish $b$-jets from jets of other flavors \citep{atlas2022atlas}.
 Depending on the strategy of introducing additional tracking information associated with the jet \ac{dl1} can become DL1r if the outputs of the RNNIP (Recurrent Neural Network Impact Parameter) \citep{Gilles:2806947} tagger or DL1d if the outputs of the \ac{dips} \citep{ATL-PHYS-PUB-2020-014} tagger are added as inputs to \ac{dl1}. The outputs of these taggers are then combined into a single signal to background ratio variable, the discriminant, defined as
 \begin{equation}
   \mathrm{D}=\ln\left(\frac{p_b}{f_c \cdot p_c + (1-f_c)\cdot p_\mathrm{light} }\right).
 \end{equation}
-$f_c$ is a parameter to tune the importance between charm and light quark background classes ($\sum f_\mathrm{bkg} =1$). When evaluating the \ac{nn} a value for the discriminating variable $D$ can be derived that corresponds to a $b$-jet selection efficiency. In this analysis the chosen efficiency is \qty[]{77}{\percent}. 
+$f_c$ is a parameter to tune the importance between charm and light quark background classes ($\sum f_\mathrm{bkg} =1$). When evaluating the \ac{nn} a value for the discriminating variable $D$ can be derived that corresponds to a $b$-jet selection efficiency. In this analysis the chosen efficiency is \qty[]{77}{\percent}.
 
-\subsection{GN2X Tagger}\label{sec:gn2x}
-For a collision event with decay products consisting of two $b$-jets with large transverse momenta, small-$R=$ jets can become overlapped making a clear separation infeasible. To address such scenarios, large-$R$ jets are used that encompass both $b$-jets. The latest iteration of $b$-tagging algorithms in \ac{atlas} uses \acp{gnn} \citep{shlomi2020graph, ATL-PHYS-PUB-2022-027}. This choice is such that a graph with edges and vertices represents a more natural relational structure of a jet opposed to a feed-forward \ac{nn}. This involves globally updated states on all network parameters, modeling the properties of the whole jet, e.g. its flavor origin, as well as tracks as vertices and their interactions as edges between them. 
+\subsection{$X\rightarrow bb$ (GN2X) Tagger}\label{sec:gn2x}
+For a collision event with decay products consisting of two $b$-jets with large transverse momenta, small-$R=$ jets can become overlapped making a clear separation infeasible. To address such scenarios, large-$R$ jets are used that encompass both $b$-jets. The latest iteration of $b$-tagging algorithms in \ac{atlas} uses \acp{gnn} \citep{shlomi2020graph, ATL-PHYS-PUB-2022-027}. This choice is such that a graph with edges and vertices represents a more natural relational structure of a jet opposed to a feed-forward \ac{nn}. This involves globally updated states on all network parameters, modeling the properties of the whole jet, e.g. its flavor origin, as well as tracks as vertices and their interactions as edges between them.
 
 The GN2X tagger uses a transformer architecture \citep{ATL-PHYS-PUB-2023-021} within a \ac{gnn}. Transformers are able to capture the relationships between sequential objects, a feature present in particle decays. The input features to this model include the transverse momentum ($p_T$), pseudorapidity ($\eta$), and mass of the jet, along with properties of tracks associated with the jet. It aims to identify the quark content in potential Higgs boson decays by outputting probabilities for the decays into two $b$-quarks, two $c$-quarks, a top quark, and contributions from multijet background processes. The GN2X tagger then computes a discriminant, based on these probabilities:
 \begin{equation}
   D_{\text{GN2X}}=\ln\left({\frac{p_{\text{Hbb}}}{
-    f_{\text{Hcc}}\cdot p_{\text{Hcc}}+
-    f_{\text{top}}\cdot p_{\text{top}}+
-    (1-f_{\text{Hcc}}-f_{\text{top}})\cdot p_{\text{QCD}}}}\right).
+  f_{\text{Hcc}}\cdot p_{\text{Hcc}}+
+  f_{\text{top}}\cdot p_{\text{top}}+
+  (1-f_{\text{Hcc}}-f_{\text{top}})\cdot p_{\text{QCD}}}}\right).
 \end{equation}
-$f_\text{top}=0.25$ and $f_\text{Hcc}=0.02$ denotes chosen parameters weighting the influence of the corresponding \ac{gnn} output nodes to the discriminant. From the evaluation of the discriminant \acp{wp} are defined depending on the Higgs tagging efficiency. As mentioned in \citep{ATL-PHYS-PUB-2023-021} mass sculpting is observed which can become a problem for a data-driven background estimate as used in this thesis. This issue has been addressed by slightly altering the discriminant value depending on the mass of the jet in a way that the \ac{qcd} background selection efficiency is not altered by the tagger. 
+$f_\text{top}=0.25$ and $f_\text{Hcc}=0.02$ denotes chosen parameters weighting the influence of the corresponding \ac{gnn} output nodes to the discriminant. From the evaluation of the discriminant \acp{wp} are defined depending on the Higgs tagging efficiency. As mentioned in \citep{ATL-PHYS-PUB-2023-021} mass sculpting is observed which can become a problem for a data-driven background estimate as used in this thesis. This issue has been addressed by altering the discriminant value depending on the mass of the jet in a way that the \ac{qcd} background selection efficiency is not altered by the tagger.
 
 % The $X\rightarrow bb$ tagger is a feed-forward \ac{nn} \citep{ATL-PHYS-PUB-2020-019}. The inputs include the transverse momentum \pt and pseudorapidity $\eta$ of the large-$R$ jet along with outputs from DL1d for up to three \ac{vr} track jets. Similar to DL1d, a discriminant is computed from the \ac{nn}'s output scores, which reflect the likelihood of the event being a Higgs, top, or multijet decay:
 % \begin{equation}
@@ -85,12 +85,12 @@ $f_\text{top}=0.25$ and $f_\text{Hcc}=0.02$ denotes chosen parameters weighting 
 \section{Jet Calibration}\label{sec:calibration}
 The calibration of measuring instruments is crucial for accuracy, and this is especially true for the reconstruction of jets. The following factors often lead to discrepancies between the reconstructed and actual properties of jets \citep{atlas2011jet}:
 \begin{itemize}
-\item \textbf{Non-Compensation:} A lower calorimeter response to non-electromagnetic particles from hadron showers compared to electromagnetic particles.
-\item \textbf{Dead Material:} Energy is deposited in non-instrumented areas of the detector.
-\item \textbf{Out-of-Cone Particles:} Particles from a decay are not captured within the jet reconstruction cone.
-\item \textbf{Noise Threshold:} Energy depositions below the detector's noise threshold are missed.
-\item \textbf{Pile-up:} Additional particles from other proton-proton interactions. 
-\item \textbf{Leakage:} Particles are not stopped inside the calorimeter (punch-through).
+  \item \textbf{Non-Compensation:} A lower calorimeter response to non-electromagnetic particles from hadron showers compared to electromagnetic particles.
+  \item \textbf{Dead Material:} Energy is deposited in non-instrumented areas of the detector.
+  \item \textbf{Out-of-Cone Particles:} Particles from a decay are not captured within the jet reconstruction cone.
+  \item \textbf{Noise Threshold:} Energy depositions below the detector's noise threshold are missed.
+  \item \textbf{Pile-up:} Additional particles from other proton-proton interactions.
+  \item \textbf{Leakage:} Particles are not stopped inside the calorimeter (punch-through).
 \end{itemize}
 Several algorithms are employed to mitigate these effects and to also take the detector geometry into account and are described in the following based on \citep{atlas2021jet}. As reference objects serve well-understood physics processes that leave a distinct signature in the detector like dijet events or decays of $Z$-bosons or photons.
 
@@ -121,11 +121,11 @@ Moreover pileup contributions can be further reduced by comparing the scalar \pt
 
 
 \subsubsection{Large-R Jets}
-Due to their large surface area, large-$R$ jets are particularly susceptible to pile-up contributions. Several algorithms are used to mitigate it \citep{atlas2021optimisation}. Similar to the median \pt subtraction for small-$R$ jets a so-called constituent subtraction (CS) is applied. In this method, a pile-up estimate per ghost particle is iteratively subtracted from the clusters that are closest to the ghosts in the jet \citep{ATLAS-CONF-2017-065}. 
+Due to their large surface area, large-$R$ jets are particularly susceptible to pile-up contributions. Several algorithms are used to mitigate it \citep{atlas2021optimisation}. Similar to the median \pt subtraction for small-$R$ jets a so-called constituent subtraction (CS) is applied. In this method, a pile-up estimate per ghost particle is iteratively subtracted from the clusters that are closest to the ghosts in the jet \citep{ATLAS-CONF-2017-065}.
 
 Additionally, an algorithm named SoftKiller (SK) imposes a \pt requirement on constituents to eliminate soft particles. This \pt-cut is determined per event by selecting a \pt-value that leaves half of the cells in an ($\eta,\phi$) grid empty, effectively achieving a median \pt of zero, akin to that used in constituent subtraction \citep{ATLAS-CONF-2017-065}.
 
-Another method employed is jet grooming, which aims to remove low energy (soft) wide-angle radiation from the jet. This is achieved through the SoftDrop (SD) algorithm, which applies the Cambridge/Aachen clustering method \citep{Larkoski_2014}. This clustering approach groups the jet's constituents based on their angular distance. Recursively a \pt requirement is applied to constituents always checked on the widest angle constituent with a stopping criterion. 
+Another method employed is jet grooming, which aims to remove low energy (soft) wide-angle radiation from the jet. This is achieved through the SoftDrop (SD) algorithm, which applies the Cambridge/Aachen clustering method \citep{Larkoski_2014}. This clustering approach groups the jet's constituents based on their angular distance. Recursively a \pt requirement is applied to constituents always checked on the widest angle constituent with a stopping criterion.
 
 % This series of strategies ensures a more accurate reconstruction of jets
 
@@ -157,7 +157,7 @@ The mass of a jet is calculated from the energy deposits in calorimeter clusters
 \begin{equation}
   m_{\text{calo}} = \sqrt{\left(\sum_{i\in \text{Jet}}E_i\right)^2-\left(\sum_{i\in \text{Jet}}\vec{p_i}\right)^2}.
 \end{equation}
-For very boosted jets the spread of particles inside the jet can become the size of the granularity of the calorimeter and the energy resolution degrades accordingly. With the help of tracking information from the \ac{id}, the energy and mass resolution can be improved across the whole \pt range \citep{Aaboud:2019aa}. The track assisted jet mass is 
+For very boosted jets the spread of particles inside the jet can become the size of the granularity of the calorimeter and the energy resolution degrades accordingly. With the help of tracking information from the \ac{id}, the energy and mass resolution can be improved across the whole \pt range \citep{Aaboud:2019aa}. The track assisted jet mass is
 \begin{equation}
   m_{\text{TA}} = \frac{p_{\text{T}}^{\text{calo}}}{p_{\text{T}}^{\text{track}}} \cdot m_{\text{track}},
 \end{equation}
