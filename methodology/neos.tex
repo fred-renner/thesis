@@ -70,6 +70,8 @@ The original proposers \citet{Simpson_2023} of \ac{neos} developed differentiabl
 
 
 \section{Training}\label{sec:neos_training}
+\red{The k2v = 0 signal is chosen as a representative
+proxy for non-SM values of k2v, allowing to maximise the sensitivity to the k2v coupling}
 In order to build the statistical model each histogram entering it needs to be filled from data during the training. This requires a full dataset of variables per sample (signal, background estimate, systematic) being processed through the whole pipeline as of figure \ref{fig:neos}. The \ac{tomatos} \citep{tomatos} training framework encapsulates the following techniques.
 
 \acp{nn} tend to learn from more frequently observed data. Thus to make use of all available data and to avoid a training class imbalance each sample is upscaled by replicating values to the sample with the largest event content, which in this case is a sample with the systematic: `JET EtaIntercalibration NonClosure PreRec up'. This is a result of a slightly increased selection efficiency if $\eta$ is varied upwards. To avoid artificially altering the event counts in the histograms, a scale factor of $n_\text{sample}/n_\text{max}$ is applied to the weights.

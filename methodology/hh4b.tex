@@ -63,7 +63,7 @@ In a second step the parton shower evolution including hadronization and initial
 In a final step the detector response of simulated final state particles is simulated with \textsc{Geant}4 \citep{Agostinelli:2002hh}. It models the detector geometry, the particle's path through the magnetic fields and the particle interactions with the detector material, potentially producing new particles or decays. The output of this step are energy deposits in the various subdetectors of \ac{atlas}. Subsequently these are passed on to a process known as digitization which models the readout electronics. The result of this is raw data being no different from that read out in the actual experiment.
 
 \section{Analysis Strategy}\label{sec:hh4b_analysis_strategy}
-This section outlines the event selection and analysis strategy. A detailed description of reconstructed objects is given in chapter \ref{ch:reco}. Only events from a Good Runs List are chosen to ensure all detectors are operating as expected and to avoid events where for example the \ac{lhc} beam was not stable. Selections are executed with the selector module within the \textsc{pyhh} \citep{pyhh} package developed for this analysis. This strategy builds upon a previous iteration of the same analysis, incorporating the latest advancements in object reconstruction available at the time of writing this thesis. Consequently there is an opportunity for further refinement of the event selection strategy which is beyond the scope of this current thesis.
+This section outlines the event selection and analysis strategy. A detailed description of reconstructed objects is given in chapter \ref{ch:reco}. Only events from a Good Runs List are chosen to ensure all detectors are operating as expected and to avoid events where for example the \ac{lhc} beam was not stable. Selections are executed with the selector module within the \textsc{pyhh} \citep{pyhh} package developed for this analysis. This strategy builds upon a previous iteration of the same analysis, incorporating the latest advancements in object reconstruction available at the time of writing this thesis. These advancements include the use of \ac{ufo} large-$R$ jets, the GN2X version of the $X\rightarrow bb$ tagger and moving to Athena \citep{Athena} release 24. Consequently there is an opportunity for further refinement of the event selection strategy which is beyond the scope of this current thesis.
 
 \subsection{Trigger}
 As outlined in section \ref{sec:tdaq} events need to be preselected. The \ac{hlt} applied in this analysis selects events with a large transverse energy $E_\text{T}$ large-$R$ jet. The definition slightly changed over the data taking years as can be seen in table \ref{tab:trigger}.
@@ -97,7 +97,7 @@ The GN2X version of the $X\rightarrow bb$ tagger described in \ref{sec:gn2x} is 
 \subsection{Small Radius Jets}
 Two small radius $R=0.4$ jets are required for the \ac{vbf} signature and are referred to as \ac{vbf} jets in the following. They are reconstructed with the anti-$k_t$ algorithm and as \acp{pfo} described in \ref{sec:jets}. The tight \ac{wp} for the \ac{jvt} and the LooseBad \ac{wp} for the event cleaning are applied both described in \ref{sec:calibration}. Small-$R$ jets $j$ are selected for $\pt>\qty[]{20}{GeV}$ and $|\eta|<4.5$ for which the calibration is valid and are required to be outside of the Higgs candidate large-$R$ jets $J$ by imposing $\Delta R(J,j) > 1.4$.
 
-It can be shown that the \ac{vbf} jets typically exhibit a large invariant mass for the ($j_1$, $j_2$) system and a significant pseudorapidity difference $|\Delta\eta(j_1,j_2)|$ \citep{rauch2016vectorboson}. Consequently, cuts are usually applied to these quantities in standard $HH\rightarrow 4b$ \ac{vbf} analyses. However, this analysis explores an automated optimization of these cuts, which will be discussed in chapter \ref{sec:analysis_optimization}.
+It can be shown that the \ac{vbf} jets typically exhibit a large invariant mass for the ($j_1$, $j_2$) system and a significant pseudorapidity difference $|\Delta\eta(j_1,j_2)|$ \citep{rauch2016vectorboson}. Consequently, cuts are usually applied to these quantities in standard $HH\rightarrow 4b$ \ac{vbf} analyses. This analysis explores an automated optimization of these cuts, which will be discussed in chapter \ref{sec:analysis_optimization}.
 
 \subsection{Kinematic Regions}\label{sec:kinematic_regions}
 \ac{sr}, Validation Region (VR) and \ac{cr} are explored and optimized in previous analyses \citep{aad2023search,ATL-COM-PHYS-2023-033} in the $m_{H1},m_{H2}$ plane and are defined as
@@ -113,7 +113,7 @@ and
     \label{CR_Xhh}
     CR = \sqrt{\left(\frac{m_{H1} - \SI{124}{\GeV}}{0.1 \ln(m_{H1}/\text{GeV})}\right)^{2} + \left(\frac{m_{H2} - \SI{117}{\GeV}}{0.1 \ln(m_{H2}/\text{GeV})}\right)^{2}} > 100  \ \& \ < 170.
 \end{equation}
-Figure \ref{fig:m_hh_plane} depicts $m_{H1}-m_{H2}$ planes for data and signal samples.
+Figure \ref{fig:m_hh_plane} depicts $m_{H1}-m_{H2}$ planes for data and signal samples. As pointed out in the introduction of section \ref{sec:hh4b_analysis_strategy} here remains an opportunity for improvement.
 \begin{figure}
     \centering
     % \includegraphics[width=.7\textwidth]{m_hh_plane}
@@ -121,27 +121,24 @@ Figure \ref{fig:m_hh_plane} depicts $m_{H1}-m_{H2}$ planes for data and signal s
     \subfigure[]{\includegraphics[width=.49\textwidth]{massplane_NOSYS.xbb_2_run2}}
     \subfigure[]{\includegraphics[width=.49\textwidth]{massplane_NOSYS.xbb_2_SM}}
     \subfigure[]{\includegraphics[width=.49\textwidth]{massplane_NOSYS.xbb_2_k2v0}}
-    \caption[]{ $m_{H1}-m_{H2}$ planes for data with (a) 1 GN2X tag and (b) 2 GN2X tags, (c) a \ac{sm} and (d) $\ktwov$=0 signal sample with 2 GN2X tags. Defined kinematic regions are given as contours for \ac{cr}, \ac{vr} and \ac{sr}.}
+    \caption[]{ $m_{H1}-m_{H2}$ planes after event selection for data with (a) 1 GN2X tag and (b) 2 GN2X tags, (c) a \ac{sm} and (d) $\ktwov$=0 signal sample with 2 GN2X tags. Defined kinematic regions are given as contours for \ac{cr}, \ac{vr} and \ac{sr}.}
     \label{fig:m_hh_plane}
 \end{figure}
 
 \subsection{Background Estimation}\label{sec:abcd}
-\red{all plots need to be redone for the final tomatos model with the best limits, but for now to have these to get the idea}
-Since the final state of this analysis is hadronic, it remains a challenging task to estimate the contributions from the plethora of \ac{qcd} processes via simulation.
-%that contribute to backgrounds via  misidentification of light quarks as heavy $(b, t)$-quarks. 
-Therefore the well established ABCD method is employed to derive a data-driven background estimate \citep{buttinger2018background,PhysRevD.103.035021}. It is based on the idea to use two independent variables $f$ and $g$ to define four orthogonal regions A, B, C and D as illustrated in figure \ref{fig:abcd} that for some combination of the ratio of event yields in the regions hold
+Estimating the contributions from the various \ac{qcd} processes via simulation remains a significant challenge since hadrons constitute the final state in this analysis. Therefore, the ABCD method is employed to derive a data-driven background estimate \citep{buttinger2018background,PhysRevD.103.035021}. This method uses two independent variables, $f$ and $g$, to define four orthogonal regions: A, B, C, and D, as illustrated in Figure \ref{fig:abcd}, such that for a combination of event yield ratios in these regions, the following relationship holds:
 \begin{equation}
     \frac{N_A}{N_B}=\frac{N_C}{N_D}.
 \end{equation}
 \begin{figure}
     \centering
     \includegraphics[width=.7\textwidth]{abcd}
-    \caption[]{Illustration of four orthogonal regions A,B,C and D defined by two variables $f$ and $g$ in the horizontal and signal and background yields in the vertical dimension. Adopted from \citep{PhysRevD.103.035021}.}
+    \caption[]{Illustration of four orthogonal regions A, B, C and D defined by two variables $f$ and $g$ in the horizontal and signal and background yields in the vertical dimension. Adopted from \citep{PhysRevD.103.035021}.}
     \label{fig:abcd}
 \end{figure}
-By rearranging the equation for the unknown $N_A$ an estimate for the background of the signal region can be derived from the other known quantities that lie in the regions dominated by the background. This approach relies on the assumption that the shape of the background in figure \ref{fig:abcd} does not vary greatly between C to D and A to B.
+By rearranging the equation for the unknown $N_A$ an estimate for the background of the signal region can be derived from the other known yields that lie in the regions dominated by the background.
 
-In this analysis the two orthogonal variables are defined via the amount of double-$b$ Higgs tagged large-$R$ jets denoted with the GN2X tagger and the kinematic regions of the \ac{sr} and \ac{cr} defined in \ref{sec:kinematic_regions}.
+In this analysis the two orthogonal variables are defined via the amount of double-$b$ tagged large-$R$ jets with the GN2X tagger and the kinematic regions of the \ac{sr} and \ac{cr} defined in \ref{sec:kinematic_regions}.
 \begin{table}[htbp]
     \centering
     \caption{Four orthogonal region definitions for the ABCD method}
@@ -154,27 +151,109 @@ In this analysis the two orthogonal variables are defined via the amount of doub
 \end{table}
 This gives the four orthogonal regions shown in table \ref{tab:abcd}. Hence, the background in the \ac{sr} is estimated with a weight extracted from the \ac{cr}
 \begin{equation}
-    N_\text{SR}^\text{2 GN2X}=\frac{N_\text{CR}^\text{2 GN2X}}{N_\text{CR}^\text{1 GN2X}} N_\text{SR}^\text{1 GN2X} = w_\text{CR} N_\text{SR}^\text{1 GN2X}=  \red{(0.0039 \pm 0.0002)} \times N_\text{SR}^\text{1 GN2X}.
+    N_\text{SR}^\text{2 GN2X}=\frac{N_\text{CR}^\text{2 GN2X}}{N_\text{CR}^\text{1 GN2X}} N_\text{SR}^\text{1 GN2X} = w_\text{CR} N_\text{SR}^\text{1 GN2X}=  (0.0038 \pm 0.0002) \times N_\text{SR}^\text{1 GN2X}.
 \end{equation}
 
-\subsection{\red{Cutflow?}}
-\subsection{Event Classification}\label{sec:event_classification}
-After the selection of events, a deep feed-forward neural network is employed to construct a histogram suitable for a statistical test the significance of the outcome. This neural network's training utilizes a novel approach \textsc{neos}, which is thoroughly discussed in Chapter \ref{sec:neos} %and optimizes on the $CL_s$ quantity detailed in section \ref{sec:statistics}.
-Inputs to the neural network include 21 features, which are the four vector components ($\pt,\eta,\phi,m$) of: the Higgs boson pair system, the individual Higgs candidates and the two \ac{vbf} jets. In addition the leading score of the GN2X tagger is used. The \ac{nn} needs to be applicable across all samples, therefore only the leading GN2X score is incorporated, as the background estimation relies on a single GN2X tag.
+This approach relies on the assumption that the shape of the background in figure \ref{fig:abcd} does not vary greatly between C to D and A to B. To verify the robustness of this assumption variations between the expected and estimated region in the \ac{vr} are depicted in Figure \ref{fig:compareABCD}. The observed discrepancies are addressed by assigning an uncertainty to the background estimate, which is further detailed in Section \ref{sec:systematics}.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\textwidth]{tomatos_cls_5_2500_slope_50_NOSYS.VR_xbb_2_compareABCD.pdf}
+    \caption[]{Comparison of \ac{nn} response in the \ac{vr} for the 2 GN2X tagged Higgs candidates and the background estimate from multiplying the 1 GN2X tagged selection with $w_\text{CR}$.}
+    \label{fig:compareABCD}
+\end{figure}
 
-The network's architecture features three fully connected layers, each comprising 100 nodes, and concludes with a singular output node. The hidden layers are followed by a rectified linear unit activation function whereas the output node employs a sigmoid activation for classification. The architecture is thus defined as [21,100,100,100,1], indicating the sequence of layers from input to output. Figure \ref{fig:nominal-hist} displays the nominal expected histogram for this analysis
+\subsection{Cutflow Analysis}
+The cutflow tables are presented in the following order:
+
+\begin{itemize}
+    \item \textbf{Trigger:} Apply the trigger
+    \item \textbf{Two fat jets:} Large-$R$ jet kinetic selection
+    \item \textbf{Fat jet $\pt$:} Apply the $\pt > \qty[]{450}{GeV}$ cut after identifying the leading Higgs candidate
+    \item \textbf{Two hbb jets:} Require 2 GN2X tags
+    \item \textbf{VBF jets:} Find 2 small-$R$ jets compatible with the selection
+    \item \textbf{VBF cut:} Apply cuts on $m_{j_1,j_2}$ and $|\Delta\eta(j_1,j_2)|$
+    \item \textbf{SR:} Pass the signal region
+\end{itemize}
+
+\begin{table}[htbp]
+    \centering
+    \caption{Cutflow Run 2 data}
+    \begin{tabular}{lrrr}
+        \hline
+        \textbf{Selection Step} & \textbf{Events}  & \textbf{Fraction (\%)} & \textbf{Cumulative (\%)} \\ \hline
+        Initial events          & 1147720630.00000 & 100.00000              & 100.00000                \\\hline
+        Trigger                 & 280935686.00000  & 24.47771               & 24.47771                 \\
+        Two fat jets            & 72439244.00000   & 25.78499               & 6.31157                  \\
+        Fat jet $\pt$           & 53743119.00000   & 74.19061               & 4.68260                  \\
+        Two hbb jets            & 4089.00000       & 0.00761                & 0.00036                  \\
+        VBF jets                & 1559.00000       & 38.12668               & 0.00014                  \\
+        VBF cut                 & 201.00000        & 12.89288               & 0.00002                  \\
+        SR                      & 0.00000          & 0.00000                & 0.00000                  \\\hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+    \centering
+    \caption{Cutflow $\kappa_\text{2V}=0$ signal}
+    \begin{tabular}{lrrr}
+        \hline
+        \textbf{Selection Step} & \textbf{Events} & \textbf{Fraction (\%)} & \textbf{Cumulative (\%)} \\ \hline
+        Initial events          & 1307.36934      & 100.00000              & 100.00000                \\\hline
+        Trigger                 & 253.74720       & 19.40899               & 19.40899                 \\
+        Two fat jets            & 180.06129       & 70.96090               & 13.77279                 \\
+        Fat jet $\pt$           & 156.07723       & 86.68006               & 11.93827                 \\
+        Two hbb jets            & 72.42898        & 46.40586               & 5.54006                  \\
+        VBF jets                & 51.92269        & 71.68773               & 3.97154                  \\
+        VBF cut                 & 40.37272        & 77.75545               & 3.08809                  \\
+        SR                      & 28.03348        & 69.43668               & 2.14427                  \\\hline
+    \end{tabular}
+\end{table}
+
+
+
+\begin{table}[htbp]
+    \centering
+    \caption{Cutflow \ac{sm} signal}
+    \begin{tabular}{lrrr}
+        \hline
+        \textbf{Selection Step} & \textbf{Events} & \textbf{Fraction (\%)} & \textbf{Cumulative (\%)} \\ \hline
+        Initial events          & 15.56347        & 100.00000              & 100.00000                \\\hline
+        Trigger                 & 2.54380         & 16.34470               & 16.34470                 \\
+        Two fat jets            & 1.15620         & 45.45160               & 7.42893                  \\
+        Fat jet $\pt$           & 0.85139         & 73.63668               & 5.47041                  \\
+        Two hbb jets            & 0.21498         & 25.25017               & 1.38129                  \\
+        VBF jets                & 0.12550         & 58.37851               & 0.80638                  \\
+        VBF cut                 & 0.07195         & 57.33242               & 0.46231                  \\
+        SR                      & 0.04759         & 66.13817               & 0.30577                  \\\hline
+    \end{tabular}
+\end{table}
+
+
+
+
+
+
+
+
+
+\subsection{Event Classification}\label{sec:event_classification}
+A deep feed-forward neural network is employed for signal to background separation. This neural network's training uses a novel approach \textsc{neos}, which is thoroughly discussed in Chapter \ref{sec:neos}.
+
+Inputs to the neural network include 23 features, which are the four vector components ($\pt,\eta,\phi,m$) of: the Higgs boson pair system, the individual Higgs candidates and the two \ac{vbf} jets. In addition the leading score of the GN2X tagger and the mass of \ac{vbf} jet system $m_{j_1,j_2}$ and their pseudorapidity difference $|\Delta\eta(j_1,j_2)|$ are used. The \ac{nn} needs to be applicable across all samples, therefore only the leading GN2X score is incorporated, as the background estimation relies on a single GN2X tag.
+
+The network's architecture features three fully connected layers, each comprising 100 nodes, and concludes with a singular output node. The hidden layers are followed by a rectified linear unit activation function $\max(0,x)$ whereas the output node employs a sigmoid activation $1/(1+e^{-x})$ for classification. The architecture is thus defined as [23,100,100,100,1], indicating the sequence of layers from input to output. Figure \ref{fig:nominal-hist} displays the nominal expected histogram for this analysis for several samples.
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.7\textwidth]{tomatos_cls_5_NOSYS.SR_xbb_2_nominal_hist.pdf}
-    \caption[]{Expected \ac{nn} response for the data-driven background estimate, rescaled \ac{sm}  \ac{vbf} and \ac{ggf} signal and $\kappa_\text{2V}=0$.}
+    \includegraphics[width=0.7\textwidth]{tomatos_cls_5_2500_slope_50_NOSYS.SR_xbb_2_nominal_hist.pdf}
+    \caption[]{\ac{nn} response for the data-driven background estimate, rescaled \ac{sm}  \ac{vbf} and \ac{ggf} signal and $\kappa_\text{2V}=0$.}
     \label{fig:nominal-hist}
 \end{figure}
 
 
 \section{Linear Combination Of Signal Hypotheses}\label{sec:linear_combination}
 
-This analysis is interested in constraining the couplings $\kappa_\text{V},\kappa_\lambda,\kappa_\text{2V}$ associated to the \ac{vbf} processes shown in figure \ref{fig:main_production_processes}. As computing resources are limited and MC generation is unfortunately computationally expensive only a few hypotheses are simulated. However by exploiting the properties of the differential cross-sectional calculation, samples of any hypothesized coupling value can be created through linear combination of samples \citep{ATLAS-CONF-2019-049}. Considering the \ac{vbf} diagrams of figure \ref{fig:main_production_processes} subscripted as (1,2,3) with couplings $\kl$, $\kv$ and \ktwov the differential (per bin) cross-section of a kinematic variable $x$, which can be e.g. the invariant mass of the Higgs pair system, can be rewritten as
+This analysis is interested in constraining the couplings $\kappa_\text{V},\kappa_\lambda,\kappa_\text{2V}$ associated to the \ac{vbf} processes shown in figure \ref{fig:main_production_processes}. As computing resources are limited and MC generation is unfortunately computationally expensive only a few hypotheses are available. However by exploiting the properties of the differential cross-sectional calculation, samples of any hypothesized coupling value can be created through linear combination of samples \citep{ATLAS-CONF-2019-049}. Considering the \ac{vbf} diagrams of figure \ref{fig:main_production_processes} subscripted as (1,2,3) with couplings $\kl$, $\kv$ and \ktwov the differential (per bin) cross-section of a kinematic variable $x$, which can be e.g. the invariant mass of the Higgs pair system, can be rewritten as
 \begin{align}
     \label{eqn:xsec_vbf}
     \frac{\mathrm{d}\sigma(\kvv, \kv, \kl )}{\mathrm{d} x } = &
@@ -216,17 +295,16 @@ The approach is employed bin-wise as the extraction factors can deviate substant
     \caption[]{Extracted reweighting factors per bin for equation \ref{eq:reweight}.}
     \label{fig:linear_combine_bin_solutions}
 \end{figure}
-The method is validated with the mc generated $\ktwov=0$ sample. Figure \ref{fig:tomatos_cls_5_nominal_reweighted_ratio} reveals a $\sim$\qty[]{5}{\percent} deviation for this approach. \red{should one introduce a very conservative shape uncertainty because of that? the behavior across all values however is unclear with just one validation sample, maybe something for the outlook.}
-\red{also mention here, bad choice for a k2v scan, but thats what was available, or rather in discussion? }
+The method is tested on the mc generated $\ktwov=0$ sample. Figure \ref{fig:tomatos_cls_5_nominal_reweighted_ratio} reveals a up to $\sim$\qty[]{16}{\percent} deviation for this approach. However the impact on final limits are $\sim\qty[]{3}{\percent}$. It is further noted that this approach possibly suffers also from a sample choice which only explores the phase space for two $\ktwov$ couplings.
 \begin{figure}
     \centering
-    \includegraphics[width=.6\textwidth]{tomatos_cls_5_nominal_reweighted_ratio}
-    \caption[]{Comparison between a \ac{mc}-generated $\ktwov=0$ signal sample and a signal sample created with the reweighting approach by linearly combining different \ktwov hypotheses. \red{todo:error propagation of the stat uncertainties from the different samples, but also these errors are really small ... in the fit the stat error usually doesnt anythin, could mentioned that? }}
+    \includegraphics[width=.6\textwidth]{tomatos_cls_5_2500_slope_50_nominal_reweighted_ratio.pdf}
+    \caption[]{Comparison between a \ac{mc}-generated $\ktwov=0$ signal sample and a signal sample created with the reweighting approach by linearly combining different \ktwov hypotheses. }
     \label{fig:tomatos_cls_5_nominal_reweighted_ratio}
 \end{figure}
 
 
-% , another one would be 
+% , another one would be  
 % l0cvv1cv1, however why validating for kl if we scan k2v, I don't think this validation is worth anything in a phase space we are not testing on.
 
 
