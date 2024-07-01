@@ -237,11 +237,11 @@ The cutflow tables are presented in the following order:
 
 
 \subsection{Event Classification}\label{sec:event_classification}
-A deep feed-forward neural network is employed for signal to background separation. This neural network's training uses a novel approach \textsc{neos}, which is thoroughly discussed in Chapter \ref{sec:neos}.
+A deep feed-forward neural network is employed for signal to background separation. This neural network's training uses a novel approach \textsc{neos}, which is discussed in detail in \ref{sec:analysis_optimization} alongside other \ac{ml} concepts.
 
 Inputs to the neural network include 23 features, which are the four vector components ($\pt,\eta,\phi,m$) of: the Higgs boson pair system, the individual Higgs candidates and the two \ac{vbf} jets. In addition the leading score of the GN2X tagger and the mass of \ac{vbf} jet system $m_{j_1,j_2}$ and their pseudorapidity difference $|\Delta\eta(j_1,j_2)|$ are used. The \ac{nn} needs to be applicable across all samples, therefore only the leading GN2X score is incorporated, as the background estimation relies on a single GN2X tag.
 
-The network's architecture features three fully connected layers, each comprising 100 nodes, and concludes with a singular output node. The hidden layers are followed by a rectified linear unit activation function $\max(0,x)$ whereas the output node employs a sigmoid activation $1/(1+e^{-x})$ for classification. The architecture is thus defined as [23,100,100,100,1], indicating the sequence of layers from input to output. Figure \ref{fig:nominal-hist} displays the nominal expected histogram for this analysis for several samples.
+The network's architecture features three fully connected layers, each comprising 100 nodes, and concludes with a singular output node. The hidden layers are followed by a rectified linear unit activation function whereas the output node employs a sigmoid activation for classification. The architecture is thus defined as [23,100,100,100,1], indicating the sequence of layers from input to output. Figure \ref{fig:nominal-hist} displays the nominal expected histogram for this analysis for several samples.
 
 \begin{figure}
     \centering
@@ -295,7 +295,7 @@ The approach is employed bin-wise as the extraction factors can deviate substant
     \caption[]{Extracted reweighting factors per bin for equation \ref{eq:reweight}.}
     \label{fig:linear_combine_bin_solutions}
 \end{figure}
-The method is tested on the mc generated $\ktwov=0$ sample. Figure \ref{fig:tomatos_cls_5_nominal_reweighted_ratio} reveals a up to $\sim$\qty[]{16}{\percent} deviation for this approach. However the impact on final limits are $\sim\qty[]{3}{\percent}$. It is further noted that this approach possibly suffers also from a sample choice which only explores the phase space for two $\ktwov$ couplings.
+The method is tested on the mc generated $\ktwov=0$ sample. Figure \ref{fig:tomatos_cls_5_nominal_reweighted_ratio} reveals a up to $\sim$\qty[]{16}{\percent} deviation for this approach. However the difference on cross-section limits determined with the mc generated $\ktwov=0$ and a reweighted $\ktwov=0$ signal is $\sim\qty[]{3}{\percent}$. It is further noted that this approach possibly suffers also from a sample choice which only explores the phase space for two $\ktwov$ couplings.
 \begin{figure}
     \centering
     \includegraphics[width=.6\textwidth]{tomatos_cls_5_2500_slope_50_nominal_reweighted_ratio.pdf}

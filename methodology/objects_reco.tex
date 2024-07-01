@@ -1,4 +1,4 @@
-\chapter{Physical Object Reconstruction}\label{ch:reco}
+\chapter{Physics Object Reconstruction}\label{ch:reco}
 
 Physical properties of particles produced from a collision at the \ac{lhc} are derived by combining the traces and deposits these particles leave in the various subdetectors as they traverse \ac{atlas}. The upcoming sections will describe the reconstruction processes for various objects used in this analysis. The primary reference for this chapter is \citep{atlas2021optimisation}.
 
@@ -76,6 +76,12 @@ The GN2X tagger uses a transformer architecture \citep{ATL-PHYS-PUB-2023-021} wi
 \end{equation}
 $f_\text{top}=0.25$ and $f_\text{Hcc}=0.02$ denotes chosen parameters weighting the influence of the corresponding \ac{gnn} output nodes to the discriminant. From the evaluation of the discriminant \acp{wp} are defined depending on the Higgs tagging efficiency. As mentioned in \citep{ATL-PHYS-PUB-2023-021} mass sculpting is observed which can become a problem for a data-driven background estimate as used in this thesis. This issue has been addressed by altering the discriminant value depending on the mass of the jet in a way that the \ac{qcd} background selection efficiency is not altered by the tagger.
 
+\subsection{Calibration}
+Differences in $b$-tagging efficiency observed in data compared to \ac{mc} simulations are corrected with event-based scale-factors \citep{1512.01094,ATLAS-CONF-2012-043}. These are determined with well-known reference objects as for example with jet+muon events where the presence of a $b$-jet can be inferred with high purity. These scale-factors are determined in bins of \pt and $\eta$ and are defined as ratio of the $b$-tagging efficiency in data to that in simulation
+\begin{equation}
+  \text{SF} = \frac{\epsilon_\text{data}}{\epsilon_\text{sim}}.
+\end{equation}
+
 % The $X\rightarrow bb$ tagger is a feed-forward \ac{nn} \citep{ATL-PHYS-PUB-2020-019}. The inputs include the transverse momentum \pt and pseudorapidity $\eta$ of the large-$R$ jet along with outputs from DL1d for up to three \ac{vr} track jets. Similar to DL1d, a discriminant is computed from the \ac{nn}'s output scores, which reflect the likelihood of the event being a Higgs, top, or multijet decay:
 % \begin{equation}
 %   D_{\text{Xbb}}=\ln\left({\frac{p_{\text{Higgs}}}{f_{\text{top}}\cdot p_{\text{top}}+(1-f_{\text{top}})\cdot p_{\text{multijet}}}}\right).
@@ -83,7 +89,7 @@ $f_\text{top}=0.25$ and $f_\text{Hcc}=0.02$ denotes chosen parameters weighting 
 % $f_\text{top}$ denotes the top fraction with regards to the multijet output. From the evaluation of the discriminant \acp{wp} are defined depending on the Higgs tagging efficiency.
 
 \section{Jet Calibration}\label{sec:calibration}
-The calibration of measuring instruments is crucial for accuracy, and this is especially true for the reconstruction of jets. The following factors often lead to discrepancies between the reconstructed and actual properties of jets \citep{atlas2011jet}:
+The following factors often lead to discrepancies between the reconstructed and actual properties of jets \citep{atlas2011jet}:
 \begin{itemize}
   \item \textbf{Non-Compensation:} A lower calorimeter response to non-electromagnetic particles from hadron showers compared to electromagnetic particles.
   \item \textbf{Dead Material:} Energy is deposited in non-instrumented areas of the detector.
@@ -171,3 +177,8 @@ where $p_{\text{T}}^{\text{calo}}$ is the transverse momentum measured in the ca
   \caption[]{Improvement for track-assisted mass measurement compared to calorimeter and tracking information only. Adopted from \citep{ATLAS-CONF-2016-035} }
   \label{fig:combined_mass_large_R}
 \end{figure}
+
+\section{Muons}
+Muons are primarily reconstructed using tracks from the \ac{id} and the \ac{ms}, supplemented by characteristic signatures detected in the calorimeters \citep{ATLAS-CONF-2020-030}. Muon trajectories are formed by linking straight-line segments from hits in the \ac{ms} identified through a Hough transform. These segments are then combined to form a parabolic path, which serves as a first-order approximation of the muon's trajectory through the magnetic field. A global $\chi^2$ fit is then performed, accounting for potential interactions between the muon and detector materials, as well as misalignments between detectors. A muon that is successfully matched to an \ac{id} track is termed `combined'. These combined muons undergo additional fitting with both \ac{id} and \ac{ms} hits and taking the energy loss from traversing the calorimeters into account.
+
+Post-reconstruction, muon candidates are subjected to an identification process aimed at  distinguishing genuine muons from background signals, such as those from pion and kaon decays, semi-leptonic heavy flavor hadron decays, and hadrons penetrating the calorimeter. Of particular interest for this thesis are the low-\pt \ac{wp} muons, which target the lowest-\pt muons. These muons are less likely to be reconstructed as full tracks in the \ac{ms}, so identification based on \ac{ms} segments is necessary \citep{ATL-PHYS-PUB-2020-002}. For these muons, the background from non-prompt muons can be significant. The low-\pt \ac{wp} exploits a set of variables to separate prompt muons from light-hadron decays, achieving optimal background rejection while maintaining high efficiency. This \ac{wp} and associated variables are discussed in detail in chapter \ref{ch:smt}.
