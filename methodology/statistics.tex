@@ -1,10 +1,10 @@
 \chapter{Statistical Analysis}\label{sec:statistics}
 \red{sam van stroud htesis!}
-Scientific investigations generally start with a hypothesis, which is then tested against empirical data. This chapter focuses on the frequentist statistical methods used to evaluate whether the observed data support or contradict the proposed hypothesis.
+Scientific investigations generally start with a hypothesis, which is then tested against empirical data. This chapter focuses on the frequentist statistical methods used to evaluate whether the observed collision data support or contradict the proposed hypothesis.
 
 Central to this discussion is the concept of the p-value, which arises within hypothesis testing. The p-value quantifies the compatibility of the observation with the assumption and is particularly important in high-energy physics (HEP), to confidently determine if a hypothesized process is realized in nature.
 
-Specifically for this task, the \textsc{histfactory} framework has been developed. This section begins by laying out the mathematical fundamentals of the approach and explains its implementation in \textsc{pyhf} \citep{pyhf,pyhf_joss}. The following is based on \citep{cowan2011asymptotic,behnke2013data,pyhf}.
+Specifically for this task, the \textsc{histfactory} framework has been developed. This section begins by laying out the mathematical fundamentals of the approach and its implementation \citep{pyhf,pyhf_joss}. The following is based on \citep{cowan2011asymptotic,behnke2013data,pyhf}.
 
 
 
@@ -13,7 +13,7 @@ The statistical model needs to reflect the compatibility of predictions with the
 
 % The observation $\bm{x}=(\bm{n},\bm{a})$ can be subdivided into observable histograms $\bm{n}$ and $\bm{a}$ auxiliary measurement histograms that assist in constraining the model and usually amount to considered uncertainties. Another useful splitting for the set of parameters is $\bm{\phi}=(\bm{\psi},\bm{\Theta})$ into so-called parameters of interest $\bm{\psi}$ and nuisance parameters $\bm{\Theta}$. For this section only one parameter of interest is considered, the signal strength $\mu$.
 
-Considering a splitting of the set of parameters $\bm{\phi}$ into a parameter of interest $\mu$, which usually corresponds to the signal strength and other parameters $(\bm{\Theta})$ adding additional degrees of freedom usually in terms of uncertainties to the model as so-called nuisance parameters. For just one signal and background contribution the bin contents can be expressed in terms of the amount of expected signal $s_i(\bm{\Theta})$ and background $b_i(\bm{\Theta})$ in bin $i$ that depend on the nuisance parameters. The expected bin content of the observable $n_i$ can then be expressed as
+Considering a splitting of the set of parameters $\bm{\phi}$ into a parameter of interest $\mu$, which usually corresponds to the signal strength and other parameters $\bm{\Theta}$ adding additional degrees of freedom to the model. For just one signal and background contribution the bin contents can be expressed in terms of the amount of expected signal $s_i(\bm{\Theta})$ and background $b_i(\bm{\Theta})$ in bin $i$ that depend on the nuisance parameters. The expected bin content of the observable $n_i$ can then be expressed as
 \begin{equation} \label{eq:n_i}
     \langle n_i\rangle = \mu s_i(\bm{\Theta}) +b_i(\bm{\Theta}).
 \end{equation}
@@ -25,13 +25,13 @@ As events occur at a constant rate and independently in time, each bin follows a
 \begin{equation}\label{eq:poisson}
     P(r,k)=\frac{r^k e^{-r}}{k!},
 \end{equation}
-with $r$ the expected rate of occurrences which translates as the prediction and $k$ as the observed occurrences. A likelihood can then be constructed from a product of the Poisson probabilities and additional terms $c_k$ that according to some belief help in constraining the model
+with $r$ the expected rate of occurrences which translates as the prediction and $k$ as the observed occurrences. A likelihood can then be constructed from a product of the Poisson probabilities and additional terms $c_k$ that help in constraining the model
 \begin{equation}\label{eq:likelihood}
     L(\mu,\bm{\Theta})=
     \prod_{j=1}^N \frac{(\mu s_j(\bm{\Theta}) + b_j(\bm{\Theta}))^{n_j}}{n_j !} e^{-(\mu s_j(\bm{\Theta}) + b_j(\bm{\Theta}))}
     \prod_{k=1}^M c_k(\bm{\Theta}).
 \end{equation}
-These constraint terms can be viewed as penalizing the likelihood with increasing change of some nuisance parameter and are discussed in detail in section \ref{sec:histfactory_model}.
+These constraint terms can be viewed as penalizing the likelihood and are discussed in detail in section \ref{sec:histfactory_model}.
 
 To test for a hypothesized value of $\mu$, the best choice according to the Neyman-Pearson lemma, is the profile likelihood ratio that reduces the dependence of the likelihood function to the parameter of interest
 \begin{equation}\label{eq:likelihood_ratio}
@@ -47,7 +47,7 @@ To test for a given hypothesis it is useful to transform the profile likelihood 
     t(\mu)=-2\ln \lambda(\mu).
 \end{equation}
 % For a given signal strength $\mu$ this statistic is a function of the observations $n$ alone
-This translates to $t \rightarrow 0$ as increasing agreement and $t \rightarrow \infty$ as decreasing agreement to the model. A right-tail p-value can then be calculated from the probability density of the test statistic $f(t | \mu)$ as 
+This translates to $t \rightarrow 0$ as increasing agreement and $t \rightarrow \infty$ as decreasing agreement to the model. A right-tail p-value can then be calculated from the probability density of the test statistic $f(t | \mu)$ as
 \begin{equation}\label{eq:p-value}
     p= \int_{t_\text{obs}}^{\infty}
     f(t | \mu) \mathrm{d}t
@@ -62,7 +62,7 @@ The test statistic's specific form is useful because of existing approximations 
     \left(\frac{\mu-\hat{\mu}}{\sigma_{\hat{\mu}}} \right)^2
     + \mathcal{O}(\frac{1}{\sqrt{N}}),
 \end{equation}
-such that the maximum likelihood estimate $\hat{\mu}$ is in this limit normally distributed around its true value $\mu'$ with standard deviation $\sigma_{\hat{\mu}}$. This is the definition of a $\chi$-squared distribution with one degree of freedom. With this result it can be shown that \citep{cowan2011asymptotic} the probability density function of $t$ asymptotically follows in the large sample limit
+such that the maximum likelihood estimate $\hat{\mu}$ is normally distributed around its true value $\mu'$ with standard deviation $\sigma_{\hat{\mu}}$. This is the definition of a $\chi$-squared distribution with one degree of freedom. With this result it can be shown that \citep{cowan2011asymptotic} the probability density function of $t$ asymptotically follows in the large sample limit
 \begin{equation}\label{eq:chi-square}
     f(t | \mu)=\frac{1}{2\sqrt{t}}\frac{1}{\sqrt{2\pi}}
     \left[
@@ -253,3 +253,18 @@ Thus a Poissonian constraint term for a multiplicative modifier $\gamma$ with un
     }
 \end{table}
 
+
+
+\section{Uncertainty Extraction}
+The standard error of a quantity is determined by measuring the square root of its variance. The covariance matrix is a generalization ov variance for two random variables $X_i, X_j$
+\begin{equation}
+    \Sigma_{ij}=\text{Cov}(X_i, X_j) = \text{E}[(X_i - \text{E}[X_i])(X_j - \text{E}[X_j])].
+\end{equation}
+
+In the context of maximum likelihood estimation, the covariance matrix of the nuisance parameters \( \bm{\theta} \) can be approximated in the large sample limit by the inverse of the negative Hessian of the log-likelihood function $L$
+
+\begin{equation}
+    \Sigma_{ij} \approx \left[ -\frac{\partial^2 L(\bm{\theta})}{\partial \theta_i \partial \theta_j} \right]^{-1}.
+\end{equation}
+
+The covariance matrix holds the variances and thus the uncertainties of the nuisance parameters along its diagonal, and the covariances between components off-diagonal. When propagating uncertainties, these covariances contribute to the overall uncertainty. Consequently, large correlations between parameters, indicated by large off-diagonal terms, are thus disadvantageous when constraining the model.

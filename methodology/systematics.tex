@@ -19,7 +19,6 @@ Furthermore \ac{jer} uncertainties arise from the intrinsic resolution of the de
     \label{fig:jet_uncertainties}
 \end{figure}
 
-f
 
 \section{GN2X Tagger Uncertainties}
 The training of the GN2X tagger uses simulations leading to potential discrepancies in selection efficiencies between observed data and simulation. These differences have not been estimated by the time of writing this thesis. It is assumed that the calibration will use the same procedure used by the previous version of this tagger - the $X\rightarrow bb$ tagger \citep{ATL-PHYS-PUB-2020-019}. This tagger was calibrated with $Z(\rightarrow b\overline{b})+\text{jets}$ and $Z(\rightarrow b\overline{b})+\gamma$ applying the same methodology as in \citep{ATL-PHYS-PUB-2021-035}. The differences between \ac{mc} and data are measured in large-$R$ jet \pt and the scale factors for the bins shown in figure \ref{fig:xbb_sf} are set to  $1\pm\qty[]{30}{\percent}$ as a proxy for the uncertainties and are shown in figure \ref{fig:xbb_uncertainties}. As in the previous iteration of this analysis these uncertainties are the dominating ones in this analysis.
@@ -94,7 +93,7 @@ Normalization uncertainties on the final acceptance are evaluated on \ac{mc} sim
 Uncertainties related to the parton showering are estimated using different modelings from \textsc{Pythia 8} and \textsc{Herwig 7}. The largest deviations from the nominal are used as uncertainties on the Higgs pair process shown in figure \ref{fig:parton_shower}. This uncertainty is among the GN2X and scale variation uncertainties one of the dominating ones in this analysis.
 \begin{figure}
     \centering
-    \includegraphics[width=0.7\textwidth]{uncertainties/neos_VBF-Signal_Parton-Shower}
+    \includegraphics[width=0.5\textwidth]{uncertainties/neos_VBF-Signal_Parton-Shower}
     \caption[]{$\ktwov=0$ signal uncertainty for alternative parton shower with \textsc{Herwig 7}}
 \end{figure}
 
@@ -123,7 +122,6 @@ so that the statistical error reads
 \end{equation}
 
 \section{Background Derivation Uncertainties}\label{sec:bkg_uncertainties}
-\red{add bounding}
 The \ac{qcd} background is estimated with the ABCD method from the control region as detailed in section \ref{sec:abcd}. The uncertainties on the weight factor $w_\text{CR}$ are assessed through error propagation of the statistical uncertainties on the quantities used to calculate the weight
 \begin{equation}
     \Delta_\text{stat} w_\text{CR} = w_\text{CR} \sqrt{
@@ -131,18 +129,18 @@ The \ac{qcd} background is estimated with the ABCD method from the control regio
         +
         \left(\frac{\Delta_\text{stat} N_\text{CR}^\text{1 GN2X}}{N_\text{CR}^\text{1 GN2X}}\right)^2
     }
-    = \red{\qty[]{8.3}{\percent}}.
+    = \qty[]{4.3}{\percent}.
 \end{equation}
 To estimate the uncertainty of the background estimate in the \ac{sr} a shape uncertainty is estimated from the \ac{vr} by symmetrizing about the difference between the estimate, and the selection with 2 GN2X tags
 \begin{equation}
     \Delta_\text{shape}^\text{bkg}= \left| w_\text{CR}N_\text{VR}^\text{1 GN2X} - N_\text{VR}^\text{2 GN2X}\right|.
 \end{equation}
-Figure \ref{fig:bkg_shape_estimate} displays the background estimate in the \ac{vr} in comparison to the \ac{vr} with 2 GN2X tags and the resulting shape uncertainty in the \ac{sr}.
+Figure \ref{fig:bkg_shape_estimate} displays the background estimate in the \ac{vr} in comparison to the \ac{vr} with 2 GN2X tags and the shape uncertainty in the \ac{sr} resulting from this uncertainty estimation.
 \begin{figure}
     \centering
     \subfigure[]{\includegraphics[width=.47\textwidth]{tomatos_cls_5_2500_slope_50_NOSYS.VR_xbb_2_compareABCD}}
     \subfigure[]{\includegraphics[width=.47\textwidth]{neos_results/neos_Background_Bkg-Estimate-Shape}}
-    \caption[]{(a) Background estimate in the \ac{vr} in comparison to the the selection with 2 GN2X tags. (b) Extracted uncertainties from (a) applied to the background estimate in the \ac{sr}.}
+    \caption[]{(a) Background estimate in the \ac{vr} in comparison to the selection with 2 GN2X tags. (b) Extracted uncertainties from (a) applied to the background estimate in the \ac{sr}.}
     \label{fig:bkg_shape_estimate}
 \end{figure}
 
