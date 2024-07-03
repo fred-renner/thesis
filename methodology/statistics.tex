@@ -256,7 +256,7 @@ Thus a Poissonian constraint term for a multiplicative modifier $\gamma$ with un
 
 
 \section{Uncertainty Extraction}
-The standard error of a quantity is determined by measuring the square root of its variance. The covariance matrix is a generalization ov variance for two random variables $X_i, X_j$
+The standard error of a quantity is determined by measuring the square root of its variance. The covariance matrix is a generalization of variance for two random variables $X_i, X_j$
 \begin{equation}
     \Sigma_{ij}=\text{Cov}(X_i, X_j) = \text{E}[(X_i - \text{E}[X_i])(X_j - \text{E}[X_j])].
 \end{equation}
@@ -267,4 +267,4 @@ In the context of maximum likelihood estimation, the covariance matrix of the nu
     \Sigma_{ij} \approx \left[ -\frac{\partial^2 L(\bm{\theta})}{\partial \theta_i \partial \theta_j} \right]^{-1}.
 \end{equation}
 
-The covariance matrix holds the variances and thus the uncertainties of the nuisance parameters along its diagonal, and the covariances between components off-diagonal. When propagating uncertainties, these covariances contribute to the overall uncertainty. Consequently, large correlations between parameters, indicated by large off-diagonal terms, are thus disadvantageous when constraining the model.
+The covariance matrix holds the variances and thus the uncertainties of the nuisance parameters along its diagonal, and the covariances between components off-diagonal. When propagating uncertainties, these covariances contribute to the overall uncertainty. Consequently, large correlations between parameters, indicated by large off-diagonal terms, are thus disadvantageous for constraining the model.

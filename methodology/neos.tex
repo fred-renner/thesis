@@ -94,7 +94,7 @@ which scales them between 0 and 1. \qty[]{90}{\percent} of events in the dataset
 
 In addition four samples are processed through the pipeline to estimate the background with the ABCD method described in \ref{sec:abcd}. The transfer factor and its uncertainty is estimated from the \ac{cr} and a shape uncertainty is estimated in the \ac{vr} as described in \ref{sec:bkg_uncertainties}. Per training epoch, which corresponds to a full processing of the dataset, data are reshuffled.
 
-The optimization also optimizes cuts on the invariant mass $m_{jj}$ and the pseudorapidity difference $|\Delta\eta(j,j)|$ of the two \ac{vbf} jets as mentioned in \ref{sec:hh4b_analysis_strategy}. Mathematically, applying a cut can be represented by multiplying the value to be cut with a Heaviside function shifted by the cut value. For a differentiable approximation, a sigmoid function as shown in \ref{fig:activation_fun}(b) is used, which is then multiplied to an event's weight.
+The optimization also optimizes cuts on the invariant mass $m_{jj}$ and the pseudorapidity difference $|\Delta\eta(j,j)|$ of the two \ac{vbf} jets as mentioned in \ref{sec:hh4b_analysis_strategy}. Mathematically, applying a cut can be represented by multiplying the value to be cut with a Heaviside function shifted by the cut value. For a differentiable approximation, a sigmoid function as shown in \ref{fig:activation_fun}(b) is used, which is then multiplied to an event's weight. Statistical uncertainties are included in addition to maintain a natural limit on the cut optimization.
 
 \begin{table}[]
     \centering
