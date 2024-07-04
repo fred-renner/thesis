@@ -30,8 +30,7 @@ Typical activation functions include the Rectified Linear Unit (ReLU), defined a
 The parameters $\bm{\varphi}$ of the \ac{nn} include the weights and bias terms between the neurons and learning occurs by adjusting these. \acp{ann} can be designed in various architectures and depths depending on the specific task.
 
 Training \acp{nn} typically involves the back-propagation algorithm, which aims to minimize a cost  function $C(\bm{\varphi})$. This function measures the deviation of a given input from a desired output as a function of the model parameters $\bm{\varphi}$. For binary classification tasks, where outputs range continuously from 0 to 1 (with e.g. 1 indicating signal and 0 indicating background), the \ac{bce} cost function is commonly used:
-\begin{equation}\label{eq
-    }
+\begin{equation}\label{eq:bce}
     C = -\frac{1}{N} \sum_{i=1}^{N} \left[ y_i \log(p_i) + (1 - y_i) \log(1 - p_i) \right],
 \end{equation}
 where $N$ is the total number of training examples, $y_i$ represents the true label and $p_i$ is the predicted value by the \ac{nn} for the $i$-th training example.

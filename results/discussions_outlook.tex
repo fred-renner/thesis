@@ -91,6 +91,12 @@ with neos forget about weird reweighting techniques and error estimation in reso
 
 
 ------neos-------
+
+
+This highlights the crux of the situation as optimizing on Asimov significance alone cannot account for uncertainties and has thus decreased performance compared to \ac{neos}. If \ac{neos} is not applicable it can be advisable when searching for a new process to implement a loss function that optimizes the Asimov significance given the observed correlation in figure \ref{fig:neos_validation_loss}. A study on this has also shown that such an approach can give improved results for analyses dominated by systematic uncertainties \citep{elwood2018direct}.
+
+
+
 gradient improve neos
 inrcease gradient by worsening bkg shapesys with factor
 cut slopes
@@ -148,6 +154,17 @@ opitmizing on k2v0-->reweigjting becomes bad
 gradient can become quickly large, when lots of cuts + samples
 
 what kind of events fall in which bins? and why?
+
+vr shape estimates is liuke go somewhere else and resemble what it should look like, like calibration?
+
+could benefit of reopimization for differnt k2v, also for scan in general start from nominal k2v samples.
+
+
+\red{bandwidth choice, sensitive to bandwidth and slope, smaller slope, more noise but leaves gradient intact, hyperparameter tweaking it looses gradient if I go below bandwidth 0.2 }
+
+
+\red{also say here we havent done any optimization on neos}
+
 
 --------
 Even a comparably small impact of $\sim\qty[]{3}{\percent}$ on the final limits a future analysis could consider generating \ac{mc} samples for several \ktwov couplings in order to avoid signal hypothesis mismodelling due to the linear combination of samples. Further one could easily reoptimize neos for each of these hypotheses. form
