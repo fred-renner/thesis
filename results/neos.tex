@@ -233,7 +233,7 @@ All models use the same methods for the background uncertainty estimation descri
     \label{fig:neos_pre_post_fit}
 \end{figure}
 
-Dominating nuisance parameter rankings for the \ac{bce}-trained and neos-trained \ac{nn} are shown in figure \ref{fig:neos_valid_ranking_bce} and \ref{fig:neos_valid_ranking_cls}. Since \ac{neos} optimizes on the fitting procedure, nuisance parameter pre- and postfit impacts are generally smaller compared to the \ac{bce}-trained \ac{nn}. The most prominent feature of \ac{neos} in this analysis is its ability to adjust the \ac{nn} with respect to the background estimate, moving it in the ranking even below the dominating uncertainties. Conversely, the \ac{bce}-trained \ac{nn} shows that the background estimate uncertainty is overestimated pre-fitting, as evidenced by the impacts on the signal strength and a small pull uncertainty smaller than 1. A similar behavior, though less pronounced, is also observed in the uncertainty ranking for the \mhh fit.
+Dominating nuisance parameter rankings for the \ac{bce}-trained and neos-trained \ac{nn} are shown in figure \ref{fig:neos_valid_ranking_bce} and \ref{fig:neos_valid_ranking_cls}. Since \ac{neos} optimizes on the fitting procedure, nuisance parameter pre- and postfit impacts are generally smaller compared to the \ac{bce}-trained \ac{nn}. The most prominent feature of \ac{neos} in this analysis is its ability to adjust the \ac{nn} with respect to the background estimate, moving it in the ranking even below the dominating uncertainties and optimize the pull to almost perfectly match the expected behavior. Conversely, the \ac{bce}-trained \ac{nn} shows that the background estimate uncertainty is overestimated pre-fitting, as evidenced by the impacts on the signal strength and a small pull uncertainty smaller than 1. A similar behavior, though less pronounced, is also observed in the uncertainty ranking for the \mhh fit.
 
 \begin{figure}
     \centering
@@ -244,7 +244,7 @@ Dominating nuisance parameter rankings for the \ac{bce}-trained and neos-trained
 \begin{figure}
     \centering
     \includegraphics[width=1\textwidth]{neos_results/tomatos_cls_5_2500_slope_50_l1cvv0cv1/figures/ranking_selected.pdf}
-    \caption[]{Ranking of nuisance parameters ordered by their post-fit impact on the signal strength, $\Delta\mu$, displayed on the upper axis for \ac{neos}. The black dots represent the pulls using the lower axis. A detailed explanation of this plot can be found in figure \ref{fig:m_hh_neos_unc_ranking}.}
+    \caption[]{Ranking of nuisance parameters ordered by their post-fit impact on the signal strength, $\Delta\mu$, displayed on the upper axis for the \ac{neos}-trained \ac{nn}. The black dots represent the pulls using the lower axis. A detailed explanation of this plot can be found in figure \ref{fig:m_hh_neos_unc_ranking}.}
     \label{fig:neos_valid_ranking_cls}
 \end{figure}
 
@@ -309,7 +309,7 @@ With the linear combination of \ac{vbf} signal hypotheses explained in section \
     \begin{tabular}{c|c|c}
                                   & Lower \ktwov Limit & Upper \ktwov Limit \\\hline
         \mhh                      & 0.34               & 1.68               \\
-        \ac{bce}-trained \ac{nn}  & 0.42               & 1.6                \\
+        \ac{bce}-trained \ac{nn}  & 0.42               & 1.60                \\
         \ac{neos}-trained \ac{nn} & 0.55               & 1.48               \\
     \end{tabular}
 \end{table}
