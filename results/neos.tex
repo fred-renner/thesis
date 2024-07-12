@@ -5,8 +5,6 @@ Cross-section upper limits are obtained with a maximum likelihood fit as explain
 
 Each fit employs the same subset of uncertainties, chosen from the highest-ranked uncertainties of an $m_{HH}$ fit that incorporated the full set of uncertainties. The reduced set used for optimizing \ac{neos} is summarized in table \ref{tab:neos-samples} and ranked by its impact on an \mhh fit, illustrated in Figure \ref{fig:m_hh_neos_unc_ranking}. The complete ranked list of uncertainties for the \mhh fit is available in Appendix \ref{fig:m_hh_full_sys_ranking}. The \ac{pdf}+$\alpha_s$ uncertainty, however, was excluded from the optimization due to its minimal impact relative to the computational overhead of processing 100 additional samples. $t\overline{t}$ as a background is neglected entirely as it contributes 1-2\% to the event selection.
 
-All shape uncertainties are always applied with a normalization and shape uncertainty. The reason for this is that shape uncertainties use linear extrapolation which can yield negative yields in particular with the standard optimizer setting probing nuisance parameters for $\pm5\sigma$. When augmented with a normalization uncertainty modifier which uses exponential interpolation the uncertainty is protected against negative yields as shown in figure \ref{fig:norm_shape}.
-
 \begin{figure}
     \centering
     \includegraphics[width=0.95\textwidth]{neos_results/m_hh_neos_unc_ranking.pdf}
@@ -14,13 +12,6 @@ All shape uncertainties are always applied with a normalization and shape uncert
     \label{fig:m_hh_neos_unc_ranking}
 \end{figure}
 
-
-\begin{figure}
-    \centering
-    \includegraphics[width=.4\textwidth]{norm_shape}
-    \caption[]{Effect of nuisance parameter pulling on histogram yields with and without applying an additional normalization uncertainty to a shape uncertainty. Adopted from \citep{held_stat_intro}.}
-    \label{fig:norm_shape}
-\end{figure}
 
 
 
@@ -248,11 +239,7 @@ Dominating nuisance parameter rankings for the \ac{bce}-trained and neos-trained
     \label{fig:neos_valid_ranking_cls}
 \end{figure}
 
-Furthermore the correlation matrices of the dominating uncertainties for the models in figures \ref{fig:correlation_matrix_m_hh}, \ref{fig:correlation_matrix_bce} and \ref{fig:correlation_matrix_cls} reveal a strong correlation of the signal strength to the uncertainties of the GN2X version of the $X\rightarrow bb$ tagger. When propagating errors, covariances contribute to the overall uncertainty. This can be understood by examining the variance of a function $f(\theta_1, \theta_2)$ depending on two parameters with their individual $\sigma_1,\sigma_2$ uncertainties
-\begin{equation}
-    \text{Var}(f(\theta_1, \theta_2)) = \left( \frac{\partial f}{\partial \theta_1} \right)^2 \sigma_1^2 + \left( \frac{\partial f}{\partial \theta_2} \right)^2 \sigma_2^2 + 2 \left( \frac{\partial f}{\partial \theta_1} \right) \left( \frac{\partial f}{\partial \theta_2} \right) \sigma_{12}.
-\end{equation}
-Thus, if parameters $\theta_1, \theta_2$ are correlated the cross-term \(2 \left( \frac{\partial f}{\partial \theta_1} \right) \left( \frac{\partial f}{\partial \theta_2} \right) \sigma_{12}\) contributes to the overall uncertainty.  \ac{neos} potentially has the capability to decorrelate uncertainties, thereby reducing the impact of these correlated uncertainties on the overall analysis.
+Furthermore the correlation matrices of the dominating uncertainties for the models in figures \ref{fig:correlation_matrix_m_hh}, \ref{fig:correlation_matrix_bce} and \ref{fig:correlation_matrix_cls} reveal a strong correlation of the signal strength to the uncertainties of the GN2X version of the $X\rightarrow bb$ tagger. When propagating errors, covariances contribute to the overall uncertainty as outlined in section \ref{sec:unc_extraction}. \ac{neos} potentially has the capability to decorrelate uncertainties, thereby reducing the impact of these correlated uncertainties on the overall analysis.
 
 \begin{figure}
     \centering
@@ -309,7 +296,7 @@ With the linear combination of \ac{vbf} signal hypotheses explained in section \
     \begin{tabular}{c|c|c}
                                   & Lower \ktwov Limit & Upper \ktwov Limit \\\hline
         \mhh                      & 0.34               & 1.68               \\
-        \ac{bce}-trained \ac{nn}  & 0.42               & 1.60                \\
+        \ac{bce}-trained \ac{nn}  & 0.42               & 1.60               \\
         \ac{neos}-trained \ac{nn} & 0.55               & 1.48               \\
     \end{tabular}
 \end{table}
