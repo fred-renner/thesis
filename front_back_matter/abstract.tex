@@ -1,5 +1,13 @@
 \begin{center}
     \textbf{Abstract}
 \end{center}
-%\vspace{.5cm}
-\noindent I am an abstract.
+\noindent
+
+This thesis explores the application of an innovative optimization technique —referred to as \acf{neos}— for the first time to a realistic particle physics search, specifically for  a search for Higgs boson pairs decaying into the boosted Vector Boson Fusion topology of four $b$-quarks at the ATLAS experiment. Particle physics searches typically involve multiple stages due to handling of large datasets, necessitating intermediate optimization metrics to determine the significance of search results. Typically these optimizations rely on some form of a signal-to-background ratio. When determining the significance of search results this approach often overlooks the critical role of uncertainties and the intricate interdependencies between the steps of the analysis pipeline. \ac{neos} addresses these issues by optimizing all steps required to determine the significance of search results simultaneously.
+
+This thesis demonstrates that the \ac{neos} approach effectively optimizes any parameterizable method or parameter for the p-value. The application of \ac{neos} here includes optimizing event filtering and background estimation methods. The concept extends to what this thesis terms `autoanalysis' where the algorithm is provided only the most basic reconstructed physics objects to autonomously configure the optimal analysis configuration for given data.
+
+The analysis uses the full Run 2 data from the ATLAS detector, incorporating the latest advancements in object reconstruction, such as Unified Flow Object large-radius jets and the GN2X version of the $X\rightarrow bb$-tagging algorithm. The \ac{neos} approach displays a two-fold improvement in determining expected cross-section limits compared to using the invariant mass of the Higgs pair system and a classifier neural network, optimized for the signal-to-background ratio. \ac{neos} can constrain the \ktwov coupling parameter to \red{$(0.55 < \kappa_{2v}< 1.48)$} at the 95\% confidence level. This work establishes \ac{neos} as a robust tool for optimizing particle physics analyses, highlighting its potential for future research and discovery.
+
+Moreover, an improved strategy for identifying $b$-quarks in small-$R$ jets is presented, a crucial identification process when searching for Higgs pairs in the four $b$-quark final state. Leveraging muons from semileptonic hadron decays, this method improves tha background rejection by 40\%
+

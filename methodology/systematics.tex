@@ -1,5 +1,5 @@
 \chapter{Systematic Uncertainties}\label{ch:systematics}
-Any measurement is affected by uncertainties that determine its range of validity. In this analysis, uncertainties are classified into various types: systematic errors related to the reconstructed objects, uncertainties arising from calculations of the cross-section, methodological errors, and statistical uncertainties. Each of these categories is explained in detail in the subsequent sections.
+Any measurement is affected by uncertainties that determine its range of validity. In this analysis, uncertainties are classified into various types: systematic errors related to the reconstructed objects, uncertainties arising from calculations of the cross-section, methodological errors, and statistical uncertainties. Each of these categories is explained in detail in the subsequent sections. 
 
 \section{Luminosity}
 The combined integrated luminosity for the years 2015-2018 has an uncertainty of \qty[]{0.83}{\percent} determined with the LUCID-2 detector. It is applied to the Higgs Pair signal process and has minimal impact on this analysis.
@@ -107,7 +107,7 @@ Parametric uncertainties are Gaussian errors and are added in quadrature which e
 \end{equation}
 
 \section{Statistical Uncertainties}
-As discussed in chapter \ref{sec:statistics} on statistics the bin content for histograms in this work follows a Poisson distribution. Therefore the standard error for $N$ events is the square root of the Poisson variance $\sigma=\sqrt{\text{Var}}=\sqrt{N}$. Since histograms are filled weighted $\sum_i w_i N_i$ this needs to be taken into account. By making use of the additive property and invariance with respect to constants of the variance a bin filled with weights $w_i$ can be written as
+As discussed in chapter \ref{sec:statistics} on statistics the bin count for histograms in this work follows a Poisson distribution. Therefore the standard error for $N$ events is the square root of the Poisson variance $\sigma=\sqrt{\text{Var}}=\sqrt{N}$. Since histograms are filled weighted $\sum_i w_i N_i$ this needs to be taken into account. By making use of the additive property and invariance with respect to constants of the variance a bin filled with weights $w_i$ can be written as
 \begin{align}
     \sigma_\text{stat}^2 & = \text{Var}_\text{bin}\left(\sum_i w_i\right)
     =
@@ -120,6 +120,8 @@ so that the statistical error reads
 \begin{equation}
     \sigma_\text{stat}^\text{bin}=\sqrt{\sum_i w_i^2}.
 \end{equation}
+Statistical uncertainties are incorporated into the maximum likelihood fit, using modifiers and constraint terms described in section \ref{sec:modifiers}, for each bin individually.
+\red{show plots!}
 
 \section{Background Derivation Uncertainties}\label{sec:bkg_uncertainties}
 The \ac{qcd} background is estimated with the ABCD method from the control region as detailed in section \ref{sec:abcd}. The uncertainties on the weight factor $w_\text{CR}$ are assessed through error propagation of the statistical uncertainties on the quantities used to calculate the weight
@@ -133,14 +135,14 @@ The \ac{qcd} background is estimated with the ABCD method from the control regio
 \end{equation}
 To estimate the uncertainty of the background estimate in the \ac{sr} a shape uncertainty is estimated from the \ac{vr} by symmetrizing about the difference between the estimate, and the selection with 2 GN2X tags
 \begin{equation}
-    \Delta_\text{shape}^\text{bkg}= \left| w_\text{CR}N_\text{VR}^\text{1 GN2X} - N_\text{VR}^\text{2 GN2X}\right|.
+    \Delta_\text{shape}^\text{bkg} \left( w_\text{CR}N_\text{VR}^\text{1 GN2X}\right)= \left| w_\text{CR}N_\text{VR}^\text{1 GN2X} - N_\text{VR}^\text{2 GN2X}\right|.
 \end{equation}
 Figure \ref{fig:bkg_shape_estimate} displays the background estimate in the \ac{vr} in comparison to the \ac{vr} with 2 GN2X tags and the shape uncertainty in the \ac{sr} resulting from this uncertainty estimation.
 \begin{figure}
     \centering
     \subfigure[]{\includegraphics[width=.47\textwidth]{tomatos_cls_5_2500_slope_50_NOSYS.VR_xbb_2_compareABCD}}
     \subfigure[]{\includegraphics[width=.47\textwidth]{neos_results/neos_Background_Bkg-Estimate-Shape}}
-    \caption[]{(a) Background estimate in the \ac{vr} in comparison to the selection with 2 GN2X tags. (b) Extracted uncertainties from (a) applied to the background estimate in the \ac{sr}.}
+    \caption[]{(a) Background estimate in the \ac{vr} in comparison to the selection with 2 GN2X tags.(b) Extracted uncertainties from (a) applied to the background estimate in the \ac{sr}.}
     \label{fig:bkg_shape_estimate}
 \end{figure}
 
