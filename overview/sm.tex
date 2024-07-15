@@ -5,9 +5,9 @@ The \ac{sm} is described by a lorentz-invariant \ac{qft} that is renormalizable 
 \begin{equation}
     G = SU(3)_C \otimes SU(2)_L \otimes U(1)_Y,
 \end{equation}
-the equations of motions remain invariant. $SU(3)_C$ is the special unitary group of rank 3 representing the color symmetry within \ac{qcd}, the \ac{qft} describing the strong interactions. $SU(2)_L \otimes U(1)_Y$ exhibits the unification of the weak and electromagnetic interaction into the \ac{ew} force of that leave $SU(2)_L$ left-chiral particle doublets and particles carrying $U(1)_Y$ fermions with weak hypercharge $Y$.
+the equations of motions remain invariant. $SU(3)_C$ is the special unitary group of rank 3 representing the color symmetry within \ac{qcd}, the \ac{qft} describing the strong interactions. $SU(2)_L \otimes U(1)_Y$ exhibits the unification of the weak and electromagnetic interaction into the \ac{ew} force with symmetries for $SU(2)_L$ left-chiral particle doublets and the unitary group $U(1)_Y$ for particles carrying weak hypercharge $Y$.
 
-The following describes the particles of the \ac{sm} and gives a brief overview of the \ac{qft}'s used to describe aforementioned forces. The content of this chapter draws inspiration primarily from \citep{hollik2010quantum,griffiths2020introduction,thomson2013modern,zee2010quantum,halzen1984introductory}. Natural units are assumed everywhere $\hbar=c=1$.
+The following describes the particles of the \ac{sm} and gives a brief overview of the \ac{qft}'s used to describe aforementioned forces. The content of this chapter draws inspiration primarily from \citep{hollik2010quantum,griffiths2020introduction,thomson2013modern,zee2010quantum,halzen1984introductory}. Natural units are assumed everywhere $(\hbar=c=1)$.
 
 
 \section{Particles of the Standard Model}
@@ -18,34 +18,32 @@ All currently known elementary particles are included in the \ac{sm} and can be 
 \begin{figure}
     \centering
     \includegraphics[width=1\textwidth]{SMinfographic_image_}
-    \caption[]{Particles in the SM. Adopted from \citep{smpar}. Higgs Boson mass corrected to the current value \citep{particle2022review}. }
+    \caption[]{Particles in the SM. Adopted from \citep{smpar}. The Higgs Boson mass is corrected to the current value \citep{particle2022review}. }
     \label{fig:sm}
 \end{figure}
 
 
 The fermions can be categorized into three generations each consisting of a charged lepton, a neutral neutrino and two quarks. Except for their masses, particles of different generations have the same quantum numbers. Ordinary matter consists only of particles from the first generation. Moreover each particle has an associated anti-particle with all the quantum numbers inversed.
 
-Quarks possess both electric charges and color charges, causing them to interact with each other via weak, electromagnetic, and strong forces. Each generation consists of an up quark (up, charm and top quark) with an electric charge of \mbox{Q = 2/3} and a down quark (down, strange and bottom quark) with a charge of \mbox{Q = -1/3}. Due to color confinement, quarks can only be observed as composite particles called hadrons. This principle states that attempting to separate a hadron always results in the production of a quark-antiquark pair due to energetic favorability. Hadrons are either bound states of two quarks (mesons, e.g., a pion) or three quarks (baryons, e.g., a proton). To comply with Pauli's exclusion principle, quarks in a bound state must have different color states.
+Quarks possess both electroweak and color charges, causing them to interact with each other via weak, electromagnetic, and strong forces. Each generation consists of an up-type quark (up, charm and top quark) with an electric charge in units of the electron charge of \mbox{Q = + 2/3$e$} and a down-type quark (down, strange and bottom quark) with \mbox{Q = -1/3$e$}. Due to color confinement, quarks can only be observed as composite particles called hadrons, a principle of \ac{qcd} discussed in section \ref{sec:qcd}. Prominent hadrons include mesons (two quarks, e.g., pion) and baryons (three quarks, e.g., proton).
 
-Leptons in turn do not carry a color charge and encompasses the electron $e$, muon $\mu$ and tau $\tau$ and their associated neutrinos $\nu_e$, $\nu_\mu$ and $\nu_\tau$. In the \ac{sm} neutrinos are considered to be massless. Neutrinos also do not carry a charge and interact solely via the weak force whereas the ones ($e$, $\mu$, $\tau$) with a charge $Q=-1$ also interact electromagnetically.
+Leptons, which do not carry a color charge, include the electron $e$, muon $\mu$, tau $\tau$, and their associated neutrinos $\nu_e$, $\nu_\mu$, and $\nu_\tau$. Neutrinos have very small masses compared to other particles and are considered massless within the theoretical framework of the \ac{sm}. Neutrinos do not carry an electric charge and interact solely via the weak force, while charged leptons ($e$, $\mu$, $\tau$) with charge $Q=-1$ also interact electromagnetically.
 
-In the interaction picture of \ac{qft}, forces are mediated by particles specific to the particular force. These particles are bosons and are mediating as 8 massless gluons $g$ the strong force, as 1 massless photon $\gamma$ the electromagnetic force and as 3 massive bosons $W^+,W^-,Z$ the weak force.
+Fermions interact with fields via bosons specific to each force. The strong force is mediated by eight massless gluons $g$, while the electroweak theory includes four massless bosons $W_1,W_2,§,B$. The scalar Higgs particle plays a unique role in the \ac{sm}, breaking the electroweak interaction into weak and electromagnetic interactions through the Higgs mechanism. This process, detailed in section \ref{sec:higgs_mechanism}, explains the observed masses of weak interaction mediators $W^{\pm}$ and $Z$ and also provides an interpretation of the origins of mass for fermions.
 
-The scalar Higgs particle has a unique role in the Standard model. A locally gauge invariant \ac{qft} requires massless mediators, which the $W^{\pm},Z$ are not. When unifying the weak force and the electromagnetic force into the electroweak force a new field - the Higgs field - incorporates mass to these mediators by leaving the \ac{qft} gauge invariant. This will be discussed in detail in section \ref{sec:higgs_mechanism}. The Higgs field can also explain the masses of all fermions as the coupling to each fermion is proportional to its mass. This essentially means that the heavier the particle, the stronger its interaction is with the Higgs field.
-
-If not further specified the following always includes the anti-particles when referred to a species or a particular particle.
+If not specified otherwise the following discussions always includes the anti-particles when referred to a species or a particular particle.
 
 \section{Elements of Quantum Field Theory}\label{sec:qft}
-Elementary particles can be created, transformed, and annihilated in various forms of particle interactions. These phenomena can be understood through special relativity and quantum mechanics. Special relativity relates energy with mass, allowing energy to manifest as massive particles. Quantum mechanics, through the uncertainty principle, states that energy can fluctuate significantly over short time scales.
+Elementary particles can be created, transformed, and annihilated in various forms of particle interactions. These phenomena can be understood through special relativity and quantum mechanics. Special relativity relates energy with mass, allowing energy to manifest as massive particles and vice versa. Quantum mechanics, through the uncertainty principle, states that energy can fluctuate significantly over short time scales.
 
-However, special relativity lacks a quantum mechanical description, and in non-relativistic quantum mechanics, the particle number is conserved. \ac{qft} was developed to provides a solution to this dilemma and to incorporate observations into a unified theory.
+However, special relativity lacks a quantum mechanical description, and in non-relativistic quantum mechanics, the particle number is conserved. \ac{qft} was developed to provide a solution to this dilemma and to incorporate observations from both fields into a unified theory.
 
-For a field description, some quantity $\phi(x,y,z,t)=\phi(x)$ is assigned to some region in spacetime $x$. Similar to the Lagrangian formalism in classical mechanics here a Lagrangian density in spacetime governs the dynamics of the system $\mathcal{L}(\phi_1,\dots,\phi_n) =T-V$.
+For a field description, some quantity $\phi(x,y,z,t)=\phi(x)$ is assigned to some region in spacetime $x$. Similar to the Lagrangian formalism in classical mechanics, here a Lagrangian density in spacetime governs the dynamics of the system $\mathcal{L}(\phi_1,\dots,\phi_n) =T-V$.
     {\renewcommand{\arraystretch}{1.7} %<- modify value to suit your needs
         \begin{table}
             \begin{center}
                 \begin{tabular}{c|c|c}
-                    particle           & field type      & Lagrange                                                                                                     \\ \hline
+                    particle           & field type      & Lagrangian                                                                                                     \\ \hline
                     spin-0 (scalar)    & scalar $\phi$   & $\mathcal{L}_\mathrm{Klein-Gordon}=\frac{1}{2} (\partial_\mu \phi )(\partial^\mu \phi)-\frac{m^2}{2}\phi^2 $ \\
                     spin-1/2 (fermion) & spinor $\psi$   & $\mathcal{L}_\mathrm{Dirac}= \overline{\psi}(i \gamma^\mu \partial_\mu - m )\psi$                            \\
                     spin-1 (boson)     & vector  $A_\mu$ & $\mathcal{L}_\mathrm{Proca}= -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} +\frac{m^2}{2} A_\mu A^\mu$                    \\ [.7ex]
@@ -55,7 +53,7 @@ For a field description, some quantity $\phi(x,y,z,t)=\phi(x)$ is assigned to so
             \end{center}
         \end{table}
     }
-Fields which appear in the \ac{sm} and their associated Lagrangian are summarized in table \ref{tab:fields}.
+Fields which appear in the \ac{sm} and their associated Lagrangians are summarized in table \ref{tab:fields}.
 % Via the generalized Euler-Lagrange equations of \ac{qft} 
 % \begin{equation}
 %     \partial_\mu \left(\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi_i)}\right)=\frac{\partial\mathcal{L}}{\partial \phi_i}.
@@ -76,13 +74,12 @@ This only works if $\lambda$ is small. With this the Lagrangian can be solved an
 The forces and Lagrangians occurring in the \ac{sm} are discussed in the following sections on \ac{qed} \ref{sec:qed}, \ac{qcd} \ref{sec:qcd} and the \ac{ew} theory \ref{sec:ew}. For these the principle of local gauge invariance plays a key role and is inspired by gauge invariance from classical electrodynamics.
 
 \section{Quantum Electrodynamics}\label{sec:qed}
-\red{    In QED, the gauge bosons (photons) do not interact with each other. This is a direct consequence of the Abelian nature of U(1) In contrast, in non-Abelian gauge theories like Quantum Chromodynamics (QCD), the gauge bosons (gluons) do interact with each other due to the non-commuting nature of the gauge group generators.}
 The \ac{qft}-description of the electromagnetic interaction \ac{qed} can be derived from the free fermion field given by the Dirac equation
 \begin{equation}
     \mathcal{L}_\mathrm{Dirac} = \overline{\psi}(i \gamma^\mu \partial_\mu - m )\psi.
     \label{eq:dirac}
 \end{equation}
-This Lagrangian is invariant, i.e. the equations of motion remain unchanged, under a change of a phase $\alpha$
+This Lagrangian is invariant, i.e. the equations of motion remain unchanged, under a change of a global phase $\alpha$
 \begin{equation}
     \psi(x) \rightarrow  e^{-i \alpha}\psi(x).
 \end{equation}
@@ -124,7 +121,7 @@ The dyanmics for the photon can be added with the spin-1 Proca Lagrangian from t
     \underbrace{\frac{1}{4}F_{\mu\nu}F^{\mu\nu}}_{\mathcal{L}_\mathrm{Maxwell} }.
     \label{eq:l_qed}
 \end{equation}
-That this symmetry holds locally for all unitary $1\times1$ matrices $U(1)$ might seem extravagant, but the formalism is extendable to higher orders as for the \ac{ew} theory and \ac{qcd} case. The gauge group is abelian as any $1\times1$ matrix also commutes with itself.
+That this symmetry holds locally for all unitary $1\times1$ matrices $U(1)$ might seem extravagant, but the formalism is extendable to higher orders as for the \ac{ew} theory and \ac{qcd} case. The gauge group is abelian as any $1\times1$ matrix also commutes with itself. As a result there are no self-interaction terms like $A_\mu A^\mu$ for photons. This means photons only interact with charged particles and not with each other.
 
 \section{Quantum Chromodynamics}\label{sec:qcd}
 
@@ -169,6 +166,11 @@ to get the gauge invariant \ac{qcd} Lagrangian
     \label{eq:l_qcd}
 \end{align}
 This Lagrangian consists of a kinetic term for each quark, an interaction term of the quarks with the gluons and gluon-gluon interactions resulting in vertices shown in figure \ref{fig:qcd_vertices}. These interactions become apparent when $G^a_{\mu\nu}$ is squared, leading to cubic and quartic terms for the fields.
+
+\red{This principle states that attempting to separate a hadron always results in the production of a quark-antiquark pair due to energetic favorability as will be elaborated on in section \ref{sec:qcd}. 
+To comply with Pauli's exclusion principle, quarks in a bound state must have different color states.
+This principle states that attempting to separate a hadron always results in the production of a quark-antiquark pair due to energetic favorability as will be elaborated on in section \ref{sec:qcd}. 
+}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{gluon_gluon_interactions}
@@ -533,6 +535,11 @@ Furthermore a relation to the weak mixing angle and the electric charge follow
     \cos\theta_W=\frac{g_2}{\sqrt{g_1^2+g_2^2}}=\frac{m_W}{m_Z}, \quad e=g\sin \theta_W.
 \end{equation}
 The $\cos\theta_W$ was verifiable before the Higgs discovery and a compelling argument for the Higgs to exist.
+
+
+\red{
+    The scalar Higgs particle has a unique role in the Standard model. A locally gauge invariant \ac{qft} requires massless mediators, which the $W^{\pm},Z$ are not. When unifying the weak force and the electromagnetic force into the electroweak force a new field - the Higgs field - incorporates mass to these mediators by leaving the \ac{qft} gauge invariant. This will be discussed in detail in section \ref{sec:higgs_mechanism}. The Higgs field can also explain the masses of all fermions as the coupling to each fermion is proportional to its mass. This essentially means that the heavier the particle, the stronger its interaction is with the Higgs field.
+}
 
 \subsubsection*{Yukawa Term}\label{sec:yukawa_term}
 Fermion masses can be incorporated gauge invariant into the electroweak Lagrangian of equation \ref{eq:L_EW} with the help of the Higgs mechanism in the form of Yukawa couplings. For one generation of leptons and quarks gauge invariant terms are introduced via couplings between the left-handed doublet states, the Higgs field and right handed singlet states
