@@ -1,0 +1,1065 @@
+2024-07-18 14:14:58 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:58 INFO     opening config file /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/cabinetry_config.yaml
+2024-07-18 14:14:58 INFO     the config contains:
+2024-07-18 14:14:58 INFO       4 Sample(s)
+2024-07-18 14:14:58 INFO       1 Regions(s)
+2024-07-18 14:14:58 INFO       1 NormFactor(s)
+2024-07-18 14:14:58 INFO       58 Systematic(s)
+2024-07-18 14:14:58 DEBUG      in region neos
+2024-07-18 14:14:58 DEBUG        reading sample Data
+2024-07-18 14:14:58 DEBUG          variation Nominal
+2024-07-18 14:14:58 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/run2/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_NOSYS
+2024-07-18 14:14:58 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:58 WARNING  neos_Data has empty bins: [0 1 2 3 4]
+2024-07-18 14:14:58 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_Data.npz
+2024-07-18 14:14:58 DEBUG        reading sample VBF Signal
+2024-07-18 14:14:58 DEBUG          variation Nominal
+2024-07-18 14:14:58 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_NOSYS
+2024-07-18 14:14:58 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:58 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal.npz
+2024-07-18 14:14:58 DEBUG          variation Scale Variations Up
+2024-07-18 14:14:58 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/scale_up
+2024-07-18 14:14:58 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:58 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_Scale-Variations_Up.npz
+2024-07-18 14:14:58 DEBUG          variation Scale Variations Down
+2024-07-18 14:14:58 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/scale_down
+2024-07-18 14:14:58 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:58 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_Scale-Variations_Down.npz
+2024-07-18 14:14:58 DEBUG          variation pdf + alpha s Up
+2024-07-18 14:14:58 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/pdf_alpha_up
+2024-07-18 14:14:58 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:58 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_pdf-+-alpha-s_Up.npz
+2024-07-18 14:14:58 DEBUG          variation pdf + alpha s Down
+2024-07-18 14:14:58 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/pdf_alpha_down
+2024-07-18 14:14:58 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:58 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_pdf-+-alpha-s_Down.npz
+2024-07-18 14:14:58 DEBUG          variation Parton Shower Up
+2024-07-18 14:14:58 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/ps_signal_up
+2024-07-18 14:14:58 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:58 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_Parton-Shower_Up.npz
+2024-07-18 14:14:58 DEBUG          variation Parton Shower Down
+2024-07-18 14:14:58 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/ps_signal_down
+2024-07-18 14:14:58 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:58 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_Parton-Shower_Down.npz
+2024-07-18 14:14:58 DEBUG          variation Signal Stat Error bin 1 Up
+2024-07-18 14:14:58 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/stat_signal_up_bin_0
+2024-07-18 14:14:58 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:58 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_Signal-Stat-Error-bin-1_Up.npz
+2024-07-18 14:14:58 DEBUG          variation Signal Stat Error bin 1 Down
+2024-07-18 14:14:58 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/stat_signal_down_bin_0
+2024-07-18 14:14:58 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:58 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_Signal-Stat-Error-bin-1_Down.npz
+2024-07-18 14:14:58 DEBUG          variation Signal Stat Error bin 2 Up
+2024-07-18 14:14:58 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/stat_signal_up_bin_1
+2024-07-18 14:14:58 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:58 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_Signal-Stat-Error-bin-2_Up.npz
+2024-07-18 14:14:58 DEBUG          variation Signal Stat Error bin 2 Down
+2024-07-18 14:14:58 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/stat_signal_down_bin_1
+2024-07-18 14:14:58 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:58 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_Signal-Stat-Error-bin-2_Down.npz
+2024-07-18 14:14:58 DEBUG          variation Signal Stat Error bin 3 Up
+2024-07-18 14:14:58 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/stat_signal_up_bin_2
+2024-07-18 14:14:58 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:58 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_Signal-Stat-Error-bin-3_Up.npz
+2024-07-18 14:14:58 DEBUG          variation Signal Stat Error bin 3 Down
+2024-07-18 14:14:58 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/stat_signal_down_bin_2
+2024-07-18 14:14:58 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:58 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_Signal-Stat-Error-bin-3_Down.npz
+2024-07-18 14:14:58 DEBUG          variation Signal Stat Error bin 4 Up
+2024-07-18 14:14:58 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/stat_signal_up_bin_3
+2024-07-18 14:14:58 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:58 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_Signal-Stat-Error-bin-4_Up.npz
+2024-07-18 14:14:58 DEBUG          variation Signal Stat Error bin 4 Down
+2024-07-18 14:14:58 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/stat_signal_down_bin_3
+2024-07-18 14:14:58 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:58 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_Signal-Stat-Error-bin-4_Down.npz
+2024-07-18 14:14:58 DEBUG          variation Signal Stat Error bin 5 Up
+2024-07-18 14:14:58 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/stat_signal_up_bin_4
+2024-07-18 14:14:58 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:58 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_Signal-Stat-Error-bin-5_Up.npz
+2024-07-18 14:14:58 DEBUG          variation Signal Stat Error bin 5 Down
+2024-07-18 14:14:58 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/stat_signal_down_bin_4
+2024-07-18 14:14:58 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:58 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_Signal-Stat-Error-bin-5_Down.npz
+2024-07-18 14:14:58 DEBUG          variation JET EffectiveNP Modelling1 Up
+2024-07-18 14:14:58 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_EffectiveNP_Modelling1__1up
+2024-07-18 14:14:58 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:58 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-EffectiveNP-Modelling1_Up.npz
+2024-07-18 14:14:58 DEBUG          variation JET EffectiveNP Modelling1 Down
+2024-07-18 14:14:58 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_EffectiveNP_Modelling1__1down
+2024-07-18 14:14:58 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:58 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-EffectiveNP-Modelling1_Down.npz
+2024-07-18 14:14:58 DEBUG          variation JET EffectiveNP R10 Mixed1 Up
+2024-07-18 14:14:58 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_EffectiveNP_R10_Mixed1__1up
+2024-07-18 14:14:58 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:58 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-EffectiveNP-R10-Mixed1_Up.npz
+2024-07-18 14:14:58 DEBUG          variation JET EffectiveNP R10 Mixed1 Down
+2024-07-18 14:14:58 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_EffectiveNP_R10_Mixed1__1down
+2024-07-18 14:14:58 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:58 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-EffectiveNP-R10-Mixed1_Down.npz
+2024-07-18 14:14:58 DEBUG          variation JET EffectiveNP R10 Mixed2 Up
+2024-07-18 14:14:58 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_EffectiveNP_R10_Mixed2__1up
+2024-07-18 14:14:58 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:58 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-EffectiveNP-R10-Mixed2_Up.npz
+2024-07-18 14:14:58 DEBUG          variation JET EffectiveNP R10 Mixed2 Down
+2024-07-18 14:14:58 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_EffectiveNP_R10_Mixed2__1down
+2024-07-18 14:14:58 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:58 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-EffectiveNP-R10-Mixed2_Down.npz
+2024-07-18 14:14:58 DEBUG          variation JET EffectiveNP R10 Modelling1 Up
+2024-07-18 14:14:58 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_EffectiveNP_R10_Modelling1__1up
+2024-07-18 14:14:58 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:58 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-EffectiveNP-R10-Modelling1_Up.npz
+2024-07-18 14:14:58 DEBUG          variation JET EffectiveNP R10 Modelling1 Down
+2024-07-18 14:14:58 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_EffectiveNP_R10_Modelling1__1down
+2024-07-18 14:14:58 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:58 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-EffectiveNP-R10-Modelling1_Down.npz
+2024-07-18 14:14:58 DEBUG          variation JET EffectiveNP R10 Modelling2 Up
+2024-07-18 14:14:58 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_EffectiveNP_R10_Modelling2__1up
+2024-07-18 14:14:58 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:58 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-EffectiveNP-R10-Modelling2_Up.npz
+2024-07-18 14:14:58 DEBUG          variation JET EffectiveNP R10 Modelling2 Down
+2024-07-18 14:14:58 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_EffectiveNP_R10_Modelling2__1down
+2024-07-18 14:14:58 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:58 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-EffectiveNP-R10-Modelling2_Down.npz
+2024-07-18 14:14:58 DEBUG          variation JET EtaIntercalibration Modelling Up
+2024-07-18 14:14:58 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_EtaIntercalibration_Modelling__1up
+2024-07-18 14:14:58 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:58 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-EtaIntercalibration-Modelling_Up.npz
+2024-07-18 14:14:58 DEBUG          variation JET EtaIntercalibration Modelling Down
+2024-07-18 14:14:58 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_EtaIntercalibration_Modelling__1down
+2024-07-18 14:14:58 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:58 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-EtaIntercalibration-Modelling_Down.npz
+2024-07-18 14:14:58 DEBUG          variation JET EtaIntercalibration NonClosure PreRec Up
+2024-07-18 14:14:58 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_EtaIntercalibration_NonClosure_PreRec__1up
+2024-07-18 14:14:58 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:58 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-EtaIntercalibration-NonClosure-PreRec_Up.npz
+2024-07-18 14:14:58 DEBUG          variation JET EtaIntercalibration NonClosure PreRec Down
+2024-07-18 14:14:58 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_EtaIntercalibration_NonClosure_PreRec__1down
+2024-07-18 14:14:58 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:58 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-EtaIntercalibration-NonClosure-PreRec_Down.npz
+2024-07-18 14:14:58 DEBUG          variation JET Flavor Composition Up
+2024-07-18 14:14:58 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_Flavor_Composition__1up
+2024-07-18 14:14:58 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-Flavor-Composition_Up.npz
+2024-07-18 14:14:59 DEBUG          variation JET Flavor Composition Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_Flavor_Composition__1down
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-Flavor-Composition_Down.npz
+2024-07-18 14:14:59 DEBUG          variation JET Flavor Response Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_Flavor_Response__1up
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-Flavor-Response_Up.npz
+2024-07-18 14:14:59 DEBUG          variation JET Flavor Response Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_Flavor_Response__1down
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-Flavor-Response_Down.npz
+2024-07-18 14:14:59 DEBUG          variation JET InSitu NonClosure PreRec Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_InSitu_NonClosure_PreRec__1up
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-InSitu-NonClosure-PreRec_Up.npz
+2024-07-18 14:14:59 DEBUG          variation JET InSitu NonClosure PreRec Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_InSitu_NonClosure_PreRec__1down
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-InSitu-NonClosure-PreRec_Down.npz
+2024-07-18 14:14:59 DEBUG          variation JET JERUnc Noise PreRec PseudoData Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JERUnc_Noise_PreRec_PseudoData__1up
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JERUnc-Noise-PreRec-PseudoData_Up.npz
+2024-07-18 14:14:59 DEBUG          variation JET JERUnc Noise PreRec PseudoData Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JERUnc_Noise_PreRec_PseudoData__1down
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JERUnc-Noise-PreRec-PseudoData_Down.npz
+2024-07-18 14:14:59 DEBUG          variation JET JERUnc Noise PreRec Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JERUnc_Noise_PreRec__1up
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JERUnc-Noise-PreRec_Up.npz
+2024-07-18 14:14:59 DEBUG          variation JET JERUnc Noise PreRec Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JERUnc_Noise_PreRec__1down
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JERUnc-Noise-PreRec_Down.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER DataVsMC MC16 PseudoData Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_DataVsMC_MC16_PseudoData__1up
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-DataVsMC-MC16-PseudoData_Up.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER DataVsMC MC16 PseudoData Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_DataVsMC_MC16_PseudoData__1down
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-DataVsMC-MC16-PseudoData_Down.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER DataVsMC MC16 Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_DataVsMC_MC16__1up
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-DataVsMC-MC16_Up.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER DataVsMC MC16 Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_DataVsMC_MC16__1down
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-DataVsMC-MC16_Down.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER EffectiveNP 10 Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_EffectiveNP_10__1up
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-10_Up.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER EffectiveNP 10 Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_EffectiveNP_10__1down
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-10_Down.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER EffectiveNP 1 PseudoData Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_EffectiveNP_1_PseudoData__1up
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-1-PseudoData_Up.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER EffectiveNP 1 PseudoData Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_EffectiveNP_1_PseudoData__1down
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-1-PseudoData_Down.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER EffectiveNP 1 Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_EffectiveNP_1__1up
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-1_Up.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER EffectiveNP 1 Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_EffectiveNP_1__1down
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-1_Down.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER EffectiveNP 2 PseudoData Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_EffectiveNP_2_PseudoData__1up
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-2-PseudoData_Up.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER EffectiveNP 2 PseudoData Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_EffectiveNP_2_PseudoData__1down
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-2-PseudoData_Down.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER EffectiveNP 2 Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_EffectiveNP_2__1up
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-2_Up.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER EffectiveNP 2 Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_EffectiveNP_2__1down
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-2_Down.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER EffectiveNP 3 PseudoData Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_EffectiveNP_3_PseudoData__1up
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-3-PseudoData_Up.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER EffectiveNP 3 PseudoData Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_EffectiveNP_3_PseudoData__1down
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-3-PseudoData_Down.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER EffectiveNP 3 Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_EffectiveNP_3__1up
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-3_Up.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER EffectiveNP 3 Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_EffectiveNP_3__1down
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-3_Down.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER EffectiveNP 4 PseudoData Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_EffectiveNP_4_PseudoData__1up
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-4-PseudoData_Up.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER EffectiveNP 4 PseudoData Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_EffectiveNP_4_PseudoData__1down
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-4-PseudoData_Down.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER EffectiveNP 4 Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_EffectiveNP_4__1up
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-4_Up.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER EffectiveNP 4 Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_EffectiveNP_4__1down
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-4_Down.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER EffectiveNP 5 PseudoData Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_EffectiveNP_5_PseudoData__1up
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-5-PseudoData_Up.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER EffectiveNP 5 PseudoData Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_EffectiveNP_5_PseudoData__1down
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-5-PseudoData_Down.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER EffectiveNP 5 Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_EffectiveNP_5__1up
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-5_Up.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER EffectiveNP 5 Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_EffectiveNP_5__1down
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-5_Down.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER EffectiveNP 6 PseudoData Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_EffectiveNP_6_PseudoData__1up
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-6-PseudoData_Up.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER EffectiveNP 6 PseudoData Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_EffectiveNP_6_PseudoData__1down
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-6-PseudoData_Down.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER EffectiveNP 7 PseudoData Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_EffectiveNP_7_PseudoData__1up
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-7-PseudoData_Up.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER EffectiveNP 7 PseudoData Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_EffectiveNP_7_PseudoData__1down
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-7-PseudoData_Down.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER EffectiveNP 7 Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_EffectiveNP_7__1up
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-7_Up.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER EffectiveNP 7 Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_EffectiveNP_7__1down
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-7_Down.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER EffectiveNP 8 PseudoData Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_EffectiveNP_8_PseudoData__1up
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-8-PseudoData_Up.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER EffectiveNP 8 PseudoData Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_EffectiveNP_8_PseudoData__1down
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-8-PseudoData_Down.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER EffectiveNP 8 Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_EffectiveNP_8__1up
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-8_Up.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER EffectiveNP 8 Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_EffectiveNP_8__1down
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-8_Down.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER EffectiveNP 9 Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_EffectiveNP_9__1up
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-9_Up.npz
+2024-07-18 14:14:59 DEBUG          variation JET JER EffectiveNP 9 Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JER_EffectiveNP_9__1down
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-9_Down.npz
+2024-07-18 14:14:59 DEBUG          variation JET JESUnc VertexingAlg PreRec Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JESUnc_VertexingAlg_PreRec__1up
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JESUnc-VertexingAlg-PreRec_Up.npz
+2024-07-18 14:14:59 DEBUG          variation JET JESUnc VertexingAlg PreRec Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_JESUnc_VertexingAlg_PreRec__1down
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JESUnc-VertexingAlg-PreRec_Down.npz
+2024-07-18 14:14:59 DEBUG          variation JET Pileup OffsetMu Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_Pileup_OffsetMu__1up
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-Pileup-OffsetMu_Up.npz
+2024-07-18 14:14:59 DEBUG          variation JET Pileup OffsetMu Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_Pileup_OffsetMu__1down
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-Pileup-OffsetMu_Down.npz
+2024-07-18 14:14:59 DEBUG          variation JET Pileup OffsetNPV Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_Pileup_OffsetNPV__1up
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-Pileup-OffsetNPV_Up.npz
+2024-07-18 14:14:59 DEBUG          variation JET Pileup OffsetNPV Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_Pileup_OffsetNPV__1down
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-Pileup-OffsetNPV_Down.npz
+2024-07-18 14:14:59 DEBUG          variation JET Pileup PtTerm Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_Pileup_PtTerm__1up
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-Pileup-PtTerm_Up.npz
+2024-07-18 14:14:59 DEBUG          variation JET Pileup PtTerm Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_Pileup_PtTerm__1down
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-Pileup-PtTerm_Down.npz
+2024-07-18 14:14:59 DEBUG          variation JET Pileup RhoTopology Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_Pileup_RhoTopology__1up
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-Pileup-RhoTopology_Up.npz
+2024-07-18 14:14:59 DEBUG          variation JET Pileup RhoTopology Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_JET_Pileup_RhoTopology__1down
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-Pileup-RhoTopology_Down.npz
+2024-07-18 14:14:59 DEBUG          variation PRW DATASF Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_PRW_DATASF__1up
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_PRW-DATASF_Up.npz
+2024-07-18 14:14:59 DEBUG          variation PRW DATASF Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_PRW_DATASF__1down
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_PRW-DATASF_Down.npz
+2024-07-18 14:14:59 DEBUG          variation xbb pt bin 0 Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_xbb_pt_bin_0__1up
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_xbb-pt-bin-0_Up.npz
+2024-07-18 14:14:59 DEBUG          variation xbb pt bin 0 Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_xbb_pt_bin_0__1down
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_xbb-pt-bin-0_Down.npz
+2024-07-18 14:14:59 DEBUG          variation xbb pt bin 1 Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_xbb_pt_bin_1__1up
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_xbb-pt-bin-1_Up.npz
+2024-07-18 14:14:59 DEBUG          variation xbb pt bin 1 Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_xbb_pt_bin_1__1down
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_xbb-pt-bin-1_Down.npz
+2024-07-18 14:14:59 DEBUG          variation xbb pt bin 2 Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_xbb_pt_bin_2__1up
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_xbb-pt-bin-2_Up.npz
+2024-07-18 14:14:59 DEBUG          variation xbb pt bin 2 Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_xbb_pt_bin_2__1down
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_xbb-pt-bin-2_Down.npz
+2024-07-18 14:14:59 DEBUG          variation xbb pt bin 3 Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_xbb_pt_bin_3__1up
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_xbb-pt-bin-3_Up.npz
+2024-07-18 14:14:59 DEBUG          variation xbb pt bin 3 Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/signal/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_xbb_pt_bin_3__1down
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_xbb-pt-bin-3_Down.npz
+2024-07-18 14:14:59 DEBUG        reading sample ggF Signal
+2024-07-18 14:14:59 DEBUG          variation Nominal
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/ggf/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_NOSYS
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_ggF-Signal.npz
+2024-07-18 14:14:59 DEBUG        reading sample Background
+2024-07-18 14:14:59 DEBUG          variation Nominal
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/bkg_estimate/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_NOSYS
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_Background.npz
+2024-07-18 14:14:59 DEBUG          variation Bkg Estimate Shape Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/bkg_estimate/bkg_estimate_shape_up
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_Background_Bkg-Estimate-Shape_Up.npz
+2024-07-18 14:14:59 DEBUG          variation Bkg Estimate Shape Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/bkg_estimate/bkg_estimate_shape_down
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 WARNING  neos_Background_Bkg-Estimate-Shape_Down has empty bins: [0]
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_Background_Bkg-Estimate-Shape_Down.npz
+2024-07-18 14:14:59 DEBUG          variation Bkg Stat Error bin 1 Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/bkg_estimate/stat_bkg_estimate_up_bin_0
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_Background_Bkg-Stat-Error-bin-1_Up.npz
+2024-07-18 14:14:59 DEBUG          variation Bkg Stat Error bin 1 Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/bkg_estimate/stat_bkg_estimate_down_bin_0
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_Background_Bkg-Stat-Error-bin-1_Down.npz
+2024-07-18 14:14:59 DEBUG          variation Bkg Stat Error bin 2 Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/bkg_estimate/stat_bkg_estimate_up_bin_1
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_Background_Bkg-Stat-Error-bin-2_Up.npz
+2024-07-18 14:14:59 DEBUG          variation Bkg Stat Error bin 2 Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/bkg_estimate/stat_bkg_estimate_down_bin_1
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_Background_Bkg-Stat-Error-bin-2_Down.npz
+2024-07-18 14:14:59 DEBUG          variation Bkg Stat Error bin 3 Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/bkg_estimate/stat_bkg_estimate_up_bin_2
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_Background_Bkg-Stat-Error-bin-3_Up.npz
+2024-07-18 14:14:59 DEBUG          variation Bkg Stat Error bin 3 Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/bkg_estimate/stat_bkg_estimate_down_bin_2
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_Background_Bkg-Stat-Error-bin-3_Down.npz
+2024-07-18 14:14:59 DEBUG          variation Bkg Stat Error bin 4 Up
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/bkg_estimate/stat_bkg_estimate_up_bin_3
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:14:59 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_Background_Bkg-Stat-Error-bin-4_Up.npz
+2024-07-18 14:14:59 DEBUG          variation Bkg Stat Error bin 4 Down
+2024-07-18 14:14:59 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/bkg_estimate/stat_bkg_estimate_down_bin_3
+2024-07-18 14:14:59 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_Background_Bkg-Stat-Error-bin-4_Down.npz
+2024-07-18 14:15:00 DEBUG          variation Bkg Stat Error bin 5 Up
+2024-07-18 14:15:00 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/bkg_estimate/stat_bkg_estimate_up_bin_4
+2024-07-18 14:15:00 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_Background_Bkg-Stat-Error-bin-5_Up.npz
+2024-07-18 14:15:00 DEBUG          variation Bkg Stat Error bin 5 Down
+2024-07-18 14:15:00 DEBUG    reading input histogram /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root:SR_xbb_2/bkg_estimate/stat_bkg_estimate_down_bin_4
+2024-07-18 14:15:00 DEBUG    open file: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.root
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_Background_Bkg-Stat-Error-bin-5_Down.npz
+2024-07-18 14:15:00 DEBUG      in region neos
+2024-07-18 14:15:00 DEBUG        reading sample Data
+2024-07-18 14:15:00 DEBUG          variation Nominal
+2024-07-18 14:15:00 WARNING  neos_Data has empty bins: [0 1 2 3 4]
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_Data_modified.npz
+2024-07-18 14:15:00 DEBUG        reading sample VBF Signal
+2024-07-18 14:15:00 DEBUG          variation Nominal
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_modified.npz
+2024-07-18 14:15:00 DEBUG          variation Scale Variations Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_Scale-Variations_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation Scale Variations Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_Scale-Variations_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation pdf + alpha s Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_pdf-+-alpha-s_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation pdf + alpha s Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_pdf-+-alpha-s_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation Parton Shower Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_Parton-Shower_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation Parton Shower Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_Parton-Shower_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation Signal Stat Error bin 1 Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_Signal-Stat-Error-bin-1_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation Signal Stat Error bin 1 Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_Signal-Stat-Error-bin-1_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation Signal Stat Error bin 2 Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_Signal-Stat-Error-bin-2_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation Signal Stat Error bin 2 Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_Signal-Stat-Error-bin-2_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation Signal Stat Error bin 3 Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_Signal-Stat-Error-bin-3_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation Signal Stat Error bin 3 Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_Signal-Stat-Error-bin-3_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation Signal Stat Error bin 4 Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_Signal-Stat-Error-bin-4_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation Signal Stat Error bin 4 Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_Signal-Stat-Error-bin-4_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation Signal Stat Error bin 5 Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_Signal-Stat-Error-bin-5_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation Signal Stat Error bin 5 Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_Signal-Stat-Error-bin-5_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET EffectiveNP Modelling1 Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-EffectiveNP-Modelling1_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET EffectiveNP Modelling1 Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-EffectiveNP-Modelling1_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET EffectiveNP R10 Mixed1 Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-EffectiveNP-R10-Mixed1_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET EffectiveNP R10 Mixed1 Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-EffectiveNP-R10-Mixed1_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET EffectiveNP R10 Mixed2 Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-EffectiveNP-R10-Mixed2_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET EffectiveNP R10 Mixed2 Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-EffectiveNP-R10-Mixed2_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET EffectiveNP R10 Modelling1 Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-EffectiveNP-R10-Modelling1_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET EffectiveNP R10 Modelling1 Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-EffectiveNP-R10-Modelling1_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET EffectiveNP R10 Modelling2 Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-EffectiveNP-R10-Modelling2_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET EffectiveNP R10 Modelling2 Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-EffectiveNP-R10-Modelling2_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET EtaIntercalibration Modelling Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-EtaIntercalibration-Modelling_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET EtaIntercalibration Modelling Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-EtaIntercalibration-Modelling_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET EtaIntercalibration NonClosure PreRec Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-EtaIntercalibration-NonClosure-PreRec_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET EtaIntercalibration NonClosure PreRec Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-EtaIntercalibration-NonClosure-PreRec_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET Flavor Composition Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-Flavor-Composition_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET Flavor Composition Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-Flavor-Composition_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET Flavor Response Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-Flavor-Response_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET Flavor Response Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-Flavor-Response_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET InSitu NonClosure PreRec Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-InSitu-NonClosure-PreRec_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET InSitu NonClosure PreRec Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-InSitu-NonClosure-PreRec_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JERUnc Noise PreRec PseudoData Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JERUnc-Noise-PreRec-PseudoData_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JERUnc Noise PreRec PseudoData Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JERUnc-Noise-PreRec-PseudoData_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JERUnc Noise PreRec Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JERUnc-Noise-PreRec_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JERUnc Noise PreRec Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JERUnc-Noise-PreRec_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER DataVsMC MC16 PseudoData Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-DataVsMC-MC16-PseudoData_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER DataVsMC MC16 PseudoData Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-DataVsMC-MC16-PseudoData_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER DataVsMC MC16 Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-DataVsMC-MC16_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER DataVsMC MC16 Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-DataVsMC-MC16_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER EffectiveNP 10 Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-10_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER EffectiveNP 10 Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-10_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER EffectiveNP 1 PseudoData Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-1-PseudoData_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER EffectiveNP 1 PseudoData Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-1-PseudoData_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER EffectiveNP 1 Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-1_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER EffectiveNP 1 Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-1_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER EffectiveNP 2 PseudoData Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-2-PseudoData_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER EffectiveNP 2 PseudoData Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-2-PseudoData_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER EffectiveNP 2 Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-2_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER EffectiveNP 2 Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-2_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER EffectiveNP 3 PseudoData Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-3-PseudoData_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER EffectiveNP 3 PseudoData Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-3-PseudoData_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER EffectiveNP 3 Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-3_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER EffectiveNP 3 Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-3_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER EffectiveNP 4 PseudoData Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-4-PseudoData_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER EffectiveNP 4 PseudoData Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-4-PseudoData_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER EffectiveNP 4 Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-4_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER EffectiveNP 4 Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-4_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER EffectiveNP 5 PseudoData Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-5-PseudoData_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER EffectiveNP 5 PseudoData Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-5-PseudoData_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER EffectiveNP 5 Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-5_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER EffectiveNP 5 Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-5_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER EffectiveNP 6 PseudoData Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-6-PseudoData_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER EffectiveNP 6 PseudoData Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-6-PseudoData_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER EffectiveNP 7 PseudoData Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-7-PseudoData_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER EffectiveNP 7 PseudoData Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-7-PseudoData_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER EffectiveNP 7 Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-7_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER EffectiveNP 7 Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-7_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER EffectiveNP 8 PseudoData Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-8-PseudoData_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER EffectiveNP 8 PseudoData Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-8-PseudoData_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER EffectiveNP 8 Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-8_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER EffectiveNP 8 Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-8_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER EffectiveNP 9 Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-9_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JER EffectiveNP 9 Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JER-EffectiveNP-9_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JESUnc VertexingAlg PreRec Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JESUnc-VertexingAlg-PreRec_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET JESUnc VertexingAlg PreRec Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-JESUnc-VertexingAlg-PreRec_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET Pileup OffsetMu Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-Pileup-OffsetMu_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET Pileup OffsetMu Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-Pileup-OffsetMu_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET Pileup OffsetNPV Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-Pileup-OffsetNPV_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET Pileup OffsetNPV Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-Pileup-OffsetNPV_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET Pileup PtTerm Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-Pileup-PtTerm_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET Pileup PtTerm Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-Pileup-PtTerm_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET Pileup RhoTopology Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-Pileup-RhoTopology_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation JET Pileup RhoTopology Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_JET-Pileup-RhoTopology_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation PRW DATASF Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_PRW-DATASF_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation PRW DATASF Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_PRW-DATASF_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation xbb pt bin 0 Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_xbb-pt-bin-0_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation xbb pt bin 0 Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_xbb-pt-bin-0_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation xbb pt bin 1 Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_xbb-pt-bin-1_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation xbb pt bin 1 Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_xbb-pt-bin-1_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation xbb pt bin 2 Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_xbb-pt-bin-2_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation xbb pt bin 2 Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_xbb-pt-bin-2_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation xbb pt bin 3 Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_xbb-pt-bin-3_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation xbb pt bin 3 Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_VBF-Signal_xbb-pt-bin-3_Down_modified.npz
+2024-07-18 14:15:00 DEBUG        reading sample ggF Signal
+2024-07-18 14:15:00 DEBUG          variation Nominal
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_ggF-Signal_modified.npz
+2024-07-18 14:15:00 DEBUG        reading sample Background
+2024-07-18 14:15:00 DEBUG          variation Nominal
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_Background_modified.npz
+2024-07-18 14:15:00 DEBUG          variation Bkg Estimate Shape Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_Background_Bkg-Estimate-Shape_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation Bkg Estimate Shape Down
+2024-07-18 14:15:00 WARNING  neos_Background_Bkg-Estimate-Shape_Down has empty bins: [0]
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_Background_Bkg-Estimate-Shape_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation Bkg Stat Error bin 1 Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_Background_Bkg-Stat-Error-bin-1_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation Bkg Stat Error bin 1 Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_Background_Bkg-Stat-Error-bin-1_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation Bkg Stat Error bin 2 Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_Background_Bkg-Stat-Error-bin-2_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation Bkg Stat Error bin 2 Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_Background_Bkg-Stat-Error-bin-2_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation Bkg Stat Error bin 3 Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_Background_Bkg-Stat-Error-bin-3_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation Bkg Stat Error bin 3 Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_Background_Bkg-Stat-Error-bin-3_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation Bkg Stat Error bin 4 Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_Background_Bkg-Stat-Error-bin-4_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation Bkg Stat Error bin 4 Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_Background_Bkg-Stat-Error-bin-4_Down_modified.npz
+2024-07-18 14:15:00 DEBUG          variation Bkg Stat Error bin 5 Up
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_Background_Bkg-Stat-Error-bin-5_Up_modified.npz
+2024-07-18 14:15:00 DEBUG          variation Bkg Stat Error bin 5 Down
+2024-07-18 14:15:00 DEBUG    saving histogram to /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1/histograms/neos_Background_Bkg-Stat-Error-bin-5_Down_modified.npz
+2024-07-18 14:15:00 INFO     visualizing systematic templates
+2024-07-18 14:15:01 INFO     saving figure as figures/templates/neos_VBF-Signal_Scale-Variations.pdf
+2024-07-18 14:15:02 INFO     saving figure as figures/templates/neos_VBF-Signal_pdf-+-alpha-s.pdf
+2024-07-18 14:15:03 INFO     saving figure as figures/templates/neos_VBF-Signal_Parton-Shower.pdf
+2024-07-18 14:15:03 INFO     saving figure as figures/templates/neos_VBF-Signal_Signal-Stat-Error-bin-1.pdf
+2024-07-18 14:15:03 INFO     saving figure as figures/templates/neos_VBF-Signal_Signal-Stat-Error-bin-2.pdf
+2024-07-18 14:15:04 INFO     saving figure as figures/templates/neos_VBF-Signal_Signal-Stat-Error-bin-3.pdf
+2024-07-18 14:15:05 INFO     saving figure as figures/templates/neos_VBF-Signal_Signal-Stat-Error-bin-4.pdf
+2024-07-18 14:15:05 INFO     saving figure as figures/templates/neos_VBF-Signal_Signal-Stat-Error-bin-5.pdf
+2024-07-18 14:15:06 INFO     saving figure as figures/templates/neos_VBF-Signal_JET-EffectiveNP-Modelling1.pdf
+2024-07-18 14:15:06 INFO     saving figure as figures/templates/neos_VBF-Signal_JET-EffectiveNP-R10-Mixed1.pdf
+2024-07-18 14:15:06 INFO     saving figure as figures/templates/neos_VBF-Signal_JET-EffectiveNP-R10-Mixed2.pdf
+2024-07-18 14:15:07 INFO     saving figure as figures/templates/neos_VBF-Signal_JET-EffectiveNP-R10-Modelling1.pdf
+2024-07-18 14:15:07 INFO     saving figure as figures/templates/neos_VBF-Signal_JET-EffectiveNP-R10-Modelling2.pdf
+2024-07-18 14:15:08 INFO     saving figure as figures/templates/neos_VBF-Signal_JET-EtaIntercalibration-Modelling.pdf
+2024-07-18 14:15:08 INFO     saving figure as figures/templates/neos_VBF-Signal_JET-EtaIntercalibration-NonClosure-PreRec.pdf
+2024-07-18 14:15:09 INFO     saving figure as figures/templates/neos_VBF-Signal_JET-Flavor-Composition.pdf
+2024-07-18 14:15:09 INFO     saving figure as figures/templates/neos_VBF-Signal_JET-Flavor-Response.pdf
+2024-07-18 14:15:10 INFO     saving figure as figures/templates/neos_VBF-Signal_JET-InSitu-NonClosure-PreRec.pdf
+2024-07-18 14:15:11 INFO     saving figure as figures/templates/neos_VBF-Signal_JET-JERUnc-Noise-PreRec-PseudoData.pdf
+2024-07-18 14:15:11 INFO     saving figure as figures/templates/neos_VBF-Signal_JET-JERUnc-Noise-PreRec.pdf
+2024-07-18 14:15:11 INFO     saving figure as figures/templates/neos_VBF-Signal_JET-JER-DataVsMC-MC16-PseudoData.pdf
+2024-07-18 14:15:12 INFO     saving figure as figures/templates/neos_VBF-Signal_JET-JER-DataVsMC-MC16.pdf
+2024-07-18 14:15:12 INFO     saving figure as figures/templates/neos_VBF-Signal_JET-JER-EffectiveNP-10.pdf
+2024-07-18 14:15:13 INFO     saving figure as figures/templates/neos_VBF-Signal_JET-JER-EffectiveNP-1-PseudoData.pdf
+2024-07-18 14:15:13 INFO     saving figure as figures/templates/neos_VBF-Signal_JET-JER-EffectiveNP-1.pdf
+2024-07-18 14:15:14 INFO     saving figure as figures/templates/neos_VBF-Signal_JET-JER-EffectiveNP-2-PseudoData.pdf
+2024-07-18 14:15:15 INFO     saving figure as figures/templates/neos_VBF-Signal_JET-JER-EffectiveNP-2.pdf
+2024-07-18 14:15:15 INFO     saving figure as figures/templates/neos_VBF-Signal_JET-JER-EffectiveNP-3-PseudoData.pdf
+2024-07-18 14:15:16 INFO     saving figure as figures/templates/neos_VBF-Signal_JET-JER-EffectiveNP-3.pdf
+2024-07-18 14:15:16 INFO     saving figure as figures/templates/neos_VBF-Signal_JET-JER-EffectiveNP-4-PseudoData.pdf
+2024-07-18 14:15:17 INFO     saving figure as figures/templates/neos_VBF-Signal_JET-JER-EffectiveNP-4.pdf
+2024-07-18 14:15:17 INFO     saving figure as figures/templates/neos_VBF-Signal_JET-JER-EffectiveNP-5-PseudoData.pdf
+2024-07-18 14:15:17 INFO     saving figure as figures/templates/neos_VBF-Signal_JET-JER-EffectiveNP-5.pdf
+2024-07-18 14:15:18 INFO     saving figure as figures/templates/neos_VBF-Signal_JET-JER-EffectiveNP-6-PseudoData.pdf
+2024-07-18 14:15:18 INFO     saving figure as figures/templates/neos_VBF-Signal_JET-JER-EffectiveNP-7-PseudoData.pdf
+2024-07-18 14:15:19 INFO     saving figure as figures/templates/neos_VBF-Signal_JET-JER-EffectiveNP-7.pdf
+2024-07-18 14:15:19 INFO     saving figure as figures/templates/neos_VBF-Signal_JET-JER-EffectiveNP-8-PseudoData.pdf
+2024-07-18 14:15:20 INFO     saving figure as figures/templates/neos_VBF-Signal_JET-JER-EffectiveNP-8.pdf
+2024-07-18 14:15:21 INFO     saving figure as figures/templates/neos_VBF-Signal_JET-JER-EffectiveNP-9.pdf
+2024-07-18 14:15:21 INFO     saving figure as figures/templates/neos_VBF-Signal_JET-JESUnc-VertexingAlg-PreRec.pdf
+2024-07-18 14:15:21 INFO     saving figure as figures/templates/neos_VBF-Signal_JET-Pileup-OffsetMu.pdf
+2024-07-18 14:15:22 INFO     saving figure as figures/templates/neos_VBF-Signal_JET-Pileup-OffsetNPV.pdf
+2024-07-18 14:15:22 INFO     saving figure as figures/templates/neos_VBF-Signal_JET-Pileup-PtTerm.pdf
+2024-07-18 14:15:23 INFO     saving figure as figures/templates/neos_VBF-Signal_JET-Pileup-RhoTopology.pdf
+2024-07-18 14:15:23 INFO     saving figure as figures/templates/neos_VBF-Signal_PRW-DATASF.pdf
+2024-07-18 14:15:24 INFO     saving figure as figures/templates/neos_VBF-Signal_xbb-pt-bin-0.pdf
+2024-07-18 14:15:24 INFO     saving figure as figures/templates/neos_VBF-Signal_xbb-pt-bin-1.pdf
+2024-07-18 14:15:25 INFO     saving figure as figures/templates/neos_VBF-Signal_xbb-pt-bin-2.pdf
+2024-07-18 14:15:25 INFO     saving figure as figures/templates/neos_VBF-Signal_xbb-pt-bin-3.pdf
+2024-07-18 14:15:25 INFO     saving figure as figures/templates/neos_Background_Bkg-Estimate-Shape.pdf
+2024-07-18 14:15:26 INFO     saving figure as figures/templates/neos_Background_Bkg-Stat-Error-bin-1.pdf
+2024-07-18 14:15:27 INFO     saving figure as figures/templates/neos_Background_Bkg-Stat-Error-bin-2.pdf
+2024-07-18 14:15:27 INFO     saving figure as figures/templates/neos_Background_Bkg-Stat-Error-bin-3.pdf
+2024-07-18 14:15:28 INFO     saving figure as figures/templates/neos_Background_Bkg-Stat-Error-bin-4.pdf
+2024-07-18 14:15:28 INFO     saving figure as figures/templates/neos_Background_Bkg-Stat-Error-bin-5.pdf
+2024-07-18 14:15:28 INFO     building workspace
+2024-07-18 14:15:28 DEBUG    adding NormFactor signal_norm to sample VBF Signal in region neos
+2024-07-18 14:15:28 DEBUG    adding OverallSys Luminosity to sample VBF Signal in region neos
+2024-07-18 14:15:28 DEBUG    adding OverallSys Branching Ratio bb to sample VBF Signal in region neos
+2024-07-18 14:15:28 DEBUG    adding OverallSys and HistoSys Scale Variations to sample VBF Signal in region neos
+2024-07-18 14:15:28 DEBUG    adding OverallSys and HistoSys pdf + alpha s to sample VBF Signal in region neos
+2024-07-18 14:15:28 DEBUG    adding OverallSys and HistoSys Parton Shower to sample VBF Signal in region neos
+2024-07-18 14:15:28 DEBUG    adding OverallSys and HistoSys Signal Stat Error bin 1 to sample VBF Signal in region neos
+2024-07-18 14:15:28 DEBUG    adding OverallSys and HistoSys Signal Stat Error bin 2 to sample VBF Signal in region neos
+2024-07-18 14:15:28 DEBUG    adding OverallSys and HistoSys Signal Stat Error bin 3 to sample VBF Signal in region neos
+2024-07-18 14:15:28 DEBUG    adding OverallSys and HistoSys Signal Stat Error bin 4 to sample VBF Signal in region neos
+2024-07-18 14:15:28 DEBUG    adding OverallSys and HistoSys Signal Stat Error bin 5 to sample VBF Signal in region neos
+2024-07-18 14:15:28 DEBUG    adding OverallSys and HistoSys JET EffectiveNP Modelling1 to sample VBF Signal in region neos
+2024-07-18 14:15:28 DEBUG    adding OverallSys and HistoSys JET EffectiveNP R10 Mixed1 to sample VBF Signal in region neos
+2024-07-18 14:15:28 DEBUG    adding OverallSys and HistoSys JET EffectiveNP R10 Mixed2 to sample VBF Signal in region neos
+2024-07-18 14:15:28 DEBUG    adding OverallSys and HistoSys JET EffectiveNP R10 Modelling1 to sample VBF Signal in region neos
+2024-07-18 14:15:28 DEBUG    adding OverallSys and HistoSys JET EffectiveNP R10 Modelling2 to sample VBF Signal in region neos
+2024-07-18 14:15:28 DEBUG    adding OverallSys and HistoSys JET EtaIntercalibration Modelling to sample VBF Signal in region neos
+2024-07-18 14:15:28 DEBUG    adding OverallSys and HistoSys JET EtaIntercalibration NonClosure PreRec to sample VBF Signal in region neos
+2024-07-18 14:15:28 DEBUG    adding OverallSys and HistoSys JET Flavor Composition to sample VBF Signal in region neos
+2024-07-18 14:15:28 DEBUG    adding OverallSys and HistoSys JET Flavor Response to sample VBF Signal in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys JET InSitu NonClosure PreRec to sample VBF Signal in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys JET JERUnc Noise PreRec PseudoData to sample VBF Signal in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys JET JERUnc Noise PreRec to sample VBF Signal in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys JET JER DataVsMC MC16 PseudoData to sample VBF Signal in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys JET JER DataVsMC MC16 to sample VBF Signal in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys JET JER EffectiveNP 10 to sample VBF Signal in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys JET JER EffectiveNP 1 PseudoData to sample VBF Signal in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys JET JER EffectiveNP 1 to sample VBF Signal in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys JET JER EffectiveNP 2 PseudoData to sample VBF Signal in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys JET JER EffectiveNP 2 to sample VBF Signal in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys JET JER EffectiveNP 3 PseudoData to sample VBF Signal in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys JET JER EffectiveNP 3 to sample VBF Signal in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys JET JER EffectiveNP 4 PseudoData to sample VBF Signal in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys JET JER EffectiveNP 4 to sample VBF Signal in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys JET JER EffectiveNP 5 PseudoData to sample VBF Signal in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys JET JER EffectiveNP 5 to sample VBF Signal in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys JET JER EffectiveNP 6 PseudoData to sample VBF Signal in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys JET JER EffectiveNP 7 PseudoData to sample VBF Signal in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys JET JER EffectiveNP 7 to sample VBF Signal in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys JET JER EffectiveNP 8 PseudoData to sample VBF Signal in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys JET JER EffectiveNP 8 to sample VBF Signal in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys JET JER EffectiveNP 9 to sample VBF Signal in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys JET JESUnc VertexingAlg PreRec to sample VBF Signal in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys JET Pileup OffsetMu to sample VBF Signal in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys JET Pileup OffsetNPV to sample VBF Signal in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys JET Pileup PtTerm to sample VBF Signal in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys JET Pileup RhoTopology to sample VBF Signal in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys PRW DATASF to sample VBF Signal in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys xbb pt bin 0 to sample VBF Signal in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys xbb pt bin 1 to sample VBF Signal in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys xbb pt bin 2 to sample VBF Signal in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys xbb pt bin 3 to sample VBF Signal in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys Luminosity to sample ggF Signal in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys Luminosity to sample Background in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys Bkg Estimate Norm to sample Background in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys Bkg Estimate Shape to sample Background in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys Bkg Stat Error bin 1 to sample Background in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys Bkg Stat Error bin 2 to sample Background in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys Bkg Stat Error bin 3 to sample Background in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys Bkg Stat Error bin 4 to sample Background in region neos
+2024-07-18 14:15:29 DEBUG    adding OverallSys and HistoSys Bkg Stat Error bin 5 to sample Background in region neos
+2024-07-18 14:15:29 INFO     Validating spec against schema: workspace.json
+2024-07-18 14:15:29 DEBUG    saving workspace to workspaces/tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_l1cvv0cv1.json
+2024-07-18 14:15:29 INFO     Validating spec against schema: workspace.json
+2024-07-18 14:15:29 INFO     Validating spec against schema: model.json
+2024-07-18 14:15:29 INFO     adding modifier Bkg Estimate Shape (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier Bkg Stat Error bin 1 (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier Bkg Stat Error bin 2 (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier Bkg Stat Error bin 3 (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier Bkg Stat Error bin 4 (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier Bkg Stat Error bin 5 (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier JET EffectiveNP Modelling1 (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier JET EffectiveNP R10 Mixed1 (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier JET EffectiveNP R10 Mixed2 (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier JET EffectiveNP R10 Modelling1 (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier JET EffectiveNP R10 Modelling2 (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier JET EtaIntercalibration Modelling (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier JET EtaIntercalibration NonClosure PreRec (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier JET Flavor Composition (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier JET Flavor Response (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier JET InSitu NonClosure PreRec (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier JET JER DataVsMC MC16 (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier JET JER DataVsMC MC16 PseudoData (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier JET JER EffectiveNP 1 (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier JET JER EffectiveNP 1 PseudoData (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier JET JER EffectiveNP 10 (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier JET JER EffectiveNP 2 (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier JET JER EffectiveNP 2 PseudoData (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier JET JER EffectiveNP 3 (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier JET JER EffectiveNP 3 PseudoData (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier JET JER EffectiveNP 4 (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier JET JER EffectiveNP 4 PseudoData (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier JET JER EffectiveNP 5 (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier JET JER EffectiveNP 5 PseudoData (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier JET JER EffectiveNP 6 PseudoData (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier JET JER EffectiveNP 7 (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier JET JER EffectiveNP 7 PseudoData (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier JET JER EffectiveNP 8 (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier JET JER EffectiveNP 8 PseudoData (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier JET JER EffectiveNP 9 (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier JET JERUnc Noise PreRec (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier JET JERUnc Noise PreRec PseudoData (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier JET JESUnc VertexingAlg PreRec (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier JET Pileup OffsetMu (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier JET Pileup OffsetNPV (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier JET Pileup PtTerm (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier JET Pileup RhoTopology (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier PRW DATASF (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier Parton Shower (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier Scale Variations (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier Signal Stat Error bin 1 (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier Signal Stat Error bin 2 (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier Signal Stat Error bin 3 (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier Signal Stat Error bin 4 (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier Signal Stat Error bin 5 (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier pdf + alpha s (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier xbb pt bin 0 (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier xbb pt bin 1 (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier xbb pt bin 2 (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier xbb pt bin 3 (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier signal_norm (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier Bkg Estimate Norm (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier Luminosity (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     adding modifier Branching Ratio bb (1 new nuisance parameters)
+2024-07-18 14:15:29 INFO     saving figure as figures/modifier_grid.pdf
+2024-07-18 14:15:29 INFO     performing maximum likelihood fit
+2024-07-18 14:15:31 INFO     Migrad status:
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                Migrad                                   │
+├──────────────────────────────────┬──────────────────────────────────────┤
+│ FCN = 124.9                      │             Nfcn = 4250              │
+│ EDM = 3.83e-18 (Goal: 0.002)     │                                      │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│          Valid Minimum           │   Below EDM threshold (goal x 10)    │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│      No parameters at limit      │           Below call limit           │
+├──────────────────────────────────┼──────────────────────────────────────┤
+│             Hesse ok             │         Covariance accurate          │
+└──────────────────────────────────┴──────────────────────────────────────┘
+2024-07-18 14:15:31 DEBUG    -2 log(L) = 124.881647 at best-fit point
+2024-07-18 14:15:31 INFO     fit results (with symmetric uncertainties):
+2024-07-18 14:15:31 INFO     Bkg Estimate Shape                        =  0.0000 +/- 0.9831
+2024-07-18 14:15:31 INFO     Bkg Stat Error bin 1                      =  0.0000 +/- 0.9933
+2024-07-18 14:15:31 INFO     Bkg Stat Error bin 2                      =  0.0000 +/- 0.9933
+2024-07-18 14:15:31 INFO     Bkg Stat Error bin 3                      =  0.0000 +/- 0.9933
+2024-07-18 14:15:31 INFO     Bkg Stat Error bin 4                      =  0.0000 +/- 0.9932
+2024-07-18 14:15:31 INFO     Bkg Stat Error bin 5                      =  0.0000 +/- 0.9926
+2024-07-18 14:15:31 INFO     JET EffectiveNP Modelling1                =  0.0000 +/- 0.9932
+2024-07-18 14:15:31 INFO     JET EffectiveNP R10 Mixed1                =  0.0000 +/- 0.9932
+2024-07-18 14:15:31 INFO     JET EffectiveNP R10 Mixed2                =  0.0000 +/- 0.9933
+2024-07-18 14:15:31 INFO     JET EffectiveNP R10 Modelling1            =  0.0000 +/- 0.9933
+2024-07-18 14:15:31 INFO     JET EffectiveNP R10 Modelling2            =  0.0000 +/- 0.9933
+2024-07-18 14:15:31 INFO     JET EtaIntercalibration Modelling         =  0.0000 +/- 0.9925
+2024-07-18 14:15:31 INFO     JET EtaIntercalibration NonClosure PreRec =  0.0000 +/- 0.9917
+2024-07-18 14:15:31 INFO     JET Flavor Composition                    =  0.0000 +/- 0.9933
+2024-07-18 14:15:31 INFO     JET Flavor Response                       =  0.0000 +/- 0.9933
+2024-07-18 14:15:31 INFO     JET InSitu NonClosure PreRec              =  0.0000 +/- 0.9927
+2024-07-18 14:15:31 INFO     JET JER DataVsMC MC16                     =  0.0000 +/- 0.9933
+2024-07-18 14:15:31 INFO     JET JER DataVsMC MC16 PseudoData          =  0.0000 +/- 0.9933
+2024-07-18 14:15:31 INFO     JET JER EffectiveNP 1                     =  0.0000 +/- 0.9931
+2024-07-18 14:15:31 INFO     JET JER EffectiveNP 1 PseudoData          =  0.0000 +/- 0.9931
+2024-07-18 14:15:31 INFO     JET JER EffectiveNP 10                    =  0.0000 +/- 0.9933
+2024-07-18 14:15:31 INFO     JET JER EffectiveNP 2                     =  0.0000 +/- 0.9933
+2024-07-18 14:15:31 INFO     JET JER EffectiveNP 2 PseudoData          =  0.0000 +/- 0.9932
+2024-07-18 14:15:31 INFO     JET JER EffectiveNP 3                     =  0.0000 +/- 0.9933
+2024-07-18 14:15:31 INFO     JET JER EffectiveNP 3 PseudoData          =  0.0000 +/- 0.9933
+2024-07-18 14:15:31 INFO     JET JER EffectiveNP 4                     =  0.0000 +/- 0.9933
+2024-07-18 14:15:31 INFO     JET JER EffectiveNP 4 PseudoData          =  0.0000 +/- 0.9933
+2024-07-18 14:15:31 INFO     JET JER EffectiveNP 5                     =  0.0000 +/- 0.9933
+2024-07-18 14:15:31 INFO     JET JER EffectiveNP 5 PseudoData          =  0.0000 +/- 0.9933
+2024-07-18 14:15:31 INFO     JET JER EffectiveNP 6 PseudoData          =  0.0000 +/- 0.9933
+2024-07-18 14:15:31 INFO     JET JER EffectiveNP 7                     =  0.0000 +/- 0.9933
+2024-07-18 14:15:31 INFO     JET JER EffectiveNP 7 PseudoData          =  0.0000 +/- 0.9933
+2024-07-18 14:15:31 INFO     JET JER EffectiveNP 8                     =  0.0000 +/- 0.9933
+2024-07-18 14:15:31 INFO     JET JER EffectiveNP 8 PseudoData          =  0.0000 +/- 0.9933
+2024-07-18 14:15:31 INFO     JET JER EffectiveNP 9                     =  0.0000 +/- 0.9933
+2024-07-18 14:15:31 INFO     JET JERUnc Noise PreRec                   =  0.0000 +/- 0.9933
+2024-07-18 14:15:31 INFO     JET JERUnc Noise PreRec PseudoData        =  0.0000 +/- 0.9933
+2024-07-18 14:15:31 INFO     JET JESUnc VertexingAlg PreRec            =  0.0000 +/- 0.9933
+2024-07-18 14:15:31 INFO     JET Pileup OffsetMu                       =  0.0000 +/- 0.9931
+2024-07-18 14:15:31 INFO     JET Pileup OffsetNPV                      =  0.0000 +/- 0.9932
+2024-07-18 14:15:31 INFO     JET Pileup PtTerm                         =  0.0000 +/- 0.9933
+2024-07-18 14:15:31 INFO     JET Pileup RhoTopology                    =  0.0000 +/- 0.9930
+2024-07-18 14:15:31 INFO     PRW DATASF                                =  0.0000 +/- 0.9933
+2024-07-18 14:15:31 INFO     Parton Shower                             =  0.0000 +/- 0.8195
+2024-07-18 14:15:31 INFO     Scale Variations                          =  0.0000 +/- 0.9897
+2024-07-18 14:15:31 INFO     Signal Stat Error bin 1                   =  0.0000 +/- 0.9932
+2024-07-18 14:15:31 INFO     Signal Stat Error bin 2                   =  0.0000 +/- 0.9931
+2024-07-18 14:15:31 INFO     Signal Stat Error bin 3                   =  0.0000 +/- 0.9931
+2024-07-18 14:15:31 INFO     Signal Stat Error bin 4                   =  0.0000 +/- 0.9930
+2024-07-18 14:15:31 INFO     Signal Stat Error bin 5                   =  0.0000 +/- 0.9932
+2024-07-18 14:15:31 INFO     pdf + alpha s                             =  0.0000 +/- 0.9932
+2024-07-18 14:15:31 INFO     xbb pt bin 0                              =  0.0000 +/- 0.9769
+2024-07-18 14:15:31 INFO     xbb pt bin 1                              =  0.0000 +/- 0.9783
+2024-07-18 14:15:31 INFO     xbb pt bin 2                              =  0.0000 +/- 0.9819
+2024-07-18 14:15:31 INFO     xbb pt bin 3                              =  0.0000 +/- 0.8715
+2024-07-18 14:15:31 INFO     signal_norm                               =  1.0000 +/- 0.4521
+2024-07-18 14:15:31 INFO     Bkg Estimate Norm                         =  0.0000 +/- 0.9769
+2024-07-18 14:15:31 INFO     Luminosity                                =  0.0000 +/- 0.9933
+2024-07-18 14:15:31 INFO     Branching Ratio bb                        =  0.0000 +/- 0.9933
+2024-07-18 14:15:31 INFO     calculating goodness-of-fit
+2024-07-18 14:15:31 DEBUG    Delta NLL = 0.000000
+2024-07-18 14:15:31 DEBUG    number of degrees of freedom: 4
+2024-07-18 14:15:31 INFO     p-value for goodness-of-fit test: 100.00%
+2024-07-18 14:15:31 INFO     saving figure as figures/pulls.pdf
+2024-07-18 14:15:32 INFO     saving figure as figures/correlation_matrix.pdf
+2024-07-18 14:15:34 DEBUG    total stdev is [[7.403205344173507, 1.6741991156176514, 1.8709562805279694, 0.9118156706515356, 2.539058088925617]]
+2024-07-18 14:15:34 DEBUG    total stdev per channel is [13.358621152191827]
+2024-07-18 14:15:34 DEBUG    total stdev is [[2.830751863940874, 1.1536324179794677, 1.4358002598234425, 0.4920333610159752, 1.3884148004577737]]
+2024-07-18 14:15:34 DEBUG    total stdev per channel is [5.649892900154328]
+2024-07-18 14:15:34 INFO     saving figure as figures/neos_prefit.pdf
+2024-07-18 14:15:35 INFO     saving figure as figures/neos_postfit.pdf
+2024-07-18 14:15:35 INFO     yields per bin for pre-fit model prediction:
+╒════════════╤══════════════╤═════════════╤═════════════╤═════════════╤══════════════╕
+│ sample     │ neos         │             │             │             │              │
+│            │ bin 1        │ bin 2       │ bin 3       │ bin 4       │ bin 5        │
+╞════════════╪══════════════╪═════════════╪═════════════╪═════════════╪══════════════╡
+│ Background │ 0.26 ± 0.66  │ 0.05 ± 0.04 │ 0.09 ± 0.03 │ 0.26 ± 0.12 │ 5.62 ± 0.89  │
+├────────────┼──────────────┼─────────────┼─────────────┼─────────────┼──────────────┤
+│ VBF Signal │ 10.93 ± 7.37 │ 4.50 ± 1.67 │ 5.28 ± 1.87 │ 2.22 ± 0.90 │ 5.04 ± 2.38  │
+├────────────┼──────────────┼─────────────┼─────────────┼─────────────┼──────────────┤
+│ ggF Signal │ 0.03 ± 0.00  │ 0.03 ± 0.00 │ 0.05 ± 0.00 │ 0.05 ± 0.00 │ 0.11 ± 0.00  │
+├────────────┼──────────────┼─────────────┼─────────────┼─────────────┼──────────────┤
+│ total      │ 11.23 ± 7.40 │ 4.58 ± 1.67 │ 5.42 ± 1.87 │ 2.52 ± 0.91 │ 10.77 ± 2.54 │
+├────────────┼──────────────┼─────────────┼─────────────┼─────────────┼──────────────┤
+│ data       │ 11.23        │ 4.58        │ 5.42        │ 2.52        │ 10.77        │
+╘════════════╧══════════════╧═════════════╧═════════════╧═════════════╧══════════════╛
+2024-07-18 14:15:35 INFO     saving table as tables/yields_per_bin_pre-fit.txt
+2024-07-18 14:15:35 INFO     calculating 95% confidence level upper limit for signal_norm
+2024-07-18 14:15:35 INFO     determining observed upper limit
+2024-07-18 14:15:43 DEBUG    signal_norm = 0.0010, observed CLs = 1.0000
+2024-07-18 14:15:52 DEBUG    signal_norm = 10.1506, observed CLs = 0.0000
+2024-07-18 14:16:02 DEBUG    signal_norm = 9.6431, observed CLs = 0.0000
+2024-07-18 14:16:08 DEBUG    signal_norm = 4.8220, observed CLs = 0.0003
+2024-07-18 14:16:16 DEBUG    signal_norm = 2.4115, observed CLs = 0.0267
+2024-07-18 14:16:23 DEBUG    signal_norm = 1.2063, observed CLs = 0.3392
+2024-07-18 14:16:30 DEBUG    signal_norm = 2.3217, observed CLs = 0.0323
+2024-07-18 14:16:37 DEBUG    signal_norm = 2.0540, observed CLs = 0.0572
+2024-07-18 14:16:45 DEBUG    signal_norm = 2.1314, observed CLs = 0.0485
+2024-07-18 14:16:53 DEBUG    signal_norm = 2.1178, observed CLs = 0.0499
+2024-07-18 14:17:00 DEBUG    signal_norm = 2.1128, observed CLs = 0.0504
+2024-07-18 14:17:00 INFO     successfully converged after 11 steps
+2024-07-18 14:17:00 INFO     observed upper limit: 2.1178
+2024-07-18 14:17:00 INFO     determining expected -2 sigma upper limit
+2024-07-18 14:17:00 DEBUG    signal_norm = 0.0010, expected -2 sigma CLs = 1.0000 (cached)
+2024-07-18 14:17:00 DEBUG    signal_norm = 1.2063, expected -2 sigma CLs = 0.0000 (cached)
+2024-07-18 14:17:08 DEBUG    signal_norm = 1.1460, expected -2 sigma CLs = 0.0000
+2024-07-18 14:17:15 DEBUG    signal_norm = 0.5735, expected -2 sigma CLs = 0.0001
+2024-07-18 14:17:23 DEBUG    signal_norm = 0.2872, expected -2 sigma CLs = 0.0038
+2024-07-18 14:17:30 DEBUG    signal_norm = 0.1441, expected -2 sigma CLs = 0.0426
+2024-07-18 14:17:38 DEBUG    signal_norm = 0.1180, expected -2 sigma CLs = 0.0704
+2024-07-18 14:17:46 DEBUG    signal_norm = 0.1372, expected -2 sigma CLs = 0.0486
+2024-07-18 14:17:54 DEBUG    signal_norm = 0.1322, expected -2 sigma CLs = 0.0534
+2024-07-18 14:17:54 INFO     successfully converged after 9 steps
+2024-07-18 14:17:54 INFO     expected -2 sigma upper limit: 0.1372
+2024-07-18 14:17:54 INFO     determining expected -1 sigma upper limit
+2024-07-18 14:17:54 DEBUG    signal_norm = 0.1441, expected -1 sigma CLs = 0.1127 (cached)
+2024-07-18 14:17:54 DEBUG    signal_norm = 0.2872, expected -1 sigma CLs = 0.0186 (cached)
+2024-07-18 14:18:02 DEBUG    signal_norm = 0.2395, expected -1 sigma CLs = 0.0329
+2024-07-18 14:18:09 DEBUG    signal_norm = 0.1944, expected -1 sigma CLs = 0.0578
+2024-07-18 14:18:17 DEBUG    signal_norm = 0.2086, expected -1 sigma CLs = 0.0483
+2024-07-18 14:18:25 DEBUG    signal_norm = 0.2036, expected -1 sigma CLs = 0.0514
+2024-07-18 14:18:25 INFO     successfully converged after 6 steps
+2024-07-18 14:18:25 INFO     expected -1 sigma upper limit: 0.2036
+2024-07-18 14:18:25 INFO     determining expected upper limit
+2024-07-18 14:18:25 DEBUG    signal_norm = 0.2872, expected CLs = 0.0797 (cached)
+2024-07-18 14:18:25 DEBUG    signal_norm = 0.5735, expected CLs = 0.0095 (cached)
+2024-07-18 14:18:32 DEBUG    signal_norm = 0.4083, expected CLs = 0.0308
+2024-07-18 14:18:40 DEBUG    signal_norm = 0.3608, expected CLs = 0.0443
+2024-07-18 14:18:47 DEBUG    signal_norm = 0.3441, expected CLs = 0.0505
+2024-07-18 14:18:55 DEBUG    signal_norm = 0.3491, expected CLs = 0.0486
+2024-07-18 14:18:55 INFO     successfully converged after 6 steps
+2024-07-18 14:18:55 INFO     expected upper limit: 0.3441
+2024-07-18 14:18:55 INFO     determining expected +1 sigma upper limit
+2024-07-18 14:18:55 DEBUG    signal_norm = 0.5735, expected +1 sigma CLs = 0.0659 (cached)
+2024-07-18 14:18:55 DEBUG    signal_norm = 1.1460, expected +1 sigma CLs = 0.0058 (cached)
+2024-07-18 14:19:03 DEBUG    signal_norm = 0.7251, expected +1 sigma CLs = 0.0330
+2024-07-18 14:19:10 DEBUG    signal_norm = 0.6467, expected +1 sigma CLs = 0.0470
+2024-07-18 14:19:18 DEBUG    signal_norm = 0.6350, expected +1 sigma CLs = 0.0496
+2024-07-18 14:19:25 DEBUG    signal_norm = 0.6300, expected +1 sigma CLs = 0.0507
+2024-07-18 14:19:25 INFO     successfully converged after 6 steps
+2024-07-18 14:19:25 INFO     expected +1 sigma upper limit: 0.6350
+2024-07-18 14:19:25 INFO     determining expected +2 sigma upper limit
+2024-07-18 14:19:25 DEBUG    signal_norm = 1.1460, expected +2 sigma CLs = 0.0577 (cached)
+2024-07-18 14:19:25 DEBUG    signal_norm = 1.2063, expected +2 sigma CLs = 0.0492 (cached)
+2024-07-18 14:19:33 DEBUG    signal_norm = 1.2006, expected +2 sigma CLs = 0.0499
+2024-07-18 14:19:42 DEBUG    signal_norm = 1.1956, expected +2 sigma CLs = 0.0506
+2024-07-18 14:19:42 INFO     successfully converged after 4 steps
+2024-07-18 14:19:42 INFO     expected +2 sigma upper limit: 1.2006
+2024-07-18 14:19:42 INFO     total of 42 steps to calculate all limits
+2024-07-18 14:19:42 INFO     summary of 95% confidence level upper limits:
+2024-07-18 14:19:42 INFO     observed         : 2.1178
+2024-07-18 14:19:42 INFO     expected -2 sigma: 0.1372
+2024-07-18 14:19:42 INFO     expected -1 sigma: 0.2036
+2024-07-18 14:19:42 INFO     expected         : 0.3441
+2024-07-18 14:19:42 INFO     expected +1 sigma: 0.6350
+2024-07-18 14:19:42 INFO     expected +2 sigma: 1.2006
+2024-07-18 14:19:42 INFO     saving figure as figures/limit.pdf
+2024-07-18 14:19:42 INFO     calculating discovery significance for signal_norm
+2024-07-18 14:19:51 INFO     observed p-value: 2.025e-13
+2024-07-18 14:19:51 INFO     observed significance: 7.254
+2024-07-18 14:19:51 INFO     expected p-value: 2.025e-13
+2024-07-18 14:19:51 INFO     expected significance: 7.254

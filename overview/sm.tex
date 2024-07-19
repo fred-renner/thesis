@@ -29,7 +29,7 @@ Quarks possess both electroweak and color charges, causing them to interact with
 
 Leptons, which do not carry a color charge, include the electron $e$, muon $\mu$, tau $\tau$, and their associated neutrinos $\nu_e$, $\nu_\mu$, and $\nu_\tau$. Neutrinos have very small masses compared to other particles and are considered massless within the theoretical framework of the \ac{sm}. Neutrinos do not carry an electric charge and interact solely via the weak force, while charged leptons ($e$, $\mu$, $\tau$) with charge $Q=-1$ also interact electromagnetically.
 
-Fermions interact with fields via bosons specific to each force. The strong force is mediated by eight massless gluons $g$, while the electroweak theory includes four massless bosons $W_1,W_2,§,B$. The scalar Higgs particle plays a unique role in the \ac{sm}, breaking the electroweak interaction into weak and electromagnetic interactions through the Higgs mechanism. This process, detailed in section \ref{sec:higgs_mechanism}, explains the observed masses of weak interaction mediators $W^{\pm}$ and $Z$ and also provides an interpretation of the origins of mass for fermions.
+Fermions interact with fields via bosons specific to each force. The strong force is mediated by eight massless gluons $g$, while the electroweak theory includes four massless bosons $W_1,W_2,W_3,B$. The scalar Higgs particle plays a unique role in the \ac{sm}, breaking the electroweak interaction into weak and electromagnetic interactions through the Higgs mechanism. This process, detailed in section \ref{sec:higgs_mechanism}, explains the observed masses of weak interaction mediators $W^{\pm}$ and $Z$ and also provides an interpretation of the origins of mass for fermions.
 
 If not specified otherwise the following discussions always includes the anti-particles when referred to a species or a particular particle.
 
@@ -38,22 +38,21 @@ Elementary particles can be created, transformed, and annihilated in various for
 
 However, special relativity lacks a quantum mechanical description, and in non-relativistic quantum mechanics, the particle number is conserved. \ac{qft} was developed to provide a solution to this dilemma and to incorporate observations from both fields into a unified theory.
 
-For a field description, some quantity $\phi(x,y,z,t)=\phi(x)$ is assigned to some region in spacetime $x$. Similar to the Lagrangian formalism in classical mechanics, here a Lagrangian density in spacetime governs the dynamics of the system $\mathcal{L}(\phi_1,\dots,\phi_n) =T-V$.
-    {\renewcommand{\arraystretch}{1.7} %<- modify value to suit your needs
-        \begin{table}
-            \begin{center}
-                \begin{tabular}{c|c|c}
-                    particle           & field type      & Lagrangian                                                                                                     \\ \hline
-                    spin-0 (scalar)    & scalar $\phi$   & $\mathcal{L}_\mathrm{Klein-Gordon}=\frac{1}{2} (\partial_\mu \phi )(\partial^\mu \phi)-\frac{m^2}{2}\phi^2 $ \\
-                    spin-1/2 (fermion) & spinor $\psi$   & $\mathcal{L}_\mathrm{Dirac}= \overline{\psi}(i \gamma^\mu \partial_\mu - m )\psi$                            \\
-                    spin-1 (boson)     & vector  $A_\mu$ & $\mathcal{L}_\mathrm{Proca}= -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} +\frac{m^2}{2} A_\mu A^\mu$                    \\ [.7ex]
-                \end{tabular}
-                \caption{Quantum fields relevant for the \ac{sm}. With $F_{\mu\nu}=\partial_\mu A_\nu - \partial_\nu A_\mu$ the electromagnetic field strength tensor.}
-                \label{tab:fields}
-            \end{center}
-        \end{table}
-    }
-Fields which appear in the \ac{sm} and their associated Lagrangians are summarized in table \ref{tab:fields}.
+For a field description, some quantity $\phi(x,y,z,t)=\phi(x)$ is assigned to some region in spacetime $x$. Similar to the Lagrangian formalism in classical mechanics, here a Lagrangian density in spacetime governs the dynamics of the system $\mathcal{L}(\phi_1,\dots,\phi_n) =T-V$. Fields which appear in the \ac{sm} and their associated Lagrangians are summarized in table \ref{tab:fields}.
+{\renewcommand{\arraystretch}{1.7} %<- modify value to suit your needs
+\begin{table}
+    \begin{center}
+        \begin{tabular}{c|c|c}
+            particle           & field type      & Lagrangian                                                                                                     \\ \hline
+            spin-0 (scalar)    & scalar $\phi$   & $\mathcal{L}_\mathrm{Klein-Gordon}=\frac{1}{2} (\partial_\mu \phi )(\partial^\mu \phi)-\frac{m^2}{2}\phi^2 $ \\
+            spin-1/2 (fermion) & spinor $\psi$   & $\mathcal{L}_\mathrm{Dirac}= \overline{\psi}(i \gamma^\mu \partial_\mu - m )\psi$                            \\
+            spin-1 (boson)     & vector  $A_\mu$ & $\mathcal{L}_\mathrm{Proca}= -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} +\frac{m^2}{2} A_\mu A^\mu$                    \\ [.7ex]
+        \end{tabular}
+        \caption{Quantum fields relevant for the \ac{sm}. With $F_{\mu\nu}=\partial_\mu A_\nu - \partial_\nu A_\mu$ the electromagnetic field strength tensor.}
+        \label{tab:fields}
+    \end{center}
+\end{table}
+}
 % Via the generalized Euler-Lagrange equations of \ac{qft} 
 % \begin{equation}
 %     \partial_\mu \left(\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi_i)}\right)=\frac{\partial\mathcal{L}}{\partial \phi_i}.
@@ -125,14 +124,14 @@ That this symmetry holds locally for all unitary $1\times1$ matrices $U(1)$ migh
 
 \section{Quantum Chromodynamics}\label{sec:qcd}
 
-Along the same lines as \ac{qed} is derived in section \ref{sec:qed}, the theory of the strong interactions \ac{qcd} is now a non-abelian gauge theory of the symmetry group $SU(3)$. The latter is generated by the $3\times 3$ Gell-Mann matrices $\lambda_a$ with $ a\in\{1,\mathellipsis,8\}$. The fundamental charge becomes color and each quark is a triplet of the three color fermion fields $\Psi_k=(\psi_r,\psi_g,\psi_b)^T$ for all quark flavors $k$. Local gauge invariance of the Lagrangian
+In a manner similar to how \ac{qed} is derived in section \ref{sec:qed}, the theory of strong interactions, known as \ac{qcd}, is formulated as a non-abelian gauge theory based on the symmetry group $SU(3)$. This group is characterized by the $3\times 3$ Gell-Mann matrices $\lambda_a$ where $a\in\{1,\ldots,8\}$. The fundamental charge in this theory is color, and each quark is represented as a triplet of the three color fermion fields $\Psi_k=(\psi_r,\psi_g,\psi_b)^T$ for all quark flavors $k$. Local gauge invariance of the Lagrangian
 \begin{equation}
     \mathcal{L} =
     \sum_k
     \begin{pmatrix}
         \overline{\psi}_r & \overline{\psi}_g & \overline{\psi}_b
     \end{pmatrix}
-    (i \gamma^\mu \partial_\mu - m )
+    (i \gamma^\mu \partial_\mu - m_k )
     \begin{pmatrix}
         \psi_r \\
         \psi_g \\
@@ -140,14 +139,14 @@ Along the same lines as \ac{qed} is derived in section \ref{sec:qed}, the theory
     \end{pmatrix}
     =
     \sum_k
-    \overline{\Psi}_k(i \gamma^\mu \partial_\mu - m )\Psi_k,
+    \overline{\Psi}_k(i \gamma^\mu \partial_\mu - m_k )\Psi_k,
     \label{eq:dirac}
 \end{equation}
-means that the spinors are required to be invariant under the transformation
+requires the spinors to be invariant under the transformation
 \begin{equation}
     \Psi_k(x) \rightarrow e^{i \alpha_a(x) \lambda_a/2} \Psi_k(x),\qquad \alpha\in\mathbb{R},\quad a\in\{1,\mathellipsis,8\},
 \end{equation}
-with $\alpha_a(x)$ a local phase and the index $a$ for the 8 gluons. It is noted here that summation over equal indices $\alpha_a(x) \lambda_a=\sum_i \alpha_a(x) \lambda_a$ is assumed. As in \ac{qed} a covariant derivative is introduced
+with $\alpha_a(x)$ a local phase and the index $a$ for the 8 gluons. It is noted here that summation over equal indices $\alpha_a(x) \lambda_a=\sum_a \alpha_a(x) \lambda_a$ is assumed. As in \ac{qed} a covariant derivative is introduced
 \begin{equation}
     D_\mu = \partial_\mu - i g_s \frac{\lambda_a}{2}G_\mu^a,
 \end{equation}
@@ -155,22 +154,23 @@ involving the eight gluon vector fields $G_\mu^a$ and the coupling strength $g_s
 \begin{equation}
     \alpha_s=\frac{g_s^2}{4\pi}.
 \end{equation}
-Again, self coupling terms are added
+With the gluon field strength tensor
 \begin{equation}
     G^a_{\mu\nu}=\partial_\mu G_\nu^a-\partial_\nu G_\mu^a+g_s f^a_{\beta\gamma}G^\beta_\mu G_\nu^\gamma, \qquad \text{with } [\lambda_a,\lambda_b]= i f_{ab}^c \lambda_c,
 \end{equation}
-to get the gauge invariant \ac{qcd} Lagrangian
+the gauge invariant \ac{qcd} Lagrangian is
 \begin{align}
     {\mathcal {L}}_{\text{QCD}} & =\sum_k\overline{\Psi}_k\left( i \gamma^\mu D_\mu-m_k\right)\Psi_k-{\frac {1}{4}}G_{\mu \nu }^{a}G^{a\mu \nu}                                                                                    \\
-                                & =\sum_k{\overline{\Psi}_k}\left(i\gamma^\mu \partial_\mu-m_k\right)\Psi_k+ g_s{\overline{\Psi}_k}\gamma ^{\mu }\frac{ \lambda_a}{2} \Psi_k G_\mu^a - {\frac {1}{4}}G_{\mu \nu }^{a}G^{a\mu \nu}.
+                                & =\sum_k
+                                \underbrace{{\overline{\Psi}_k}\left(i\gamma^\mu \partial_\mu-m_k\right)\Psi_k}_{\mathcal{L}_\text{Kin}}
+                                \;+ \;
+                                \underbrace{g_s{\overline{\Psi}_k}\gamma ^{\mu }\frac{ \lambda_a}{2} \Psi_k G_\mu^a}_{\mathcal{L}_\text{Int}} 
+                                \;-\;
+                                 \underbrace{\frac{1}{4}G_{\mu \nu }^{a}G^{a\mu \nu}}_{\mathcal{L}_\text{Self}} . 
     \label{eq:l_qcd}
 \end{align}
-This Lagrangian consists of a kinetic term for each quark, an interaction term of the quarks with the gluons and gluon-gluon interactions resulting in vertices shown in figure \ref{fig:qcd_vertices}. These interactions become apparent when $G^a_{\mu\nu}$ is squared, leading to cubic and quartic terms for the fields.
+This Lagrangian consists of a kinetic term for each quark, an interaction term of the quarks with the gluons and gluon-gluon interactions resulting in vertices shown in figure \ref{fig:qcd_vertices}. These interactions become apparent when $G^a_{\mu\nu}$ is squared, leading to cubic and quartic terms for the fields. 
 
-\red{This principle states that attempting to separate a hadron always results in the production of a quark-antiquark pair due to energetic favorability as will be elaborated on in section \ref{sec:qcd}. 
-To comply with Pauli's exclusion principle, quarks in a bound state must have different color states.
-This principle states that attempting to separate a hadron always results in the production of a quark-antiquark pair due to energetic favorability as will be elaborated on in section \ref{sec:qcd}. 
-}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{gluon_gluon_interactions}
@@ -178,60 +178,7 @@ This principle states that attempting to separate a hadron always results in the
     \label{fig:qcd_vertices}
 \end{figure}
 
-\section{Renormalization}\label{sec:renormalization}
-\begin{figure}
-    \centering
-    \includegraphics[width=1\textwidth]{qed_diagrams}
-    \caption[]{Higher order loop corrections in \ac{qed} schematically treated as one effective diagram. Adopted from \citep{thomson2013modern}.}
-    \label{fig:qed_diagrams}
-\end{figure}
-When attempting to calculate amplitudes $\mathcal{M}$ for higher-order diagrams in \ac{qed}, such as the second or third diagrams shown in Figure \ref{fig:qed_diagrams}, it results in diverging integrals. This phenomenon, known as vacuum polarization, occurs as virtual particle-antiparticle pairs act to screen the actual charge of the electron $e0$, analogous to a dielectric medium in classical electrodynamics. To address this issue, an effective charge/coupling $e(q^2)$ is introduced. This coupling becomes a function of the squared four-momentum $q^2$ at the virtual photon vertex, as depicted in Figure \ref{fig:qed_diagrams} and renders the integrals finite.
-
-For the second diagram in figure \ref{fig:qed_diagrams} with only one loop correction, it can be shown that for some measured coupling $e(q^2=\mu^2)$ at an energy scale $\mu^2$, the actual coupling $e(q^2)$ follows a scaling behavior that holds if $q^2$ and $\mu^2$ are larger than the electron mass \citep{thomson2013modern}. The coupling constant is now a running coupling $e(q^2)$ and reads in terms of the fine structure constant $\alpha(q^2)=e^2(q^2)/4\pi$,
-\begin{equation}
-    \alpha(q^2)=
-    \frac{\alpha(\mu^2)}
-    {1-\alpha(\mu)\frac{1}{3\pi}
-        \ln
-        \left(\frac{q^2}{\mu^2}\right)}.
-    \label{eq:qed_coupling}
-\end{equation}
-Therefore with increasing momentum transfer, or a closer approach in a collision, the number of virtual pair production processes is effectively reduced, revealing the bare charge of the electron. This behavior is shown qualitatively in figure \ref{fig:renorm_scaling}(a).
-\begin{figure}
-    \centering
-    \subfigure[]{\includegraphics[width=.49\textwidth]{qed_scaling}}
-    \subfigure[]{\includegraphics[width=.49\textwidth]{qcd_scaling}}
-    \caption[]{Qualitative behavior of the running couplings for (\textbf{a}) \ac{qed} as of equation \ref{eq:qed_coupling} and (\textbf{b}) \ac{qcd} as of equation \ref{eq:qcd_coupling}.}
-    \label{fig:renorm_scaling}
-\end{figure}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{qcd_diagrams}
-    \caption[]{Some higher order loop corrections in \ac{qcd}. Adopted from \citep{thomson2013modern}.}
-    \label{fig:qcd_diagrams}
-\end{figure}
-Renormalization in \ac{qcd} can be derived similarly but also the quartic and triplet couplings exemplified in figure \ref{fig:qcd_diagrams} need to be considered that result in a scaling for the strong coupling
-\begin{equation}
-    \alpha_S(q^2)=
-    \frac{\alpha_S(\mu^2)}
-    {1+B\alpha_S(\mu)
-        \ln
-        \left(\frac{q^2}{\mu^2}\right)}, \qquad \text{with } B=\frac{11N_c-2N_f}{12\pi}.
-    \label{eq:qcd_coupling}
-\end{equation}
-For 3 color charges $N_c$ and 6 fermions $N_f$ in the \ac{sm}, $B$ is positive and the coupling becomes weaker for shorter scales or higher momentum transfer as can be seen in figure \ref{fig:renorm_scaling}(b).
-
-The fine structure constant of \ac{qed} $\alpha(q^2\approx 0)\approx 1/137$ does not vary dramatically over the energy ranges of matter for particle physics as shown in figure \ref{fig:renorm_scaling_exp}(a).
-\begin{figure}
-    \centering
-    \subfigure[]{\includegraphics[width=.47\textwidth]{qed_scaling_experiment}}\hspace{5mm}
-    \subfigure[]{\includegraphics[width=.47\textwidth]{qcd_scaling_experiment}}
-    \caption[]{Measurements of the running couplings for (\textbf{a}) \ac{qed} (note the inverted coupling on the y-axis) adopted from \citep{opal2004tests} and (\textbf{b}) \ac{qcd} adopted from \citep{particle2022review}.}
-    \label{fig:renorm_scaling_exp}
-\end{figure}
-Most importantly the running coupling of \ac{qed} does not impact the perturbative approach outlined in section \ref{sec:qft} since $\alpha\ll1$. This is not the case for \ac{qcd} where $\alpha_S$ at $q\approx\qty{1}{GeV}$ is of $\mathcal{O}(1)$ and perturbation theory breaks down for calculations on bound hadronic states and latter processes in hadronization es explained below. While perturbation theory for \ac{qcd} remains valid for $\alpha_S\gtrsim  0.1$, which corresponds to $q\gtrsim \qty{100}{GeV}$, for basically all \ac{qcd} calculations at the \ac{lhc}, higher order corrections must be considered.
-
-The behavior of the running coupling in \ac{qcd} is called asymptotic freedom, since the theory is free of asymptotics/divergences with increasing energy scale or decreasing distance. In turn to the photon in \ac{qed}, gluons carry charge and thus attempting to separate quarks results in additional gluons contributions to the interaction, increasing both the energy and force between the quarks. Eventually, it becomes energetically favorable to create a quark-antiquark pair from the vacuum, which then bind with the separating quarks to form new, color-neutral hadrons. This is also known as color confinement, which states that colored particles can only be observed in bound states.
+A unique aspect of \ac{qcd} is color confinement, which states that quarks cannot be observed as free particles; they are always confined within hadrons. This principle arises from the nature of the strong force, which becomes stronger as quarks are pulled apart, a concept further discussed in \ref{sec:renormalization}. Attempts to dissociate hadrons into their quark constituents fails because the formation of quark-antiquark pairs is energetically favoured over separation. This leads to the creation of new hadrons instead of isolated quarks, ensuring that observable particles are always color-neutral. 
 
 
 \section{Electroweak Unification}\label{sec:ew}
@@ -257,11 +204,11 @@ The weak force can be incorporated into a gauge-invariant formalism by using a $
     \end{pmatrix}_L, \;
     \label{eq:weak_doublets}
 \end{equation}
-with weak isospin $I=1/2$ that has as third component $I_3=\pm1/2$ for the upper and lower doublet particle respectively. In contrast the weak hypercharge $Y$ is associated to right handed singlets
+with weak isospin $I=1/2$ that has as third component $I_3=\pm1/2$ for the upper and lower doublet particle respectively. In contrast right handed singlets have $I=0$
 \begin{equation}
-    e_R    ,\quad \mu_R ,\quad    \tau_R ,\quad    u_R,\quad d_R ,\quad    c_R ,\quad s_R ,\quad    t_R ,\quad b_R,
+    e_R    ,\quad \mu_R ,\quad    \tau_R ,\quad    u_R,\quad d_R ,\quad    c_R ,\quad s_R ,\quad    t_R ,\quad b_R.
 \end{equation}
-with $I=0$. The relation between the electric charge of the particle and these quantum numbers is governed by the Gell-Mann-Nishijima Formula
+The relation between the electric charge of the particle $Q$, $I_3$ and its weak hypercharge $Y$ is governed by the Gell-Mann-Nishijima formula
 \begin{equation}
     Q=I_3+Y/2.
     \label{eq:gellmann_nishijima_formula}
@@ -273,7 +220,7 @@ The electroweak Lagrangian is then composed of four basic terms
 \end{equation}
 Following the same steps as for \ac{qcd} and \ac{qed} the Lagrangian can be rendered gauge invariant by introducing a covariant derivative and gauge fields that are dictated by the group symmetry.
 
-$SU(2)$ is generated through the three Pauli matrices $\bm{\sigma}$ requiring 3 vector gauge fields $W^a_\mu$, $a=\{1,2,3\}$ whereas the $U(1)$ symmetry of the vector gauge field $B_\mu$ is generated by the weak hypercharge $Y$ so the Lagrangian needs to be invariant under the transformation
+$SU(2)$ is generated through the three Pauli matrices $\bm{\sigma}$ requiring three vector gauge fields $W^a_\mu$, $a=\{1,2,3\}$ whereas the $U(1)$ symmetry of the vector gauge field $B_\mu$ is generated by the weak hypercharge $Y$ so the Lagrangian needs to be invariant under the transformation
 \begin{align}
     \psi_{L} & \rightarrow e^{i \alpha_a(x) \sigma_a/2}e^{ iY/2} \psi_{L},\qquad & a\in\{1,\mathellipsis,3\} ,\quad \alpha\in\mathbb{R} & \label{eq:gauge_transformation_left}
     \\
@@ -283,11 +230,11 @@ $SU(2)$ is generated through the three Pauli matrices $\bm{\sigma}$ requiring 3 
 
 
 \subsubsection*{Fermion term}
-To distinguish left- and right handed particle states the according spinors can be written as
+To distinguish left-handed and right-handed particle states, the corresponding spinors can be written as
 \begin{equation}
-    \psi_L=\frac{1-\gamma^5}{2}\psi, \quad \psi_R=\frac{1+\gamma^5}{2}\psi.
+    \psi_L=\frac{1-\gamma^5}{2}\psi, \quad \psi_R=\frac{1+\gamma^5}{2}\psi,
 \end{equation}
-The concept of helicity, which is the projection of a particle's spin along its momentum direction, helps in understanding these states. $\psi_{L,R}$ however are not helicity eigenstates but rather select the spinor $\psi$ with corresponding helicity and vanish otherwise
+where the fifth gamma matrix is defined in terms of the other four gamma matrices as $\gamma^5 = i \gamma^0 \gamma^1 \gamma^2 \gamma^3$. The concept of helicity, which is the projection of a particle's spin along its momentum direction, is useful in understanding these states. However, $\psi_{L}$ and $\psi_{R}$ are not helicity eigenstates but rather select the spinor $\psi$ with the corresponding helicity and vanishes otherwise:
 \begin{equation}
     \frac{1}{2}(1 \pm y^5)\psi =
     \begin{cases}
@@ -621,6 +568,69 @@ With the identity $V_L^uV_L^{d\dagger}\equiv V_\mathrm{CKM}$ the quark mixing ma
     \end{pmatrix}.
 \end{equation}
 The $V_{ij}$ describes the transition probability for a quark $j$ to quark $i$ via the charged weak interactions. In this model neutrinos are assumed massless. Though they could be added including their mixing analogous to the quarks. This completes the current \ac{sm} electroweak Lagrangian of equation \ref{eq:L_EW}.
+
+
+
+
+\section{Renormalization}\label{sec:renormalization}
+\begin{figure}
+    \centering
+    \includegraphics[width=1\textwidth]{qed_diagrams}
+    \caption[]{Higher order loop corrections in \ac{qed} schematically treated as one effective diagram. Adopted from \citep{thomson2013modern}.}
+    \label{fig:qed_diagrams}
+\end{figure}
+When attempting to calculate amplitudes $\mathcal{M}$ for higher-order diagrams in \ac{qed}, such as the second or third diagrams shown in Figure \ref{fig:qed_diagrams}, it results in diverging integrals. This phenomenon, known as vacuum polarization, occurs as virtual particle-antiparticle pairs act to screen the actual charge of the electron $e0$, analogous to a dielectric medium in classical electrodynamics. To address this issue, an effective charge/coupling $e(q^2)$ is introduced. This coupling becomes a function of the squared four-momentum $q^2$ at the virtual photon vertex, as depicted in Figure \ref{fig:qed_diagrams} and renders the integrals finite.
+
+For the second diagram in figure \ref{fig:qed_diagrams} with only one loop correction, it can be shown that for some measured coupling $e(q^2=\mu^2)$ at an energy scale $\mu^2$, the actual coupling $e(q^2)$ follows a scaling behavior that holds if $q^2$ and $\mu^2$ are larger than the electron mass \citep{thomson2013modern}. The coupling constant is now a running coupling $e(q^2)$ and reads in terms of the fine structure constant $\alpha(q^2)=e^2(q^2)/4\pi$,
+\begin{equation}
+    \alpha(q^2)=
+    \frac{\alpha(\mu^2)}
+    {1-\alpha(\mu)\frac{1}{3\pi}
+        \ln
+        \left(\frac{q^2}{\mu^2}\right)}.
+    \label{eq:qed_coupling}
+\end{equation}
+Therefore with increasing momentum transfer, or a closer approach in a collision, the number of virtual pair production processes is effectively reduced, revealing the bare charge of the electron. This behavior is shown qualitatively in figure \ref{fig:renorm_scaling}(a).
+\begin{figure}
+    \centering
+    \subfigure[]{\includegraphics[width=.49\textwidth]{qed_scaling}}
+    \subfigure[]{\includegraphics[width=.49\textwidth]{qcd_scaling}}
+    \caption[]{Qualitative behavior of the running couplings for (\textbf{a}) \ac{qed} as of equation \ref{eq:qed_coupling} and (\textbf{b}) \ac{qcd} as of equation \ref{eq:qcd_coupling}.}
+    \label{fig:renorm_scaling}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{qcd_diagrams}
+    \caption[]{Some higher order loop corrections in \ac{qcd}. Adopted from \citep{thomson2013modern}.}
+    \label{fig:qcd_diagrams}
+\end{figure}
+Renormalization in \ac{qcd} can be derived similarly but also the quartic and triplet couplings exemplified in figure \ref{fig:qcd_diagrams} need to be considered that result in a scaling for the strong coupling
+\begin{equation}
+    \alpha_S(q^2)=
+    \frac{\alpha_S(\mu^2)}
+    {1+B\alpha_S(\mu)
+        \ln
+        \left(\frac{q^2}{\mu^2}\right)}, \qquad \text{with } B=\frac{11N_c-2N_f}{12\pi}.
+    \label{eq:qcd_coupling}
+\end{equation}
+For 3 color charges $N_c$ and 6 fermions $N_f$ in the \ac{sm}, $B$ is positive and the coupling becomes weaker for shorter scales or higher momentum transfer as can be seen in figure \ref{fig:renorm_scaling}(b).
+
+The fine structure constant of \ac{qed} $\alpha(q^2\approx 0)\approx 1/137$ does not vary dramatically over the energy ranges of matter for particle physics as shown in figure \ref{fig:renorm_scaling_exp}(a).
+\begin{figure}
+    \centering
+    \subfigure[]{\includegraphics[width=.47\textwidth]{qed_scaling_experiment}}\hspace{5mm}
+    \subfigure[]{\includegraphics[width=.47\textwidth]{qcd_scaling_experiment}}
+    \caption[]{Measurements of the running couplings for (\textbf{a}) \ac{qed} (note the inverted coupling on the y-axis) adopted from \citep{opal2004tests} and (\textbf{b}) \ac{qcd} adopted from \citep{particle2022review}.}
+    \label{fig:renorm_scaling_exp}
+\end{figure}
+Most importantly the running coupling of \ac{qed} does not impact the perturbative approach outlined in section \ref{sec:qft} since $\alpha\ll1$. This is not the case for \ac{qcd} where $\alpha_S$ at $q\approx\qty{1}{GeV}$ is of $\mathcal{O}(1)$ and perturbation theory breaks down for calculations on bound hadronic states and latter processes in hadronization es explained below. While perturbation theory for \ac{qcd} remains valid for $\alpha_S\gtrsim  0.1$, which corresponds to $q\gtrsim \qty{100}{GeV}$, for basically all \ac{qcd} calculations at the \ac{lhc}, higher order corrections must be considered.
+
+The behavior of the running coupling in \ac{qcd} is called asymptotic freedom, since the theory is free of asymptotics/divergences with increasing energy scale or decreasing distance. In turn to the photon in \ac{qed}, gluons carry charge and thus attempting to separate quarks results in additional gluons contributions to the interaction, increasing both the energy and force between the quarks. Eventually, it becomes energetically favorable to create a quark-antiquark pair from the vacuum, which then bind with the separating quarks to form new, color-neutral hadrons. This is also known as color confinement, which states that colored particles can only be observed in bound states.
+
+\red{Electroweak Renormalization
+Renormalization for the electroweak sector is a complex topic that goes beyond the scope of this discussion. However, it is worth mentioning that it involves the renormalization of both the weak and electromagnetic interactions within the unified electroweak theory. This requires dealing with the mixing of the WW and ZZ bosons and the photon, and the treatment of spontaneous symmetry breaking and the Higgs mechanism. The process is crucial for ensuring the consistency and predictive power of the Standard Model, particularly at higher energy scales explored in particle accelerators. The knowledge presented in this chapter provides a foundational understanding of renormalization in QED and QCD, which can be extended to the electroweak theory with more advanced techniques and considerations.}
+
+
 
 \section{Physics Beyond the Standard Model}\label{sec:beyond_sm}
 \red{    shape, phase transition matter antimatter}

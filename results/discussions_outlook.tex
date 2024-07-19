@@ -38,6 +38,7 @@ The uncertainty estimate on the background in this work is, as studies have show
 
 
 \subsection{\ac{neos} Optimization}
+\red{bins two things, degeneracy, kde too bad to estimate good enough the actual stat uncertainty in particular when bins become very small. the stat error should actually protect for this, but kde too smeared ~3 bins bandwidth 0.2 }
 Early studies attempted to optimize bin edges and tested different numbers of bins, but these efforts showed minimal differences in the limits. For \ac{neos}, this optimization seems redundant due to its ability to effectively place events into desired bins, eliminating the need to fine-tune bin edges.
 
 There is potentially potential to optimize the training process of \ac{neos} further. Experimentation with different optimizers or architectures, such as transformers, could yield improvements. Additionally, tuning hyperparameters like the learning rate or the slopes of the sigmoid functions used in estimating cuts, as well as the bandwidth controlling the histogram shape from kernel density estimates, which by large controls the approximation inherent to \ac{neos}, could enhance performance.
@@ -47,12 +48,14 @@ Moreover, regularization techniques such as dropout, weight decay, or batch norm
 
 \red{any nn benefits from more data. would be nice to see neos with more data could use run 3 bkg estimate or dijet mc
 use all signal samples and input signal strength
+statistik ist of course das problem, nicht der fehler sondern die menge an daten, wie immer in nn training.
 }
-\red{k-fold training! / cross validation}
+\red{k-fold training! / cross-validation}
+
 
 
 \subsection{MC simulations for \ktwov Couplings}
-While the impact on the determined cross-section limits when using a \ac{mc} generated $\kappa_{2V} = 0$ and a reweighted signal simulation is comparably small ($\sim$3\%), the accuracy of reweighting models for different \ktwov couplings remains uncertain. This uncertainty is particularly significant for \ktwov couplings, as only two of the six simulated samples explore a different \ktwov value. Future analyses could benefit from simulating several nominal signal samples that alter only the \ktwov coupling while maintaining $\kappa_\lambda$ and $\kappa_V$ at their \ac{sm} values. This approach would allow for more accurate modeling and provide opportunities for reoptimization for several \ktwov hypotheses.
+The impact on the determined cross-section limits when using a \ac{mc} generated $\kappa_{2V} = 0$ and a reweighted signal simulation is ($\sim$8\%). Also the accuracy of reweighting models for different \ktwov couplings remains uncertain. This uncertainty is particularly significant for \ktwov couplings, as only two of the six simulated samples explore a different \ktwov value. Future analyses could benefit from simulating several nominal signal samples that alter only the \ktwov coupling while maintaining $\kappa_\lambda$ and $\kappa_V$ at their \ac{sm} values. This approach would allow for more accurate modeling and provide opportunities for reoptimization for several \ktwov hypotheses.
 
 
 \subsection{Associativity in Input and Model Data}

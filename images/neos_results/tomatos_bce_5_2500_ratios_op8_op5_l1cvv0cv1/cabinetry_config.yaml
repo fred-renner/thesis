@@ -1,0 +1,540 @@
+General:
+  Measurement: HH4b VBF boosted
+  POI: signal_norm
+  HistogramFolder: /lustre/fs22/group/atlas/freder/hh/run/fit/tomatos_bce_5_2500_ratios_op8_op5_l1cvv0cv1/histograms
+  InputPath: /lustre/fs22/group/atlas/freder/hh/run/histograms/hists_for_cabinetry/tomatos_bce_5_2500_ratios_op8_op5_l1cvv0cv1.root:{RegionPath}/{SamplePath}/{VariationPath}
+  VariationPath: tomatos_bce_5_2500_ratios_op8_op5_NOSYS
+Regions:
+- Name: BCE
+  RegionPath: SR_xbb_2
+  Binning:
+  - 0.0
+  - 0.2
+  - 0.4
+  - 0.6
+  - 0.8
+  - 1.0
+Samples:
+- Name: Data
+  SamplePath: run2
+  Data: true
+- Name: VBF Signal
+  SamplePath: signal
+  DisableStaterror: true
+- Name: ggF Signal
+  SamplePath: ggf
+  DisableStaterror: true
+- Name: Background
+  SamplePath: bkg_estimate
+  DisableStaterror: true
+NormFactors:
+- Name: signal_norm
+  Samples: VBF Signal
+  Nominal: 1
+  Bounds:
+  - 0.0
+  - 3.045170612313604
+Systematics:
+- Name: Luminosity
+  Up:
+    Normalization: 0.0083
+  Down:
+    Normalization: -0.0083
+  Type: Normalization
+- Name: Bkg Estimate Norm
+  Up:
+    Normalization: 0.04295694631753945
+  Down:
+    Normalization: -0.04295694631753945
+  Samples: Background
+  Type: Normalization
+- Name: Branching Ratio bb
+  Up:
+    Normalization: 0.034230167215544956
+  Down:
+    Normalization: -0.03479541236132045
+  Samples: VBF Signal
+  Type: Normalization
+- Name: Scale Variations
+  Up:
+    VariationPath: scale_up
+  Down:
+    VariationPath: scale_down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: pdf + alpha s
+  Up:
+    VariationPath: pdf_alpha_up
+  Down:
+    VariationPath: pdf_alpha_down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: Bkg Estimate Shape
+  Up:
+    VariationPath: bkg_estimate_shape_up
+  Down:
+    VariationPath: bkg_estimate_shape_down
+  Samples: Background
+  Type: NormPlusShape
+- Name: Parton Shower
+  Up:
+    VariationPath: ps_signal_up
+  Down:
+    VariationPath: ps_signal_down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: Bkg Stat Error bin 1
+  Up:
+    VariationPath: stat_bkg_estimate_up_bin_0
+  Down:
+    VariationPath: stat_bkg_estimate_down_bin_0
+  Samples: Background
+  Type: NormPlusShape
+- Name: Signal Stat Error bin 1
+  Up:
+    VariationPath: stat_signal_up_bin_0
+  Down:
+    VariationPath: stat_signal_down_bin_0
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: Bkg Stat Error bin 2
+  Up:
+    VariationPath: stat_bkg_estimate_up_bin_1
+  Down:
+    VariationPath: stat_bkg_estimate_down_bin_1
+  Samples: Background
+  Type: NormPlusShape
+- Name: Signal Stat Error bin 2
+  Up:
+    VariationPath: stat_signal_up_bin_1
+  Down:
+    VariationPath: stat_signal_down_bin_1
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: Bkg Stat Error bin 3
+  Up:
+    VariationPath: stat_bkg_estimate_up_bin_2
+  Down:
+    VariationPath: stat_bkg_estimate_down_bin_2
+  Samples: Background
+  Type: NormPlusShape
+- Name: Signal Stat Error bin 3
+  Up:
+    VariationPath: stat_signal_up_bin_2
+  Down:
+    VariationPath: stat_signal_down_bin_2
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: Bkg Stat Error bin 4
+  Up:
+    VariationPath: stat_bkg_estimate_up_bin_3
+  Down:
+    VariationPath: stat_bkg_estimate_down_bin_3
+  Samples: Background
+  Type: NormPlusShape
+- Name: Signal Stat Error bin 4
+  Up:
+    VariationPath: stat_signal_up_bin_3
+  Down:
+    VariationPath: stat_signal_down_bin_3
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: Bkg Stat Error bin 5
+  Up:
+    VariationPath: stat_bkg_estimate_up_bin_4
+  Down:
+    VariationPath: stat_bkg_estimate_down_bin_4
+  Samples: Background
+  Type: NormPlusShape
+- Name: Signal Stat Error bin 5
+  Up:
+    VariationPath: stat_signal_up_bin_4
+  Down:
+    VariationPath: stat_signal_down_bin_4
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET EffectiveNP Modelling1
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_EffectiveNP_Modelling1__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_EffectiveNP_Modelling1__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET EffectiveNP R10 Mixed1
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_EffectiveNP_R10_Mixed1__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_EffectiveNP_R10_Mixed1__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET EffectiveNP R10 Mixed2
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_EffectiveNP_R10_Mixed2__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_EffectiveNP_R10_Mixed2__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET EffectiveNP R10 Modelling1
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_EffectiveNP_R10_Modelling1__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_EffectiveNP_R10_Modelling1__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET EffectiveNP R10 Modelling2
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_EffectiveNP_R10_Modelling2__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_EffectiveNP_R10_Modelling2__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET EffectiveNP R10 Modelling3
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_EffectiveNP_R10_Modelling3__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_EffectiveNP_R10_Modelling3__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET EffectiveNP R10 Statistical1
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_EffectiveNP_R10_Statistical1__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_EffectiveNP_R10_Statistical1__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET EffectiveNP R10 Statistical2
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_EffectiveNP_R10_Statistical2__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_EffectiveNP_R10_Statistical2__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET EffectiveNP R10 Statistical3
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_EffectiveNP_R10_Statistical3__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_EffectiveNP_R10_Statistical3__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET EffectiveNP R10 Statistical5
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_EffectiveNP_R10_Statistical5__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_EffectiveNP_R10_Statistical5__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET EtaIntercalibration ModellingAndMethod
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_EtaIntercalibration_ModellingAndMethod__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_EtaIntercalibration_ModellingAndMethod__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET EtaIntercalibration Modelling
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_EtaIntercalibration_Modelling__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_EtaIntercalibration_Modelling__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET EtaIntercalibration NonClosure PreRec
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_EtaIntercalibration_NonClosure_PreRec__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_EtaIntercalibration_NonClosure_PreRec__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET EtaIntercalibration TotalStat
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_EtaIntercalibration_TotalStat__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_EtaIntercalibration_TotalStat__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET Flavor Composition
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_Flavor_Composition__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_Flavor_Composition__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET Flavor Response
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_Flavor_Response__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_Flavor_Response__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET InSitu NonClosure PreRec
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_InSitu_NonClosure_PreRec__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_InSitu_NonClosure_PreRec__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET JERUnc Noise PreRec PseudoData
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JERUnc_Noise_PreRec_PseudoData__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JERUnc_Noise_PreRec_PseudoData__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET JERUnc Noise PreRec
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JERUnc_Noise_PreRec__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JERUnc_Noise_PreRec__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET JER DataVsMC MC16 PseudoData
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_DataVsMC_MC16_PseudoData__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_DataVsMC_MC16_PseudoData__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET JER DataVsMC MC16
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_DataVsMC_MC16__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_DataVsMC_MC16__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET JER EffectiveNP 10 PseudoData
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_10_PseudoData__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_10_PseudoData__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET JER EffectiveNP 10
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_10__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_10__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET JER EffectiveNP 11 PseudoData
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_11_PseudoData__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_11_PseudoData__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET JER EffectiveNP 11
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_11__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_11__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET JER EffectiveNP 12restTerm PseudoData
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_12restTerm_PseudoData__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_12restTerm_PseudoData__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET JER EffectiveNP 1 PseudoData
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_1_PseudoData__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_1_PseudoData__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET JER EffectiveNP 1
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_1__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_1__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET JER EffectiveNP 2 PseudoData
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_2_PseudoData__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_2_PseudoData__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET JER EffectiveNP 2
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_2__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_2__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET JER EffectiveNP 3 PseudoData
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_3_PseudoData__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_3_PseudoData__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET JER EffectiveNP 3
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_3__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_3__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET JER EffectiveNP 4 PseudoData
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_4_PseudoData__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_4_PseudoData__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET JER EffectiveNP 4
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_4__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_4__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET JER EffectiveNP 5 PseudoData
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_5_PseudoData__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_5_PseudoData__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET JER EffectiveNP 5
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_5__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_5__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET JER EffectiveNP 6 PseudoData
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_6_PseudoData__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_6_PseudoData__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET JER EffectiveNP 6
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_6__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_6__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET JER EffectiveNP 7 PseudoData
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_7_PseudoData__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_7_PseudoData__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET JER EffectiveNP 7
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_7__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_7__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET JER EffectiveNP 8 PseudoData
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_8_PseudoData__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_8_PseudoData__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET JER EffectiveNP 8
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_8__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_8__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET JER EffectiveNP 9 PseudoData
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_9_PseudoData__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_9_PseudoData__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET JER EffectiveNP 9
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_9__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JER_EffectiveNP_9__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET JESUnc Noise PreRec
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JESUnc_Noise_PreRec__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JESUnc_Noise_PreRec__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET JESUnc VertexingAlg PreRec
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JESUnc_VertexingAlg_PreRec__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_JESUnc_VertexingAlg_PreRec__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET Pileup OffsetMu
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_Pileup_OffsetMu__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_Pileup_OffsetMu__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET Pileup OffsetNPV
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_Pileup_OffsetNPV__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_Pileup_OffsetNPV__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET Pileup PtTerm
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_Pileup_PtTerm__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_Pileup_PtTerm__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: JET Pileup RhoTopology
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_Pileup_RhoTopology__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_JET_Pileup_RhoTopology__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: PRW DATASF
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_PRW_DATASF__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_PRW_DATASF__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: xbb pt bin 0
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_xbb_pt_bin_0__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_xbb_pt_bin_0__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: xbb pt bin 1
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_xbb_pt_bin_1__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_xbb_pt_bin_1__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: xbb pt bin 2
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_xbb_pt_bin_2__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_xbb_pt_bin_2__1down
+  Samples: VBF Signal
+  Type: NormPlusShape
+- Name: xbb pt bin 3
+  Up:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_xbb_pt_bin_3__1up
+  Down:
+    VariationPath: tomatos_bce_5_2500_ratios_op8_op5_xbb_pt_bin_3__1down
+  Samples: VBF Signal
+  Type: NormPlusShape

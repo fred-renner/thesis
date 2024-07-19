@@ -33,7 +33,7 @@ NormFactors:
   Nominal: 1
   Bounds:
   - 0.0
-  - 3.045170612313604
+  - 9.135511836940811
 Systematics:
 - Name: Luminosity
   Up:
@@ -71,9 +71,9 @@ Systematics:
   Type: NormPlusShape
 - Name: Bkg Estimate Shape
   Up:
-    VariationPath: bkg_estimate_shape__1up
+    VariationPath: bkg_estimate_shape_up
   Down:
-    VariationPath: bkg_estimate_shape__1down
+    VariationPath: bkg_estimate_shape_down
   Samples: Background
   Type: NormPlusShape
 - Name: Parton Shower
@@ -83,60 +83,74 @@ Systematics:
     VariationPath: ps_signal_down
   Samples: VBF Signal
   Type: NormPlusShape
-- Name: Bkg Stat. Error
+- Name: Bkg Stat Error bin 1
   Up:
-    VariationPath: stat_bkg_estimate_up
+    VariationPath: stat_bkg_estimate_up_bin_0
   Down:
-    VariationPath: stat_bkg_estimate_down
+    VariationPath: stat_bkg_estimate_down_bin_0
   Samples: Background
   Type: NormPlusShape
-- Name: Signal Stat. Error
+- Name: Signal Stat Error bin 1
   Up:
-    VariationPath: stat_signal_up
+    VariationPath: stat_signal_up_bin_0
   Down:
-    VariationPath: stat_signal_down
+    VariationPath: stat_signal_down_bin_0
   Samples: VBF Signal
   Type: NormPlusShape
-- Name: JET BJES Response
+- Name: Bkg Stat Error bin 2
   Up:
-    VariationPath: m_hh_5_JET_BJES_Response__1up
+    VariationPath: stat_bkg_estimate_up_bin_1
   Down:
-    VariationPath: m_hh_5_JET_BJES_Response__1down
+    VariationPath: stat_bkg_estimate_down_bin_1
+  Samples: Background
+  Type: NormPlusShape
+- Name: Signal Stat Error bin 2
+  Up:
+    VariationPath: stat_signal_up_bin_1
+  Down:
+    VariationPath: stat_signal_down_bin_1
   Samples: VBF Signal
   Type: NormPlusShape
-- Name: JET EffectiveNP Detector1
+- Name: Bkg Stat Error bin 3
   Up:
-    VariationPath: m_hh_5_JET_EffectiveNP_Detector1__1up
+    VariationPath: stat_bkg_estimate_up_bin_2
   Down:
-    VariationPath: m_hh_5_JET_EffectiveNP_Detector1__1down
+    VariationPath: stat_bkg_estimate_down_bin_2
+  Samples: Background
+  Type: NormPlusShape
+- Name: Signal Stat Error bin 3
+  Up:
+    VariationPath: stat_signal_up_bin_2
+  Down:
+    VariationPath: stat_signal_down_bin_2
   Samples: VBF Signal
   Type: NormPlusShape
-- Name: JET EffectiveNP Detector2
+- Name: Bkg Stat Error bin 4
   Up:
-    VariationPath: m_hh_5_JET_EffectiveNP_Detector2__1up
+    VariationPath: stat_bkg_estimate_up_bin_3
   Down:
-    VariationPath: m_hh_5_JET_EffectiveNP_Detector2__1down
+    VariationPath: stat_bkg_estimate_down_bin_3
+  Samples: Background
+  Type: NormPlusShape
+- Name: Signal Stat Error bin 4
+  Up:
+    VariationPath: stat_signal_up_bin_3
+  Down:
+    VariationPath: stat_signal_down_bin_3
   Samples: VBF Signal
   Type: NormPlusShape
-- Name: JET EffectiveNP Mixed1
+- Name: Bkg Stat Error bin 5
   Up:
-    VariationPath: m_hh_5_JET_EffectiveNP_Mixed1__1up
+    VariationPath: stat_bkg_estimate_up_bin_4
   Down:
-    VariationPath: m_hh_5_JET_EffectiveNP_Mixed1__1down
-  Samples: VBF Signal
+    VariationPath: stat_bkg_estimate_down_bin_4
+  Samples: Background
   Type: NormPlusShape
-- Name: JET EffectiveNP Mixed2
+- Name: Signal Stat Error bin 5
   Up:
-    VariationPath: m_hh_5_JET_EffectiveNP_Mixed2__1up
+    VariationPath: stat_signal_up_bin_4
   Down:
-    VariationPath: m_hh_5_JET_EffectiveNP_Mixed2__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET EffectiveNP Mixed3
-  Up:
-    VariationPath: m_hh_5_JET_EffectiveNP_Mixed3__1up
-  Down:
-    VariationPath: m_hh_5_JET_EffectiveNP_Mixed3__1down
+    VariationPath: stat_signal_down_bin_4
   Samples: VBF Signal
   Type: NormPlusShape
 - Name: JET EffectiveNP Modelling1
@@ -144,41 +158,6 @@ Systematics:
     VariationPath: m_hh_5_JET_EffectiveNP_Modelling1__1up
   Down:
     VariationPath: m_hh_5_JET_EffectiveNP_Modelling1__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET EffectiveNP Modelling2
-  Up:
-    VariationPath: m_hh_5_JET_EffectiveNP_Modelling2__1up
-  Down:
-    VariationPath: m_hh_5_JET_EffectiveNP_Modelling2__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET EffectiveNP Modelling3
-  Up:
-    VariationPath: m_hh_5_JET_EffectiveNP_Modelling3__1up
-  Down:
-    VariationPath: m_hh_5_JET_EffectiveNP_Modelling3__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET EffectiveNP Modelling4
-  Up:
-    VariationPath: m_hh_5_JET_EffectiveNP_Modelling4__1up
-  Down:
-    VariationPath: m_hh_5_JET_EffectiveNP_Modelling4__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET EffectiveNP R10 Detector1
-  Up:
-    VariationPath: m_hh_5_JET_EffectiveNP_R10_Detector1__1up
-  Down:
-    VariationPath: m_hh_5_JET_EffectiveNP_R10_Detector1__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET EffectiveNP R10 Detector2
-  Up:
-    VariationPath: m_hh_5_JET_EffectiveNP_R10_Detector2__1up
-  Down:
-    VariationPath: m_hh_5_JET_EffectiveNP_R10_Detector2__1down
   Samples: VBF Signal
   Type: NormPlusShape
 - Name: JET EffectiveNP R10 Mixed1
@@ -202,13 +181,6 @@ Systematics:
     VariationPath: m_hh_5_JET_EffectiveNP_R10_Mixed3__1down
   Samples: VBF Signal
   Type: NormPlusShape
-- Name: JET EffectiveNP R10 Mixed4
-  Up:
-    VariationPath: m_hh_5_JET_EffectiveNP_R10_Mixed4__1up
-  Down:
-    VariationPath: m_hh_5_JET_EffectiveNP_R10_Mixed4__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
 - Name: JET EffectiveNP R10 Modelling1
   Up:
     VariationPath: m_hh_5_JET_EffectiveNP_R10_Modelling1__1up
@@ -221,139 +193,6 @@ Systematics:
     VariationPath: m_hh_5_JET_EffectiveNP_R10_Modelling2__1up
   Down:
     VariationPath: m_hh_5_JET_EffectiveNP_R10_Modelling2__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET EffectiveNP R10 Modelling3
-  Up:
-    VariationPath: m_hh_5_JET_EffectiveNP_R10_Modelling3__1up
-  Down:
-    VariationPath: m_hh_5_JET_EffectiveNP_R10_Modelling3__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET EffectiveNP R10 Modelling4
-  Up:
-    VariationPath: m_hh_5_JET_EffectiveNP_R10_Modelling4__1up
-  Down:
-    VariationPath: m_hh_5_JET_EffectiveNP_R10_Modelling4__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET EffectiveNP R10 Modelling5
-  Up:
-    VariationPath: m_hh_5_JET_EffectiveNP_R10_Modelling5__1up
-  Down:
-    VariationPath: m_hh_5_JET_EffectiveNP_R10_Modelling5__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET EffectiveNP R10 Modelling6
-  Up:
-    VariationPath: m_hh_5_JET_EffectiveNP_R10_Modelling6__1up
-  Down:
-    VariationPath: m_hh_5_JET_EffectiveNP_R10_Modelling6__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET EffectiveNP R10 Modelling7
-  Up:
-    VariationPath: m_hh_5_JET_EffectiveNP_R10_Modelling7__1up
-  Down:
-    VariationPath: m_hh_5_JET_EffectiveNP_R10_Modelling7__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET EffectiveNP R10 Statistical1
-  Up:
-    VariationPath: m_hh_5_JET_EffectiveNP_R10_Statistical1__1up
-  Down:
-    VariationPath: m_hh_5_JET_EffectiveNP_R10_Statistical1__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET EffectiveNP R10 Statistical2
-  Up:
-    VariationPath: m_hh_5_JET_EffectiveNP_R10_Statistical2__1up
-  Down:
-    VariationPath: m_hh_5_JET_EffectiveNP_R10_Statistical2__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET EffectiveNP R10 Statistical3
-  Up:
-    VariationPath: m_hh_5_JET_EffectiveNP_R10_Statistical3__1up
-  Down:
-    VariationPath: m_hh_5_JET_EffectiveNP_R10_Statistical3__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET EffectiveNP R10 Statistical4
-  Up:
-    VariationPath: m_hh_5_JET_EffectiveNP_R10_Statistical4__1up
-  Down:
-    VariationPath: m_hh_5_JET_EffectiveNP_R10_Statistical4__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET EffectiveNP R10 Statistical5
-  Up:
-    VariationPath: m_hh_5_JET_EffectiveNP_R10_Statistical5__1up
-  Down:
-    VariationPath: m_hh_5_JET_EffectiveNP_R10_Statistical5__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET EffectiveNP R10 Statistical6
-  Up:
-    VariationPath: m_hh_5_JET_EffectiveNP_R10_Statistical6__1up
-  Down:
-    VariationPath: m_hh_5_JET_EffectiveNP_R10_Statistical6__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET EffectiveNP R10 Statistical7
-  Up:
-    VariationPath: m_hh_5_JET_EffectiveNP_R10_Statistical7__1up
-  Down:
-    VariationPath: m_hh_5_JET_EffectiveNP_R10_Statistical7__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET EffectiveNP R10 Statistical8
-  Up:
-    VariationPath: m_hh_5_JET_EffectiveNP_R10_Statistical8__1up
-  Down:
-    VariationPath: m_hh_5_JET_EffectiveNP_R10_Statistical8__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET EffectiveNP Statistical1
-  Up:
-    VariationPath: m_hh_5_JET_EffectiveNP_Statistical1__1up
-  Down:
-    VariationPath: m_hh_5_JET_EffectiveNP_Statistical1__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET EffectiveNP Statistical2
-  Up:
-    VariationPath: m_hh_5_JET_EffectiveNP_Statistical2__1up
-  Down:
-    VariationPath: m_hh_5_JET_EffectiveNP_Statistical2__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET EffectiveNP Statistical3
-  Up:
-    VariationPath: m_hh_5_JET_EffectiveNP_Statistical3__1up
-  Down:
-    VariationPath: m_hh_5_JET_EffectiveNP_Statistical3__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET EffectiveNP Statistical4
-  Up:
-    VariationPath: m_hh_5_JET_EffectiveNP_Statistical4__1up
-  Down:
-    VariationPath: m_hh_5_JET_EffectiveNP_Statistical4__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET EffectiveNP Statistical5
-  Up:
-    VariationPath: m_hh_5_JET_EffectiveNP_Statistical5__1up
-  Down:
-    VariationPath: m_hh_5_JET_EffectiveNP_Statistical5__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET EffectiveNP Statistical6
-  Up:
-    VariationPath: m_hh_5_JET_EffectiveNP_Statistical6__1up
-  Down:
-    VariationPath: m_hh_5_JET_EffectiveNP_Statistical6__1down
   Samples: VBF Signal
   Type: NormPlusShape
 - Name: JET EtaIntercalibration ModellingAndMethod
@@ -375,20 +214,6 @@ Systematics:
     VariationPath: m_hh_5_JET_EtaIntercalibration_NonClosure_PreRec__1up
   Down:
     VariationPath: m_hh_5_JET_EtaIntercalibration_NonClosure_PreRec__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET EtaIntercalibration R10 TotalStat
-  Up:
-    VariationPath: m_hh_5_JET_EtaIntercalibration_R10_TotalStat__1up
-  Down:
-    VariationPath: m_hh_5_JET_EtaIntercalibration_R10_TotalStat__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET EtaIntercalibration TotalStat
-  Up:
-    VariationPath: m_hh_5_JET_EtaIntercalibration_TotalStat__1up
-  Down:
-    VariationPath: m_hh_5_JET_EtaIntercalibration_TotalStat__1down
   Samples: VBF Signal
   Type: NormPlusShape
 - Name: JET Flavor Composition
@@ -426,20 +251,6 @@ Systematics:
     VariationPath: m_hh_5_JET_JERUnc_Noise_PreRec__1down
   Samples: VBF Signal
   Type: NormPlusShape
-- Name: JET JERUnc mc20vsmc21 MC20 PreRec PseudoData
-  Up:
-    VariationPath: m_hh_5_JET_JERUnc_mc20vsmc21_MC20_PreRec_PseudoData__1up
-  Down:
-    VariationPath: m_hh_5_JET_JERUnc_mc20vsmc21_MC20_PreRec_PseudoData__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET JERUnc mc20vsmc21 MC20 PreRec
-  Up:
-    VariationPath: m_hh_5_JET_JERUnc_mc20vsmc21_MC20_PreRec__1up
-  Down:
-    VariationPath: m_hh_5_JET_JERUnc_mc20vsmc21_MC20_PreRec__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
 - Name: JET JER DataVsMC MC16 PseudoData
   Up:
     VariationPath: m_hh_5_JET_JER_DataVsMC_MC16_PseudoData__1up
@@ -452,48 +263,6 @@ Systematics:
     VariationPath: m_hh_5_JET_JER_DataVsMC_MC16__1up
   Down:
     VariationPath: m_hh_5_JET_JER_DataVsMC_MC16__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET JER EffectiveNP 10 PseudoData
-  Up:
-    VariationPath: m_hh_5_JET_JER_EffectiveNP_10_PseudoData__1up
-  Down:
-    VariationPath: m_hh_5_JET_JER_EffectiveNP_10_PseudoData__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET JER EffectiveNP 10
-  Up:
-    VariationPath: m_hh_5_JET_JER_EffectiveNP_10__1up
-  Down:
-    VariationPath: m_hh_5_JET_JER_EffectiveNP_10__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET JER EffectiveNP 11 PseudoData
-  Up:
-    VariationPath: m_hh_5_JET_JER_EffectiveNP_11_PseudoData__1up
-  Down:
-    VariationPath: m_hh_5_JET_JER_EffectiveNP_11_PseudoData__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET JER EffectiveNP 11
-  Up:
-    VariationPath: m_hh_5_JET_JER_EffectiveNP_11__1up
-  Down:
-    VariationPath: m_hh_5_JET_JER_EffectiveNP_11__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET JER EffectiveNP 12restTerm PseudoData
-  Up:
-    VariationPath: m_hh_5_JET_JER_EffectiveNP_12restTerm_PseudoData__1up
-  Down:
-    VariationPath: m_hh_5_JET_JER_EffectiveNP_12restTerm_PseudoData__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET JER EffectiveNP 12restTerm
-  Up:
-    VariationPath: m_hh_5_JET_JER_EffectiveNP_12restTerm__1up
-  Down:
-    VariationPath: m_hh_5_JET_JER_EffectiveNP_12restTerm__1down
   Samples: VBF Signal
   Type: NormPlusShape
 - Name: JET JER EffectiveNP 1 PseudoData
@@ -573,32 +342,11 @@ Systematics:
     VariationPath: m_hh_5_JET_JER_EffectiveNP_6_PseudoData__1down
   Samples: VBF Signal
   Type: NormPlusShape
-- Name: JET JER EffectiveNP 6
-  Up:
-    VariationPath: m_hh_5_JET_JER_EffectiveNP_6__1up
-  Down:
-    VariationPath: m_hh_5_JET_JER_EffectiveNP_6__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET JER EffectiveNP 7 PseudoData
-  Up:
-    VariationPath: m_hh_5_JET_JER_EffectiveNP_7_PseudoData__1up
-  Down:
-    VariationPath: m_hh_5_JET_JER_EffectiveNP_7_PseudoData__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
 - Name: JET JER EffectiveNP 7
   Up:
     VariationPath: m_hh_5_JET_JER_EffectiveNP_7__1up
   Down:
     VariationPath: m_hh_5_JET_JER_EffectiveNP_7__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET JER EffectiveNP 8 PseudoData
-  Up:
-    VariationPath: m_hh_5_JET_JER_EffectiveNP_8_PseudoData__1up
-  Down:
-    VariationPath: m_hh_5_JET_JER_EffectiveNP_8_PseudoData__1down
   Samples: VBF Signal
   Type: NormPlusShape
 - Name: JET JER EffectiveNP 8
@@ -608,60 +356,11 @@ Systematics:
     VariationPath: m_hh_5_JET_JER_EffectiveNP_8__1down
   Samples: VBF Signal
   Type: NormPlusShape
-- Name: JET JER EffectiveNP 9 PseudoData
-  Up:
-    VariationPath: m_hh_5_JET_JER_EffectiveNP_9_PseudoData__1up
-  Down:
-    VariationPath: m_hh_5_JET_JER_EffectiveNP_9_PseudoData__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
 - Name: JET JER EffectiveNP 9
   Up:
     VariationPath: m_hh_5_JET_JER_EffectiveNP_9__1up
   Down:
     VariationPath: m_hh_5_JET_JER_EffectiveNP_9__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET JESUnc Noise PreRec
-  Up:
-    VariationPath: m_hh_5_JET_JESUnc_Noise_PreRec__1up
-  Down:
-    VariationPath: m_hh_5_JET_JESUnc_Noise_PreRec__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET JESUnc VertexingAlg PreRec
-  Up:
-    VariationPath: m_hh_5_JET_JESUnc_VertexingAlg_PreRec__1up
-  Down:
-    VariationPath: m_hh_5_JET_JESUnc_VertexingAlg_PreRec__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET JESUnc mc20vsmc21 MC20 PreRec
-  Up:
-    VariationPath: m_hh_5_JET_JESUnc_mc20vsmc21_MC20_PreRec__1up
-  Down:
-    VariationPath: m_hh_5_JET_JESUnc_mc20vsmc21_MC20_PreRec__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET JMS Topology QCD
-  Up:
-    VariationPath: m_hh_5_JET_JMS_Topology_QCD__1up
-  Down:
-    VariationPath: m_hh_5_JET_JMS_Topology_QCD__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET LargeR TopologyUncertainty V
-  Up:
-    VariationPath: m_hh_5_JET_LargeR_TopologyUncertainty_V__1up
-  Down:
-    VariationPath: m_hh_5_JET_LargeR_TopologyUncertainty_V__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET LargeR TopologyUncertainty top
-  Up:
-    VariationPath: m_hh_5_JET_LargeR_TopologyUncertainty_top__1up
-  Down:
-    VariationPath: m_hh_5_JET_LargeR_TopologyUncertainty_top__1down
   Samples: VBF Signal
   Type: NormPlusShape
 - Name: JET Pileup OffsetMu
@@ -678,32 +377,11 @@ Systematics:
     VariationPath: m_hh_5_JET_Pileup_OffsetNPV__1down
   Samples: VBF Signal
   Type: NormPlusShape
-- Name: JET Pileup PtTerm
-  Up:
-    VariationPath: m_hh_5_JET_Pileup_PtTerm__1up
-  Down:
-    VariationPath: m_hh_5_JET_Pileup_PtTerm__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
 - Name: JET Pileup RhoTopology
   Up:
     VariationPath: m_hh_5_JET_Pileup_RhoTopology__1up
   Down:
     VariationPath: m_hh_5_JET_Pileup_RhoTopology__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET PunchThrough MC16
-  Up:
-    VariationPath: m_hh_5_JET_PunchThrough_MC16__1up
-  Down:
-    VariationPath: m_hh_5_JET_PunchThrough_MC16__1down
-  Samples: VBF Signal
-  Type: NormPlusShape
-- Name: JET SingleParticle HighPt
-  Up:
-    VariationPath: m_hh_5_JET_SingleParticle_HighPt__1up
-  Down:
-    VariationPath: m_hh_5_JET_SingleParticle_HighPt__1down
   Samples: VBF Signal
   Type: NormPlusShape
 - Name: PRW DATASF

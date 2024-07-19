@@ -1,5 +1,5 @@
 \chapter{Systematic Uncertainties}\label{ch:systematics}
-Any measurement is affected by uncertainties that determine its range of validity. In this analysis, uncertainties are classified into various types: systematic errors related to the reconstructed objects, uncertainties arising from calculations of the cross-section, methodological errors, and statistical uncertainties. Each of these categories is explained in detail in the subsequent sections. 
+Any measurement is affected by uncertainties that determine its range of validity. In this analysis, uncertainties are classified into various types: systematic errors related to the reconstructed objects, uncertainties arising from calculations of the cross-section, methodological errors, and statistical uncertainties. Each of these categories is explained in detail in the subsequent sections.
 
 \section{Luminosity}
 The combined integrated luminosity for the years 2015-2018 has an uncertainty of \qty[]{0.83}{\percent} determined with the LUCID-2 detector. It is applied to the Higgs Pair signal process and has minimal impact on this analysis.
@@ -94,7 +94,7 @@ Uncertainties related to the parton showering are estimated using different mode
 \begin{figure}
     \centering
     \includegraphics[width=0.5\textwidth]{uncertainties/neos_VBF-Signal_Parton-Shower}
-    \caption[]{$\ktwov=0$ signal uncertainty for alternative parton shower with \textsc{Herwig 7}}
+    \caption[]{$\ktwov=0$ signal uncertainty using an alternative parton showering with \textsc{Herwig 7}}
 \end{figure}
 
 
@@ -120,8 +120,16 @@ so that the statistical error reads
 \begin{equation}
     \sigma_\text{stat}^\text{bin}=\sqrt{\sum_i w_i^2}.
 \end{equation}
-Statistical uncertainties are incorporated into the maximum likelihood fit, using modifiers and constraint terms described in section \ref{sec:modifiers}, for each bin individually.
-\red{show plots!}
+Statistical uncertainties are incorporated into the maximum likelihood fit, using modifiers and constraint terms described in section \ref{sec:modifiers}, for each bin individually. Staistical errors for the $\ktwov=0$ signal samples and the background estimate are shown in figure \ref{fig:stat_unc}.
+
+\begin{figure}
+    \centering
+    \subfigure[]{\includegraphics[width=.47\textwidth]{uncertainties/neos_VBF-Signal_Signal-Stat-Error.pdf}}
+    \subfigure[]{\includegraphics[width=.47\textwidth]{uncertainties/neos_Background_Bkg-Stat-Error.pdf}}
+    \caption[]{Bin-wise statistical uncertainties for the (a) $\ktwov=0$ signal and (b) the background estimate.}
+    \label{fig:stat_unc}
+\end{figure}
+
 
 \section{Background Derivation Uncertainties}\label{sec:bkg_uncertainties}
 The \ac{qcd} background is estimated with the ABCD method from the control region as detailed in section \ref{sec:abcd}. The uncertainties on the weight factor $w_\text{CR}$ are assessed through error propagation of the statistical uncertainties on the quantities used to calculate the weight
@@ -140,9 +148,9 @@ To estimate the uncertainty of the background estimate in the \ac{sr} a shape un
 Figure \ref{fig:bkg_shape_estimate} displays the background estimate in the \ac{vr} in comparison to the \ac{vr} with 2 GN2X tags and the shape uncertainty in the \ac{sr} resulting from this uncertainty estimation.
 \begin{figure}
     \centering
-    \subfigure[]{\includegraphics[width=.47\textwidth]{tomatos_cls_5_2500_slope_50_NOSYS.VR_xbb_2_compareABCD}}
+    \subfigure[]{\includegraphics[width=.47\textwidth]{tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_NOSYS.VR_xbb_2_compareABCD}}
     \subfigure[]{\includegraphics[width=.47\textwidth]{neos_results/neos_Background_Bkg-Estimate-Shape}}
-    \caption[]{(a) Background estimate in the \ac{vr} in comparison to the selection with 2 GN2X tags.(b) Extracted uncertainties from (a) applied to the background estimate in the \ac{sr}.}
+    \caption[]{(a) Background estimate in the \ac{vr} in comparison to the selection with 2 GN2X tags. (b) Extracted uncertainties from (a) applied to the background estimate in the \ac{sr}.}
     \label{fig:bkg_shape_estimate}
 \end{figure}
 

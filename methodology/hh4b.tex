@@ -150,16 +150,15 @@ In this analysis the two orthogonal variables are defined via the amount of doub
     \end{tabular}
     \label{tab:abcd}
 \end{table}
-This gives the four orthogonal regions shown in table \ref{tab:abcd}. Hence, the background in the \ac{sr} is estimated with a weight extracted from the \ac{cr}
+This gives the four orthogonal regions shown in table \ref{tab:abcd}. Hence, the background in the \ac{sr} is estimated with a weight extracted from the \ac{cr} with statistical uncertainty
 \begin{equation}
-    N_\text{SR}^\text{2 GN2X}=\frac{N_\text{CR}^\text{2 GN2X}}{N_\text{CR}^\text{1 GN2X}} N_\text{SR}^\text{1 GN2X} = w_\text{CR} N_\text{SR}^\text{1 GN2X}=  (0.0038 \pm 0.0002) \times N_\text{SR}^\text{1 GN2X}.
+    N_\text{SR}^\text{2 GN2X}=\frac{N_\text{CR}^\text{2 GN2X}}{N_\text{CR}^\text{1 GN2X}} N_\text{SR}^\text{1 GN2X} = w_\text{CR} N_\text{SR}^\text{1 GN2X}= \qty[separate-uncertainty = true]{3.79(045)e-3}{} \times N_\text{SR}^\text{1 GN2X}.
 \end{equation}
-
 This approach relies on the assumption that the shape of the background in figure \ref{fig:abcd} does not vary greatly between C to D and A to B. To verify the robustness of this assumption variations between the expected and estimated region in the \ac{vr} are depicted in Figure \ref{fig:compareABCD}. The observed discrepancies are addressed by assigning an uncertainty to the background estimate, which is further detailed in Section \ref{sec:systematics}.
 \begin{figure}
     \centering
-    \includegraphics[width=0.7\textwidth]{tomatos_cls_5_2500_slope_50_NOSYS.VR_xbb_2_compareABCD.pdf}
-    \caption[]{Comparison of \ac{nn} response in the \ac{vr} for the 2 GN2X tagged Higgs candidates and the background estimate from multiplying the 1 GN2X tagged selection with $w_\text{CR}$.}
+    \includegraphics[width=0.7\textwidth]{tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_NOSYS.VR_xbb_2_compareABCD}
+    \caption[]{Comparison of \ac{nn} response in the \ac{vr} for the 2 GN2X tagged Higgs candidates and the background estimate from multiplying the 1 GN2X tagged selection with $w_\text{CR}$. Except for the first bin ratio of 5.04 the uncertainties are within the statical uncertainty of the 2 GN2X selection.} 
     \label{fig:compareABCD}
 \end{figure}
 
@@ -182,14 +181,14 @@ The cutflow tables are presented in the following order:
     \begin{tabular}{lrrr}
         \hline
         \textbf{Selection Step} & \textbf{Events}  & \textbf{Fraction (\%)} & \textbf{Cumulative (\%)} \\ \hline
-        Initial events          & 1147720630.00000 & 100.00000              & 100.00000                \\\hline
-        Trigger                 & 280935686.00000  & 24.47771               & 24.47771                 \\
-        Two fat jets            & 72439244.00000   & 25.78499               & 6.31157                  \\
-        Fat jet $\pt$           & 53743119.00000   & 74.19061               & 4.68260                  \\
-        Two hbb jets            & 4089.00000       & 0.00761                & 0.00036                  \\
-        VBF jets                & 1559.00000       & 38.12668               & 0.00014                  \\
-        VBF cut                 & 201.00000        & 12.89288               & 0.00002                  \\
-        SR                      & 0.00000          & 0.00000                & 0.00000                  \\\hline
+        Initial events          & 1147720630 & 100.00000              & 100.00000                \\\hline
+        Trigger                 & 280935686  & 24.47771               & 24.47771                 \\
+        Two fat jets            & 72439244  & 25.78499               & 6.31157                  \\
+        Fat jet $\pt$           & 53743119   & 74.19061               & 4.68260                  \\
+        Two hbb jets            & 4089     & 0.00761                & 0.00036                  \\
+        VBF jets                & 1559     & 38.12668               & 0.00014                  \\
+        VBF cut                 & 201     & 12.89288               & 0.00002                  \\
+        SR                      & 0         & 0.00000                & 0.00000                  \\\hline
     \end{tabular}
 \end{table}
 
@@ -238,16 +237,16 @@ The cutflow tables are presented in the following order:
 
 
 \subsection{Event Classification}\label{sec:event_classification}
-A deep feed-forward neural network is employed for signal to background separation. This neural network's training uses a novel approach \textsc{neos}, which is discussed in detail in \ref{sec:analysis_optimization} alongside other \ac{ml} concepts.
+A deep feed-forward neural network is employed for signal to background separation. This neural network's training uses a novel approach \textsc{neos}, which is discussed in detail in chapter \ref{sec:analysis_optimization} alongside other \ac{ml} concepts.
 
-Inputs to the neural network include 23 features, which are the four vector components ($\pt,\eta,\phi,m$) of: the Higgs boson pair system, the individual Higgs candidates and the two \ac{vbf} jets. In addition the leading score of the GN2X tagger and the mass of \ac{vbf} jet system $m_{j_1,j_2}$ and their pseudorapidity difference $|\Delta\eta(j_1,j_2)|$ are used. The \ac{nn} needs to be applicable across all samples, therefore only the leading GN2X score is incorporated, as the background estimation relies on a single GN2X tag.
+Inputs to the neural network include 23 features, which are the four vector components ($\pt,\eta,\phi,m$) of: the Higgs boson pair system, the individual Higgs candidates and the two \ac{vbf} jets. In addition the leading score of the GN2X tagger, the mass of the \ac{vbf} jet system $m_{j_1,j_2}$ and their pseudorapidity difference $|\Delta\eta(j_1,j_2)|$ are used. The \ac{nn} needs to be applicable across all samples, therefore only the leading GN2X score is incorporated, as the background estimation relies on a single GN2X tag.
 
 The network's architecture features three fully connected layers, each comprising 100 nodes, and concludes with a singular output node. The hidden layers are followed by a rectified linear unit activation function whereas the output node employs a sigmoid activation for classification. The architecture is thus defined as [23,100,100,100,1], indicating the sequence of layers from input to output. Figure \ref{fig:nominal-hist} displays the nominal expected histogram for this analysis for several samples.
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.7\textwidth]{tomatos_cls_5_2500_slope_50_NOSYS.SR_xbb_2_nominal_hist.pdf}
-    \caption[]{\ac{nn} response for the data-driven background estimate, rescaled \ac{sm}  \ac{vbf} and \ac{ggf} signal and $\kappa_\text{2V}=0$.}
+    \includegraphics[width=0.7\textwidth]{tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_NOSYS.SR_xbb_2_nominal_hist.pdf}
+    \caption[]{\ac{nn} response for the data-driven background estimate, rescaled \ac{vbf}  \ac{sm} and \ac{ggf} signal and a \ac{vbf} signal with using a coupling $\kappa_\text{2V}=0$. The background uncertainty is calculated from error propagation of the statistical uncertainties of the unscaled background estimate and the statistical uncertainty of the weight $w_{CR}$ used in the ABCD method. It is noted that despite the appearance of almost no events in some background bins, the downscaling factor is of order $10^{-3}$ applied to events of order $10^1$.}
     \label{fig:nominal-hist}
 \end{figure}
 
@@ -296,10 +295,10 @@ The approach is employed bin-wise as the extraction factors can deviate substant
     \caption[]{Extracted reweighting factors per bin for equation \ref{eq:reweight}.}
     \label{fig:linear_combine_bin_solutions}
 \end{figure}
-The method is tested on the mc generated $\ktwov=0$ sample. Figure \ref{fig:tomatos_cls_5_nominal_reweighted_ratio} reveals a up to $\sim$\qty[]{16}{\percent} deviation for this approach. However the difference on cross-section limits determined with the mc generated $\ktwov=0$ and a reweighted $\ktwov=0$ signal is $\sim\qty[]{3}{\percent}$. It is further noted that this approach possibly suffers also from a sample choice which only explores the phase space for two $\ktwov$ couplings.
+The method is tested on the mc generated $\ktwov=0$ sample. Figure \ref{fig:tomatos_cls_5_nominal_reweighted_ratio} reveals a up to $\sim$\qty[]{12}{\percent} deviation for this approach. Additionally, it is noted that this method possibly suffers from a sample choice, which only explores the $\ktwov$ phase space for two $\ktwov$ couplings.
 \begin{figure}
     \centering
-    \includegraphics[width=.6\textwidth]{tomatos_cls_5_2500_slope_50_nominal_reweighted_ratio.pdf}
+    \includegraphics[width=.6\textwidth]{tomatos_cls_5_2500_slope_50_ratios_0p8_0p5_reweighted_nominal_ratio.pdf}
     \caption[]{Comparison between a \ac{mc}-generated $\ktwov=0$ signal sample and a signal sample created with the reweighting approach by linearly combining different \ktwov hypotheses. }
     \label{fig:tomatos_cls_5_nominal_reweighted_ratio}
 \end{figure}
