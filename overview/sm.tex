@@ -61,7 +61,7 @@ For a field description, some quantity $\phi(x,y,z,t)=\phi(x)$ is assigned to so
 % \end{equation}
 % the according equations of motion associated with the fields can be obtained.
 
-In \ac{qft} the conventional strategy to describe particle dynamics is to use a perturbation ansatz $\mathcal{L}=\mathcal{L}_0+\mathcal{L}_1$ where one knows the solution of $\mathcal{L}_0$ and adds a small perturbation $\mathcal{L}_1$ so that $\mathcal{L}$ can be solved \citep{zee2010quantum}. Here the free field/kinetic part of the Lagrangian is \mbox{$\mathcal{L}_0=\frac{1}{2}[(\partial_\mu \phi)^2 - m^2\phi^2] $} and a small perturbation/potential term $\mathcal{L}_1=V(\phi)$ is added as some polyominal in $\phi$ that governs the interactions of particles. A term $J(x)\phi(x)$ needs to be added to excite the field or create/destroy particles so that the ansatz reads
+In \ac{qft} the conventional strategy to describe particle dynamics is to use a perturbation ansatz $\mathcal{L}=\mathcal{L}_0+\mathcal{L}_1$ where one knows the solution of $\mathcal{L}_0$ and adds a small perturbation $\mathcal{L}_1$ so that $\mathcal{L}$ can be solved \citep{zee2010quantum}. Here the free field/kinetic part of the Lagrangian is \mbox{$\mathcal{L}_0=\frac{1}{2}[(\partial_\mu \phi)^2 - m^2\phi^2] $} and a small perturbation/potential term $\mathcal{L}_1=V(\phi)$ is added as some polynomial in $\phi$ that governs the interactions of particles. A term $J(x)\phi(x)$ needs to be added to excite the field or create/destroy particles so that the ansatz reads
 \begin{equation}
     \mathcal{L}=\frac{1}{2}[(\partial_\mu \phi)^2 - m^2\phi^2]
     -V(\phi) + J(x)\phi(x).
@@ -631,47 +631,40 @@ Renormalization is a crucial procedure for ensuring the consistency and predicti
 
 
 \section{Physics Beyond the Standard Model}\label{sec:beyond_sm}
-The \ac{sm} works within its realm but is inherently incomplete given other observed phenomena of which a few are presented here. Most importantly there is no quantum theory for gravity and is thus not part of the \ac{sm}.
 
-Furthermore there is evidence through gravitational effects which cannot be explained by the amounts of ordinary matter which is referred to as dark matter \citep{dark_matter_a_primer}. Furthermore there are several observations showing an accelerated expansion of the universe which is referred to as dark energy \citep{RevModPhys.75.559}. The standard model of cosmology Lambda-Cold Dark Matter ($\Lambda$CDM) \citep{planck2020} models the cosmic microwave background by incorporating dark matter and dark energy with high precision for both of which the \ac{sm} offers no explanation.
+The \ac{sm} of particle physics has been remarkably successful within its domain but remains incomplete, as it does not account for several observed phenomena. Most notably, there is no quantum theory for gravity, and is thus missing in the \ac{sm}.
 
-Furthermore neutrinos are known to be massive. In principle they can be added like fermions as in the section on the fermion Yukawa mass term \ref{sec:yukawa_term} but this requires right-handed neutrinos which have not been observed. This suggests, since their masses are much smaller than for the other fermions that there might be another mechanism responsible for the generation of the mass of neutrinos.
+One of the phenomenons pointing to physics beyond the \ac{sm} is dark matter. Observations of gravitational effects suggest the presence of matter that does not emit light or energy, and thus cannot be observed directly \citep{dark_matter_a_primer}.
 
-Moreover, in the standard cosmological model, matter and antimatter should have been created in equal amounts, yet the universe is predominantly made of matter. An explanation of this behavior can be given through the nature of \ac{eswb}. The Sakharov conditions necessary to create the observed baryon asymmetry can be created if \ac{ewsb} is a first order phase transition. In such a transition the position of the minimum in the potential changes abruptly when the universe cools below temperature where \ac{ewsb} occurs as depicted in figure \ref{fig:higgs_phase_transition} \citep{Banerjee2011ElectroweakPT,MICCO2020100045}. 
+Additionally, various observations indicate that the universe is expanding at an accelerating rate, a phenomenon attributed to dark energy \citep{RevModPhys.75.559}. The standard model of cosmology Lambda-Cold Dark Matter ($\Lambda$CDM) \citep{planck2020} models the cosmic microwave background by incorporating dark matter and dark energy with high precision for both of which the \ac{sm} offers no explanation.
 
-This phase transition is dictated by the Higgs potential. The assumed form and the measured mass of the \ac{sm} Higgs do not support a first-order phase transition but rather a smooth crossover transition similar to a second order phase transition also shown schematically in figure \ref{fig:higgs_phase_transition} \citep{PhysRevD.105.095041,MICCO2020100045}. The nature of the very early universe is thus inscribed in the shape of the Higgs potential and if we are in an absolute miminum remains unclear as only the mass term of the Higgs potential from equation \ref{eq:higgs_potential} is determined by experiment and only the simplest thinkable potential shape is used to render weak gauges bosons massive. 
+Neutrinos also pose a challenge to the \ac{sm} as they are known to have mass. While it's possible to include massive neutrinos in the \ac{sm} by introducing right-handed neutrinos similar to how fermions acquire mass through through Yukawa interactions such particles have not yet been observed. This suggests, since their masses are much smaller than for the other fermions that there might be another mechanism responsible for the generation of the mass of neutrinos.
+
+A further challenge to the \ac{sm} is the observed imbalance between matter and antimatter in the universe. According to the standard cosmological model, both should have been created in equal amounts. However, the universe is predominantly composed of matter. This asymmetry could be explained by the nature of \acf{eswb}, the event when the Higgs field acquires a non-zero \ac{vev}. If \ac{eswb} is a first-order phase transition, it could meet the Sakharov conditions necessary to generate the observed baryon asymmetry. This type of transition involves a sudden change in the minimum of the potential as the universe cools below the critical temperature where \ac{eswb} occurs as illustrated in figure \ref{fig:higgs_phase_transition} \citep{Banerjee2011ElectroweakPT,MICCO2020100045}. In contrast, the \ac{sm} predicts a smooth crossover transition similar to a second order phase transition shown in figure \ref{fig:higgs_phase_transition} rather than a first-order phase transition for \ac{ewsb} \citep{Morrissey_2012}. Understanding the exact shape of the Higgs potential is crucial here if electroweak baryogenesis is responsible for this matter antimatter asymmetry.
 
 \begin{figure}
     \centering
     \includegraphics[width=1\textwidth]{higgs_phase_transition}
-    \caption[]{(Left) First order phase transition for a given temperature with a sudden change of the minum when the temperature drops below $T_c$, where for (right) a second order phase transition the minimum changes continuously. Adopted from \citep{Banerjee2011ElectroweakPT}.}
+    \caption[]{(Left) First order phase transition for a given temperature with a sudden change of the minimum when the temperature drops below $T_c$. (Right) Second-order phase transition with a continuous change of the minimum. Adopted from \citep{Banerjee2011ElectroweakPT}.}
     \label{fig:higgs_phase_transition}
 \end{figure}
 
-When considering top-quark loop corrections to the Higgs field, as illustrated in figure \ref{fig:top_loop}, the $\lambda(\mu)$ parameter in the Higgs potential becomes energy scale-dependent and allows to make some statements about the shape of the Higgs potential. At an instability energy scale of $\Lambda_I\approx \qty[]{e10}{GeV}$, $\lambda(\mu)$ could turn negative, suggesting that the current \ac{vev} might not be the absolute minimum of the Higgs potential but could be energetically lower or even unbounded \citep{devoto2022false}.
-
+The shape of the Higgs potential thus offers insights into the very early thermal history of the universe. Its exact shape remains unclear as only the mass parameter is measured and the assumed 2nd order polynomial form is the simplest form allowing to render gauge bosons massive. Furthermore the Higgs potential allows to make statements about the stability of the universe. When top-quark loop corrections to the Higgs field as shown in figure \ref{fig:top_loop}, analogous to loop corrections discussed in section \ref{sec:renormalization} are considered, the $\lambda(\mu)$ parameter in the Higgs potential becomes energy scale-dependent \citep{devoto2022false}. At an instability energy scale of $\mu=\Lambda_I \approx 10^{10}$ GeV, $\lambda(\mu)$ may turn negative, indicating that the universe's current \ac{vev} might not be the absolute minimum of the Higgs potential.
 
 \begin{figure}
     \centering
     \includegraphics[width=0.35\textwidth]{top_loop}
-    \caption[]{Leading correction to the Higgs field from top pair interaction. cite(https://onlinelibrary.wiley.com/doi/pdf/10.1155/2011/968283)}
+    \caption[]{Leading correction to the Higgs field from top pair interaction.}
     \label{fig:top_loop}
 \end{figure}
 
-
-A phase transition via quantum tunneling into a different \ac{vev} could result in the universe's particles, forces and structures ceasing to exist and being replaced by different ones. The stability of the universe, under the assumptions of \ac{sm} physics, critically depends on the precise values of the Higgs and top quark masses, as depicted in the phase diagram in figure \ref{fig:vev_stability}, which places the universe at the boundary between stability and metastability given current measurement accuracies.
-
+Quantum tunneling could trigger a phase transition to a different \ac{vev}, potentially resulting in a universe with entirely different particles, forces, and structures. The stability of the universe, under the assumptions of \ac{sm} physics, critically depends on the precise values of the Higgs and top quark masses, as depicted in the phase diagram in figure \ref{fig:vev_stability}, which places the universe at the boundary between stability and metastability given current measurement accuracies.
 
 \begin{figure}
     \centering
     \includegraphics[width=0.7\textwidth]{vev_stability}
-    \caption[]{Phase diagram of the stability of the universe assuming the \ac{sm} as a function of the Higgs and top pole masses. Instability for the Higgs potential occurs when due to quantum loop corrections the Higgs field develops a different minimum. Meta-stability is the case when there is an even lower global minimum in the potential and Stability means that there is only one global minimum. The red isolines correspond to the energy scale $\Lambda_I$ at which the Higgs potential becomes unstable. Adopted from \citep{Buttazzo:2013uya}.}
+    \caption[]{Phase diagram of the universe's stability as a function of Higgs and top pole masses, assuming the \ac{sm}. Instability occurs when the Higgs potential develops a different minimum. Metastability indicates a lower global minimum in the potential, while stability means a single global minimum. The red isolines correspond to the energy scale $\Lambda_I$ at which the Higgs potential becomes unstable. Adopted from \citep{Buttazzo:2013uya}.}
     \label{fig:vev_stability}
 \end{figure}
 
-
-
-
-
-Through the Higgs mechanism, elementary particles gain mass by interacting with the Higgs field. Accurate measurements of properties such as the mass and decay channels of the Higgs boson and the top quark offer means to validate and challenge the \ac{sm}. A precise understanding of these is crucial as any deviation from the expected values could indicate new physics. Moreover, the stability of our universe might be related to these properties. The study of the Higgs potential is therefore a promising endeavor to which this work aims to contribute.
-
+Through the Higgs mechanism, elementary particles gain mass by interacting with the Higgs field. Precise measurements of the Higgs boson's and top quark's properties are crucial for validating and challenging the \ac{sm}. Any deviations from expected values could indicate new physics. The study of the Higgs potential is therefore a promising endeavor to which this work aims to contribute.
